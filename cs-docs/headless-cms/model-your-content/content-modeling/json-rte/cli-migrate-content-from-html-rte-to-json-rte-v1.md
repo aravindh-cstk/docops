@@ -1,10 +1,11 @@
 ---
-title: "Migrate Content from HTML RTE to JSON RTE using CLI"
+title: "Migrate Content from HTML RTE to JSON RTE using CLI | V1.x.x"
 description: "Migrate HTML RTE to JSON RTE in Contentstack using CLI with config files or flags—automate content transformation efficiently."
 url: /headless-cms/cli-migrate-content-from-html-rte-to-json-rte/v1
+uid: bltd423e81420316dfd
 ---
 
-# Migrate Content from HTML RTE to JSON RTE using CLI
+# Migrate Content from HTML RTE to JSON RTE using CLI | V1.x.x
 
 ## Migrate Content from HTML RTE to JSON RTE using CLI
 
@@ -15,9 +16,9 @@ If you already have data in the HTML RTE and want to migrate to JSON RTE, you ca
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login)
--   CLI [installed](/docs/headless-cms/install-the-cli) on your machine
+-   CLI [installed](/docs/headless-cms/install-the-cli/v1) on your machine
 
-**Note:** By default, the CLI uses the **AWS North America** region. To set the **AWS Europe**, **AWS Australia**, **Azure North America**, **Azure Europe**, **Google North America**, or **Google Europe** region, refer to the [Set Region](/docs/headless-cms/configure-regions-in-the-cli/#commands) command for more details.
+**Note:** By default, the CLI uses the **AWS North America** region. To set the **AWS Europe**, **AWS Australia**, **Azure North America**, **Azure Europe**, **Google North America**, or **Google Europe** region, refer to the [Set Region](/docs/headless-cms/configure-regions-in-the-cli/v1#commands) command for more details.
 
 Firstly, open your terminal and add a [management token](/docs/headless-cms/generate-a-management-token/) to the CLI session. To do this, use the following single-line command:  
 
@@ -30,7 +31,7 @@ Options:
 -   \-a,\--alias=alias: Alias (name) you want to assign to the token.
 -   \-k,\--stack-api-key=stack-api-key: [API Key](/docs/headless-cms/view-stack-details/) of the stack where the token exists.
 -   \--token=token: Value of your management token.  
-    
+
 
 Make note of the alias (token-name) you assign for the management token, we will require it in the next step.  
 After successfully adding the management token, let's proceed to migrate the content from HTML RTE to JSON RTE.
@@ -45,15 +46,15 @@ In this guide, we will discuss the steps required to perform this migration by u
 Let's learn how to use this method through the following steps:
 
 1.  Log in to your [Contentstack account](https://www.contentstack.com/login/) and go to your stack.  
-    
+
 2.  Then, create a [content type](/docs/headless-cms/create-a-content-type/) in your stack and add the HTML Rich Text Editor (RTE) field in it. **Save and Close** the content type and create an [entry](/docs/headless-cms/create-an-entry/) in this newly created content type.  
-    
+
 3.  Add some content inside the RTE field that you have added. Then, save the entry and close it.  
-    
+
 4.  Edit the same content type and add a new JSON RTE field under the existing RTE content editor field and save your changes.
 5.  Now let's migrate the content from the existing HTML RTE to the new JSON RTE using the config file.  
     For this exercise, we have created a sample config code to help you add various parameters to it and easily migrate your content.  
-    
+
     ```
     {
         "alias": "trial",
@@ -72,15 +73,15 @@ Let's learn how to use this method through the following steps:
         "failed-entries": ["entry_uid_1","entry_uid_2"]
     }
     ```
-    
+
 6.  Copy the above config code, open any code editor, paste the code and add the required parameters as shown below:  
-    
+
     -   alias: Enter the alias name.
     -   content-type: Specify the UID of the content type of which you want to migrate the HTML RTE content.
     -   global-field: Set this flag to **true** if the content type is a global field. It is set to false by default.
-        
+
         **Note:** Remember to set the **global-field** flag to **true** in your config file if you are migrating RTE content present in the global field.
-        
+
     -   from: Enter the path to the HTML RTE field of which you want to migrate content.
     -   to: Enter the path to the JSON RTE field to which you want to migrate the HTML RTE content.
     -   delay (_optional_): Set the interval time between the migration of HTML RTE to JSON RTE in subsequent entries of a content type. The default value is **1,000** milliseconds.
@@ -88,31 +89,31 @@ Let's learn how to use this method through the following steps:
     -   batch-limit (_optional_): Set the limit for the number of entries to be fetched in a single batch for migrating HTML RTE content to avoid any timeout issues. You can pass any value that is less than or equal to **50**.
     -   branch (_optional_): Enter the name of the branch where the changes are to be made.
     -   failed-entries (_optional_): If migration fails for the HTML RTE content of certain entries during initial execution, you can pass this key to rerun the activity. Specify the UIDs of the entries that failed the HTML RTE migration process against the failed-entries key to migrate RTE content only for those specific entries.  
-        
+
         **Note:** The locale, batch-limit, and failed-entries keys are only supported when running the migration command using a config file.
-        
-    
+
+
     **Note:** The path to the JSON or HTML RTE is usually the UID of that specific field. However, if the HTML and JSON RTE fields are nested within another field, then specify the path to your RTE in the following format:  
     {parent\_field\_UID}.{rte\_field\_UID}  
     For example, if your HTML RTE field is nested within a Modular Blocks field, provide the RTE path as follows:{modular\_block\_field\_UID}.{block\_UID}.{rte\_field\_UID}
-    
+
 7.  After adding the above parameters, save the config file and run the following command in the CLI.  
-    
+
     ```
     csdx cm:entries:migrate-html-rte -c <<path_of_the_config_file>>
     ```
-    
+
     Option:  
     \-c,\--config-path=config-path: Specify the path where your config file is located.
-    
+
     Example:  
-    
+
     ```
     csdx cm:entries:migrate-html-rte -c “/home/admin/Desktop/config.json"
     ```
-    
+
     **Tip:** Enclose the config file path in inverted commas if you are using a Windows system and the path to your respective RTE field contains a "space".
-    
+
 8.  After running the above command, the CLI will display the config file you specified and ask if you would like to continue with the configuration. Type "yes" to initiate the migration process.  
     ![Migrate_RTE_SS1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltacd73c5b36dbcf4e/6480623bd2420474171ca3b8/Migrate_RTE_SS1.png)
 9.  Now go to your stack and refresh the page; the content from your existing RTE field will reflect in the JSON RTE field as shown below:  
@@ -171,9 +172,9 @@ The above command will initiate the migration process. Now, go to your stack and
 To successfully perform the JSON RTE migration, remember the following rules:  
 
 1.  The migration only works when both the HTML and the JSON RTE fields are at the same field depth level.  
-    
+
 2.  Both the RTE fields should have the same type of instances. If the JSON RTE is marked as multiple and HTML RTE is of single type, then you won't be able to migrate content.  
-    
+
 3.  To run a successful migration, the HTML RTE and JSON RTE should allow embedded entries from the same set of referenced content types. If the referenced content types differ, you cannot migrate content between the rich text editors.  
-    
+
 4.  After running the command, RTE content is migrated across each entry of the specified content type.

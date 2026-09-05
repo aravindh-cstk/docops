@@ -2,6 +2,7 @@
 title: "Merging Branches"
 description: "Learn how to efficiently merge branches in Contentstack's developer documentation. Explore step-by-step instructions and best practices for seamless branch merging."
 url: /headless-cms/merging-branches
+uid: bltf8f7b8a18b2e750d
 ---
 
 # Merging Branches
@@ -10,7 +11,7 @@ url: /headless-cms/merging-branches
 
 The Branch Merging feature enables you to merge changes between two branches using a variety of available merge strategies. When merging two branches, you select a base branch where changes will be merged and a compare branch that contains the changes to be merged.
 
-**Note:** The Merge feature currently only merges differences between content type and global field modules, and is **only available via** [**Content Management API**](/docs/developers/apis/content-management-api/branches#merge-branches) **and** [**CLI commands**](/docs/headless-cms/compare-and-merge-branches-using-the-cli/).
+**Note:** The Merge feature currently only merges differences between content type and global field modules, and is **only available via** [**Content Management API**](/docs/developers/apis/content-management-api/branches#merge-branches) **and** [**CLI commands**](/docs/headless-cms/compare-and-merge-branches-using-the-cli).
 
 The default behavior when merging will create a backup of the branch you are merging into for safety. You can use this to quickly revert your site in the event that there is an issue with the merge via an alias.
 
@@ -28,7 +29,7 @@ You can merge two branches using the following strategies:
 6.  **Merge modified with prefer compare:** This strategy allows you to add only the modified changes from the compare branch to the base branch. When conflicts arise, it keeps the modified changes of the compare branch and ignores the modified changes of the base branch. Any new items in the compare branch are ignored.
 7.  **Ignore:** This strategy allows you to ignore all changes from the compare branch, keeping the base branch as it is. This can be used to ignore a specific change or to ignore all changes and merge only specific changes.
 
-**Additional Resource:** Learn how to merge branches using our new requests in the [Merging Branches](/docs/developers/apis/content-management-api/branches#merge-branches) section in CMA. To merge branches via CLI, you can refer to the [Merge Branches](/docs/headless-cms/compare-and-merge-branches-using-the-cli#steps-to-merge-branches) section in the guide on [how to Compare and Merge Branches using the CLI.](/docs/headless-cms/compare-and-merge-branches-using-the-cli/)
+**Additional Resource:** Learn how to merge branches using our new requests in the [Merging Branches](/docs/developers/apis/content-management-api/branches#merge-branches) section in CMA. To merge branches via CLI, you can refer to the [Merge Branches](/docs/headless-cms/compare-and-merge-branches-using-the-cli#steps-to-merge-branches) section in the guide on [how to Compare and Merge Branches using the CLI.](/docs/headless-cms/compare-and-merge-branches-using-the-cli)
 
 ## Use-Cases of Merging Branches
 

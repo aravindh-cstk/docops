@@ -1,10 +1,11 @@
 ---
-title: "Migrate your Content using the CLI Migration Command | Beta Commands"
+title: "Migrate your Content using the CLI Migration Command | V2.x.x"
 description: "Migrate content effortlessly using Contentstack’s new Command-line Interface migration command to simplify and speed up content transfer."
 url: /headless-cms/migrate-your-content-using-the-cli-migration-command
+uid: blt992979390532a894
 ---
 
-# Migrate your Content using the CLI Migration Command | Beta Commands
+# Migrate your Content using the CLI Migration Command | V2.x.x
 
 ## Migrate your Content using the CLI Migration Command
 
@@ -31,110 +32,110 @@ Now let us understand how to migrate content from one stack to another using the
 
 ## Steps for Execution
 
-1.  [Login to Contentstack CLI session](#login-to-contentstack-cli-session)
+1.  [Login to Contentstack CLI session](#login-to-the-contentstack-cli-session)
 2.  [Use the “Migration” command](#use-the-migration-command)
 
 1.  ## Login to the Contentstack CLI session
-    
+
     Firstly you should have the Contentstack CLI installed on your system. In case you haven't yet installed the Contentstack CLI, please follow the steps in the [CLI installation](/docs/headless-cms/install-the-cli) guide.
-    
+
     After installing the CLI on your machine, log in to the CLI session to run the migration command.  
-    
+
     **Note:** By default, the CLI session will work for the app hosted in the **AWS North America** region. If you want to switch to **AWS Europe**, **AWS Australia, Azure North America**, **Azure Europe**, **Google North America**, or **Google Europe** region, follow the steps mentioned in the [Set Region](/docs/headless-cms/configure-regions-in-the-cli#set-region) command section.
-    
+
     Now log in to your Contentstack account, by running the following command in your terminal:  
-    
+
     ```
     csdx auth:login
     ```
-    
+
     Provide your Contentstack account’s email and password to successfully login to the CLI session.  
-    
+
     **Additional Resource:** To learn more about the CLI login command, refer to the [Login command](/docs/headless-cms/cli-authentication#login) section.
-    
+
 2.  ## Use the “Migration” Command
-    
+
     Once you log in to Contentstack, run the migration command to initiate the procedure.
-    
+
     To perform the operation you have to write a migration script in your code editor, and mention its file path while using the migration command.
-    
+
     **Tip:** We have created a sample migration script for you to get started, which we have discussed further in this guide. Refer [this](/docs/headless-cms/migrate-your-content-using-the-cli-migration-command#get-started-with-the-migration-script) section, to understand migration scripts and various methods you can use to execute your tasks.
-    
+
     We assume that you have a migration script ready with you, to migrate the content.
-    
+
     Now, run the following command to start migrating your content.
-    
+
     **Usage:**
-    
+
     ```
     csdx cm:stacks:migration
     ```
-    
+
     Along with the migration command, users have to define various parameters to successfully migrate the content.
-    
+
     In order to add a number of options/parameters in a single line, use the following command:
-    
+
     **Usage:**
-    
+
     If management token is not specified, by default migration plugin uses Auth token:
-    
+
     ```
     csdx cm:stacks:migration --file-path <file_path> -k <api_key>
     ```
-    
+
     Migrate content using CLI Management token alias:
-    
+
     ```
     csdx cm:stacks:migration -a <alias> --file-path <file_path> -k <api_key>
     ```
-    
+
     **Options:**
-    
+
     | Flag | Short Flag | Description |
     | --- | --- | --- |
     | \--stack-api-key | \-k | 
     Use this flag to add the API key of your stack.
-    
+
     You must use either the \--stack-api-key flag or the \--alias flag.
-    
+
      |
     | \--alias | \-a | 
-    
+
     Use this flag to add the management token alias.
-    
+
     You must use either the \--alias flag or the \--stack-api-key flag.
-    
+
      |
     | \--file-path | \- | Use this flag to provide the path of the migration script file. |
     | \--multiple | \- | 
-    
+
     This flag helps you migrate multiple content files in a single run.
-    
+
     Mention the folder path where your migration script files are stored.
-    
+
      |
     | \--branch | \- | Use this flag to specify the target branch where the migration is performed.  |
     | \--config-file | \- | \[Optional\] Path of the JSON configuration file. |
     | \--config | \- | 
-    
+
     \[Optional\] Inline configuration in the format <key>:<value>.
-    
+
     Passing an external configuration makes the migration script reusable.
-    
+
      |
-    
+
     **Example**:
-    
+
     -   ```
         csdx cm:stacks:migration -a my_token_alias --config contentTypeUID:author --file-path “path/to/migrate/single/contenttype/modification/script/file”
         ```
-        
+
     -   ```
         csdx cm:stacks:migration -k bxxxxxxx --config  numberOfEntries:100 contentTypeUID:blog --file-path “path/to/update/first/100/entries/of/given/contenttype/script/file”
         ```
-        
-    
-      
+
+
+
     In the next section, let’s understand how to create the migration files and use various methods to perform operations in your stack.
 
 ## Get Started with the Migration Script
@@ -171,7 +172,7 @@ Let's discuss the objects we used in the above example.
 “migration”
 ```
 
-  
+
 
 This refers to your migration object. The migration object has some predefined methods to perform various tasks like create, edit, and so on.  
 Using these methods you can define the tasks and write other tasks to execute them.

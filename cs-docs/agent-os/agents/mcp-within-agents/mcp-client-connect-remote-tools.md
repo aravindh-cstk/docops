@@ -2,6 +2,7 @@
 title: "MCP Client: Connect Remote Tools"
 description: "Learn how to connect any remote MCP server to your Agent using the MCP Client tool, covering header-based authentication, OAuth setup, tool selection, troubleshooting, and real-world use cases."
 url: /agent-os/mcp-client-connect-remote-tools
+uid: blt1216aca20d4716bd
 ---
 
 # MCP Client: Connect Remote Tools
@@ -53,9 +54,9 @@ Log in to your [Contentstack account](https://www.contentstack.com/login/), then
 
 1.  After logging in, click the **App Switcher** icon, then select **Agent OS** from the list.![Agent_OS_Icon.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/amfbc07952da5c12a7/d9486ee0037fcf72f7fc2de7/Agent_OS_Icon.png?locale=en-us)
 2.  Open your project, or [create](https://www.contentstack.com/docs/agent-os/managing-projects#create-a-project) a new one.
-    
+
     **Additional Resource:** For more information, refer to the [Managing Projects](https://www.contentstack.com/docs/agent-os/managing-projects) documentation.
-    
+
 3.  From the **Agent OS Dashboard** screen, do one of the following:
     1.  To use an existing agent, select it from the **Agents** list.
     2.  To create a new one, click **\+ New Agent**, then in the **Create Agent** modal, click **Skip, I'll create manually**. Enter a suitable **Title** and **Description** for your agent, then click the **Create Agent** button.![Create_Agent.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am632e49abd133aa43/0caf241d048f7c14cada0581/Create_Agent.png?locale=en-us)
@@ -135,51 +136,51 @@ First, register an OAuth app with your provider:
 **Note:** The redirect URL shown in the authorization window must be added to your OAuth app's list of allowed redirect URLs at the provider. If it is not, the provider will reject the sign-in.
 
 ![Manage_Permissions_Unchecked.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am3ce9bf5aa02f8885/faa22f323bf651b0038d1a49/Manage_Permissions_Unchecked.png?locale=en-us)-   After the connection is authenticated, enter a **Title**. The **Allowed Tools** field loads the list of tools the server offers. You can:
-    
+
     **Let AI select tools**: allow the agent to choose from all available tools based on the conversation. Best when you want maximum flexibility.**Select specific tools**: restrict the agent to only the tools you pick. Best when you want tight control over what the agent can do.Once done, click **Save**.4.  ![Save_MCP.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am0fac361d073cd6d8/0dd326788df89946f681508b/Save_MCP.png?locale=en-us)
-    
+
     **Tip:** Tool names from some servers appear in a technical format (for example, add\_reply\_to\_pull\_request\_comment). Contentstack automatically formats these into a readable form (for example, "Add Reply To Pull Request Comment") so they are easy to identify in the picker.
-    
+
     ### Add trigger and instructions
-    
+
     A tool alone does not make the agent do anything, it still needs a trigger to decide when it runs, and instructions telling it when and how to use the tool.
-    
+
     In the **Trigger** panel, click **+** and select a trigger type. Here, we are selecting **HTTP** trigger.In the **Instructions** field, describe what the agent should do and when it should use the MCP Client tool. **For example:**You are a test agent connected to Jira via MCP. When asked about issues, use the available tools to search, view, or update Jira issues as requested. Use / inside the Instructions field to reference a specific tool directly.![Added_Fields.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am7226a2e4b484f299/6681ef2cc45bc3a4fb73de49/Added_Fields.png?locale=en-us)
-    
+
     ### Save and publish agent
-    
+
     Click **Save** to lock in the **Trigger**, **Instructions**, and **MCP Client** tool together.Click **Publish** to make the agent live. A trigger does not fire on an unpublished (Draft) agent.![Publish_Agent.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/ambde18f450e6b914a/7edc7ed6b51f37161bf24078/Publish_Agent.png?locale=en-us)
-    
+
     ## How Your Agent Uses MCP Tools
-    
+
     Once configured, the MCP server's tools become available to your agent automatically at run time:
-    
+
     When the agent runs, it connects to your MCP server and retrieves the current list of tools.The tools you approved are offered to the agent's model.As the agent works through a request, it calls the appropriate tools, passes the required inputs, and uses the results to continue.
-    
+
     You do not need to script these calls, the model decides when to use each tool based on the conversation and the tool descriptions provided by the server.
-    
+
     **Example prompt:** With an Atlassian MCP server connected, you could ask your agent, _"Find all open Jira issues assigned to me in the Mobile project and summarize them."_ The agent calls the relevant tools to search issues and returns a summary.
-    
+
     ## Choosing a Trigger
-    
+
     The MCP Client tool gives your agent the _ability_ to call external tools but a trigger decides _when_ the agent runs in the first place. Pick the trigger that matches how you intend to use the agent. Following are some examples:
-    
+
     **Note:** The trigger types listed are examples. For a complete list of trigger types and configuration details, refer to the [Triggers](https://www.contentstack.com/docs/agent-os/http-trigger) documentation.
-    
+
     | Trigger type | Best for | Example use case |
     | --- | --- | --- |
     | HTTP | Another system or app calling the agent programmatically | An internal tool or webpage calls the agent's webhook URL whenever a user clicks "Check ticket status," passing the ticket ID in the request |
     | Scheduler | Running automatically on a fixed timer | Every Monday morning, the agent pulls all open bugs from Jira and posts a digest to Slack |
     | CS Trigger Event | Reacting to something happening elsewhere, rather than a fixed schedule or manual ask | Whenever a new Jira issue is created, the agent automatically triages it, adds labels, or notifies someone |
-    
+
     **Note:** If your agent uses an HTTP trigger, there is no live chat window to watch responses in. Each run creates an **execution record** instead. Check the [**Executions**](https://www.contentstack.com/docs/agent-os/view-execution-log-of-agent-os) tab in the agent builder to see the agent's status and output for every run.
-    
+
     ## Testing Your Connection (HTTP Trigger)
-    
+
     Follow these steps:
-    
+
     **Publish the agent.** A trigger only fires once the agent is published; a Draft agent will return a TRIGGER\_NOT\_ACTIVE error if called.**Copy the webhook URL** shown in the **HTTP** trigger configuration panel.**Send a POST request** to that URL with a JSON body containing your prompt, for example:
-    
+
     ```
     [
       {
@@ -188,7 +189,7 @@ First, register an OAuth app with your provider:
       } 
     ]
     ```
-    
+
 -   **Check the response.** A successful call returns an executionId and a status of processing.
 -   **Open the Executions tab** in the agent builder and select the matching execution to see the full result, including:
     -   **Execution Steps**: each MCP tool the agent called, in order
@@ -224,37 +225,37 @@ First, register an OAuth app with your provider:
 ## Frequently Asked Questions
 
 1.  **Which MCP servers can I connect to?**
-    
+
     Any remote MCP server that is reachable over HTTPS and supports header-based authentication or **OAuth 2.1**. This includes hosted services and self-hosted servers.
-    
+
 2.  **Do I need to add each tool manually?**
-    
+
     No. You configure one connection per server, and the agent gains access to all the tools you allow.
-    
+
 3.  **Can I limit which tools the agent uses?**
-    
+
     Yes. In **Allowed Tools**, select only the specific tools you want, or let the AI choose from all available tools.
-    
+
 4.  **Can I reuse a connection across multiple agents?**
-    
+
     Yes. Saved connections appear on the [Connected Apps](https://www.contentstack.com/docs/agent-os/view-list-of-connected-apps-in-automations) page and can be attached to multiple agents.
-    
+
 5.  **What's the difference between Dynamic client registration on and off?**
-    
+
     With Dynamic client registration on, Contentstack registers itself with the provider automatically. You only supply the server URL. With it clear, you register your own OAuth app with the provider and supply its Authorization URL, Access Token URL, Client ID, and Client Secret.
-    
+
 6.  **What's the difference between OAuth and Header-based authentication?**
-    
+
     Header-based authentication means you manually fetch a secret (API key or token) from the provider and paste it in; the same secret is used every time. OAuth means you sign in directly to the provider and approve access; no secret is copied or handled manually, and the provider can revoke or expire access from its own side.
-    
+
 7.  **Does the MCP Client overlap with existing connectors (e.g. a Jira or Notion connector)?**
-    
+
     Possibly, for the specific actions both expose. Pre-built connectors (like a dedicated [Jira](https://www.contentstack.com/docs/agent-os/jira) or [Notion](https://www.contentstack.com/docs/agent-os/notion) connector) are a curated, hand-built set of actions chosen by Contentstack. An MCP Client connection to that provider's own MCP server instead exposes whatever tools the provider itself has published, often a broader set, and one that updates automatically as the provider adds new tools, without waiting on a Contentstack release. Check each provider's own tool list to confirm exact overlap for your use case.
-    
+
 8.  **Can I use the MCP Client to create, update, or delete an Agent OS agent?**
-    
+
     No. The MCP Client lets an existing agent control _other_ external tools (Jira, Notion, etc.). It does not provide a way to create or manage Agent OS agents themselves, that still requires the Agent OS UI directly.
-    
+
 9.  **Is my data sent anywhere unexpected?**
-    
+
     No. Your agent connects directly to the [MCP server](/docs/developers/contentstack-mcp-server) you configured. Credentials stay encrypted and are used only to authenticate that connection.

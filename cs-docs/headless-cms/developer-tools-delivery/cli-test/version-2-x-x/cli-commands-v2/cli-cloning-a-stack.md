@@ -1,28 +1,29 @@
 ---
-title: "Cloning a Stack | Beta Commands"
+title: "Cloning a Stack | V2.x.x"
 description: "Clone a stack easily with Contentstack Command-line Interface commands using our step-by-step guide to streamline stack duplication."
 url: /headless-cms/cli-cloning-a-stack
+uid: bltb61fca77fed848a6
 ---
 
-# Cloning a Stack | Beta Commands
+# Cloning a Stack | V2.x.x
 
 ## Cloning a Stack
 
-Contentstack enables you to **clone a stack** and its associated **structure and content** using the cm:stacks:clone CLI command. This process lets you [export](/docs/headless-cms/export-content-using-the-cli/) data from a source stack and [import](/docs/headless-cms/import-content-using-the-cli/) it into a new or existing stack, facilitating rapid setup, testing, or migration. This guide uses the latest **Contentstack CLI** commands to ensure a seamless cloning experience.
+Contentstack enables you to **clone a stack** and its associated **structure and content** using the cm:stacks:clone CLI command. This process lets you [export](/docs/headless-cms/export-content-using-the-cli) data from a source stack and [import](/docs/headless-cms/import-content-using-the-cli) it into a new or existing stack, facilitating rapid setup, testing, or migration. This guide uses the latest **Contentstack CLI** commands to ensure a seamless cloning experience.
 
 **Note:** Before executing this command, ensure you have the required permissions for creating or accessing the destination stack. To know more about user roles and their permissions, refer to [this](/docs/headless-cms/types-of-roles#stack-roles-and-permissions-overview) documentation.
 
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login/)
--   Contentstack CLI [installed](/docs/headless-cms/install-the-cli) and [configured](/docs/headless-cms/configure-regions-in-the-cli/)
+-   Contentstack CLI [installed](/docs/headless-cms/install-the-cli) and [configured](/docs/headless-cms/configure-regions-in-the-cli)
 -   [Configured authtoken](/docs/headless-cms/cli-authentication#authentication)
 
 ## Commands
 
 The cm:stacks:clone command lets you export content from the source stack and import it into the destination stack instantly.
 
-**Note:** By default, an [audit fix](/docs/headless-cms/audit-plugin#issue-resolution-in-references) is performed on the exported content before import. This helps identify and address potential issues in the exported data.
+**Note:** By default, an [audit fix](/docs/headless-cms/cli-audit-plugin#issue-resolution-in-references) is performed on the exported content before import. This helps identify and address potential issues in the exported data.
 
 ## Options
 
@@ -86,25 +87,25 @@ On passing the \--config flag, the config will be passed to export and import in
 Follow the steps below to clone a stack using the cm:stacks:clone command:
 
 1.  Run the following command in your terminal:
-    
+
     ```
     csdx cm:stacks:clone
     ```
-    
+
 2.  Choose the **organization** from the displayed list.
 3.  Select the **stack** you want to clone.
 4.  Choose the **branch** of the stack.
 5.  Choose whether to clone content to a **new stack** or use an existing one:
-    
+
     -   **Y:** Create a new stack.
         -   Select the destination organization.
         -   The default name format: Copy of {source\_stack\_name}.
         -   You can provide a custom name for the new stack.
     -   **n:** Use an existing stack.
         -   Select the destination organization and stack (must have permissions).
-    
+
     **Tip:** To minimize errors, we recommend creating **a new destination stack**. If importing content into an existing stack, ensure that it is empty.
-    
+
 6.  Select one of the following types of content to clone:
     -   **Structure:** Imports only the schema (no entries/assets).
     -   **Structure with content:** Imports schema, entries, and assets.
@@ -120,17 +121,17 @@ csdx cm:stacks:clone -n "<>" --source-management-token-alias "<>" --destination-
 **Examples:**
 
 -   To clone content using management token aliases:
-    
+
     ```
     csdx cm:stacks:clone --source-management-token-alias <<management token alias for source>> --destination-management-token-alias <<management token alias for destination>>
     ```
-    
+
 -   To clone content and force override all Marketplace prompts:
-    
+
     ```
     csdx cm:stacks:clone --source-management-token-alias <<management token alias for source>> --destination-management-token-alias <<management token alias for destination>> --yes
     ```
-    
+
 
 ## Points to Remember
 
@@ -138,6 +139,6 @@ csdx cm:stacks:clone -n "<>" --source-management-token-alias "<>" --destination-
 -   Currently, we migrate only the latest version of entries and assets.
 -   To **create a new stack**, you must have the [owner](/docs/administration/about-administration-roles/#organization-owner) or [admin](/docs/administration/about-administration-roles/#organization-admin) rights in the destination organization.
 -   During **workflow migration**, admins and workflow stage users are not included. These must be manually reconfigured after cloning.
--   The clone function supports the **same modules** as the CLI [export](/docs/headless-cms/export-content-using-the-cli/) and [import](/docs/headless-cms/import-content-using-the-cli/) commands.
+-   The clone function supports the **same modules** as the CLI [export](/docs/headless-cms/export-content-using-the-cli) and [import](/docs/headless-cms/import-content-using-the-cli) commands.
 
 **Additional Resource:** Learn more about the CLI-supported clone operations in the [CLI-Supported Features for Export, Import, and Clone Operations](/docs/headless-cms/cli-supported-features-for-export-import-and-clone-operations) document.

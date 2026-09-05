@@ -2,6 +2,7 @@
 title: "About Contentstack Launch"
 description: "Contentstack Launch is a front-end hosting and deployment platform for websites built using the Contentstack headless CMS."
 url: /launch/about-launch
+uid: blt9624ca64f1f0bbe7
 ---
 
 # About Contentstack Launch
@@ -29,7 +30,7 @@ url: /launch/about-launch
     -   Run serverless functions to handle backend tasks or API integrations directly within Launch.
 -   [**Edge Functions**](/docs/launch/edge-functions)
     -   Deploy custom logic at the CDN edge for real-time personalization, authentication, or URL rewrites with minimal latency.
--   [**CLI for Launch**](/docs/headless-cms/cli-for-launch)
+-   [**CLI for Launch**](/docs/headless-cms/cli-for-launch/v1)
     -   Use the Contentstack CLI to create, manage, and deploy Launch projects programmatically, or integrate commands into CI/CD workflows.
 -   **Performance**
     -   [**Cache Priming**](/docs/launch/cache-priming): Preloads key pages to the CDN during deployment for faster first-load times.

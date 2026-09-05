@@ -2,6 +2,7 @@
 title: "Apps CLI Plugin | V2.x.x"
 description: "The Contentstack Apps Command-line Interface plugin lets you perform CRUD operations on your Developer Hub apps for your stack."
 url: /headless-cms/apps-cli-plugin
+uid: blt66d5de60ef6a5cf1
 ---
 
 # Apps CLI Plugin | V2.x.x
@@ -47,11 +48,11 @@ The app:create command allows you to create or register an app in Developer Hub,
 
 1.  Open a terminal.
 2.  Fire the following command:
-    
+
     ```
     csdx app:create
     ```
-    
+
 3.  In the prompt that appears, select a **boilerplate template**.
 4.  Enter a **name** for your app.
 5.  Select an **organization**.
@@ -59,11 +60,11 @@ The app:create command allows you to create or register an app in Developer Hub,
     ![Apps-CLI_Create_Prompt](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf4c1c2f360fb711f/64c27dd1ec43995f77ea04a4/Apps-CLI_Create_Prompt.png)  
     With these steps, you have successfully created an app in Developer Hub.  
     Alternatively, you can pass the name and organization UID in the command as given below:
-    
+
     ```
     csdx app:create --name <app_name> --org <organization uid>
     ```
-    
+
 
 **Usage**
 
@@ -83,17 +84,17 @@ csdx app:create
 **Examples**
 
 -   To create a stack app named App-1:
-    
+
     ```
     csdx app:create --name App-1 --app-type stack
     ```
-    
+
 -   To create an organization app named App-3 by providing the current working directory and the path of the external config:
-    
+
     ```
     csdx app:create --name App-3 --app-type organization --org <UID> -d ./boilerplate -c ./external-config.json
     ```
-    
+
 
 ### Get App Details
 
@@ -101,11 +102,11 @@ The app:get command allows you to get the details of an app in Developer Hub. Le
 
 1.  Open a terminal.
 2.  Fire the following command:
-    
+
     ```
     csdx app:get
     ```
-    
+
 3.  Select the **organization** in which the app has been created and whose details you want to fetch.
 4.  Select the required **app** from the displayed list.  
     You receive the fetched app data in the manifest.json file in your folder.
@@ -126,17 +127,17 @@ csdx app:get
 **Examples**
 
 -   To fetch the details of a stack app:
-    
+
     ```
     csdx app:get --org <value> --app-uid <value> --app-type stack
     ```
-    
+
 -   To fetch the details of an organization app:
-    
+
     ```
     csdx app:get --org <value> --app-uid <value> --app-type organization
     ```
-    
+
 
 ### Install an App
 
@@ -144,20 +145,20 @@ The app:install command allows you to install an app from Developer Hub to an or
 
 1.  Open a terminal.
 2.  Fire the following command to install an app:
-    
+
     ```
     csdx app:install
     ```
-    
+
 3.  Select an **organization** from the displayed list.
 4.  Select the **app** you want to install.
 5.  If you select a Stack App, then select a **stack** where you want to install the app and the app gets installed successfully.  
     Alternatively, you can pass the app UID and the organization UID in the command as given below:
-    
+
     ```
     csdx app:install --app-uid <app_uid> --org <org_uid>
     ```
-    
+
 
 **Usage**
 
@@ -174,17 +175,17 @@ csdx app:install
 **Examples**
 
 -   To install an app:
-    
+
     ```
     csdx app:install
     ```
-    
+
 -   To install an app by providing the stack where the app is to be installed:
-    
+
     ```
     csdx app:install --stack-api-key
     ```
-    
+
 
 ### Update an App
 
@@ -193,21 +194,21 @@ The app:update command allows you to update an existing app in Developer Hub.
 1.  Make the required app updates in the app manifest.json file.
 2.  Open a terminal.
 3.  Fire the following command to update the app in the UI with respect to the app manifest.json file:
-    
+
     ```
     csdx app:update
     ```
-    
+
 4.  Select an **organization** from the displayed list.
 5.  Enter the **path** to the app manifest.json file.
 6.  Select the **app** you want to update.  
     You have successfully updated the app.  
     Alternatively, you can pass the app manifest.json file path in the command as given below:
-    
+
     ```
     csdx app:update --app-manifest <file_path>
     ```
-    
+
 
 **Usage**
 
@@ -223,11 +224,11 @@ csdx app:update
 **Examples**
 
 -   To update an app for a provided app manifest file:
-    
+
     ```
     csdx app:update --app-manifest <value>
     ```
-    
+
 
 ### Deploy an App
 
@@ -235,20 +236,20 @@ The app:deploy command in CLI allows you to deploy an app on the [Contentstack L
 
 1.  Open a terminal.
 2.  Fire the following command to deploy an app:
-    
+
     ```
     csdx app:deploy
     ```
-    
+
 3.  Select an **organization** from the displayed list.
 4.  Select the **app** you want to deploy.
 5.  Select a **Hosting Type**.
     1.  If you select **Hosting with Launch**, then select from the following:
         1.  **Existing**: Allows you to select an existing Launch project to host your app.
         2.  **New**: Creates a new Launch project to host your app.
-            
+
             **Note:** When you create a new Launch project (using [GitHub](/docs/launch/import-project-using-github) or [File upload](/docs/launch/import-project-using-file-upload/)) to host your app, you can pass the project parameters in a [config](https://github.com/contentstack/contentstack-apps-cli/blob/main/examples/create-launch-project.json) file.
-            
+
     2.  If you select **Custom Hosting**, enter any custom URL to host your app.
 
 You have successfully deployed an app.  
@@ -277,41 +278,41 @@ csdx app:deploy
 **Examples**
 
 -   To deploy an app:
-    
+
     ```
     csdx app:deploy
     ```
-    
+
 -   To deploy an app by providing the organization UID and the app UID:
-    
+
     ```
     csdx app:deploy --org <UID> --app-uid <APP-UID-1>
     ```
-    
+
 -   To deploy an app using custom hosting by providing the organization UID and the app UID:
-    
+
     ```
     csdx app:deploy --org <UID> --app-uid <APP-UID-1> --hosting-type <custom-hosting> --app-url <https://localhost:3000>
     ```
-    
+
 -   To deploy an app using an existing Launch project, by providing the organization UID and the app UID:
-    
+
     ```
     csdx app:deploy --org <UID> --app-uid <APP-UID-1> --hosting-type <hosting-with-launch> --launch-project <existing>
     ```
-    
+
 -   To deploy an app using a new Launch project, by providing the organization UID and the app UID:
-    
+
     ```
     csdx app:deploy --org <UID> --app-uid <APP-UID-1> --hosting-type <hosting-with-launch> --launch-project <new>
     ```
-    
+
 -   To deploy an app using a new Launch project, by providing a config file path, the organization UID, and the app UID:
-    
+
     ```
     csdx app:deploy --org <UID> --app-uid <APP-UID-1> --hosting-type <hosting-with-launch> --launch-project <new> --config <config-path>
     ```
-    
+
 
 ### Reinstall an App
 
@@ -319,21 +320,21 @@ The app:reinstall command allows you to reinstall an app from Developer Hub to a
 
 1.  Open a terminal.
 2.  Fire the following command to reinstall an app:
-    
+
     ```
     csdx app:reinstall
     ```
-    
+
 3.  Select an **organization** from the displayed list.
 4.  Select the **app** you want to reinstall.
 5.  If you select a Stack App, select a **stack** where you want to reinstall the app.  
     You have successfully reinstalled the app.  
     Alternatively, you can pass the app UID and the organization UID in the command as given below:
-    
+
     ```
     csdx app:reinstall --app-uid <app_uid> --org <org_uid>
     ```
-    
+
 
 **Usage**
 
@@ -350,17 +351,17 @@ csdx app:reinstall
 **Examples**
 
 -   To reinstall an app:
-    
+
     ```
     csdx app:reinstall
     ```
-    
+
 -   To reinstall an app by providing the stack where the app is to be reinstalled:
-    
+
     ```
     csdx app:reinstall --stack-api-key
     ```
-    
+
 
 ### Uninstall an App
 
@@ -368,21 +369,21 @@ The app:uninstall command allows you to uninstall an app from the organization o
 
 1.  Open a terminal.
 2.  Fire the following command to uninstall an app:
-    
+
     ```
     csdx app:uninstall
     ```
-    
+
 3.  Select the **organization** which has the app you want to uninstall.
 4.  Select the **app** you want to uninstall.
 5.  If you select a Stack App, select the **stack(s)** from where you want to uninstall the app.  
     You have successfully uninstalled the app.  
     Alternatively, you can pass the app UID and the organization UID in the command as given below:
-    
+
     ```
     csdx app:uninstall --app-uid <app_uid> --org <org_uid>
     ```
-    
+
 
 **Usage**
 
@@ -400,23 +401,23 @@ csdx app:uninstall
 **Examples**
 
 -   To uninstall an organization app:
-    
+
     ```
     csdx app:uninstall --org <UID> --app-uid <APP-UID-1>
     ```
-    
+
 -   To uninstall an organization app from all the stacks where it is installed:
-    
+
     ```
     csdx app:uninstall --org <UID> --app-uid <APP-UID-1> --uninstall-all
     ```
-    
+
 -   To uninstall an organization app for a given installation ID:
-    
+
     ```
     csdx app:uninstall --org <UID> --app-uid <APP-UID-1> --installation-uid <INSTALLATION-UID-1>
     ```
-    
+
 
 ### Delete an App
 
@@ -426,20 +427,20 @@ The app:delete command allows you to delete an app from Developer Hub as follows
 
 1.  Open a terminal.
 2.  Fire the following command to delete an app:
-    
+
     ```
     csdx app:delete
     ```
-    
+
 3.  Select an **organization** from the displayed list.
 4.  Select the **app** you want to delete.  
     You have successfully deleted the app.  
     Alternatively, you can pass the app UID and the organization UID in the command as given below:
-    
+
     ```
     csdx app:delete --app-uid <app_uid> --org <org_uid>
     ```
-    
+
 
 **Usage**
 
@@ -455,17 +456,17 @@ csdx app:delete
 **Examples**
 
 -   To delete an app for a given app UID:
-    
+
     ```
     csdx app:delete --app-uid <value>
     ```
-    
+
 -   To delete an organization app for a given app UID:
-    
+
     ```
     csdx app:delete --app-uid <value> --org <value>
     ```
-    
+
 
 ## Limitation
 

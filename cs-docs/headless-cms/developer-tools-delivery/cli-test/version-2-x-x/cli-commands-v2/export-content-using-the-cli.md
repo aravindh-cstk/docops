@@ -1,10 +1,11 @@
 ---
-title: "Export Content Using the CLI | Beta Commands"
+title: "Export Content Using the CLI | V2.x.x"
 description: "Export content efficiently with Contentstack’s latest Command-line Interface commands to simplify data migration and content backup."
 url: /headless-cms/export-content-using-the-cli
+uid: blt2fe395869b399af0
 ---
 
-# Export Content Using the CLI | Beta Commands
+# Export Content Using the CLI | V2.x.x
 
 ## Export Content Using the CLI
 
@@ -15,7 +16,7 @@ This guide explains how to use the cm:stacks:export command by logging in to the
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login/)
--   Contentstack CLI [installed](/docs/headless-cms/install-the-cli/)
+-   Contentstack CLI [installed](/docs/headless-cms/install-the-cli)
 -   CLI [authenticated](/docs/headless-cms/cli-authentication#login)
 -   [Configured management token](/docs/headless-cms/cli-authentication#add-management-token) (alias) _(optional)_
 
@@ -45,7 +46,7 @@ The cm:stacks:export command lets you export content from one stack to another.
 **Usage**
 
 ```
-csdx cm:stacks:export -k <<stack_ApiKey>> -d <<file_path>>
+csdx cm:stacks:export -k <<stack_ApiKey>> --data-dir <<file_path>>
 ```
 
 **Options**
@@ -56,13 +57,13 @@ Use the following options with any applicable export command:
 | --- | --- | --- |
 | --stack-api-key=stack-api-key | -k | API key of the source stack. |
 | --alias=alias | -a | Management token alias of the source stack. |
-| --data-dir=data-dir | -d | Absolute path to the folder where exported content is stored. |
+| --data-dir=data-dir | - | Absolute path to the folder where exported content is stored. |
 | \--branch=branch | \- | 
 Name of the branch from which content is exported.
 
-Default: all branches
+Default: main
 
-If not specified, content from all branches is exported.
+If not specified, content is exported from the main branch only. If the stack has no branch named main, the command fails.
 
  |
 | --branch-alias=branch-alias |  | Alias of the branch from which content is exported. |
@@ -72,7 +73,9 @@ If not specified, content from all branches is exported.
 
 If not specified, all modules are exported.
 
-Available modules: assets, content-types, entries, environments, stacks, extensions, marketplace-apps, global-fields, labels, locales, webhooks, workflows, custom-roles, taxonomies, personalize, studio
+Available modules: stack, assets, locales, environments, extensions, webhooks, global-fields, entries, content-types, custom-roles, workflows, publishing-rules, labels, marketplace-apps, taxonomies, personalize, composable-studio
+
+The CLI validates this value before the export starts and fails immediately if the module name is not in the list above.
 
  |
 | \--content-types=content-types | \- | 
@@ -101,35 +104,66 @@ If not provided, you are prompted to enter an encryption key while exporting Mar
 **Examples**
 
 -   To export all modules from a stack:
-    
+
     ```
-    csdx cm:stacks:export -d "C:\Users\Name\Desktop\cli\content" -k bltxxxxxx
+    csdx cm:stacks:export --data-dir "C:\Users\Name\Desktop\cli\content" -k bltxxxxxx
     ```
-    
+
 -   To export all modules from a specific branch (e.g., develop):
-    
+
     ```
-    csdx cm:stacks:export -d "C:\Users\Name\Desktop\cli\content" -k bltxxxxxx --branch develop
+    csdx cm:stacks:export --data-dir "C:\Users\Name\Desktop\cli\content" -k bltxxxxxx --branch develop
     ```
-    
+
 -   To export all modules from a branch using an alias:
-    
+
     ```
-    csdx cm:stacks:export -d "C:\Users\Name\Desktop\cli\content" -k bltxxxxxx --branch-alias developAlias
+    csdx cm:stacks:export --data-dir "C:\Users\Name\Desktop\cli\content" -k bltxxxxxx --branch-alias developAlias
     ```
-    
+
 -   To export only content types:
-    
+
     ```
-    csdx cm:stacks:export -d "C:\Users\Name\Desktop\cli\content" --module content-types -k bltxxxxxx
+    csdx cm:stacks:export --data-dir "C:\Users\Name\Desktop\cli\content" --module content-types -k bltxxxxxx
     ```
-    
+
 
 **Note:** When exporting modules individually, follow this module sequence:
 
-assets → environments → stacks → locales → extensions → marketplace-apps → webhooks → taxonomies → global-fields → content-types → workflows → entries → labels → custom-roles → personalize → studio
+assets → environments → stack → locales → extensions → marketplace-apps → webhooks → taxonomies → global-fields → content-types → workflows → entries → labels → custom-roles → publishing-rules → personalize → composable-studio
 
 For example, before exporting entries, you must have already exported assets, environments, stacks, locales, extensions, marketplace-apps, webhooks, taxonomies, global-fields, content-types, and workflows.
+
+### Export Output Structure
+
+The export writes content directly into the folder you pass to \--data-dir.
+
+**Warning:** The export never creates a per-branch subfolder. Exporting two branches into the same \--data-dir overwrites the first export with the second, and no error is raised. Use a separate \--data-dir for each branch.
+
+```
+csdx cm:stacks:export --branch main --data-dir ./export-main --stack-api-key bltxxxxxx
+csdx cm:stacks:export --branch feature-x --data-dir ./export-feature --stack-api-key bltxxxxxx
+```
+
+Content types and global fields are each written as one file per UID:
+
+```
+export/content_types/blog.json
+export/content_types/author.json
+export/global_fields/my_header.json
+export/global_fields/my_footer.json
+```
+
+Four files that earlier versions of the CLI wrote are no longer produced:
+
+| File | Status |
+| --- | --- |
+| content\_types/schema.json | Not written. Read the individual content\_types/<uid>.json files instead. |
+| global\_fields/globalfields.json | Not written. Read the individual global\_fields/<uid>.json files instead. |
+| branches.json | Not written. The export no longer records the branch list at the export root. |
+| export-info.json | Not written. Any pipeline step that reads contentVersion from this file needs to be removed. |
+
+If a script or pipeline reads any of these files, it fails on an export produced by this version of the CLI, because the files do not exist.
 
 ### Using Configuration File
 
@@ -150,11 +184,11 @@ csdx cm:stacks:export -c <<config_file_path>>
 **Example**
 
 -   To export content using a configuration file:
-    
+
     ```
     csdx cm:stacks:export -c "C:\Users\Name\Desktop\cli\config.json"
     ```
-    
+
 
 **Note:**
 
@@ -192,7 +226,7 @@ csdx cm:stacks:export -a <<alias>>
 Alternatively, refer to the following command to add several parameters or options in a single line:
 
 ```
-csdx cm:stacks:export -a <<alias>> -d <<file_path>>
+csdx cm:stacks:export -a <<alias>> --data-dir <<file_path>>
 ```
 
 You can also **export content by using a management token and a** [**configuration file**](https://github.com/contentstack/cli/blob/v2.0.0-beta/packages/contentstack-export/example_config/management_config.json) that contains the parameters or options and the associated values.
@@ -208,11 +242,11 @@ csdx cm:stacks:export -a <<alias>> -c <<config_file_path>>
 **Example**
 
 -   To export content using a configuration file:
-    
+
     ```
     csdx cm:stacks:export -a mytoken -c "C:\Users\Name\Desktop\cli\config.json"
     ```
-    
+
 
 ## Toggle Between Console Logs and Progress Manager View (2.x.x-beta)
 
@@ -221,7 +255,7 @@ Contentstack CLI lets you toggle between the raw console logs and the visual Pro
 **Default Usage:**
 
 ```
-csdx cm:stacks:export -d "./export-data" -k bltxxxxxx
+csdx cm:stacks:export --data-dir "./export-data" -k bltxxxxxx
 ```
 
 **Note:** By default, the Progress Manager UI displays when you run the export command and does not require any configuration.
@@ -246,27 +280,27 @@ ENTRIES:
 **Steps to Switch to Console Logs (Optional):**
 
 1.  Run the following command to switch to console log mode:
-    
+
     ```
     csdx config:set:log --show-console-logs
     ```
-    
+
 2.  Run the export command:
-    
+
     ```
-    csdx cm:stacks:export -d "./export-data" -k bltxxxxxx
+    csdx cm:stacks:export --data-dir "./export-data" -k bltxxxxxx
     ```
-    
+
     The screen displays the console logs for the export operation.
-    
+
     **Tip:** Use \--show-console-logs for detailed debugging when troubleshooting export issues.
-    
+
 3.  Run the following command to switch back to default mode:
-    
+
     ```
     csdx config:set:log --no-show-console-logs
     ```
-    
+
 
 **Options:**
 
@@ -288,9 +322,9 @@ ENTRIES:
 -   If multiple assets have the same UID and file name, only the first asset will be exported.
 -   To resolve the maxContentLength and maxBodyLength errors, include these parameters in the configuration JSON with values specified in bytes. The default limit is **100MB**. For implementation details, refer to the [example configuration file](https://github.com/contentstack/cli/blob/v2.0.0-beta/packages/contentstack-export/example_config/management_config.json).
 -   To manage API request timing and prevent concurrency issues, add the delayMs parameter to your configuration file.
-    
+
     For example, use delayMs: 1000 (for a 1-second delay).
-    
+
 -   Currently, only the latest version of entries and assets is exported.
 -   Currently, the following modules cannot be exported:
     -   [Users](/docs/headless-cms/about-stack-users/)

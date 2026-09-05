@@ -2,6 +2,7 @@
 title: "About Compare and Merge Branches"
 description: "Learn how to compare and merge branches in Contentstack. Branches are a way to create different versions of your content."
 url: /headless-cms/about-compare-and-merge-branches
+uid: blt5a61ea7ca986ff4c
 ---
 
 # About Compare and Merge Branches
@@ -10,7 +11,7 @@ url: /headless-cms/about-compare-and-merge-branches
 
 With **Compare** and **Merge** Branches, you can now compare the differences between two branches and merge them together.
 
-**Note:** Both the **Compare** and **Merge** features are currently only available for content types and global fields, and are accessible through the [Content Management API](/docs/developers/apis/content-management-api/branches#compare-branches) and [CLI commands](/docs/headless-cms/compare-and-merge-branches-using-the-cli/).
+**Note:** Both the **Compare** and **Merge** features are currently only available for content types and global fields, and are accessible through the [Content Management API](/docs/developers/apis/content-management-api/branches#compare-branches) and [CLI commands](/docs/headless-cms/compare-and-merge-branches-using-the-cli).
 
 ## How to Compare Branches
 
@@ -44,7 +45,7 @@ You can select a default merge strategy as well as override the default strategy
 
 Learn more about [merging branches.](/docs/headless-cms/merging-branches)
 
-**Additional Resource:** If you want to carry out operations related to **Compare** and **Merge** **Branches** within your stack using the CLI, refer to the guide on how to [Compare and Merge Branches using the CLI](/docs/headless-cms/compare-and-merge-branches-using-the-cli/).
+**Additional Resource:** If you want to carry out operations related to **Compare** and **Merge** **Branches** within your stack using the CLI, refer to the guide on how to [Compare and Merge Branches using the CLI](/docs/headless-cms/compare-and-merge-branches-using-the-cli).
 
 ## API Reference
 

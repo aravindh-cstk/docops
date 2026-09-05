@@ -2,6 +2,7 @@
 title: "Migrate and Overwrite Content in the Same Stack | V2.x.x"
 description: "Migrate and overwrite existing content in the same Contentstack stack using the CLI entries module, including assets and dependencies."
 url: /headless-cms/cli-migrate-and-overwrite-content-in-the-same-stack
+uid: blt449b48a8ef6980a4
 ---
 
 # Migrate and Overwrite Content in the Same Stack | V2.x.x
@@ -22,11 +23,11 @@ Before you begin, ensure the following:
 
 -   You have exported content from the stack to a local folder.
 -   You are authenticated using the CLI:
-    
+
     ```
     csdx auth:login
     ```
-    
+
 -   You have the **Stack API key** of the target stack.
 -   You have the necessary [permissions](/docs/headless-cms/types-of-roles).
 

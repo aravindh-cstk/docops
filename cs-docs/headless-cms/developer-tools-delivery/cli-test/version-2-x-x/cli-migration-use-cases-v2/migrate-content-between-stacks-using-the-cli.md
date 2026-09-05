@@ -2,6 +2,7 @@
 title: "Migrate Content Between Stacks Using the CLI | V2.x.x"
 description: "Learn how to manually migrate content between Contentstack stacks with step-by-step instructions."
 url: /headless-cms/migrate-content-between-stacks-using-the-cli
+uid: blt8cddf6452fd82024
 ---
 
 # Migrate Content Between Stacks Using the CLI | V2.x.x
@@ -27,25 +28,25 @@ If you are importing an export produced by CLI V1, that layout did nest content 
 To migrate all content from one stack to another quickly, follow the steps below:
 
 -   [Export](/docs/headless-cms/export-content-using-the-cli) from source stack:
-    
+
     ```
     csdx cm:stacks:export -k <source_stack_api_key> --data-dir ./export --branch main
     ```
-    
+
 -   [Audit](/docs/headless-cms/cli-audit-plugin) the exported content (recommended):
-    
+
     ```
     csdx cm:stacks:audit --data-dir ./export
     ```
-    
+
     **Note:** The [audit](/docs/headless-cms/cli-audit-plugin) process runs automatically during [import](/docs/headless-cms/import-content-using-the-cli) to validate and fix any issues.
-    
+
 -   [Import](/docs/headless-cms/import-content-using-the-cli) to target stack:
-    
+
     ```
     csdx cm:stacks:import -k <target_stack_api_key> --data-dir ./export
     ```
-    
+
 
 ## Behaviour to Check Before You Rely on the Result
 

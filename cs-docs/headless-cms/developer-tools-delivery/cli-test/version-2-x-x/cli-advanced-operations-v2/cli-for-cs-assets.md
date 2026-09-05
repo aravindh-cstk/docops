@@ -1,10 +1,11 @@
 ---
-title: "CLI for CS Assets"
-description: "CLI for CS Assets"
+title: "CLI for CS Assets | V2.x.x"
+description: "CLI for CS Assets | V2.x.x"
 url: /headless-cms/cli-for-cs-assets
+uid: blt642ce07c5edd5f56
 ---
 
-# CLI for CS Assets
+# CLI for CS Assets | V2.x.x
 
 ## CLI for CS Assets
 
@@ -48,7 +49,7 @@ Select an authentication method based on your operation:
 ### Mandatory
 
 -   **CS Assets URL configured for your region:** Your Contentstack administrator must add a CS Assets URL to the region configuration. See [Configure Regions in the CLI](/docs/headless-cms/configure-regions-in-the-cli):
-    
+
     ```
     csdx config:set:region \
       --cda <cda_url> \
@@ -57,12 +58,12 @@ Select an authentication method based on your operation:
       --cs-assets <cs_assets_url> \
       -n <region_name>
     ```
-    
+
     Without this URL, the CLI has no CS Assets endpoint even if workspaces are linked.
 -   **Linked workspaces on the stack branch:** The stack branch must have linked workspaces configured in your Contentstack organization.
-    
+
     **Note:** Linked workspaces are CS Assets spaces in your Contentstack organization that are associated with a stack branch. The CLI reads linked workspace assignments automatically from branch settings during export. Without linked workspaces, the CLI has no spaces to export, even if the URL is configured.
-    
+
 
 ### Optional
 

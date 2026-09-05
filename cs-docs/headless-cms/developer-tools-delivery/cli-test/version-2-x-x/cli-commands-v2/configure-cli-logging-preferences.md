@@ -1,10 +1,11 @@
 ---
-title: "Configure CLI Logging Preferences | Beta Commands"
+title: "Configure CLI Logging Preferences | V2.x.x"
 description: "Set and retrieve logging preferences in Contentstack CLI, including log level and file path configuration."
 url: /headless-cms/configure-cli-logging-preferences
+uid: blt66365ee2f36e0315
 ---
 
-# Configure CLI Logging Preferences | Beta Commands
+# Configure CLI Logging Preferences | V2.x.x
 
 ## Configure CLI Logging Preferences
 
@@ -13,7 +14,7 @@ The config namespace in the Contentstack CLI provides commands to configure vari
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login/)
--   Contentstack CLI [installed](/docs/headless-cms/install-the-cli/)
+-   Contentstack CLI [installed](/docs/headless-cms/install-the-cli)
 
 ## Commands
 
@@ -41,24 +42,30 @@ Supported values: debug, info, warn, error
 
  |
 | --path | - | Specify the directory path where logs should be saved. |
-| --show-console-logs | - | Enable console logging. |
+| \--show-console-logs | \- | Enable console logging.
 
-  
+Use \--no-show-console-logs to disable it.
+
+ |
+
+
 
 **Examples**
 
 -   Set log level to debug
-    
+
     ```
     csdx config:set:log --level debug
     ```
-    
+
 -   Set log level to info and specify a log file path:
-    
+
     ```
     csdx config:set:log --level info --path ./logs/app.log
     ```
-    
+
+
+**Warning:** The configuration key for this setting changed between major versions. V1 stored it as log\["show-console-logs"\] and the current CLI reads log\["showConsoleLogs"\]. After you upgrade, the older key is ignored with no warning and console logging falls back to its default. Run csdx config:set:log --show-console-logs once after upgrading to write the key in the form the current CLI reads.
 
 ### Get the Current Logging Configuration for the CLI
 

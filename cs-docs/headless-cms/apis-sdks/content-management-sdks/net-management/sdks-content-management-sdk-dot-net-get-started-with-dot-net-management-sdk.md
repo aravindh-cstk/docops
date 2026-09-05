@@ -2,6 +2,7 @@
 title: "Get Started with .NET Management SDK"
 description: "Steps for getting started with .NET Management SDK"
 url: /developers/sdks/content-management-sdk/dot-net/get-started-with-dot-net-management-sdk
+uid: bltb806e5a92ac9103a
 ---
 
 # Get Started with .NET Management SDK

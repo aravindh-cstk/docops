@@ -2,6 +2,7 @@
 title: "Overview"
 description: "Equip AI coding tools like Cursor, Claude Code, Codex, and Gemini with Contentstack Agent Skills to write precise, secure CMS and Delivery SDK code instantly."
 url: /developers/skills-overview
+uid: blta0d59fcf39ab2ce5
 ---
 
 # Overview
@@ -23,21 +24,21 @@ Each skill defines the correct patterns, known anti-patterns, and constraints fo
 
 ## Available skills
 
-The 21 skills are organized into five product areas:
+The 21 skills span five product areas:
 
 | Product area | Skills |
 | --- | --- |
 | **CMS** | Assets · Branches & Aliases · Data Modeling · Entries · Environments & Publishing · Localization · Releases · Roles & Permissions · Taxonomy · Tokens & Authentication · Variants & Personalization · Webhooks · Workflows |
-| **Developer Experience** | Delivery SDK · Migrate JS→TS SDK · Live Preview & Visual Builder Support · Migration Companion |
-| **Launch** | Sync env vars from .env.example · Trigger & Monitor Deployments |
+| **Developer Experience** | Delivery SDK · Migrate JS to TS SDK · Live Preview & Visual Builder Support · Migration Companion |
+| **Launch** | Sync env vars from .env.example · Trigger and Monitor Deployments |
 | **Brand Kit** | Brand Kit Assistant |
 | **Developer Hub** | Developer Hub App Architect |
 
-**Additional Resource:** Refer to the [skills reference](/docs/developers/skills-reference) documentation for a description of each skill.
+**Additional Resource:** Refer to the [skills reference](https://www.contentstack.com/docs/developers/skills-reference) documentation for a description of each skill.
 
 ## Installation format selection and maintenance
 
-Each skill is defined in a single SKILL.md source file. The repository generates one format per supported tool from that source. Install the format that matches your AI coding tool:
+A single SKILL.md source file defines each skill. The repository generates one format per supported tool from that source. Install the format that matches your AI coding tool:
 
 | Tool | What you install | What it produces | Install guide |
 | --- | --- | --- | --- |
@@ -61,7 +62,7 @@ The source repository is at [github.com/contentstack/contentstack-agent-skills](
 
 ### How skill selection works
 
-The router is included in the tool's instructions. When you submit a request, the tool reads the routing table, matches the request to a skill, and applies that skill. You do not need to name a skill explicitly, but you can to target a specific one.
+The tool's instructions include the router. When you submit a request, the tool reads the routing table, matches the request to a skill, and applies that skill. You do not need to name a skill explicitly, but you can to target a specific one.
 
 The skills CLI installs only the skill you specify. It does not include a router, so skills are not selected automatically.
 

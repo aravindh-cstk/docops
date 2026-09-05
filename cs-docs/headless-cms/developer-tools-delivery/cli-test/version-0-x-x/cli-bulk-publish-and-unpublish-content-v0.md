@@ -1,10 +1,11 @@
 ---
-title: "Bulk Publish and Unpublish Content | Old Commands"
+title: "Bulk Publish and Unpublish Content | V0.x.x"
 description: "Use the CLI to bulk publish and unpublish entries and assets in Contentstack, streamlining content deployment across environments."
 url: /headless-cms/cli-bulk-publish-and-unpublish-content/v0
+uid: blt7cd9c7438ee7322e
 ---
 
-# Bulk Publish and Unpublish Content | Old Commands
+# Bulk Publish and Unpublish Content | V0.x.x
 
 ## Bulk Publish and Unpublish Content
 
@@ -13,9 +14,9 @@ The Bulk Publish and Unpublish commands allow you to publish entries and assets
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login)
--   CLI [installed](/docs/headless-cms/install-the-cli) on your machine
--   [Authentication](https://www.contentstack.com/docs/headless-cms/cli-authentication/) to use CLI
--   A [configured management token](/docs/headless-cms/cli-authentication#add-token) 
+-   CLI [installed](/docs/headless-cms/install-the-cli/v1) on your machine
+-   [Authentication](https://www.contentstack.com/docs/headless-cms/cli-authentication/v0) to use CLI
+-   A [configured management token](/docs/headless-cms/cli-authentication/v0#add-token) 
 
 ## Commands
 
@@ -235,7 +236,7 @@ csdx cm:bulk-publish:unpublish -e <environment_name> -l <locale_code> --stack-ap
 
 The **cm:bulk-publish:configure** command lets you generate a template for the configuration JSON file. It will set the variables for the Bulk Publish commands.
 
-After you generate the configuration file, you can simply use its path in the \-c, \--config=config option of any Bulk Publish commands. You can view this [reference configuration file](https://github.com/contentstack/cli/blob/main/packages/contentstack-bulk-publish/src/config/index.js) for Bulk Publish commands.
+After you generate the configuration file, you can simply use its path in the \-c, \--config=config option of any Bulk Publish commands. You can view this [reference configuration file](https://github.com/contentstack/cli-plugins/blob/main/packages/contentstack-bulk-operations/src/config/index.ts) for Bulk Publish commands.
 
 **Usage**
 
@@ -247,7 +248,7 @@ csdx cm:bulk-publish:configure
 
 -   \-a, \--alias=alias: Name (alias) of the management token you want to use
 
-**Additional Resource:** If you want to migrate your content from one stack to another, refer to the [Migration](/docs/headless-cms/migrate-your-content-using-the-cli-migration-command) guide.
+**Additional Resource:** If you want to migrate your content from one stack to another, refer to the [Migration](/docs/headless-cms/migrate-your-content-using-the-cli-migration-command/v0) guide.
 
 ## Limitations
 

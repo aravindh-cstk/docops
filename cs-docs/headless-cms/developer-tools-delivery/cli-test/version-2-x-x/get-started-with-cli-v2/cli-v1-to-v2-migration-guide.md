@@ -2,6 +2,7 @@
 title: "Migrate from Contentstack CLI V1 to V2 | V2.x.x"
 description: "Upgrade the Contentstack CLI from V1 to V2 with a flag-by-flag mapping, export and import format changes, a pre-upgrade checklist, and fixes for silent failures."
 url: /headless-cms/cli-v1-to-v2-migration-guide
+uid: blt05c442f72f396864
 ---
 
 # Migrate from Contentstack CLI V1 to V2 | V2.x.x
@@ -724,13 +725,13 @@ csdx cm:stacks:bulk-assets \
 **Requirements:**
 
 -   Configure csAssetsUrl in region settings first:
-    
+
     ```
     csdx config:set:region --cs-assets <url>
     ```
-    
+
 -   Do not combine CMS flags (\--stack-api-key, \--alias, \--environments, \--locales, \--branch) with CS Assets flags.
-    
+
 
 | Operation | --locale |
 | --- | --- |
@@ -1355,11 +1356,11 @@ V2 adds taxonomy publishing support across export, import, and bulk operations.
 
 -   **Export** captures publish\_details per locale for each taxonomy.
 -   **Import** re-publishes taxonomies after import by default. To skip publishing (for example, if you want to review entries before publishing):
-    
+
     ```
     csdx cm:stacks:import --skip-taxonomy-publish -d ./export -k bltXXX
     ```
-    
+
 -   cm:stacks:bulk-taxonomies handles bulk taxonomy publish operations (see [cm:stacks:bulk-taxonomies](#cmstacksbulk-taxonomies)).
 
 ## Troubleshooting

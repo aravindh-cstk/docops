@@ -1,10 +1,11 @@
 ---
-title: "Migrate your Content using the CLI Migration Command | Old Commands"
+title: "Migrate your Content using the CLI Migration Command | V0.x.x"
 description: "Effortlessly migrate your content with Contentstack's CLI Migration Command."
 url: /headless-cms/migrate-your-content-using-the-cli-migration-command/v0
+uid: bltce91c490961bf924
 ---
 
-# Migrate your Content using the CLI Migration Command | Old Commands
+# Migrate your Content using the CLI Migration Command | V0.x.x
 
 ## Migrate your Content using the CLI Migration Command
 
@@ -18,7 +19,7 @@ Developers can validate the deployment before pushing it on production, using a 
 
 ## Process Overview
 
-The first step is to write a migration script to perform content migration. We have provided sample migration scripts which you can refer [here](/docs/headless-cms/migrate-your-content-using-the-cli-migration-command#get-started-with-the-migration-script), or write custom scripts. Furthermore, you can use various methods and SDK instances to make your migration script easy to write and read.
+The first step is to write a migration script to perform content migration. We have provided sample migration scripts which you can refer [here](/docs/headless-cms/migrate-your-content-using-the-cli-migration-command/v0#get-started-with-the-migration-script), or write custom scripts. Furthermore, you can use various methods and SDK instances to make your migration script easy to write and read.
 
 After writing the migration script, use the CLI migration command to migrate your content to the destination stack.
 
@@ -32,65 +33,65 @@ Now let us understand how to migrate content from one stack to another using the
 
 ## Steps for Execution
 
-1.  [Login to Contentstack CLI session](#login-to-contentstack-cli-session)
+1.  [Login to Contentstack CLI session](#login-to-the-contentstack-cli-session)
 2.  [Use the “Migration” command](#use-the-migration-command)
 
 1.  ## Login to the Contentstack CLI session
-    
-    Firstly you should have the Contentstack CLI installed on your system. In case you haven't yet installed the Contentstack CLI, please follow the steps in the [CLI installation](/docs/headless-cms/install-the-cli) guide.
-    
+
+    Firstly you should have the Contentstack CLI installed on your system. In case you haven't yet installed the Contentstack CLI, please follow the steps in the [CLI installation](/docs/headless-cms/install-the-cli/v1) guide.
+
     After installing the CLI on your machine, log in to the CLI session to run the ‘Migration’ command.  
-    
-    **Note:** By default, the CLI session will work for the app hosted in the **North America** region. If you want to switch to **Europe** or **Azure North America** region, follow the steps mentioned in the [Set Region](/docs/headless-cms/configure-regions-in-the-cli#set-region) command section.
-    
+
+    **Note:** By default, the CLI session will work for the app hosted in the **North America** region. If you want to switch to **Europe** or **Azure North America** region, follow the steps mentioned in the [Set Region](/docs/headless-cms/configure-regions-in-the-cli/v0#set-region) command section.
+
     Now log in to your Contentstack account, by running the following command in your terminal:  
-    
+
     ```
     csdx auth:login
     ```
-    
+
     Provide your Contentstack account’s email and password to successfully login to the CLI session.  
-    
-    **Additional Resource:** To learn more about the CLI login command, refer to the [Login command](/docs/headless-cms/cli-authentication#login) section.
-    
+
+    **Additional Resource:** To learn more about the CLI login command, refer to the [Login command](/docs/headless-cms/cli-authentication/v0#login) section.
+
 2.  ## Use the “Migration” Command
-    
+
     Once you log in to Contentstack, run the migration command to initiate the procedure.
-    
+
     To perform the operation you have to write a migration script in your code editor, and mention its file path while using the migration command.
-    
-    **Tip:** We have created a sample migration script for you to get started, which we have discussed further in this guide. Refer [this](/docs/headless-cms/migrate-your-content-using-the-cli-migration-command#get-started-with-the-migration-script) section, to understand migration scripts and various methods you can use to execute your tasks.
-    
+
+    **Tip:** We have created a sample migration script for you to get started, which we have discussed further in this guide. Refer [this](/docs/headless-cms/migrate-your-content-using-the-cli-migration-command/v0#get-started-with-the-migration-script) section, to understand migration scripts and various methods you can use to execute your tasks.
+
     We assume that you have a migration script ready with you, to migrate the content.
-    
+
     Now, run the following command to start migrating your content.
-    
+
     **Usage:**
-    
+
     ```
     csdx cm:migration
     ```
-    
+
     Along with the migration command, users have to define various parameters to successfully migrate the content.
-    
+
     In order to add a number of options/parameters in a single line, use the following command:
-    
+
     **Usage:**
-    
+
     Migrate content using Auth token:
-    
+
     ```
     csdx cm:migration -A -n <filepath> -k <api_key>
     ```
-    
+
     Migrate content using CLI Management token alias:
-    
+
     ```
     csdx cm:migration -a <management_token_alias> -n <file_path> -k <api_key>
     ```
-    
+
     **Options:**
-    
+
     -   \-A, \--auth-token: Add this flag to use the auth token of the current session. After logging in to CLI, an auth token is generated for each new session.
     -   \-a, \--management-token-alias=management-token-alias: Use this flag to add the management token alias.
     -   \-k, \--api-key=api-key: Use this flag to add the API key of your stack.
@@ -99,23 +100,23 @@ Now let us understand how to migrate content from one stack to another using the
     -   \-B, \--branch=branch: Use this flag to add the branch name where you want to perform the migration. (target branch name)
     -   \--config=config: \[_optional_\] Inline configuration, <key1>:<value1>. Passing an external configuration makes the script re-usable.
     -   \--config-file=config-file: \[_optional_\] Path of the JSON configuration file.
-    
+
     **Example**:
-    
+
     -   Example 1:
-        
+
         ```
         csdx cm:migration -A -n "path/to/transform-contenttype/script/file" -k bxxxxxxx
         ```
-        
+
     -   Example 2:
-        
+
         ```
         csdx cm:migration -a my_token_alias  -k bxxxxxxx --config contentTypeUID:author -n “path/to/migrate/single/contenttype/modification/script/file”
         ```
-        
+
     -   Example 3:
-        
+
         ```
         csdx cm:migration -a my_token_alias -k bxxxxxxx --config  numberOfEntries:100 contentTypeUID:blog -n “path/to/update/first/100/entries/of/given/contenttype/script/file”
         ```

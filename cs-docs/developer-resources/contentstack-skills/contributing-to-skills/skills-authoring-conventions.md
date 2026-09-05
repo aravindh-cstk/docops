@@ -2,6 +2,7 @@
 title: "Authoring Conventions"
 description: "Conventions for writing a skill's SKILL.md beyond its required structure and security rules."
 url: /developers/skills-authoring-conventions
+uid: blta8e348f88c284bce
 ---
 
 # Authoring Conventions

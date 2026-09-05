@@ -2,6 +2,7 @@
 title: "Concepts"
 description: "Understand the core concepts behind Contentstack Agent Skills, skills, slugs, the router, and manifests, to customize and extend your AI coding assistant."
 url: /developers/skills-concepts
+uid: blt447eb38daeb0ca4e
 ---
 
 # Concepts
@@ -20,19 +21,19 @@ A **skill** is a Markdown instruction file scoped to one Contentstack product ar
 
 Each skill lives at skills/<slug>/SKILL.md.
 
-**Additional Resource:** Refer to the [Anatomy of a SKILL.md](/docs/developers/skills-skill-anatomy) documentation for the complete file structure.
+**Additional Resource:** Refer to the [Skill Anatomy](/docs/developers/skills-skill-anatomy) documentation for the complete file structure.
 
 ## Slug
 
 The **slug** is a skill's directory name and stable identifier, for example cms-entries or dx-delivery-sdk. Slugs are used in the skills CLI, in the manifest, and as the URL path for each skill's page in the skills reference.
 
-**Additional Resource:** Refer to the [skills reference](/docs/developers/skills-reference) documentation for a complete list of available skills and their slugs.
+**Additional Resource:** Refer to the [skills reference](https://www.contentstack.com/docs/developers/skills-reference) documentation for a complete list of available skills and their slugs.
 
 ## Router
 
 The **router** is a rules file that maps a request to the correct skill. The AI coding tool reads the router at the start of each session and uses it to match each request to a skill.
 
--   Canonical source: skills/CLAUDE.md
+-   Canonical source: [skills/CLAUDE.md](https://github.com/contentstack/contentstack-agent-skills/blob/main/skills/CLAUDE.md)
 -   Cursor form: cursor/rules/00-router.mdc (marked alwaysApply: true)
 -   Codex form: codex/AGENTS.md
 
@@ -59,7 +60,7 @@ skills/CLAUDE.md (router)  ──►  cursor/rules/00-router.mdc
                            ──►  codex/AGENTS.md
 ```
 
-**Warning:** Do not edit cursor/rules/ or codex/ directly. These directories are regenerated from skills/ by build scripts. Pull requests with out-of-sync generated files will fail the CI (continuous integration) check.
+**Warning:** Do not edit cursor/rules/ or codex/ directly. These directories are regenerated from skills/ by build scripts. Pull requests with out-of-sync generated files fail the CI (continuous integration) check.
 
 **Additional Resource:** Refer to the [Architecture](/docs/developers/skills-architecture) documentation for the build process.
 

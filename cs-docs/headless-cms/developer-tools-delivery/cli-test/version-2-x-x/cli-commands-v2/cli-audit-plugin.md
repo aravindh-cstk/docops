@@ -1,10 +1,11 @@
 ---
-title: "Audit Plugin | Beta Commands"
+title: "Audit Plugin | V2.x.x"
 description: "The Audit plugin in Contentstack CLI lets you perform audit operations to identify and fix various issues in the exported stack data."
 url: /headless-cms/cli-audit-plugin
+uid: bltf6e6f0af0665ce7f
 ---
 
-# Audit Plugin | Beta Commands
+# Audit Plugin | V2.x.x
 
 ## Audit Plugin
 
@@ -27,7 +28,7 @@ This step-by-step guide lets you install and use the Audit plugin in CLI.
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login/)
--   [CLI installed](/docs/headless-cms/install-the-cli/) and [configured](/docs/headless-cms/configure-regions-in-the-cli/) (version 1.9.1 or above)
+-   [CLI installed](/docs/headless-cms/install-the-cli) and [configured](/docs/headless-cms/configure-regions-in-the-cli) (version 1.9.1 or above)
 -   [Exported content](/docs/headless-cms/export-content-using-the-cli) generated using CLI (version 1.9.0 or above) available on local machine
 
 ## Supported Modules
@@ -54,17 +55,17 @@ The cm:stacks:audit command allows you to validate exported stack data and ident
 
 1.  Open the terminal.
 2.  Run the following command:
-    
+
     ```
     csdx cm:stacks:audit
     ```
-    
+
 3.  Enter the **local path** where the data is stored.
-    
+
     ![CLI_Audit_Plugin_Path.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7d2bee5298009286/652d0fcff620d479b3438bf6/CLI_Audit_Plugin_Path.png)
-    
+
     **Note:** If you exported data from a branch-enabled stack, make sure to provide the complete local path up to the branch. For example, C:\\Users\\...\\CLI\\Content\\branch\_folder.
-    
+
 
 You successfully ran an audit operation to find data issues in your stack.
 
@@ -88,7 +89,7 @@ csdx cm:stacks:audit
 | \--modules=modules | \- | 
 Provide the list of modules to be audited.
 
-Supported values: content-types, global-fields, entries, extensions, workflows, custom-roles, assets, field-rules
+Supported values: content-types, global-fields, entries, extensions, workflows, custom-roles, assets, field-rules, composable-studio
 
  |
 | --columns=columns | - | Show only the specified columns (comma-separated). |
@@ -127,29 +128,29 @@ Passing this flag makes the auditing process check and report on all branches ex
 **Examples**
 
 -   To perform the audit operation by providing the path to store the audit reports:
-    
+
     ```
     csdx cm:stacks:audit --report-path <path>
     ```
-    
+
 -   To perform the audit operation by fetching the results in CSV format and providing the path to store the audit reports:
-    
+
     ```
     csdx cm:stacks:audit --report-path <path> --csv
     ```
-    
+
 -   To perform the audit operation with a name filter and by providing the path to store the audit reports:
-    
+
     ```
     csdx cm:stacks:audit --report-path <path> --filter="name=<filter-value>"
     ```
-    
+
 -   To perform the audit operation by providing the module for which the audit must be performed, along with the path to store the audit reports:
-    
+
     ```
     csdx cm:stacks:audit --report-path <path> --modules=content-types
     ```
-    
+
 
 ### Issue Resolution
 
@@ -157,22 +158,22 @@ The cm:stacks:audit:fix command allows you to validate exported stack data and a
 
 1.  Open the terminal.
 2.  Run the following command:
-    
+
     ```
     csdx cm:stacks:audit:fix
     ```
-    
+
 3.  Enter the **local path** where the data is stored.
-    
+
     ![CLI_Audit_Plugin_Path.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7d2bee5298009286/652d0fcff620d479b3438bf6/CLI_Audit_Plugin_Path.png)
-    
+
 4.  In the prompt that appears, enter the following:
-    
+
     -   **Yes**, to overwrite the existing file.
     -   **No**, to skip overwriting the existing file.
-    
+
     **Note:** The prompt appears only if you have not passed the \--copy-dir flag.
-    
+
 
 You successfully ran an audit operation to fix data issues in your stack.
 
@@ -196,7 +197,7 @@ csdx cm:stacks:audit:fix
 | \--modules | \- | 
 Modules to audit.
 
-Options: content-types, global-fields, entries, extensions, workflows, custom-roles, assets, field\_rules
+Options: content-types, global-fields, entries, extensions, workflows, custom-roles, assets, field-rules, composable-studio
 
  |
 | --copy-dir | - | Copy data before fixing. |
@@ -228,50 +229,50 @@ Options: csv, json, yaml
 **Note:**
 
 -   If the custom role or the workflow module has branches **enabled** and you want audit to operate on all the branches except a particular branch, then you can provide that specific branch name using the \--config flag as given below:
-    
+
     ```
     {
     "branch": "<branch-name>"
     }
     ```
-    
+
     Passing this flag makes the auditing process check and remove all branches except the one specified in the config file.
 -   When you use the \--copy-dir flag, a copy of the original data gets created and the audit fix operation occurs on the copied data.
 -   By default, audit:fix does not populate values in the select fields. To enable this behavior, use the –-config flag and provide a configuration file containing the following keys:
-    
+
     ```
     {
     "fixSelectField": true
     }
     ```
-    
+
 
 **Examples**
 
 -   To perform the audit fix operation on a copied version of the original data:
-    
+
     ```
     csdx cm:stacks:audit:fix --copy-dir
     ```
-    
+
 -   To perform the audit operation on a copied version of the original data by providing the path to store the audit reports:
-    
+
     ```
     csdx cm:stacks:audit:fix --report-path <path> --copy-dir
     ```
-    
+
 -   To perform the audit fix operation with a name filter and by providing the path to store the audit reports:
-    
+
     ```
     csdx cm:stacks:audit:fix --report-path <path> --filter="name=<filter-value>"
     ```
-    
+
 -   To perform the audit operation on a copied version of the original data by providing the backup directory path to store the copied data, along with the path to store the audit reports:
-    
+
     ```
     csdx cm:stacks:audit:fix --report-path <path> --copy-dir --copy-path <path>
     ```
-    
+
 
 ## Module-Specific Audit Checks
 
@@ -390,8 +391,8 @@ Some modules require other modules to be present in the exported data for proper
 
 The Entries module requires the following modules to be present in the exported data to perform a complete audit:
 
--   **Content Types** (content\_types/schema.json): (Required) Validates entry structure, field types, and references.
--   **Global Fields** (global\_fields/globalfields.json): (Required) Validates global field references in entries.
+-   **Content Types** (one content\_types/<uid>.json file per content type): (Required) Validates entry structure, field types, and references.
+-   **Global Fields** (one global\_fields/<uid>.json file per global field): (Required) Validates global field references in entries.
 -   **Locales** (locales/locales.json and locales/master-locale.json): (Required) Validates locale references in entries and the publish details.
 -   **Environments** (environments/environments.json): (Required) Validates environment references in the publish details.
 -   **Extensions** (extensions/extensions.json): (Optional) Validates extension/app references in JSON fields (loaded if exists).
@@ -410,7 +411,7 @@ The Assets module requires the following modules to be present in the exported d
 
 The Field Rules module requires the following modules to be present in the exported data to perform a complete audit:
 
--   **Content Types** (content\_types/schema.json): (Required) Validates field UIDs referenced in field rules.
+-   **Content Types** (one content\_types/<uid>.json file per content type): (Required) Validates field UIDs referenced in field rules.
 -   **Extensions** (extensions/extensions.json): (Optional) Validates extension references in field rules (loaded if exists).
 -   **Entries**: (Required) Entry metadata is needed for field rule validation.
 

@@ -2,6 +2,7 @@
 title: "Branches Real-world Scenarios"
 description: "Discover how Contentstack's branches facilitate seamless development workflows, enabling efficient content management and CI/CD integration."
 url: /headless-cms/real-world-scenarios
+uid: blt24c3a429b34aeeda
 ---
 
 # Branches Real-world Scenarios
@@ -44,7 +45,7 @@ With the use of branches, you can redesign or restructure your website with grea
 
 In the **redesign** branch, you can make structural changes to your content types and global fields. Once you are satisfied with your changes, you can compare the differences and then merge the redesign branch into the main branch using the overwrite with compare strategy to completely replace the main (base) branch with the newly redesigned changes from the redesign (compare) branch.
 
-**Note:** The [Compare](/docs/headless-cms/comparing-branches) and [Merge](/docs/headless-cms/merging-branches) feature currently only compares and merges differences between content type and global field modules, and is only available via [Content Management API](/docs/developers/apis/content-management-api/branches#compare-branches) and [CLI commands](/docs/headless-cms/compare-and-merge-branches-using-the-cli/).
+**Note:** The [Compare](/docs/headless-cms/comparing-branches) and [Merge](/docs/headless-cms/merging-branches) feature currently only compares and merges differences between content type and global field modules, and is only available via [Content Management API](/docs/developers/apis/content-management-api/branches#compare-branches) and [CLI commands](/docs/headless-cms/compare-and-merge-branches-using-the-cli).
 
 ## Example 3: Use branches to prevent data loss
 
@@ -86,15 +87,15 @@ Create a copy of the **main** branch content in a separate branch to change your
 
 1.  Assign an alias to the "production" branch with the alias ID "deploy," for instance. This alias will help fetch and display data from the target branch on the live website.
 2.  Specify an alias ID in the frontend code against the branch key to tell the application where it needs to fetch content. Whichever branch is associated with that alias ID then becomes the main branch for the production environment. For instance, we pass the "deploy" alias ID here to fetch data from the "production" branch.  
-    
+
 3.  Change content types, entries, assets, etc., present on a branch (e.g., "development") without affecting your "production" branch data. You can test the changes until they are ready to deploy to production.
 4.  Once the "development" branch changes are ready to go, you can use two different ways to apply the changes to production data:
-    
+
     -   **For minor changes** such as adding or removing a few fields, you can use the Contentstack CLI to apply these changes to the "production" branch.
     -   **For major changes** such as redesigning the marketing website, you can use an alias to point to the “development” branch to test your new changes. Once satisfied with your changes, you can merge the development (compare) branch into the production (base) branch.
-    
+
     ![edit_alias](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt74fb9a049d62588d/64ab91a2873fa3a3b302f906/Edit_Alias.png)
-    
+
 
 The default behavior when merging will create a backup of the branch you are merging into for safety. You can use this to quickly revert your site in the event that there is an issue with the merge via an alias. With flexible release rollback capabilities, branches allow Contentstack to align with your CI/CD pipeline and strategies.
 
