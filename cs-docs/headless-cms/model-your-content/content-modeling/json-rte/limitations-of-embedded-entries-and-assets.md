@@ -2,6 +2,7 @@
 title: "Limitations of Embedded Entries and Assets"
 description: "Limitations of Embedded Entries and Assets"
 url: /headless-cms/limitations-of-embedded-entries-and-assets
+uid: blteab5261e8dfa373b
 ---
 
 # Limitations of Embedded Entries and Assets

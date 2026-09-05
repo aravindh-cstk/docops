@@ -2,19 +2,20 @@
 title: "Studio for Sales, Marketing, and Platform Buyers"
 description: "Learn how Contentstack Studio lets marketing teams compose and publish pages from your existing React components and CMS, without engineering tickets or deploys."
 url: /studio/studio-for-sales-marketing-and-platform-buyers
+uid: blt5d6f504568611c74
 ---
 
 # Studio for Sales, Marketing, and Platform Buyers
 
 ## Studio for Sales, Marketing, and Platform Buyers
 
-> Need the developer pitch instead? See [**What is Studio?: technical overview**](/docs/studio/contentstack-studio-overview).
+> Need the developer pitch instead? See **[What is Studio?: technical overview](/docs/studio/contentstack-studio-overview)**.
 
 ## Engineering Ships Once. Marketing Ships Forever.
 
 Today, every page is a ticket: marketing files, engineering hand-codes, deploy ships. **Three weeks per campaign.** The backlog grows. Studio changes the order of operations: engineering builds reusable components **once**; marketing assembles pages from them **anytime**. Same React, same CMS, **15 minutes** from brief to live page.
 
-![Studio for business — the shift in one picture. TODAY: every page launches through engineering. Marketing files a ticket, engineering hand-codes the page, then deploys. Three weeks per campaign, the backlog grows. WITH STUDIO: engineering builds reusable components once, marketing assembles pages from those components anytime. Outcome: same React, same CMS, but campaigns ship in 15 minutes instead of 3 weeks.](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am4ebc13abe5052f02/7f699719110e8951768862dd/overview-mental-model-business.png)
+![Studio for business — the shift in one picture. TODAY: every page launches through engineering. Marketing files a ticket, engineering hand-codes the page, then deploys. Three weeks per campaign, the backlog grows. WITH STUDIO: engineering builds reusable components once, marketing assembles pages from those components anytime. Outcome: same React, same CMS, but campaigns ship in 15 minutes instead of 3 weeks.](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am0b1bcdfddc2c5bd4/ddc74e7fbe7af5e689531151/overview-mental-model-business.svg)
 
 #### How to Read the Diagram
 
@@ -104,6 +105,6 @@ This is the inverse of the page-builder cost curve. A page builder is cheap to s
 
 ## Next Steps
 
--   **For developers in the room:** [technical overview](/docs/studio/contentstack-studio-overview), [setup walkthrough](/docs/studio/verify-your-studio-setup-end-to-end)
--   **For evaluation:** [Zero to first page: 30-minute end-to-end build](/docs/studio/build-your-first-studio-page)
+-   **For developers in the room:** [technical overview](/docs/studio/contentstack-studio-overview), setup walkthrough
+-   **For evaluation:** Zero to first page: 30-minute end-to-end build
 -   **To schedule a demo or talk to sales:** _\[contact link placeholder\]_

@@ -2,6 +2,7 @@
 title: "Localize an Entry"
 description: "Learn how to localize entries in Contentstack to manage multilingual content effectively. Follow these steps to adapt your content for various languages."
 url: /headless-cms/localize-an-entry
+uid: blt26458e9ca11fa2a2
 ---
 
 # Localize an Entry
@@ -15,9 +16,9 @@ To localize an entry, log in to your [Contentstack account](https://www.contents
 1.  Click the “Entries” icon or use the shortcut key “E” (for both Windows and Mac users).
 2.  Locate and open the entry that you want to localize.
 3.  Use the **language dropdown** in the top-right corner to select the language you want to localize the entry into.
-    
+
     This opens an unlocalized copy of the original entry with content inherited from its fallback language.
-    
+
 4.  Replace the inherited content with the appropriate translations for the selected language, and click **Save** to create the localized version.
 
 **Note:**
@@ -31,21 +32,21 @@ To localize an entry, log in to your [Contentstack account](https://www.contents
 The **Copy Entry** action allows you to duplicate entries before localizing them. When [copying an entry](/docs/headless-cms/copy-an-entry), you can choose between two modes depending on whether you want to copy only the master version or include all existing localized versions.
 
 1.  **Copying an Entry Using “Current Locale Only”**
-    
+
     When you copy an entry using the **Current Locale Only** option, Contentstack creates a copy of the entry in the **currently selected locale**.
-    
+
     -   If the current locale is the **master locale**, only the master entry is copied.
     -   If the current locale is a **non-master locale**, Contentstack also creates a copy of the entry’s **fallback locale** to preserve the localization hierarchy.
     -   Any other localized versions are **not** included in the copy.
-    
+
     After the copy process completes, you can further localize the copied entry into additional languages by following the standard localization steps described above.
-    
+
 2.  **Copying an Entry Using “All Locales”**
-    
+
     When you copy an entry using the **All Locales** option, Contentstack creates duplicates of every existing localized version of the entry. Each localized copy retains its language-specific content, ensuring that translations and regional variations are preserved.
-    
+
     However:
-    
+
     -   Fields marked as non-localizable still inherit values from the master entry.
     -   The duplicated entries, including both master and localized versions, receive updated titles and unique fields. When required, a timestamp is appended to maintain uniqueness and to avoid conflicts.
 

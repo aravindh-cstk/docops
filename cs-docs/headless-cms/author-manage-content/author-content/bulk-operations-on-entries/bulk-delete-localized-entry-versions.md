@@ -2,6 +2,7 @@
 title: "Bulk Delete Localized Entry Versions"
 description: "Learn how to delete localized entry versions in bulk in Contentstack."
 url: /headless-cms/bulk-delete-localized-entry-versions
+uid: blt5afebde0316d0898
 ---
 
 # Bulk Delete Localized Entry Versions

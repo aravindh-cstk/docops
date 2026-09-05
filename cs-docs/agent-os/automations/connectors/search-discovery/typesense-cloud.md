@@ -2,6 +2,7 @@
 title: "Typesense Cloud"
 description: "Use the Typesense Cloud Connector to seamlessly index, update, or delete documents with Automate workflows."
 url: /agent-os/typesense-cloud
+uid: blt755ccf56f8b7e3ce
 ---
 
 # Typesense Cloud
@@ -29,21 +30,21 @@ To use the Typesense Cloud connector, you must first add your Typesense Cloud ac
     1.  To generate the API Key, login to your Typesense Cloud [account](https://cloud.typesense.org/).
     2.  In the Typesense Cloud dashboard, click **Overview** in the left navigation panel.
     3.  Click **Generate API Keys** to create a new API Key. An API key file is downloaded to your local machine. You will see two API keys: **Admin API Key** and **Search Only API Key**.
-        
+
         -   **Search Only API Key:** Use this API Key to search or read the data from Typesense Cloud collection.
         -   **Admin API Key:** Use this API Key to write the data in the Typesense Cloud collection.
-        
+
         ![Typesense_Cloud_Generate_API_Keys.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt072fa97d45b57362/68ba89f411efa939785c8eac/Typesense_Cloud_Generate_API_Keys.png)
     4.  Copy the **Admin API Key**.
     5.  Copy the node **URL** to add the Typesense Host Node URL.
     6.  To add/update/delete a document, you must create a **Collection** in the Typesense Cloud account. To do so, follow these steps:
-        
+
         1.  In the left navigation panel, click **Collections**.
         2.  Click **New Collection**.
         3.  Edit the example schema and click **Create Collection**.
-        
+
         **Additional Resource:** Refer to the [Collections](https://typesense.org/docs/29.0/api/collections.html#create-a-collection) documentation to learn more.
-        
+
 7.  Enter an Account Name, then click **Authorize**.![Authorize_Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt917942b07533702e/68ba89eaea3098f83cec1e4b/Authorize_Account.png)
 
 Once done, you can go ahead and set up your Typesense Cloud connector.
@@ -68,9 +69,9 @@ This action adds a new document into a Typesense Cloud collection.
     1.  Click **\+ Add New Account** to connect your Typesense Cloud account as shown in the [Connect your Typesense Cloud Account](#connect-your-typesense-cloud-account) step.
     2.  Select an existing **Collection Name** to add the document from the **Lookup** list.
     3.  In the **Document ID** field, enter the ID of the document to add into the Typesense collection.
-        
+
         **Note:** The Document ID in **Typesense Cloud** refers to the unique identifier for each record within a collection. This ID is essential for creating, updating, deleting, or retrieving records.
-        
+
     4.  In the **Entry Data** field, enter the entry data in JSON format to add in a specific collection.  
         ![Select_Fields_Index.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1529161190a9bb5d/68beaafed8ada2f45a2f23e8/Select_Fields_Index.png)
 3.  Click **Proceed**.

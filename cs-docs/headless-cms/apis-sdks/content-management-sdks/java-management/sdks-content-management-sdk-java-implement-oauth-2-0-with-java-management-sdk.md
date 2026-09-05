@@ -2,6 +2,7 @@
 title: "Implement OAuth 2.0 with Java Management SDK"
 description: "Build secure Java apps with Contentstack CMA using OAuth 2.0. Simplify authentication with PKCE, token refresh, token storage options, and role-based access."
 url: /developers/sdks/content-management-sdk/java/implement-oauth-2-0-with-java-management-sdk
+uid: blt3f87a241f888ce6e
 ---
 
 # Implement OAuth 2.0 with Java Management SDK
@@ -39,9 +40,9 @@ The SDK simplifies the OAuth 2.0 flow by handling token acquisition, refresh, an
 The following steps show the OAuth 2.0 flow in the Java Management SDK, from authorization to logout.
 
 1.  ### Initialize the OAuth Handler
-    
+
     Use the following code to initialize OAuth with the required credentials.
-    
+
     ```
     Contentstack client = new Contentstack.Builder()
     .setHost("api.contentstack.io") // optional, region-specific
@@ -49,15 +50,15 @@ The following steps show the OAuth 2.0 flow in the Java Management SDK, from aut
     // or use PKCE if client_secret is not available
     .build();
     ```
-    
+
     **Parameters**
-    
+
     <table><colgroup data-width="823.999952"><col style="width:30.3398%"><col style="width:31.310700000000004%"><col style="width:38.3495%"></colgroup><tbody><tr><td style="text-align: left;"><strong>Parameter</strong></td><td style="text-align: left;"><strong>Type</strong></td><td style="text-align: left;"><strong>Description</strong></td></tr><tr><td><span class="code">appId</span></td><td>Required</td><td style="text-align: left;">Your registered App ID.</td></tr><tr><td><span class="code">clientId</span></td><td>Required</td><td style="text-align: left;">Your OAuth Client ID.</td></tr><tr><td><span class="code">redirectUri</span></td><td>Required</td><td style="text-align: left;">The URL where the user is redirected after login and consent.</td></tr><tr><td><span class="code">responseType</span></td><td>Optional</td><td style="text-align: left;">Set to <span class="code">code</span> by default. You can customize it based on your OAuth settings.</td></tr><tr><td><span class="code">clientSecret</span></td><td>Optional</td><td style="text-align: left;">Required for standard OAuth flows (skip if using PKCE).</td></tr><tr><td><span class="code">scope</span></td><td>Optional</td><td style="text-align: left;">Permissions requested, such as read-only or full access, depending on your app’s requirements.</td></tr></tbody></table>
-    
+
 2.  ### Start the Authorization Flow
-    
+
     The getOAuthAuthorizationUrl() method redirects the user to Contentstack’s OAuth server to login and authorize your app. To log in, use the code below:
-    
+
     ```
     String authUrl = client.getOAuthAuthorizationUrl();
     // Example: open in browser
@@ -65,11 +66,11 @@ The following steps show the OAuth 2.0 flow in the Java Management SDK, from aut
     // Example: load in WebView
     webView.loadUrl(authUrl);
     ```
-    
+
 3.  ### Handle Redirect and Exchange Token
-    
+
     After authorization, the server redirects the user back to your redirect\_uri with an authorization code. Handle this redirect in your app using the exchangeOAuthCode(code) method.
-    
+
     ```
     // Example: Android WebView
     webView.setWebViewClient(new WebViewClient() {
@@ -94,13 +95,13 @@ The following steps show the OAuth 2.0 flow in the Java Management SDK, from aut
       }
     });
     ```
-    
+
     The exchangeOAuthCode(code) method returns a CompletableFuture with access and refresh tokens.
-    
+
 4.  ### Token Storage
-    
+
     Use the TokenCallback interface to implement custom logic for securely storing and clearing tokens in memory.
-    
+
     ```
     public class TokenStorageHandler implements TokenCallback {
       @Override
@@ -111,35 +112,35 @@ The following steps show the OAuth 2.0 flow in the Java Management SDK, from aut
         // - Save to encrypted file (Desktop)
         // - Save to secure database (Server)
       }
-    
+
       @Override
       public void onTokensCleared() {
         // TODO: Implement your clear logic
         // Remove tokens from your storage
       }
     }
-    
+
     // Add the handler to your OAuth handler
     Contentstack client = new Contentstack.Builder()
       .setTokenCallback(new TokenStorageHandler())
       .setOAuth(APP_ID, CLIENT_ID, REDIRECT_URI, CLIENT_SECRET)
       .build();
     ```
-    
+
 5.  ### Make Authenticated API Requests
-    
+
     To make authenticated API requests, use the following code snippet. The SDK automatically adds the access token to the Authorization header as a Bearer token for all outgoing requests.
-    
+
     ```
     Stack stack = client.stack("stack_api_key");
     Response<ResponseBody> entryResult =
       stack.contentType("contentType_uid").entry("entry_uid").fetch().execute();
     ```
-    
+
 6.  ### Refresh Access Token
-    
+
     To refresh the access token when it expires, use the following code snippet. The SDK uses the refresh token to automatically request a new one.
-    
+
     ```
     client.refreshOAuthToken()
       .thenAccept(newTokens -> {
@@ -150,31 +151,31 @@ The following steps show the OAuth 2.0 flow in the Java Management SDK, from aut
         return null;
       });
     ```
-    
+
     This ensures that your application continues to make authenticated requests without requiring the user to log in again.
-    
+
 7.  ### Logout and Revoke Access
-    
+
     Use the logout() method to log out the user and revoke authorization:
-    
+
     ```
     // logout (clear tokens)
     client.oauthLogout()
       .thenRun(() -> {
         // Logged out successfully
       });
-    
+
     // Logout and revoke authorization
     client.oauthLogout(true) // true = revoke authorization
       .thenRun(() -> {
         // Logged out and revoked
       });
     ```
-    
+
     **Reference**
-    
+
     <table><tbody><tr><td style="text-align: left;"><strong>Methods</strong></td><td style="text-align: left;"><strong>Description</strong></td></tr><tr><td style="text-align: left;"><span class="code">getOAuthAuthorizationUrl()</span></td><td style="text-align: left;">Get authorization URL for user login.</td></tr><tr><td style="text-align: left;"><span class="code">exchangeOAuthCode</span>(code)</td><td style="text-align: left;">Exchange authorization code for tokens.</td></tr><tr><td style="text-align: left;"><span class="code">refreshOAuthToken()</span></td><td style="text-align: left;">Manually refresh the access token.</td></tr><tr><td style="text-align: left;"><span class="code">setTokenCallback(callback)</span></td><td style="text-align: left;">Set handler for token storage events.</td></tr><tr><td style="text-align: left;"><span class="code">oauthLogout()</span></td><td style="text-align: left;">Logout and clear tokens.</td></tr><tr><td style="text-align: left;"><span class="code">oauthLogout(true)</span></td><td style="text-align: left;">Logout and revoke authorization.</td></tr></tbody></table>
-    
+
 
 ## Token Storage
 
@@ -185,30 +186,30 @@ After authentication, tokens are managed in memory. However, if needed, you can 
 Choose a storage strategy based on session duration and security:
 
 -   **Session Storage:** Temporary storage that lasts only till the browser session. Ideally used for short-lived sessions for increased security.
-    
+
     ```
     sessionStorage.setItem('access_token', oauthHandler.getAccessToken());
     ```
-    
+
 -   **Local Storage:** Stores tokens persistently across sessions but is more vulnerable to XSS. Use it carefully.
-    
+
     ```
     localStorage.setItem('access_token', oauthHandler.getAccessToken());
     ```
-    
+
 -   **Cookies:** Tokens are sent automatically with HTTP requests. Use secure attributes to enhance protection.
-    
+
     ```
     document.cookie = `access_token=${oauthHandler.getAccessToken()}; path=/; Secure; HttpOnly`;
     ```
-    
+
 
 ### Mobile and Server Applications
 
 1.  **Android Applications**
-    
+
     Choose based on your security requirements:
-    
+
     -   **EncryptedSharedPreferences**
         -   Android's recommended secure storage
         -   Handles encryption automatically
@@ -218,9 +219,9 @@ Choose a storage strategy based on session duration and security:
         -   Highest level of security
         -   Suitable for storing sensitive credentials
 2.  **Desktop/Server Applications**
-    
+
     Choose based on your application's needs:
-    
+
     -   **In-memory Storage**
         -   Tokens exist only during runtime
         -   Cleared when application exits

@@ -2,6 +2,7 @@
 title: "About Google Tag Manager Integration"
 description: "Leverage Google Tag Manager with Contentstack to manage personalization campaigns and enhance user experiences effectively."
 url: /personalize/about-gtm-integration
+uid: blt906451e271fb82dd
 ---
 
 # About Google Tag Manager Integration

@@ -2,6 +2,7 @@
 title: "Get Started with Agents"
 description: "Learn how to get started with agents in Agent OS to automate workflows, manage tasks, and build intelligent agents using Contentstack."
 url: /agent-os/get-started-with-agents
+uid: blt861092e55561c031
 ---
 
 # Get Started with Agents
@@ -42,9 +43,9 @@ Let’s see the two ways to create an agent:
 2.  Enter a **Name** and an optional **Description**, then click **\+ Create Project**.
 3.  From the **Agent OS Dashboard** page, click **\+ New Agent**.
 4.  In the **Create Agent** modal, click **Skip, I'll create manually**. Enter a suitable **Title** and a **Description** for your agent. Click the **Create Agent** button.![Create_agent_modal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta911d7762344a3e0/6996d5971eaffc0008e45b79/Create_agent_modal.png)
-    
+
     **Note:** You can also create an agent using the **Automated Setup**, where you provide a description and the system automatically configures the trigger, tools, and instructions.
-    
+
 5.  You are redirected to the **Agent Builder** page, where you can add the **Trigger**, **Tools**, and **Instructions**.![Agent_Builder_Screen_Updated.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb1b643fff1205313/6997f2a6da5d88000881e6fc/Agent_Builder_Screen_Updated.png)
 
 ### Create an agent in an **existing project**
@@ -53,9 +54,9 @@ Let’s see the two ways to create an agent:
 2.  From the **Dashboard** page, click the **Create** drop-down.![Create_agent_from_dashboard.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcc08570e112f5efe/6996d58099cddc000822abf6/Create_agent_from_dashboard.png)
 3.  From the dropdown, select **\+ New Agent** button.![New_agent_dashboard.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcc561af22c64cb94/6996d598618a670008b887e8/New_agent_dashboard.png)
 4.  In the **Create Agent** modal, click **Skip, I'll create manually**. Enter a suitable **Title** and a **Description** for your agent. Click the **Create Agent** button.![Create_agent_modal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta911d7762344a3e0/6996d5971eaffc0008e45b79/Create_agent_modal.png)
-    
+
     **Note:** You can also create an agent using the **Automated Setup**, where you provide a description and the system automatically configures the trigger, tools, and instructions.
-    
+
 5.  You are redirected to the **Agent Builder** page, where you can add the **Trigger**, **Tools**, and **Instructions**.![Agent_Builder_Screen_Updated.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb1b643fff1205313/6997f2a6da5d88000881e6fc/Agent_Builder_Screen_Updated.png)
 
 Let’s see how to configure the **Trigger**, **Tools**, and **Instructions** for the agent.
@@ -69,14 +70,14 @@ The Agent Builder comprises three sections: **Trigger**, **Tools**, and **Instru
 **Trigger** defines the events that start your agent’s workflow, allowing it to run automatically.
 
 1.  In the **Triggers** section, click **+** to add the trigger. A side panel opens.
-    
+
     **Additional Resource:** Refer to the [Triggers](/docs/agent-os#triggers) documentation to learn more.
-    
+
     ![Add_Trigger_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf256c59911b330a3/6996d58080879200082ead1a/Add_Trigger_Icon.png)
 2.  Select the **HTTP Trigger** and click **Save**. Once done, you are ready to use the trigger.
-    
+
     **Additional Resource:** Refer to the [HTTP Trigger](/docs/agent-os/http-trigger) documentation to learn more.
-    
+
 3.  Click the vertical ellipsis to edit the configuration or replace the trigger. Selecting either option opens a side panel where you can modify the existing trigger configuration or replace it with a new trigger.![Edit_replace_trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt493a9886398d9578/6996d598b13d650008b4f278/Edit_replace_trigger.png)
 
 ### Tools
@@ -88,50 +89,50 @@ For our use case, we will select the three tools: **Create an Entry** action, **
 Let’s see how to add all three tools:
 
 1.  In the **Tools** section, click **\+ Add** to add the tools.![Add_Tools.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blteb7702a4c253a04c/6996d57f8d3a6a0008c5a3b9/Add_Tools.png)
-    
+
     **ChatGPT: Web Search**
-    
+
     1.  A side panel opens. Under the **Tools** category, select **ChatGPT: Web Search**. Authenticate your ChatGPT account, then select a **Model**. For the remaining fields, let AI select the values. Click **Save**.
-        
+
         **When you select a tool:**
-        
+
         1.  A modal opens with two configuration options:
-            
+
             1.  **Let AI select data:** The agent automatically extracts the values for the action fields from the prompt.
-                
+
                 For example, Agent Prompt: Retrieve values from the **Sample Stack** and choose the **AI Intelligence** entry.
-                
+
                 These values are selected dynamically at runtime.
-                
+
             2.  **Add custom data:** You can manually select predefined values using the **Lookup** drop-down.
-                
+
                 **Note:** All actions are shown in unselected mode by default, and you can choose any available connector as needed.
-                
+
                 ![ChatGPT_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltce9e0263ad52c5f7/6996d58036d8d5000862c86e/ChatGPT_Action.png)
-        
+
         **Additional Resource:** For more information, refer to the [ChatGPT connector](/docs/agent-os/chatgpt) documentation.
-        
-    
+
+
     **CMS: Create an Entry action**
-    
+
     1.  Click **\+ Add** to add the **Create an Entry** action.
     2.  In the side panel, under the **Tools** category, select **CMS**.
     3.  In the **Entry** category, select the **Create an Entry** action.
     4.  On the **Create an Entry** configuration screen, authenticate your Contentstack account.
     5.  From the **Select Stack** drop-down, select **Add custom data**, then select a stack from the **Lookup** drop-down.
     6.  For the remaining fields, let AI select the values. Once complete, click **Save**.![Create_an_entry_action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0c6ec466dc875ca5/6996d5980f938800084cf886/Create_an_entry_action.png)
-    
+
     **Slack Connector:**
-    
+
     1.  Click **\+ Add** to add the **Slack** connector.![Select_Slack_Connector.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2dfae0a98140509e/6996d5e0b13d650008b4f27c/Select_Slack_Connector.png)
     2.  Select the **Send a Message** action.
     3.  Add your **Slack** account.
     4.  From the **Channel** drop-down, select **Add custom data**, then choose a channel from the **Lookup** drop-down.
     5.  For the rest of the fields, let AI select the values. Click the **Save** button.![Slack_Configuration.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt539e58740bba060f/6996d5e08d3a6a0008c5a3bd/Slack_Configuration.png)
 2.  Once done, you see all the added tools.![Added_tools.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9f0d6858b716813a/6996d57fcf7e250008e68028/Added_tools.png)
-    
+
     **Additional Resource:** Refer to the [Connectors](/docs/agent-os) documentation to learn more.
-    
+
 
 ### Instructions
 
@@ -259,9 +260,9 @@ The **Execution Steps** timeline shows every action performed during the run in 
 The **General** section lets you define your agent’s identity with a title and description, so its purpose is clear from the start.
 
 1.  You see a **Title (required)** and an optional **Description** for the agent’s purpose.
-    
+
     The app automatically picks a name and description for your agent based on what you entered in the **Create Agent** step. If you want, you can edit the name or update the description.
-    
+
 2.  Click the **Save** button.![Manual_Setup_Title_Description.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3a207ec0e2f337a3/6996d59880879200082ead1e/Manual_Setup_Title_Description.png)
 
 ### AI Model
@@ -270,21 +271,21 @@ The **AI Model** screen is where you choose and connect the underlying model tha
 
 ![AI_model_Contentstack_managed.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc5c8ab21373cd615/6996d580a9de3800086c71fa/AI_model_Contentstack_managed.png)
 
-  
+
 By clicking the **Change** link, you see two configurations: **Organization Default** and **Custom Configuration**.
 
 **Custom Configuration**:
 
 1.  In the **Select Model Provider** (required) drop-down , select the LLM provider for your agent. Currently supported providers include:
-    
+
     -   Azure OpenAI
     -   Gemini
     -   OpenAI
     -   Google Vertex
     -   Anthropic
-    
+
     For our use case, we used **OpenAI**.
-    
+
 2.  In the **Agent Authentication** field, add or select an account to authenticate the agent. To create a new key, click **\+ Add API Key** and sign in with your model provider’s API Key and Organization ID (for OpenAI). If you select **Gemini**, you see Google Vertex authentication options; if you select **OpenAI**, you see ChatGPT authentication options.
 3.  In the **Select AI Model** field, select which underlying AI model the agent should use to run tasks or generate responses.
 4.  Click the **Save** button to save the configuration.![Custom_Configuration.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt163e788aa0ff2a41/6996d598676f8800085bfc13/Custom_Configuration.png)

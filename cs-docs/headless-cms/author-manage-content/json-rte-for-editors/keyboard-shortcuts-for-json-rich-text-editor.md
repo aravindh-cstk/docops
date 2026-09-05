@@ -2,6 +2,7 @@
 title: "Keyboard Shortcuts for JSON Rich Text Editor"
 description: "Learn keyboard shortcuts for Contentstack’s JSON Rich Text Editor to format text, insert tables, and more on Windows and Mac."
 url: /headless-cms/keyboard-shortcuts-for-json-rich-text-editor
+uid: blt5f0a1f4588ad813a
 ---
 
 # Keyboard Shortcuts for JSON Rich Text Editor

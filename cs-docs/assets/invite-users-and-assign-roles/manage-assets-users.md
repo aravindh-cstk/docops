@@ -2,6 +2,7 @@
 title: "Manage Assets Users"
 description: "Manage user roles and permissions in Contentstack's Administration for centralized control and space-specific access with easy edits and removals."
 url: /assets/manage-assets-users
+uid: blt7b4b3234f6361a3d
 ---
 
 # Manage Assets Users

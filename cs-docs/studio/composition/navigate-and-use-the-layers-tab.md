@@ -2,6 +2,7 @@
 title: "Navigate and Use the Layers Tab"
 description: "Learn how to use the Layers tab in Contentstack Studio to navigate, rename, and reorder every component in your composition's tree."
 url: /studio/navigate-and-use-the-layers-tab
+uid: blt7fc3842439dfce2a
 ---
 
 # Navigate and Use the Layers Tab
@@ -114,7 +115,7 @@ Exact menu items vary by component type. Slots, Repeaters, and Condition Blocks 
 
 **Name layers when the structure isn't obvious.** A Box named Hero container is much easier to navigate to than the fourth Box from the top. Spend two minutes naming when you save.
 
-**Keep nesting shallow.** Five levels of nested Boxes are technically fine but unfriendly to read. Use Sections to encapsulate deep structures, see [Sections overview](/docs/studio/build-and-use-sections).
+**Keep nesting shallow.** Five levels of nested Boxes are technically fine but unfriendly to read. Use Sections to encapsulate deep structures, see Sections overview.
 
 **Don't fight the structure for visual reasons.** If a layout needs a wrapper Box for CSS grid, that's fine, it shows up in Layers and authors will tolerate it. If a wrapper exists only to hide complexity, refactor into a Section instead.
 

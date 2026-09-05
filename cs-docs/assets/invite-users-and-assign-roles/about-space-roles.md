@@ -2,6 +2,7 @@
 title: "About Space Roles"
 description: "Explore robust space roles in Contentstack Assets for secure, precise access control and governance across different asset spaces. Perfect for collaboration!"
 url: /assets/about-space-roles
+uid: blt4151851b0e3d416a
 ---
 
 # About Space Roles

@@ -2,6 +2,7 @@
 title: "What is Headless CMS?"
 description: "Discover the power of headless CMS with Contentstack. Explore our comprehensive documentation for insights and implementation guidance."
 url: /headless-cms/what-is-headless-cms
+uid: bltf0db6b6f2b69a150
 ---
 
 # What is Headless CMS?
