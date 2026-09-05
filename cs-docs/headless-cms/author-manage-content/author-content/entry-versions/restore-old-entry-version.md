@@ -15,7 +15,7 @@ To restore or rollback to an earlier saved version of an entry, log in to your [
 
 1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Entries”.
 2.  Navigate to the entry you want to modify.
-3.  Click the version icon in the top-right corner of the page or the “Versions��� icon in the right sidebar.
+3.  Click the version icon in the top-right corner of the page or the “Versions” icon in the right sidebar.
 4.  Locate the entry you want to restore and click it.
 
 5.  Click the **Save** button to make the selected version the latest version of the entry.
