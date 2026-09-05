@@ -42,7 +42,7 @@ Choose one of three match types when you search. Each controls how strictly the 
 | Matches | Whole words identical to the search term, ignoring case. | Matches “cyber” and “Cyber,” but not “cybersecurity.” |
 | Exactly matches | Whole words identical to the search term, including case. | Matches “cyber” only, not “Cyber” or “cybersecurity.” |
 
-**Note:** A whole word is text bounded by spaces or punctuation. With **Matches**, searching “log” finds “log” and “Log” but not “login��� or “catalog.”
+**Note:** A whole word is text bounded by spaces or punctuation. With **Matches**, searching “log” finds “log” and “Log” but not “login” or “catalog.”
 
 Replacements run only in the branch you're working in, only on entries already localized in the locales you select, and only on entries and fields you have permission to edit. Ineligible entries are excluded from the results.
 
