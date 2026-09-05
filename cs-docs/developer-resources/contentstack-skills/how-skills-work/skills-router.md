@@ -37,7 +37,7 @@ You don't have to name a skill. You can specify one directly (for example, "use 
 
 Each row maps the user's intent to a specific skill. Abbreviated:
 
-| When the user asks about… | Skill |
+| When the user asks about�� | Skill |
 | --- | --- |
 | Brand Kit, Voice Profiles, Knowledge Vault, on-brand AI generation | [Brand Kit Assistant](https://github.com/contentstack/contentstack-agent-skills/tree/main/skills/brand-kit-assistant) |
 | Migrating/porting from Contentful to Contentstack | [Migration Companion](https://github.com/contentstack/contentstack-agent-skills/tree/main/skills/migration-companion) |
