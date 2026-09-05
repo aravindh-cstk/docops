@@ -32,7 +32,7 @@ Build scripts transform the source into each tool's format:
 
 ```
 skills/<slug>/SKILL.md     ──►  cursor/rules/NN-<slug>.mdc
-                           ──►  codex/<slug>/SKILL.md
+                           ──��  codex/<slug>/SKILL.md
 skills/CLAUDE.md (router)  ──►  cursor/rules/00-router.mdc
                            ──►  codex/AGENTS.md
 ```
