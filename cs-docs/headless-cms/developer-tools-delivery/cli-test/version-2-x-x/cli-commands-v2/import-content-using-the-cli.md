@@ -1,10 +1,11 @@
 ---
-title: "Import Content Using the CLI | Beta Commands"
+title: "Import Content Using the CLI | V2.x.x"
 description: "Import content efficiently with Contentstack’s latest Command-line Interface commands to streamline data onboarding and content setup."
 url: /headless-cms/import-content-using-the-cli
+uid: blt1215a1f9bbcc9900
 ---
 
-# Import Content Using the CLI | Beta Commands
+# Import Content Using the CLI | V2.x.x
 
 ## Import Content Using the CLI
 
@@ -18,10 +19,10 @@ This guide covers how to use the cm:stacks:import command with:
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login/)
--   Contentstack CLI [installed](/docs/headless-cms/install-the-cli/)
+-   Contentstack CLI [installed](/docs/headless-cms/install-the-cli)
 -   CLI [authenticated](/docs/headless-cms/cli-authentication#login)
 -   [Configured management token](/docs/headless-cms/cli-authentication#add-management-token) _(optional)_
--   [Exported](/docs/headless-cms/export-content-using-the-cli/) content extracted (unzipped) in a local folder
+-   [Exported](/docs/headless-cms/export-content-using-the-cli) content extracted (unzipped) in a local folder
 
 ## Supported Modules
 
@@ -48,12 +49,12 @@ This guide covers how to use the cm:stacks:import command with:
 
 The cm:stacks:import command lets you import content into your destination stack.
 
-**Note:** By default, an [audit fix](/docs/headless-cms/audit-plugin/) is performed on the exported content before import. This helps identify and address potential issues in the exported data.
+**Note:** By default, an [audit fix](/docs/headless-cms/cli-audit-plugin) is performed on the exported content before import. This helps identify and address potential issues in the exported data.
 
 **Usage**
 
 ```
-csdx cm:stacks:import -k <<stack_ApiKey>> -d <<path_of_folder_where_content_is_stored>>
+csdx cm:stacks:import -k <<stack_ApiKey>> --data-dir <<path_of_folder_where_content_is_stored>>
 ```
 
 ## Options
@@ -64,12 +65,12 @@ Use the following options with any applicable import command:
 | --- | --- | --- |
 | --config | -c | \[Optional\] Path to the configuration JSON file containing all options for a single run.  |
 | --stack-api-key | -k | API key of the target stack. |
-| \--data-dir | \-d | 
+| \--data-dir | \- | 
 Path in your file system where the content to be imported is stored.
 
-Example: \-d "C:\\Users\\Name\\Desktop\\cli\\content"
+Example: \--data-dir "C:\\Users\\Name\\Desktop\\cli\\content"
 
-If using branches, include the branch folder: \-d "C:\\Users\\Name\\Desktop\\cli\\content\\branch\_name"
+Point this at the export folder itself. The export writes content flat, with no per-branch subfolder, so the same path works for both the export and the import.
 
  |
 | --alias | -a | Management token alias of the destination stack. |
@@ -79,7 +80,9 @@ If using branches, include the branch folder: \-d "C:\\Users\\Name\\Desktop\\cli
 
 If not specified, all modules are imported.
 
-Supported values: assets, content-types, entries, environments, extensions, marketplace-apps, global-fields, labels, locales, webhooks, workflows, custom-roles, personalize, taxonomies, composable-studio
+Supported values: stack, assets, locales, environments, extensions, webhooks, global-fields, entries, content-types, custom-roles, workflows, publishing-rules, labels, marketplace-apps, taxonomies, personalize, variant-entries, composable-studio
+
+The CLI validates this value before the import starts and fails immediately if the module name is not in the list above.
 
  |
 | --backup-dir | - | \[Optional\] Backup directory name when importing a specific module. |
@@ -123,47 +126,64 @@ Default: disable
 
 Use the \--module flag in the import command to import individual modules into the target stack. If you do not use the flag, the import command includes all [available modules](/docs/headless-cms/import-content-using-the-cli#supported-modules) by default.
 
+### Importing an Export Produced by an Older CLI Version
+
+Two behaviours differ when the folder you pass to \--data-dir was produced by CLI V1 rather than V2. Both fail quietly, so check for them before you rely on the result.
+
+**Warning:** Importing a V1 export skips every global field, with no error and no warning. The global fields step reports success having created zero items.
+
+The cause is a change in file layout. The V2 importer reads one file per UID and ignores the aggregate files that V1 wrote:
+
+| Module | A V1 export writes | The V2 importer reads | Result |
+| --- | --- | --- | --- |
+| Content types | Individual <uid>.json files and schema.json | Per-UID files only | Imports correctly, because the per-UID files exist |
+| Global fields | globalfields.json only, with no individual files | Per-UID files only | Silently skipped, because no per-UID files exist |
+
+To resolve it, re-export the source stack with the current CLI before importing.
+
+The second difference affects multi-branch V1 exports. V1 wrote a branches.json file at the export root and the V1 importer used it to navigate into the correct branch subfolder automatically. The current importer does not do this. Point \--data-dir at the branch subfolder yourself:
+
+```
+csdx cm:stacks:import --stack-api-key bltxxxxxx --data-dir ./my-v1-export/main
+```
+
+Pointing it at the export root instead finds no content files there, and the command completes and reports success having imported nothing.
+
 ### Dependency Order
 
 Some modules depend on others. When importing modules individually, follow this sequence to avoid errors:
 
-Locales → Environments → Assets → Taxonomies → Extensions → Marketplace Apps → Webhooks → Global Fields → Content Types → Personalize → Workflows → Entries → Labels → Custom Roles → Studio.
+Locales → Environments → Assets → Taxonomies → Extensions → Marketplace Apps → Webhooks → Global Fields → Content Types → Workflows → Entries → Labels → Custom Roles → Publishing Rules → Personalize → Composable Studio.
 
 **Note:** Before importing a module, ensure all its dependencies have been imported.
 
 **Example**:
 
 -   To import only locales:
-    
+
     ```
-    csdx cm:stacks:import --stack-api-key bltxxxxxx -d "C:\Users\Name\Desktop\cli\content" --module locales
+    csdx cm:stacks:import --stack-api-key bltxxxxxx --data-dir "C:\Users\Name\Desktop\cli\content" --module locales
     ```
-    
+
 
 ### Use of --backup-dir Flag
 
 When importing modules individually with the import command, include the \--backup-dir flag to prevent errors caused by inter-module dependencies. This flag stores mapping files that are required by dependent modules in future imports.
 
 ```
-csdx cm:stacks:import --stack-api-key <<stack_ApiKey>> -d <<path_of_folder_where_content_is_stored>> --module <<module>> --backup-dir <<backup_dir>>
+csdx cm:stacks:import --stack-api-key <<stack_ApiKey>> --data-dir <<path_of_folder_where_content_is_stored>> --module <<module>> --backup-dir <<backup_dir>>
 ```
 
 During each module import, the system saves updated mapping files in the specified backup folder. These mappings are reused by dependent modules to ensure consistent and successful imports.
 
 **Note:** The parent backup folder created during the initial import can be reused for subsequent module imports. To avoid errors, always include the \--backup-dir flag when importing modules one at a time.
 
-Asset scanning is rolling out as an org-plan feature. Once it is active for a stack's org plan, cm:stacks:import sets \--skip-assets-publish automatically, and imported assets are not published in the same run. When this happens, the command prints a reminder pointing to the publish command to run once scanning completes:
-
-```
-csdx cm:stacks:bulk-assets --data-dir <BACKUP_DIR> --stack-api-key <STACK_API_KEY> --operation publish
-```
-
 **Examples**
 
 -   To import assets into a stack:  
-    csdx cm:stacks:import --stack-api-key bltxxxxxx -d "C:\\Users\\Name\\Desktop\\cli\\content" --module assets
+    csdx cm:stacks:import --stack-api-key bltxxxxxx --data-dir "C:\\Users\\Name\\Desktop\\cli\\content" --module assets
 -   To import entries into a stack with backup mapping:  
-    csdx cm:stacks:import --stack-api-key bltxxxxxx -d "C:\\Users\\Name\\Desktop\\cli\\content" --module entries --backup-dir <backup\_dir>
+    csdx cm:stacks:import --stack-api-key bltxxxxxx --data-dir "C:\\Users\\Name\\Desktop\\cli\\content" --module entries --backup-dir <backup\_dir>
 
 ## Using Configuration File
 
@@ -205,13 +225,13 @@ csdx cm:stacks:import -a <<alias>>
 
 **Optional Parameters:**
 
--   \-d <path\_of\_folder\_where\_content\_is\_stored>: Specify the folder where the content is located.
+-   \--data-dir <path\_of\_folder\_where\_content\_is\_stored>: Specify the folder where the content is located.
 -   \-c <config\_file\_path>: Use a configuration file that contains all import parameters.
 
 **Examples:**
 
 -   **To import content from a specific folder:**  
-    csdx cm:stacks:import --alias mytoken -d "C:\\Users\\Name\\Desktop\\cli\\import-folder"
+    csdx cm:stacks:import --alias mytoken --data-dir "C:\\Users\\Name\\Desktop\\cli\\import-folder"
 -   **To import content using a configuration file:**  
     csdx cm:stacks:import --alias mytoken -c "C:\\Users\\Name\\Desktop\\cli\\config.json"
 
@@ -224,10 +244,10 @@ When the import process detects a module that already exists in the target stack
 **Example:**
 
 ```
-csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path> --stack-api-key <value> -d <content-dir-path>
+csdx cm:stacks:import --replace-existing --backup-dir <backup-dir-path> --stack-api-key <value> --data-dir <content-dir-path>
 ```
 
-For more details, refer [Overwrite Existing Content using CLI Import](/docs/headless-cms/overwrite-existing-content-using-cli-import/) document.
+For more details, refer [Overwrite Existing Content using CLI Import](/docs/headless-cms/overwrite-existing-content-using-cli-import) document.
 
 ## Toggle Between Console Logs and Progress Manager View (2.x.x-beta)
 
@@ -236,7 +256,7 @@ Contentstack CLI lets you toggle between the raw console logs and the visual Pro
 **Default Usage:**
 
 ```
-csdx cm:stacks:import -d "./export-data" --stack-api-key bltxxxxxx
+csdx cm:stacks:import --data-dir "./export-data" --stack-api-key bltxxxxxx
 ```
 
 **Note:** By default, the Progress Manager UI displays when you run the import command and does not require any configuration.
@@ -270,27 +290,27 @@ EXTENSIONS:
 **Steps to Switch to Console Logs (Optional):**
 
 1.  Run the following command to switch to console log mode:
-    
+
     ```
     csdx config:set:log --show-console-logs
     ```
-    
+
 2.  Run the import command:
-    
+
     ```
-    csdx cm:stacks:import -d "./export-data" --stack-api-key bltxxxxxx
+    csdx cm:stacks:import --data-dir "./export-data" --stack-api-key bltxxxxxx
     ```
-    
+
     The screen displays the console logs for the import operation.
-    
+
     **Tip:** Use \--show-console-logs for detailed debugging when troubleshooting import issues.
-    
+
 3.  Run the following command to switch back to default mode:
-    
+
     ```
     csdx config:set:log --no-show-console-logs
     ```
-    
+
 
 **Options:**
 
@@ -321,10 +341,5 @@ EXTENSIONS:
 -   The following modules cannot be imported through CLI:
     -   [Users](/docs/headless-cms/about-stack-users/)
     -   [Releases](/docs/headless-cms/about-releases/)
--   On stacks where asset scanning is active for the org plan, cm:stacks:import skips asset publishing automatically. See [Use of --backup-dir Flag](/docs/headless-cms/import-content-using-the-cli#use-of---backup-dir-flag) for the post-scan publish command.
 
 **Additional Resource:** Learn more about the CLI-supported import operations in the [Support for CLI-Based Stack Import Operations](/docs/headless-cms/cli-supported-features-for-export-import-and-clone-operations#importing) document.
-
-## Next Steps
-
--   [Asset Scanning in CLI](/docs/headless-cms/asset-scanning-in-cli): asset-scan gating behavior during import, including the automatic \--skip-assets-publish trigger and the post-scan publish command.

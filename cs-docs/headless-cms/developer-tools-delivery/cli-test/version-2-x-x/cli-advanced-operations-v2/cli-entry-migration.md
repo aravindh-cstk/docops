@@ -2,6 +2,7 @@
 title: "Entry Migration | V2.x.x"
 description: "Entry Migration Contentstack CLI utility lets you merge the entries along with the content types."
 url: /headless-cms/cli-entry-migration
+uid: blt53db6e60c7fc27a8
 ---
 
 # Entry Migration | V2.x.x
@@ -57,11 +58,11 @@ After performing the merge operation, the merge command generates the merge scri
 Follow the steps below to run the migration command:
 
 1.  Copy the entry migration command from the message displayed in your terminal.
-    
+
     ```
     csdx cm:stacks:migration --multiple --file-path <value> --config compare-branch:<value> --branch <value> --stack-api-key <value>
     ```
-    
+
 2.  Run the command in your terminal.
 
 This runs the merge scripts, which will be used to merge the entries.
@@ -97,29 +98,29 @@ If you are facing a **Migration Unsuccessful** or **Module cannot be found** err
 
 -   **Troubleshoot in your current terminal session**:
     1.  **Windows (CMD)**:
-        
+
         ```
         FOR /F "usebackq tokens=*" %i IN (`npm root -g @contentstack/cli`) DO SET NODE_PATH=%i/@contentstack/cli/node_modules
         ```
-        
+
     2.  **Windows (PowerShell)**:
-        
+
         ```
         foreach ($i in $(npm root -g @contentstack/cli)) { $env:NODE_PATH = "$i/@contentstack/cli/node_modules" }
         ```
-        
+
     3.  **Unix**:
-        
+
         ```
         export NODE_PATH="$(npm root -g @contentstack/cli)/@contentstack/cli/node_modules"
         ```
-        
+
 -   **Troubleshoot in the entire session**:
-    
+
     ```
     npm link marked
     ```
-    
+
     ```
     npm link lodash
     ```
