@@ -2,6 +2,7 @@
 title: "Import a Content Type"
 description: "Easily import content types into your Contentstack account using JSON. Follow our step-by-step guide to streamline content management."
 url: /headless-cms/import-a-content-type
+uid: bltaec6335b24430b31
 ---
 
 # Import a Content Type

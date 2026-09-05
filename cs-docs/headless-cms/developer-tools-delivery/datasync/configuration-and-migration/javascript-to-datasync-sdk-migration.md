@@ -2,6 +2,7 @@
 title: "JavaScript to DataSync SDK Migration"
 description: "About JavaScript to DataSync SDK migration"
 url: /headless-cms/javascript-to-datasync-sdk-migration
+uid: blt6b589359d4c5b79d
 ---
 
 # JavaScript to DataSync SDK Migration
@@ -39,84 +40,84 @@ Some important points before we move in:
 ## Equivalent Methods
 
 -   Setting the content type to query on  
-    
+
     ```
     // In `contentstack-javascript`, you need to call
     Stack.ContentType('')
-    
+
     // In DataSync SDK, you need to call
     Stack.contentType('')
     ```
-    
+
 -   To sort in ascending order  
-      
-    
+
+
     ```
     // In contentstack-javascript, you need to call 
-    
+
     Stack.ContentType('') .Query() .ascending(fieldName: string)
-    
+
     // In DataSync SDK, you need to call 
-    
+
     Stack.contentType('') .entries() .ascending(fieldName: string)
     ```
-    
+
 -   To sort in descending order  
-      
-    
+
+
     ```
     //In `contentstack-javascript`, you need to call
-    
+
     Stack.ContentType('')
       .Query()
       .descending(fieldName: string)
-    
+
     //In DataSync SDK, you need to call
-    
+
     Stack.contentType('')
       .entries()
       .descending(fieldName: string)
     ```
-    
+
 -   Query: $where  
-      
+
     In contentstack-javascript, you need to call  
-    
+
     ```
     Stack.ContentType('')
       .Query()
       .where(field, value)
     ```
-    
-      
+
+
     In DataSync SDK, you'd need to call  
-    
+
     ```
     Stack.contentType('')
       .entries()
       .where(expression)
-    
+
     // Expression here is similar to: <a href="https://docs.mongodb.com/manual/reference/operator/query/where/" target="_blank">https://docs.mongodb.com/manual/reference/operator/query/where/</a>
     ```
-    
+
 -   Query: $and  
     In contentstack-javascript, you need to call  
-    
+
     ```
     const Query1 = Stack.ContentType('blog').Query().where('title', 'Demo')
     const Query2 = Stack.ContentType('blog').Query().lessThan('comments', 10)
-    
+
     Stack.ContentType('')
       .entries()
       .and(Query1, Query2)
       .find()
     ```
-    
+
     In DataSync SDK, you need to call  
-      
-    $and and $or because internally they work similar to MongoDb’s [**and**](https://docs.mongodb.com/manual/reference/operator/query/and/) and [**or**](https://docs.mongodb.com/manual/reference/operator/query/or/) operator.[  
-    ](https://docs.mongodb.com/manual/reference/operator/query/or/)  
-    
+
+    $and and $or because internally they work similar to MongoDb’s [**and**](https://www.mongodb.com/docs/manual/reference/operator/query/and/) and [**or**](https://www.mongodb.com/docs/manual/reference/operator/query/or/) operator.[  
+    ](https://www.mongodb.com/docs/manual/reference/operator/query/or/)  
+
     ```
     Stack.ContentType('blog')
      .entries()
@@ -134,24 +135,24 @@ Some important points before we move in:
       ])
       .find()
     ```
-    
+
 -   Query: $or  
     In contentstack-javascript, youd need to call  
-    
+
     ```
     const Query1 = Stack.ContentType('blog').Query().where('title', 'Demo')
     const Query2 = Stack.ContentType('blog').Query().lessThan('comments', 10)
-    
+
     Stack.ContentType('')
       .entries()
       .or(Query1, Query2)
       .find()
     ```
-    
-    In DataSync SDK, you need to call $and and $or because internally they work similar to MongoDb’s [**and**](https://docs.mongodb.com/manual/reference/operator/query/and/) and [**or**](https://docs.mongodb.com/manual/reference/operator/query/or/) operator.[  
-    ](https://docs.mongodb.com/manual/reference/operator/query/or/)  
-      
-    
+
+    In DataSync SDK, you need to call $and and $or because internally they work similar to MongoDb’s [**and**](https://www.mongodb.com/docs/manual/reference/operator/query/and/) and [**or**](https://www.mongodb.com/docs/manual/reference/operator/query/or/) operator.[  
+    ](https://www.mongodb.com/docs/manual/reference/operator/query/or/)  
+
+
     ```
     Stack.ContentType('blog')
       .entries()
@@ -169,30 +170,30 @@ Some important points before we move in:
       ])
       .find()
     ```
-    
+
 -   Projection: Only  
-      
+
     In contentstack-javascript, you need to call  
-    
+
     ```
     // .only with field uid
     .only('title')
-    
+
     // .only with field uid
     only('BASE','title')
-    
+
     // .only with field uids(array)
     .only(['title','description'])
-    
+
     // .only with reference_field_uid and field uid
     .includeReference('category').only('category','title')
-    
+
     // .only with reference_field_uid and field uids(array)
     .includeReference('category').only('category', ['title', 'description'])
     ```
-    
+
     In DataSync SDK, you need to call  
-    
+
     ```
     /**
      * Currently, projections do not work on reference fields. 
@@ -203,30 +204,30 @@ Some important points before we move in:
       .include('categories')
       .only(['title', 'categories'])
     ```
-    
+
 -   Projection: Except  
-      
+
     In contentstack-javascript, you need to call  
-    
+
     ```
     // .except with field uid
     .except('title')
-    
+
     // .except with field uid
     except('BASE','title')
-    
+
     // .except with field uids(array)
     .except(['title','description'])
-    
+
     // .except with reference_field_uid and field uid
     .includeReference('category').except('category','title')
-    
+
     // .except with reference_field_uid and field uids(array)
     .includeReference('category').except('category', ['title', 'description'])
     ```
-    
+
     In DataSync SDK, you need to call  
-    
+
     ```
     /**
      * Currently, projections do not work on reference fields. 
@@ -237,30 +238,30 @@ Some important points before we move in:
       .include('categories')
       .except(['title', 'categories'])
     ```
-    
+
 -   Include reference  
-      
+
     In contentstack-javascript, you need to call  
-    
+
     ```
     Stack.ContentType('')
       .Query()
       .includeReferences([''])
     ```
-    
-      
+
+
     In DataSync SDK, you need to call
-    
+
     ```
     Stack.contentType('')
       .entries()
       .include([''])
     ```
-    
+
 -   Query: Query on references  
-      
+
     In contentstack-javascript, you need to call  
-    
+
     ```
     Stack.ContentType('')
       .Query()
@@ -280,9 +281,9 @@ Some important points before we move in:
         ]
       })
     ```
-    
+
     In DataSync SDK, you need to call  
-    
+
     ```
     Stack.ContentType('')
       .entries()
@@ -294,7 +295,7 @@ Some important points before we move in:
         reference.title: 'Expectation'
       })
     ```
-    
+
 
 ## Unchanged Methods in DataSync
 

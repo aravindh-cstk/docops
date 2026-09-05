@@ -2,6 +2,7 @@
 title: "Move Assets to Folder in Bulk"
 description: "Learn how to move assets to a folder in bulk in Contentstack."
 url: /headless-cms/move-assets-to-folder-in-bulk
+uid: blt5507436cc87f54a4
 ---
 
 # Move Assets to Folder in Bulk

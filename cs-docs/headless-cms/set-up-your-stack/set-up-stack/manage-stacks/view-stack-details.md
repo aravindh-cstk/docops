@@ -2,6 +2,7 @@
 title: "View Stack Details"
 description: "Learn to access and manage stack details in Contentstack, including settings, API credentials, and last modified timestamps for improved control and audit tracking."
 url: /headless-cms/view-stack-details
+uid: blt19ad99935eabb064
 ---
 
 # View Stack Details
@@ -18,9 +19,9 @@ To view your stack details, log in to your [Contentstack account](https://www.co
     -   The **description** provided for the stack
     -   The **Stack Owner Email** in read-only mode
 3.  The **Appearance** section allows you to manage the visual identification of your stack. You can select a predefined color under **Stack Color** to visually identify your stack across the interface.
-    
+
     **Note:** If no color is selected, a default color is applied.
-    
+
 4.  In the **API Credentials** section, view the stack **API Key** (stack UID) used for authentication and API requests.
 5.  If you are the stack [Owner](https://www.contentstack.com/docs/headless-cms/types-of-roles#owner), you can [delete the stack](/docs/administration/organization-stacks#delete-a-stack) or [transfer ownership](/docs/headless-cms/transfer-stack-ownership). Other users can only [leave the stack](/docs/headless-cms/leave-a-stack). ![Stack Color in Stack Settings.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8c4738688592bef4/69a402b9fbdb4daac37752eb/Stack_Color_in_Stack_Settings.png)
 

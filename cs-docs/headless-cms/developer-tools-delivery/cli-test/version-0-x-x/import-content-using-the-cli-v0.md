@@ -1,10 +1,11 @@
 ---
-title: "Import Content using the CLI | Old Commands"
+title: "Import Content using the CLI | V0.x.x"
 description: "Efficiently import content using Contentstack's CLI commands."
 url: /headless-cms/import-content-using-the-cli/v0
+uid: bltc452d443530ac981
 ---
 
-# Import Content using the CLI | Old Commands
+# Import Content using the CLI | V0.x.x
 
 ## Import Content using the CLI
 
@@ -17,7 +18,7 @@ Content can be imported in a stack for the following modules:
 -   [Assets](/docs/headless-cms/about-assets)
 -   [Locales](/docs/headless-cms/about-languages)
 -   [Environments](/docs/headless-cms/about-environments)
--   [Extensions](/docs/developers/experience-extensions-overview)
+-   [Extensions](/docs/developer-hub/about-ui-locations)
 -   [Webhooks](/docs/headless-cms/about-webhooks)
 -   [Global Fields](/docs/headless-cms/about-global-field)
 -   [Content Types](/docs/headless-cms/about-content-types)
@@ -30,8 +31,8 @@ Content can be imported in a stack for the following modules:
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login)
--   CLI [installed](/docs/headless-cms/install-the-cli)
--   A [configured management token](/docs/headless-cms/cli-authentication#add-token) (alias) or [authtoken](/docs/headless-cms/cli-authentication#login)
+-   CLI [installed](/docs/headless-cms/install-the-cli/v1)
+-   A [configured management token](/docs/headless-cms/cli-authentication/v0#add-token) (alias) or [authtoken](/docs/headless-cms/cli-authentication/v0#login)
 
 ## Commands
 
@@ -85,41 +86,41 @@ For every module import operation, all the latest mapping files are added to a s
 **Examples**
 
 -   To import all modules into a stack:  
-    
+
     ```
     csdx cm:import -a mytoken  -d "C:\Users\Name\Desktop\cli\content"
     ```
-    
+
 -   To import all modules in a particular branch of your stack(For example: **develop**).  
-    
+
     ```
     csdx cm:import -a mytoken -d "C:\Users\Name\Desktop\cli\content" -B develop
     ```
-    
+
 -   To import only locales into a stack:  
-    
+
     ```
     csdx cm:import -a mytoken  -d "C:\Users\Name\Desktop\cli\content" -m locales
     ```
-    
+
     OR  
-    
+
     ```
     csdx cm:import -a mytoken  -d "C:\Users\Name\Desktop\cli\content" --module locales
     ```
-    
+
 -   Including the backup flag to import only environments into a stack after your first module import.  
-    
+
     ```
     csdx cm:import -a mytoken -d "C:\Users\Name\Desktop\cli\content" -m environments -b _backup_123
     ```
-    
+
     OR  
-    
+
     ```
     csdx cm:import -a mytoken -d "C:\Users\Name\Desktop\cli\content" --module environments -b _backup_123
     ```
-    
+
 
 **Note:** When importing  modules individually, make sure you follow this module sequence: **locales > environments > assets > extensions > webhooks > global-fields > content-types > workflows > entries > labels**.  For example, before importing entries, you must have had imported assets, environments, locales, extensions, webhooks, global-fields, content-types, and workflows.
 
@@ -145,15 +146,15 @@ csdx cm:import -a <management_token_alias> -c <config_file_path>
 **Example**
 
 -   To import content using a config file:  
-    
+
     ```
     csdx cm:import -a mytoken -c “C:/Users/Name/Desktop/cli/config.json”
     ```
-    
+
 
 ### Import Content Using Auth Token and Parameters
 
-You can use this method to import content to your stack if you have logged in to the session using the [Login](https://www.contentstack.com/docs/headless-cms/cli-authentication/#login) command. Running the Login command generates an auth token, which is used in the command below.
+You can use this method to import content to your stack if you have logged in to the session using the [Login](https://www.contentstack.com/docs/headless-cms/cli-authentication/v0#login) command. Running the Login command generates an auth token, which is used in the command below.
 
 **Usage**
 
@@ -193,41 +194,41 @@ For every module import operation, all the latest mapping files are added to a s
 **Examples**
 
 -   To import all modules into a stack:  
-    
+
     ```
     csdx cm:import -A -s bltxxxxxx -d "C:\Users\Name\Desktop\cli\content"
     ```
-    
+
 -   To import all modules in a particular branch of your stack(For example: **develop**).  
-    
+
     ```
     csdx cm:import -A -s bltxxxxxx -d "C:\Users\Name\Desktop\cli\content" -B develop
     ```
-    
+
 -   To import only locales into a stack:  
-    
+
     ```
     csdx cm:import -A -s bltxxxxxx -d "C:\Users\Name\Desktop\cli\content" -m locales
     ```
-    
+
     OR  
-    
+
     ```
     csdx cm:import -A -s bltxxxxxx -d "C:\Users\Name\Desktop\cli\content" --module locales
     ```
-    
+
 -   Including the backup flag to import only environments into a stack after your first module import.  
-    
+
     ```
     csdx cm:import -A -s bltxxxxxx -d "C:\Users\Name\Desktop\cli\content" -m environments -b _backup_123
     ```
-    
+
     OR  
-    
+
     ```
     csdx cm:import -A -s bltxxxxxx -d "C:\Users\Name\Desktop\cli\content" --module environments -b _backup_123
     ```
-    
+
 
 **Note:** When importing modules individually, make sure you follow this module sequence: **locales > environments > assets > extensions > webhooks > global-fields > content-types > workflows > entries > labels**. For example, before importing entries, you must have had imported assets, environments, locales, extensions, webhooks, global-fields, content-types, and workflows.
 
@@ -253,11 +254,11 @@ csdx cm:import -A -c <config_file_path>
 **Example**
 
 -   To import content using a config file:  
-    
+
     ```
     csdx cm:import -A -c “C:/Users/Name/Desktop/cli/config.json”
     ```
-    
+
 
 ## Limitations
 
@@ -268,4 +269,4 @@ csdx cm:import -A -c <config_file_path>
     -   [Users](/docs/headless-cms/about-stack-users)
     -   [Releases](/docs/headless-cms/about-releases)
 
-**Additional Resource:** Check out the [Export Content](/docs/headless-cms/export-content-using-the-cli) documentation to learn how you can export content from your stack using CLI.
+**Additional Resource:** Check out the [Export Content](/docs/headless-cms/export-content-using-the-cli/v0) documentation to learn how you can export content from your stack using CLI.

@@ -2,6 +2,7 @@
 title: "How Live Preview Works with SDK"
 description: "Learn how Contentstack’s Live Preview SDK enables real-time content updates, ensuring seamless previews for CSR & SSR websites before publishing."
 url: /headless-cms/how-live-preview-works-with-sdk
+uid: blt0c7b7c2cf0120edc
 ---
 
 # How Live Preview Works with SDK
@@ -111,7 +112,7 @@ await ContentstackLivePreview.init({
 
 port is optional. The SDK defaults to 443 for HTTPS and 80 for HTTP.
 
-For the host value for your region, see [clientUrlParams in the SDK configuration reference](https://github.com/contentstack/live-preview-sdk/tree/v4.4.2/docs/live-preview-configs.md#clienturlparams).
+For the host value for your region, see [clientUrlParams in the SDK configuration reference](https://github.com/contentstack/live-preview-sdk/blob/v4.4.2/docs/live-preview-configs.md).
 
 ### CSR
 
@@ -200,7 +201,7 @@ Both methods return a UID. Pass it to unsubscribeOnEntryChange to remove the lis
 ContentstackLivePreview.unsubscribeOnEntryChange(callbackUid);
 ```
 
-For the full list of init options, see the [SDK configuration reference](https://github.com/contentstack/live-preview-sdk/tree/v4.4.2/docs/live-preview-configs.md#initconfig-iconfig).
+For the full list of init options, see the [SDK configuration reference](https://github.com/contentstack/live-preview-sdk/blob/v4.4.2/docs/live-preview-configs.md).
 
 ### SSG
 
@@ -342,4 +343,4 @@ For all other issues, refer to the [Live Preview Onboarding and Troubleshooting 
 
 -   [Set up Live Preview for your website](https://www.contentstack.com/docs/headless-cms/set-up-live-preview-for-your-website/). Covers full configuration, including SSR and CSR patterns for your app.
 -   [Open Live Preview in a new tab](https://www.contentstack.com/docs/headless-cms/open-live-preview-in-a-new-tab). Opens preview outside the default panel (behavior depends on SDK version).
--   [Live Preview Utils SDK configuration reference](https://github.com/contentstack/live-preview-sdk/tree/v4.4.2/docs/live-preview-configs.md). Lists every init option, stackSdk, hash, and callbacks.
+-   [Live Preview Utils SDK configuration reference](https://github.com/contentstack/live-preview-sdk/blob/v4.4.2/docs/live-preview-configs.md). Lists every init option, stackSdk, hash, and callbacks.

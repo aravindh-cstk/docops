@@ -2,6 +2,7 @@
 title: "Multi Line Textbox"
 description: "When you add a Multi Line Textbox field, it displays a text area on the entry page to enter multi-line arbitrary text as content. Learn how with Contentstack."
 url: /headless-cms/multi-line-textbox
+uid: blt7bd2191e784ca872
 ---
 
 # Multi Line Textbox
@@ -12,7 +13,7 @@ The **Multi Line Textbox** field enables users to enter multi-line arbitrary tex
 
 **Note:** This field does not provide any formatting options.
 
-When you [add this field in content type](/docs/developers/create-custom-fields/use-custom-field-in-content-types), it displays a text area on the [entry](/docs/headless-cms/about-entries) page to enter a large chunk of data, for example, an address.
+When you [add this field in content type](/docs/developer-hub/custom-field-location), it displays a text area on the [entry](/docs/headless-cms/about-entries) page to enter a large chunk of data, for example, an address.
 
 This field possesses certain [properties](/docs/headless-cms/about-field-properties) that you can change at any time as per your needs. The properties that can be modified are “[Display Name](/docs/headless-cms/display-name),” “[Unique ID](/docs/headless-cms/unique-id),” “[Placeholder Value](/docs/headless-cms/placeholder-value),” “[Instruction Value](/docs/headless-cms/instruction-value),” “[Help Text](/docs/headless-cms/help-text),” “[Number of Characters](/docs/headless-cms/number-of-characters),” “[Validation (Regex)](/docs/headless-cms/validation-regex),” “[Validation Error Message](/docs/headless-cms/validation-error-message),” “[Default Value](/docs/headless-cms/default-value),” “[Mandatory](/docs/headless-cms/mandatory),” “[Multiple](/docs/headless-cms/multiple),” and “[Non-localizable](/docs/headless-cms/non-localizable).”
 

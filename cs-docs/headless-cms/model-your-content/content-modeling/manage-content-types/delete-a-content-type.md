@@ -2,6 +2,7 @@
 title: "Delete a Content Type"
 description: "process of deleting a content type from the stack"
 url: /headless-cms/delete-a-content-type
+uid: blt5b263fc3d7821c9b
 ---
 
 # Delete a Content Type

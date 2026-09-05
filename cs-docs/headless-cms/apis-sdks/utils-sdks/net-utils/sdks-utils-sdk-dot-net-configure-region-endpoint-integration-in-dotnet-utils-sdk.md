@@ -2,6 +2,7 @@
 title: ".NET Utils - Configure Region Endpoints in .NET Utils SDK"
 description: "Configure region endpoints dynamically using the Contentstack .NET Utils SDK. A C# developer guide to dynamic resolution without hardcoding URLs."
 url: /developers/sdks/utils-sdk/dot-net/configure-region-endpoint-integration-in-dotnet-utils-sdk
+uid: blt3c9bbf24f94e2e7c
 ---
 
 # .NET Utils - Configure Region Endpoints in .NET Utils SDK
@@ -405,7 +406,7 @@ WARNING: SSL certificate verification failed. Retrying without verification.
          To fix permanently, run: /Applications/Python*/Install Certificates.command
 ```
 
-**Root cause:** On macOS with a [Python.org](http://Python.org) build, refresh-region.py may encounter an SSL certificate error on first run. The script retries automatically without verification.
+**Root cause:** On macOS with a [Python.org](https://www.python.org/) build, refresh-region.py may encounter an SSL certificate error on first run. The script retries automatically without verification.
 
 **Resolution:** Run /Applications/Python\*/Install Certificates.command to install the required root certificates permanently.
 
