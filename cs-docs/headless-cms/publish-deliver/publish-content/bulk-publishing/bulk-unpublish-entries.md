@@ -13,7 +13,7 @@ Unpublishing multiple entries at once simplifies bulk content removal and stream
 
 To bulk unpublish entries, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 
-1.  Go to your [stack](https://www.contentstack.com/docs/headless-cms/about-stack) and click the "Entries" icon. You can also use the shortcut key “E��� (for both Windows and Mac OS users).
+1.  Go to your [stack](https://www.contentstack.com/docs/headless-cms/about-stack) and click the "Entries" icon. You can also use the shortcut key “E” (for both Windows and Mac OS users).
 2.  Use the checkboxes to select the entries you want to unpublish.
 3.  After selecting the entries, click the **Unpublish** option in the floating panel that appears.  
     ![Bulk_UnPublish_Entries_UnPublishIcon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4d5fc3fb69f9bc2a/6764e43b5586157d0c6a2438/Bulk_UnPublish_Entries_UnPublishIcon.png)
