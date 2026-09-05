@@ -119,7 +119,7 @@ This builds on top of a traditional server-side architecture, by adding a very l
 -   **Contentstack Personalize Edge API and SDK**: The [Personalize Edge API](/docs/developers/apis/personalize-edge-api/) is the decision engine for real-time personalization. To minimize overhead on your user’s requests, it exists at the Edge, as close as possible to your users and your Edge—the two locations where you’ll interact with it.  
     Given the user UID and other context, such as the page URL, referrer, etc., it responds with the UIDs of each experience’s variant that the visitor should see. Read more about the Edge API [here](/docs/developers/apis/personalize-edge-api).  
     We recommend using our [JavaScript Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript/about-javascript-personalize-edge-sdk), which handles communication with the Edge API, providing it the necessary context on your behalf.
--   **Contentstack CMS Content Delivery API (CDA)**: Contentstack's CDA delivers the content (articles, products, etc.) �� both [base and personalized variants](/docs/developers/apis/content-delivery-api/entry-variants). Your SSR process combines this content with your page layout or components to generate the final personalized page shown to the user.
+-   **Contentstack CMS Content Delivery API (CDA)**: Contentstack's CDA delivers the content (articles, products, etc.) — both [base and personalized variants](/docs/developers/apis/content-delivery-api/entry-variants). Your SSR process combines this content with your page layout or components to generate the final personalized page shown to the user.
 
 ### Request Flows
 
