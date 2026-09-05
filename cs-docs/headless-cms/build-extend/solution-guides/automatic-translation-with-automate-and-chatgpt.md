@@ -39,7 +39,7 @@ Once we have these basics ready, we can set up the required automation for trans
     Choose Connector → Contentstack → Get Single Entry.  
     Configure the [Get Single Entry action](/docs/agent-os/contentstack-trigger#entry-trigger) to get the data of the entry.
 4.  **Translate the Content using ChatGPT**  
-    Choose Connector → ChatGPT → Configure Action.  
+    Choose Connector �� ChatGPT → Configure Action.  
     Choose the model and provide an appropriate prompt, such as: “Translate the following content for the French audience.”  
     Remember to include the text from the previous step (Headline). It’s recommended to translate content on a per-field basis.  
     Repeat the same process for the Description field.
