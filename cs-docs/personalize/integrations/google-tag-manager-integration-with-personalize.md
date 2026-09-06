@@ -275,7 +275,7 @@ For an example Stack, Personalize project, and GTM container, see the [Reference
         **Debugging Tips**
 
         -   **Use GTM’s “Preview” mode to test tags in real-time and ensure they are fired as expected.**
-        -   **Check your browser���s developer console for any error messages related to the tag execution.**
+        -   **Check your browser’s developer console for any error messages related to the tag execution.**
         -   **Check your browser’s developer console for network calls via the Network tab in Google Chrome (Inspect Element > Network) for any error messages related to the tag execution. The following network call shows the user attributes being set on the edge API from GTM:**![API.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltccb4de787334aaee/69c3e4bbc8f83a0170dce541/API.png)
 
     **For further assistance, refer to the** [**Google Tag Manager documentation**](https://tagmanager.google.com/gallery/#/owners/contentstack/templates/personalize-actions-gtm-template) **or contact support.**
