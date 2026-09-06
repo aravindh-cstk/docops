@@ -96,7 +96,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   ├── hooks/
 │   │   │   ├── useAppConfig.test.tsx
 │   │   │   ├── useAppConfig.ts
-│   ��   │   ├── useAppLocation.ts
+│   │   │   ├── useAppLocation.ts
 │   │   │   ├── useAppSdk.test.tsx
 │   │   │   ├── useAppSdk.tsx
 │   │   │   ├── useCustomField.test.tsx
