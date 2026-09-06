@@ -79,7 +79,7 @@ Let’s dive deep into how the “Blog Landing Page” content model will help y
     -   **Bio**: For the Author bio, you will see the [Multi Line Textbox](/docs/headless-cms/multi-line-textbox) field that stores the short description about the author.
 
 
-This completes the creation of your “Blog Landing Page” content model.
+This completes the creation of your “Blog Landing Page�� content model.
 
 ![blog-landing-page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt795df7114415aec5/65e07943eef4e325141e6ac3/blog-landing-page.png)
 

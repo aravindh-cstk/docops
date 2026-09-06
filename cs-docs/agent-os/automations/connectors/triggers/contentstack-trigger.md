@@ -264,7 +264,7 @@ Let’s look at the steps to set up the trigger event.
         For Entry Variant Trigger, you will find the following module-specific sub-events:
 
         -   **Entry Variant Created**: Triggers when you create a new entry variant.
-        -   **Entry Variant Updated**: Triggers when you update an entry’s variant.
+        -   **Entry Variant Updated**: Triggers when you update an entry���s variant.
         -   **Entry Variant Deleted**: Triggers when you delete an entry’s variant.
         -   **All**: Triggers when you perform any of the above activities (create/update/delete) on an entry variant.
 
