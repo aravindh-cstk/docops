@@ -214,7 +214,7 @@ Asset exceptions are divided into the following categories:
 
     Use this option to restrict actions on selected assets.
 
-    For example, allow a role to read all assets but restrict publishing of the ���Image1” asset.
+    For example, allow a role to read all assets but restrict publishing of the “Image1” asset.
 
 -   **Specific Folders**
 
