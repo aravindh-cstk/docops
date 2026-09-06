@@ -87,7 +87,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   ├── lock.svg
 │   │   └── sidebarwidget.svg
 │   │
-│   ├── common/
+│   ��── common/
 │   │   ├── contexts/
 │   │   │   ├── appConfigurationExtensionContext.ts
 │   │   │   ├── customFieldExtensionContext.ts
