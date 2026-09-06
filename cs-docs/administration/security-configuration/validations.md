@@ -29,7 +29,7 @@ You can mark a field as [Mandatory](/docs/headless-cms/mandatory), which means t
 
 **Note:** If the [Save In-progress Entry](/docs/headless-cms/save-in-progress-entry) feature is enabled for your organization, mandatory field validation does not block saving. This feature is enabled by default for most organizations. Content managers can save an entry that has empty mandatory fields, and Contentstack enforces the validation at publish time instead. Entries with incomplete mandatory fields cannot be published, scheduled for publishing, included in bulk publishing, added to a release, or referenced for publishing.
 
-You can set this validation rule to the “Single Line Textbox,” “Multi Line Textbox,” “Rich Text Editor,” “Markdown,” “Number,” “Date,” “File,” “Link,” and “Reference” fields.
+You can set this validation rule to the “Single Line Textbox,” “Multi Line Textbox,” “Rich Text Editor,” “Markdown,” “Number,” “Date,” “File,” ���Link,” and “Reference” fields.
 
 **Additional Resource:** You can look at our list of guides under [Create Content Types](/docs/headless-cms/create-a-content-type) section that covers how to create a content type, what fields you can add, what field properties you can apply to them, field visibility rules, content type labels, and other actions.
 

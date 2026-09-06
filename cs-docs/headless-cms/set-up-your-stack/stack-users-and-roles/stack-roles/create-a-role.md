@@ -131,7 +131,7 @@ Language permissions are divided into the following categories:
 
     Use this option to define permissions for selected language variants.
 
-    For example, allow a role to access only the “English - United States” language variant.
+    For example, allow a role to access only the “English - United States�� language variant.
 
     **Note:** Language permissions apply at the role level and cannot vary by content type.
 
