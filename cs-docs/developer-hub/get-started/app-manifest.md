@@ -11,7 +11,7 @@ uid: blt154bec0a078ac59f
 
 The App Manifest represents an app within Contentstack, encapsulating the app's identity, locations, and permissions within the ecosystem. This foundational entity holds crucial metadata necessary for the installation, management, and behavior of an app while it operates within Contentstack.
 
-Users can view the app’s manifest by clicking the respective app and navigating to the “App Manifest��� section. Users who can manage the app have access to the full view of the manifest, while other users in the organization can access the basic view of the app manifest.
+Users can view the app’s manifest by clicking the respective app and navigating to the “App Manifest” section. Users who can manage the app have access to the full view of the manifest, while other users in the organization can access the basic view of the app manifest.
 
 Highlighted below is a comprehensive guide to understanding the significance, structure and management of App Manifest components such as the app's name, description, visibility settings, event interactions, and authorization scopes.
 
