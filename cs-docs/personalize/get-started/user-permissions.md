@@ -2,6 +2,7 @@
 title: "User Permissions"
 description: "Learn how to manage user roles, permissions, and access controls in Contentstack Personalize. Invite or remove users, and control project access."
 url: /personalize/user-permissions
+uid: blt1dc2e19c287eff1b
 ---
 
 # User Permissions
@@ -23,11 +24,11 @@ Essentially, roles define the boundaries of a user's permissions and responsibil
 ## What You Will Learn
 
 -   The Personalize roles and what each one can do.
-    
+
 -   How to invite a user to a Personalize project.
-    
+
 -   How to remove a user from a Personalize project.
-    
+
 
 ## Roles and Capabilities
 
@@ -79,7 +80,7 @@ To invite a user to a Personalize project, log in to your [Contentstack account]
 4.  In the **Users** section, click the **\+ Invite User** button.![Invite User button in project Users section](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4afdd07f19fb2c98/68df5aa3b0493a6337ccd5c4/Invite_user.png)
 5.  In the **Invite User** modal, enter the user's email address and an optional message for the invitee and then click **Invite** to send the invitation.![Invite User modal with email and message fields](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5f9ce33ba15d6e0f/6814743bc98d9b20f63ca233/Personalize_-_User_Permissions_-_Invite_User_Modal.png)
 6.  You can invite multiple users by entering their email addresses.The invited user will receive an email. Once they accept the invite and are authorized, their status will update to **Accepted**.
-    
+
 
 ### Remove a User from the Project
 

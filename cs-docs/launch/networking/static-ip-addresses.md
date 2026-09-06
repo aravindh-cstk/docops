@@ -2,6 +2,7 @@
 title: "Static IPs (Egress)"
 description: "Learn how Static IP addresses work in Contentstack Launch and how to set up outbound IP allowlisting for your backend systems."
 url: /launch/static-ip-addresses
+uid: blt67315f9cda7e9b1e
 ---
 
 # Static IPs (Egress)
@@ -17,13 +18,13 @@ Static IPs give your Launch application a fixed set of **outbound** IP addresses
 ## What You Will Learn
 
 -   When Static IPs are, and are not, the right fit.
-    
+
 -   How Static IPs route outbound traffic through a fixed set of addresses.
-    
+
 -   How Static IPs compare to Private Network Deployments.
-    
+
 -   How to enable, allowlist, and test Static IPs.
-    
+
 
 ## When to Use Static IPs
 
@@ -77,10 +78,10 @@ The Launch team handles setup, and you do not need to configure anything on each
 After the Static IPs feature is enabled and you have added the addresses to your allowlist, you can confirm everything works with a small Launch cloud function. The function below does two things: it calls one of your allowlisted backends, and it reports the public IP address from which your traffic leaves.
 
 1.  Deploy the following as a Launch cloud function, replacing the backend URL with an allowlisted endpoint, such as a health-check endpoint:
-    
+
     ```
     const BACKEND_URL = 'https://api.example.com/health';
-      
+
     async function tryFetch(url) {
       try { 
        const res = await fetch(url, { signal: AbortSignal.timeout(5000) }); 
@@ -89,17 +90,17 @@ After the Static IPs feature is enabled and you have added the addresses to your
          return { ok: false, error: err.message }; 
        }
     }
-    
+
     export default async function handler(request, response) {
       const backend = await tryFetch(BACKEND_URL);
       const egress = await tryFetch('https://checkip.amazonaws.com');
-      
+
       response.status(200).json({ backend, egress });
     }
     ```
-    
+
 2.  Invoke the function and check the JSON response:
-    
+
     ```
     {
       "backend": {
@@ -112,14 +113,14 @@ After the Static IPs feature is enabled and you have added the addresses to your
       }
     }
     ```
-    
+
     Verify two things:
-    
+
     -   The egress value matches one of the static IP addresses Contentstack provided.
     -   The backend call succeeds—ok is true and a body is returned.
-    
+
     If the backend call fails, confirm every static IP address has been added to that backend's allowlist.
-    
+
 
 ## How Static IPs Apply Across Your Projects
 

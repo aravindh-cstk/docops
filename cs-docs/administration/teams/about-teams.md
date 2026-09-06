@@ -2,6 +2,7 @@
 title: "About Teams"
 description: "Contentstack’s Teams feature simplifies the assignment of roles and permissions, by grouping users."
 url: /administration/about-teams
+uid: blt400691c8006c12a7
 ---
 
 # About Teams

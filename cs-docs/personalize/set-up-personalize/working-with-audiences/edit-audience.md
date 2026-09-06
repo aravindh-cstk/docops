@@ -2,6 +2,7 @@
 title: "Edit an Audience"
 description: "Learn how to edit audiences in Contentstack Personalize to maintain accurate segmentation."
 url: /personalize/edit-audience
+uid: blt19aa88a239079b85
 ---
 
 # Edit an Audience
@@ -16,23 +17,23 @@ This guide provides a step-by-step walkthrough for editing audiences in Contents
 
 -   [Contentstack account](https://www.contentstack.com/login)
 -   Personalize-enabled Organization with [permissions](/docs/administration/about-administration-roles)
-    
+
     **Note:** Users with **Owner** and **Member** access to a Personalize project can edit existing audiences.
-    
+
 -   Access to Personalize project
-    
+
     **Note:** We assumed that you have already created a Personalize project. If not, follow [this guide](/docs/personalize/create-personalize-project) to create a project in Personalize.
-    
+
 -   [Audience created](/docs/personalize/create-audience) in your Personalize project
 
 ## What You Will Learn
 
 -   How to open an existing audience for editing in a Personalize project.
-    
+
 -   How to change an audience's Name, Description, Rules, and Groups.
-    
+
 -   What to check before editing an audience that is referenced in an experience.
-    
+
 
 ## Steps for Execution
 

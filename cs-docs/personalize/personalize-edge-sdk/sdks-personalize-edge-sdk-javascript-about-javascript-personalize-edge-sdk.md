@@ -2,6 +2,7 @@
 title: "About JavaScript Personalize Edge SDK"
 description: "Get started with the JavaScript Personalize Edge SDK to deliver real-time personalized content, track events, and set custom user attributes effortlessly."
 url: /developers/sdks/personalize-edge-sdk/javascript/about-javascript-personalize-edge-sdk
+uid: blt8da1aeb851cd722c
 ---
 
 # About JavaScript Personalize Edge SDK

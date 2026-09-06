@@ -2,6 +2,7 @@
 title: "Experience Analytics"
 description: "Understand how users interact with your personalized content using Experience Analytics."
 url: /personalize/experience-analytics
+uid: blt93566f29d501f357
 ---
 
 # Experience Analytics
@@ -93,13 +94,13 @@ Each sample represents one possible estimate of that variant’s true conversion
 
 1.  **Calculate Non-Conversions:** For each variant, determine the number of non-conversions (Impressions - Conversions).
 2.  **Determine the Posterior Distribution:**
-    
+
     Feed the conversion and non-conversion counts into the Beta function along with the prior constants.
-    
+
     The function is expressed as: Beta(1 + Conversions, 1 + Non-Conversions)
-    
+
     This function yields the Posterior (a Beta Distribution) for each variant.
-    
+
 3.  **Extract Random Samples:** Draw 15,000 random samples from each variant’s Posterior Distribution. Each sample represents a possible value of that variant’s true conversion rate.
 4.  **Compare Samples:** Compare the samples across all variants in parallel. For each set of samples (one from each variant), identify the variant with the highest value. That variant is marked as the “winner” for that iteration.
 5.  **Calculate the Probability to Be Best (P2BB):**
@@ -125,5 +126,5 @@ Once the Personalize engine identifies a winning variant through its Leader Dete
 
 -   **Manual Method:** Manually copy the content changes from the variant into the baseline entry, publish the entry, and then archive the experience.
 -   **Automated Method:** Use the ClearWinner app to automate the identification and merging of winning variants. This ensures that your production environment is updated instantly and redundant variant data is cleaned up automatically, eliminating the need for manual data entry.
-    
+
     **Additional Resource:** For more information, refer to the [Clearwinner App Installation Guide](/docs/marketplace/clear-winner).

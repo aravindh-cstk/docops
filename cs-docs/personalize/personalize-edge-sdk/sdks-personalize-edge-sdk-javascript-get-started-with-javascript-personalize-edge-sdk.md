@@ -2,6 +2,7 @@
 title: "Get Started with JavaScript Personalize Edge SDK"
 description: "Get started with the Contentstack Personalize Edge SDK to deliver personalized experiences, trigger events, and track user actions effortlessly."
 url: /developers/sdks/personalize-edge-sdk/javascript/get-started-with-javascript-personalize-edge-sdk
+uid: bltc3151f0f89f2e3ed
 ---
 
 # Get Started with JavaScript Personalize Edge SDK
@@ -20,15 +21,15 @@ This step-by-step guide will help you get started with the JavaScript Personaliz
 ## What You Will Learn
 
 -   How to install the JavaScript Personalize Edge SDK.
-    
+
 -   How to initialize the SDK in backend and browser contexts.
-    
+
 -   How to set custom user attributes and live attributes.
-    
+
 -   How to retrieve experiences and variant aliases.
-    
+
 -   How to trigger an event.
-    
+
 
 ## Installing and Setup
 
@@ -82,23 +83,23 @@ const personalizeSdk = await Personalize.init(projectUid, {
 You can use custom user attributes using one of the following methods:
 
 1.  ### Setting Custom User Attributes using set method
-    
+
     The set method allows you to define user attributes as key-value pairs representing user traits. To use these attributes, create them with matching keys in the Personalize Attributes module.
-    
+
     **Note:** User attribute data is stored across our global edge network. As a result, newly set attributes may take up to one second to be recognized by the decision engine when determining the user’s variant..
-    
+
     ```
     await personalizeSdk.set({ age: 20 });
     ```
-    
+
 2.  ### Using Custom User Attributes as Live Attributes
-    
+
     Live attributes enable sending specific attribute values in real time to the Edge API during Manifest fetch. This allows the decision engine to determine active variants based on the provided values without waiting for the data to sync to the edge.
-    
+
     Passing custom user attributes during initialization treats them as live attributes. This allows the attributes to be sent directly to the Personalize decision engine for real-time variant evaluation.
-    
+
     **Note:** Values passed as live attributes are only used during the current session and not persisted in the user's profile. To retain the value, set the attributes using the set method described above.
-    
+
     ```
     const personalizeSdk = await Personalize.init(projectUid, {
         liveAttributes: {
@@ -106,7 +107,7 @@ You can use custom user attributes using one of the following methods:
         },
       });
     ```
-    
+
 
 ## Retrieve Experiences
 

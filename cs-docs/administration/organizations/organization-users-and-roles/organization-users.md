@@ -2,6 +2,7 @@
 title: "Organization Users"
 description: "Manage organization users efficiently with our guide: invite, edit roles, remove users, reset MFA, export to CSV, and more. Explore now."
 url: /administration/organization-users
+uid: blt88e398f88e19a211
 ---
 
 # Organization Users
@@ -33,11 +34,11 @@ You can perform the following actions on organization users:
 ## What You Will Learn
 
 -   How to invite, edit, and remove organization users.
-    
+
 -   How to force password resets, unlock users, and reset Multi-Factor Authentication (MFA).
-    
+
 -   How to export the user list to CSV and view last login details.
-    
+
 
 Let’s walk through each action.
 
@@ -96,9 +97,9 @@ Manually unlock users who have been locked out due to failed login attempts.
 To unlock users individually or in bulk:
 
 1.  Click the vertical ellipsis in the **Action** column next to the locked user.![Unlock option for a locked user](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0465f2f1b10ad97e/693aa8495bb1c13b1837e284/Unlock_Users_1.png)
-    
+
     Or select up to **10 users** using the respective checkboxes.
-    
+
     ![Bulk selection of locked users](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf879e21d28d5d776/693aa84afe65010a443ecf9e/Unlock_Users_2.png)
 2.  Click **Unlock User**.
 3.  Review the selected users in the confirmation modal and click **Continue** or **Proceed** to restore access.
@@ -106,12 +107,12 @@ To unlock users individually or in bulk:
 **Note:**
 
 -   The **Unlock User** option is not available for:
-    
+
     -   Users who are part of multiple Contentstack organizations
     -   Org owners
-    
+
     In both cases, contact Contentstack [support](mailto:support@contentstack.com) to unlock the user.
-    
+
 -   The **Unlock User** button appears only if **all user selected in bulk** are unlockable. If one or more selected users are ineligible (e.g., multi-org users or organization owner or already unlocked user), the option will not be shown.
 
 ## Reset MFA

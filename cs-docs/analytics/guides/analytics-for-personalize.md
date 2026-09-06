@@ -2,6 +2,7 @@
 title: "Analytics for Personalize"
 description: "Track Personalize usage with Contentstack's Analytics dashboard. Monitor API requests, impressions, events, and more."
 url: /analytics/analytics-for-personalize
+uid: bltd6584ade2c367965
 ---
 
 # Analytics for Personalize
@@ -18,20 +19,20 @@ The Personalize Analytics dashboard gives organization Owners and Admins a centr
 ## What You Will Learn
 
 -   How to open the Personalize Analytics dashboard.
-    
+
 -   What each dashboard section measures.
-    
+
 -   How to filter data and save filter combinations as views.
-    
+
 
 ## Access the Personalize Analytics Dashboard
 
 To access the Analytics dashboard, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 
 1.  Navigate to **Analytics** through the "App Switcher".
-    
+
 2.  By default, the **CMS** dashboard appears. Click **Personalize** to switch to the Personalize dashboard.
-    
+
     ![Selecting the Personalize dashboard in Analytics](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am897351c073eef942/f404a6072630a663d887831c/Analytics_Personalize_Select.png?locale=en-us)
 
 **Note:** The data in the Personalize dashboard is updated every **24 hours**.
@@ -45,21 +46,21 @@ The dashboard is divided into several sections, each offering insights into diff
 This section shows your Personalize resource consumption measured against your allocated limits. It tracks the following parameters:
 
 -   **Projects:** Number of projects created.
-    
+
 -   **Experiences:** Total configured experiences.
-    
+
 -   **Audiences:** Number of defined personalization audiences.
-    
+
 -   **Attributes:** User attributes in use.
-    
+
 -   **Manifest Requests:** Requests for retrieving personalized content.
-    
+
 -   **Events:** Total events captured for personalization.
-    
+
 -   **Impressions:** Count of personalized content displays.
-    
+
 -   **Custom Events:** Number of tracked custom events.
-    
+
 
 ![Subscription Usage section of the Personalize Analytics dashboard](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am211dc5ce6e6935c7/2179bc486c1705746900c358/Analytics_Personalize_SubscriptionUsage.png?locale=en-us)
 
@@ -102,19 +103,19 @@ To filter dashboard data, click **Filters**, select your desired options, and th
 The following filters are available:
 
 -   **Projects:** Filter by individual or all projects.
-    
+
 -   **Services:** Filter API requests by all or specific services.
-    
+
 -   **Subtypes:** Filter data by **Events**, **Manifest**, or **User Attributes**.
-    
+
 -   **Status Code:** Show results for selected status codes.
-    
+
 -   **Group By:** Display data grouped by day, week, or month.
-    
+
 -   **Date Range:** Choose from predefined options (1 week, 30 days, 60 days, 90 days). Some graphs allow further range refinement.
-    
+
 -   **Custom Date:** Set a custom range using the dropdown.
-    
+
 
 **Note:** The custom date range cannot exceed **90 days**.
 

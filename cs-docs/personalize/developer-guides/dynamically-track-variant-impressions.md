@@ -2,6 +2,7 @@
 title: "Dynamically Track Variant Impressions Based On Entry Variant Shown"
 description: "Learn how to dynamically track variant impressions using the triggerImpression() method in Personalize, based on active variants returned by the CDA."
 url: /personalize/dynamically-track-variant-impressions
+uid: bltd0d0ab9c37356cfe
 ---
 
 # Dynamically Track Variant Impressions Based On Entry Variant Shown
@@ -38,33 +39,33 @@ When using **Personalize**, [experiences](/docs/personalize/about-experiences) a
 4.  [Trigger Impressions](#trigger-impressions)
 
 1.  ## Retrieve the Active Variants for a User Using Personalize Edge
-    
+
     The GET Manifest endpoint, also known as the [Manifest API](/docs/developers/apis/personalize-edge-api/manifest#get-manifest), returns the active variants for a user. When a user visits your site, Personalize evaluates all Active Experiences configured for that page and determines which variant to show for each experience.
-    
+
     This variant alias can then be used to request the personalized entry content from the Contentstack Content Delivery API (CDA).
-    
+
     **Note:** The manifest only indicates which variant should be displayed, not whether the variant content actually exists or was rendered. Only trigger impressions after confirming that the corresponding variant content was retrieved and shown on the page.
-    
+
     **Example: JavaScript Edge SDK**
-    
+
     ```
     import Personalize from '@contentstack/personalize-edge-sdk';
     const personalizeSDK = await Personalize.init(projectUid);
     const variantAliases = personalizeSDK.getVariantAliases();
     console.log(variantAliases); // example: ['cs_personalize_0_0', 'cs_personalize_1_1']
     ```
-    
+
     **Example: REST API (GET /manifest)**
-    
+
     ```
     curl -X GET 'https://personalize-edge.contentstack.com/manifest' \
       -H 'X-Project-Uid: <your_personalize_project_uid>' \
       -H 'Cookie: cs_personalize_user_uid=<anonymous_user_id>' \
       -H 'X-Page-Url: https://www.mysite.com/homepage'
     ```
-    
+
     **Sample Response:**
-    
+
     ```
     {
       "experiences": [
@@ -79,18 +80,18 @@ When using **Personalize**, [experiences](/docs/personalize/about-experiences) a
       ]
     }
     ```
-    
+
     **Note:** Replace the request URL domain, x-project-uid header, and cs\_personalize\_user\_uid cookie with actual values.
-    
+
 2.  ## Query the Entry via CDA
-    
+
     Use the active variants to fetch personalized entry data via the [Contentstack CDA](/docs/developers/apis/content-delivery-api) (REST, GraphQL, or SDK). Make sure to include the publish\_details field to access applied variant metadata.
-    
+
     **REST API:** [Entry variant API](/docs/developers/apis/content-delivery-api/entry-variants)  
     **SDK:** [Get Variants](/docs/developers/sdks/content-delivery-sdk/typescript/reference#variants)
-    
+
     Each key in the variants object is a **Variant UID**. Each value includes an alias in the format cs\_personalize\_<experience\_uid>\_<variant\_uid>.
-    
+
     ```
     {
       "entry": {
@@ -110,35 +111,35 @@ When using **Personalize**, [experiences](/docs/personalize/about-experiences) a
       }
     }
     ```
-    
+
     **Note:** Each value includes metadata, including the alias, which is needed to register impressions.
-    
+
 3.  ## Extract Variant Aliases from the Response
-    
+
     You can extract variant aliases using the CDA response. These aliases are required to register impressions using the triggerImpressions() method or the Edge API.
-    
+
     ```
     const variants = entry?.publish_details?.variants || {};
     const variantAliases = Object.values(variants).map((v) => v.alias);
     ```
-    
+
 4.  ## Trigger Impressions
-    
+
     Once you have extracted the active variant aliases, register impression events for each one. This step is critical for tracking which variants were shown to the user and measuring the performance of your personalization efforts.
-    
+
     ### Using the SDK
-    
+
     ```
     // after initializing the SDK
     personalizeSDK.triggerImpressions({
       aliases: variantAliases
     });
     ```
-    
+
     **Note:** Ensure the variant content is rendered before calling triggerImpressions() to avoid false impressions.
-    
+
     ### Using the API Directly
-    
+
     ```
     curl -X POST 'https://personalize-edge.contentstack.com/events' \
       --header 'x-cs-personalize-user-uid: <user_id>' \
@@ -158,9 +159,9 @@ When using **Personalize**, [experiences](/docs/personalize/about-experiences) a
         }
       ]'
     ```
-    
+
     Replace all placeholder values with the actual values from your project setup.
-    
+
 
 ### Best Practices
 

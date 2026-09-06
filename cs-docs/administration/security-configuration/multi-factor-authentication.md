@@ -2,6 +2,7 @@
 title: "Multi-Factor Authentication"
 description: "Secure your Contentstack account with Multi-Factor Authentication. Enable MFA for enhanced protection and prevent unauthorized access."
 url: /administration/multi-factor-authentication
+uid: blt4f066ce57e550230
 ---
 
 # Multi-Factor Authentication
@@ -22,11 +23,11 @@ We strongly recommend enabling MFA to safeguard your Contentstack account and it
 ## What You Will Learn
 
 -   How to enable MFA on your account with an authenticator app.
-    
+
 -   How to generate and store backup codes.
-    
+
 -   How to reset MFA when you switch to a new device or app.
-    
+
 
 ## Enable MFA
 
@@ -37,24 +38,24 @@ To enable MFA, log in to your [Contentstack account](https://www.contentstack.co
 3.  Under **Multi-Factor Authentication**, click **Add**/**Enable**.![Enable MFA confirmation modal](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt43bd1483ff02d554/6971e070da4f60300f158e7f/EnableMFA_3.png)
 4.  A confirmation modal appears stating that enabling MFA signs you out of all other active sessions to help secure your account. You remain signed in to the current session. Click **Continue** to proceed.![Enable MFA confirmation modal](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6c854de6a875419a/6971df6409e62c51bd78b042/EnableMFA_4.png)
 5.  A modal window appears with a QR code.
-    
+
     1.  Open an authenticator app (e.g., Google Authenticator, Authy, 1Password, Microsoft Authenticator, or any authenticator app).
     2.  Scan the QR code or manually enter the code displayed under it.
     3.  Click **Next**.
-    
+
     ![QR code for authenticator app](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf3e5dae99e76d60f/6971df648a7b281802f0cfa4/EnableMFA_5.png)
 6.  Enter the 6-digit verification code generated on your authenticator app and click **Verify** to complete the setup.![Verification code entry](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8356a571cf13da43/6971df6510f0fc208c96c44d/EnableMFA_6.png)
 7.  After MFA is enabled, a prompt appears to generate backup codes.
-    
+
     -   Click **Generate Backup Codes** (recommended).
     -   To postpone this action, click **Skip for Now** to do it later.
-    
+
     ![Generate backup codes prompt](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt006e8745e6bf5c60/6971df642f944b1286acd73f/EnableMFA_7.png)
 8.  Choose one of the following options:
-    
+
     -   Click **Copy codes** to copy the codes.
     -   Click **Download as .txt file** to save them locally.
-    
+
     ![Backup codes copy or download options](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt47ebb29456d89b55/6971df6598c53e483373014b/EnableMFA_8.png)
 9.  Click **Done** after copying or downloading your backup codes.
 
@@ -73,16 +74,16 @@ To reset your authentication method (e.g., switching to a new device or app):
 4.  A new QR code gets generated. Scan it using your new authenticator app or manually enter the secret key, and click **Next**.![New QR code for MFA reset](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3c77f287cefd1a5f/6971df6b6b2a10e0147a523c/ResetMFA_3.png)
 5.  Enter the latest 6-digit code from your app and click **Verify** to finalize the update.![Verification code entry for MFA reset](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt87a0be70f87f214c/6971df6be0f8ef579c05e7f5/ResetMFA_4.png)
 6.  After MFA is enabled, a prompt appears to generate backup codes.
-    
+
     -   Click **Generate Backup Codes** (recommended).
     -   To postpone this action, click **Skip for Now** to do it later.
-    
+
     ![Generate backup codes prompt after reset](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0620f0973d37ed03/6971df6bc956ad6e565356b6/ResetMFA_5.png)
 7.  Choose one of the following options:
-    
+
     -   Click **Copy codes** to copy the codes.
     -   Click **Download as .txt file** to save them locally.
-    
+
     ![Backup codes copy or download options after reset](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt308339c7ed7aaab8/6971df6cbe59f0f3b7d6f14c/ResetMFA_6.png)
 8.  Click **Done** after copying or downloading your backup codes.
 

@@ -2,6 +2,7 @@
 title: "Contentstack Authentication for Environments"
 description: "Learn how to restrict access to your Launch environments to your Contentstack Organization members using the Contentstack Authentication feature in Contentstack Launch."
 url: /launch/contentstack-authentication
+uid: bltbb5fc5e7cf487cdd
 ---
 
 # Contentstack Authentication for Environments
@@ -23,13 +24,13 @@ Use this guide to configure Contentstack Authentication at project creation, env
 ## What You Will Learn
 
 -   How to enable or disable Contentstack Authentication during project creation.
-    
+
 -   How to enable or disable it during environment creation.
-    
+
 -   How to enable or disable it from Environment Settings.
-    
+
 -   How Contentstack Authentication compares to and combines with Password Protection.
-    
+
 
 ## Configure Contentstack Authentication
 

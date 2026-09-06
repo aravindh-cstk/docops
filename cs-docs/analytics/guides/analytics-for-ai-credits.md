@@ -2,6 +2,7 @@
 title: "Analytics for AI Credits"
 description: "Monitor AI credit usage, track monthly allocation, analyze product-wise trends, and manage credit utilization with the AI Credits analytics dashboard."
 url: /analytics/analytics-for-ai-credits
+uid: blt3a397233ee523e16
 ---
 
 # Analytics for AI Credits
@@ -13,17 +14,17 @@ The AI Credits analytics dashboard provides visibility into your organization’
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login/)
-    
+
 -   Organization [Owner or Admin](/docs/administration/about-administration-roles) permissions
 
 ## What You Will Learn
 
 -   How to access the AI Credits analytics dashboard.
-    
+
 -   How to read monthly credit allocation and usage metrics.
-    
+
 -   How to interpret product-level credit consumption in the Credits by Product table.
-    
+
 
 ## Access the AI Credits Analytics Dashboard
 
@@ -31,9 +32,9 @@ To access the analytics dashboard, log in to your [Contentstack account](https:/
 
 1.  Navigate to **Analytics** from the “App Switcher” icon.![Analytics option in the App Switcher](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am553a6c0474b37029/b154e92a77142bfecb54a5c0/App-Switcher-Analytics.png?locale=en-us)
 2.  By default, the **CMS** analytics dashboard appears. Click **AI Credits** to switch dashboards.![AI Credits analytics dashboard](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am3649ea334331fb15/4ef5b77bcf42ab6b28cd4a96/Analytics-For-AI-Credits.png?locale=en-us)
-    
+
     **Note:** All credit balances reset on the **1st of every month**.
-    
+
 
 ## AI Credits Analytics Dashboard Sections
 

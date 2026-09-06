@@ -2,6 +2,7 @@
 title: "Edge URL Rewrites"
 description: "Learn how to create and set CDN edge URL rewrite rules for your projects in Contentstack Launch."
 url: /launch/edge-url-rewrites
+uid: blt54541d4dbcda9411
 ---
 
 # Edge URL Rewrites
@@ -29,12 +30,12 @@ This step-by-step guide will help you create a project in Launch that configures
 2.  [Deploy your project in Launch](#deploy-your-project-in-launch)
 
 1.  ### Create the launch.json File
-    
+
     Follow the steps to create the launch.json file for URL rewrites:
-    
+
     1.  Open your source code folder.
     2.  Create a JSON file named launch.json inside the folder, and paste the following code into it:
-        
+
         ```
         {
           "rewrites": [
@@ -55,26 +56,26 @@ This step-by-step guide will help you create a project in Launch that configures
           ]
         }
         ```
-        
+
     3.  Replace /source in the code with your source route.
     4.  Replace /destination in the code with your destination route.
-        
+
         **Note:** The source and destination URLs must not exceed **512** characters each.
-        
+
         You can use the headers field in the request object to set custom headers before the call is made to the destination. The request field is optional, and you can skip it if setting custom headers is not required.
-        
+
         You can also use the headers field in the response object to set custom headers before the response is sent back to the client. The response from the destination is modified to add these headers, and any existing headers with the same key would be overridden. The response field is optional, and you can skip it if setting custom headers is not required.
-        
+
     5.  Save the launch.json file.
-        
+
         **Note:** The **file size** must be limited to **5MB**. To optimize performance and minimize latency during processing, use regular expressions to keep the configuration compact and efficient.
-        
-    
+
+
     #### Examples for the uses of Edge URL Rewrites
-    
+
     -   Use path variables to rewrite hard-to-read URLs and turn them into human and search engine friendly URLs:  
         **Example:**
-        
+
         ```
         {
           "rewrites": [
@@ -85,12 +86,12 @@ This step-by-step guide will help you create a project in Launch that configures
           ]
         }
         ```
-        
+
         In the above example, two path variables are declared in the source URL: slug and postId. In the destination, we re-use the postId variable to construct the URL while the slug is discarded. This allows us to rewrite a hard-to-read URL from a legacy system to a much more SEO-friendly URL like /blog/go-composable/2160.
-        
+
     -   Path variables can also be captured with a regular expression. A regular expression allows you to pattern match on any given text, including URLs. The resulting path variable captures a part of the URL that matches the regular expression and can then be re-used to construct the destination URL.  
         **Example:**
-        
+
         ```
         {
           "rewrites": [
@@ -106,12 +107,12 @@ This step-by-step guide will help you create a project in Launch that configures
           ]
         }
         ```
-        
+
         In the above example, we match two categories of asset requests coming to the website, namely, products and storefront, using a regular expression. If the categories match, we proxy the request to a completely different host, which manages assets for these categories. The asset path from the source URL is also used to construct the destination URL. Finally, we also set the x-robots-tag header on the response to prevent search engines from indexing assets.
-        
+
     -   The Edge URL Rewrite feature is handy when migrating from a different host to Launch. It allows you to migrate incrementally, page by page, reducing the risk that comes with a big-bang migration.  
         **Example:**
-        
+
         ```
         {
           "rewrites": [
@@ -127,14 +128,14 @@ This step-by-step guide will help you create a project in Launch that configures
           ]
         }
         ```
-        
+
         In the above example, we're allowing Launch to serve the homepage, /blogs, /docs, and /about-us while proxying traffic from all other pages to the legacy host.
-        
+
         Note how we've used the negative look-ahead regular expression to achieve this. At the same time, we've secured access to the legacy host by setting an API key header to the requests, ensuring that the legacy host URL only serves content from Launch.
-        
+
     -   A convenient use case for Edge URL Rewrites is to set security headers for all requests to the website.  
         **Example:**
-        
+
         ```
         {
           "rewrites": [
@@ -155,20 +156,20 @@ This step-by-step guide will help you create a project in Launch that configures
           ]
         }
         ```
-        
+
         Here, we have used the headers field in the response object to set security headers for all requests to the website. Since multiple rewrites could be added to the rewrites array, it is recommended to have this rewrite as the last one in the array.
-        
+
         This is because rewrites are evaluated in sequence, and this catch-all rewrite could match all requests and prevent other rewrites from executing.
-        
-    
+
+
     **Note:** When you forward or rewrite a request to the origin server from the Launch Edge URL Rewrites or the [Launch Edge Function](/docs/launch/edge-functions), the same request will not re-invoke the Launch Edge Function. Instead, it will be directly forwarded to the origin server through a cache layer.
-    
+
 2.  ### Deploy your Project in Launch
-    
+
     Deploy your project in Launch by [importing the source code from GitHub](/docs/launch/import-project-using-github/) or [uploading the source code folder](/docs/launch/import-project-using-file-upload/).
-    
+
     After successful deployment, the Logs section displays the count of rewrites as follows:
-    
+
     ![Launch_V2_EdgeURLRewrites.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7d26d8dab8e77b71/6604fad5aabcc908772f5ba2/Launch_V2_EdgeURLRewrites.png)
 
 ## Limitations

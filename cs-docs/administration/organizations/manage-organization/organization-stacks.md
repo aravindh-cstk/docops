@@ -2,6 +2,7 @@
 title: "Organization Stacks"
 description: "Learn how to manage and delete stacks in Contentstack. Discover detailed steps for organization administrators and stack owners."
 url: /administration/organization-stacks
+uid: bltd6831aed4d5b6d2a
 ---
 
 # Organization Stacks
@@ -18,11 +19,11 @@ The **Stacks** tab of the [Organization Settings](/docs/administration/organizat
 ## What You Will Learn
 
 -   How to view the list of stacks in an organization.
-    
+
 -   How to delete a stack as an Organization Owner.
-    
+
 -   How to delete a stack as a Stack creator/owner.
-    
+
 
 ## View Stacks in Organization
 
@@ -57,9 +58,9 @@ To delete a stack through the **Settings** page, perform the following steps:
 1.  Log in to your [Contentstack account](https://www.contentstack.com/login).
 2.  Select the Organization from the dropdown on the header, and click on the “Org Admin” icon on the left navigation panel.
 3.  Select the **Stacks** settings option, and click on the ellipses under the **Actions** column.
-    
+
     **Note:** Only Organization Owner can delete a stack from the Org Admin settings.
-    
+
     ![Delete a stack from the Actions column in Org Admin settings](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6babce2d4d98e620/66795d8a99587f682df4df97/Delete_Stack_via_Org_Admin_(1).png)
 4.  Confirm the **Delete** action.
 

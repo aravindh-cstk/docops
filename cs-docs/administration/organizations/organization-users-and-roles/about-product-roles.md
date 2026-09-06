@@ -2,6 +2,7 @@
 title: "About Product Roles"
 description: "Discover how Contentstack's product roles streamline access control in CMS, Assets, and Administration, with customizable and default options."
 url: /administration/about-product-roles
+uid: blte3297b8e80d891c0
 ---
 
 # About Product Roles

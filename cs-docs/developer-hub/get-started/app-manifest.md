@@ -2,6 +2,7 @@
 title: "Marketplace App Manifest"
 description: "Discover the essential properties of an App Manifest file, including name, type, description, icon, target type, framework version, and version."
 url: /developer-hub/app-manifest
+uid: blt154bec0a078ac59f
 ---
 
 # Marketplace App Manifest
@@ -246,9 +247,9 @@ Properties that can be specified for a webhook:
 -   enabled _(_required_)_: Allows you to define whether the webhook is active after the app installation. Users can view execution logs of the webhook post-installation by accessing the Webhook tab on the configuration screen.
 -   target\_url _(required)_: This URL will receive a notification when the webhook is triggered. Only HTTPS endpoints are allowed, and localhost is not supported. To secure the target\_url with basic authorization, provide the necessary details in the http\_basic\_auth and http\_basic\_password fields. You can also provide _custom\_headers_ to further secure the URL.
 -   channels (_required)_: Channels describe the list of all events for which the webhook is subscribed. Below is a complete list of all events supported by the Contentstack App Framework:  
-    
+
     <table><tbody><tr><td><strong>Method</strong></td><td><strong>Description</strong></td></tr><tr><td>cs.apps.installations.install</td><td>App installed</td></tr><tr><td>cs.apps.installations.uninstall</td><td>App uninstalled</td></tr><tr><td>cs.apps.installations.update</td><td>App installation updated</td></tr><tr><td>cs.apps.installations.upgrade</td><td>App version updated</td></tr><tr><td>content_types.entries.create</td><td>Any entry is created</td></tr><tr><td>content_types.entries.update</td><td>Any entry is updated</td></tr><tr><td>content_types.entries.delete</td><td>Any entry is deleted</td></tr><tr><td>content_types.entries.environments.publish.success</td><td>An entry is successfully published in any environment</td></tr><tr><td>content_types.entries.environments.unpublish.success</td><td>An entry is successfully unpublished from any environment</td></tr><tr><td>content_types.create</td><td>New content type is created</td></tr><tr><td>content_types.update</td><td>Any content type is updated</td></tr><tr><td>content_types.delete</td><td>Any content type is deleted</td></tr><tr><td>assets.create</td><td>New asset is created</td></tr><tr><td>assets.environments.publish.success</td><td>An asset is successfully published in any environment</td></tr><tr><td>assets.update</td><td>Any asset is updated</td></tr><tr><td>assets.delete</td><td>Any asset is deleted</td></tr><tr><td>assets.environments.unpublish.success</td><td>An asset is successfully unpublished from any environment</td></tr><tr><td>global_fields.create</td><td>New global field is created</td></tr><tr><td>global_fields.update</td><td>Any global field is updated</td></tr><tr><td>global_fields.delete</td><td>Any global field is deleted</td></tr><tr><td>releases.environments.deploy</td><td>Any release deployed on all environments</td></tr><tr><td>branch.create-initiated</td><td>When branch creation is initiated</td></tr><tr><td>branch.create-completed</td><td>When branch creation is completed</td></tr><tr><td>branch.delete-initiated</td><td>When the branch deletion is initiated</td></tr><tr><td>branch.delete-completed</td><td>When the branch deletion is completed</td></tr><tr><td>branch_alias.assigned</td><td>When the branch alias is assigned</td></tr><tr><td>branch_alias.unassigned</td><td>When the branch alias is unassigned</td></tr></tbody></table>
-    
+
 -   notifiers _(optional)_: Notifiers specify the list of email addresses to notify whenever the [Circuit Breaker](/docs/headless-cms/webhook-circuit-breaker) disables the webhook. By default, the creator of the app and the user who installs it will receive notifications. However, for additional users to receive alerts, configuration is necessary. Contentstack sends the email alert to the specified user(s).
 
 **Code:**

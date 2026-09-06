@@ -2,6 +2,7 @@
 title: "Cloud Regions and Hyperscalers"
 description: "Learn how Contentstack uses cloud regions and hyperscalers, how regional data boundaries work, and which services operate globally for performance."
 url: /headless-cms/cloud-regions-and-hyperscalers
+uid: blta1ffe3585e783ca2
 ---
 
 # Cloud Regions and Hyperscalers
@@ -16,18 +17,18 @@ This guide explains how Contentstack is deployed across cloud providers and regi
 ## Architecture Diagrams
 
 -   ### Hyperscalers and Regions
-    
+
     Contentstack currently operates across seven regions on three hyperscalers. Each hyperscaler and region combination is a separate, isolated deployment rather than a logical partition of shared infrastructure.
-    
+
     The regions available to your organization depend on the selected hyperscaler. Not every hyperscaler supports the same regional footprint.
-    
+
     ![Hyperscalers and Regions](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/amb2c0506febc2f683/42a0d4ceb9fa9d7e2d3bcec9/Hyperscalers_and_Regions.png?locale=en-us)
 -   ### Inside a Region
-    
+
     The same deployment model is used independently in every Contentstack region.
-    
+
     This diagram illustrates the regional boundary, showing which services operate within the region and which services operate globally to optimize request routing and performance.
-    
+
     ![Regional Cloud Boundary](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am817b12419dcb3a9c/546d615310f7b1cfd969e684/Regional_Cloud_Boundary.png?locale=en-us)
 
 ## Architecture Overview

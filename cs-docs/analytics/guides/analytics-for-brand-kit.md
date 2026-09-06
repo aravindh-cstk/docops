@@ -2,6 +2,7 @@
 title: "Analytics for Brand Kit"
 description: "Track Brand Kit usage with Contentstack's Analytics dashboard. Monitor Brand Kits, Voice Profiles, AI requests, and more."
 url: /analytics/analytics-for-brand-kit
+uid: bltc1b5faa9c548a9f2
 ---
 
 # Analytics for Brand Kit
@@ -18,22 +19,22 @@ The Brand Kit Analytics dashboard gives organization Owners and Admins a central
 ## What You Will Learn
 
 -   How to navigate to the Brand Kit Analytics dashboard.
-    
+
 -   What each dashboard section measures and how to interpret it.
-    
+
 -   How to apply filters to narrow dashboard data by Brand Kit and Voice Profile.
-    
+
 -   How to save a filter combination as a reusable view.
-    
+
 
 ## Access the Brand Kit Analytics Dashboard
 
 To access the Analytics dashboard, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 
 1.  Navigate to **Analytics** through the "App Switcher".
-    
+
 2.  By default, the **CMS** analytics dashboard appears. Click **Brand Kit** to switch to the Brand Kit dashboard.
-    
+
     ![Selecting the Brand Kit dashboard in Analytics](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/amb24ebe65a3b84f59/f2827f38f89a9435371b4f06/Analytics_Brandkit_NewSelect.png?locale=en-us)
 
 **Note:** Data in the Brand Kit dashboard is updated every **24 hours**.
@@ -47,13 +48,13 @@ The dashboard is divided into several sections, each providing valuable insights
 This section shows organization-level consumption totals for the current subscription period. The following metrics are displayed:
 
 -   **Brand Kit:** The number of Brand Kits created within your organization.
-    
+
 -   **Voice Profile:** The total number of Voice Profiles configured.
-    
+
 -   **Knowledge Vault:** The number of items stored in the Knowledge Vault.
-    
+
 -   **Tokens:** The number of tokens consumed for GenAI requests.
-    
+
 
 **Note:** Token usage includes only requests sent to a Brand Kit's custom large language model (LLM). Requests that use the default Contentstack LLM (when no Brand Kit is selected) are not counted in the Tokens metric.
 
@@ -64,13 +65,13 @@ This section shows organization-level consumption totals for the current subscri
 This section breaks down resource consumption per individual Brand Kit. The following details appear for each Brand Kit:
 
 -   **Brand Kit Name:** The name of the Brand Kit.
-    
+
 -   **Voice Profiles:** The number of Voice Profiles associated with the Brand Kit.
-    
+
 -   **Knowledge Vaults:** The number of items stored in the Knowledge Vault for the Brand Kit.
-    
+
 -   **Tokens Used:** The number of tokens the Brand Kit consumed for GenAI requests.
-    
+
 
 This data lets you compare resource consumption across Brand Kits and identify which kits are driving the most activity.
 
@@ -131,24 +132,24 @@ To filter dashboard data, click **Filters**, select your options, and then click
 The following filters are available:
 
 -   **Brand Kits:** View metrics for a specific Brand Kit or for all Brand Kits together.
-    
+
 -   **Voice Profiles:** View metrics for a specific Voice Profile or for all Voice Profiles together.
-    
+
 -   **Stacks:** View AI Assistant metrics for a specific stack or for all stacks together.
-    
+
 -   **Status Code:** Filter by specific response codes.  
     ![Status Code filter options](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb02ef53c11c9c3e4/6894b5b678cbdc7926fb9372/16._filter_status_code.png)
-    
+
 -   **Group By:** View data grouped by day, week, or month.  
     ![Selecting the Group By filter](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt930cf41767768ce9/6894b87ec841e057f783991e/2-group-by-date_(2).gif)
-    
+
 -   **Date Range:** Choose from 1 week, 30 days (default), 60 days, or 90 days. Some charts include a timeline selector for further refinement.
-    
+
 -   **Custom Date:** Set a specific date range using the dropdown.  
     ![Setting a custom date range](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta8bee3e68d7da22c/6894b8f310270bd24e55985f/2-set-custom-date_(2).gif)
-    
+
     **Note:** The custom date range cannot exceed **90 days**.
-    
+
 
 To save a filter combination for later use, click the horizontal ellipsis (**...**) next to **Reset** and select **Save As New View**.
 

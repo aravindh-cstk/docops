@@ -2,6 +2,7 @@
 title: "Experience Tags"
 description: "Learn how to use Experience Tags in Contentstack Personalize to organize experiences in the UI and filter them at runtime."
 url: /personalize/experience-tags
+uid: blte738bb78932c9971
 ---
 
 # Experience Tags
@@ -49,7 +50,7 @@ The **Tags** column on the Experiences list page displays all tags currently app
     -   The experiences list updates to show only experiences that carry **at least one** of the selected tags (OR logic).
     -   You can combine the tag filter with the existing **Status** and **Type** column filters. An experience must satisfy all active filters to appear in the results.  
         ![Experience_tags_New_filter.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/amf9f2ef711ede7d80/22009a8ffb2e02a54fe63194/Experience_tags_New_filter.png?locale=en-us)  
-        
+
     -   To clear the tag filter, click the filter icon again and click **Clear All**, then **Apply**.
 
 **Note:** The tag filter only affects what is displayed in the management UI. Runtime delivery filtering is controlled separately via the Edge API and SDK.

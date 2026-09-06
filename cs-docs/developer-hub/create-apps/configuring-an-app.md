@@ -2,6 +2,7 @@
 title: "Configuring an App"
 description: "Learn how to configure an app in Contentstack's Developer Hub with step-by-step instructions."
 url: /developer-hub/configuring-an-app
+uid: bltbade96a07915e3c5
 ---
 
 # Configuring an App
@@ -19,11 +20,11 @@ This page uses the Algolia app as an example.
 ## What You Will Learn
 
 -   How to provide configuration details for an installed app.
-    
+
 -   How to save an app's configuration.
-    
+
 -   How to uninstall an app from the configuration screen.
-    
+
 
 ## Configure the app
 

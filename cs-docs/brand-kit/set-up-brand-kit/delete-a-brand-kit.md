@@ -2,6 +2,7 @@
 title: "Delete a Brand Kit"
 description: "Delete your Brand Kit and associated Voice profiles within Contentstack by following our step-by-step guide."
 url: /brand-kit/delete-a-brand-kit
+uid: blt441c0f5c2c7efc36
 ---
 
 # Delete a Brand Kit
@@ -14,9 +15,9 @@ In this guide, we will discuss the steps required to delete a Brand Kit.
 
 -   [Contentstack account](https://www.contentstack.com/login/)
 -   Brand Kit-enabled Organization with [Owner or Admin](/docs/administration/about-administration-roles) permissions
-    
+
     **Note:** Organization **Owner** and **Admin** can delete Brand Kits, whereas Organization **Member** can view the associated Brand Kits.
-    
+
 -   An existing [Brand Kit](/docs/brand-kit/create-a-brand-kit)
 
 ## Steps for Execution

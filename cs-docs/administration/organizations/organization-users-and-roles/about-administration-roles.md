@@ -2,6 +2,7 @@
 title: "About Administration Roles"
 description: "Discover Contentstack's role-based access control system, offering precise governance with Administration and product roles for streamlined management."
 url: /administration/about-administration-roles
+uid: blt731e417132ac6504
 ---
 
 # About Administration Roles

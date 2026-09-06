@@ -2,6 +2,7 @@
 title: "Manage a Personalize Project"
 description: "Learn how to manage and navigate a Personalize project, including settings, users, stack connections, and project deletion."
 url: /personalize/manage-personalize-project
+uid: blt6ec205aba61eb12e
 ---
 
 # Manage a Personalize Project
@@ -19,15 +20,15 @@ Use this guide to manage an existing Personalize project, navigate project areas
 ## What You Will Learn
 
 -   How to navigate the areas of a Personalize project.
-    
+
 -   How to update project details in Settings.
-    
+
 -   How to connect and disconnect a Contentstack stack.
-    
+
 -   How to view and invite users on a project.
-    
+
 -   Where to find the project deletion flow.
-    
+
 
 ## Project Workspace
 

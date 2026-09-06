@@ -2,6 +2,7 @@
 title: "Repair Git Provider Connection for Projects"
 description: "Troubleshoot and fix Git provider connection issues in Contentstack Launch. Resolve errors and get your projects back on track."
 url: /launch/repair-git-provider-connection-for-projects
+uid: blte0e95185daf8df72
 ---
 
 # Repair Git Provider Connection for Projects
@@ -24,11 +25,11 @@ This guide walks you through the steps to repair a broken Git provider connectio
 ## What You Will Learn
 
 -   How to check the Git connection status for a Launch project.
-    
+
 -   How to repair a broken Git provider connection automatically.
-    
+
 -   How to resolve common Git provider connection errors.
-    
+
 
 ## Steps for Execution
 
@@ -47,18 +48,18 @@ Follow the steps below to repair the Git Provider connection in your project aut
 If you encounter any of the following issues while repairing your Git provider connection, follow the corresponding troubleshooting steps to resolve them:
 
 -   **Please connect to a Git provider OAuth app before proceeding with the repair**
-    
+
     Your Git Provider app is currently uninstalled.
-    
+
     1.  Install the Git Provider Marketplace app.
         1.  Install the Bitbucket Marketplace app by following the steps in the [Create a Project using Bitbucket Cloud](/docs/launch/import-a-project-using-bitbucket-cloud#install-the-bitbucket-cloud-marketplace-app) documentation.
     2.  Retry the **Repair Connection** action.
 -   **Please add the repository to the Git Provider OAuth app before proceeding with the repair**
-    
+
     You are attempting to access a repository that is not accessible. Follow these steps to grant access to the required repository of the Git Provider:
-    
+
     1.  To grant access to a repository to a user in Bitbucket Cloud, follow the steps in the [Grant repository access to users and groups](https://support.atlassian.com/bitbucket-cloud/docs/grant-repository-access-to-users-and-groups/) documentation.
     2.  Retry the **Repair Connection** action.
 -   **Git provider service is temporarily unavailable**
-    
+
     You are attempting to interact with the Git Provider service when it is unavailable due to maintenance, downtime, or network issues. In this case, you may retry after some time. If the issue persists, please contact [support](mailto:support@contentstack.com).

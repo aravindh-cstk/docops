@@ -2,6 +2,7 @@
 title: "Create a Custom Attribute"
 description: "Create custom attributes in Contentstack Personalize to better target and segment your audience. Enhance personalization and improve your marketing campaigns."
 url: /personalize/create-custom-attribute
+uid: blt61853f78a5c750c8
 ---
 
 # Create a Custom Attribute
@@ -15,18 +16,18 @@ Custom attributes in Contentstack Personalize empower you to fine-tune your audi
 -   [Contentstack account](https://www.contentstack.com/login)
 -   Personalize-enabled Organization with [permissions](/docs/administration/about-administration-roles)
 -   Access to Personalize project
-    
+
     **Note:** We assumed that you have already created a Personalize project. If not, follow [this guide](/docs/personalize/create-personalize-project) to create a project in Personalize.
-    
+
 
 ## What You Will Learn
 
 -   How to create a custom attribute in a Personalize project.
-    
+
 -   How to set a name, key, and optional description for the attribute.
-    
+
 -   Who can create, edit, and delete custom attributes.
-    
+
 
 ## Steps for Execution
 

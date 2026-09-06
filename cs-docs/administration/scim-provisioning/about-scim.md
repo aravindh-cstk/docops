@@ -2,6 +2,7 @@
 title: "About SCIM"
 description: "About SCIM"
 url: /administration/about-scim
+uid: blt470f1424beb96b10
 ---
 
 # About SCIM

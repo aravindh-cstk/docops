@@ -2,6 +2,7 @@
 title: "Secure Public URLs of Assets"
 description: "Secure your Contentstack assets with URL protection, ensuring safe, authenticated access to prevent unauthorized content retrieval. Enable today for added security."
 url: /administration/secure-public-urls-of-assets
+uid: blt36478587a5c2ca7d
 ---
 
 # Secure Public URLs of Assets
@@ -13,13 +14,13 @@ Contentstack provides asset URL security, allowing teams to protect content by r
 ## What You Will Learn
 
 -   How to access secured published assets with a delivery token and environment.
-    
+
 -   How secure asset URLs affect rich text fields and the Image Delivery API.
-    
+
 -   How to access draft assets with an Authtoken or Management Token.
-    
+
 -   How to enable secure asset URLs for your stack.
-    
+
 
 ## How To Access Secured Published Assets
 
@@ -37,9 +38,9 @@ Example URLs:
 When secure asset URLs are enabled, the following limitations apply:
 
 -   **Rich Text Fields (RTE, JSON RTE, and Markdown):** Once asset privatization is enabled, these fields would no longer support asset or image insertion using the standard file picker. As a workaround, to include a secured asset, manually append the required authentication parameters to the URL.
-    
+
     **Warning:** Manually appending the asset URL is not recommended for rich text fields due to maintainability and potential security exposure.
-    
+
 -   **Image Delivery API Limitations:** The [overlay](/docs/developers/apis/image-delivery-api#overlay) transformation parameter does not function with secured assets.
 
 ## How To Access Draft Assets

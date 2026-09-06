@@ -2,6 +2,7 @@
 title: "Machine to Machine Apps"
 description: "Learn about Machine-to-Machine (M2M) Apps in Contentstack for secure server-to-server communication and task automation."
 url: /developer-hub/machine-to-machine-apps
+uid: blt6cf8617fc43004ba
 ---
 
 # Machine to Machine Apps

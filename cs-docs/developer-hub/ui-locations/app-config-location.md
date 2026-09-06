@@ -2,6 +2,7 @@
 title: "App Config Location"
 description: "Manage app settings in the App Configuration Location for easy, secure access across all installations."
 url: /developer-hub/app-config-location
+uid: bltd30819d11fa9e470
 ---
 
 # App Config Location
@@ -22,11 +23,11 @@ Setting up an app configuration page allows you to store all the config settings
 ## What You Will Learn
 
 -   The difference between the App Config and Server Config configuration types.
-    
+
 -   Best practices for building an app config page.
-    
+
 -   How to add an App Config location to your app through the Developer Hub console.
-    
+
 
 ## Types of configurations
 
@@ -34,16 +35,16 @@ There are two types of configurations that Contentstack supports:
 
 1.  **App Config:**  
     The app config type of configuration is a public configuration that you can share with all locations. You can view these configurations in your API response.
-    
+
     **Note:** It is recommended not to store any sensitive data in the app config as anyone can access it via the APIs.
-    
+
 2.  **Server Config:**  
     The server config contains sensitive configurations of your app. It is directly shared with the backend server.
-    
+
     Suppose you register a webhook to capture app installation update events. After the installation is updated, the information is directly sent to the backend apps via the [webhook](/docs/developer-hub/managing-webhooks-in-an-app/).
-    
+
     **Note:** It is recommended to use server config for configurations that should be kept private and can be accessed only by the admins.
-    
+
 
 ## Best Practices for Building an App Config Page
 
@@ -59,7 +60,7 @@ Let's see how to add app config location to your app:
 
 -   **Via the Developer Hub Console:**  
     To add the app config location to your app via the Developer Hub console, login to your [Contentstack Account](https://www.contentstack.com/login) and follow the steps given below:
-    
+
     1.  Navigate to **App Switcher** on the top-right corner and select **Developer Hub**.
     2.  Select the application for which you want to set up the configuration page.
     3.  Click the **UI Locations** tab. To set the **App URL**, click the **View Hosting** link. You will be redirected to the **Hosting** tab.  
@@ -70,26 +71,26 @@ Let's see how to add app config location to your app:
     6.  Hover over the **App Configuration** location, and click the **\+ Add UI Location** button.  
         ![Add_App_Config_Location.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7acdbaa7d6872ded/683439903291d22df86485d0/Add_App_Config_Location.png)
     7.  On the resulting **Configuration** page, set up the configurations for your application by providing details such as **Path**, and **Description**. You can also enable the configuration using the **Enabled** toggle button.
-        
+
         Properties that can be specified for this UI location:
-        
+
         -   **Signed (optional)**: When enabled, Contentstack adds a JWT token to the initial HTTP request made for your app's first page. This token can be used to verify that the request originated from Contentstack. For more information, please refer to [Signed Locations](/docs/developer-hub/securing-your-app/).
         -   **Path (optional)**: Enables you to define the location relative to the base URL where the app is hosted. This is particularly useful when the developer intends the app to appear in multiple locations.
         -   **Enabled (optional)**: Determines whether the location is visible after the app installation. If not specified, the location is enabled by default. Users can manage this option post-installation via the UI Locations tab on the app’s configuration screen.
-        
+
         You can configure any UI location as **mandatory** using the **Required** toggle. If the toggle is enabled, the location becomes mandatory and cannot be disabled. Whereas, if the toggle is disabled, the UI location is available to use but not mandatory.
-        
+
         **Additional Resource:** Refer to the [Marketplace App Manifest](/docs/developer-hub/app-manifest) documentation for comprehensive details.
-        
+
         ![App_Configuration.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta4a6392be4f17457/68343990cf52ee31ccaed0a2/App_Configuration.png)
     8.  Finally, click the **Save** button to save the configuration details.
-        
+
         You will see the details of the configured UI location on the **UI Locations** tab in the **App Configuration** screen after installing the app.
-        
+
         You can enable or disable the non-required UI locations.
-        
+
         Apps which have the App Config location configured will be visible in the configuration screen.
-        
+
         ![App_Configuration.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf072c893d5b40b29/65b68b97fd23e559e67d971a/App_Configuration.png)
 
 **Note:** Each app can have only **one** app config location.

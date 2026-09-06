@@ -2,6 +2,7 @@
 title: "Analytics for Assets"
 description: "Gain insights into asset storage, API usage, bandwidth, cache performance, and AI-enabled assets with the Contentstack Assets Analytics dashboard."
 url: /analytics/analytics-for-assets
+uid: blt0c119733d1aa6249
 ---
 
 # Analytics for Assets
@@ -18,11 +19,11 @@ The Analytics dashboard for Assets provides detailed insights into asset usage, 
 ## What You Will Learn
 
 -   How to navigate to the Assets Analytics dashboard.
-    
+
 -   What each dashboard section measures and how to interpret it.
-    
+
 -   How to apply filters and save custom views for later use.
-    
+
 
 ## Access the Assets Analytics Dashboard
 
@@ -116,19 +117,19 @@ To filter dashboard data, click **Filters**, select your desired options, and th
 The following filters are available:
 
 -   **Spaces:** View data for a specific space or all spaces.
-    
+
 -   **Asset Category:** Filter data by asset category.
-    
+
 -   **Status Code:** Filter data by specific API response codes.
-    
+
 -   **Cache:** Filter by cached responses (All, HIT, or MISS).
-    
+
 -   **Group By:** View data grouped by day, week, or month, depending on the selected section.
-    
+
 -   **Date Range:** Choose from **1 week**, **30 days** (default), **60 days**, or **90 days**. Some charts include a timeline selector for further refinement.
-    
+
 -   **Zoom:** Switch between **1w**, **30d**, **60d**, or **90d** for trend analysis within a chart.
-    
+
 
 To save a specific filter configuration for later use, click the horizontal ellipsis (**...**) beside **Reset** and choose **Save As New View**.
 

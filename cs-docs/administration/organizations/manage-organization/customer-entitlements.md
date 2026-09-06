@@ -2,6 +2,7 @@
 title: "Customer Entitlements"
 description: "Customer Entitlements in Contentstack allows the owners and Admins to know the user and usage information."
 url: /administration/customer-entitlements
+uid: blt318a5d661ece8441
 ---
 
 # Customer Entitlements
@@ -18,13 +19,13 @@ The Organization Settings page shows information about the number of users, usag
 ## What You Will Learn
 
 -   How to view the total user limit for your organization.
-    
+
 -   How to remove inactive users from the organization.
-    
+
 -   How to view usage by stacks, bandwidth, API requests, and top URLs.
-    
+
 -   How to filter usage analytics data.
-    
+
 
 ## Users
 

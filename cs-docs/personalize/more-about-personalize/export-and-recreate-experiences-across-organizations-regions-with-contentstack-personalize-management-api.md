@@ -2,6 +2,7 @@
 title: "Export and Recreate Experiences Across Organizations or Regions with Contentstack Personalize Management API"
 description: "Easily export, duplicate, and manage personalization experiences across environments using Contentstack’s Personalize Management API."
 url: /personalize/export-and-recreate-experiences-across-organizations-regions-with-contentstack-personalize-management-api
+uid: bltc2bb9d06de2a671b
 ---
 
 # Export and Recreate Experiences Across Organizations or Regions with Contentstack Personalize Management API
@@ -19,13 +20,13 @@ This guide provides a technical overview and step-by-step instructions to progra
 ## What You Will Learn
 
 -   Which project components you can recreate with the Personalize Management API.
-    
+
 -   How to extract attributes, audiences, events, and experiences from a source project.
-    
+
 -   How to recreate and activate them in a destination project.
-    
+
 -   How to verify and monitor the migration.
-    
+
 
 ## Prerequisites
 
@@ -64,15 +65,15 @@ The key endpoint for this process is **GET /experiences/{exp\_uid}/versions,** w
 
 1.  Send the following API requests to export attributes, audiences, and events:  
     **Request:**
-    
+
     ```
     GET /personalize/projects/{source_project_uid}/attributes
     GET /personalize/projects/{source_project_uid}/audiences
     GET /personalize/projects/{source_project_uid}/events
     ```
-    
+
     **Response Example (Attributes):**
-    
+
     ```
     [
       { 
@@ -87,9 +88,9 @@ The key endpoint for this process is **GET /experiences/{exp\_uid}/versions,** w
     }
     ]
     ```
-    
+
     **Response Example (Audiences):**
-    
+
     ```
     [
       { 
@@ -102,9 +103,9 @@ The key endpoint for this process is **GET /experiences/{exp\_uid}/versions,** w
     }
     ]
     ```
-    
+
     **Response Example (Events):**
-    
+
     ```
     [
       { 
@@ -119,9 +120,9 @@ The key endpoint for this process is **GET /experiences/{exp\_uid}/versions,** w
     }
     ]
     ```
-    
+
     **Note:** These examples do not show the complete API responses. To view detailed response structures, refer to the [Personalize Management API documentation](https://www.contentstack.com/docs/developers/apis/personalize-management-api).
-    
+
 2.  Save all three responses as **JSON files** for reuse when recreating these components in the destination project.
 
 ### Recreate Attributes, Audiences, and Events in the Destination Project
@@ -171,23 +172,23 @@ POST /personalize/projects/{destination_project_uid}/events
 ### Export Experience Metadata from the Source Project
 
 1.  Use the following end point to retrieve all experiences:
-    
+
     -   GET /experiences
-    
+
     **Request Example:**
-    
+
     ```
     GET /personalize/projects/{source_project_uid}/experiences
     ```
-    
+
     **Response Example:**
-    
+
     ```
     [
       { "uid": "exp_01", "name": "Homepage Banner Test", "type": "AB_TEST" }
     ]
     ```
-    
+
 2.  Record each experience’s uid, name, type, and description for rebuilding in the destination project.
 
 ### Create Experiences in the Destination Project
@@ -259,15 +260,15 @@ Capture all variant definitions, audience mappings, and targeting conditions for
 ### Create Experience Versions (with Variants) in the Destination Project
 
 1.  Use the following endpoint to create Experience versions:
-    
+
     -   POST /experiences/{experience\_uid}/versions
-    
+
     Map all **audience UIDs**, **content UIDs**, and **asset references** from the source project to the corresponding resources in the destination project.
-    
+
     **Note:** Variant and audience IDs **differ** between projects. Verify **all mappings** to prevent broken references.
-    
+
     **Request Example:**
-    
+
     ```
     POST {BASE_URL}/experiences/{experience_uid}/versions
     {
@@ -288,25 +289,25 @@ Capture all variant definitions, audience mappings, and targeting conditions for
       ]
     }
     ```
-    
+
 
 ### Activate the New Experience Versions
 
 1.  Once created, activate the new experience versions using the following endpoint:
-    
+
     -   PUT /personalize/projects/{destination\_project\_uid}/experiences/{experience\_uid}/versions/{version\_uid}
-    
+
     **Request Example:**
-    
+
     ```
     PUT {BASE_URL}/experiences/{experience_uid}/versions/{version_uid}
     {
       "status": "ACTIVE"
     }
     ```
-    
+
     **Additional Resource:** For more information, refer to [Update an Experience Version](https://www.contentstack.com/docs/developers/apis/personalize-management-api/experiences#update-an-experience-version) documentation.
-    
+
 2.  Confirm that all experiences and variants are active and visible in the destination project.
 
 ### Verify and Monitor the Migration

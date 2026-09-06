@@ -2,6 +2,7 @@
 title: "Create a Brand Kit"
 description: "Create and set up your Brand Kit with this step-by-step guide."
 url: /brand-kit/create-a-brand-kit
+uid: blt548f26f52d400206
 ---
 
 # Create a Brand Kit
@@ -22,9 +23,9 @@ To create a Brand Kit, log in to your [Contentstack account](https://www.content
 1.  Navigate to App Switcher in the top-right corner and select **Brand Kit**.
 2.  You will be directed to the Brand Kits landing page where you will find your previously created Brand Kits. To create a new one, click the **\+ New Brand Kit** button.
 3.  In the **Create Brand Kit** modal, enter the **Brand Kit Name** and **Description** (optional). Then, **Select Stack(s)** from the dropdown and click **Create Brand Kit**.![3-Create-Brand-Kit](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta2b1aa20ca843f52/665640d0e4a73285f497789f/3-Create-Brand-Kit.png)
-    
+
     This creates your Brand Kit, and it now appears on the Brand Kits landing page or the dashboard.
-    
+
 
 **Note**:
 

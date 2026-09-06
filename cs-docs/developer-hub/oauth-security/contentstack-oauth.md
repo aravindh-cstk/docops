@@ -2,6 +2,7 @@
 title: "Contentstack OAuth"
 description: "Implement secure OAuth 2.0 authentication with Contentstack for controlled API access and seamless integration."
 url: /developer-hub/contentstack-oauth
+uid: blt3979a36afdcf08f9
 ---
 
 # Contentstack OAuth
@@ -18,15 +19,15 @@ Contentstack OAuth uses the OAuth 2.0 protocol that allows external applications
 ## What You Will Learn
 
 -   When to use Contentstack OAuth and how App tokens and User tokens differ.
-    
+
 -   How to integrate and configure OAuth for your app in Developer Hub.
-    
+
 -   How to construct an authorization URL and exchange an authorization code for an access token.
-    
+
 -   How to refresh access tokens and authorize Machine-to-Machine (M2M) apps.
-    
+
 -   How to introspect a token to check its validity and scopes.
-    
+
 
 ## When to use Contentstack OAuth?
 
@@ -112,16 +113,16 @@ To configure OAuth, log in to your Contentstack account and follow the steps bel
     -   **Client ID**: The Client ID identifies your application and frequently appears in the OAuth negotiation URLs. You can freely share client IDs in code and emails, but you cannot use them alone to perform actions on behalf of your app.
     -   **Client Secret**: The Client Secret acts as a secret credential when exchanging tokens with Contentstack. You should not share the client secret keys via emails, distributed native applications, client-side javascript, or public code repositories.
     -   **Redirect URL**: The authorization server directs users to the Redirect URL once they have successfully granted authorization to the app. Maintaining the security of this URL is crucial to avoid redirection to unauthorized locations.  
-          
+
         When configuring the app, developers must register one or more Redirect URLs. Users have the flexibility to configure up to **10** redirect URLs, with the initial one serving as the default. If desired, users can easily alter the default with a simple drag-and-drop method to rearrange the URLs.  
         ![Redirect_URL.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt120eeb7c8e8091ac/659e74de43e8cb506ba4ad61/Redirect_URL.png)
 4.  Add the relevant [app or user token scopes](/docs/developer-hub/oauth-scopes/).
 5.  Click **Save** to save your OAuth configurations.  
-    
+
     **Note:** User permission scopes can be passed dynamically in the Authorization URL while authorizing a user.
-    
+
 6.  Next, you can check out how to add the App and User Token Scopes.
-    
+
 
 ### Add App Token Scopes
 
@@ -140,22 +141,22 @@ To do so, perform the following steps:
 1.  Click the **\+ User Scopes** button.
 2.  From the resulting **Select User Token Scopes** pop-up window, select the permissions you want to set up for your users.![User_Read_Scope.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdf93813987ccda18/65b2880168334a912cc605c0/User_Read_Scope.png)
 3.  Once done, click **Choose Scope(s)**.  
-    
+
     **Additional Resource:** Learn more about the app and user token scopes from the [OAuth Scopes](/docs/developer-hub/oauth-scopes/) document.
-    
+
 
 ## Authorizing Standard App
 
 ![OAuthFlow_2.0.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt349d3dc49fa78fc7/63ea4a7e520e5b22386b8bc0/OAuthFlow_2.0.png)
 
 1.  ### Construct your authorization URL
-    
+
     The following parameters describe the Authorization URL:
-    
+
     -   **BaseURL:** The base URL of Contentstack where your app is installed. This will be different for each Region. Please use the relevant one where the user organization is located.
-        
+
         BaseURL for different regions supported by Contentstack are:
-        
+
         -   North America: https://app.contentstack.com
         -   Europe: https://eu-app.contentstack.com
         -   Azure NA: https://azure-na-app.contentstack.com
@@ -166,87 +167,87 @@ To do so, perform the following steps:
     -   **redirect\_uri**: The redirect URL where Contentstack will send the user.
     -   **scope**: The permission scopes set for your application.  
         The scopes configured in the app are used directly for the App token. Whereas, for the User token, the scopes in the authorization URL should be a subset of the scopes configured in the app.
-        
+
         **Additional Resource:** Refer to the [OAuth Scopes](/docs/developer-hub/oauth-scopes/) document for a list of all the permission scopes for Contentstack OAuth.
-        
+
     -   **state**: The URL where your app is hosted.  
-        
+
         **Note:** You can find the App UID in the basic information section of the app. All query parameters should be URL-encoded.
-        
-    
+
+
     **App Token:**  
-    
+
     ```
     {BASE_URL}/apps/{app_uid}/install
     ```
-    
+
     For instance, for North America (NA) region, the Authorization URL will look something like this:  
-    
+
     ```
     https://app.contentstack.com/apps/627e126bbe975e0*********/install
     ```
-    
+
     **User Token:**  
-    
+
     ```
     {BASE_URL}/apps/{app_uid}/authorize?response_type=code&client_id={client_id}&redirect_uri={redirect_uri}&scope={scope}&state={state}
     ```
-    
+
     For instance, for North America (NA) region, the Authorization URL will look something like this:  
-    
+
     ```
     https://app.contentstack.com/apps/627e126bbe975e0*********/authorize?response_type=code&client_id=428ub0q0w*******&redirect_uri=https://example.com/oauth/callback&scope=user:read
     ```
-    
+
 2.  ### Request for an Authorization Code
-    
+
     Implement the flow described below to obtain an authorization code using App and User token. Once you get the authorization code > exchange it for an access token.
-    
+
     #### **Authorize OAuth Apps using App Token**
-    
+
     1.  Log in to your [Contentstack account](https://www.contentstack.com/login).
     2.  Navigate to the application you want to generate an app token for and click **Install**.
     3.  Once you install your app, the authorization page appears that contains the authorization URL. Through this page, you request access and permission scopes.  
         Alternatively, you can visit the URL formed in the previous section. For instance:  
-        
+
         ```
         https://app.contentstack.com/apps/627e126bbe975e0*********/install
         ```
-        
+
     4.  Install or cancel installation based on scopes requested on the OAuth authorization page.
     5.  Accepting the authorization leads the user to the configured redirect URI along with the authorization code. An example of the redirect URI with authorization code and location:  
-        
+
         ```
         https://example.com/oauth/callback?code={authorization_code}&location=NA
         ```
-        
+
     6.  **Note:** This code is only valid for 60 seconds.
-        
-    
+
+
     #### **Authorize OAuth Apps using User Token**
-    
+
     1.  Log in to your [Contentstack account](https://www.contentstack.com/login).
     2.  Request for auth code against a client ID having a redirect URI and for a list of scopes.
     3.  Visit the Authorization URL formed in the previous step. For instance:  
-        
+
         ```
         https://app.contentstack.com/apps/627e126bbe975e0*********/authorize?response_type=code&client_id=428ub0q0w*******&redirect_uri=https://example.com/oauth/callback&scope=user:read
         ```
-        
+
     4.  Accept or deny permissions (scopes) requested on the OAuth authorization page.
     5.  Accepting the authorization leads the user to the configured redirect URI along with the authorization code. An example of the redirect URI with authorization code and location:  
-        
+
         ```
         https://example.com/oauth/callback?code={authorization_code}&location=NA
         ```
-        
+
         **Note:** \- This code is only valid for 60 seconds.  
         \- If a user requests re-authorization for the same set or subset of scopes that were once granted, the user is automatically redirected to the redirect URL.
-        
+
 3.  ### Exchange Auth Code for Access Token
-    
+
     Exchange the authorization code for the access token by calling the token endpoint having the grant type of **authorization\_code** and the parameter **code** containing the newly generated code from the previous step. For instance:  
-    
+
     ```
     POST {BASE_URL}/apps-api/token
     Headers: 
@@ -258,9 +259,9 @@ To do so, perform the following steps:
       redirect_uri:{redirect_uri}
       code:{authorization_code}
     ```
-    
+
     The request in curl takes the following form:  
-    
+
     ```
     curl --location --request POST 'https://app.contentstack.com/apps-api/token' \
     --header 'Content-Type: application/x-www-form-urlencoded' \
@@ -270,10 +271,10 @@ To do so, perform the following steps:
     --data-urlencode 'redirect_uri=your_redirect_uri' \
     --data-urlencode 'code=your_auth_code'
     ```
-    
+
     On the success of the token call, an access token is provided along with the refresh token.  
     The response will look something like this:
-    
+
     ```
     {
       "access_token": "c89977e8de8bafcac88d************",
@@ -285,51 +286,51 @@ To do so, perform the following steps:
       "authorization_type": "app",
     }
     ```
-    
+
     **Note:** This token is only valid for 60 minutes.
-    
+
 4.  ### Use access token with Contentstack APIs
-    
+
     Your access token allows you to call the methods described by the permission scopes you set during authorization. For instance:  
-      
+
     **Scope**: [cm.stacks.management:read](/docs/developers/apis/content-management-api/stacks#get-a-single-stack)  
-      
+
     **API Call:**  
     API\_BASE\_URL for different regions supported by Contentstack are:
-    
+
     -   US (North America, or NA): https://api.contentstack.io
     -   Europe (EU): https://eu-api.contentstack.com
     -   Azure NA: https://azure-na-api.contentstack.com
     -   Azure EU: https://azure-eu-api.contentstack.com  
-        
+
         You can use the endpoint as per the designated region.
-        
-    
+
+
     ```
     GET {API_BASE_URL}/v3/stacks
     Headers: 
       authorization: Bearer your_access_token
       organization_uid: your_organization_uid
     ```
-    
+
     The request in curl takes the following form:  
-    
+
     ```
     curl --location --request GET 'https://api.contentstack.io/v3/stacks' \
     --header 'authorization: Bearer your_access_token' \
     --header 'organization_uid: your_organization_uid'
     ```
-    
+
 5.  ### Refresh Token
-    
+
     The OAuth flow begins with a user interacting with your app and ends with your app authorized to access Contentstack resources in a way dictated by the user.  
-      
+
     The access token allows you to access the app's data. With a regular expiration for your access token, the danger of the token falling into the wrong hands is reduced. But to maintain control over app data, your app needs a way to request a new access token regularly.  
-      
+
     A refresh token allows your app to rotate its access tokens seamlessly, using the same token endpoint to acquire a new access token with the help of previously generated refresh token.  
-      
+
     On the access token expiry, pass the refresh token obtained from the previous access token call in the code parameter. For instance:
-    
+
     ```
     POST {BASE_URL}/apps-api/token
     Headers: 
@@ -341,9 +342,9 @@ To do so, perform the following steps:
       redirect_uri:{redirect_uri}
       refresh_token:{refresh_token}
     ```
-    
+
     The request in curl takes the following form:  
-    
+
     ```
     curl --location --request POST 'https://app.contentstack.com/apps-api/token' \
     --header 'Content-Type: application/x-www-form-urlencoded' \
@@ -353,7 +354,7 @@ To do so, perform the following steps:
     --data-urlencode 'redirect_uri=your_redirect_uri' \
     --data-urlencode 'refresh_token=your_refresh_token'
     ```
-    
+
 
 ## Authorizing Machine to Machine Apps
 

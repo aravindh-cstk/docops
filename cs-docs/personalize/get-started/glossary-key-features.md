@@ -2,6 +2,7 @@
 title: "Glossary and Key Features"
 description: "Get acquainted with the core concepts you will need to know when working in Personalize."
 url: /personalize/glossary-key-features
+uid: bltca88a1c4fc1ca9ea
 ---
 
 # Glossary and Key Features

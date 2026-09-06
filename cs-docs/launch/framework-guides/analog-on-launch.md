@@ -2,6 +2,7 @@
 title: "Analog on Launch"
 description: "Learn how to deploy Analog.js applications on Contentstack Launch. Optimize performance with SSR, ISR, and API routes using this Analog meta-framework guide."
 url: /launch/analog-on-launch
+uid: blt5ca53aaa38f8c355
 ---
 
 # Analog on Launch
@@ -13,15 +14,15 @@ Analog.js is an open-source meta-framework built on Angular, designed to deliver
 ## What You Will Learn
 
 -   How to enable server-side rendering (SSR), static rendering, and incremental static regeneration (ISR) for Analog.js on Launch.
-    
+
 -   How to create API routes with the Nitro server framework and h3.
-    
+
 -   How to generate and customize a sitemap.
-    
+
 -   How to define content routes and content files with Markdown.
-    
+
 -   How to configure caching and cache revalidation on Launch.
-    
+
 
 ## Supported Features in Contentstack Launch
 

@@ -2,6 +2,7 @@
 title: "Log Targets"
 description: "Export Contentstack system-generated audit, publish, and webhook logs to AWS S3, Azure Blob Storage, or Google Cloud Storage for monitoring and auditing."
 url: /administration/log-targets
+uid: bltee2cb26ac26f8e98
 ---
 
 # Log Targets
@@ -25,11 +26,11 @@ With Log Targets, you can export the following log types:
 ## What You Will Learn
 
 -   How to add a cloud storage destination.
-    
+
 -   How to create a schedule that exports a log type to a destination.
-    
+
 -   How to monitor export activity in the History tab.
-    
+
 
 ## Overview
 
@@ -59,9 +60,9 @@ To add a destination, log in to your [Contentstack account](https://www.contents
     -   **Region**: Specify the storage region.
 5.  Based on the cloud provider, enter the remaining configuration details.
 6.  Click **Test Connection** to validate the configuration.
-    
+
     **Note:** If you skip this step, Contentstack automatically validates the connection when you click **Create Configuration**. The configuration is saved only if the test connection succeeds.
-    
+
     ![Add Cloud Destination sidebar](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am8ca8123bdef871d2/bbf9154143d3a108d2d3ca77/Log_Target_1.png?locale=en-us)
 7.  Click **Create Configuration**.
 
@@ -116,10 +117,10 @@ To create a schedule:
     -   **Data Type**: Choose the log type (Audit, Published, or Webhook).
     -   **Base Path**: Specify a folder path within the bucket.
 4.  Enable or disable **Activate Schedule**:
-    
+
     -   **Enabled**: Logs will be exported every hour.
     -   **Disabled**: Schedule will be created but logs will not be exported unless schedule is enabled.
-    
+
     ![Create Schedule modal](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am1c682c57c8c72d16/96f6c2ab1c7edf2ffb380872/Log_Target_2.png?locale=en-us)
 5.  Click **Create Schedule**.
 

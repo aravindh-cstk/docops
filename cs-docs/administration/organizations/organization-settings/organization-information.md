@@ -2,6 +2,7 @@
 title: "Organization Information"
 description: "Explore Contentstack's Org Info & Security Dashboard for detailed organization insights, security posture, activity tracking, compliance metrics, and best practices."
 url: /administration/organization-information
+uid: blt3509114850541ce7
 ---
 
 # Organization Information
