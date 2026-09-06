@@ -69,7 +69,7 @@ Through this approach Client/ Browser can directly access Contentstack Delivery 
 
 **Pros:**
 
-1.  Easy to setup these types of websites as you don’t require a specific backend service in your infrastructure to communicate with Contentstack APIs.
+1.  Easy to setup these types of websites as you don��t require a specific backend service in your infrastructure to communicate with Contentstack APIs.
 2.  This helps you deliver your content at a lightning speed through the POPs of your CDN.
 
 **Cons:**
