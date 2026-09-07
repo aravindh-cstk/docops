@@ -2,6 +2,7 @@
 title: "Config Parameter (for Custom Fields only)"
 description: "Learn how to customize configuration parameters for Contentstack's custom fields to manage individual instance settings with precision and flexibility."
 url: /headless-cms/config-parameter-for-custom-fields-only
+uid: blt2db44ce03f47252e
 ---
 
 # Config Parameter (for Custom Fields only)

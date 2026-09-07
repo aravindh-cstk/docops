@@ -2,6 +2,7 @@
 title: "About Dart SDK"
 description: "Use Contentstack's Dart SDK to power content for your Dart projects"
 url: /developers/sdks/content-delivery-sdk/dart/about-dart-sdk
+uid: bltcd13e2cc6d04fac7
 ---
 
 # About Dart SDK

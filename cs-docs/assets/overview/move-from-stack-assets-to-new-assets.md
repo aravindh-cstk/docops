@@ -2,6 +2,7 @@
 title: "Move from Stack Assets to New Assets"
 description: "Move from Stack Assets to New Assets"
 url: /assets/move-from-stack-assets-to-new-assets
+uid: blt8b897ac66ea2648b
 ---
 
 # Move from Stack Assets to New Assets

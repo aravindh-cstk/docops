@@ -2,6 +2,7 @@
 title: "Boolean"
 description: "Learn how to utilize the Boolean field in Contentstack to create interactive content types with customizable properties and default values."
 url: /headless-cms/boolean
+uid: blt38f431a221146894
 ---
 
 # Boolean

@@ -2,6 +2,7 @@
 title: "Enhance Asset Management with AI"
 description: "Elevate your digital asset management with Contentstack Assets' AI tools for automated alt text, tagging, and visual markups to boost SEO and accessibility."
 url: /assets/enhance-asset-management-with-ai
+uid: bltc5baf3c384da673b
 ---
 
 # Enhance Asset Management with AI

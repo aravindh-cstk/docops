@@ -2,6 +2,7 @@
 title: "About Single Sign-On (SSO)"
 description: "About Single Sign-On (SSO)"
 url: /administration/about-single-sign-on-sso
+uid: blt1f49b932dcba41e6
 ---
 
 # About Single Sign-On (SSO)

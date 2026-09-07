@@ -2,6 +2,7 @@
 title: "Create a New Stack With Assets"
 description: "Discover how to create and manage stacks in Contentstack, a centralized system for organizing and publishing content across channels efficiently."
 url: /assets/create-a-new-stack
+uid: blte6d61ed00ae3de6b
 ---
 
 # Create a New Stack With Assets
@@ -14,6 +15,7 @@ A stack is a centralized repository that stores and manages content types, entri
 
 -   You must be an organization [owner](/docs/administration/about-administration-roles#organization-owner) or organization [admin](/docs/administration/about-administration-roles#organization-admin) to create a stack.
 -   An organization user can create only one stack per minute per organization.
+-   If you are not able to link an existing space or create and link a new one, reach out to our [support](mailto:support@contentstack.com) team to get it enabled.
 
 To create a new stack, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the steps given below:
 
@@ -24,9 +26,9 @@ To create a new stack, log in to your [Contentstack account](https://www.content
     -   **Name** (required)
     -   **Description** (optional)
     -   **Master Language** (required)
-        
+
         **Note:** The master language cannot be changed after the stack is created.
-        
+
 5.  Assets are stored in spaces, not directly within stacks. Choose how to link the stack to a space.
     -   **Create and Link a New Space**:
         -   A new space is created with the same name as the stack.

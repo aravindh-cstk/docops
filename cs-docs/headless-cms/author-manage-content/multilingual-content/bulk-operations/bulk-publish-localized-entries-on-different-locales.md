@@ -2,6 +2,7 @@
 title: "Bulk Publish Localized Entries on Different Locales"
 description: "Display content in multiple locales right from your publishing modul. Learn all about bulk publishing entries in different languages on Contentstack."
 url: /headless-cms/bulk-publish-localized-entries-on-different-locales
+uid: blte8cb5045b56ad20e
 ---
 
 # Bulk Publish Localized Entries on Different Locales

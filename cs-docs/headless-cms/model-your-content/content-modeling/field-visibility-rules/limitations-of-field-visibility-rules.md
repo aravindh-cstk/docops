@@ -2,6 +2,7 @@
 title: "Limitations of Field Visibility Rules"
 description: "Understand the limitations of Field Visibility Rules in Contentstack, including rule limits, operand restrictions, and target field constraints."
 url: /headless-cms/limitations-of-field-visibility-rules
+uid: blt8d9aa141dbbcae09
 ---
 
 # Limitations of Field Visibility Rules
@@ -18,12 +19,12 @@ url: /headless-cms/limitations-of-field-visibility-rules
 ## Limitations on Operand Field
 
 -   You cannot use the [Rich-Text Editor](/docs/headless-cms/rich-text-editor), [JSON Rich Text Editor](/docs/headless-cms/about-json-rich-text-editor), [Markdown](/docs/headless-cms/markdown), [File](/docs/headless-cms/file), [Link](/docs/headless-cms/link), [Custom](/docs/headless-cms/custom), [Taxonomy](/docs/headless-cms/taxonomy) fields as the operand fields.
-    
+
 -   The operand field cannot be any field marked as [Multiple](/docs/headless-cms/multiple).
 -   The operand field can be a sub-field of a Group or Global field, but the parent field should not be marked as Multiple.
 -   The operand field cannot be a field that is of JSON data type.
 -   You can use the **Group** parent as an operand only when the Group field is marked as **Single**.
-    
+
 -   You **cannot use** the parent Modular Block or its individual child blocks as operands.
 -   The operand field cannot be a [Select](/docs/headless-cms/select) field where the **Selection Type** is set to **Multiple Choices**. 
 
@@ -31,9 +32,9 @@ url: /headless-cms/limitations-of-field-visibility-rules
 
 -   The target field cannot be any field marked as [Mandatory](/docs/headless-cms/mandatory). This is because when a target field is hidden, the entry is saved with an empty value for that field.
 -   The target field cannot be a sub-field of a Modular Block, Group, or Global field marked as **Multiple**, unless both the operand and target fields belong to the same block, group, or global field.
-    
+
 -   If a field is marked as **Mandatory**, has **validation applied**, or is set to **Multiple**, placing that field inside a container such as a **Group** or **Modular Block** does not bypass the restriction.
-    
+
 -   You cannot set a field as a target more than once in a content type. This includes fields targeted by rules created directly in the Content Type as well as rules inherited from referenced Global fields.
 -   The target field cannot be the same as the operand field of any rule. 
 -   Any field that has validation applied cannot be used as the target field. The validations are as follows:

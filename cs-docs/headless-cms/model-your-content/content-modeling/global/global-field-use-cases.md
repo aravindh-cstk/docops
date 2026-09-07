@@ -2,6 +2,7 @@
 title: "Global Field Use Cases"
 description: "Explore real-world use cases of Global fields in Contentstack to simplify content modeling and boost reusability across content types."
 url: /headless-cms/global-field-use-cases
+uid: blt858b9bd845fd2365
 ---
 
 # Global Field Use Cases

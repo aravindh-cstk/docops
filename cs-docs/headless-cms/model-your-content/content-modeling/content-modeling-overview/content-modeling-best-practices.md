@@ -2,6 +2,7 @@
 title: "Content Modeling Best Practices"
 description: "Optimize your content modeling in Contentstack with best practices for fields, references, modular blocks, and reusable structures."
 url: /headless-cms/content-modeling-best-practices
+uid: blt987a94d846e585d9
 ---
 
 # Content Modeling Best Practices
@@ -38,9 +39,9 @@ Do not use reserved keywords in unique identifiers (UIDs). Refer to the [Restric
 [Reference](/docs/headless-cms/reference) fields allow you to link entries across different content types, promoting consistency and reusability. This field type is ideal when you have data shared among multiple entries. Consider the following use cases where Reference fields can be effectively utilized:
 
 -   **Self Referencing**: Use Reference fields within the same content type to establish relationships.
-    
+
     **Example**: In a Product content type, use a Reference field for Recommendations to suggest related products.
-    
+
 -   **Include Referencing**: Use Reference fields to link entries across different content types.
     -   **Single Content Type Referencing**: In a News Article content type, use a Reference field named Authors to link to entries in the Authors content type.
     -   **Multiple Content Type Referencing**: In a Brand content type, use a Reference Field to link to entries from Clothes, Shoes, and Bags content types for displaying all products of a selected brand.

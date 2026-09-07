@@ -2,6 +2,7 @@
 title: "Caching Guide for Contentstack Launch"
 description: "Optimize Contentstack Launch caching with CDN, HTTP headers & Automate. Learn revalidation strategies for static/dynamic content. Boost performance & avoid conflicts."
 url: /launch/caching-guide-for-contentstack-launch
+uid: blt2012fcd75e029e92
 ---
 
 # Caching Guide for Contentstack Launch
@@ -28,44 +29,44 @@ Launch automatically caches content at the [CDN](https://developer.mozilla.org/e
 ## General Caching Strategies
 
 1.  ### Static Content
-    
+
     -   Content built during deployment is served as static files.
     -   Recommended for content that remains mostly unchanged over time.
     -   Automatically cached by the CDN for fast delivery.
 2.  ### Dynamic Content with Cache Headers
-    
+
     -   Control caching behavior through HTTP response headers.  
         **Example**:
-        
+
         ```
         Cache-Control: public, max-age=0, s-max-age=60, stale-while-revalidate=30
         ```
-        
+
         This instructs the CDN to:
-        
+
         -   Cache content at the edge for **60 seconds** (s-max-age=60).
         -   Allow serving stale content while revalidating for **30 seconds** (stale-while-revalidate=30).
         -   Always revalidate content at the browser level (max-age=0).
-    
+
     **Additional Resource:** For a Next.js specific guide, follow [Next.js on Launch.](/docs/launch/nextjs-on-launch)
-    
+
 
 ## Cache Revalidation
 
 1.  ### Time-Based Revalidation
-    
+
     Use Cache-Control headers to define caching duration and revalidation behavior.  
     **Example**:
-    
+
     ```
     Cache-Control: public, max-age=0, s-max-age=300, stale-while-revalidate=60
     ```
-    
+
     -   Cache content at the CDN for **5 minutes** (s-max-age=300).
     -   Allow stale content to be served for **1 minute** while revalidating (stale-while-revalidate=60).
     -   Instruct browsers to always revalidate with the CDN (max-age=0).
 2.  ### On-Demand Revalidation
-    
+
     Trigger revalidation dynamically using one of the following methods:
     -   Launch provides [deploy hooks](/docs/launch/deploy-hooks) to trigger redeployments on demand.
     -   Launch supports a framework-agnostic approach to on-demand cache revalidation through [Automate](/docs/agent-os/launch-trigger).
@@ -85,12 +86,12 @@ Disabling cache can significantly impact performance and increase load on your o
 
 -   Pages that must always reflect real-time data.
 -   Specific paths where caching would result in incorrect or outdated content.
-    
+
     **Note:**
-    
+
     -   Avoid disabling cache globally. Instead, apply it selectively and only when absolutely required.
     -   For most scenarios, use short TTLs or stale-while-revalidate for better performance and flexibility.
-    
+
 
 ## Purging Cache
 

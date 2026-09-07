@@ -2,6 +2,7 @@
 title: "Operand Fields and Supported Operators"
 description: "Learn about supported operators for different fields in Contentstack, including text, number, boolean, date, and reference fields."
 url: /headless-cms/operand-fields-and-supported-operators
+uid: blt44987c4d8868b4c1
 ---
 
 # Operand Fields and Supported Operators
@@ -17,5 +18,5 @@ When configuring field-based operations, it is essential to understand the avail
 -   The **Matches** and **Does not match** operators are case sensitive.
 -   You cannot use the [Rich-Text Editor](/docs/headless-cms/rich-text-editor), [JSON Rich Text Editor](/docs/headless-cms/about-json-rich-text-editor), [Markdown](/docs/headless-cms/markdown), [File](/docs/headless-cms/file), [Link](/docs/headless-cms/link), [Custom](/docs/headless-cms/custom), [Taxonomy](/docs/headless-cms/taxonomy) fields as the operand fields.
 -   When a **Group** field is marked as **Single**, you can use the parent and its sub-fields as operands. When marked as **Multiple**, you **cannot** use the **parent group field** itself, but you can use its sub-fields as operands.
-    
+
 -   For **Modular Blocks**, neither the parent block nor nested child blocks can be used as operands. You can only select its sub-fields from within the same block as operands.
