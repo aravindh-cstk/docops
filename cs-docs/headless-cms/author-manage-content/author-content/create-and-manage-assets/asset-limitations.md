@@ -9,7 +9,7 @@ uid: bltd9e6ede9947b91c7
 
 ## Asset Limitations
 
-**Note:** These limits apply to assets stored in a stack. [New Assets](/docs/assets/assets-limitations) raises several of them, supporting files up to **1 GB** via the UI, **10 GB** via the API, and **500,000** assets per organization.
+**Note:** These limits apply to assets stored in a stack. [New Assets](/docs/assets/assets-limitations) raises several of them, supporting files up to **1.5 GB** per asset, up to **100 assets** per upload, and up to **500,000** assets per workspace.
 
 -   The filename or URL of an asset cannot include the following characters:
 

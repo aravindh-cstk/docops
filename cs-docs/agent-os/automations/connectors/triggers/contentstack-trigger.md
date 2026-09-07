@@ -61,7 +61,7 @@ Perform the following steps to set up the Contentstack Trigger:
 
 **Note:** After successfully configuring a trigger, if you re-configure any other trigger you will be prompted to revert to the previously configured trigger. You can revert back to the last trigger configurations by clicking the Revert Changes button.
 
-Let’s look at each of them in detail.
+Let���s look at each of them in detail.
 
 ### Asset Trigger
 

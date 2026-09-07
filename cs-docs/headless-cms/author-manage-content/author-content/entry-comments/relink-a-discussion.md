@@ -11,7 +11,7 @@ uid: blt010067137bdb9c66
 
 Some discussions are unlinked from their fields due to the recent changes in content type or entry. This typically occurs in the following scenarios:
 
--   **Marking fields as "Multiple" or reverting them to "Single":** Fields such as “[Group](/docs/headless-cms/group),” “[Modular Blocks](/docs/headless-cms/modular-blocks),” or “[Global](/docs/headless-cms/about-global-field)” are made up of multiple subfields, and you can create discussions for each subfield. However, when you change the parent field to “[Multiple](/docs/headless-cms/multiple),�� the discussion loses track of the subfield it was linked to. The same issue occurs when you change a parent field from "Multiple" back to "Single".
+-   **Marking fields as "Multiple" or reverting them to "Single":** Fields such as “[Group](/docs/headless-cms/group),” “[Modular Blocks](/docs/headless-cms/modular-blocks),” or “[Global](/docs/headless-cms/about-global-field)” are made up of multiple subfields, and you can create discussions for each subfield. However, when you change the parent field to “[Multiple](/docs/headless-cms/multiple),” the discussion loses track of the subfield it was linked to. The same issue occurs when you change a parent field from "Multiple" back to "Single".
 
     **Note:** You can add comments only to the primitive subfields within “Group,” “Modular Blocks,” or “Global” fields, such as “Boolean,” “Select,” “Link,” “Single Line Textbox,” “Multiline Textbox,” and so on.
 
