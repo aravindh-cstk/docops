@@ -54,7 +54,7 @@ The tab title updates automatically whenever the entry title changes.
 
 The Entry Outline in Contentstack’s entry editor page enables efficient navigation and management of your entry content, allowing you to access fields and components without manual scrolling.
 
-The Entry Outline shows the fields in your entry editor page that are part of your content type, such as “Title”, “URL���, “Cover Image”, “Summary”, and so on. Clicking on any field in the Outline takes you directly to the actual field, which is especially helpful for large or complex content types.
+The Entry Outline shows the fields in your entry editor page that are part of your content type, such as “Title”, “URL”, “Cover Image”, “Summary”, and so on. Clicking on any field in the Outline takes you directly to the actual field, which is especially helpful for large or complex content types.
 
 ![Using-Outline-in-Contentstack.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3979c8cce203e56e/66dad2dc6c2b244c3ad7d322/Using-Outline-in-Contentstack.gif)
 
