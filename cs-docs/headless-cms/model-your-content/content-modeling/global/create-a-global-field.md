@@ -2,6 +2,7 @@
 title: "Create a Global Field"
 description: "Learn how to create a Global field in Contentstack to standardize and reuse structured content."
 url: /headless-cms/create-a-global-field
+uid: blt8b4695314cda8796
 ---
 
 # Create a Global Field
@@ -22,9 +23,9 @@ To create a Global field, log in to your [Contentstack account](https://www.cont
 2.  Click the **Content Models** icon and select **Global Fields** in the left panel.
 3.  Click **\+ New Global Field** to open the **Create New Global Field** modal.
 4.  Enter **"**Address**"** as the Global field **Name** and provide a relevant **Description**. The **Unique ID** is auto-generated, but you can update it as required.
-    
+
     **Tip:** Refer to the [Restricted Keywords for Unique IDs](/docs/headless-cms/restricted-keywords-for-uids) to avoid using reserved keywords.
-    
+
 5.  Click **Proceed** to create the Global field.
 6.  After creating the Global field, the **Global Field Builder** page will open. This page is empty by default.
 7.  Click the “+” (Insert a field) icon and choose from the available field options.
@@ -34,9 +35,9 @@ To create a Global field, log in to your [Contentstack account](https://www.cont
     3.  **Street Name:** Select the **Single Line Textbox** field.
     4.  **City:** Select the **Single Line Textbox** field.
     5.  **Postal Code:** Select the [Number](/docs/headless-cms/number/) field.
-        
+
         **Tip:** To modify field behavior, click the **Properties** icon displayed next to each field and configure its settings.
-        
+
 9.  Click **Save** or **Save and Close** to save your changes.
 
 Your **Address** Global field will look as follows:
@@ -55,9 +56,9 @@ To add a nested Global field, log in to your [Contentstack account](https://www.
 2.  Click the “+” (Insert a field) icon and select **Global** from the list.
 3.  Click **Select Global Field** and choose **Address** from the available global fields.
 4.  **Save** the changes.
-    
+
     ![Nested global field example](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3142760db9b2540e/67ff8b04e7161e900da288af/2._about_global_fields_-_nested_global_fields_-_image_2.png)
-    
+
 
 Nested Global fields help in **maintaining consistency** and **reducing redundancy** in complex content structures.
 

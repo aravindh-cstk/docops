@@ -2,6 +2,7 @@
 title: "Get Started with .NET Delivery SDK"
 description: "Steps for getting started with .Net SDK"
 url: /developers/sdks/content-delivery-sdk/dot-net/get-started-with-dot-net-delivery-sdk
+uid: blt1302e8381103e3fa
 ---
 
 # Get Started with .NET Delivery SDK
@@ -157,5 +158,5 @@ Currently, the .NET SDK does not yet support querying Global Field schemas ([All
 ## More Resources
 
 -   [API Reference](/docs/developers/sdks/content-delivery-sdk/dot-net/reference/)
--   [.NET SDK Changelog](/docs/developers/sdks/content-delivery-sdk/dot-net/dot-net-sdk-changelog/)
+-   [.NET SDK Changelog](/docs/changelog?filter=sdks)
 -   [View and Download .NET SDK repository on GitHub](https://github.com/contentstack/contentstack-dotnet)

@@ -2,6 +2,7 @@
 title: "Personalized Website with Lytics and Personalize"
 description: "Learn to build a personalized website with Contentstack, using Lytics for real-time audiences, Personalize for edge variant decisioning, and Automate for cache invalidation."
 url: /headless-cms/personalized-website-with-lytics-and-architecture
+uid: blt39e181640c64a630
 ---
 
 # Personalized Website with Lytics and Personalize
@@ -18,7 +19,7 @@ Before you begin, ensure the following requirements are met:
 
 -   [Contentstack account](https://www.contentstack.com/login)
 -   Organization [Owner or Admin](/docs/administration/about-administration-roles) permissions
--   A Git provider account ([GitHub](https://github.com), [GitLab](https://gitlab.com), or [Bitbucket](https://bitbucket.org))
+-   A Git provider account ([GitHub](https://github.com), [GitLab](https://about.gitlab.com/), or [Bitbucket](https://bitbucket.org))
 -   An application codebase built with a modern framework (for example, [Next.js](https://nextjs.org), [React](https://react.dev), or [Vue](https://vuejs.org))
 -   [Contentstack Personalize](/docs/personalize) enabled, with a [Personalize project](/docs/personalize/create-personalize-project) and its [Project UID](/docs/personalize/manage-personalize-project)
 -   A Lytics account with access to the [Lytics JS Tag](/docs/lytics/install-lytics-jstag-sdk) and an access token, with profile sync to Personalize linked
@@ -51,44 +52,44 @@ This architecture inherits the build and deploy flow from the Simple Website pat
 The architecture is composed of six layers that work together to manage content, code, infrastructure, data, decisioning, and automation. Each layer plays a specific role in delivering a personalized and scalable digital experience.
 
 1.  ### Content Layer (Contentstack CMS)
-    
+
     The Contentstack CMS stores base content and its variant overrides, and delivers the merged result via the Delivery API.
-    
+
     -   **Entry Variants:** Each variant stores only the fields that differ from the base entry. Unchanged fields are inherited, which avoids content duplication.
     -   **Composite Delivery:** Given the requested variant aliases via the x-cs-variant-uid header, the CDA applies the matching overrides onto the base entry and returns one merged entry. The applied variants appear under publish\_details.variants. A visitor in multiple experiences receives a single combined response.
     -   **API Access:** Use a Delivery Token to fetch published base content and variants via the CDA, and draft variants via the CPA on development or staging.
 2.  ### Code Layer (Git)
-    
+
     The application layer contains your frontend code and the personalization integration.
-    
+
     -   **Source Control:** Store and manage application code, the Personalize Edge SDK integration, and the Lytics JS Tag in a Git provider such as GitHub, GitLab, or Bitbucket.
     -   **Environment Configuration:** Use environment variables for the Personalize Project UID, the Lytics access token, and the CDA/CPA endpoints, switching values per deployment environment.
 3.  ### Infrastructure Layer (Contentstack Launch)
-    
+
     Contentstack Launch is the runtime hub. Every request passes through it, and it is where the personalization decision is resolved.
-    
+
     -   **Build Automation:** Builds the application on every push to a connected Git branch. The Edge Function and Personalize Edge SDK ship as part of that build.
     -   **Edge Function Decisioning:** Intercepts each request, reads the audience cookie, calls the Personalize Edge API, and rewrites the request with the variant parameter, server-side, before the browser receives anything.
     -   **Global Delivery:** Deploys to edge locations and supports SSR, SSG, and ISR, with no origin round-trip for the decisioning step.
 4.  ### Decisioning Layer (Contentstack Personalize)
-    
+
     Contentstack Personalize is the edge decision engine. It determines which variant each visitor sees before the page reaches the browser.
-    
+
     -   **Audience Import:** Lytics audiences sync into the Personalize Audience module. The resulting experiences, audiences, and rules are stored at the edge.
     -   **Edge API Evaluation:** Returns the user manifest of active variants. Segmented experiences match the visitor's audiences. A/B experiences assign a consistent variant per visitor, keyed on the stable Personalize user ID, with no stored assignment state.
     -   **Variant Aliases:** The Edge SDK converts the manifest into variant aliases (for example, cs\_personalize\_a\_0) for the Delivery API.
     -   **Safe Fallback:** Unknown, unmatched, or first-time visitors always receive the control variant, so every request renders a valid experience.
 5.  ### Data Layer (Lytics)
-    
+
     Lytics is the behavioral data foundation that turns interactions into audiences Personalize can act on.
-    
+
     -   **Behavioral Tracking:** The JS Tag sends page views, clicks, and custom events to Lytics for both known and anonymous visitors.
     -   **Identity and Profiles:** Lytics merges signals into unified profiles. Durable identifiers such as a login or email extend recognition across sessions and devices. Anonymous, cookie-only visitors reset if they clear cookies.
     -   **Audience Delivery:** When a visitor qualifies for an audience, Lytics writes the membership to a browser cookie that travels with every request. This is the runtime handoff between Lytics and Personalize.
 6.  ### Automation Layer (Contentstack Automate)
-    
+
     Contentstack Automate ensures content updates, including variants, are reflected in the delivered experience.
-    
+
     -   **Event-Based Triggers:** Listens to CMS events such as publish and unpublish actions.
     -   **Cache Invalidation:** Triggers cache invalidation in Launch so updated base content and variants are served promptly.
 

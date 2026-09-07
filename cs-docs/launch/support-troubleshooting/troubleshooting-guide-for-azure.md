@@ -2,6 +2,7 @@
 title: "Troubleshooting Guide for Azure"
 description: "Troubleshoot Azure App Service timeout errors with keep-alive agents and IPv4 DNS settings for stable Contentstack SDK outbound connections under load."
 url: /launch/troubleshooting-guide-for-azure
+uid: bltc33951be7889d3f4
 ---
 
 # Troubleshooting Guide for Azure
@@ -26,16 +27,16 @@ Apply the following two configuration changes where the [Contentstack SDK](/docs
 **Note:** These configurations are recommended specifically for Azure managed runtime environments handling high-concurrency outbound workloads.
 
 1.  ### Enable Connection Reuse (Keep-Alive)
-    
+
     Attach custom HTTP and HTTPS agents to the SDK initialization. The agents enable keep-alive, define socket pool limits, and apply request-level retries with backoff for transient failures.
-    
+
     The following code snippet demonstrates an example implementation using the [Content Delivery API](/docs/developers/apis/content-delivery-api) as the external API reference.
-    
+
     ```
     import contentstack from "@contentstack/delivery-sdk";
     import http from "http";
     import https from "https";
-    
+
     const agentOptions = {
       keepAlive: true,
       keepAliveMsecs: 180000,
@@ -43,13 +44,13 @@ Apply the following two configuration changes where the [Contentstack SDK](/docs
       maxFreeSockets: 20,
       timeout: 60000,
     };
-    
+
     const httpAgent = new http.Agent(agentOptions);
     const httpsAgent = new https.Agent(agentOptions);
-    
+
     const RETRYABLE_NETWORK_CODES = ["ETIMEDOUT", "ECONNRESET", "ECONNABORTED", "EPIPE", "EAI_AGAIN"];
     const RETRYABLE_STATUS_CODES = [408, 429, 500, 502, 503, 504];
-    
+
     const httpClientConfig = {
       httpAgent,
       httpsAgent,
@@ -58,22 +59,22 @@ Apply the following two configuration changes where the [Contentstack SDK](/docs
         if (error?.code && RETRYABLE_NETWORK_CODES.includes(error.code)) {
           return true;
         }
-    
+
         if (error?.message && RETRYABLE_NETWORK_CODES.some((code) => error.message.includes(code))) {
           return true;
         }
-    
+
         const status = error?.status || error?.response?.status;
         if (status && RETRYABLE_STATUS_CODES.includes(status)) {
           return true;
         }
-    
+
         return false;
       },
       retryDelayOptions: { base: 300 },
       timeout: 30000,
     };
-    
+
     export const stack = contentstack.stack({
       apiKey: process.env.NEXT_PUBLIC_CONTENTSTACK_API_KEY,
       deliveryToken: process.env.NEXT_PUBLIC_CONTENTSTACK_DELIVERY_TOKEN,
@@ -83,30 +84,30 @@ Apply the following two configuration changes where the [Contentstack SDK](/docs
       ...httpClientConfig,
     });
     ```
-    
+
 2.  ### Enforce IPv4 for Outbound Requests
-    
+
     On the server side, force IPv4 DNS resolution so outbound calls take a consistent network path. This reduces variability introduced by IPv4/IPv6 routing differences in the underlying Azure infrastructure.
-    
+
     ```
     // Force IPv4 DNS resolution on the server side
     if (typeof window === "undefined") {
       const dns = require("dns");
       const http = require("http");
       const https = require("https");
-     
+
       const ipv4Lookup = (hostname, options, callback) => {
         dns.lookup(hostname, { ...options, family: 4 }, callback);
       };
-     
+
       const client = stack.getClient();
       client.defaults.httpAgent = new http.Agent({ lookup: ipv4Lookup });
       client.defaults.httpsAgent = new https.Agent({ lookup: ipv4Lookup });
     }
     ```
-    
-    **Additional Resource:** Refer to the [Azure Container Apps Networking Overview](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/app-platform/container-apps/networking#considerations) for details on outbound connection behavior.
-    
+
+    **Additional Resource:** Refer to the [Azure Container Apps Networking Overview](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/serverless/microservices-with-container-apps) for details on outbound connection behavior.
+
 
 ### Expected Outcome
 

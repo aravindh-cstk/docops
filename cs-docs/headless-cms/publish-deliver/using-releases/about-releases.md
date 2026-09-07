@@ -2,6 +2,7 @@
 title: "About Releases"
 description: "Simplify your content deployment with Contentstack's Releases, enabling seamless publishing of entries and assets across environments efficiently."
 url: /headless-cms/about-releases
+uid: blt861969cb8c3858d7
 ---
 
 # About Releases
@@ -35,6 +36,8 @@ A typical release workflow includes:
 
 This workflow helps you manage related updates as a single unit, ensuring consistent publishing across all items.
 
-**Additional Resource:** To learn how to add entries and assets to a release, refer to the [Add items to a release](/docs/headless-cms/add-entry-asset-to-a-release) and [Bulk add to release](/docs/headless-cms/bulk-add-to-release) documentation.
+You can also create a release directly from a bulk operation. For example, after a bulk find-and-replace operation, you can add the successfully replaced entries to a new or existing release and deploy them together.
+
+**Additional Resource:** To learn how to add entries and assets to a release, refer to the [Add items to a release](/docs/headless-cms/add-entry-asset-to-a-release) and [Bulk add to release](/docs/headless-cms/bulk-add-to-release) documentation. To learn how to create a release from replaced entries, refer to the [Find and Replace Entries in Bulk](/docs/headless-cms/find-and-replace-entries-in-bulk) documentation.
 
 Use Releases to manage content updates more efficiently. By grouping related items, you can deploy changes faster and maintain consistency across environments.

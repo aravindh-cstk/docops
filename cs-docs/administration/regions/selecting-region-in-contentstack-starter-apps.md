@@ -2,6 +2,7 @@
 title: "Selecting Region in Contentstack Starter Apps"
 description: "Selecting Region in Contentstack Starter Apps"
 url: /administration/selecting-region-in-contentstack-starter-apps
+uid: bltd6d0b80d05a73d14
 ---
 
 # Selecting Region in Contentstack Starter Apps

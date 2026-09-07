@@ -2,6 +2,7 @@
 title: "CLI for Launch | V2.x.x"
 description: "Use Contentstack CLI for Launch: Step-by-step guide to deploy & manage your JAMstack sites. Learn to create projects, view logs & more!"
 url: /headless-cms/cli-for-launch
+uid: blt2d8bdf2eef3c2aa7
 ---
 
 # CLI for Launch | V2.x.x
@@ -17,13 +18,21 @@ This step-by-step guide discusses how you can perform different operations in La
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login/)
--   [CLI installed](/docs/headless-cms/install-the-cli) and [configured](/docs/headless-cms/configure-regions-in-the-cli) (version 2.0.0 and above)
+-   [CLI installed](/docs/headless-cms/install-the-cli/v1) and [configured](/docs/headless-cms/configure-regions-in-the-cli) for AWS (version 1.6.0 and above), Azure (version 1.23.0 and above), or GCP (version 1.31.0 and above).
+
+    **Note:** Starting with **CLI version 2.0.0-beta.30**, the Launch plugin is **no longer bundled with the Contentstack CLI**. Versions prior to 2.0.0-beta.30 continue to bundle and install it automatically. From version 2.0.0-beta.30 onward, install the plugin separately before running launch commands:
+
+    ```
+    csdx plugins:install @contentstack/cli-launch
+    csdx launch
+    ```
+
 -   [CLI authenticated](/docs/headless-cms/cli-authentication) (the cli-launch plugin supports only login-based authentication)
 -   Access to Launch for your organization
 -   [GitHub account](https://github.com/login) where your website code is hosted
-    
+
     **Note:** This prerequisite is applicable only if you are importing a project via GitHub.
-    
+
 
 ## Install the Launch Plugin
 
@@ -51,24 +60,24 @@ Contentstack Launch lets you perform the following operations in Contentstack CL
 To begin with, create a project in Launch using the CLI by importing a project from [GitHub](/docs/launch/import-project-using-github) or [uploading a file](/docs/launch/import-project-using-file-upload/). To do this, follow the steps given below:
 
 1.  Open the terminal and fire the launch command:
-    
+
     -   Run the below command if you are in the current working directory.
-        
+
         ```
         csdx launch
         ```
-        
+
     -   If you are in a different directory, provide the path of the current working directory.
-        
+
         ```
         csdx launch --data-dir <path>
         ```
-        
+
         **Note:** If you choose GitHub to create your project, provide the directory path in the Git repository as the current working directory path.
-        
-    
+
+
     **Note:** Launch automatically identifies Git projects.
-    
+
 2.  If your current working directory is not a Git repository, you will be prompted to choose a project type to proceed. Select **Continue with GitHub** or **Continue with FileUpload** to proceed.  
     ![Launch_Plugin-Project_Type.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0e0d2bc64da6923d/6437b49d1c46cc118806d761/Launch_Plugin-Project_Type.png)
 3.  Select the **organization** where you want to create your project.
@@ -82,39 +91,39 @@ To begin with, create a project in Launch using the CLI by importing a project f
 9.  Enter the output path in the **Output Directory** section or press **Enter** to proceed with the default output path.
 10.  Enter the server command in the **Server Command** section or press **Enter** to proceed.
 11.  Select a response mode:
-     
+
      -   **Streaming**: Delivers response chunks in real time as they are generated.
      -   **Buffered**: Displays output only after the entire response has been generated.
-     
+
      **Note:** Buffered is selected by default.
-     
+
 12.  **Enable Contentstack Authentication**: Restricts access to this environment to members of your Contentstack organization. Enter **Y** to enable it or **n** to disable it. If you press **Enter** without entering a value, it is enabled by default.
 13.  In the next step, follow the instructions provided on screen to choose one or more of the following options to import or add the variables:
      -   **Import variables from a stack**
-         
+
          Use this option to import environment variables directly from an existing stack in your organization.  
          If selected, you’ll be prompted to choose a specific **Stack** and provide a valid **Delivery Token**.
-         
+
      -   **Manually add custom variables to the list**
-         
+
          You can manually add variables as key-value pairs.  
          If selected, after adding key-value pairs, a prompt, Would you like to add more variables.? appears.
-         
+
          -   Enter **Y** to add another custom variable.
          -   Enter **n** to proceed with the project deployment.
-         
+
      -   **Import variables from the** **.env.local** **file**
-         
+
          You can import variables from a .env.local file.
-         
+
          **Note:** Create a .env.local file in the repo to import variables from your .env.local file. In this file, each key-value pair must be on a separate line using the format KEY=VALUE.
-         
+
      -   **Skip adding environment variables**
-         
+
          Allows you to skip these options and create a project without any environment variables.
-         
+
          **Note:** The 'Skip adding environment variables' option cannot be combined with other environment variable options. You can either choose 'Skip adding environment variables' or one or more of the other available options.
-         
+
 
 You have successfully deployed a Launch project using the CLI.
 
@@ -149,35 +158,35 @@ csdx launch
 **Examples**
 
 -   To create a Launch project by providing the config file path and file type:
-    
+
     ```
     csdx launch --config <path to launch config file> --type <options: GitHub|FileUpload>
     ```
-    
+
 -   To create a Launch project by providing the directory path and file type:
-    
+
     ```
     csdx launch --data-dir <path of current working dir> --type <options: GitHub|FileUpload>
     ```
-    
+
 -   To create a Launch project by passing the server command:
-    
+
     ```
     csdx launch --config <path to launch config file> --type <options: GitHub|FileUpload> --name=<value> --environment=<value> --branch=<value> --build-command=<value> --framework=<option> --org=<value> --out-dir=<value> --server-command=<value>
     ```
-    
+
 -   To create a Launch project by providing a variable type:
-    
+
     ```
     csdx launch --config <path to launch config file> --type <options: GitHub|FileUpload> --name=<value> --environment=<value> --branch=<value> --build-command=<value> --framework=<option> --org=<value> --out-dir=<value> --variable-type="Import variables from a stack" --alias=<value>
     ```
-    
+
 -   To create a Launch project by providing a variable type and environment variables:
-    
+
     ```
     csdx launch --config <path to launch config file> --type <options: GitHub|FileUpload> --name=<value> --environment=<value> --branch=<value> --build-command=<value> --framework=<option> --org=<value> --out-dir=<value> --variable-type="Manually add custom variables to the list" --env-variables="APP_ENV:prod, TEST_ENV:testVal"
     ```
-    
+
 
 **Note:** If multiple branches are identified in the configuration, you will be prompted to **Choose a branch** to proceed with the Launch operations. A single config file can have multiple configurations based on the branch.
 
@@ -208,17 +217,17 @@ If you are using the [File Upload](/docs/launch/import-project-using-file-upload
 ![CLI-for-Launch-Redeploy.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbc292c79b70134e6/67c6d7c14f9066d2d58f9768/CLI-for-Launch-Redeploy.png)
 
 -   Press **Y** to redeploy the existing launch project.
-    
+
     You will be prompted to select a redeployment method, as shown in the screenshot below:
-    
+
     ![CLI-for-Launch-Redeploy-Method.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt35ab4553b49cc69b/67c6d7c1d1b1de8210ca84ea/CLI-for-Launch-Redeploy-Method.png)
     -   Select the preferred redeployment method and press **Enter**.
-        
+
         -   **Redeploy with last file upload**: Redeploys the last uploaded file.
         -   **Redeploy with new file**: Uploads a new file containing the latest changes to the project.
-        
+
         Your project will be redeployed.
-        
+
 -   Press **n** to cancel the process.
 
 **Options**
@@ -234,42 +243,42 @@ If you are using the [File Upload](/docs/launch/import-project-using-file-upload
 **Examples**
 
 -   To redeploy using the project’s directory path, use \--data-dir:
-    
+
     ```
     csdx launch --data-dir <project-directory-path>
     ```
-    
+
 -   To specify either the name or the UID of the environment to be redeployed, use \--environment:
-    
+
     ```
     csdx launch --environment <environment name or UID>
     ```
-    
+
 -   To redeploy an existing GitHub project with the latest commit, use \--redeploy-latest:
-    
+
     ```
     csdx launch --redeploy-latest
     ```
-    
+
 -   To redeploy an existing File Upload project with a new zip file, use \--redeploy-latest:
-    
+
     ```
     csdx launch --redeploy-latest
     ```
-    
+
 -   To redeploy an existing File Upload project with the last uploaded file, use \--redeploy-last-upload:
-    
+
     ```
     csdx launch --redeploy-last-upload
     ```
-    
+
 -   To redeploy an existing File Upload project with the new zip file from a specific path, using a specific config file, use \--redeploy-latest, \--data-dir and \--config:
-    
+
     ```
     csdx launch --data-dir=/root/src/project1  --redeploy-latest 
      --config=/root/configs/project1/dev.json
     ```
-    
+
 
 ### Using Launch CLI in a CI Environment
 
@@ -281,10 +290,10 @@ The Launch CLI can be utilized within CI environments to trigger redeployments f
     -   Use the Launch UI to create the necessary environments for your Launch project. This is a one-time setup process.
     -   For detailed steps, refer to the [Creating a New Environment](/docs/launch/environments#create-an-environment) guide.
 -   **Configuration in Codebase**
-    
+
     -   In the root directory of your project, create a configuration file named cs-launch.json.
     -   Use the following structure as a template:
-    
+
     ```
     {
       "project": {
@@ -307,39 +316,39 @@ The Launch CLI can be utilized within CI environments to trigger redeployments f
       }
     }
     ```
-    
+
     You can find the values for projectUid, environmentUid, organizationUid, and deploymentUid by inspecting the network requests made to your deployed site. These values are available in the response headers:
-    
+
     -   x-project-uid
     -   x-environment-uid
     -   x-org-uid
     -   x-deployment-uid
-    
+
     **Commit** the cs-launch.json file to your repository.
-    
+
 
 #### Triggering Redeployments in CI
 
 Use the following steps to trigger a redeployment using the Launch CLI within your CI environment:
 
 -   [**Set Region**](/docs/headless-cms/configure-regions-in-the-cli#set-region)
-    
+
     Configure the CLI to use the appropriate region.
-    
+
     **Example:** csdx config:set:region NA
-    
+
 -   [**Authenticate**](/docs/headless-cms/cli-authentication#login) **with Launch CLI**
-    
+
     Use the csdx auth:login command to log in.
-    
+
     **Example:** csdx auth:login --username youremail@contentstack.com --password **\***
-    
+
 -   **Trigger Redeployment**
-    
+
     Use the following command to redeploy a specific environment:
-    
+
     **Example:** csdx launch -c /path/to/project/launch-cli-config/cs-launch.json -e development --redeploy-latest
-    
+
 
 **Note:** The Launch CLI exits with a **non-zero status code** if the deployment fails. Ensure your CI pipeline is configured to handle this appropriately.
 
@@ -350,11 +359,11 @@ By following these steps, you can seamlessly integrate Launch redeployments into
 You can fetch the previous [deployment logs](/docs/launch/deployments#deployment-logs) and the latest server logs for Launch projects in CLI using the launch:logs command.
 
 1.  Open a terminal and fire the launch:logs command:
-    
+
     ```
     csdx launch:logs
     ```
-    
+
 2.  Select the **organization** where you created the project.
 3.  Then, select your **project** for which you want to fetch the logs.
 4.  Select the required **environment**.
@@ -379,17 +388,17 @@ csdx launch:logs
 **Examples**
 
 -   To fetch Launch project logs based on the environment number and type of flags:
-    
+
     ```
     csdx launch:logs -e "environment number or uid" --type "types of flags"
     ```
-    
+
 -   To fetch Launch project logs based on the environment number and deployment number:
-    
+
     ```
     csdx launch:logs -e "environment number or uid" --deployment "deployment number or uid"
     ```
-    
+
 
 ### Functions
 
@@ -410,28 +419,28 @@ csdx launch:functions
 **Examples**
 
 -   To test your Launch project Cloud Function locally:
-    
+
     ```
     csdx launch:functions
     ```
-    
+
 -   To test your Launch project Cloud Function locally in a specific port:
-    
+
     ```
     csdx launch:functions -p "port number"
     ```
-    
+
 
 ### Deployments
 
 You can display the list of [deployments](/docs/launch/deployments/) for an environment for Launch projects using the launch:deployments command in CLI.
 
 1.  Open a terminal and fire the launch:deployments command:
-    
+
     ```
     csdx launch:deployments
     ```
-    
+
 2.  Select the **organization** where you created the project.
 3.  Select your **project**.
 4.  Select the **environment** for which you want to list the deployments.
@@ -455,28 +464,28 @@ csdx launch:deployments
 **Examples**
 
 -   To list the deployments in your current working directory
-    
+
     ```
     csdx launch:deployments -d "current working directory"
     ```
-    
+
 -   To list the deployments for a given environment
-    
+
     ```
     csdx launch:deployments -e "environment number or uid"
     ```
-    
+
 
 ### Environments
 
 You can display the list of [environments](/docs/launch/environments/) that are available for a particular project using the launch:environments command in CLI.
 
 1.  Open a terminal and fire the launch:environments command:
-    
+
     ```
     csdx launch:environments
     ```
-    
+
 2.  Select the **organization** where you created the project.
 3.  Select your **project**.
 
@@ -498,28 +507,28 @@ csdx launch:environments
 **Examples**
 
 -   To list the environments in your current working directory
-    
+
     ```
     csdx launch:environments -d "current working directory"
     ```
-    
+
 -   To list the environments for a specific project under a given organization
-    
+
     ```
     csdx launch:environments --org=<org UID> --project=<Project UID>
     ```
-    
+
 
 ### Open
 
 You can open the live site for an environment of your Launch projects using the launch:open command in CLI.
 
 1.  Open the terminal and fire the launch:open command:
-    
+
     ```
     csdx launch:open
     ```
-    
+
 2.  Select the **organization** where you created the project.
 3.  Select your **project**.
 4.  Select the **environment** for which you want to view the live site.
@@ -543,28 +552,28 @@ csdx launch:open
 **Examples**
 
 -   To open the website for an environment by passing your current working directory
-    
+
     ```
     csdx launch:open --environment=environment --data-dir <path/of/current/working/dir>
     ```
-    
+
 -   To open the website for an environment for a given configuration
-    
+
     ```
     csdx launch:open --environment=environment --config <path/to/launch/config/file>
     ```
-    
+
 
 ### Rollback
 
 You can roll back to a previous successful deployment for a Launch project using the launch:rollback command in the CLI. This performs an [instant rollback](/docs/launch/instant-rollbacks), restoring your application to a previously archived deployment without triggering a rebuild.
 
 1.  Open a terminal and run the launch:rollback command:
-    
+
     ```
     csdx launch:rollback
     ```
-    
+
 2.  Select the **organization** where you created the project.
 3.  Select your **project**.
 4.  Select the **environment** you want to roll back.

@@ -2,6 +2,7 @@
 title: "Switch Between Alphabetical and Label View"
 description: "Learn how to organize your content types in Contentstack by switching between Alphabetical and Label Views. Streamline navigation and improve efficiency."
 url: /headless-cms/switch-between-alphabetical-and-label-view
+uid: blt965285565da8ea5b
 ---
 
 # Switch Between Alphabetical and Label View

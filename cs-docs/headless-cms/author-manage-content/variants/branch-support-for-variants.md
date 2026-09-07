@@ -2,13 +2,14 @@
 title: "Branch Support for Variants"
 description: "Learn how branch support for Variants works in Contentstack: manage variant groups per branch, isolate entry variants, and merge variant group configuration across branches."
 url: /headless-cms/branch-support-for-variants
+uid: blt32adb06b3a809c11
 ---
 
 # Branch Support for Variants
 
 ## Branch Support for Variants
 
-Branch support for Variants lets you manage variant groups and entry variants on any branch, not only the main branch. You can link content types and author entry variants in an isolated branch, keep those changes separate from other branches, and merge variant group configuration into another branch when ready. This is useful when you onboard to Personalize for the first time or run an A/B test and want to test personalization without affecting production content.
+Branch support for Variants lets you manage [variant groups](/docs/headless-cms/manage-variant-groups) and [entry variants](/docs/headless-cms/about-entry-variants) on any branch, not only the main branch. You can link [content types](/docs/headless-cms/about-content-types) and author entry variants in an isolated branch, keep those changes separate from other branches, and merge variant group configuration into another branch when ready. This is useful when you onboard to [Personalize](/docs/personalize/about-personalize) for the first time or run an A/B test and want to test personalization without affecting production content.
 
 **Note:** The Entry Variants feature is available as part of the Personalize license and may not be accessible to all users. For more information, contact the [support](mailto:support@contentstack.com) team.
 
@@ -33,7 +34,7 @@ Merge supports variant groups in addition to content types and global fields. Yo
 
 **Note:**
 
--   Merging variant groups is available through the Content Management API. A user interface for merging variant groups is planned for a future release.
+-   Merging variant groups is available through the Content Management API. Contentstack plans a user interface for merging variant groups in a future release.
 -   Workflow status is not included in the merge. Changes to workflow on one branch do not affect other branches.
 
 You can merge a specific variant group or compare all variant groups across the two branches. The following merge strategies are available:

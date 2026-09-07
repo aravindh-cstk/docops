@@ -2,6 +2,7 @@
 title: "Get Started with PHP SDK and Live Preview"
 description: "Get Started with PHP SDK and Live Preview"
 url: /developers/sdks/content-delivery-sdk/php/get-started-with-php-sdk-and-live-preview
+uid: blt0ae47639001598ea
 ---
 
 # Get Started with PHP SDK and Live Preview
@@ -206,5 +207,5 @@ $stack->ContentType('CONTENT_TYPE_UID')->Query()->toJSON()->find();
 -   [JavaScript Live Preview Utils SDK](/docs/developers/sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk)
 -   [Download PHP SDK](/docs/developers/sdks/content-delivery-sdk/php/download-php-sdk)
 -   [PHP SDK API Reference](/docs/developers/sdks/content-delivery-sdk/php/reference/)
--   [PHP SDK Changelog](/docs/developers/sdks/content-delivery-sdk/php/php-sdk-changelog/)
+-   [PHP SDK Changelog](/docs/changelog?filter=sdks)
 -   [View and Download PHP SDK repository on GitHub](https://github.com/contentstack/contentstack-php)

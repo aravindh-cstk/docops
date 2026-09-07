@@ -2,6 +2,7 @@
 title: "Get Started with Swift Utils Library"
 description: "Explore our comprehensive guide to getting started with Contentstack Swift Utils SDK. Learn installation, setup, and render embedded items efficiently."
 url: /developers/sdks/utils-sdk/ios/get-started-with-swift-utils-library
+uid: bltb34be3c9bebacbc8
 ---
 
 # Get Started with Swift Utils Library
@@ -37,25 +38,25 @@ Perform the following steps to install Utils SDK using Swift package manager:
 
 1.  Install libxml2 in your system:
     1.  macOS users:
-        
+
         ```
         //For xcode 11.3 and earlier, the following settings are required
         $ brew install libxml2
         $ brew link --force libxml2
         ```
-        
+
     2.  Linux (Ubuntu) users:
-        
+
         ```
         $ sudo apt-get install libxml2-dev
         ```
-        
+
 2.  Add the following code to your Package.swift file:
-    
+
     ```
     // swift-tools-version:5.0
     import PackageDescription
-    
+
     let package = Package(
         name: "YourProject",
         dependencies: [
@@ -68,24 +69,24 @@ Perform the following steps to install Utils SDK using Swift package manager:
         ]
     )
     ```
-    
+
 3.  Build the code with this command:
-    
+
     ```
     $ swift build
     ```
-    
+
     **Note:** For Linux (Ubuntu) users, if a build error occurs, run the following command: $ sudo apt-get install pkg-config
-    
+
 
 ### Manual Installation
 
 Install the Utils SDK by manually adding the files to your project:
 
-1.  Add the [ContentstackUtils](https://github.com/contentstack/contentstack-utils-swift/blob/master/Sources/ContentstackUtils) file to your project
+1.  Add the [ContentstackUtils](https://github.com/contentstack/contentstack-utils-swift/tree/master/Sources/ContentstackUtils) file to your project
 2.  Add Kanna files to your project:
-    1.  [Kanna](https://github.com/contentstack/contentstack-utils-swift/blob/master/Sources/Kanna)
-    2.  [Modules](https://github.com/contentstack/contentstack-utils-swift/blob/master/Modules)
+    1.  [Kanna](https://github.com/contentstack/contentstack-utils-swift/tree/master/Sources/Kanna)
+    2.  [Modules](https://github.com/contentstack/contentstack-utils-swift/tree/master/Modules)
 3.  In the target settings, add $(SDKROOT)/usr/include/libxml2 to the **Search Paths > Header Search Paths** field
 4.  Next, in the target settings, add $(SRCROOT)/Modules to the **Swift Compiler - Search Paths > Import Paths** field
 
@@ -103,7 +104,7 @@ To render embedded items on the front-end, create a class implementing Option pr
 import Foundation
 import ContentstackUtils
 class CustomRenderOption: Option {
-    
+
     func renderOptions(embeddedObject: EmbeddedObject, metadata: Metadata) -> String? {
         switch metadata.styleType {
         case .block:
@@ -141,7 +142,7 @@ class CustomRenderOption: Option {
             return super.renderMark(markType: markType, text: text)
         }
     }
-    
+
     override func renderNode(nodeType: String, node: Node, next: (([Node]) -> String)) -> String {
         switch nodeType {
         case "p":

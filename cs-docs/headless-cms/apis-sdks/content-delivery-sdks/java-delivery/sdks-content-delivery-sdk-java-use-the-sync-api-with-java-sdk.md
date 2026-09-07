@@ -2,6 +2,7 @@
 title: "Use the Sync API With Java SDK"
 description: "This guide will help you understand how to use the Sync API with Contentstack Java SDK."
 url: /developers/sdks/content-delivery-sdk/java/use-the-sync-api-with-java-sdk
+uid: blt2c9d161e487698d5
 ---
 
 # Use the Sync API With Java SDK

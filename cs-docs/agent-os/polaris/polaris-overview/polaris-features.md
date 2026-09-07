@@ -2,6 +2,7 @@
 title: "Polaris Features"
 description: "Explore Polaris feature, including context-aware intelligence, real CMS actions, preview-first updates, and enterprise-grade governance."
 url: /agent-os/polaris-features
+uid: blt53284de9902a74e2
 ---
 
 # Polaris Features
@@ -58,7 +59,7 @@ Polaris supports complex workflows through a single prompt.
 
 ## Visual Editor Integration
 
-Polaris integrates directly with the [Visual Editor](/docs/content-managers/visual-editor/about-visual-editor) for truly contextual editing.
+Polaris integrates directly with the [Visual Editor](/docs/headless-cms/about-visual-editor) for truly contextual editing.
 
 -   Automatically understands the selected page element
 -   Maps visual elements to underlying entries and fields

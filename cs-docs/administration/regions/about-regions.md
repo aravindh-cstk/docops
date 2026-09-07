@@ -2,6 +2,7 @@
 title: "About Regions"
 description: "Discover how Contentstack Regions empower developers to create dynamic, personalized digital experiences. Explore comprehensive documentation on Contentstack's Regions feature for efficient content management across multiple locales and platforms."
 url: /administration/about-regions
+uid: bltf0e33b8491888b00
 ---
 
 # About Regions
@@ -45,7 +46,7 @@ For example: The AWS Europe data center is installed in the European region and 
 -   You cannot store your organization's content in multiple regions.  
     For example: If you choose the AWS Europe data center as your region, all of your organization's data will reside in the AWS Europe region
 -   Each region has its own login URLs and other endpoints.  
-    
+
 
 ### Speed and Security
 

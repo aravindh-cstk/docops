@@ -2,6 +2,7 @@
 title: "Embed Entries or Assets"
 description: "Streamline content management with Contentstack's JSON Rich Text Editor. Easily embed and update entries and assets for dynamic, SEO-friendly content."
 url: /headless-cms/embed-entries-or-assets
+uid: blt89945ae5feff1690
 ---
 
 # Embed Entries or Assets
@@ -98,10 +99,10 @@ You can edit an embedded asset directly within the JSON RTE:
     -   **Open link in a new tab:** Enable or disable link target behavior.
     -   **Inline image:** Display the asset inline with the text.
 3.  Click **Save**.
-    
+
     ![Edit embedded asset in JSON RTE](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4f02f4b9a8b380d1/6819d07ab55bf31e8007eaa2/2._edit_embedded_assets_walkthrough.gif)
-    
+
     **Note:** These edits affect only the current embed instance and do not modify the original asset in the Asset Manager.
-    
+
 
 Embedding entries and assets within the JSON RTE enriches your content with dynamic and structured elements. By following this guide, you can seamlessly integrate entries and assets, whether as inline components, blocks, or hyperlinks.

@@ -2,6 +2,7 @@
 title: "Import a Webhook"
 description: "Learn how to import webhooks into Contentstack quickly. Follow our guide for smooth integration and efficient setup."
 url: /headless-cms/import-a-webhook
+uid: blt2af1c924adca70a7
 ---
 
 # Import a Webhook

@@ -2,6 +2,7 @@
 title: "Supported Package Managers"
 description: "Get to know the supported package managers in Contentstack Launch."
 url: /launch/supported-package-managers
+uid: blta44825c75e4f2f2c
 ---
 
 # Supported Package Managers
@@ -13,7 +14,7 @@ The following are the supported package managers on Launch:
 -   [npm](https://www.npmjs.com/package/npm) (default)
 -   [yarn](https://yarnpkg.com/)
 
-Contentstack Launch leverages [corepack](https://nodejs.org/api/corepack.html#corepack) to enable the specific package manager and version defined in the [packageManager](https://nodejs.org/docs/latest-v18.x/api/packages.html#packagemanager) field of the package.json file.
+Contentstack Launch leverages [corepack](https://github.com/nodejs/corepack#readme) to enable the specific package manager and version defined in the [packageManager](https://nodejs.org/docs/latest-v18.x/api/packages.html#packagemanager) field of the package.json file.
 
 **Example:**
 

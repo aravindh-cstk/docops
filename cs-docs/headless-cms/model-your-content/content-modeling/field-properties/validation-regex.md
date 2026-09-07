@@ -2,6 +2,7 @@
 title: "Validation (Regex)"
 description: "Learn how to use regex validation in Contentstack to enforce field input formats and prevent invalid or unsafe values."
 url: /headless-cms/validation-regex
+uid: blt2504d144a43141b5
 ---
 
 # Validation (Regex)
@@ -196,7 +197,7 @@ To reduce security risks:
 **Additional Resources**:
 
 -   Use the [Regex Validation CLI Plugin](https://assets.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbae3e9885165e3b2/Regex_Validation_CLI_Plugin_Doc) guide to identify potentially unsafe or invalid regex patterns within your stack.
--   Refer to the [Regular Expressions](http://www.regular-expressions.info/) documentation for more information about regex syntax and usage.
+-   Refer to the [Regular Expressions](https://www.regular-expressions.info/) documentation for more information about regex syntax and usage.
 -   Learn more about [catastrophic backtracking](https://www.regular-expressions.info/catastrophic.html) and how to prevent inefficient regex processing.
 -   Refer to the [OWASP ReDoS](https://www.regular-expressions.info/redos.html) guide to understand regex-related security risks.
 

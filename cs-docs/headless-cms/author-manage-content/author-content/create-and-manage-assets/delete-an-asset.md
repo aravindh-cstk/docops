@@ -2,6 +2,7 @@
 title: "Delete an Asset"
 description: "Learn how to delete assets in Contentstack safely, manage trash retention, and restore or permanently remove assets within 14 days."
 url: /headless-cms/delete-an-asset
+uid: blt42c95fdccc505c88
 ---
 
 # Delete an Asset

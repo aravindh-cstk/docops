@@ -2,6 +2,7 @@
 title: "Remove Entry/Asset from a Release"
 description: "A \"Release\" is a set of entries and assets that needs to be deployed all at once to a particular environment. Learn how to remove entry/asset from a release on Contentstack."
 url: /headless-cms/remove-entry-asset-from-a-release
+uid: blt0f4c5d7a40dfa951
 ---
 
 # Remove Entry/Asset from a Release

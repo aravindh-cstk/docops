@@ -2,6 +2,7 @@
 title: "Get Started with Ruby SDK"
 description: "Kickstart your Contentstack app development with our Ruby SDK guide. Discover setup essentials, query basics, and optimize with regional data configuration."
 url: /developers/sdks/content-delivery-sdk/ruby/get-started-with-ruby-sdk
+uid: blta5efb5f11a5e8f40
 ---
 
 # Get Started with Ruby SDK
@@ -17,7 +18,7 @@ This guide will help you get started with Contentstack [Ruby SDK](/docs/develope
 ## SDK Installation and Setup
 
 Contentstack offers six regions **AWS North America**, **AWS Europe**, **Azure North America**, **Azure Europe**, **GCP North America,** and **GCP Europe** as data centers to store customers' account details and data. These regions are independent of each other and therefore have a dedicated set of instructions to use SDKs offered by Contentstack.  
-  
+
 To use SDKs for the Europe, Azure NA, or Azure EU region, you will have to make certain changes in the configuration of the SDK, as detailed below, and the rest of the instructions remain the same.  
 
 To use the Ruby SDK, download it using the gem install command:
@@ -104,5 +105,5 @@ In a single instance, the [Get Multiple Entries](#get-multiple-entries) query wi
 ## More Resources
 
 -   [Ruby SDK API Reference](/docs/developers/sdks/content-delivery-sdk/ruby/reference)
--   [Ruby SDK Changelog](/docs/developers/sdks/content-delivery-sdk/ruby/ruby-sdk-changelog/)
+-   [Ruby SDK Changelog](/docs/changelog?filter=sdks)
 -   [View and Download Ruby SDK repository on GitHub](https://github.com/contentstack/contentstack-ruby)

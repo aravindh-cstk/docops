@@ -2,6 +2,7 @@
 title: "About TypeScript Delivery SDK"
 description: "Create TypeScript-based applications and use the TypeScript SDK to fetch and deliver content from Contentstack."
 url: /developers/sdks/content-delivery-sdk/typescript/about-typescript-delivery-sdk
+uid: bltc58c7b7a42970dce
 ---
 
 # About TypeScript Delivery SDK
@@ -10,7 +11,7 @@ url: /developers/sdks/content-delivery-sdk/typescript/about-typescript-delivery-
 
 Contentstack's TypeScript Delivery SDK lets you harness the power of Contentstack by utilizing the [Content Delivery APIs](/docs/developers/apis/content-delivery-api) to efficiently fetch and deliver content to your TypeScript-based applications. In our comprehensive tutorials and guides, you will find valuable information on the various tools and integrations supported by Contentstack, along with TypeScript SDK example apps, empowering you to kickstart your project with ease.
 
-**Note:** The Contentstack TypeScript SDK supports [Node.js](https://nodejs.org/) 22 or later.
+**Note:** The Contentstack TypeScript SDK supports [Node.js](https://nodejs.org/en) 22 or later.
 
 To integrate your TypeScript application with Contentstack’s TypeScript Delivery SDK, follow the steps mentioned in the [Get Started with Typescript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/typescript/get-started-with-typescript-delivery-sdk/) documentation.
 
@@ -23,7 +24,7 @@ Here are some of the key features of the TypeScript SDK:
 -   **Image Transformation:** The SDK offers support for the Image Delivery API, empowering developers to include various parameters in the URL. These parameters allow for retrieving, manipulating, or converting image files, enabling seamless display on web and mobile applications.
 -   **Live Preview Support:** The Live Preview Utils SDK package is compatible with any application project that utilizes the TypeScript Delivery SDK. It can be loaded and integrated seamlessly to enhance image preview functionalities.
 -   **RTE support:** The Typescript Delivery SDK allows you to retrieve embedded entries and assets that are stored in the Rich Text Editor (RTE) field.
-    
+
 
 ## Quickstart With TypeScript Delivery SDK
 

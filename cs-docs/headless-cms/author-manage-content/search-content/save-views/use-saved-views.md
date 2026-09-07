@@ -2,6 +2,7 @@
 title: "Access Saved Views"
 description: "Efficiently manage content with saved views in Contentstack. Quickly access custom search settings, streamline workflows, and stay organized."
 url: /headless-cms/use-saved-views
+uid: blt8db19a6aa764a36a
 ---
 
 # Access Saved Views
@@ -15,9 +16,9 @@ To make the most of your saved views, log in to your [Contentstack account](http
 1.  Navigate to your [stack](/docs/headless-cms/about-stack) and select the “Entries” or “Assets” module.
 2.  Within the **Views** tab, you will find a list of predefined views under **Popular Views** and your saved views under **Saved Views**.
 3.  Select a saved view to immediately apply the search settings and filters you configured earlier. This allows you to pick up exactly where you left off.
-    
+
     **Note:** Saved views are sorted based on the most recently updated view. You cannot manually rearrange the order of views in the list.
-    
+
     ![1-view-saved-views.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfef348b0a8809fb6/6842e59344b96336f562a0a2/1-view-saved-views.gif)
 
 ## Modify a Selected View
@@ -36,9 +37,9 @@ For any saved view, click the vertical ellipsis next to it to see the following 
 -   **Rename**: Change the name of your saved view.
 -   **Share**: [Share](/docs/headless-cms/shared-views) the view with users or roles in your stack.
 -   **Copy Link**: Share the view link with collaborators for quick access.
-    
+
     **Note:** Anyone with the link can access the view and save it as a new view.
-    
+
 -   **View Details**: See key information, including the creator, last modified date, and access permissions.
 -   **Delete**: Permanently remove the view if it’s no longer needed. For shared views, the owner can either remove it for all users or transfer ownership to another user before removing it for themselves. ![3._delete_a_saved_view.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt32f27dbb21b385e3/6842e59216704d7f7ef46a2f/3._delete_a_saved_view.png)
 

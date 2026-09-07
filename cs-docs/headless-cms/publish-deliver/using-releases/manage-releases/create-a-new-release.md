@@ -2,6 +2,7 @@
 title: "Create a New Release"
 description: "A \"Release\" is a set of entries and assets that needs to be deployed all at once to a particular environment. Learn how to create a new release on Contentstack."
 url: /headless-cms/create-a-new-release
+uid: bltb09cbe441cb0ce20
 ---
 
 # Create a New Release

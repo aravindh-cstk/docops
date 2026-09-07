@@ -2,6 +2,7 @@
 title: "Get Started with Live Preview Utils SDK V4.0"
 description: "Enhance your website with Contentstack's Live Preview Utils SDK v4, enabling real-time updates and streamlined content editing for improved workflows."
 url: /headless-cms/get-started-with-live-preview-utils-sdk-v4
+uid: bltbcc8ce01c182859a
 ---
 
 # Get Started with Live Preview Utils SDK V4.0
@@ -82,9 +83,9 @@ Excludes the editButton from either inside or outside the Live Preview portal fo
 
 -   insideLivePreviewPortal: removes the Edit button from within the Live Preview portal.
 -   outsideLivePreviewPortal: removes the Edit button from outside the Live Preview portal.
-    
+
     **Note:** Even if you exclude the Edit button for Live Preview, you can add the cslp-buttons query parameter to your website URL to display the Edit button outside a Live Preview-enabled website.
-    
+
 
 #### includeByQueryParameter
 
@@ -240,23 +241,23 @@ For CSR, the framework handles data collection and rendering, so create a functi
 ...
 export const onLiveEdit = ContentstackLivePreview.onLiveEdit;
 ...
- 
+
 // Footer.js
 import React from "react";
 import ContentstackLivePreview from "./utils.js";
- 
+
 const Footer = () => {
     const [data, setData] = React.useState({});
- 
+
     const updateData = () => {
         const fetchedData = SomeCallToGetData();
         setData(fetchedData);
     };
- 
+
     React.useEffect(() => {
         ContentstackLivePreview.onLiveEdit(updateData);
     }, []);
- 
+
     return <div>{data.company_name}</div>;
 };
 ```
@@ -272,23 +273,23 @@ For CSR, the framework handles data collection and rendering, so create a functi
 ...
 export const onEntryChange = ContentstackLivePreview.onEntryChange;
 ...
- 
+
 // Footer.js
 import React from "react";
 import ContentstackLivePreview from "live-preview-utils";
- 
+
 const Footer = () => {
     const [data, setData] = React.useState({});
- 
+
     const updateData = () => {
         const fetchedData = SomeCallToGetData();
         setData(fetchedData);
     };
- 
+
     React.useEffect(() => {
         ContentstackLivePreview.onEntryChange(updateData);
     }, []);
- 
+
     return <div>{data.company_name}</div>;
 };
 ```
@@ -316,7 +317,7 @@ Place the call alongside your existing addEditableTags call, since both referenc
 ```
 import ContentstackLivePreview from "@contentstack/live-preview-utils";
 import Utils from "@contentstack/utils";
- 
+
 // In your page component (for example, inside useEffect, once the entry is fetched)
 Utils.addEditableTags(entry, "blog_post", true, "en-us");
 ContentstackLivePreview.setPageContext({
@@ -333,21 +334,21 @@ If you cannot call setPageContext() directly — for example, when no JavaScript
 
 1.  The value set with ContentstackLivePreview.setPageContext().
 2.  A window.\_\_CS\_PAGE\_CONTEXT\_\_ global:
-    
+
     ```
     window.__CS_PAGE_CONTEXT__ = {
         entryUid: "entry-123",
         contentTypeUid: "blog_post",
     };
     ```
-    
+
 3.  <meta> tags in the page <head>:
-    
+
     ```
     <meta name="contentstack:entry-uid" content="entry-123" />
     <meta name="contentstack:content-type-uid" content="blog_post" />
     ```
-    
+
 
 Meta tags are a useful fallback for frameworks that render <meta> natively (for example, Next.js App Router metadata / generateMetadata(), or Nuxt useHead()) and for sites with a strict Content Security Policy that blocks inline scripts but allows meta tags.
 

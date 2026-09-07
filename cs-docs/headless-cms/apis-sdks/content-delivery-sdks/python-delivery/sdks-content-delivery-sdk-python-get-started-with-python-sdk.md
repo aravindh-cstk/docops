@@ -2,6 +2,7 @@
 title: "Get Started with Python SDK"
 description: "Work with Python SDK to create apps"
 url: /developers/sdks/content-delivery-sdk/python/get-started-with-python-sdk
+uid: blt173fdd3cb1ca1fb1
 ---
 
 # Get Started with Python SDK
@@ -20,30 +21,30 @@ This guide will help you get started with Contentstack [Python SDK](/docs/develo
 To use the Contentstack Python SDK with your existing project, perform the following steps:
 
 1.  Open the terminal, create a project, and move inside it as follows:
-    
+
     ```
     mkdir project_name
     cd project_name
     ```
-    
+
 2.  Create a virtual environment:
-    
+
     ```
     python3 -m venv venv
     ```
-    
+
 3.  Activate the virtual environment:
-    
+
     ```
     source  venv/bin/activate
     ```
-    
+
 4.  Install pip Contentstack as follows:
-    
+
     ```
     pip install contentstack
     ```
-    
+
 
 You can download the latest dependency version [here](https://pypi.org/project/Contentstack/).
 
@@ -52,7 +53,7 @@ You can download the latest dependency version [here](https://pypi.org/project/C
 Contentstack offers six regions **AWS North America**, **AWS Europe**, **Azure North America**, **Azure Europe**, **GCP North America,** and **GCP Europe** as data centers to store customers' account details and data. These regions are independent of each other and therefore have a dedicated set of instructions to use SDKs offered by Contentstack.
 
 To use SDKs for the Europe, Azure NA, or Azure EU region, you will have to make certain changes in the configuration of the SDK, as detailed below, and the rest of the instructions remain the same.  
-  
+
 To initialize the SDK, the stack’s API key, [**delivery token**](/docs/headless-cms/about-delivery-tokens), and name of the [**environment**](/docs/headless-cms/about-environments) where you will publish the content, as shown in the snippet below:
 
 ```
@@ -121,5 +122,5 @@ result = query.locale('locale-code').limit(20).skip(20).find()
 ## More Resources
 
 -   [API Reference](/docs/developers/sdks/content-delivery-sdk/python/reference/)
--   [Python SDK Changelog](/docs/developers/sdks/content-delivery-sdk/python/python-sdk-changelog/)
+-   [Python SDK Changelog](/docs/changelog?filter=sdks)
 -   [View and Download Python SDK repository on GitHub](https://github.com/contentstack/contentstack-python)

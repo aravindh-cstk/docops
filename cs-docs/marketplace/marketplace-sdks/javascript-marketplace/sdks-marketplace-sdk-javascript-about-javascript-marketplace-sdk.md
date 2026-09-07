@@ -2,6 +2,7 @@
 title: "About JavaScript Marketplace SDK"
 description: "This documentation on JavaScript Marketplace SDK provides insights into leveraging the SDK to manage and manipulate content within your applications efficiently."
 url: /developers/sdks/marketplace-sdk/javascript/about-javascript-marketplace-sdk
+uid: bltccc3e4fef7afec4d
 ---
 
 # About JavaScript Marketplace SDK
@@ -59,4 +60,4 @@ client.marketplace('organization_uid').app('manifest_uid').fetch()
 
 ### More Resources
 
-[JavaScript Marketplace SDK GitHub Repository](https://github.com/contentstack/contentstack-marketplace-javascript)
+[JavaScript Marketplace SDK GitHub Repository](https://github.com/contentstack/contentstack-marketplace-sdk)

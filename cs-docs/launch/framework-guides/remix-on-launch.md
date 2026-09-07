@@ -2,6 +2,7 @@
 title: "Remix on Launch"
 description: "Learn how to host and deploy a project using the Remix framework in Contentstack Launch."
 url: /launch/remix-on-launch
+uid: blt941996536e781e16
 ---
 
 # Remix on Launch
@@ -30,7 +31,7 @@ Refer to the [Server Configuration](/docs/launch/server-configuration) document 
 
 By default, when deploying Remix with Server-Side Rendering (SSR) on Launch, pages are cached on Launch’s CDN. This allows subsequent requests to the same page to be served quickly from the cache, reducing load times and improving performance without regenerating the page on each request.
 
-You can configure this behavior by returning appropriate cache headers from your server-side implementation in Remix. In the following example, we modify the Express.js route that handles Remix engine requests in server.ts to regenerate the page every **5 minutes**. You can set a different cache setting for each route as well. You can learn more about it [here](https://remix.run/docs/en/main/route/headers).
+You can configure this behavior by returning appropriate cache headers from your server-side implementation in Remix. In the following example, we modify the Express.js route that handles Remix engine requests in server.ts to regenerate the page every **5 minutes**. You can set a different cache setting for each route as well. You can learn more about it [here](https://v2.remix.run/docs/route/headers/).
 
 ```
 // server.ts

@@ -2,6 +2,7 @@
 title: "Get Started with Dart SDK and Live Preview"
 description: "Get Started with Dart SDK and Live Preview"
 url: /developers/sdks/content-delivery-sdk/dart/get-started-with-dart-sdk-and-live-preview
+uid: blta10e3ba513bc1974
 ---
 
 # Get Started with Dart SDK and Live Preview
@@ -125,5 +126,5 @@ final entry = stack.contentType('contentTypeUid').entry(entryUid: 'entryUid');
 
 -   [JavaScript Live Preview Utils SDK](/docs/developers/sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk)
 -   [API Reference](/docs/developers/sdks/content-delivery-sdk/dart/reference/)
--   [Dart SDK Changelog](/docs/developers/sdks/content-delivery-sdk/dart/dart-sdk-changelog/)
+-   [Dart SDK Changelog](/docs/changelog?filter=sdks)
 -   [View and Download Dart SDK repository on GitHub](https://github.com/contentstack/contentstack-dart)

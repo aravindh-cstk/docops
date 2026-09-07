@@ -2,13 +2,14 @@
 title: "Edit Page"
 description: "Learn how to edit web pages in Contentstack’s Visual Editor using real-time previews, inline field modifiers, and drag-and-drop tools—no coding required."
 url: /headless-cms/edit-page
+uid: blt377a4f68bbacab06
 ---
 
 # Edit Page
 
 ## Edit Page
 
-[Visual Editor](/docs/content-managers/visual-editor/about-visual-editor) enables you to update existing web pages quickly and intuitively without writing code. Whether you revise content, rearrange components, or add new sections, the canvas lets you preview changes as you make them.
+[Visual Editor](/docs/headless-cms/about-visual-editor) enables you to update existing web pages quickly and intuitively without writing code. Whether you revise content, rearrange components, or add new sections, the canvas lets you preview changes as you make them.
 
 To edit an existing web page, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 
@@ -18,9 +19,9 @@ To edit an existing web page, log in to your [Contentstack account](https://www.
 4.  On the selected page, you can:
     1.  Hover over any field to view detailed information, such as its field type and the associated [content type](/docs/headless-cms/about-content-types).
     2.  Click a component to open the toolbar. You can then make inline edits without switching to the **Form** panel.
-        
+
         **Tip:** You can drag and reposition the field modifier apps such as AI Assistant on the canvas to improve visibility of the underlying content. This allows you to review the layout and content more clearly before making any changes.
-        
+
 
 **To add a new component**:
 

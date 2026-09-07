@@ -2,6 +2,7 @@
 title: "Airtable"
 description: "Airtable"
 url: /agent-os/airtable
+uid: bltc6ce4ffc3f65877d
 ---
 
 # Airtable
@@ -30,7 +31,7 @@ This action lets you create a record(s) in a table.
 2.  Click **Action Step** to configure third-party services.
 3.  Within the **Configure Action Step**, click the **Airtable** connector.  
     ![Select_the_Connector_Airtable.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1fa84887af01fe9c/6527c950a0980f6a14ede99a/Select_the_Connector_Airtable.png)  
-    
+
 4.  Under **Choose an Action** tab, select the **Create Record** action.  
     ![Select_the_Create_Record_Action](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt009dd9cb6ad3a20e/645c88d39a25be48d043d1b6/Select_the_Create_Record_Action.png)
 5.  Click the **\+ Add New Account** button to add your Airtable account.  
@@ -45,9 +46,9 @@ This action lets you create a record(s) in a table.
 10.  Select a **Table Name/ID** to create a new record(s) in the selected table.  
      ![Select_the_Database_Table_fields_Create_Record](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf984f02a91362554/645c88dfe4e69e19530375f5/Select_the_Database_Table_fields_Create_Record.png)
 11.  In the **Record Data** field, provide the value for the record(s) you want to create.
-     
+
      **Note:** Below is a sample format to create the records. Here Name, Notes, and Status are column names of the table. You must provide values in key-value pairs.
-     
+
      ```
      {
              "records" : [
@@ -59,7 +60,7 @@ This action lets you create a record(s) in a table.
              ]
          }
      ```
-     
+
      ![Enter_Record_Data_Create](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt296e2acbd02d3529/645c88b0c7969576cbe2754c/Enter_Record_Data_Create.png)
 12.  Click the **Proceed** button.
 13.  Click the **Test Action** button to test the configured action.  
@@ -138,15 +139,15 @@ This action lets you fetch the details of multiple records in a table.
 6.  Select a **Database Name/ID** present in the Airtable account.
 7.  Select a **Table Name/ID** to fetch details of a record(s) present in the table.
 8.  In the **Number of records** field, enter the number of records you want to fetch from the selected table.
-    
+
     **Note:** You can fetch up to 100 records.
-    
+
     ![Select_the_Fields_Get_Records](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt350146380cce8a15/645c88df562ac12dfd5fb048/Select_the_Fields_Get_Records.png)
 9.  **\[Optional\]** Enable the **Show optional fields** toggle button to display the **Sort** **Column Name**, **Order of Sorting**, and **Airtable Filter** field.  
     Column Name sorts the records based on the column names. The Order of Sorting field sorts the records in Ascending or Descending order. You can add a filter formula to fetch the record.
-    
-    **Additional Resource:** To learn more, refer to the [Formula field reference](https://support.airtable.com/docs/formula-field-reference#numeric-operators-and-functions) document.
-    
+
+    **Additional Resource:** To learn more, refer to the [Formula field reference](https://support.airtable.com/articles/7330071120-airtable-formula-field-functions-reference) document.
+
     ![Show_Optional_Fields_Get_Records](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt130fb250568974e6/645c88e04ebc810c9433ec0c/Show_Optional_Fields_Get_Records.png)
 10.  Click the **Proceed** button.
 11.  Click the **Test Action** button to test the configured action.  
@@ -169,16 +170,16 @@ This action lets you update a record in a table.
 4.  Click **+ Add a base** to add a new database or select an existing one. Click **Grant access** to allow access to Airtable.  
     ![Grant_access](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta8585c09ad23174b/645c88b1c7969599f0e27550/Grant_access.png)
 5.  Enter an **Account Name** and then click **Save**.  
-    
+
     ![Save_Account](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9b14333e512b2e94/645c88bb6f143f8e2a6d081e/Save_Account.png)
 6.  Select a **Database Name/ID** present in the Airtable account.
 7.  Select a **Table Name/ID** to update a new record in the table.
 8.  In the **Record ID** field, select the ID of the record you want to update from the **Lookup** dropdown.  
     ![Update_Record_Fields](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc96e3ab1be78c2a9/645c88e0c79695bc65e27554/Update_Record_Fields.png)
 9.  In the **Record Data** field, provide the value for the record you want to update.
-    
+
     **Note:** You need to add the values for each column to update the record. If any column value is not updated, then it will remain empty
-    
+
     ![Record_Data_Update_Record](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltec970be7b10bc977/645c88bbba05c555f06e4c52/Record_Data_Update_Record.png)
 10.  Click the **Proceed** button.
 11.  Click the **Test Action** button to test the configured action.  

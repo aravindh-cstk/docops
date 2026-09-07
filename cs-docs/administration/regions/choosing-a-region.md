@@ -2,6 +2,7 @@
 title: "Choosing a Region"
 description: "Choosing a Region"
 url: /administration/choosing-a-region
+uid: bltef6f29bf75831f5a
 ---
 
 # Choosing a Region

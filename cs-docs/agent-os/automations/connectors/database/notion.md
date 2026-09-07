@@ -2,13 +2,14 @@
 title: "Notion"
 description: "Connect Notion with your favorite apps. Automate tasks, streamline workflows, and boost productivity seamlessly."
 url: /agent-os/notion
+uid: blt95e9ed77f76fb37e
 ---
 
 # Notion
 
 ## Notion
 
-[Notion](https://www.notion.so/) is an all-in-one productivity and collaboration platform, combining note-taking, task management, databases, and project organization in a single, customizable space – ideal for both individual and team workflows.
+[Notion](https://www.notion.com/) is an all-in-one productivity and collaboration platform, combining note-taking, task management, databases, and project organization in a single, customizable space – ideal for both individual and team workflows.
 
 The Notion connector enhances your Notion experience by enabling automated content management through creation, deletion, addition, and retrieval of data in your workspace. By integrating multiple tools in one space, it streamlines workflows for optimized productivity, seamless collaboration, and efficient knowledge management.
 
@@ -16,7 +17,7 @@ This guide provides step-by-step instructions for using the Notion connector. Fo
 
 ## Prerequisites
 
--   [Notion account](https://www.notion.so/)
+-   [Notion account](https://www.notion.com/)
 -   [Contentstack account](https://www.contentstack.com/login/)
 -   Access to an organization that has Agent OS enabled
 
@@ -57,9 +58,9 @@ Once done, you can go ahead and set up your Notion connector.
     2.  Select a parent **Page** **Name** where you wish to add the content.
     3.  In the **Select Content Schema Type** field, select the format for the content either **Text** or **JSON**.
     4.  In the **Text/JSON Content Type** field, enter the content to be added. If you select **JSON** as the **Content** **Schema** **Type**, you can click the **Template** icon to fetch the predefined schema template for your page.
-        
+
         **Note:** The **Content Schema Type** has a maximum character limit of **2000** characters.
-        
+
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt98c86730056c87ad/672e114b170171421df00745/Select_Fields.png)
     5.  Optionally, enable the **Show Optional Fields** toggle button to select the **Block** **Name**. This ensures that the content is added to your page after the selected block.![Select_Block.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2e727541ef66af04/672e114b4c9c316cff018160/Select_Block.png)
 3.  Click **Proceed**.
@@ -72,22 +73,22 @@ Once done, you can go ahead and set up your Notion connector.
 2.  On the **Create a Page Content Configure Action** page, enter the details given below:
     1.  Click **\+ Add New Account** button to connect your Notion account as shown in the [Connect your Notion Account step](#connect-your-notion-account-step).
     2.  Select the **Parent** **Type** for the new page. You can create the page within an existing parent page or database.![Select_page_Database.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt292814bfefc0186b/672e115bc741490f9cc2ff5c/Select_page_Database.png)
-        
+
         **When Selecting Parent as Page**
-        
+
         1.  In the **Select Page Name** field, select a parent page where the new page will be created. Enter a page title for the new page in the **Page** **Title** field.  
             ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt72fb48cb61501eb4/672e115bc09b5d862ac4bbe2/Select_Fields.png)
         2.  Optionally, enable the **Show Optional Fields** toggle button to view the following fields:
             1.  In the **Select Content Schema Type** field, select the content format as either **Text** or **JSON** format.
             2.  In the **Text/JSON** **Content** **Type** field, enter the content you wish to add. If you select **JSON** as the **Content Schema Type**, you can click the **Template** icon to fetch the predefined schema template for your page.
-                
+
                 **Note:** The **Content Schema Type** has a maximum character limit of **2000** characters.
-                
+
             3.  Enter the URLs for the **Page Icon** and **Cover Image**.  
                 ![Show_Optional_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf372dc53c4321038/672e115c20ed6c548fa50d7c/Show_Optional_Fields.png)
-        
+
         **When Selecting Parent as Database**
-        
+
         1.  In the **Select Database Name** field, select an existing database where the new page is created.
         2.  In the **Database** **Properties** field, enter the content for the appropriate database columns. Ensure the data is in **JSON** format or use the predefined template for your database.  
             ![Select_Fields_Database.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt945ab1660bfd8725/672e115b09c2c0122461dce8/Select_Fields_Database.png)
@@ -95,9 +96,9 @@ Once done, you can go ahead and set up your Notion connector.
             1.  In the **Select Content Schema Type** field, select the content format as either **Text** or **JSON**.
             2.  In the **Text/JSON Content Type** field, enter the content you wish to add.
             3.  If you select **JSON** as the **Content Schema Type**, you can click the **Template** icon to fetch the predefined schema template for your database.
-                
+
                 **Note:** The **Content Schema Type** has a maximum character limit of **2000** characters.
-                
+
             4.  Enter the URLs for the **Page Icon** and **Cover Image**.  
                 ![Show_Optional_Fields_Database.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3a64380e6b7c6941/672e115bcc42510b19a23035/Show_Optional_Fields_Database.png)
     3.  Click **Proceed**.
@@ -112,9 +113,9 @@ Once done, you can go ahead and set up your Notion connector.
 2.  On the **Delete a Database Configure Action** page, enter the details given below:
     1.  Click **\+ Add New Account** button to connect your Notion account as shown in the [Connect your Notion Account](#connect-your-notion-account) step.
     2.  Select a **Database** **Name** to delete.
-        
+
         **Warning:** This action will permanently remove all the content within the database.
-        
+
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt78d859391e55b027/672e116a188be38b5bf06972/Select_Fields.png)
 3.  Click **Proceed**.
 4.  Check if the details are correct. If yes, click **Test** **Action**.  
@@ -128,9 +129,9 @@ Once done, you can go ahead and set up your Notion connector.
 2.  On the **Delete a Page Configure Action** page, enter the details given below:
     1.  Click **\+ Add New Account** button to connect your Notion account as shown in the [Connect your Notion Account](#connect-your-notion-account) step.
     2.  Select a **Page** **Name** to delete.
-        
+
         **Warning:** This action will permanently remove all the content within the selected page.
-        
+
         ![Select_Page_Name.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt03e9a0cfc0bdad8e/672e1178e5b8c50980a8293c/Select_Page_Name.png)
 3.  Click **Proceed**.
 4.  Check if the details are correct. If yes, click **Test Action**.  

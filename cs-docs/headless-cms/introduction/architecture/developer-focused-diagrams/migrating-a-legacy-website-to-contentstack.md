@@ -2,6 +2,7 @@
 title: "Migrating a Legacy Website to Contentstack (Progressive Headless)"
 description: "Learn how to migrate a legacy website to Contentstack using a progressive headless approach with incremental routing, Contentstack Launch, and safe rollbacks."
 url: /headless-cms/migrating-a-legacy-website-to-contentstack
+uid: blte7af4f2898aed12b
 ---
 
 # Migrating a Legacy Website to Contentstack (Progressive Headless)
@@ -22,7 +23,7 @@ Before you begin, ensure the following requirements are met:
 
 -   [Contentstack account](https://www.contentstack.com/login)
 -   Organization [Owner or Admin](/docs/administration/about-administration-roles) permissions (to update routing rules on your CDN or edge platform)
--   A Git provider account ([GitHub](https://github.com), [GitLab](https://gitlab.com), or [Bitbucket](https://bitbucket.org))
+-   A Git provider account ([GitHub](https://github.com), [GitLab](https://about.gitlab.com/), or [Bitbucket](https://bitbucket.org))
 -   [Contentstack Launch](/docs/launch/about-launch) enabled for your organization
 -   An application codebase built with a modern framework (for example, [Next.js](https://nextjs.org), [React](https://react.dev), or [Vue](https://vuejs.org))
 -   Access to a [Delivery Token](/docs/headless-cms/about-delivery-tokens) and familiarity with [Environment Variables](/docs/launch/environment-variables) ([CDA](/docs/developers/apis/content-delivery-api)/[CPA](/docs/headless-cms/preview-api))
@@ -48,42 +49,42 @@ During migration, both platforms remain operational. The routing layer becomes t
 A Progressive Headless migration moves through three architectural stages.
 
 1.  ### Before Migration
-    
+
     Before migration begins, all website traffic flows through the existing platform. The legacy CDN forwards every request to the legacy origin, which continues serving all content and pages.
-    
+
     Contentstack is not yet part of the request flow.
-    
+
     #### Architecture Diagram
-    
+
     ![Legacy Architecture](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/amcfe3c0d23fa5b9d3/10e0777bb803cbb6c72d1784/Legacy_Architecture.png?locale=en-us)
 2.  ### During Migration
-    
+
     During migration, both platforms operate simultaneously.
-    
+
     The legacy CDN continues serving as the public entry point for the website. Based on routing rules, requests for migrated routes are forwarded to Contentstack Launch, while all remaining routes continue to be served by the legacy platform.
-    
+
     Launch acts as the origin for migrated routes only. Contentstack Automate invalidates Launch caches whenever migrated content is published or unpublished, ensuring visitors receive the latest content without affecting the legacy platform.
-    
+
     At this stage:
-    
+
     -   Migrated routes are served from Contentstack.
     -   Unmigrated routes continue to be served from the legacy platform.
     -   Visitors experience a single, uninterrupted website.
     -   Individual routes can be migrated and validated independently.
-    
+
     #### Architecture Diagram
-    
+
     ![Progressive Architecture](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am9cb9322cd7c8d982/53effb49ce1c900e9b9bf0db/Progressive_Architecture.png?locale=en-us)
 3.  ### After Migration
-    
+
     After all routes have been migrated, the legacy platform is removed from the request path.
-    
+
     Launch becomes the primary hosting platform for the website, while Contentstack CMS becomes the single source of content. The routing fallback to the legacy platform is removed, resulting in a simplified architecture based entirely on Contentstack services.
-    
+
     The final architecture aligns with the [Simple Website with Contentstack Launch](/docs/headless-cms/simple-website-with-contentstack-launch#architecture-diagram) implementation.
-    
+
     #### Architecture Diagram
-    
+
     ![Simplified Architecture](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/ama95d504f7c7ab1a3/87363bcb15abe984738f9bc2/Simplified_Architecture.png?locale=en-us)
 
 ### Relationship to the Simple Website Architecture
@@ -99,98 +100,98 @@ The implementation details for Git integration, deployment pipelines, preview en
 A Progressive Headless migration consists of five architectural layers that work together throughout the migration lifecycle. Each layer has a distinct responsibility, allowing the legacy platform and Contentstack to operate simultaneously while traffic is progressively shifted to the new frontend.
 
 1.  ### Routing Layer
-    
+
     The routing layer is the core of a Progressive Headless migration. It receives incoming requests and determines which backend should serve each route based on the request path.
-    
+
     Two routing patterns are supported. The recommended approach depends on your existing infrastructure and operational requirements.
-    
+
     -   #### Existing CDN as the Router (Recommended)
-        
+
         In this approach, the existing CDN, such as Fastly, Cloudflare, Akamai, or another edge platform, remains the public entry point for the website throughout the migration.
-        
+
         The CDN evaluates each request using path-based routing rules.
-        
+
         -   Requests for migrated routes are forwarded to Launch.
         -   Requests for unmigrated routes continue to the legacy origin.
         -   Visitors continue accessing the website through the existing CDN.
-        
+
         Launch acts only as the origin for migrated routes and does not replace the existing CDN during migration.
-        
+
         This approach minimizes operational changes because:
-        
+
         -   Existing caching behavior remains unchanged for unmigrated routes.
         -   Existing WAF policies and bot protection continue protecting the website.
         -   Existing SSL certificates, redirects, and edge configuration remain in place.
         -   The legacy origin remains protected behind the existing CDN.
         -   Only migrated routes begin using Launch.
-        
+
         As additional routes migrate, the routing table gradually expands until every request is directed to Launch.
-        
+
         This is the recommended approach for most production migrations because it introduces the fewest infrastructure changes while the majority of traffic continues to be served by the legacy platform.
-        
+
     -   #### Launch as the Router
-        
+
         Alternatively, Launch can become the public entry point for the website.
-        
+
         In this model, Launch receives every incoming request and determines where traffic should be routed.
-        
+
         -   Migrated routes are rendered directly by Launch.
         -   Unmigrated routes are proxied back to the existing CDN.
         -   The existing CDN continues protecting the legacy origin.
-        
+
         The legacy origin should **not** be exposed directly to Launch. Instead, unmigrated traffic should always pass through the existing CDN to preserve existing caching behavior, security policies, WAF rules, and bot protection.
-        
+
         This approach centralizes routing within Launch but introduces an additional caching layer for unmigrated traffic because requests pass through both Launch and the legacy CDN before reaching the legacy origin.
-        
+
         Organizations adopting Launch as the primary edge platform may prefer this approach when they plan to retire the existing CDN shortly after migration.
-        
+
 2.  ### Content Layer
-    
+
     During migration, content exists in two content management systems.
-    
+
     -   #### Contentstack CMS
-        
+
         Contentstack becomes the source of truth for migrated routes.
-        
+
         Content is modeled using Content Types and delivered through the Content Delivery API (CDA). As additional routes migrate, more content ownership shifts from the legacy platform to Contentstack.
-        
+
         Editors can begin managing migrated pages in Contentstack without affecting content that remains on the legacy platform.
-        
+
     -   #### Legacy CMS
-        
+
         The legacy CMS continues serving all unmigrated routes.
-        
+
         Its existing database, templates, workflows, and editorial processes remain unchanged until each route is migrated.
-        
+
         Because only migrated routes are redirected to Launch, editors can continue publishing content in the legacy CMS for the remainder of the website throughout the migration.
-        
+
         This coexistence allows migration work to proceed incrementally without requiring editors to move all content at once.
-        
+
 3.  ### Code Layer
-    
+
     The frontend application is developed independently from the legacy platform.
-    
+
     A modern framework such as Next.js, Nuxt, Remix, or another supported framework is stored in a Git repository and deployed through Launch.
-    
+
     The application renders only migrated routes.
-    
+
     Routing rules ensure that each request is served by exactly one rendering layer.
-    
+
     -   Migrated routes are rendered by the new frontend.
     -   Unmigrated routes continue using the legacy rendering engine.
-    
+
     This separation prevents duplicate ownership of routes and allows frontend development to progress independently of the legacy application.
-    
+
     As migration progresses, additional routes are implemented in the new frontend until it serves the entire website.
-    
+
 4.  ### Infrastructure Layer
-    
+
     Launch provides the hosting and deployment infrastructure for the new frontend application.
-    
+
     The deployment workflow remains identical to a standard Launch implementation.
-    
+
     Launch provides:
-    
+
     -   Git-based deployments
     -   Branch mapping, such as main for Production and develop for Stage
     -   Atomic deployments
@@ -199,23 +200,23 @@ A Progressive Headless migration consists of five architectural layers that work
     -   Server-side rendering (SSR)
     -   Static Site Generation (SSG)
     -   Incremental Static Regeneration (ISR)
-    
+
     These capabilities become available immediately for migrated routes without requiring changes to the remaining legacy platform.
-    
+
     Because the frontend is deployed independently of the legacy CMS, releases can occur without affecting unmigrated sections of the website.
-    
+
 5.  ### Automation Layer
-    
+
     Contentstack Automate manages cache invalidation for migrated routes.
-    
+
     When editors publish or unpublish content in Contentstack, Automate triggers cache invalidation in Launch so visitors receive updated content without waiting for cache expiration.
-    
+
     This process applies only to migrated routes.
-    
+
     Content published through the legacy CMS continues using its existing cache invalidation mechanism until those routes migrate to Contentstack.
-    
+
     Maintaining separate cache invalidation processes during migration allows both platforms to operate independently while ensuring visitors receive fresh content from the appropriate system.
-    
+
 
 ### How the Layers Work Together
 

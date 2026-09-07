@@ -2,6 +2,7 @@
 title: "Nuxt on Launch"
 description: "Learn more about hosting a project using the \"Nuxt\" framework option in Contentstack Launch."
 url: /launch/nuxt-on-launch
+uid: blt9b57d87f63d3f8d8
 ---
 
 # Nuxt on Launch
@@ -17,15 +18,15 @@ Nuxt is a free and open-source framework that offers an intuitive and extendable
 Nuxt supports multiple rendering strategies, such as **Universal Rendering**, **Hybrid Rendering**, **Prerendering**, **Server Routes**, and **Route Middleware**/**Server Middleware**, all of which are compatible with Contentstack Launch:
 
 1.  #### Universal Rendering
-    
+
     In the [Universal Rendering](https://nuxt.com/docs/guide/concepts/rendering#universal-rendering) mode, Nuxt renders HTML on the server for each request, similar to traditional Server-Side Rendering (SSR). Once the HTML is delivered, Vue.js hydrates the page in the browser, enabling interactivity. This approach **improves load time**, **enhances SEO**, and **maintains dynamic client-side behavior**.
-    
+
 2.  #### Pre-rendering
-    
-    With [Pre-rendering](https://nuxt.com/docs/getting-started/prerendering), specific routes are generated at build time and served as static files via the CDN. This is ideal for pages with non-personalized content that doesn’t change frequently, such as blog posts or marketing pages.
-    
+
+    With [Pre-rendering](https://nuxt.com/docs/4.x/getting-started/prerendering), specific routes are generated at build time and served as static files via the CDN. This is ideal for pages with non-personalized content that doesn’t change frequently, such as blog posts or marketing pages.
+
     **Configuration Example**:
-    
+
     ```
     nitro: {
       prerender: {
@@ -34,15 +35,15 @@ Nuxt supports multiple rendering strategies, such as **Universal Rendering**, **
       },
     }
     ```
-    
+
 3.  #### Hybrid Rendering
-    
+
     [Hybrid Rendering](https://nuxt.com/docs/guide/concepts/rendering#hybrid-rendering) allows different caching rules per route using **Route Rules** and decides how the server should respond to a new request on a given URL.
-    
+
     **Note:** The s-maxage cache header is required when using ISR. Ensure that the values of isr and s-maxage are the same.
-    
+
     This is configured using cache control headers:
-    
+
     ```
     routeRules: {   
     // Homepage pre-rendered at build time
@@ -64,17 +65,17 @@ Nuxt supports multiple rendering strategies, such as **Universal Rendering**, **
      }
     }
     ```
-    
+
 4.  #### Server Routes
-    
+
     By default, Launch **does not cache** responses for [Server Routes](https://nuxt.com/docs/guide/directory-structure/server#server-routes) defined under the ~/server/api directory. To provide custom caching behavior to the server route responses defined under the ~/server/api directory, use the Cache-Control headers in the nuxt.config.js file under the routeRules section.
-    
+
     However, Launch does **cache responses for all other server routes**, defined under the ~/server/routes directory. To provide custom caching behavior to the server route responses defined under the ~/server/routes directory, use the Cache-Control headers in the nuxt.config.js file under the routeRules section.
-    
+
     **Example**:
-    
+
     For a server route placed at the path ~/server/server-route, we can add Cache-Control headers as follows:
-    
+
     ```
     export default defineNuxtConfig({
      routeRules: {
@@ -86,11 +87,11 @@ Nuxt supports multiple rendering strategies, such as **Universal Rendering**, **
        }
      }});
     ```
-    
+
 5.  #### Route Middleware/Server Middleware
-    
+
     While using [middleware](https://nuxt.com/docs/guide/directory-structure/middleware) for user-specific logic such as authentication or personalization, it is important to note that the CDN caching may serve pages **before** the middleware executes. This can result in unintended exposure of protected or personalized content. To ensure secure and correct behavior, such logic should be handled at the edge using the [Edge Functions](/docs/launch/edge-functions) on Launch.
-    
+
 
 ### Caching
 
@@ -120,7 +121,7 @@ routeRules: {
 #### Cache-Revalidation Strategies
 
 1.  **Time-Based Revalidation**
-    
+
     ```
     routeRules: {
       "/blog/**": {
@@ -131,13 +132,13 @@ routeRules: {
       }
     }
     ```
-    
+
 2.  **On-Demand Revalidation**
-    
+
     You can trigger on-demand revalidation using Automate: [Revalidate CDN cache using Automate](/docs/launch/revalidate-cdn-cache).
-    
+
     **Note:** Ensure you revalidate the cache for the data endpoint that backs the content, in addition to the page URL. This is important if your page uses cached API endpoints for data delivery. Example: domain/api/api-route
-    
+
 
 **Additional Resource:** Refer to the [Quick Start Guide with Nuxt](/docs/launch/quick-start-nuxt) documentation for a step-by-step walkthrough to deploy your Nuxt project on Launch as an SSR-based application.
 
@@ -158,11 +159,11 @@ Refer to the [Server Configuration](/docs/launch/server-configuration) document 
 This section provides solutions for some common issues faced with hosting Nuxt.
 
 -   **Setting up Cache revalidation with** [**Nuxt internationalization**](https://i18n.nuxtjs.org/docs/getting-started/usage#route-localization) **enabled**
-    
+
     When using i18n in Nuxt, the URL structure changes to support multiple languages. For example, a path like /about-us may be localized under /nl/about-us.
-    
+
     In such cases, it is important to [revalidate the cache](/docs/launch/revalidate-cdn-cache) for both the localized URL (e.g., /nl/about-us) and the base URL (/about-us).
-    
+
     You may also have a default locale configured for URLs without explicit locale paths. For example, visiting /about-us may return content localized in English by default. In this case, ensure you revalidate the cache for both /about-us and /nl/about-us.
-    
+
     This is necessary because an internationalization-enabled Nuxt site internally makes requests to the localized URL (e.g., /en/about-us) even when the locale does not appear in the URL.

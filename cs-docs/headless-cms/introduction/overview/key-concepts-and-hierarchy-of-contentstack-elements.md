@@ -2,6 +2,7 @@
 title: "Key Concepts and Hierarchy of Contentstack Elements"
 description: "Explore the key concepts and hierarchical structure of Contentstack elements with our comprehensive documentation"
 url: /headless-cms/key-concepts-and-hierarchy-of-contentstack-elements
+uid: blt5b998c7873418cff
 ---
 
 # Key Concepts and Hierarchy of Contentstack Elements

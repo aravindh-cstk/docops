@@ -2,6 +2,7 @@
 title: "Get Started with PHP SDK"
 description: "steps for getting started with PHP SDK"
 url: /developers/sdks/content-delivery-sdk/php/get-started-with-php-sdk
+uid: blte7880717e67c574a
 ---
 
 # Get Started with PHP SDK
@@ -119,5 +120,5 @@ $result = $stack->ContentType(CONTENT_TYPE_UID)->Query()->toJSON()->skip(20)->li
 
 -   [Download PHP SDK](/docs/developers/sdks/content-delivery-sdk/php/download-php-sdk)
 -   [PHP SDK API Reference](/docs/developers/sdks/content-delivery-sdk/php/reference/)
--   [PHP SDK Changelog](/docs/developers/sdks/content-delivery-sdk/php/php-sdk-changelog/)
+-   [PHP SDK Changelog](/docs/changelog?filter=sdks)
 -   [View and Download PHP SDK repository on GitHub](https://github.com/contentstack/contentstack-php)

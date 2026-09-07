@@ -1,12 +1,13 @@
 ---
-title: "Regex Validate Plugin | V2 Beta"
+title: "Regex Validate Plugin | V2.x.x"
 description: "Use the Contentstack CLI Regex Validate Plugin | V2 Beta to proactively audit a stack before deploying new content type schemas."
 url: /headless-cms/cli-regex-validate-plugin
+uid: blt50c45d9983b508a7
 ---
 
-# Regex Validate Plugin | V2 Beta
+# Regex Validate Plugin | V2.x.x
 
-## Regex Validate Plugin | V2 Beta
+## Regex Validate Plugin
 
 ## Overview
 
@@ -28,23 +29,23 @@ Run this command to:
 Before running the command, ensure:
 
 1.  **Contentstack CLI installed**: Install via npm:
-    
+
     ```
     npm install -g @contentstack/cli
     ```
-    
+
 2.  **Plugin installed**: The regex validation command is a separate plugin. See [Installation](#installation).
-    
-3.  **Region configured** _(if not North America)_: [Set your region](/docs/developers/cli/configure-regions-in-the-cli#set-region) before running any stack commands.
-    
+
+3.  **Region configured** _(if not North America)_: [Set your region](/docs/headless-cms/configure-regions-in-the-cli#set-region) before running any stack commands.
+
 4.  **Management token added**: A management token scoped to the stack you want to scan must be saved with an alias:
-    
+
     ```
     csdx auth:tokens:add -a <alias> -k <stack-api-key> --management --token <management-token>
     ```
-    
-    Reference: [Add a management token](/docs/developers/cli/cli-authentication#add-management-token)
-    
+
+    Reference: [Add a management token](/docs/headless-cms/cli-authentication#add-management-token)
+
 
 ---
 
@@ -295,11 +296,11 @@ Results are displayed as a terminal table and saved to a CSV file for further re
 
 1.  List your saved tokens: csdx auth:tokens
 2.  If the alias is missing, add the token:
-    
+
     ```
     csdx auth:tokens:add -a <alias> -k <stack-api-key> --management --token <token>
     ```
-    
+
 3.  Re-run the command with the correct alias.
 
 ---
@@ -320,11 +321,11 @@ Results are displayed as a terminal table and saved to a CSV file for further re
 2.  Confirm your region: csdx config:get:region. If on a non-North America region, set it: csdx config:set:region.
 3.  Test connectivity by running another CMA command against the same stack.
 4.  If saving to a custom path, verify the directory is writable and avoid special characters (\*, &, {, }, \[, \], $, %, <, \>, ?, !). Try an absolute path if unsure:
-    
+
     ```
     csdx cm:stacks:validate-regex -a my-token --contentType --filePath /tmp/regex-output
     ```
-    
+
 5.  Retry (this may be a transient API error).
 
 ---
@@ -346,8 +347,8 @@ Results are displayed as a terminal table and saved to a CSV file for further re
 
 ## Next Steps
 
--   [Regex Validation in Content Type Fields (v2)](/docs/headless-cms/cli-content-type-plugin/beta): how the format regex is configured on a field in the Contentstack UI.
+-   [Regex Validation in Content Type Fields (v2)](/docs/headless-cms/cli-content-type-plugin): how the format regex is configured on a field in the Contentstack UI.
 -   [Regex Validate Plugin (v1)](/docs/headless-cms/cli-regex-validate-plugin): the v1 command reference, useful if you still run v1 or need the old flag names while upgrading.
--   [Prevent Catastrophic Backtracking (Contentstack Docs)](/docs/developers/create-content-types/validation-regex/#prevent-catastrophic-backtracking): background on why certain regex patterns are unsafe and how to rewrite them.
--   [CLI Authentication: Add Management Token](/docs/developers/cli/cli-authentication#add-management-token): create and save the management token alias these commands use.
--   [Configure Regions in the CLI](/docs/developers/cli/configure-regions-in-the-cli#set-region): set your region if your stack is not in North America.
+-   [Prevent Catastrophic Backtracking (Contentstack Docs)](/docs/headless-cms/validation-regex): background on why certain regex patterns are unsafe and how to rewrite them.
+-   [CLI Authentication: Add Management Token](/docs/headless-cms/cli-authentication#add-management-token): create and save the management token alias these commands use.
+-   [Configure Regions in the CLI](/docs/headless-cms/configure-regions-in-the-cli#set-region): set your region if your stack is not in North America.

@@ -2,13 +2,14 @@
 title: "Custom"
 description: "Enhance your Contentstack with customizable fields. Integrate top apps and manage properties effortlessly for tailored content types."
 url: /headless-cms/custom
+uid: bltf4d88d07883523f5
 ---
 
 # Custom
 
 ## Custom
 
-The **Custom** field enables you to add and use customizable fields in the content type. You need to add one or more extensions (custom field logic) to the stack to use this field. Apart from using the default [fields](/docs/headless-cms/about-fields) such as “Single-line textbox,” “Rich Text Editor,” and so on, you can integrate with numerous business applications, such as “[Marketo Forms](https://developers.marketo.com/javascript-api/forms/)”, “[Optimizely](https://www.optimizely.com/)”, and “[Brightcove](https://www.brightcove.com/en/)” by adding them as [custom fields](/docs/developer-hub/custom-field-location) to the Contentstack [content type](/docs/headless-cms/about-content-types/).
+The **Custom** field enables you to add and use customizable fields in the content type. You need to add one or more extensions (custom field logic) to the stack to use this field. Apart from using the default [fields](/docs/headless-cms/about-fields) such as “Single-line textbox,” “Rich Text Editor,” and so on, you can integrate with numerous business applications, such as “[Marketo Forms](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/home)”, “[Optimizely](https://www.optimizely.com/)”, and “[Brightcove](https://www.brightcove.com/)” by adding them as [custom fields](/docs/developer-hub/custom-field-location) to the Contentstack [content type](/docs/headless-cms/about-content-types/).
 
 **Additional Resource:** To learn what Extensions are and how they work, refer to the [Extensions](/docs/developer-hub/custom-field-location) guide.
 

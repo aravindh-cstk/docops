@@ -2,6 +2,7 @@
 title: "Troubleshooting Browser \"Dangerous Site\" Warnings"
 description: "Identification, resolution, and prevention of third-party \"Dangerous site\" or \"Deceptive site ahead\" browser warnings on Contentstack Launch sites."
 url: /launch/troubleshooting-browser-dangerous-site-warnings
+uid: blt41b131b2b705c164
 ---
 
 # Troubleshooting Browser "Dangerous Site" Warnings
@@ -51,7 +52,7 @@ If Google Safe Browsing is responsible, follow Steps 2–6. If only Edge display
 ### Step 2: Confirm scope and category
 
 1.  Open the [Google Safe Browsing Transparency Report](https://transparencyreport.google.com/safe-browsing/search) and input both the full URL and the root domain separately.
-2.  Log in to [Google Search Console](https://search.google.com/search-console) and navigate to **Security Issues**. This page itemizes each affected URL and its classification category: Social Engineering, Malware, Unwanted Software, or Deceptive Content.
+2.  Log in to [Google Search Console](https://search.google.com/search-console/about) and navigate to **Security Issues**. This page itemizes each affected URL and its classification category: Social Engineering, Malware, Unwanted Software, or Deceptive Content.
 3.  Document the exact URLs and the corresponding category. The category dictates the required remediation steps.
 
 ### Step 3: Modify trigger keywords in URLs
@@ -114,7 +115,7 @@ Threat-list providers assess reputation at the domain level. A shared platform s
 
 Google does not automatically clear a flag following content modification; an explicit review request is mandatory.
 
-1.  Log in to [Google Search Console](https://search.google.com/search-console) and verify the property.
+1.  Log in to [Google Search Console](https://search.google.com/search-console/about) and verify the property.
 2.  Navigate to **Security & Manual Actions > Security Issues**.
 3.  Confirm that every listed issue has been resolved on the live site.
 4.  Click **Request Review** and provide a specific description of the changes implemented and the rationale for why the classification is no longer applicable. Ambiguous responses may be rejected.

@@ -2,6 +2,7 @@
 title: "Setup Next.js Website with Personalize - Launch"
 description: "Set up a Next.js site with Personalize on Launch, using Edge Functions for seamless content delivery and optimization."
 url: /personalize/setup-nextjs-website-with-personalize-launch
+uid: bltbf0b652de91fa5f0
 ---
 
 # Setup Next.js Website with Personalize - Launch
@@ -20,13 +21,13 @@ This guide will help you set up your Next.js website with Personalize, hosted on
 ## What You Will Learn
 
 -   How to get the Personalize project UID.
-    
+
 -   How to proxy requests with a Launch Edge Function to fetch the user manifest.
-    
+
 -   How to fetch variant content from the CMS based on the resolved variants.
-    
+
 -   How to set attributes and trigger impression and conversion events.
-    
+
 
 ## Steps for Execution
 
@@ -40,14 +41,14 @@ This guide will help you set up your Next.js website with Personalize, hosted on
 To retrieve the project UID, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the steps given below:
 
 1.  Navigate to **Personalize** and select your preferred project.
-    
+
 2.  Click the **Settings** icon in the left navigation panel.
-    
+
 3.  In the **General** tab, under **Project Details**, you will find the 24-character project UID.
-    
+
     ![Personalize project details showing project UID](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta484036b87342c85/67094fcdd5ba14b41f4578f6/Fetch_Personalize_Project_UID.png)
 4.  Click the **Copy** icon to copy the project UID to your clipboard. We will need this UID while setting up the Personalize Edge SDK in the next step.
-    
+
 
 ### Proxy Requests with Launch Edge Proxy
 
@@ -144,7 +145,7 @@ We are passing the variants we receive from the SDK into a query parameter perso
 
 For e.g. if we have a URL as follows: /rewards, we’re rewriting it to /rewards?personalize\_variants=0\_0,1\_0 here 0\_0,1\_0 is the variant parameter which is the combination of the Experience Short UID mapped to the selected Variant Short UID.
 
-We use the short uids here to optimize the URL length which has a [limit](https://developer.mozilla.org/en-US/docs/Web/URI/Schemes/data#length_limitations).
+We use the short uids here to optimize the URL length which has a [limit](https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/data).
 
 #### Add Response Context
 
@@ -296,11 +297,11 @@ The above example shows how to fetch an entry variant instead of the base entry 
 Setting attributes and triggering events can be done in the following ways:
 
 1.  Integrating with a [CDP](/docs/personalize/about-cdp-integration)
-    
+
 2.  Using [Google Tag Manager](/docs/personalize/google-tag-manager-integration-with-personalize)
-    
+
 3.  Using the SDK in the code ([JavaScript Personalize Edge SDK](/docs/developers/sdks/personalize-edge-sdk/javascript/about-javascript-personalize-edge-sdk))
-    
+
 
 Below we have elaborated on the third approach.
 
@@ -369,7 +370,7 @@ Here, we initialize the Personalize SDK as part of the React Context. We then us
 
 The SDK needs to be initialized before setting attributes or triggering events.
 
-We use React Context here so the SDK is initialized once and then available as Context for any [Client Component](https://nextjs.org/docs/app/building-your-application/rendering/client-components) in Next.js. Setting attributes and triggering impressions and events should be done on the client side since we set data and trigger the events when the page renders on the browser.
+We use React Context here so the SDK is initialized once and then available as Context for any [Client Component](https://nextjs.org/docs/app/getting-started/server-and-client-components) in Next.js. Setting attributes and triggering impressions and events should be done on the client side since we set data and trigger the events when the page renders on the browser.
 
 #### Set Attributes
 

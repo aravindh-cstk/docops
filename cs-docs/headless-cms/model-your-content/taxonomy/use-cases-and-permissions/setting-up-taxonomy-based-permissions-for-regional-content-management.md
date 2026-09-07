@@ -2,6 +2,7 @@
 title: "Setting Up Taxonomy-based Permissions for Regional Content Management"
 description: "Learn how to manage granular permissions in Contentstack using taxonomy-based roles, allowing access control for taxonomies and terms within your entries."
 url: /headless-cms/setting-up-taxonomy-based-permissions-for-regional-content-management
+uid: bltdfcc79157552be59
 ---
 
 # Setting Up Taxonomy-based Permissions for Regional Content Management
@@ -26,9 +27,9 @@ To customize taxonomy-based permissions for custom roles, log in to your [Conten
 8.  Select the **Regions** taxonomy from the list of available taxonomies.
 9.  Select **Specific Terms**, and finally select the term you want to allow your stack users to collaborate in.
 10.  You will be able to view the list of content types associated with the selected taxonomies.
-     
+
      **Note:** Users assigned these custom roles will only be able to perform the permissions assigned to them if their entries contain the specific terms of those taxonomies.
-     
+
 11.  Click **Save** to create the new role.
 12.  Now, assign this specific role to users, and they will only be able to access content types linked to the **Regions** taxonomy and entries associated with the parent term “North America” and its child terms.
 

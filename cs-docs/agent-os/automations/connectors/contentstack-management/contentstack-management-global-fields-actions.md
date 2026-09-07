@@ -2,6 +2,7 @@
 title: "Contentstack Management - Global Fields Actions"
 description: "Use the Contentstack Management Global Fields action to automate fetching a specific or all the global fields from a stack."
 url: /agent-os/contentstack-management-global-fields-actions
+uid: bltfb1211e6060ce9dc
 ---
 
 # Contentstack Management - Global Fields Actions
@@ -20,11 +21,11 @@ This action fetches the details of all the global fields in a stack.
 
 1.  Under **Choose an Action** tab, select the **Get All Global Fields** action.
 2.  On the **Get All Global Fields Configure Action** page, enter the details given below:
-    1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](/docs/agent-os/contentstack-management#connect-your-contentstack-account) step.
+    1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](/docs/agent-os/about-contentstack-management-actions) step.
     2.  Select a **Stack** and **Branch** from the **Lookup** list.
-        
+
         **Note:** By default, the **main** branch is selected (even if the **Branch** field is empty).
-        
+
     3.  Click the **Include branch details** checkbox to include the branch details of the global fields.  
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4476849f54abb78a/6628cae9528fc1e8b055b524/Select_Fields.png)
 3.  Once done, click **Proceed**.
@@ -39,11 +40,11 @@ This action fetches the details of a single global field in a stack.
 
 1.  Under **Choose an Action** tab, select the **Get a Single Global Field** action.
 2.  On the **Get a Single Global Field Configure Action** page, enter the details given below:
-    1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](/docs/agent-os/contentstack-management#connect-your-contentstack-account) step.
+    1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](/docs/agent-os/about-contentstack-management-actions) step.
     2.  Select a **Stack**, **Branch**, and **Global Field** from the **Lookup** list.
-        
+
         **Note:** By default, the **main** branch is selected (even if the **Branch** field is empty).
-        
+
     3.  Click the **Include branch details** checkbox to include the branch details of the global field.  
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte1e48d9e29d79faf/6628cadd528fc1d68c55b51b/Select_Fields.png)
 3.  Once done, click **Proceed**.

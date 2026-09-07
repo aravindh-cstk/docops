@@ -2,6 +2,7 @@
 title: "Use Branches and Aliases to Drive Continuous Integration and Deployment"
 description: "Learn how to drive continuous integration and deployment using branches and aliases in Contentstack's developer documentation."
 url: /headless-cms/use-branches-and-aliases-to-drive-continuous-integration-and-deployment
+uid: bltcf383a3be49aeb08
 ---
 
 # Use Branches and Aliases to Drive Continuous Integration and Deployment
@@ -55,7 +56,7 @@ To assign an alias to the Production branch, perform the following steps:
     -   **Target Branch:** Select the "production" branch from which you want to display content on your website.
 4.  Click on **Save** to save your alias assignment update.
 5.  ![aliases.gif](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltaadcf8548e6a3520/615a8671e289fa55888ed5c1/aliases.gif)
-    
+
 
 ## Use Alias ID in Frontend Code
 
@@ -87,7 +88,7 @@ You can test the changes until they are ready to deploy to production.
 
 For major changes to the stack, e.g., redesigning the marketing website, you usually add or remove content types along with their entries. You will add or update content types or entries on the "development" or "redesign" branch.  
 
-Once the "development" branch changes have been tested and are ready for production, you can use the [Contentstack interface](/docs/introducing-the-new-contentstack) or [Content Management API](/docs/developers/apis/content-management-api) to change the target branch that supplies data to the front-end application. You don't need to make changes to your code every time you have to update live data.
+Once the "development" branch changes have been tested and are ready for production, you can use the [Contentstack interface](https://www.contentstack.com/docs) or [Content Management API](/docs/developers/apis/content-management-api) to change the target branch that supplies data to the front-end application. You don't need to make changes to your code every time you have to update live data.
 
 **Note:** Before you apply the content modeling changes to your production data, you need to ensure that your frontend website code is updated with the corresponding changes required for implementation. To ensure that you can revert to the original content model in case of any issues, you must ensure that the code is backward compatible.
 
@@ -103,7 +104,7 @@ Branches and aliases help enhance the DevOps process and achieve Continuous Inte
 
 <table><tbody><tr><td><p>Contentstack Activities</p></td><td><p>CI/CD Phases</p></td></tr><tr><td><ul><li>Fork out a development branch out of the "main" production branch</li><li>Change the content models as required</li></ul></td><td><p>Build</p></td></tr><tr><td><ul><li>Perform unit testing and quality analysis</li></ul></td><td><p>Test</p></td></tr><tr><td><ul><li>Update frontend code with the latest implementation</li><li>Apply the content modeling changes to the production branch</li></ul></td><td><p>Merge</p></td></tr><tr><td><ul><li>Deploy changes to the production environment</li></ul></td><td spellcheck="false"><p>Deploy</p></td></tr></tbody></table>
 
-  
+
 
 ## Benefits of Integrating Contentstack with your CI/CD Pipeline
 

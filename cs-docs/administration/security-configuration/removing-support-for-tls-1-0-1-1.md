@@ -2,6 +2,7 @@
 title: "Removing Support for TLS 1.0 & 1.1"
 description: "Removing Support for TLS 1.0 & 1.1"
 url: /administration/removing-support-for-tls-1-0-1-1
+uid: blt1e2fdb554ad2c41f
 ---
 
 # Removing Support for TLS 1.0 & 1.1

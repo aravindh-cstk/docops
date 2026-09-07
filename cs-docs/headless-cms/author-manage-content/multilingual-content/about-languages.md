@@ -2,6 +2,7 @@
 title: "About Languages"
 description: "Explore Contentstack's robust multilingual capabilities to easily create, publish, and localize content in over 200 languages, all without coding."
 url: /headless-cms/about-languages
+uid: blt1e37ece5f68b287b
 ---
 
 # About Languages
@@ -12,7 +13,7 @@ Contentstack has a sophisticated multilingual capability. Using this, you can [c
 
 **Note:** When working within specific branches, languages added or created will be available only in that particular branch. Refer to our [Branch-specific Modules](/docs/headless-cms/branch-specific-modules) document for more information.
 
-Contentstack supports [more than 200 languages](/docs/headless-cms/list-of-supported-languages) to manage your content. Thus, you can create different content to meet the needs of different people in different places at different times.
+Contentstack supports [more than 200 languages](/docs/headless-cms/supported-languages) to manage your content. Thus, you can create different content to meet the needs of different people in different places at different times.
 
 For example, you have a website supporting English and French language. In this case, you can add languages to your stack and create entries for these languages. Once you publish the content for French locale, that content will only be visible for French section of your website. 
 

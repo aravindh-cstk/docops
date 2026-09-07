@@ -2,6 +2,7 @@
 title: "Get Started with React Native SDK"
 description: "steps for getting started with React Native SDK"
 url: /developers/sdks/content-delivery-sdk/react-native/get-started-with-react-native-sdk
+uid: blt941b7a0b5b8bf895
 ---
 
 # Get Started with React Native SDK
@@ -128,4 +129,4 @@ let blogQuery = Stack.ContentType('example').Query();
 ## More Resources
 
 -   [React Native API Reference](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference/)
--   [React Native SDK Changelog](/docs/developers/sdks/content-delivery-sdk/javascript-browser/javascript-sdk-changelog/)
+-   [React Native SDK Changelog](/docs/changelog?filter=sdks)

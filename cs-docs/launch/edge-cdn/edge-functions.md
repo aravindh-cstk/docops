@@ -2,6 +2,7 @@
 title: "Edge Functions"
 description: "Learn about using Edge Functions in Contentstack Launch."
 url: /launch/edge-functions
+uid: blt460abcb9b9b6d2fe
 ---
 
 # Edge Functions
@@ -215,7 +216,7 @@ Follow the steps given below to deploy a project that does not have a website bu
 
 When the Launch edge function initiates fetch requests (even to the external domains), they pass through the cache layer, where all static pages are cached by default.
 
-However, it does respect the response headers for [cache control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) that the origin server (or the external server) returns. Please ensure that the APIs you retrieve data from include cache control headers in their responses to avoid unintentional caching.
+However, it does respect the response headers for [cache control](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) that the origin server (or the external server) returns. Please ensure that the APIs you retrieve data from include cache control headers in their responses to avoid unintentional caching.
 
 **Note**:
 
@@ -242,15 +243,15 @@ Launch throws an Edge functions deployment error when it is unable to deploy you
 -   **Non-Compliant Dependencies**: Your code imports packages or uses APIs that are not WinterCG compliant. This includes commonly used NPM packages that leverage Node.js APIs not listed in the [WinterCG common minimum set](https://common-min-api.proposal.wintercg.org/).
 -   **Bundling failed**: Bundling your Launch Cloud Function failed due to a syntax error in your code or missing dependencies in package.json which are used by the Cloud Function(s).
 -   **Misconfigured environment variables**: Deployment may fail if environment variables contain extra spaces, quotes, or newline characters (\\n) in private keys.
-    
+
     **Examples:**
-    
+
     | **Case** | **Avoid** | **Suggested** |
     | --- | --- | --- |
     | Enclosing quotes | key="1234" | key=1234 |
     | Extra space | key=a bc | key=abc |
     | Newline characters | \-----BEGIN OPENSSH PRIVATE KEY----- \\\\nFAKEKEY1234567890abcdefghijklmnopqrstuv -----END OPENSSH PRIVATE KEY----- | \-----BEGIN OPENSSH PRIVATE KEY----- FAKEKEY1234567890abcdefghijklmnopqrstuv -----END OPENSSH PRIVATE KEY----- |
-    
+
 
 ## Launch Edge Functions Deployment Consistency
 
@@ -269,14 +270,14 @@ Additionally, your logs from the latest deployed Edge Functions may stay associa
 
 Blue-Green Deployment involves running two app versions simultaneously: Blue (the previous version) and Green (the latest version). Traffic initially flows to the Blue version while the Green version is tested and verified. Once the Green version is ready, traffic is smoothly shifted to it, ensuring a seamless transition with no downtime and enabling a quick rollback if needed.
 
-**GitHub Repository**: [https://github.com/launch-examples/edge-blue-green-deployments](https://github.com/launch-examples/edge-blue-green-deployments)  
+**GitHub Repository**: [https://github.com/launch-examples/edge-blue-green-deployments](https://github.com/contentstack-launch-examples/edge-blue-green-deployments)  
 **Demo URL**: [https://edge-blue-green.contentstackapps.com/](https://edge-blue-green.contentstackapps.com/)
 
 ### Device-Based Content Delivery
 
 In Device-Based Content Delivery, content is customized for each device type, ensuring an optimized user experience. By detecting the accessing device, requests are directed to tailored versions, enhancing efficiency and user satisfaction.
 
-**GitHub Repository**: [https://github.com/launch-examples/edge-device-adaptation](https://github.com/launch-examples/edge-device-adaptation)  
+**GitHub Repository**: [https://github.com/launch-examples/edge-device-adaptation](https://github.com/contentstack-launch-examples/edge-device-adaptation)  
 **Demo URL**: [https://edge-device-adaptation.contentstackapps.com/](https://edge-device-adaptation.contentstackapps.com/)
 
 ### Authenticate with Contentstack SSO
@@ -286,4 +287,4 @@ Contentstack Launch already offers basic [password protection](/docs/launch/pass
 Please checkout the repository README to understand the JWT + OAuth flow and also for instructions on how to set it up yourself.
 
 **GitHub Repository**: [https://github.com/contentstack-launch-examples/edge-sso](https://github.com/contentstack-launch-examples/edge-sso)  
-**Demo URL**: [https://edge-sso.contentstackapps.com/](https://edge-sso.contentstackapps.com/)
+**Demo URL**: [https://edge-sso.contentstackapps.com/](https://edge-sso.contentstackapps.com/login)

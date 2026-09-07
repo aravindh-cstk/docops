@@ -2,6 +2,7 @@
 title: "View Publish Status of Entries/Assets in Publish Queue"
 description: "View and track the publishing and deployment status of entries and assets in the Publish Queue."
 url: /headless-cms/view-publish-status-of-entries-assets-in-publish-queue
+uid: blte18497431b654680
 ---
 
 # View Publish Status of Entries/Assets in Publish Queue
@@ -69,13 +70,13 @@ The following statuses may appear:
 -   **Approval(s) Pending**: Items awaiting approval.
 -   **Skipped**: Items already published in the selected environment and locale.
 -   **Cancelled**: Items that were manually canceled before publishing.
-    
+
 -   **Deployed**: Items successfully deployed to the target environment.
 
 **Note**
 
 -   When an entry references a taxonomy that is not localized in the locale being published, the publish job **will show a Failed status for the taxonomy**, and the taxonomy is not published for that locale. Any terms belonging to that taxonomy that are localized in the locale still publish successfully.
-    
+
 -   You cannot cancel individual items within a scheduled publish job. You can only cancel the entire job.
 
 ## Publish Status Icons
@@ -86,10 +87,10 @@ These icons provide quick visual cues:
 
 -   **Green “i” icon**: The latest version is published to the environment.
 -   **Orange “i” icon**: An older version is published to the environment.
-    
+
 -   **Gray clock icon**: The item is scheduled for future publishing.
-    
+
 
 ![publish_status.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt8fde3d423a2bdfcb/637b58fedeb37610ecbb7584/publish_status.png)
 
-**Additional Resource:** Learn how to cancel scheduled publishing or unpublishing for [entries](/docs/content-managers/publish-content/cancel-scheduled-publishing-or-unpublishing-for-entries) or [assets](/docs/headless-cms/cancel-scheduled-publish-unpublish-activity-for-assets) from the Publish Queue.
+**Additional Resource:** Learn how to cancel scheduled publishing or unpublishing for [entries](/docs/headless-cms/cancel-scheduled-publishing-or-unpublishing-for-entries) or [assets](/docs/headless-cms/cancel-scheduled-publish-unpublish-activity-for-assets) from the Publish Queue.

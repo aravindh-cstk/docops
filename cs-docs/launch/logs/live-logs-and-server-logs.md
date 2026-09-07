@@ -2,6 +2,7 @@
 title: "Live Logs and Server Logs"
 description: "Learn how to use Live Logs and Server Logs in Contentstack Launch to monitor and review runtime server logs for your deployments."
 url: /launch/live-logs-and-server-logs
+uid: blt0fec81de34846aca
 ---
 
 # Live Logs and Server Logs
@@ -15,7 +16,7 @@ Contentstack Launch provides two views for inspecting the runtime server logs ge
 
 Both are available in the Logs section on the deployment detail page and share the same Search and Source filters.
 
-**Note:** This document does not cover Deployment Logs, which show output from the build and deploy pipeline. Refer to the [Deployments](/docs/developers/launch/deployments) documentation for details on Deployment Logs.
+**Note:** This document does not cover Deployment Logs, which show output from the build and deploy pipeline. Refer to the [Deployments](/docs/launch/deployments) documentation for details on Deployment Logs.
 
 ## Prerequisites
 
@@ -26,13 +27,13 @@ Both are available in the Logs section on the deployment detail page and share t
 ## What You Will Learn
 
 -   The difference between Live Logs and Server Logs.
-    
+
 -   How to start, view, pause, and end a Live Logs streaming session.
-    
+
 -   How to view, load, and filter Server Logs.
-    
+
 -   The limits that apply to each view.
-    
+
 
 ## Live Logs
 

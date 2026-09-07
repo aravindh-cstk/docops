@@ -2,6 +2,7 @@
 title: "Code Block"
 description: "The Code Block Connector executes the JavaScript code and returns the expected output."
 url: /agent-os/code-block
+uid: blt3c26056878a4d01c
 ---
 
 # Code Block
@@ -24,24 +25,24 @@ Perform the following steps to set up the Code Block action connector:
     ![Select_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc6b4d45a991f298c/6625f55cbb6372773d1ddde7/Select_Action.png)
 5.  On the **Javascript Code Configure Action** tab, enter the details given below:
     1.  Under the **Select Account** drop-down, select one of the accounts connected to your project. The sensitive information, such as access code, secret key, API key, etc., is fetched from the selected account.
-        
+
         **Note:** _Select Account_ is an optional field. You can still configure the action without selecting an account.
-        
+
         ![Select_Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt240bb310b9bce0da/6625f55cb0ec770f52d6c630/Select_Account.png)
     2.  Provide the **Input Name** and **Input Value** you want to use in your JavaScript code. You can get the input data from the previous step.
     3.  Provide the **JavaScript Code** for execution.
-        
+
         You can debug the code at multiple lines using the console.log code. This will help identify the errors or failures at different stages of the code.
-        
+
         You can view the console.log in the payload, once you test the action as shown in step 8.
-        
+
         ![Code_Block_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdbb1762e854c2e42/668243a2b6a6c8a2248fa935/Code_Block_Fields.png)
-        
+
         **Note:**
-        
-        1.  The automation code uses [Node.js 18.x.x](https://nodejs.org/en/download/package-manager) version for executions.
+
+        1.  The automation code uses [Node.js 18.x.x](https://nodejs.org/en/download) version for executions.
         2.  The console.log output cannot be viewed in the payload if the string exceeds 4 kilobytes in length.
-        
+
 6.  Click **Proceed**.
 7.  Click **Test Action** to test the configured action.  
     ![Test_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd8a729378083db06/6625f55cc9de461eead47388/Test_Action.png)You will get the response.  

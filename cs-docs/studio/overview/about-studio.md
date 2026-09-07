@@ -2,6 +2,7 @@
 title: "About Studio"
 description: "Design pages visually with Studio using drag and drop UI, templates, and real-time data; no coding is required."
 url: /studio/about-studio
+uid: blt4806ea3dedd962f6
 ---
 
 # About Studio
@@ -14,7 +15,7 @@ Studio is a web experience builder designed for enterprise use. It enables devel
 
 With its intuitive visual interface, teams can drag and drop components to build structured layouts. Developers can layer in business logic and integrations where needed, enabling business users to create pages and layouts within defined guardrails, without compromising code quality.
 
-You can create projects, link them to a [stack](/docs/developers/set-up-stack/about-stack), and build dynamic pages from scratch or with pre-built templates. Features like content type support, real-time data binding, and responsive layouts make it easy to design and launch content-rich pages, without writing code.
+You can create projects, link them to a [stack](/docs/headless-cms/about-stack), and build dynamic pages from scratch or with pre-built templates. Features like content type support, real-time data binding, and responsive layouts make it easy to design and launch content-rich pages, without writing code.
 
 ## Who Is It For?
 
@@ -40,35 +41,35 @@ Explore the main features that make Studio powerful and flexible.
 Studio consists of three tightly integrated components that work together to bridge design, code, and content management.
 
 1.  **Contentstack Figma Plugin**
-    
+
     Use the Contentstack Figma Plugin to convert design elements into Studio-ready components.
-    
+
     -   **Simple UI Components**: Paste design elements directly into Studio Canvas.
     -   **Interactive Components**: For complex elements (e.g., carousels), use the plugin with Agentic CLI to auto-generate code with embedded logic and token mappings.
-        
+
         This ensures designers can hand off functional components without extra dev cycles.
-        
+
 2.  **Agentic CLI**
-    
+
     The Agentic CLI is a developer tool that converts Figma designs into production-ready components.
-    
+
     -   Automates code generation and component registration
     -   Aligns with design tokens and themes
     -   Reduces setup time and enforces consistency
-    
+
     Ideal for scaling component handoffs across large teams.
-    
+
 3.  **Studio Canvas**
-    
+
     Studio Canvas is the visual workspace where teams collaboratively build and publish pages.
-    
+
     -   Use pre-registered or imported components
     -   Edit only developer-exposed sections
     -   Bind CMS fields to components
     -   Preview and publish changes instantly
-    
+
     Canvas enforces design system rules, helping non-technical users create safely within brand standards.
-    
+
 
 ## Why Use Studio?
 

@@ -2,6 +2,7 @@
 title: "Create Personalized Content"
 description: "Create personalized content in Contentstack using Variants to target audience segments effectively."
 url: /personalize/create-personalized-content
+uid: blt43c2f001b884904b
 ---
 
 # Create Personalized Content
@@ -28,14 +29,14 @@ Personalize creates a [Variant group](/docs/headless-cms/manage-variant-groups) 
 Follow these steps to navigate to the variant group in the CMS and begin creating personalized content:
 
 1.  In the top navigation bar, click the **App Switcher** icon and then click **Personalize**.
-2.  You will be redirected to the Personalize Projects landing page, select the project that contains the experience you want to work with.
+2.  The Personalize Projects landing page appears. Select the project that contains the experience you want to work with.
 3.  From the list of experiences, click the experience you want to open.
 4.  Click the **Information** icon on the right to open the side drawer.
 5.  Scroll down to the **Contentstack CMS Sync Status** section. This section displays details about the connected stack and variant group.
 6.  Click the **Variant Group** link.
-    
+
     ![Contentstack CMS Sync Status with Variant Group link](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc480bdf855c91178/6930fe5f41f0926cd859185e/image3.png)
-    
+
 7.  This opens up the linked Variant Group’s page in the stack settings.
 
 ### From the CMS Stack
@@ -51,18 +52,14 @@ To access Variants, log in to your [Contentstack account](https://www.contentsta
     Associating a variant group with specific content type allows you to personalize the content of the entries based on the content types.  
     ![Linked Content Types field in a variant group](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcb91a7701115b5a0/6930fe7129f9d952670deeef/image2.png)
 5.  Click **Apply**, then click **Save**.
-    
-    **Additional Resources:** For more information, refer to [Linking Content Types.](/docs/headless-cms/manage-variant-groups#link-content-types)
-    
 6.  You can now create entry variants by modifying the fields or sections as needed to personalize content.
-    
-    **Additional Resources:** For more information, refer to [Variants](/docs/personalize/about-variants) and [Create Entry Variants.](/docs/headless-cms/create-an-entry-variant)
-    
 7.  You can now publish the entries for the rendered pages to be personalized.
+
+**Additional Resource:** For more information, refer to [Linking Content Types](/docs/headless-cms/manage-variant-groups#link-content-types), [Variants](/docs/personalize/about-variants), and [Create Entry Variants](/docs/headless-cms/create-an-entry-variant).
 
 **Note:** Personalize uses the variant-to-entry mapping to decide in real time which content each user sees based on their audience group.
 
-**Note:** When configuring what content is delivered to a specific visitor, we need to ensure that a visitor views the most relevant and impactful content even when it qualifies for multiple personalized content variations. This is when we need to resolve the conflict on which variant should be shown.
+**Note:** When configuring content delivery for a specific visitor, ensure that the visitor views the most relevant and impactful content, even when the content qualifies for multiple personalized variations. Resolve the conflict over which variant to show when content qualifies for multiple variations.
 
 ## Personalize Content in Isolation Using Branches
 
@@ -84,9 +81,9 @@ To personalize content in an isolated branch, log in to your [Contentstack accou
 4.  Go to Settings > Variants, open the variant group, and link the content types you want to personalize. This assignment applies to the current branch only.
 5.  Create and test your entry variants in the development branch. These entry variants are isolated and do not appear on other branches.
 6.  When the experience works as intended, merge the variant group configuration (including linked content types) from your development branch into your main branch.
-    
+
     **Note:** The variant group and its variants are shared globally. Only the content type assignment and the entry variants you create are isolated per branch.
-    
+
 
 **Additional Resource:** For the full CMS behavior, including how to merge variant groups across branches, refer to [Branch Support for Variants](/docs/headless-cms/branch-support-for-variants) and [Manage Variant Groups](/docs/headless-cms/manage-variant-groups).
 
@@ -158,17 +155,17 @@ When multiple experiences are active on a single page, multiple variants may nee
 This can lead to two possible scenarios:
 
 1.  **Scenario 1:** Multiple Experiences Target Different Sections
-    
+
     If multiple experiences target different sections on a page, the experiences are automatically layered.
-    
+
     Each section is optimized according to the content of its active variant.
-    
+
 2.  **Scenario 2:** Multiple Experiences Target the Same Section
-    
+
     If multiple experiences target the same section of a page, **experience prioritization** is required. The experience prioritization can be set up in Personalize.
-    
+
     When this happens, the variant associated with the higher-priority experience is displayed to the user.
-    
+
 
 Layering and prioritization together ensure that the applied personalization reflects the complete visitor context and delivers an optimal user experience.
 

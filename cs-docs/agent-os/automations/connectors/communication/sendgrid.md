@@ -2,6 +2,7 @@
 title: "SendGrid"
 description: "SendGrid"
 url: /agent-os/sendgrid
+uid: blte3aedb33c9af02f2
 ---
 
 # SendGrid
@@ -18,12 +19,12 @@ Perform the following steps to set up the SendGrid action connector:
 2.  Click **Action Step** to configure third-party services.
 3.  Within the **Configure Action Step**, click the **SendGrid** connector.  
     ![Sendgrid.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt145c5b9c9ae8b5c8/6527f8e169ac257a41176c58/Sendgrid.png)  
-    
+
 4.  Under **Choose an Action** tab, select the **Send Email** action.   
     ![Select-Action](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5f097179293e2fb3/63db9d4814a2b44fa11dec62/Select-Action.png)
 5.  Click the **\+ Add New Account** button to set up your SendGrid account (see screenshot in next step).  
     ![Add-Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt369c6870cf7b0c43/63db9d470b15864e35bded0d/Add-Account.png)
-6.  In the Authorize modal, enter a **Title** for your connection and your SendGrid account API Key. Then click **Authorize**. For more information, refer to the [How to create an API key](https://docs.sendgrid.com/ui/account-and-settings/api-keys) document.   
+6.  In the Authorize modal, enter a **Title** for your connection and your SendGrid account API Key. Then click **Authorize**. For more information, refer to the [How to create an API key](https://www.twilio.com/docs/sendgrid/ui/account-and-settings/api-keys) document.   
     ![Authorize.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt30f1beb47bf3801d/63db9d47d0a39b6b6a9bd8aa/Authorize.png)
 7.  On the **Configure Action** page, enter the **From** and **To** email address, the **Subject** line, the **Body Type**, and the **Body** of the email.   
     ![Select-Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4ea4c43c7ce703a3/63db9d4786b8be36ce831d65/Select-Fields.png)

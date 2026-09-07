@@ -2,6 +2,7 @@
 title: "Use the Sync API With iOS SDK"
 description: "steps for using the Sync API With iOS SDK"
 url: /developers/sdks/content-delivery-sdk/ios/use-the-sync-api-with-ios-sdk
+uid: blt4cf6d9d54ced5ac7
 ---
 
 # Use the Sync API With iOS SDK
@@ -389,6 +390,6 @@ stack.syncOnly( < content_type_id > , locale: ENGLISH_UNITED_STATES , from: < st
 
 ## More resources
 
--   [iOS playground app](https://github.com/contentstack/contentstack-ios-sync-playground.git)
+-   [iOS playground app](https://github.com/contentstack/contentstack-ios-sync-playground)
 -   [iOS SDK API reference](/docs/developers/sdks/content-delivery-sdk/ios/reference/)
 -   [View and Download iOS SDK repository on GitHub](https://github.com/contentstack/contentstack-ios)

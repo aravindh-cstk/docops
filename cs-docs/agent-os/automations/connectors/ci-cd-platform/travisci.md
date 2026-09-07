@@ -2,6 +2,7 @@
 title: "TravisCI"
 description: "TravisCI"
 url: /agent-os/travisci
+uid: bltbce205ce79c3b339
 ---
 
 # TravisCI
@@ -20,20 +21,20 @@ Perform the following steps to set up TravisCI action connector:
 2.  Click **Action Step** to configure third-party services.
 3.  Within the **Configure Action Step**, click the **TravisCI** connector.  
     ![TransCI.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt91c7cb303e5181dc/6527f8e1884a1a09d8df2db2/TransCI.png)  
-    
+
 4.  Under **Choose an Action** tab, select the **Trigger a Build** action.  
     ![Select-Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc773a04a7433017a/63db8e6ecdef8636cd80b81a/Select-Action.png)
 5.  In the **Configure Action** tab, click**\+ Add New Account** to add your TravisCI account.  
     ![Add-New-Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta8ac9c72c2011adc/63db8e6e260a9a2054c6c8a1/Add-New-Account.png)
 6.  In the **Authorize** pop-up window, provide the **API Token**.
 7.  To generate an API Token, log in to the TravisCI dashboard and perform the following steps:
-    
+
     1.  Under User Settings, select **Settings**.
     2.  Under the **Settings** tab, copy the **Token** value.  
         ![API.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7a5ad985110526f5/63db8e6eeace6a21b8fc1819/API.png)  
-        
-        **Additional Resource:** For more information, refer to the [Token](https://blog.travis-ci.com/2013-01-28-token-token-token/) document.
-        
+
+        **Additional Resource:** For more information, refer to the [Token](https://www.travis-ci.com/blog/2013-01-28-token-token-token) document.
+
 8.  Once done, click**Authorize**.  
     ![Authorize.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3d1a7f6b4f737588/63db8e6d4cd3b46624f76167/Authorize.png)
 9.  Select a **Repository** from the **Lookup** list. You need to integrate your GitHub or Bitbucket repositories within TravisCI.

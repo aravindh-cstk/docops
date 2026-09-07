@@ -2,6 +2,7 @@
 title: "Contentstack Management - Branches Actions"
 description: "Use the Contentstack Management Branches actions to automate branch based operations."
 url: /agent-os/contentstack-management-branches-actions
+uid: bltf9b14a962e48773e
 ---
 
 # Contentstack Management - Branches Actions
@@ -22,11 +23,11 @@ This action creates a new branch in a stack.
 
 1.  Under **Choose an Action** tab, select the **Create a Branch** action.
 2.  On the **Create a Branch** **Configure Action** page, enter the details given below:
-    1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](/docs/agent-os/contentstack-management#connect-your-contentstack-account)step.
+    1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](/docs/agent-os/about-contentstack-management-actions)step.
     2.  Select a **Stack** and **Branch** from the **Lookup** list. The new branch will be a copy of the source branch.
-        
+
         **Note:** By default, the **main** branch is selected.
-        
+
     3.  Provide a **Branch UID**. The Branch UID must be lowercase, with no spaces, and maximum 15 characters.  
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta07a84d693b91307/6628a385cac84890bf28d7aa/Select_Fields.png)
 3.  Once done, click **Proceed**.
@@ -41,15 +42,15 @@ This action deletes an existing branch in a stack.
 
 1.  Under **Choose an Action** tab, select the **Delete a Branch** action.
 2.  On the **Delete a Branch Configure Action** page, enter the details given below:
-    1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](/docs/agent-os/contentstack-management#connect-your-contentstack-account) step.
+    1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](/docs/agent-os/about-contentstack-management-actions) step.
     2.  Select a **Stack** and **Branch** from the **Lookup** list. The selected branch will be deleted.  
-        
+
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta2b10497e8aea9db/6628a391c9de465b73d48dc6/Select_Fields.png)
 3.  Once done, click **Proceed**.
 4.  Click **Test Action** to test the configured action.
-    
+
     **Warning:** This deletes all the content types and assets in the selected branch.
-    
+
     ![Test_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltadd15580ff3bc08b/6601a8d101e3118155cb0b30/Test_Action.png)
 5.  The output will be shown as follows. Click the **Save and Exit** button.  
     ![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1f01134bb4086947/6628a39145f9899bc3cf572d/Save_Exit.png)
@@ -60,7 +61,7 @@ This action fetches the details of all the branches in a stack.
 
 1.  Under **Choose an Action** tab, select the **Get All Branches** action.
 2.  On the **Get All Branches** **Configure Action** page, enter the details given below:
-    1.  Click **+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](/docs/agent-os/contentstack-management#connect-your-contentstack-account) step.
+    1.  Click **+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](/docs/agent-os/about-contentstack-management-actions) step.
     2.  Select a **Stack** from the **Lookup** list.
     3.  **\[Optional\]** Enable the **Show Optional Fields** toggle button to display the **Branch Limit** and **Skip Branch (Pagination)** fields.  
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7a81ece4a5d8c195/662f634da9b0ab21f6b946bd/Select_Fields.png)
@@ -76,7 +77,7 @@ This action fetches the details of a single branch in a stack.
 
 1.  Under **Choose an Action** tab, select the **Get a Single Branch** action.
 2.  On the **Get a Single Branch Configure Action** page, enter the details given below:
-    1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](/docs/agent-os/contentstack-management#connect-your-contentstack-account) step.
+    1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](/docs/agent-os/about-contentstack-management-actions) step.
     2.  Select a **Stack** and **Branch** from the **Lookup** list. The details of the selected branch will be fetched.  
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt21363845e5cecaea/6628b57551b16f2837c4e019/Select_Fields.png)
 3.  Once done, click **Proceed**.
@@ -91,16 +92,16 @@ This action lets you merge the content types and global fields from a compare br
 
 1.  Under **Choose an Action** tab, select the **Merge Branch** action.
 2.  On the **Merge Branch Configure Action** page, enter the details given below:
-    1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](/docs/agent-os/contentstack-management#connect-your-contentstack-account) step.
+    1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](/docs/agent-os/about-contentstack-management-actions) step.
     2.  Select a **Stack**, **Compare Branch**, and **Base Branch** from the **Lookup** list.
-        
+
         The content types and global fields are copied from the **Compare** (source) branch into the **Base** (target) branch based on the **Merge Strategy**.
-        
+
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt24890b50c623d9d4/662a59b9b0544170749a0c71/Select_Fields.png)
     3.  Select a **Merge Strategy** to merge the branch content.
-        
+
         Let’s look at each of them in detail:
-        
+
         1.  **Merge Prefer Base:** This will merge the changes from the compare branch into the base branch. In case of conflicts, it will retain the base branch changes.
         2.  **Merge Prefer Compare:** This will merge the changes from the compare branch into the base branch. In case of conflicts, it will retain the compare branch changes.
         3.  **Overwrite With Compare:** This will overwrite the base branch changes with compare branch changes.
@@ -122,7 +123,7 @@ This action fetches the details of a single merge job in a stack.
 
 1.  Under **Choose an Action** tab, select the **Get a Single Merge Job** action.
 2.  On the **Get a Single Merge Job** **Configure Action** page, enter the details given below:
-    1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](/docs/agent-os/contentstack-management#connect-your-contentstack-account) step.
+    1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](/docs/agent-os/about-contentstack-management-actions) step.
     2.  Select a **Stack** and **Merge Job** from the **Lookup** list.  
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt424a33befd419ee7/662a59aba02ad73f2aeea9c9/Select_Fields.png)
 3.  Once done, click **Proceed**.

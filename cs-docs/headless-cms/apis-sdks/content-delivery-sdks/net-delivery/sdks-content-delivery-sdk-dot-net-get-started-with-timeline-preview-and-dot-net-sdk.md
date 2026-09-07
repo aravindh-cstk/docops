@@ -2,6 +2,7 @@
 title: "Get Started with Timeline Preview in the .NET SDK"
 description: "Enhance your .NET app with Contentstack's Timeline Preview for debugging, campaign validation, and content preview before launch."
 url: /developers/sdks/content-delivery-sdk/dot-net/get-started-with-timeline-preview-and-dot-net-sdk
+uid: bltfd899703b7ebc3d4
 ---
 
 # Get Started with Timeline Preview in the .NET SDK
@@ -150,7 +151,7 @@ The [Live Preview Utils SDK](/docs/developers/sdks/utils-sdk/javascript/about-ja
 Store secrets in environment variables and bind them to configuration options.
 
 -   Use placeholders (${...}) when your configuration pipeline resolves them at runtime.
--   Map environment variables directly in [ASP.NET Core configuration](https://learn.microsoft.com/aspnet/core/fundamentals/configuration/) when you are not using a placeholder-based pipeline.
+-   Map environment variables directly in [ASP.NET Core configuration](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-10.0) when you are not using a placeholder-based pipeline.
 
 **Note:** Load CONTENTSTACK\_PREVIEW\_TOKEN only in your .NET server environment. Never expose it in client bundles or browser-readable config. This applies to both rendering modes:
 
@@ -404,7 +405,7 @@ https://yourapp.com/api/preview/page/sale_homepage?preview_timestamp=2024-12-01T
 
 CSR apps (Blazor WebAssembly, React, Angular, Vue, or any browser-rendered frontend) use the same backend preview endpoint pattern as SSR:
 
--   The browser calls your [ASP.NET Core API](https://learn.microsoft.com/aspnet/core/)
+-   The browser calls your [ASP.NET Core API](https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-10.0)
 -   The server runs LivePreviewQueryAsync and performs the entry fetch
 
 You still follow standard preview fundamentals. CSR adds concerns at the browser boundary, including:
@@ -677,5 +678,5 @@ Ensure each test:
 -   [JavaScript Live Preview Utils SDK](/docs/developers/sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk)
 -   [.NET News App](/docs/developers/sdks/content-delivery-sdk/dot-net/get-started-with-dot-net-delivery-sdk)
 -   [.NET SDK API Reference](/docs/developers/sdks/content-delivery-sdk/dot-net/reference/)
--   [.NET SDK Changelog](/docs/developers/sdks/content-delivery-sdk/dot-net/dot-net-sdk-changelog/)
+-   [.NET SDK Changelog](/docs/changelog?filter=sdks)
 -   [Contentstack .NET SDK Repository](https://github.com/contentstack/contentstack-dotnet)

@@ -2,6 +2,7 @@
 title: "ChatGPT"
 description: "Use the ChatGPT connector to generate responses for text and images using the OpenAI platform."
 url: /agent-os/chatgpt
+uid: blt5b212b7d7bcb242d
 ---
 
 # ChatGPT
@@ -27,19 +28,19 @@ To generate an API Key and Organization ID in your [OpenAI platform account](htt
     ![Create_New_Secret_Key.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb526272ddc675674/6684f11bb84bce84b608c691/Create_New_Secret_Key.png)
 3.  On the **Create new secret key** modal, enter a **Name (Optional)** and select the appropriate **Permissions**. Click the **Create secret key** button to generate a new secret key.  
     ![Create_Secret_key_Popup.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta4c132221c0f68ce/6684f11cfb37928994687854/Create_Secret_key_Popup.png)
-    
+
     An API Key gets generated. Copy it to your clipboard and click the **Done** button to close the pop-up box.
-    
+
     ![Copy_Key.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt24cb2b3497724dad/6684f11bc98488fe375e2776/Copy_Key.png)
-    
+
     **Note:** Since the API Key is confidential, it is displayed only once. In case you do not copy it to your clipboard, you will need to create a new secret key.
-    
+
 4.  We will now see how to get the Organization ID. So from the top-right corner, click **Settings**, and you will get the **Organization ID**.  
-    
+
     Copy the organization ID to your clipboard and paste it in the Organization ID field.
-    
+
     **Note:** Make sure you save the API Key and Organization ID to your clipboard, as these will be used to [connect your ChatGPT account](#connect-your-chatgpt-account) in the next step.
-    
+
 
 ### Connect your ChatGPT Account
 
@@ -66,9 +67,9 @@ Perform the following steps to set up the ChatGPT action connector:
 2.  Then, click **Action Step** to configure third-party services.
 3.  Within **Configure Action Step**, click the **ChatGPT** connector.  
     ![Select_Connector.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt05cda8c6bd270c2c/6684ee71c984887baa5e2750/Select_Connector.png)
-    
+
     **Note:** You can sort and search the connector(s) based on the filter.
-    
+
 4.  Under **Choose an Action**, you will see five actions: **Chat**, **Chat with Vision**, **DALL-E 3 Image Generator**, **Function Calling**, **Function Calling Response**, **Prompt**, and **Translate an Entry**.  
     ![Select_Actions.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7fddae8295fea0b7/6793afb6d46d4547f9cdedb6/Select_Actions.png)
 
@@ -82,35 +83,35 @@ The Chat action returns the chat response(s) from the OpenAI platform. To use th
 2.  On the **Chat Configure Action** page, enter the details given below:
     1.  Click **\+ Add New Account** button to connect your ChatGPT account as shown in the [Connect your ChatGPT Account](#connect-your-chatgpt-account) step.
     2.  Select the **API Model** from the drop-down list to generate content for the chat responses.
-        
+
         **Note:** Different models are available to different users based on the account the user holds such as paid accounts. You must check the account access before selecting the model.
-        
-        **Additional Resource:** For more information about the API Models, please refer to [ChatGPT API Models](https://platform.openai.com/docs/models).
-        
+
+        **Additional Resource:** For more information about the API Models, please refer to [ChatGPT API Models](https://developers.openai.com/api/docs/models).
+
     3.  Provide the **Prompt Text** to generate the chat response(s).
     4.  Select the **Role** from the drop-down options to send to the API model request. By default, the role is set to **user**.
-        
+
         **Additional Resource:** There are three types of roles provided by the OpenAI platform. The **system** role sets the response context, the **assistant** role provides the response content, and the **user** role asks the prompt.
-        
+
     5.  Enter the value in the **Input Query** field.  
         ![Select_Chat_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt803014458afd81f1/668238acb6a6c837e68fa901/Select_Chat_Fields.png)
     6.  Click the **Show Optional Fields** toggle button to use these optional fields:
         1.  Select the **Response** **Type** as either **Text**, **JSON** or **Structured** **Output**. For the **Response** **Type** as **JSON** or **Structured** **Output**, the output is produced in a valid JSON format. By default, the response in ChatGPT is fetched in **Text** format.
-            
+
             **Note:** Ensure you are using the _gpt-3.5-turbo-1106_ model and above to access and correctly use the Response Type field in the connector.
-            
+
             When selecting **Structured** **Output** as the **Response** **Type**, you must provide a valid JSON-formatted structured schema to ensure a properly formatted response.
-            
+
             **Note**:
-            
+
             -   To utilize [Structured Output](https://developers.openai.com/api/docs/assistants/tools/function-calling#using-structured-outputs), all fields or function parameters must be marked as required.
             -   A schema can include up to 100 object properties in total, with a maximum of 5 levels of nesting.
             -   Structured Output generates only specified keys and values. To enable this functionality, you must set additionalProperties: false.
-            
+
             Structured Output is supported for GPT-4o-mini models from versions _gpt-4o-mini-2024-07-18_, _gpt-4o-mini-2024-08-06_, and later.
-            
+
             **Additional Resource:** See the [JSON Schema](https://json-schema.org/) documentation for more details.
-            
+
         2.  Enter the **Number of Tokens** to generate the content. This must be within the range of 1 to 2048.
         3.  Enter a value for the **Randomness of Responses** of the generated content. 0 being the most precise and 2 being the most random content predictions. This must be within the range of 0 to 2.
         4.  Enter the **Number of Chat Responses** you want to be generated in the automation response. This must be within the range of 1 to 3.
@@ -132,18 +133,18 @@ With the Chat with Vision action, you can generate response(s) for images, provi
 
 1.  Under **Choose an Action** tab, select the **Chat with Vision** action.
 2.  On the **Chat with Vision Configure Action** page, enter the details given below:
-    
+
     1.  Click **\+ Add New Account** button to connect your ChatGPT account as shown in the [Connect your ChatGPT Account](#connect-your-chatgpt-account) step.
     2.  Select the **API Model** from the drop-down list for response predictions. You can select, the **gpt-4-vision-preview** API model. This model will be available as _gpt-4-vision_ after production support.
-        
-        **Additional Resource:** For more information about the API Models, please refer to [ChatGPT API Models](https://platform.openai.com/docs/models).
-        
+
+        **Additional Resource:** For more information about the API Models, please refer to [ChatGPT API Models](https://developers.openai.com/api/docs/models).
+
     3.  Provide the **Prompt Text** to generate response(s). Click **\+ Add Prompt Text** to enter multiple prompts.
-        
+
         **Note:** For the Role as **system** or **assistant**, you will see the Prompt Text box to enter the text to generate response. If you select the **Role** as **user**, you can select the type of prompt content, i.e. Text or Image.
-        
+
     4.  If you select Role as _user_ then follow the below steps:
-        
+
         1.  Under the Prompt Input section, click **\+ Add Prompt Input** button.
         2.  In the **Select Prompt Type** drop-down, select the type of content, i.e. **Text** or **Image** to generate a response.
         3.  Enter the **Prompt Value**. You can enter a text prompt or a valid image URL to generate a response.  
@@ -161,15 +162,15 @@ With the Chat with Vision action, you can generate response(s) for images, provi
         ![Test_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt92a2b2a8e44fa8f5/65969f53c4b62015a1fb814d/Test_Action.png)
     8.  You will get the response(s). Once set, click **Save and Exit**.  
         ![Save_And_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt138baf2bb77f26b4/65969f53b05b9e283ad735fd/Save_And_Exit.png)
-    
+
     ### Action 3: Select the **DALL-E 3 Image Generator** action
-    
+
     The DALL-E 3 Image Generator action allows you to generate an image based on the text prompt and returns a URL for the generated image as a response from the OpenAI platform. To use the DALL-E3 Image Generator action, follow the steps below:
-    
+
     1.  Under **Choose an Action** tab, select the **DALL-E 3 Image Generator** action.
     2.  On the **DALL-E 3 Image Generator Configure Action** page, enter the details given below:
         1.  Click **\+ Add New Account** button to connect your ChatGPT account as shown in the [Connect your ChatGPT Account](#connect-your-chatgpt-account) step.  
-            
+
         2.  Provide the **Prompt Text** for generating an image.
         3.  In the **Select Image Size** drop-down, choose the resolution for the image generation. This generates an image in the selected size.
         4.  In the **Select Style** drop-down, choose the style for the image generation. By default, the image is generated in **Vivid** style.
@@ -180,26 +181,26 @@ With the Chat with Vision action, you can generate response(s) for images, provi
         ![Test_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte7fe9217c71c2cff/65df75cd2c8bef4ff7621f0c/Test_Action.png)
     5.  You will get the response(s). Once set, click **Save and Exit**.  
         ![Save_Exit_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7c115bf255a9fc4b/65df75cdd778b0307aad601b/Save_Exit_Button.png)
-    
+
     You have the option to utilize the URL of the generated image within your Contentstack entries. Additionally, you can automate the process of adding the image to your entries.
-    
+
     ### Action 4: Select the **Function Calling** action
-    
+
     The Function Calling action allows you to generate the responses based on a configured Sub Automation. Within the Function Calling action, you have the flexibility to include various sub-automations, which ChatGPT will analyze to generate and return responses accordingly. To use the Function Calling action, follow the steps below:
-    
+
     1.  Under **Choose an Action** tab, select the **Function Calling** action.
     2.  On the **Function Calling Configure Action** page, enter the details given below:
-        
+
         1.  Click **\+ Add New Account** button to connect your ChatGPT account as shown in the [Connect your ChatGPT Account](#connect-your-chatgpt-account) step.  
-            
+
         2.  Select the **API Model** from the drop-down list for response predictions.
-            
-            **Additional Resource:** For more information about the API Models, please refer to [ChatGPT API Models](https://platform.openai.com/docs/models).
-            
+
+            **Additional Resource:** For more information about the API Models, please refer to [ChatGPT API Models](https://developers.openai.com/api/docs/models).
+
         3.  Provide the **Prompt Text** to generate response(s). Click **\+ Add Prompt Text** to add multiple prompts.
-            
+
             **Note:** For the Role as **system** or **assistant**, you see the Prompt Text box to enter the text to generate response. If you select the Role as **user**, you can select the type of prompt content, i.e. Text or Image.
-            
+
         4.  Under the Prompt Input section, click **\+ Add Prompt Text** button.
         5.  Select the Role and enter the **Input Query**. You can enter an input query i.e., Translate to German language.
         6.  Click **\+ Add Sub Automation** to add multiple sub automations.  
@@ -214,19 +215,19 @@ With the Chat with Vision action, you can generate response(s) for images, provi
             ![ChatGPT_Function_Calling_Test_Action](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd3e90930e85cd8e2/65c37e7617201a6aa44ac796/ChatGPT_Function_Calling_Test_Action.png)
         10.  You will get the response(s). Once set, click **Save and Exit**.  
              ![ChatGPT_Function_Calling_Save_Exit](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcc0b1db8204af939/65c37e767998da1d0e6b5317/ChatGPT_Function_Calling_Save_Exit.png)
-        
+
         ### Action 5: Select the **Function Calling Response** action
-        
+
         With the Function Calling Response action, you can format the output from the Function Calling action and the Sub Automation. To use the Function Calling Response action, follow the steps below:
-        
+
         1.  Under **Choose an Action** tab, select the **Function Calling Response** action.
         2.  On the **Function Calling Response Configure Action** page, enter the details given below:
             1.  Click **\+ Add New Account** button to connect your ChatGPT account as shown in the [Connect your ChatGPT Account](#connect-your-chatgpt-account) step.  
-                
+
             2.  Select the **API Model** from the drop-down list for response predictions.
-                
-                **Additional Resource:** For more information about the API Models, please refer to [ChatGPT API Models](https://platform.openai.com/docs/models).
-                
+
+                **Additional Resource:** For more information about the API Models, please refer to [ChatGPT API Models](https://developers.openai.com/api/docs/models).
+
             3.  In the **Function Calling Response** field, select the output from the previous Function Calling action step.
             4.  In the **Sub Automation Response** field, select the output from the sub automation.  
                 ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbeccc4a2a9d06da5/660d2db904d34cd431bdae5a/Select_Fields.png)
@@ -240,19 +241,19 @@ With the Chat with Vision action, you can generate response(s) for images, provi
             ![ChatGPT_Function_Calling_Response_Test_Action](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4120baa978f3ff08/65c3863ce7bf98d7c96d33f9/ChatGPT_Function_Calling_Response_Test_Action.png)
         6.  You will get the response(s). Once set, click **Save and Exit**.  
             ![ChatGPT_Function_Calling_Response_Save_Exit](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte224cab0521fcebb/65c3863c554798b38180a30c/ChatGPT_Function_Calling_Response_Save_Exit.png)
-        
+
         ### Action 6: Select the **Prompt** action
-        
+
         The Prompt action returns the generated response(s) for the prompt provided via an automation in Automate. To use the Prompt action, follow the steps below:
-        
+
         1.  Under **Choose an Action** tab, select the **Prompt** action.
         2.  On the **Prompt Configure Action** page, enter the details given below:
             1.  Click **\+ Add New Account** button to connect your ChatGPT account as shown in the [Connect your ChatGPT Account](#connect-your-chatgpt-account) step.  
-                
+
             2.  Select the **API Model** from the drop-down list for response predictions.
-                
-                **Additional Resource:** For more information about the API Models, please refer to [ChatGPT API Models](https://platform.openai.com/docs/models).
-                
+
+                **Additional Resource:** For more information about the API Models, please refer to [ChatGPT API Models](https://developers.openai.com/api/docs/models).
+
             3.  Provide the **Prompt Text** to generate response(s).  
                 ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt219b2f97a6ff11c7/660d30051d996f0c9f152422/Select_Fields.png)
             4.  Click the **Show Optional Fields** toggle button to use these optional fields:
@@ -280,21 +281,21 @@ The Translate an Entry action returns the translated entry data in the response.
 2.  On the **Translate an Entry Configure Action** page, enter the details given below:
     1.  Click **\+ Add New Account** button to connect your ChatGPT account as shown in the [Connect your ChatGPT Account](#connect-your-chatgpt-account) step.
     2.  Select the **API** **Model** from the dropdown list for response predictions.
-        
-        **Additional Resource:** For more information about the API Models, please refer to [ChatGPT API Models](https://platform.openai.com/docs/models).
-        
+
+        **Additional Resource:** For more information about the API Models, please refer to [ChatGPT API Models](https://developers.openai.com/api/docs/models).
+
     3.  In the **Entry** **Data** field, enter the entry data to translate.
     4.  In the **Content** **Type** **Schema** field, enter the content type schema for translating the entry data.
-        
+
         You can fetch the **Entry** **Data** and **Content** **Type** **Schema** from the previous step using the [Get a Single Content Type](/docs/agent-os/contentstack-management-content-types-actions#get-a-single-content-type) and [Get a Single Entry](/docs/agent-os/contentstack-management-entries-actions#get-a-single-entry) actions.
-        
+
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt21cccd8fd431165a/6793afb7d46d45deb2cdedba/Select_Fields.png)
     5.  In the **Select** **Language** drop-down, select the language in which you want to translate the entry data.
     6.  Click the **Show Optional Fields** toggle button to use these optional fields:
-        
+
         1.  Provide the **Prompt** **Text** to generate the response. This offers additional capabilities to customize the translated entry data.
         2.  Enter the **Number** **of** **Tokens** to generate the content. By default, the token limit is 2000.
-        
+
         ![Sow_Optional_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta323c7c25882841c/6793afb77d9db22565c0ab9c/Sow_Optional_Fields.png)
     7.  Click **Proceed**.
     8.  Check if the details are correct. If yes, then click **Test Action**.  

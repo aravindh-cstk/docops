@@ -2,6 +2,7 @@
 title: "Create a Delivery Token"
 description: "Unlock seamless access to secure published content with Contentstack's Delivery Tokens for websites and apps. Perfect for developers managing environments."
 url: /headless-cms/create-a-delivery-token
+uid: bltf3c25c7528b48628
 ---
 
 # Create a Delivery Token
@@ -17,11 +18,11 @@ To create a Delivery Token, log in to your [Contentstack account](https://www.co
 1.  Click the “Settings” icon or use the shortcut key “S” (for Windows and Mac OS users).
 2.  Click **Tokens** in the settings panel.
 3.  Click **\+ Delivery Token** to create a new token.
-    
+
     **Tip:** If you are on the [Management Tokens](/docs/headless-cms/about-management-tokens) tab, you can press “Alt + O” (for Windows users) or “Option + O” (for Mac users) to navigate to the Delivery Tokens tab.
-    
+
     ![Create Delivery Token UI](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt11e5a85189e4c3de/67f66c214de86407df8ae954/1._Create_Delivery_Token-navigation.png)
-    
+
 4.  Enter a **Name** (required) and a **Description** (optional) for the Delivery Token.
 5.  In the **Scope** section, choose the **Branches** or [**Aliases**](/docs/headless-cms/about-aliases) you want to associate with this token.
 6.  Select the **Publishing Environments** for which you want to generate the Delivery Token.
@@ -36,9 +37,9 @@ To create a Preview Token for an existing Delivery Token:
 
 1.  Select a Delivery Token from the **Tokens** page.
 2.  Click **\+ Create Preview Token** at the bottom of the page.
-    
+
     ![Create Preview Token UI](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt78a6581b9ce11367/67f66c203202bbe889ac7b2c/3._Create-Delivery-Token_Create-Preview-Token.png)
-    
+
 
 **Note:** A Delivery Token is configured for a specific environment and can only retrieve content from that environment.
 

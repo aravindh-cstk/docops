@@ -2,6 +2,7 @@
 title: "Go-Live Guide"
 description: "Go live with Contentstack Launch! Learn key steps for smooth deployment, domain routing, TLS setup, and website performance optimization."
 url: /launch/go-live-guide
+uid: bltbcc36f485e621e72
 ---
 
 # Go-Live Guide
@@ -139,7 +140,7 @@ Before going live, thoroughly test your application in all configured environmen
 
 ### Security
 
--   Implement a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) to control the sources of scripts, styles, and images, reducing potential vulnerabilities.
+-   Implement a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP) to control the sources of scripts, styles, and images, reducing potential vulnerabilities.
 -   Utilize [Role-Based Access Control (RBAC)](/docs/launch/users) in Launch to manage team access effectively.
 -   Regularly audit and update user access to ensure only authorized users have the appropriate roles.
 -   Implement IP-based access controls (Allow and Restrict) to manage access to trusted networks, block suspicious or malicious IPs, protect internal environments, and support compliance with regulatory standards (see: [IP Allow Example](https://github.com/contentstack-launch-examples/launch-edge-ip-allowlist-example), [IP Restrict Example](https://github.com/contentstack-launch-examples/launch-edge-ip-restrict-example)).

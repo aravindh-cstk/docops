@@ -2,6 +2,7 @@
 title: "Reopen a Discussion"
 description: "Reopen resolved discussions in Contentstack for further collaboration."
 url: /headless-cms/reopen-a-discussion
+uid: blt546afd97fedf0acc
 ---
 
 # Reopen a Discussion

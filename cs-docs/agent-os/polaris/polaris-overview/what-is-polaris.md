@@ -2,6 +2,7 @@
 title: "What is Polaris"
 description: "Learn what Polaris is and how Contentstack’s AI co-pilot helps teams automate real CMS tasks with context, governance, and built-in controls."
 url: /agent-os/what-is-polaris
+uid: bltbe216089404ff875
 ---
 
 # What is Polaris
@@ -17,7 +18,7 @@ Polaris is built to address this gap by applying AI where it matters most: **ins
 Polaris is **Contentstack’s built-in AI co-pilot**, that offers:
 
 -   **Faster CMS actions:** Perform real CMS operations directly within the interface quickly.
--   **Contextual assistance:** Al automatically understands the content ([Entry](/docs/headless-cms/about-entries), [Asset](/docs/headless-cms/about-assets), or [Visual Editor](/docs/content-managers/visual-editor/about-visual-editor)) a user is working on, eliminating the need to explain the task or location.
+-   **Contextual assistance:** Al automatically understands the content ([Entry](/docs/headless-cms/about-entries), [Asset](/docs/headless-cms/about-assets), or [Visual Editor](/docs/headless-cms/about-visual-editor)) a user is working on, eliminating the need to explain the task or location.
 -   **Direct execution:** Execute complex CMS actions (updating fields, modifying metadata, applying visual changes) using the same rules and permissions as the Ul, unlike generic Al chat tools.
 
 ## What Can You Do with Polaris

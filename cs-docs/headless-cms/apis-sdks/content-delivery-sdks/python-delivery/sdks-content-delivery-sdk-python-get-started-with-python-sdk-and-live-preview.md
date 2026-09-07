@@ -2,6 +2,7 @@
 title: "Get Started with Python SDK and Live Preview"
 description: "Get Started with Python SDK and Live Preview"
 url: /developers/sdks/content-delivery-sdk/python/get-started-with-python-sdk-and-live-preview
+uid: blt06146469cd6f6930
 ---
 
 # Get Started with Python SDK and Live Preview
@@ -21,37 +22,37 @@ This guide explains how to integrate Live Preview with the  [Python SDK](/docs/
 To use the Contentstack Python SDK with your existing project, perform the following steps:
 
 1.  Open the terminal, create a project, and move inside it as follows:
-    
+
     ```
     mkdir project_name
     cd project_name
     ```
-    
+
 2.  Create a virtual environment:
-    
+
     ```
     python3 -m venv venv
     ```
-    
+
 3.  Activate the virtual environment:  
     For macOS/Linux:
-    
+
     ```
     source venv/bin/activate
     ```
-    
+
     For Windows:
-    
+
     ```
     venv\Scripts\activate
     ```
-    
+
 4.  Install pip Contentstack as follows:
-    
+
     ```
     pip install contentstack flask
     ```
-    
+
 
 You can download the latest dependency version [here](https://pypi.org/project/Contentstack/).
 
@@ -113,7 +114,7 @@ entry\_uid
 Now, let’s create a Flask app to display the fetched entry details dynamically.
 
 1.  **Create a File app.py**
-    
+
     ```
     from flask import Flask, render_template
     import contentstack
@@ -151,9 +152,9 @@ Now, let’s create a Flask app to display the fetched entry details dynamically
     if __name__ == '__main__':
         app.run(debug=True, port=5000)
     ```
-    
+
 2.  **Create a Template File templates/indec.html**
-    
+
     ```
     <!DOCTYPE html>
     <html>
@@ -172,17 +173,17 @@ Now, let’s create a Flask app to display the fetched entry details dynamically
     </body>
     </html>
     ```
-    
+
 3.  **Testing the Live Preview Integration**
-    
+
     Run the following code and start the Flask server:
-    
+
     ```
     python app.py
     ```
-    
+
     Open a browser and go to http://localhost:5000.Modify the entry in Contentstack and observe real-time changes.
-    
+
 
 ## For Server-side Rendered Websites
 
@@ -209,5 +210,5 @@ For more information, refer to our [Timeline Preview](/docs/headless-cms/set-up-
 
 -   [JavaScript Live Preview Utils SDK](/docs/developers/sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk)
 -   [API Reference](/docs/developers/sdks/content-delivery-sdk/python/reference/)
--   [Python SDK Changelog](/docs/developers/sdks/content-delivery-sdk/python/python-sdk-changelog/)
+-   [Python SDK Changelog](/docs/changelog?filter=sdks)
 -   [View and Download Python SDK repository on GitHub](https://github.com/contentstack/contentstack-python)

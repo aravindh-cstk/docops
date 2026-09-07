@@ -2,6 +2,7 @@
 title: "Transfer Stack Ownership"
 description: "Easily transfer stack ownership in Contentstack during team changes with our step-by-step guide. Only current owners can initiate the transfer."
 url: /headless-cms/transfer-stack-ownership
+uid: blt308b76f37d62c62d
 ---
 
 # Transfer Stack Ownership
@@ -21,13 +22,13 @@ To transfer stack ownership, log in to your [Contentstack account](https://www.c
 
 1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Settings” icon or use the shortcut key “S” (for both Windows and Mac OS users).
 2.  On the **Stack Settings** page, click **Transfer Ownership**.
-    
+
     ![Transfer Ownership option in Contentstack settings](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blteab5d652f2acd1c3/67bf1d8c959e4ea6c3e47c2f/Setup-a-Stack-Transfer-stack-Ownership-Transfer-Ownership-button.png)
-    
+
 3.  Enter the recipient email address and click **Transfer Ownership.**
-    
+
     ![Enter email for stack ownership transfer in Contentstack](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb37bbfb07f5d41f0/67bf1ddd809db01f0fb4feb8/setup-a-stack-transfer-stack-ownership-email-field.png)
-    
+
 
 **Note:** Make sure the recipient is an existing Contentstack user.
 

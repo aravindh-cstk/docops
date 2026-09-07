@@ -2,6 +2,7 @@
 title: "Migrate .NET Delivery SDK from Newtonsoft.Json to System.Text.Json"
 description: "Upgrade your Contentstack Delivery .NET SDK by migrating to System.Text.Json, with this comprehensive guide to handle breaking changes and simplify code."
 url: /developers/sdks/content-delivery-sdk/dot-net/migrate-dotnet-delivery-sdk-from-newtonsoft.json-to-system.text.json
+uid: blt21e8a2416badca1f
 ---
 
 # Migrate .NET Delivery SDK from Newtonsoft.Json to System.Text.Json
@@ -17,7 +18,7 @@ This guide shows the System.Text.Json replacement for each affected area and the
 ## Prerequisites
 
 -   The [Contentstack Delivery .NET SDK](https://www.nuget.org/packages/contentstack.csharp) version 3.x.x or later, installed in your project.
--   [.NET 10](https://dotnet.microsoft.com/) or later.
+-   [.NET 10](https://dotnet.microsoft.com/en-us/) or later.
 
 ## Breaking Changes Reference
 
@@ -454,5 +455,5 @@ Use this checklist to verify you have completed every change before removing the
 
 ## Next Steps
 
--   [System.Text.Json overview (Microsoft)](https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-overview). Background on the serializer the SDK now uses, including supported types and configuration options.
+-   [System.Text.Json overview (Microsoft)](https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/overview). Background on the serializer the SDK now uses, including supported types and configuration options.
 -   [Migrate from Newtonsoft.Json to System.Text.Json (Microsoft)](https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/migrate-from-newtonsoft?pivots=dotnet-10-0). Microsoft's API-by-API migration reference for cases beyond the SDK-specific changes covered here.
