@@ -94,7 +94,7 @@ Venus note: **warning = red #d62400**, **attention = amber #ffae0a**, **info = c
 
 ## Type Scale
 
-**Deck slides (1920×1080):** | Role | Size / weight / tracking | | --- | --- | | Eyebrow / overline | 19px · 700 · .16em · UPPERCASE · purple | | H1 (title slide) | 88px · 700 · \-0.03em | | H2 (section) | 54–60px · 700 · \-0.025em | | Sub / lede | 24–28px · 400 · 1.5 | | Card title | 26–27px · 600 | | Card body | 18–20px · 400 · 1.45–1.5 | | Small meta label | 14px · 700 · .06–.12em · UPPERCASE |
+**Deck slides (1920×1080):** | Role | Size / weight / tracking | | --- | --- | | Eyebrow / overline | 19px · 700 · .16em · UPPERCASE · purple | | H1 (title slide) | 88px �� 700 · \-0.03em | | H2 (section) | 54–60px · 700 · \-0.025em | | Sub / lede | 24–28px · 400 · 1.5 | | Card title | 26–27px · 600 | | Card body | 18–20px · 400 · 1.45–1.5 | | Small meta label | 14px · 700 · .06–.12em · UPPERCASE |
 
 **Mental-model graphics (1280 wide):** | Role | Size / weight | | --- | --- | | H1 | 29–33px · 700 · \-0.02em | | Section label (THE IDEA…) | 11px · 700 · .13em UPPERCASE | | Column / lane label | 9.5–11px · 700 · .08–.1em UPPERCASE | | Card title | 13.5–14.5px · 600 | | Card body | 11–12.5px · 400 · 1.35–1.4 | | Mono (code/chips) | 10.5–12.5px · 500/600 |
 
