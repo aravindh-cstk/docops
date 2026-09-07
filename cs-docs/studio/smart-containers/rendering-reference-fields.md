@@ -2,6 +2,7 @@
 title: "Rendering Reference Fields"
 description: "Learn how to render Contentstack reference fields on the canvas using Repeaters and Condition Blocks, including single-CT and multi-CT patterns."
 url: /studio/rendering-reference-fields
+uid: blt845b4cb78b73487c
 ---
 
 # Rendering Reference Fields
@@ -14,7 +15,7 @@ A **Reference field** in Contentstack points to one or more entries, either to a
 
 Studio's own hint copy says this explicitly. When you try to bind a component to a field that lives on a referenced entry from inside a Repeater, the canvas prompts:
 
-> _"The selected component will be wrapped inside a Condition component to support Contentstack schema requirements."_ composable-studio/src/i18n/translations/canvas.json to wrapDescription.reference
+> _"The selected component will be wrapped inside a Condition component to support Contentstack schema requirements."_ composable-studio/src/i18n/translations/canvas.json to wrapDescription.reference
 
 And again on hover:
 
@@ -47,15 +48,15 @@ A **single-entry** reference (multiple: false) is _not_ a Repeater target. Drop 
 
 Even when only one content type is allowed, you still wrap with a Condition Block, it just has one branch.
 
-![Single-CT reference list rendered with a Repeater bound to blog_post.recommendations and a one-branch Condition Block wrapping a ProductCard](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am78db19fd8461eef3/73d731bfb866e0cfc4c86a12/containers-references-single-ct-tree.png)
+![Single-CT reference list rendered with a Repeater bound to blog_post.recommendations and a one-branch Condition Block wrapping a ProductCard](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/amad237b42c135098d/d84c9a9b0ba3406e1ae10795/containers-references-single-ct-tree.svg)
 
-When you drop the <ProductCard> straight into the Repeater (no Condition Block), Studio's binding hint surfaces _"Add a condition for_ _product_ _schema, then bind the component within it to the hover fields"_ (canvas.json → bindingHint.needs-condition-before). Accepting that prompt wraps the card in a Condition Block automatically.
+When you drop the <ProductCard> straight into the Repeater (no Condition Block), Studio's binding hint surfaces _"Add a condition for product schema, then bind the component within it to the hover fields"_ (canvas.json → bindingHint.needs-condition-before). Accepting that prompt wraps the card in a Condition Block automatically.
 
 ## Multi-CT Reference List
 
 When the reference allows several content types, each iteration of the Repeater might be a different shape. The Condition Block now has **one branch per content type**, and each branch holds a CT-specific component.
 
-![Multi-CT reference list — Page → recommendations field → Repeater → ConditionBlock (inside the Repeater) → three sibling branches (ProductCard, EventCard, ArticleCard) inside the ConditionBlock, each keyed off repeater._content_type_uid](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am830cf8aa0359fc95/ae2d1a70b1b80c9728796167/containers-references-multi-ct-tree.png)
+![Multi-CT reference list — Page → recommendations field → Repeater → ConditionBlock (inside the Repeater) → three sibling branches (ProductCard, EventCard, ArticleCard) inside the ConditionBlock, each keyed off repeater._content_type_uid](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am992134abfc331e19/02f4bf09390a4531792d854e/containers-references-multi-ct-tree.svg)
 
 The discriminator is **\_content\_type\_uid**, Contentstack stamps it on every referenced entry, so it's always available inside the repeater context without any extra setup. Each branch binds props to fields that _that_ content type actually has.
 
@@ -108,14 +109,14 @@ The Condition Block pattern depends on the right branch firing for the right \_c
 5.  **For the Condition Blocks themselves**, select each one in Layers and toggle Preview Mode on too. With both Repeater + Condition Block in preview, you see exactly what a visitor sees, the conditional-skip behavior is now active, so a branch whose condition doesn't match the current iteration won't render at all. This is the surest way to catch a branch that's _never_ firing because its condition is wrong (e.g. value typo in the CT UID).
 6.  **Toggle back to design mode** before going back to layout work. In design mode the Condition Block keeps its children visible regardless of the current iteration, so you can edit the card without it disappearing.
 
-Preview Mode is per-Repeater and per-Condition-Block, so inner containers stay in design mode while you verify the outer iteration. None of this changes published output, at the visitor's runtime the Repeater always iterates and the Condition Block always evaluates. See [Smart Containers → Authoring with Preview Mode](/docs/studio/contentstack-studio-overview) for the full mental model.
+Preview Mode is per-Repeater and per-Condition-Block, so inner containers stay in design mode while you verify the outer iteration. None of this changes published output, at the visitor's runtime the Repeater always iterates and the Condition Block always evaluates. See Smart Containers → Authoring with Preview Mode for the full mental model.
 
 ## Common Pitfalls
 
--   **Skipping the Condition Block on a single-CT reference.** Studio will refuse the direct binding and surface the _"Add a condition for_ _<ct>_ _schema"_ prompt. Add the Condition Block (one branch) and bind inside it.
+-   **Skipping the Condition Block on a single-CT reference.** Studio will refuse the direct binding and surface the _"Add a condition for <ct> schema"_ prompt. Add the Condition Block (one branch) and bind inside it.
 -   **Wrapping a single-entry reference in a Repeater.** If multiple: false, no Repeater, just a Condition Block on the field, with the component bound inside.
--   **Expecting auto-bind across mismatched** **reference\_to** **sets.** One CT added or removed on either side breaks the section auto-bind. Bind manually, or restructure around a Global Field if you need plug-and-play behaviour.
--   **Forgetting** **\_content\_type\_uid** **in the Condition Block.** This is the only reliable discriminator on a multi-CT reference list. Don't try to branch on a field like title that exists in every CT.
+-   **Expecting auto-bind across mismatched reference\_to sets.** One CT added or removed on either side breaks the section auto-bind. Bind manually, or restructure around a Global Field if you need plug-and-play behaviour.
+-   **Forgetting \_content\_type\_uid in the Condition Block.** This is the only reliable discriminator on a multi-CT reference list. Don't try to branch on a field like title that exists in every CT.
 -   **Designing the Condition Block at the wrong altitude.** Put the Condition Block _inside_ the Repeater, not around it. One Condition Block per iteration; not one for the whole list.
 -   **Verifying with a previewed entry that doesn't cover every CT.** You'll only confirm the branches whose CT appears in the sample data, a missing branch wired against a CT not in the previewed entry stays untested. Pick a fixture entry whose reference list spans the full allowed-CT union (see _Verifying multi-CT branches with Preview Mode_ above).
 

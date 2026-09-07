@@ -2,6 +2,7 @@
 title: "Use Slash Command for Shortcuts in JSON RTE"
 description: "Use slash command shortcuts in JSON RTE to quickly format text, add lists, and apply styling—boost your content editing speed and flexibility."
 url: /headless-cms/use-slash-command-for-shortcuts-in-json-rte
+uid: bltbd198f4fb73ca3a2
 ---
 
 # Use Slash Command for Shortcuts in JSON RTE
@@ -25,9 +26,9 @@ Use the following commands to apply formatting styles:
 -   **/paragraph**: Adds plain paragraph text.
 -   **/h1 to /h6**: Inserts heading tags to emphasize titles or subtitles.
 -   **/blockquote**: Creates a styled quote block, separated from surrounding text.
-    
+
     **Note:** To add a line break within the blockquote, use **Shift+Enter**. To exit, press **Enter**.
-    
+
 -   **/code**: Inserts a code block with language-specific syntax highlighting.
 
 ## List Shortcuts

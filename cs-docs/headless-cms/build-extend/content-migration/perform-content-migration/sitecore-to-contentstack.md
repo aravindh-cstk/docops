@@ -2,6 +2,7 @@
 title: "Sitecore to Contentstack"
 description: "Effortlessly migrate content from legacy CMS to Contentstack with our intuitive framework. Streamline the process with easy steps and video guidance."
 url: /headless-cms/sitecore-to-contentstack
+uid: blt6d3432421f9c6556
 ---
 
 # Sitecore to Contentstack
@@ -47,24 +48,24 @@ Follow these steps to perform the content migration for Sitecore:
 
 1.  Select your legacy CMS version.![S2C_5.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt97de56be13ad5db8/6814a469b259395db2bced04/S2C_5.png)
 2.  Add a **2–5 character affix** for the source name. Use only letters, no numbers or special characters. Make sure the affix does not match with one of the [restricted keywords](/docs/headless-cms/restricted-keywords-for-uids).
-    
+
     **Note:** The affix will function as a prefix if the content type UID matches with restricted UIDs. The affix will function as a suffix for field UIDs.
-    
+
 3.  Click **Validate File** to validate the exported content.![S2C_6.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6b33ff717090eda2/6814a469b7c4fc05676980b7/S2C_6.png)
-    
+
     **Note:** If validation fails, it may be caused by one or more of the following issues:
-    
+
     -   **File Format Error**: Ensure the file is in the desired format.
     -   **Missing Content**: Ensure the exported data contains all required content.
     -   **Incomplete Files**: Verify that no files are missing or corrupted.
-    
+
 4.  Click **Save and Continue**.
 
 ### Step 5 - Configure Destination Stack
 
 1.  Either select an existing stack with content types or create a new stack.
 2.  For this guide, we will migrate content to an existing stack.
-    
+
     ![S2C_7.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1dc42f41946ab7f9/6814a46ab55bf310ba07cdd3/S2C_7.png)
 3.  In the **Language Mapping** section, map the source CMS locale to a predefined language in Contentstack.
 4.  Click **Add Language** if multiple locales need to be mapped.![S2C_8.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt46e3f59bd33349ba/6814a46a9b09255830dee8ce/S2C_8.png)
@@ -123,9 +124,9 @@ Use the following advanced options to efficiently manage your mappings:
 -   **Reset to system mapping**: Click the ‘Reset to system mapping’ icon to revert any changes done to the default mappings.
 -   **Select content type from destination stack**: Override the default behavior of creating new content types.
 -   **Fetch content types from destination stack**: If updates are made in the stack during migration, click the icon to fetch changes.
-    
+
     **Note:** If the user has created a new stack in [Step 5](/docs/headless-cms/sitecore-to-contentstack#step-5-configure-destination-stack), they will not see the ‘Fetch content types from destination stack’ icon and the ‘Select Content Type from Destination Stack’ dropdown unless an existing stack was used.
-    
+
 -   **Advanced properties**: Use this option to fine-tune individual field mappings.
 
 ![S2C-12.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbeb557c6b72670e2/6814a4b27a3a7c636eaa6d0e/S2C-12.gif)
@@ -140,9 +141,9 @@ Click **Continue**.
 
 1.  Click **Create Test Stack** to create a sample stack within your organization.
 2.  Click **Start Test Migration** to perform a test migration.![S2C_13.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt541f8d5e55e2d72c/6814a4990dc84f1d4f858c58/S2C_13.png)
-    
+
     **Note:** This migration runs on a small chunk of data to ensure reliability before the full migration.
-    
+
 3.  A success or error message will be displayed in the logs after completion.![S2C_14.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfc6413a9832954ac/6814a4996b233b5b805bb94b/S2C_14.png)
 4.  Click **Continue**.
 

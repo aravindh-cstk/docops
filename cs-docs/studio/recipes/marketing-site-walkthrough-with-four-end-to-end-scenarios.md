@@ -2,6 +2,7 @@
 title: "Marketing Site Walkthrough With Four End-to-End Scenarios"
 description: "A grounded walkthrough of how a marketing team builds blog, product, case study, and campaign landing pages in Studio using connected and freeform templates."
 url: /studio/marketing-site-walkthrough-with-four-end-to-end-scenarios
+uid: blt47322b82989e28fe
 ---
 
 # Marketing Site Walkthrough With Four End-to-End Scenarios
@@ -122,13 +123,13 @@ Goal: marketing wants a one-off campaign landing template at /campaigns/spring-2
 Create a **Freeform Template** named **"Spring 2026 Landing"**:
 
 1.  **Set URL pattern** to /campaigns/spring-2026 (Edit URL modal, only {{composition\_uid}} chip available because there's no entry).
-    
+
 2.  **Pin the campaign entry**: right panel → **Data** tab → **Additional Entry Data** section → Link Entry → pick campaign:spring\_2026.
-    
+
 3.  **Pin the products query**: right panel → **Data** tab → **Queries** section → Add Query → content\_type product, filter featured = true, order by price asc, limit 3.
-    
+
 4.  **Build the canvas**:
-    
+
 
 ![Spring 2026 Landing Freeform template layers tree — Hero bound to pinned campaign entry, Featured plans heading, and a Repeater of Product Cards bound to the pinned products query.](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am5632c976051eb0fc/3247faff99b24ba1c496c767/recipes-marketing-spring-2026-landing.png)
 

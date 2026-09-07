@@ -2,6 +2,7 @@
 title: "Handling Next.js RSC Issues on Launch"
 description: "Resolve Next.js React Server Component issues in the Launch CDN using Edge Functions to prevent cached RSC payloads and ensure correct HTML rendering."
 url: /launch/handling-nextjs-rsc-issues-on-launch
+uid: blt50604db3f05e2577
 ---
 
 # Handling Next.js RSC Issues on Launch
@@ -47,31 +48,31 @@ Fix the issue by using a [Launch Edge Function](/docs/launch/edge-functions/) th
 
 1.  In the /functions directory of your repository, create a file named \[proxy\].edge.js.
 2.  Add the following code to check and modify requests to prevent the RSC issue:
-    
+
     ```
     // [proxy].edge.js
     const RSC_AFFECTED_PATHS = ['/my-rsc-page', '/another-page'];
     const RSC_HEADER = 'rsc';
     const RSC_HEADER_VALUE = '1';
     const RSC_QUERY_PARAM = '_rsc';
-    
+
     export default function handler(request, context) {
       const parsedUrl = new URL(request.url);
       const route = parsedUrl.pathname;
       const rscQueryParamExists = !!parsedUrl.searchParams.get(RSC_QUERY_PARAM);
       const rscHeaderExists = request.headers.get(RSC_HEADER) === RSC_HEADER_VALUE;
       const isAffectedPath = RSC_AFFECTED_PATHS.indexOf(route) > -1;
-    
+
       if (isAffectedPath && !rscQueryParamExists && rscHeaderExists) {
         const modifiedRequest = new Request(request);
         modifiedRequest.headers.delete(RSC_HEADER);
         return fetch(modifiedRequest);
       }
-    
+
       return fetch(request);
     }
     ```
-    
+
 3.  Customize the RSC\_AFFECTED\_PATHS array to include the specific paths where you've encountered the RSC issue.
 4.  Deploy your website to Launch. The edge function will automatically deploy with your site.
 

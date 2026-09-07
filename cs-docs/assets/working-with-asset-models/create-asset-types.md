@@ -2,6 +2,7 @@
 title: "Create Asset Types"
 description: "Create and manage asset types in Contentstack to simplify file identification with custom names and enriched metadata. Ensure consistency and enhance searchability."
 url: /assets/create-asset-types
+uid: bltd9aa594c3653739c
 ---
 
 # Create Asset Types
@@ -29,18 +30,18 @@ To create asset types within Assets, log in to your [Contentstack account](https
     -   **Category** (optional): Select a predefined category (e.g., Images, Documents).
     -   **MIME Type** (required): Enter the MIME type for this asset type (for example, image/jpeg). An asset type corresponds to one MIME type.
     -   **File Extension** (required): Enter the extension for this asset type (for example, .jpg).
-        
+
         The system verifies that the MIME type + file extension pair is unique across all asset types.
-        
+
 4.  In the **Fields** section, click the **+** “Insert a field” icon and select **Existing Field**.
 5.  In the **Select Existing Fields** modal, search and select a field from the list of user-defined fields.
-    
+
     **Tip:** Drag to reorder fields as needed.
-    
+
 6.  Click a field to open **Field Properties** on the right.
-    
+
     **Note:** You can only view field properties on the right panel. To edit, go to the **Fields** section, open the field, and then make changes.
-    
+
 7.  Click **Save Asset Type**.
 
 Your new asset type is now ready to classify files by MIME type and drive accurate, consistent metadata entry.

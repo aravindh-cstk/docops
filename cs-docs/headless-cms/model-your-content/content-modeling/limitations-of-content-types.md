@@ -2,6 +2,7 @@
 title: "Limitations of Content Types"
 description: "Learn the character limits, field restrictions, and versioning rules for Contentstack content types."
 url: /headless-cms/limitations-of-content-types
+uid: bltb9cd9617579016bc
 ---
 
 # Limitations of Content Types

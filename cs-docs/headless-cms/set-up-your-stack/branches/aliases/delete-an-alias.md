@@ -2,6 +2,7 @@
 title: "Delete an Alias"
 description: "Learn how to delete an alias. Discover step-by-step instructions for removing aliases associated with branches in your version control system."
 url: /headless-cms/delete-an-alias
+uid: bltc964f82a6623a4a6
 ---
 
 # Delete an Alias

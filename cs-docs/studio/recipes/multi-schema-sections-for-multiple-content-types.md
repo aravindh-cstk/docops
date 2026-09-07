@@ -2,6 +2,7 @@
 title: "Multi-Schema Sections for Multiple Content Types"
 description: "Learn how to build a single section that auto-binds to multiple content types using a shared Global Field and Studio's structural matching."
 url: /studio/multi-schema-sections-for-multiple-content-types
+uid: blt77014a389407ec03
 ---
 
 # Multi-Schema Sections for Multiple Content Types
@@ -38,9 +39,9 @@ Studio is now bound to the Global Field's shape, not any one content type's fiel
 3.  A **Heading**, bind text to template.heading
 4.  A **Text**, bind to template.description
 5.  A **Button**, bind href to template.cta\_url, label can be a static "See product details" or another binding
-    
+
 6.  **Save**.
-    
+
 
 ![Authored featured_card section on canvas — Box wrapping Image, Heading, Text, and Button, all bound under template.* paths on the linked Global Field](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am25cb0844343a1c4e/e2b21c8432c309637bea5a51/section-featured-card-authored.png)
 

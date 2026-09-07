@@ -2,6 +2,7 @@
 title: "Rename a Language"
 description: "steps to rename a language in Contentstack"
 url: /headless-cms/rename-a-language
+uid: blt8ba0b818bf0846c4
 ---
 
 # Rename a Language
@@ -15,9 +16,9 @@ To rename a language, log in to your [Contentstack account](https://app.contents
 1.  Go to your stack, click the “Settings” icon (press “S”) on the left navigation panel, and select **Languages** (or press “**alt + L**” for Windows OS, and “option + **L**” for Mac OS). You will see the default [master language](/docs/headless-cms/set-the-master-language) along with other added language(s).
 2.  This opens the **Languages** page that displays the list of languages added to the stack. Click on a language to rename it.
 3.  Provide a suitable **Name** for the language. For example, **Hindi - India** can be renamed to **Hindi**.
-    
+
     **Note:** You cannot edit the code of a language
-    
+
 4.  Click on **Save**.
 
 ## API Reference

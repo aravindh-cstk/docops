@@ -2,6 +2,7 @@
 title: "View List of Connected Apps in Automations"
 description: "View, edit, reauthorize, or delete connected apps in Automations for seamless integration control."
 url: /agent-os/view-list-of-connected-apps-in-automations
+uid: blt5596aa915a527463
 ---
 
 # View List of Connected Apps in Automations
@@ -20,14 +21,14 @@ Click any of the connected apps to view its connections. Here, you can **Edit th
 
 **Note:** For apps such as Contentstack and Slack, you can view the **Edit** connection name icon and **Reauthorize** icon. For all the other apps, you can view the **Edit** icon to edit the connection details. **Delete** icon will be visible only if the connection is not being used in any automation (active or inactive).
 
-  
+
 Let’s look at them in detail:  
 
 -   **Edit Connection**: The ‘edit’ icon allows you to edit the connection name. Edit the connection name and click the **Update** button.  
     ![Update_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2d4d00ca0a7850f6/699c18a2676f8800085c0aae/Update_App.png)
 -   **Reauthorize:** The **Reauthorize** button allows you to change the authorizations/permissions assigned to the application. For Slack, it will be displayed as follows:  
     ![Authorize.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt31706bab0e9ebffe/699c18a18d3a6a0008c5b2e1/Authorize.png)  
-      
+
     For other authentications, where you enter credentials (access key), you will only view the edit icon, and you will need to re-enter the credentials.  
     ![Connected_Apps_Contentstack_Connections_Reauthorize_2](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9a32388af7dd754a/63c908aa5d5a091065ee0f2b/Connected-Apps-Contentstack-Connections-Reauthorize-2.png)
 -   For some apps, you must select the organization as shown below:  

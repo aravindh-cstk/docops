@@ -2,6 +2,7 @@
 title: "Remove Asset Version Names"
 description: "Learn how to remove or reset asset version names in Contentstack with step-by-step instructions to keep your asset library organized and easy to manage."
 url: /headless-cms/remove-asset-version-names
+uid: bltb324e8909d612468
 ---
 
 # Remove Asset Version Names

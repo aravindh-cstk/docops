@@ -2,6 +2,7 @@
 title: "Verify Your Studio Setup End-to-End"
 description: "A layered smoke test to confirm your Delivery SDK, Live Preview, Studio SDK, canvas route, template preview, and inline editing are all wired correctly."
 url: /studio/verify-your-studio-setup-end-to-end
+uid: blt679b93736be760f6
 ---
 
 # Verify Your Studio Setup End-to-End

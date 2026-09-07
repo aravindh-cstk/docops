@@ -2,6 +2,7 @@
 title: "Create a Workspace"
 description: "Optimize asset management and collaboration in Contentstack with isolated workspaces for campaigns, experiments, and secure teamwork. Create and manage easily."
 url: /assets/create-a-workspace
+uid: blt46c82747e5191d5c
 ---
 
 # Create a Workspace

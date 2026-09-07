@@ -2,6 +2,7 @@
 title: "Enterprise Setup From Install to First Authored Page"
 description: "End-to-end guide for enterprise teams to install the Studio, Live Preview, and Delivery SDKs, register components, and author the first page in about 30 minutes."
 url: /studio/enterprise-setup-from-install-to-first-authored-page
+uid: blt1f6fb384dedfe286
 ---
 
 # Enterprise Setup From Install to First Authored Page
@@ -9,6 +10,8 @@ url: /studio/enterprise-setup-from-install-to-first-authored-page
 ## Enterprise Setup From Install to First Authored Page
 
 The end-to-end recipe for enterprise teams shipping Studio with their own component library. From a blank app to authors composing pages against your design system, in roughly 30 minutes.
+
+> 🧭 **Before you start — check that Studio is enabled for your organisation.** 10-second app-switcher check; none of the steps below produce a working canvas if Studio isn't turned on.
 
 This recipe assumes: - You have a Contentstack stack with at least one content type (e.g. blog\_post) with a few entries - You have an existing React component library in your app - You have a running app dev server (Next.js, Vite, Remix, or any React framework)
 
@@ -40,7 +43,7 @@ export const stack = Contentstack.stack({
   apiKey:        process.env.NEXT_PUBLIC_CONTENTSTACK_API_KEY!,
   deliveryToken: process.env.NEXT_PUBLIC_CONTENTSTACK_DELIVERY_TOKEN!,
   environment:   process.env.NEXT_PUBLIC_CONTENTSTACK_ENVIRONMENT!,
-  region:        "US",
+  region:        "us",
   live_preview: {
     enable:        true,
     preview_token: process.env.NEXT_PUBLIC_CONTENTSTACK_PREVIEW_TOKEN!,
@@ -178,7 +181,7 @@ export default function StudioRoute() {
   const { specOptions, isLoading, error } = useCompositionData({ url: pathname });
 
   if (isLoading) return <Loading />;
-  if (error)     return <ErrorState message={error.message} />;
+  if (error)     return <ErrorState message={error instanceof Error ? error.message : String(error)} />;
   if (!specOptions?.spec) return <NotFound />;
   return <StudioComponent specOptions={specOptions} />;
 }
@@ -186,7 +189,7 @@ export default function StudioRoute() {
 
 No per-template routes (e.g. app/blog/\[slug\]/page.tsx) are needed; the catch-all covers all of them. Add opt-out routes (/api/\*, /admin/\*) ahead of the catch-all only if you need them.
 
-Detail: [Section preview route](/docs/studio/section-preview-route) · [Template preview routes](/docs/studio/template-preview-routes) · [CSR vs. SSR](/docs/studio/choosing-between-csr-and-ssr-rendering) for SSR / RSC variants.
+Detail: [Section preview route](/docs/studio/section-preview-route) · [Template preview routes](/docs/studio/template-preview-routes) · CSR vs. SSR for SSR / RSC variants.
 
 ## Step 4: Create the Studio Project
 
@@ -277,5 +280,5 @@ Each step has a dedicated skill that walks the same flow.
 ## See Also
 
 -   [Bring your own components](/docs/studio/bring-your-own-components)
--   [Templates](/docs/studio/choosing-between-templates-and-sections)
+-   Templates
 -   [Verify end to end](/docs/studio/verify-your-studio-setup-end-to-end)

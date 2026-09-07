@@ -2,6 +2,7 @@
 title: "Restore a Deleted Global Field"
 description: "Restore a Deleted Global Field"
 url: /headless-cms/restore-a-deleted-global-field
+uid: blt285a9d57cf6ec196
 ---
 
 # Restore a Deleted Global Field
@@ -18,14 +19,14 @@ To restore a deleted Global field from the Trash, log in to your [Contentstack a
 
 1.  Click the “Settings” icon (press “S”) on the left navigation panel and select **Trash** (or press “**alt + T**” for Windows OS, and “option + **T**” for Mac OS).
 2.  Click on the **Global Fields** tab, and hover over the Global field you want to restore (e.g., **SEO Content**).![Restore_a_Deleted_Global_Field_1_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt61d27493d53c4bb0/60c0c84f3fb413770446f70f/Restore_a_Deleted_Global_Field_1_no_highlight.png)  
-      
-    
+
+
 3.  Click on the **Restore** button that appears at the extreme right end.![Restore_a_Deleted_Global_Field_2_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt152d6c7e27aca3de/60c0c85df33fd90fa1ed1447/Restore_a_Deleted_Global_Field_2_highlighted.png)  
-      
-    
+
+
 4.  The Global field will then disappear from the Trash and will be available in the stack.
 5.  You can also add new fields into the Global field schema or remove a field before you restore it back to the stack. Open the Global field schema, add or remove fields, and click on **Restore**.![Restore_a_Deleted_Global_Field_3_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt1037fd93fe3ca52a/60c0c8672d47ce78c28ad109/Restore_a_Deleted_Global_Field_3_highlighted.png)  
-    
+
 
 ## Filter Deleted Global Fields
 

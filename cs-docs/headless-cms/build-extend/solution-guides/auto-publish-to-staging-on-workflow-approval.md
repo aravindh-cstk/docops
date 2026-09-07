@@ -2,6 +2,7 @@
 title: "Auto Publish to Staging on Workflow Approval"
 description: "This guide outlines the process of auto-publishing to the staging environment for the final validation."
 url: /headless-cms/auto-publish-to-staging-on-workflow-approval
+uid: blt3195b31834fe5d18
 ---
 
 # Auto Publish to Staging on Workflow Approval

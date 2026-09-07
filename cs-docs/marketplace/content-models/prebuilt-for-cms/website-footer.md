@@ -2,6 +2,7 @@
 title: "Website Footer"
 description: "The Website Footer Content Model defines the structure, fields, and schema to design the website footer."
 url: /marketplace/website-footer
+uid: blte54f19fe2a136c20
 ---
 
 # Website Footer

@@ -2,6 +2,7 @@
 title: "Studio CLI"
 description: "Learn how to use the Studio CLI to register components, sync designs from Figma, and import design tokens directly from your terminal."
 url: /studio/studio-cli
+uid: blt670599b17e5b19bd
 ---
 
 # Studio CLI
@@ -11,6 +12,8 @@ url: /studio/studio-cli
 The Studio CLI is a code-side tool for registering components, syncing them between Figma and code, and importing design tokens. It runs from your terminal and writes files into your project directly, with no Studio web app interaction needed.
 
 Use it when you want a scriptable, repeatable component registration flow alongside (or instead of) hand-written registerComponent calls.
+
+> **Full CLI reference:** this page covers the CLI from the component-workflow angle. For the complete command reference — including project setup, design-token config, responsive options, and generating Sections — see the Studio CLI chapter.
 
 ## Installation
 
@@ -63,10 +66,16 @@ Find the project ID in Studio, under your project, Settings, General.
 | Command | What it does |
 | --- | --- |
 | studio:project:set | Connect the CLI to a Studio project |
+| studio:project:get | Show the currently active project |
 | studio:component:add | Generate a code component from a Figma design |
 | studio:component:register | Register a local component with Studio |
 | studio:component:sync | Sync existing code components to the Figma plugin |
 | studio:design-token:add | Import or auto-generate design tokens |
+| studio:design-token:config | Update values in the generated design-tokens file |
+| studio:responsive-options:sync | Sync responsive breakpoints to the project |
+| studio:section:create | Generate a Section from a component + a content type |
+
+Full usage and flags: each command has its own page in the Studio CLI chapter. The Section generator has its own walkthrough: Generate a Section.
 
 ## Generate a component from Figma
 
@@ -96,7 +105,7 @@ csdx studio:component:register --component-dir=./src/components/
 
 Scans the file or directory for valid React components, infers their prop schema (TypeScript types, PropTypes, JSDoc), generates the registerComponent calls, and adds them to your Studio components registry. After running, the components appear in Studio's palette under **Registered Components**.
 
-This is the CLI equivalent of the [register-component](/docs/studio/register-components) LLM skill, useful when you prefer terminal commands over chat-driven flows.
+This is the CLI equivalent of the register-component LLM skill, useful when you prefer terminal commands over chat-driven flows.
 
 ## Sync components to the Figma plugin
 
@@ -144,7 +153,7 @@ The CLI also supports moving Studio configurations between stacks:
 -   Import to a target stack
 -   Clone setups between environments (e.g. dev to staging to production)
 
-See [CLI-Supported Features for Export, Import, and Clone Operations](/docs/headless-cms/cli-supported-features-for-export-import-and-clone-operations) for the full list of supported entity types.
+See [CLI-Supported Features for Export, Import, and Clone Operations](/docs/headless-cms/cli-supported-features-for-export-import-and-clone-operations#studio) for the full list of supported entity types.
 
 ## When to use the CLI vs the LLM skills
 

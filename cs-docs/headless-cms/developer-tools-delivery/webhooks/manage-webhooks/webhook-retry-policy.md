@@ -2,6 +2,7 @@
 title: "Webhook Retry Policy"
 description: "Discover Contentstack's exponential webhook retry policy, designed to manage failed notifications with controlled intervals, enhancing reliability and efficiency."
 url: /headless-cms/webhook-retry-policy
+uid: blt2e32f61163f1301c
 ---
 
 # Webhook Retry Policy

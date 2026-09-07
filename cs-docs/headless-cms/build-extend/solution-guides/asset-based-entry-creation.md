@@ -2,6 +2,7 @@
 title: "Asset-based Entry Creation"
 description: "This guide assists in establishing an automated workflow for generating a product page upon creating a new asset."
 url: /headless-cms/asset-based-entry-creation
+uid: bltc66dabdc408579af
 ---
 
 # Asset-based Entry Creation
@@ -22,13 +23,13 @@ Here's the overview of the Automation that you need to create:
     1.  Select the Asset Trigger and choose **Asset Created**
     2.  Select the Stack you want to target with the automation
 2.  Transform Connector
-    
+
     Choose the Transform Connector
-    
+
     1.  We create a bare-bones entry creation payload with the asset details. We assume the product page uses the “Title” and “Description” fields from the asset details page.  
         ![image1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4aff128aa09798ac/65f996cf0780b99f7761dedd/image1.png)
     2.  Below is the snippet you can use to create the entry payload. Feel free to add more details to the JSON, if needed.
-        
+
         ```
         {
             "entry": {
@@ -38,12 +39,12 @@ Here's the overview of the Automation that you need to create:
             }
         }
         ```
-        
+
 3.  Create an Entry Connector
-    
+
     1.  Select the stack and content type from the previous steps
     2.  Entry data should be the transform statement you receive in Step 2
-    
+
     ![image5.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt564237b581b9f498/65f996ce9b2cda26d693f122/image5.png)
 
 ### Automation 2 - Asset Update Detail Page
@@ -59,17 +60,17 @@ Here's the overview of the Automation that you need to create:
     1.  We need to fetch the entry by UID of the asset to update the correct Product Detail Page  
         ![image4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4fbae91d1ac74dd8/65f996cff2a2921840bf5ebd/image4.png)
     2.  Here's the code snippet used above:  
-        
+
         ```
         const apiKey = input.apiKey;
         const deliveryToken = input.deliveryToken;
         const environment = input.environment;
         const contentType = input.contentType;
         const uid = input.assetUID;
-        
+
         // Build the URL for the API request
         const url = `https://cdn.contentstack.io/v3/content_types/${contentType}/entries?environment=${environment}&query={"product_image":"${uid}"}`;
-        
+
         // Set the headers required by Contentstack
         const headers = {
           'Content-Type': 'application/json',
@@ -86,11 +87,11 @@ Here's the overview of the Automation that you need to create:
         } catch (error) {
           return error.message }
         ```
-        
+
 3.  Transform Connector
-    
+
     Below is what the transform statement looks like to update the entry with the new details. As you can see the input values take the title and description from the trigger event.
-    
+
     ![image6.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb01f71a7e5ac902a/65f996cf5fa1c6a5e64be7db/image6.png)
 4.  Update Entry Connector
     1.  Select the **Update Entry** Action  

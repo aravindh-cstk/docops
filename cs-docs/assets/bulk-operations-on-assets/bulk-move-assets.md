@@ -2,6 +2,7 @@
 title: "Bulk Move Assets"
 description: "Learn how to move several assets to a different folder at once in Contentstack. Moving an asset also moves its localized and source versions."
 url: /assets/bulk-move-assets
+uid: blt2f5b0edca727e8d4
 ---
 
 # Bulk Move Assets
@@ -18,19 +19,19 @@ To move multiple assets, you need permission to manage assets in the stack, plus
 
 1.  Navigate to the **Assets** listing page within your space.
 2.  Select the assets you want to move using the checkbox next to each asset.  
-    
+
     **Note:** You can select and move up to **100 assets** at a time. To move more than 100 assets, repeat the process in batches.
-    
+
 3.  The selection toolbar appears above the listing and shows the number of selected assets.
 4.  On the selection toolbar, click **Move To**. The Move Assets modal opens and displays the folder structure of your stack.
 5.  Navigate to the destination folder using one of these options:
-    
+
     -   **Browse**: Click through the folder hierarchy until you reach the folder you want.
     -   **Search**: Enter a folder name in the search field and click **Search**.
     -   **Create a new folder**: Click **Create Folder**, name the folder, and confirm.
-    
+
     **Tip:** Use the **Sort by** dropdown to reorder the list by title, date modified, date created, created by, modified by, or file size.
-    
+
 6.  With the destination folder open, click **Move Here**.
 
 Contentstack moves the selected assets to the destination folder and refreshes the assets listing.

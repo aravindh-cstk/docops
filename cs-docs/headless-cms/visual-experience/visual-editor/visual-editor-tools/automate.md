@@ -2,6 +2,7 @@
 title: "Automate"
 description: "Run predefined automation workflows in Visual Editor to trigger validations, approvals, and custom actions directly from the editing interface."
 url: /headless-cms/automate
+uid: blt6211e6131a195608
 ---
 
 # Automate
@@ -18,9 +19,9 @@ To access the Automate feature in Visual Editor, log in to your [Contentstack ac
 2.  Click **Editor** in the bottom pill menu.
 3.  In the right panel, click the **Automate** icon.
 4.  The sidebar shows available workflows or automation triggers for the current entry variant. Click the “Run” icon to trigger automation.
-    
+
     ![Trigger automation from sidebar](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta5d02e78baf2c0d8/6878f9856567155a030eef9e/2._automate_navigation.png)
-    
+
 5.  In the modal that appears, click **Yes** to confirm your action.
 6.  To trigger automation for a different entry, click the “Back” button to return to the entries list, then select the desired entry to load its automation interface. Alternatively, you can switch entries using the **URL** bar.
 

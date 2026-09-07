@@ -2,6 +2,7 @@
 title: "Scenarios Where Editing a Content Type Is Unsafe"
 description: "There are certain situations where editing a content type can cause some problems. Let’s look at the properties that are not safe and might cause data loss."
 url: /headless-cms/scenarios-where-editing-a-content-type-is-unsafe
+uid: blt9ab619ad01ac412e
 ---
 
 # Scenarios Where Editing a Content Type Is Unsafe

@@ -2,6 +2,7 @@
 title: "Delete an Entry"
 description: "Learn how to safely delete entries in your Contentstack account with step-by-step guidance, tips for recovery, and bulk deletion options."
 url: /headless-cms/delete-an-entry
+uid: blt9a68c626c43533a3
 ---
 
 # Delete an Entry

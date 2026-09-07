@@ -2,6 +2,7 @@
 title: "Customize JSON Rich Text Editor"
 description: "Learn how to customize the JSON Rich Text Editor in Contentstack by configuring toolbar options and applying advanced editor settings."
 url: /headless-cms/customize-json-rich-text-editor
+uid: blt06a83d8879db3bf0
 ---
 
 # Customize JSON Rich Text Editor
@@ -18,9 +19,9 @@ To customize the JSON RTE, log in to your [Contentstack account](https://www.con
 2.  In the **Properties** pop-up of the JSON RTE field, click **Advanced**.
 3.  Under **Editor Type**, choose **Custom**. Select the desired formatting options to include in the toolbar. To enable all options, check the **Select All** checkbox.
 4.  Click **Save** or **Save and Close** to save your content type.
-    
+
     ![Custom JSON RTE configuration](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd308d4f5823a709c/68307cb1cf42ff32af04559c/customize-json-rte-edited.gif)
-    
+
 
 Content managers will see the configured toolbar options when creating or editing entries of this content type.
 

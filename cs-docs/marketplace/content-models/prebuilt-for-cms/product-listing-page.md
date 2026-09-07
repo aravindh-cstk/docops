@@ -2,6 +2,7 @@
 title: "Product Listing Page"
 description: "The Product Listing Page Content Model defines the structure, fields, and schema to list multiple products and their details on a page."
 url: /marketplace/product-listing-page
+uid: blt284355e72013439c
 ---
 
 # Product Listing Page

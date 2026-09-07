@@ -2,6 +2,7 @@
 title: "JSON RTE Custom Element Rendering"
 description: "Learn how to use registerJSONRTE to render custom element types from Contentstack's JSON Rich Text Editor field in Studio compositions."
 url: /studio/json-rte-custom-element-rendering
+uid: blt9443d147392f520e
 ---
 
 # JSON RTE Custom Element Rendering

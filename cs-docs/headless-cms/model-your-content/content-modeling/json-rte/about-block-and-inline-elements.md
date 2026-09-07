@@ -2,6 +2,7 @@
 title: "About Block and Inline Elements"
 description: "Learn the difference between block and inline elements in Contentstack's JSON RTE to create structured, well-formatted content easily."
 url: /headless-cms/about-block-and-inline-elements
+uid: bltf8f5034d62e2e25f
 ---
 
 # About Block and Inline Elements

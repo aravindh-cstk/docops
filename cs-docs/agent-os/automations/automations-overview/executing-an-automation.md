@@ -2,6 +2,7 @@
 title: "Executing an Automation"
 description: "Learn to execute automations in Contentstack's Automate with this step-by-step guide."
 url: /agent-os/executing-an-automation
+uid: blt69cc0eaaf730ddd2
 ---
 
 # Executing an Automation
@@ -31,7 +32,7 @@ To create an Automation, perform the steps given below:
 1.  Log in to your [Contentstack account](https://app.contentstack.com/#!/login) and click the Automate icon.
 2.  Click**\+ New Project** and provide the required details to create a new project.
 3.  Click**\+ New Automation** to add the steps required to configure automations.  
-    
+
 
 **Note:** You can now throttle the execution for your automations to avoid rate limit. For more information, refer to the [Throttle Execution](/docs/agent-os/throttle-execution) document.
 
@@ -55,18 +56,18 @@ Lets configure the Netlify Action connector.
 
 1.  Click **Configure Action Step** from the left navigation panel.  
     ![Configure_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2f14b253bfa8db98/659aaf5dc11c0f7d0ecf917e/Configure_Action.png)  
-    
+
 2.  Within the **Configure Action Step**, click the **Netlify** connector.  
-    
+
     **Note:** You can sort and search the connector(s) based on the filter.
-    
+
     ![Select_the_Netlify_Connector.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9b7121a099ef4a7a/659aaf5d1c5d7c64bd0f3ea1/Select_the_Netlify_Connector.png)
 3.  Select the **Deploy Site** action.  
     ![Select_Netlify_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt07d5ce25517630e7/659aaf5e2f46f72bd7825ab3/Select_Netlify_Action.png)  
-    
+
 4.  In the **Configure Action** tab, click**\+ Add New Account** to add your Netlify account.  
     ![Add_New_Netlify_Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfb654d9f249c0917/659aaf5dbe5d269fdc65ab69/Add_New_Netlify_Account.png)  
-    
+
 5.  To add your Netlify account, refer to the [Netlify Connector](/docs/agent-os/netlify/) document.
 6.  Click the **Site ID** text box and select an ID from the **Lookup** drop-down.  
     The Site ID is a unique identifier given to a project configured in Netlify. You can choose the desired project for which you want to configure the Netlify connector.  
@@ -74,9 +75,9 @@ Lets configure the Netlify Action connector.
 7.  Once done, click **Proceed**.
 8.  Click the **Test Action** button to test the configured action connector.  
     ![Test_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt12466dc6904609ee/659aaf5edd0067ed70207fe3/Test_Action.png)  
-    
+
 9.  Once the execution is successful, you will get the final output as seen in the screenshot in step 11.  
-      
+
     This should initiate the build in your Netlify console. Navigate to your Netlify console and verify it. If you see the build initiated, that means the automation works successfully.
 10.  Navigate back to your automation set up page, and click **Save and Exit** to finish setting up the action.  
      ![Save_Exit_Netlify.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc3bdad0c8b3adbf6/659ab0a87d6d2e6b41b8ebab/Save_Exit_Netlify.png)

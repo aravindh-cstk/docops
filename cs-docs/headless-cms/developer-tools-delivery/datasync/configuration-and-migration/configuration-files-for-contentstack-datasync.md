@@ -2,6 +2,7 @@
 title: "Configuration Files for Contentstack DataSync"
 description: "About Configuration Files for Contentstack DataSync"
 url: /headless-cms/configuration-files-for-contentstack-datasync
+uid: blt8bfe9611333b829b
 ---
 
 # Configuration Files for Contentstack DataSync

@@ -2,6 +2,7 @@
 title: "Coveo"
 description: "Learn to use the Coveo Automate connector to efficiently push and delete items from your website to Coveo."
 url: /agent-os/coveo
+uid: blt97addcc72827c4aa
 ---
 
 # Coveo
@@ -46,16 +47,16 @@ To use the Coveo Connector, you need the API Key and Organization ID. To fetch t
         ![Admin Selection.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc7e8ed5c6f701f97/67092200ff6476145d2192d5/Admin_Selection.png)
     5.  Click the **Add** **key** button, copy the API key, and then click the **Ok** button. You will see the API key.  
         ![Add an API Key.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfdcf5194032dbd3d/67092200b0b1531757951da0/Add_an_API_Key.png)
-        
+
         **Note:** Please ensure you copy the API key to your clipboard. You will not be able to view it again.
-        
+
     6.  To push (add) or delete items, you must create a source. To do so, follow the steps below:
         1.  From the left navigation, under **Content**, click **Sources**. Click the **Get** **started** button.
-            
+
             If you are added to an existing Coveo organization, you will see the **Add** **source** button. Else, you will see the Get started button where you can start setting up the source.
-            
+
             **Additional Resource:** Refer to the [Manage your sources](https://docs.coveo.com/en/3390/index-content/manage-your-sources) document to learn more.
-            
+
         2.  In the **Add a source of content** window, click the **Push** tab and click the **Push** card.
         3.  In the **Add a Push Source** screen, enter a name for the source in the **Source** **name** field and then, click **Add** **source** button. Read the terms, check the 'I understand' box, and click the **Continue** button. Your source will be created.
 
@@ -103,14 +104,14 @@ Once done, you can go ahead and set up your Coveo connector.
     1.  Click **\+ Add New Account** button to connect your Coveo account as shown in the [Connect your Coveo Account](#connect-your-coveo-account) step.
     2.  Select a **Source** to delete the content from.
     3.  In the **Document** **ID** field, enter the website URL or a file URI you wish to delete.
-        
+
         The example below includes a website URL, followed by the file URI fetched from the previous step.
-        
+
         ![Delete_Content_Fields.jpeg](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt91b5f7f3ecfef809/6718f594f79414637658d21d/Delete_Content_Fields.jpeg)
     4.  Optionally, enable the **Show Optional Fields** toggle button to check the **Remove all child elements from the document** box, which will delete all items and references.
-        
+
         **Additional Resource:** Refer to the [deleteChildren](https://docs.coveo.com/en/search/#q=what%20is%20deleteChildren) documentation to learn more.
-        
+
         ![Show_Optional_Fields.jpeg](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf8e93524ac3fc476/6718f594e409e1154a047206/Show_Optional_Fields.jpeg)
 3.  Click **Proceed**.
 4.  Check if the details are correct. If yes, click **Test Action**.  
@@ -125,11 +126,11 @@ Once done, you can go ahead and set up your Coveo connector.
     1.  Click **\+ Add New Account** button to connect your Coveo account as shown in the [Connect your Coveo Account](#connect-your-coveo-account) step.
     2.  Select a **Source** to delete the content to.
     3.  In the **Document** **ID** field, enter the website URL or a file URI you wish to push.
-        
+
         The example below includes a website URL, followed by the file URI fetched from the previous step.
-        
+
         **Additional Resource:** Refer to the [Swagger UI](https://platform.cloud.coveo.com/docs?urls.primaryName=PushAPI#/Item/put_organizations__organizationId__sources__sourceId__documents) documentation to learn more.
-        
+
         ![Select_Fields_Push_Content.jpeg](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9a26fef6618f0654/6718f59421e431d62c373269/Select_Fields_Push_Content.jpeg)
     4.  In the **Document Body** field, enter the content items you want to add. You **must** define “data” and “title” as keys and pass strings as values for both, as shown below:  
         ![Document_Body_Push_Content.jpeg](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb8e26e0a127d9d06/6718f5940cb3eca62bc6bf76/Document_Body_Push_Content.jpeg)

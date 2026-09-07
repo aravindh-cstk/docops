@@ -2,6 +2,7 @@
 title: "Rename an Asset Folder"
 description: "Learn how to rename an asset folder in Contentstack."
 url: /headless-cms/rename-a-folder
+uid: blte92fe12ad9ba58aa
 ---
 
 # Rename an Asset Folder

@@ -2,6 +2,7 @@
 title: "Linked-Schema Matching Rules"
 description: "Reference for every rule and edge case in Studio's algorithm that matches a section's linked schema to fields on a template's connected content type."
 url: /studio/linked-schema-matching-rules
+uid: blt34a7c81407940869
 ---
 
 # Linked-Schema Matching Rules
@@ -31,13 +32,13 @@ A match requires:
 
 The child names can differ; Studio builds a positional remap (e.g. section's heading ↔ page's title) when names don't match.
 
-![Four matching examples for group / global_field fields — identical multisets match (order-invariant); different child counts or types do not](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am3dc7445bc1abdfd3/9a68bf3547ddbc8113efc0af/reference-group-matching-examples.png)
+![Four matching examples for group / global_field fields — identical multisets match (order-invariant); different child counts or types do not](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/amf453dff561df0f9f/5f9a2ef2a9115d92ff2e078d/reference-group-matching-examples.svg)
 
 ### data\_type === "blocks" (modular blocks)
 
 Looser rule: a match is declared if the section's blocks union and the template field's blocks union share **at least one block UID**.
 
-![Three rows showing the modular blocks intersection rule — any shared block UID declares a match; disjoint unions do not](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am1fc8b8f4343988ae/119c4955de94174589bab1f5/reference-blocks-matching-examples.png)
+![Three rows showing the modular blocks intersection rule — any shared block UID declares a match; disjoint unions do not](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am574d1866c85f3446/59e4185845ce66d97808fd68/reference-blocks-matching-examples.svg)
 
 Why looser: sections typically wrap their Repeater in a ConditionBlock that narrows to one specific block UID, so they care that the targeted block exists on both sides, not whether the unions are equal. Strict set equality would refuse the common recursive-shape pattern where the template field's nested modular\_blocks allows only the inner block type while the section's modular\_blocks allows several at root.
 
@@ -45,7 +46,7 @@ Why looser: sections typically wrap their Repeater in a ConditionBlock that narr
 
 Strict rule: a match requires the section's reference\_to union and the template field's reference\_to union to be **equal as sorted sets**. Every CT in one must be present in the other, and vice versa. Order in the schema doesn't matter (the comparison sorts both sides first), but the membership must be identical.
 
-![Four rows showing strict sorted-set equality for reference fields — order-invariant equality matches; subsets, supersets, or disjoint unions do not](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am1f1b098d10c7b1d1/95433cc0b7fa673487a8ff5c/reference-references-matching-examples.png)
+![Four rows showing strict sorted-set equality for reference fields — order-invariant equality matches; subsets, supersets, or disjoint unions do not](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/ame23e0ceb989ee0b8/3aacdccbbc51dab392826028/reference-references-matching-examples.svg)
 
 Why strict (unlike blocks): references have no ConditionBlock narrowing mechanism; at runtime a reference field can resolve to any CT in its union, and the section's internal bindings assume the **exact** union it was authored against. Accepting a subset would let bindings reference CTs the template's field can't actually hold; accepting a superset would let the template surface CTs the section doesn't know how to render. Sorted-set equality is the only safe rule.
 
@@ -55,7 +56,7 @@ If the unions differ even by one CT, the section won't auto-bind. Fix it by alig
 
 Same data\_type plus same multiple flag. No child structure to check.
 
-![Three rows showing scalar matching — same data_type and same multiple flag matches; differences in either do not](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/amceb84cd64d6f9517/921087ef4537af1173fa983a/reference-scalar-matching-examples.png)
+![Three rows showing scalar matching — same data_type and same multiple flag matches; differences in either do not](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/amfb9ef147c0e7b404/38a1cf36928a8cbc29528907/reference-scalar-matching-examples.svg)
 
 ## The multiple Flag
 
@@ -96,7 +97,7 @@ This is what makes the section-inside-Repeater-of-its-own-shape pattern work cle
 
 When a group or global\_field match is declared and the child names differ, Studio builds a remap by position within data-type:
 
-![Section schema heading/body/image remapped by position to Page schema title/desc/hero via three indigo arrows](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/amf8fbe939c9d00f72/448705e315a827ab32e36dd4/reference-positional-remap-example.png)
+![Section schema heading/body/image remapped by position to Page schema title/desc/hero via three indigo arrows](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/ame8105b91c4645a0f/90decbe0c25d14f9151111b1/reference-positional-remap-example.svg)
 
 Bindings inside the section that reference template.heading now resolve through page.title at render time. The author doesn't see this; the section's UI says template.heading; Studio handles the translation.
 
@@ -104,7 +105,7 @@ Bindings inside the section that reference template.heading now resolve through 
 
 The remap only translates top-level child names. **Nested groups must use the same name on both sides.**
 
-![Three schema cards demonstrating the shallow nested-group remap — Page A matches because the nested group keeps the name 'inner'; Page B fails because it was renamed to 'content'](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am4aeae113b514e314/7ef5bc8c5ce87aa9db0d253a/reference-nested-group-remap-cases.png)
+![Three schema cards demonstrating the shallow nested-group remap — Page A matches because the nested group keeps the name 'inner'; Page B fails because it was renamed to 'content'](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am19c5c05bb0b9137f/5884b597bac280cb87aeaf3e/reference-nested-group-remap-cases.svg)
 
 For nested shapes, **prefer Global Fields**. Embed the same Global Field everywhere; the structure is literally identical and the remap question never comes up.
 

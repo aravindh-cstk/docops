@@ -2,6 +2,7 @@
 title: "Delete a Role"
 description: "steps to delete a custom role"
 url: /headless-cms/delete-a-role
+uid: blt95d7e2f4c0443c99
 ---
 
 # Delete a Role

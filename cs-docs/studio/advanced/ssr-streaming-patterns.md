@@ -2,41 +2,52 @@
 title: "SSR Streaming Patterns"
 description: "Learn how to integrate Contentstack Studio with Next.js App Router, Remix, and Astro to stream SSR responses and optimize page load performance."
 url: /studio/ssr-streaming-patterns
+uid: bltc369178939abe9ce
 ---
 
 # SSR Streaming Patterns
 
 ## SSR Streaming Patterns
 
-Modern SSR frameworks (Next App Router, Remix with defer, Astro islands) stream the response; the shell goes out first, slower content streams in chunks. Studio composes pages from many bindings, each of which may resolve to a CDA call. Naive integration blocks the entire response on the slowest call. Done right, the shell + above-the-fold renders fast and the below-the-fold sections stream in.
+Modern SSR frameworks (Next App Router, Remix with defer, Astro islands) stream the response — the shell goes out first, slower content streams in chunks. Studio composes pages from many bindings, each of which may resolve to a CDA call. Naive integration blocks the entire response on the slowest call. Done right, the shell + above-the-fold renders fast and the below-the-fold sections stream in.
 
-## The Model
+## The model
 
 Every Studio render goes through three async phases:
 
-1.  **Spec fetch:** load the composition record from Contentstack. Fast (one CDA call). Required for any render to start.
-2.  **Binding resolution:** fetch every entry the composition references. This is where the work is: each binding may hit CDA, each Repeater may hit a query, sections add references, etc.
-3.  **Component render:** actually render the React tree with the resolved data.
+1.  **Spec fetch** — load the composition record from Contentstack. Fast (one CDA call). Required for any render to start.
+2.  **Binding resolution** — fetch every entry the composition references. This is where the work is — each binding may hit CDA, each Repeater may hit a query, sections add references, etc.
+3.  **Component render** — actually render the React tree with the resolved data.
 
 For streaming, the trick is making phase 3 NOT block on all of phase 2. Each section streams as its bindings resolve.
 
-## Recommended Patterns
+## Recommended patterns
 
-### Next.js App Router: wrap the awaited fetch in <Suspense>
+### Next.js App Router — wrap the awaited fetch in <Suspense>
 
-<StudioComponent />'s specOptions prop is the **resolved** object from sdk.fetchCompositionData(...); you fetch first, pass the result in:
+<StudioComponent />'s specOptions prop is the **resolved** object from csStudio.fetchCompositionData(...) — you fetch first, pass the result in. fetchCompositionData takes the query as its first argument and per-request options (like templateEntryUid) as its second; the query's searchQuery forwards the incoming request query string — pass "" when there's none:
 
 ```
 // app/blog/[slug]/page.tsx
 import { Suspense } from "react";
 import { StudioComponent } from "@contentstack/studio-react";
-import { sdk } from "@/lib/contentstack";
+import { csStudio } from "@/lib/contentstack";
 
 async function BlogPostContent({ slug }: { slug: string }) {
-  const specOptions = await sdk.fetchCompositionData({
-    contentTypeUid: "blog_post",
-    templateEntryUid: slug,
-  });
+  // fetchCompositionData REJECTS the promise for a not-found URL — it
+  // does NOT resolve with { hasSpec: false }. Catch the rejection to hit
+  // notFound(); keep the hasSpec guard as a belt-and-braces check for any
+  // state that DOES resolve empty.
+  let specOptions;
+  try {
+    specOptions = await csStudio.fetchCompositionData(
+      { templateContentTypeUid: "blog_post", searchQuery: "" },
+      { templateEntryUid: slug },
+    );
+  } catch {
+    return notFound();
+  }
+  if (!specOptions.hasSpec) return notFound();
   return <StudioComponent specOptions={specOptions} />;
 }
 
@@ -51,15 +62,21 @@ export default function BlogPost({ params }) {
 
 The shell + skeleton ship immediately; the awaited fetch + Studio render stream in once the spec + bindings resolve.
 
-For finer-grained per-section streaming (each section showing its own skeleton independently), the cleanest pattern is to author the page as **multiple sibling** **<StudioComponent />** **instances**, one per region, each fetching its own composition:
+For finer-grained per-section streaming (each section showing its own skeleton independently), the cleanest pattern is to author the page as **multiple sibling <StudioComponent /> instances** — one per region, each fetching its own composition:
 
 ```
 async function HeroRegion({ slug }: { slug: string }) {
-  const specOptions = await sdk.fetchCompositionData({ contentTypeUid: "blog_post_hero", templateEntryUid: slug });
+  const specOptions = await csStudio.fetchCompositionData(
+    { templateContentTypeUid: "blog_post_hero", searchQuery: "" },
+    { templateEntryUid: slug },
+  );
   return <StudioComponent specOptions={specOptions} />;
 }
 async function BodyRegion({ slug }: { slug: string }) {
-  const specOptions = await sdk.fetchCompositionData({ contentTypeUid: "blog_post_body", templateEntryUid: slug });
+  const specOptions = await csStudio.fetchCompositionData(
+    { templateContentTypeUid: "blog_post_body", searchQuery: "" },
+    { templateEntryUid: slug },
+  );
   return <StudioComponent specOptions={specOptions} />;
 }
 
@@ -73,9 +90,9 @@ export default function BlogPost({ params }) {
 }
 ```
 
-This works when your data model uses multiple compositions per page (one per region). For a single composition that contains multiple sections, today you get one streaming boundary, not per-section streaming. See [What's still unsolved](#whats-still-unsolved) below.
+This works when your data model uses multiple compositions per page (one per region). For a single composition that contains multiple sections, today you get one streaming boundary, not per-section streaming — see [What's still unsolved](#whats-still-unsolved) below.
 
-### Remix: defer() for non-blocking sections
+### Remix — defer() for non-blocking sections
 
 ```
 // app/routes/blog.$slug.tsx
@@ -83,9 +100,9 @@ import { defer } from "@remix-run/node";
 import { Await, useLoaderData } from "@remix-run/react";
 
 export async function loader({ params }) {
-  const specPromise = sdk.fetchCompositionData({
-    contentTypeUid: "blog_post",
-    slug: params.slug,
+  const specPromise = csStudio.fetchCompositionData({
+    url: `/blog/${params.slug}`,
+    searchQuery: "",
   });
   return defer({ spec: specPromise });
 }
@@ -94,7 +111,7 @@ export default function BlogPost() {
   const { spec } = useLoaderData();
   return (
     <Await resolve={spec} errorElement={<Error />}>
-      {(resolved) => <StudioComponent specOptions={resolved.specOptions} />}
+      {(resolved) => <StudioComponent specOptions={resolved} />}
     </Await>
   );
 }
@@ -102,14 +119,14 @@ export default function BlogPost() {
 
 defer() ships the route shell immediately; <Await> streams the Studio render in once the spec promise resolves. Pair with <Suspense> fallbacks for skeletons.
 
-### Astro: partial hydration with islands
+### Astro — partial hydration with islands
 
 ```
 ---
 // src/pages/blog/[slug].astro
 import { StudioComponent } from "@contentstack/studio-react";
 const { slug } = Astro.params;
-const specOptions = await sdk.fetchCompositionData({ contentTypeUid: "blog_post", slug });
+const specOptions = await csStudio.fetchCompositionData({ url: `/blog/${slug}`, searchQuery: "" });
 ---
 
 <Layout>
@@ -127,7 +144,7 @@ Live Preview's post-message channel ships extra weight that visitors don't need.
 
 Put the user's most important content in the FIRST section of the composition. The shell + above-the-fold section paint first; below-the-fold streams in.
 
-## Patterns to Avoid
+## Patterns to avoid
 
 | Pattern | Why it bites |
 | --- | --- |
@@ -137,16 +154,16 @@ Put the user's most important content in the FIRST section of the composition. T
 | Streaming a route that uses CSR Live Preview in production | Live Preview's post-message channel doesn't play well with mid-stream hydration; gate LP init behind an env flag so visitor routes don't load it |
 | Conditional rendering based on window / document at the top of a streamed component | SSR-CSR mismatch; React errors on hydration |
 
-## What's Still Unsolved
+## What's still unsolved
 
--   **Per-section streaming inside a single composition.** Today a <StudioComponent /> is one Suspense boundary: the whole spec must resolve before any section paints. If you need per-section streaming, model the page as multiple compositions (one per region) and render each in its own <Suspense>. A first-class "stream per top-level section" mode is on the roadmap.
+-   **Per-section streaming inside a single composition.** Today a <StudioComponent /> is one Suspense boundary — the whole spec must resolve before any section paints. If you need per-section streaming, model the page as multiple compositions (one per region) and render each in its own <Suspense>. A first-class "stream per top-level section" mode is on the roadmap.
 -   **Server-only SDK entry point.** @contentstack/studio-react ships one bundle today; gating Live Preview out of production relies on the build-time env check shown above. A dedicated server-only entry point (smaller, no LP) is being scoped.
--   **Edge runtime streaming.** Studio runs in the Node runtime; streaming works there. On Vercel Edge / Cloudflare Workers, the SDK's size + streaming primitives constrain what's possible: Node runtime is the recommended target today. See [Production deployment edges](/docs/studio/production-deployment-edge-cases#edge-runtime-compatibility).
+-   **Edge runtime streaming.** Studio runs in the Node runtime; streaming works there. On Vercel Edge / Cloudflare Workers, the SDK's size + streaming primitives constrain what's possible — Node runtime is the recommended target today. See [Production deployment edges](/docs/studio/production-deployment-edge-cases#edge-runtime-compatibility).
 -   **React Server Components composition.** Studio's <StudioComponent /> is rendered server-side but currently treats its tree as a single RSC boundary, not as nested RSC. Deeper RSC integration is planned.
 
-## See Also
+## See also
 
--   [<StudioComponent /> reference](/docs/studio/composition-rendering-reference): every prop + fetcher option the streaming examples above pass
--   [Configure CSR vs SSR](/docs/studio/choosing-between-csr-and-ssr-rendering): pick the render path that matches your framework
--   [Performance + bundle-size](/docs/studio/performance-and-bundle-size-optimization): what to ship to visitors vs editors
--   [Production deployment edges](/docs/studio/production-deployment-edge-cases): edge runtime constraints
+-   <StudioComponent /> [reference](/docs/studio/composition-rendering-reference) — every prop + fetcher option the streaming examples above pass
+-   Configure CSR vs SSR — pick the render path that matches your framework
+-   [Performance + bundle-size](/docs/studio/performance-and-bundle-size-optimization) — what to ship to visitors vs editors
+-   [Production deployment edges](/docs/studio/production-deployment-edge-cases) — edge runtime constraints

@@ -2,6 +2,7 @@
 title: "Types of Tokens"
 description: "Learn about Contentstack token types: Delivery, Auth, and Management. Each token type has different scopes, use cases, access levels, and creation permissions."
 url: /headless-cms/types-of-tokens
+uid: blt110cb0f5aff7ee1e
 ---
 
 # Types of Tokens

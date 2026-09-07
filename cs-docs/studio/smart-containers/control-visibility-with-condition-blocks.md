@@ -2,6 +2,7 @@
 title: "Control Visibility with Condition Blocks"
 description: "Learn how to use Condition Blocks inside Repeaters to render different designs based on item type, such as Modular Block types or Reference content types."
 url: /studio/control-visibility-with-condition-blocks
+uid: blt1377dd5b70bb5358
 ---
 
 # Control Visibility with Condition Blocks

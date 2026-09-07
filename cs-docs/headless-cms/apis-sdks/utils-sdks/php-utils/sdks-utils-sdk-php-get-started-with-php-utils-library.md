@@ -2,6 +2,7 @@
 title: "Get Started with PHP Utils Library"
 description: "steps to use the PHP Utils Library"
 url: /developers/sdks/utils-sdk/php/get-started-with-php-utils-library
+uid: blt81cd30256a4e436e
 ---
 
 # Get Started with PHP Utils Library
@@ -38,7 +39,7 @@ To render embedded items on the front-end, use the renderOptions function, and d
 declare(strict_types=1);  
 
 namespace Sample\App;  
-  
+
 use Contentstack\Utils\Resource\EntryEmbedable;  
 use Contentstack\Utils\Resource\RenderableInterface;  
 use Contentstack\Utils\Resource\EmbeddedObject;  
@@ -130,7 +131,7 @@ To get a single entry, you need to provide the stack API key, environment name, 
 ```
 use Contentstack\Contentstack;  
 use Contentstack\Utils\Model\Option;  
-  
+
 $stack = Contentstack::Stack('<API_KEY>', '<ENVIRONMENT_SPECIFIC_DELIVERY_TOKEN>', '<ENVIRONMENT>');  
 $entry = $stack->ContentType('<CONTENT_TYPE_UID>')->Entry('<ENTRY_UID>')->includeEmbeddedItems()->toJSON()->fetch();  
 $json_rte = json_decode(json_encode($entry['rte_field_uid']));
@@ -166,7 +167,7 @@ To get a single entry, you need to provide the stack API key, environment name, 
 ```
 use Contentstack\Contentstack;  
 use Contentstack\Utils\Model\Option;  
-  
+
 $stack = Contentstack::Stack('<API_KEY>', '<ENVIRONMENT_SPECIFIC_DELIVERY_TOKEN>', '<ENVIRONMENT>');  
 $result = $stack->ContentType('<CONTENT_TYPE_UID>')->Query()->toJSON()->includeEmbeddedItems()->find()  
 for($i = 0; $i < count($result[0]); $i++) {  

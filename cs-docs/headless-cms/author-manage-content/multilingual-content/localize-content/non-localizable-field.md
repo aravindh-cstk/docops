@@ -2,6 +2,7 @@
 title: "Non-localizable Field"
 description: "Learn how to set fields as non-localizable in Contentstack, ensuring consistent content across languages. Perfect for URLs and images!"
 url: /headless-cms/non-localizable-field
+uid: bltd0d3aeed389d860e
 ---
 
 # Non-localizable Field

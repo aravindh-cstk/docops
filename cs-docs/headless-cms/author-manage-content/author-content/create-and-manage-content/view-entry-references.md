@@ -2,6 +2,7 @@
 title: "View Entry References"
 description: "Learn how to view and manage entry references in Contentstack. Visualize entry relationships using the Reference Map."
 url: /headless-cms/view-entry-references
+uid: blt2f74b97f48edb8d9
 ---
 
 # View Entry References

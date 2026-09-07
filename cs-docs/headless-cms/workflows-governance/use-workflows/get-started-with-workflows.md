@@ -2,6 +2,7 @@
 title: "Get Started with Workflows"
 description: "steps to start using workflows"
 url: /headless-cms/get-started-with-workflows
+uid: bltc2f7989ff035af36
 ---
 
 # Get Started with Workflows
@@ -12,7 +13,7 @@ To start working with [workflows](/docs/headless-cms/about-workflows) for your [
 
 1.  **Workflows** (which includes defining stages), and 
 2.  **Publish rules** (if required)  
-    
+
 
 After you have [added a workflow](/docs/headless-cms/add-workflows-and-stages) and [created the publish rules](/docs/headless-cms/add-a-publish-rule), let’s discuss how to use the workflow.
 

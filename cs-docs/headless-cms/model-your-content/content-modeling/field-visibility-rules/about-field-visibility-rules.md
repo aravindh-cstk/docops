@@ -2,6 +2,7 @@
 title: "About Field Visibility Rules"
 description: "Field Visibility Rules in Contentstack let you show or hide fields dynamically based on user input, ensuring a streamlined data entry process."
 url: /headless-cms/about-field-visibility-rules
+uid: blt71448caed295a7fa
 ---
 
 # About Field Visibility Rules
@@ -35,9 +36,9 @@ Field Visibility Rules are commonly used in forms to create a streamlined experi
 -   **Job Application Forms:** Selecting **Have any prior experience?** displays the **Years of Experience** field, while deselecting it hides the field.
 -   **Global Field Example:** A **Newsletter Preferences** global field contains fields for subscription status, email address, and preferred frequency. A rule can hide the email and frequency fields unless the subscription status is set to "Subscribed."
 -   **Modular Block Example**: In a **Product Details** modular block, you can define rules that show or hide fields within the same block. If **Product Type** is set to **Physical**, the **Shipping Details** fields in that block are displayed. If **Product Type** is set to **Digital**, the shipping fields in that block are hidden. Both the **operand** and **target** fields must belong to the **same block**, ensuring rules stay self-contained.
-    
+
 -   **Group Field Example**: In a **Team Members** group field marked as **Multiple**, you might want to reveal additional social fields per team member. For instance, when a user selects **Has Social Links** within one instance of the group, fields for **LinkedIn URL** and **Twitter URL** appear for that specific member. Rules apply **per instance**, ensuring that each team member’s visibility settings are independent.
-    
+
 
 **Tip:** Remember to [create an entry](/docs/headless-cms/create-an-entry) to see the rule in action.
 

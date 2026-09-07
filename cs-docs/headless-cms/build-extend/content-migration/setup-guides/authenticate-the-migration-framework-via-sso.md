@@ -2,6 +2,7 @@
 title: "Authenticate the Migration Framework via SSO"
 description: "Optimize your content migration process with Contentstack's Migration Tool. Learn to configure SSO securely with our comprehensive step-by-step guide."
 url: /headless-cms/authenticate-the-migration-framework-via-sso
+uid: blt877190efcb6e58aa
 ---
 
 # Authenticate the Migration Framework via SSO
@@ -32,36 +33,36 @@ Before you begin, ensure the following requirements are met:
 The build.sh script registers the migration tool as an OAuth application in your Contentstack organization, configures the redirect URI, and creates the app.json manifest used by the migration tool's application programming interface (API).
 
 1.  From the repository root, make the build script executable and run it:
-    
+
     ```
     chmod +x build.sh
     ./build.sh
     ```
-    
+
     **Note:** Always run build.sh from the repository root. The script writes app.json to the current working directory. Running it from a subdirectory places app.json in the wrong location.
-    
+
 2.  Select your Contentstack region when prompted.
-    
+
     **Warning:** The region you choose here must match the region you select in the migration tool's login screen later. Mismatched regions cause authentication failures.
-    
+
 3.  Complete the OAuth login in the browser window that opens:
     1.  Sign in with your Contentstack credentials for the selected region.
     2.  Authorize the OAuth application when prompted.
     3.  Wait for the browser to confirm successful authentication.
     4.  Return to the terminal. The script continues automatically.
-        
+
         **Note:** If the browser does not open or the login fails, run csdx auth:logout to clear cached credentials, then re-run ./build.sh.
-        
+
 4.  Enter the redirect URI base when prompted. The script appends /v2/auth/save-token to the value you provide.
-    
+
     <table><tbody><tr><td><strong>Scenario</strong></td><td><strong>Input</strong></td></tr><tr><td>Local API on default port 5001</td><td>Press <strong>Enter</strong> with no input. Resolves to <span class="code">http://localhost:5001/v2/auth/save-token</span>.</td></tr><tr><td>Local API on a custom port (for example, <span class="code">3000</span>)</td><td>Enter the origin only: <span class="code">http://localhost:3000</span>. The script appends the path.</td></tr><tr><td>Hosted environment</td><td>Enter the origin only (for example, <span class="code">https://api.mycompany.com</span>). The script appends the path.</td></tr></tbody></table>
-    
+
     **Warning:** Do not include /v2/auth/save-token in your input. The script appends this path automatically. Including it produces a duplicated path and breaks the redirect.
-    
+
 5.  Select the Contentstack organization where the OAuth application is registered.
-    
+
     **Warning:** The organization you select here must be the same organization that contains your target stacks, and the same organization where you install the migration app from the Contentstack Marketplace. Selecting different organizations across these steps causes the app to be registered in one organization while permissions exist in another, breaking authentication.
-    
+
 
 **Note:** Re-running build.sh is safe. If the migration app already exists in the selected organization, its settings are updated rather than a new app being created.
 

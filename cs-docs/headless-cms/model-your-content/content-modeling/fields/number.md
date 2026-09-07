@@ -2,6 +2,7 @@
 title: "Number"
 description: "Discover the dynamic Number field for entering numeric data with customizable properties like Display Name, Unique ID, and more in Contentstack."
 url: /headless-cms/number
+uid: blta96088fb315369aa
 ---
 
 # Number

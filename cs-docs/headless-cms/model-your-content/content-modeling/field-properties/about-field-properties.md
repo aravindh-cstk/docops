@@ -2,6 +2,7 @@
 title: "About Field Properties"
 description: "Properties define the nature and behavior of a field. Find out how to edit these properties and customize the behavior of the given field with Contentstack."
 url: /headless-cms/about-field-properties
+uid: blt7d4433ba7f6fbcfe
 ---
 
 # About Field Properties

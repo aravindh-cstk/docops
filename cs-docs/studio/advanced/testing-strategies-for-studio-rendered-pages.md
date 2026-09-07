@@ -2,6 +2,7 @@
 title: "Testing Strategies for Studio-Rendered Pages"
 description: "A layered five-layer testing strategy for Contentstack Studio compositions, covering unit tests, snapshot tests, render tests, visual regression, and E2E authoring flows."
 url: /studio/testing-strategies-for-studio-rendered-pages
+uid: blt01fcb60ec09b86e3
 ---
 
 # Testing Strategies for Studio-Rendered Pages
@@ -36,14 +37,14 @@ Save the composition's JSON spec to a fixture file. CI asserts the live spec has
 
 ```
 import { describe, test, expect } from "vitest";
-import { sdk } from "../lib/contentstack";
+import { csStudio } from "../lib/contentstack";
 
 describe("Blog Post composition spec", () => {
   test("composition tree hasn't drifted unexpectedly", async () => {
-    const specOptions = await sdk.fetchCompositionData({
-      contentTypeUid: "blog_post",
-      templateEntryUid: "fixture-entry-uid",
-    });
+    const specOptions = await csStudio.fetchCompositionData(
+      { templateContentTypeUid: "blog_post", searchQuery: "" },
+      { templateEntryUid: "fixture-entry-uid" },
+    );
     expect(specOptions).toMatchSnapshot();
   });
 });
@@ -58,15 +59,13 @@ When the snapshot fails: either an author deliberately changed the layout (commi
 ```
 import { vi, test, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { sdk } from "../lib/contentstack";
+import { csStudio } from "../lib/contentstack";
 import { StudioComponent } from "@contentstack/studio-react";
 import { fixtureSpecOptions, fixtureEntry } from "./fixtures";
 
 test("Blog Post renders the entry headline", async () => {
-  vi.spyOn(sdk, "fetchCompositionData").mockResolvedValue({
-    specOptions: fixtureSpecOptions,
-    /* ...other fields the SDK returns... */
-  } as any);
+  // fetchCompositionData resolves to the specOptions object directly (not wrapped in { specOptions })
+  vi.spyOn(csStudio, "fetchCompositionData").mockResolvedValue(fixtureSpecOptions as any);
 
   render(<StudioComponent specOptions={fixtureSpecOptions} />);
   expect(await screen.findByText(fixtureEntry.title)).toBeInTheDocument();
@@ -104,7 +103,7 @@ See the Playwright drag-drop pattern in the build-section skill: same mechanics 
 For Layers 2-4, you need stable fixture entries. Two options:
 
 -   **Dedicated fixture entries in your stack.** Tag them with a fixture boolean field; CI uses these UIDs explicitly. Authors don't edit them.
--   **Snapshot the entry JSON.** Save the CDA response for one entry to a JSON file; tests use it inside the vi.spyOn(sdk, "fetchCompositionData").mockResolvedValue(...) shown above. Cheaper than calling the live CDA in CI.
+-   **Snapshot the entry JSON.** Save the CDA response for one entry to a JSON file; tests use it inside the vi.spyOn(csStudio, "fetchCompositionData").mockResolvedValue(...) shown above. Cheaper than calling the live CDA in CI.
 
 Snapshot-the-entry is faster for CI but doesn't catch "the real CDA changed shape on us": the dedicated-entry strategy does.
 

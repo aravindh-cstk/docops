@@ -2,6 +2,7 @@
 title: "Add Workflows and Stages"
 description: "Learn how to create workflows and add stages in Contentstack to manage and control your content approval process."
 url: /headless-cms/add-workflows-and-stages
+uid: blt38041a58f3cdf5f8
 ---
 
 # Add Workflows and Stages
@@ -63,20 +64,20 @@ Select the stage to which an entry can move next.
 ## Set Permissions
 
 1.  Define who can **move entries** from the current stage to the next available stage.
-    
+
     1.  **All users/roles**: Any user can move entries between stages.
     2.  **Specific user(s)/role(s)**: Restricts movement to selected users or roles.
-    
+
     **Note:** When specific users are assigned, others cannot move entries to the next stage.
-    
+
 2.  Specify who can **edit entries** at this stage.
-    
+
     1.  **All users/roles**: All users can edit entries.
     2.  **No users**: Restricts editing for all users.
     3.  **Current stage users**: Allows only users with transition rights to edit entries.
-    
+
     **Note:** Stack owners, admins, and workflow superusers can always edit entries, regardless of restrictions.
-    
+
 
 ## Prevent Self-Advancement
 

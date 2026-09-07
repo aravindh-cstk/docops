@@ -2,6 +2,7 @@
 title: "Generate Components from Figma"
 description: "Learn how to use the Studio Figma Plugin and Studio CLI to turn Figma frames into committed React components registered on the Studio canvas."
 url: /studio/generate-components-from-figma
+uid: blt2cb493e134f087a3
 ---
 
 # Generate Components from Figma
@@ -122,9 +123,9 @@ This is the one-way street **upstream**: existing code to Studio project, visibl
 1.  Open Figma → **Resources → Plugins → Browse plugins in Community**
 2.  Search for **Contentstack Studio** (plugin id 1541766192464484605)
 3.  Install, then click **Run**
-    
+
 4.  Pick your organisation's region, click **Authorize**; the plugin opens an OAuth window, completes the sign-in, and returns to Figma
-    
+
 5.  Confirm the Figma file is **editable** (read-only files block Auto Layout updates, token adjustments, and component mapping)
 
 ## Stage 2: Generate in the Studio Figma Plugin

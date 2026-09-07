@@ -2,6 +2,7 @@
 title: "Global Modules"
 description: "Explore Contentstack's global modules, taxonomy, user roles, webhooks, and more for seamless content management across all branches."
 url: /headless-cms/global-modules
+uid: bltb7edbc95085e7790
 ---
 
 # Global Modules

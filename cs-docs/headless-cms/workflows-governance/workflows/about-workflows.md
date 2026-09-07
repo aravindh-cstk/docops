@@ -2,6 +2,7 @@
 title: "About Workflows"
 description: "Learn how to define and manage content workflows in Contentstack to streamline review and approval processes."
 url: /headless-cms/about-workflows
+uid: blt8c2c0c79eaa599a9
 ---
 
 # About Workflows

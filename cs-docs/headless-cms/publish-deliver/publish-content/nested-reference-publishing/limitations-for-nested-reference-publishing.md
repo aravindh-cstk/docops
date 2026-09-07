@@ -2,6 +2,7 @@
 title: "Limitations for Nested Reference Publishing"
 description: "Discover the limitations and best practices for Nested Reference Publishing"
 url: /headless-cms/limitations-for-nested-reference-publishing
+uid: blt7d3340559e7097bc
 ---
 
 # Limitations for Nested Reference Publishing
@@ -15,13 +16,13 @@ url: /headless-cms/limitations-for-nested-reference-publishing
 -   While bulk publishing entries, you cannot view the nested references of all parent entries within the tree.
 -   It is not possible to select specific child entries of a parent entry while publishing.
 -   When a referenced taxonomy appears in the **Publish Reference(s)** modal, the entire taxonomy (including all its terms) is published. It is not possible to selectively publish individual taxonomy terms.
-    
+
 -   If any or all of the nested referred entries are already published in a specific environment and locale, they will be skipped when publishing the parent entry.
 -   If a referenced taxonomy is already published to the selected environment and locale for the entry, it is skipped and not republished.
-    
+
 -   If any of the nested referred entries have an error, the other nested entries at lower levels of depth will not be sent for publishing.
 -   If a referenced taxonomy fails to publish, the publish job may fail depending on validation errors related to the taxonomy structure or localization.
-    
+
 -   During multiple bulk publish tasks in an organization, only a maximum of **two** jobs will be active at any given time across the entire organization.
 -   You cannot cancel individual items once a publish job is scheduled. You can only cancel the whole publish job.
 -   The nested reference feature is not supported when publishing entries via releases.

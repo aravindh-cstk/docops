@@ -2,6 +2,7 @@
 title: "Manage Comment Notifications"
 description: "Manage your comment notifications for entries of your stack."
 url: /headless-cms/manage-comment-notifications
+uid: blt0fbd3f3a81fcb2c5
 ---
 
 # Manage Comment Notifications

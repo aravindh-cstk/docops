@@ -2,6 +2,7 @@
 title: "Restore a Deleted Asset"
 description: "Restore a Deleted Asset"
 url: /headless-cms/restore-a-deleted-asset
+uid: blte9f4214b0ef9338d
 ---
 
 # Restore a Deleted Asset
@@ -18,20 +19,20 @@ To restore a deleted asset from the Trash, log in to your [Contentstack account]
 
 1.  Click the “Settings” icon (press “S”) on the left panel and select **Trash** (or press “**alt + T**” for Windows OS, and “option + **T**” for Mac OS).
 2.  Click on the **Assets** tab, and hover over the asset you want to restore (e.g., **Profile Picture**).![Restore_a_Deleted_Asset_1_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt45b73093fa40b261/60c0cd373a3d1a5f519eb7cc/Restore_a_Deleted_Asset_1_no_highlight.png)  
-      
-    
+
+
 3.  Click on the **Restore** button that appears at the extreme right end.![Restore_a_Deleted_Asset_2_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt7ef47807e56d949f/60c0cd57324cea0e69782fce/Restore_a_Deleted_Asset_2_highlighted.png)  
-    
+
     **Note:** To be able to restore an asset that belongs to a deleted asset folder, restore the asset folder first.
-    
+
 4.  The asset will then disappear from the Trash and will be available in the stack.
 5.  You can also edit asset details before you restore it back to the stack. Open the asset, edit its name or description, add a tag for the image, or replace the image with a new one.  
-    
+
 6.  Once done, click on **Restore**.![Restore_a_Deleted_Asset_3_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blted51690d077ae0b1/60c0cd67fbd63412d41341de/Restore_a_Deleted_Asset_3_highlighted.png)  
-      
-    
+
+
     **Note:** Every time a deleted asset is restored, its version number is incremented by default. At the same time, the **MODIFIED BY** column would also reflect the name of the user who restored the asset.
-    
+
 
 ## Filter Deleted Assets
 

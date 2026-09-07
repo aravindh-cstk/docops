@@ -2,6 +2,7 @@
 title: "Limitations of Contentstack DataSync"
 description: "About Limitations of Contentstack DataSync"
 url: /headless-cms/limitations-of-contentstack-datasync
+uid: blt529a36bf8d3c4df7
 ---
 
 # Limitations of Contentstack DataSync

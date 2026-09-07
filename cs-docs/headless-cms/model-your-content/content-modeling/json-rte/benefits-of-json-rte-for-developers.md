@@ -2,6 +2,7 @@
 title: "Benefits of JSON RTE for Developers"
 description: "Understand how JSON RTE helps developers deliver structured, reusable, and secure content with API support and seamless integration across digital platforms."
 url: /headless-cms/benefits-of-json-rte-for-developers
+uid: blt36534e373a8d28aa
 ---
 
 # Benefits of JSON RTE for Developers

@@ -2,6 +2,7 @@
 title: "Limitations of Aliases"
 description: "Understand the limitations of aliases in Contentstack's developer documentation."
 url: /headless-cms/limitations-of-aliases
+uid: blta5bdf52779d330b0
 ---
 
 # Limitations of Aliases

@@ -2,6 +2,7 @@
 title: "Manage Workspaces"
 description: "Optimize your Contentstack Asset operations with workspace management. Organize, fork, and customize languages for efficient asset control."
 url: /assets/manage-workspaces
+uid: bltefa4905cda4faec0
 ---
 
 # Manage Workspaces
@@ -29,9 +30,9 @@ To update workspace details such as the name and description, perform the follow
 
 1.  Click the vertical ellipsis in the **Actions** column of the workspace and select **Edit Workspace**.
 2.  Update the **Name** or **Description** as required.
-    
+
     **Note:** The **UID** and **Source Workspace** fields remain read-only after creation.
-    
+
 3.  Click **Update Workspace**.
 
 ## Copy Workspace UID
@@ -69,9 +70,9 @@ To manage languages for a workspace, perform the following steps:
 2.  In the **Manage Workspace Languages** modal, review the languages currently enabled for the workspace.
 3.  Click **\+ Add Language**.
 4.  Select one or more languages from the available list. Each language displays its fallback language.
-    
+
     **Note:** The default language remains locked and cannot be removed.
-    
+
 5.  Click **Apply** to confirm the selection.
 6.  Click **Save Changes** to add the selected languages to the workspace.
 

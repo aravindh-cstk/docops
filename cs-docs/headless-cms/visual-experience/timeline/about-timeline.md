@@ -2,6 +2,7 @@
 title: "About Timeline"
 description: "Preview future website updates with the Timeline feature. Visualize and verify scheduled content changes before they go live for a seamless user experience."
 url: /headless-cms/about-timeline
+uid: blt296be2c495f01097
 ---
 
 # About Timeline

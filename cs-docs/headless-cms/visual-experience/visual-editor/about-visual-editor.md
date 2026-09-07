@@ -2,6 +2,7 @@
 title: "About Visual Editor"
 description: "Understand how Contentstack’s Visual Editor empowers teams with WYSIWYG editing, real-time previews, and workflow tools for seamless web content creation and publishing."
 url: /headless-cms/about-visual-editor
+uid: blt9fe726628ed25799
 ---
 
 # About Visual Editor

@@ -2,6 +2,7 @@
 title: "Get Started with Automations"
 description: "Manage and monitor your agents, automations, and executions in one place with the Dashboard for smarter, scalable workflows."
 url: /agent-os/get-started-with-automations
+uid: blt783072e30e7f078c
 ---
 
 # Get Started with Automations
@@ -54,79 +55,79 @@ First, perform the following steps to create an Automation:
 2.  On the **Automations** listing page, click **\+ New Automation**. From the dropdown, select **Create New.**
 3.  In the **Create Automation** modal, provide an **Automation Name** and an optional **Description**. Click **Create**.![Create_New_automation.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blteba2954e341f49a3/67c8092a39a3ca8277112357/Create_New_automation.png)
 4.  After entering the basic details of the automation in the above step, the next set of actions can be broadly classified into the following two main steps:
-    
+
     1.  [Configure Trigger](#configure-trigger)
     2.  [Configure Action Step](#configure-action-step)
-    
+
     **Note:** You can now throttle the execution for your automations to avoid rate limit. For more information, refer to the [Throttle Execution](/docs/agent-os/throttle-execution) document.
-    
+
     Let’s look at the above steps ‌in the next section.
-    
+
     ### Configure Trigger
-    
+
     Triggers are conditions or invocation points that fire off an Automation when an event occurs in Contentstack or an external app or service. They help automate a business workflow to accomplish required tasks.
-    
+
     **Note:** You can click the **Add any additional context or notes relevant to this section** text to add additional details about the trigger step.
-    
+
     Configuring a trigger can be broken into the following steps:
-    
+
     1.  Click **Configure Trigger** from the left navigation panel.
     2.  **Choose Connector**: Here, you can select Contentstack or an available third-party app or service which will serve as the trigger connector. For example, click **HTTP**.
-        
+
         **Note:** For more details on the “HTTP” Connector and other available connectors, refer to [Automate Connectors](/docs/agent-os/).
-        
+
     3.  **Choose Trigger**: Select the Trigger or the webhook event listed under the selected connector. In our case, you will select the **HTTP Request Trigger.** This trigger will be activated whenever you make an HTTP GET/POST request to a specific webhook URL.  
         ![Choose_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt90416d94f2f39023/659a7c21254eff8a34747e5a/Choose_Trigger.png)
     4.  **Configure Trigger**: Here, you need to provide additional details with respect to the trigger you selected in the above step. This section will differ for each trigger. For our example, click the displayed **Method**, i.e., **GET/POST**. You can also enable the **Secure HTTP Trigger** using the toggle to add security to the HTTP trigger and click **Proceed**.
-        
+
         **Note:** For more information, refer to the [HTTP Trigger](/docs/agent-os/http-trigger/) documentation.
-        
+
         ![Select_Method_Secure_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb02aa49bd9060ed5/659a7c50d082f77c7f261447/Select_Method_Secure_Trigger.png)
-        
+
         You will find the applicable **Input methods** and an **Input URL** in the **Test Trigger** section.
-        
+
         **Note:** You will see a similar URL, even If you update the configuration before testing the trigger.
-        
+
     5.  **Test Trigger**: The final step is to test the trigger you created. The Input URL you find here will be the webhook URL that you can use to see the automation working. Click **Test Trigger**.  
         ![Test_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4e820136b9d81f43/659a7c6b0543c568898f3719/Test_Trigger.png)
-        
+
         You should be able to see the output as follow:  
-        
+
         ![Output_Error.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt48150a59ba6e55b9/659a7c2fb05b9eb40ed73f9e/Output_Error.png)
-        
+
         **Note:** The output doesn’t appear because we haven’t tested the Trigger URL yet.
-        
+
         Next, to try if the trigger is working real-time, perform the following steps:
-        
+
         1.  Copy the **Input URL** that you see above and paste it on a new browser tab.
         2.  Pass a query parameter to the Input URL, for example, https://trigger\_input\_URL?**name="john"** and hit enter. You should see an output similar to the following:  
             {"result":"The automation is currently being tested or not activated","rule\_id":"1111ababa11111","trigger\_id":"1111ab1c1ab11111ca11b111111ca1bc"}
         3.  Return to your **Test Trigger** setup page and click **Restest**. In the output, you will see your query parameter as follows:  
             query:  
             name:"john"
-            
+
             Here’s what you see  
-            
+
             ![Save_and_Exit-trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2c1446aedacd91de/659a7e68be5d266ae365ab5b/Save_and_Exit-trigger.png)
         4.  The **Apply Trigger Conditions** section lets you filter the data displayed in the output. For example, if you want your trigger to proceed further with the configured actions, under the condition that the name parameter (the one you passed in the above step) is “scott” in the output result, click **\+ Add Trigger Condition** and pass the following filter condition:  
             query.name | Matches (Text) | scott
-            
+
         5.  Lastly, you can either pass a new query parameter and **Retest** the trigger or hit **Save and Exit** (see screenshot in **step 3**).
     6.  This completes your step of configuring your HTTP trigger.
-        
+
     7.  **Note:** You will find more details on how to [rename a trigger](/docs/agent-os/managing-triggers#rename-a-trigger/) and [delete a trigger](/docs/agent-os/managing-triggers#delete-a-trigger/) in the "[Working with Automate](https://www.contentstack.com/docs/agent-os#working-with-automate)" section.
-        
-    
+
+
     ### Configure Action Step
-    
+
     Action is the event that happens as a result of a triggered event.
-    
+
     To understand the concept of Actions, let’s consider the above example where you set an **HTTP Request** trigger that is activated when a user fires a GET/POST request. And, you can set up an action that will notify a particular **Slack** channel when such an event occurs.
-    
+
     After configuring the Trigger, click **Configure Action** **Step** and perform the following steps to set up the corresponding action:
-    
+
     **Note:** You can click the **Add any additional context or notes relevant to this section** text to add any additional details about the action step.
-    
+
     1.  Click **Configure Action Step** from the left navigation panel.
     2.  Click **Action Step** to configure third-party services.
     3.  **Choose Connector**: Click the connector (Contentstack or a third-party app or service) where you want your workflow to perform the next set of actions. In our case, click **Slack**.  
@@ -136,35 +137,35 @@ First, perform the following steps to create an Automation:
     5.  **Configure Action**: Here, you need to provide additional details for the action you selected in the above step. This section will differ for each action. For our example, we will add the Slack account.
         1.  Click **\+ Add New Account** (add Slack account).
         2.  You will see a list of permissions that you can choose to **Authorize**.
-            
+
             **Additional Resource:** Refer to the Slack connector documentation to know more about the permissions.
-            
+
         3.  Next, you will see a window open with access requests from the app. Click **Allow** to proceed further.  
             ![Allow-Access-Slack](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfd2cde0a08775432/63d8afda5b2c1e6188c567cc/Allow-Access-Slack.png)
         4.  Enter a **Title** for this account, say “Allow-Slack-access” and click **Save**.  
             ![Save_an_Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8751777c2ada6000/659a7c2e0543c560408f3711/Save_an_Account.png)
         5.  Next, click the **Channel** textbox. It displays a **Lookup list** containing all the channels in your Slack account. Click **Load More** until you locate your channel.  
             For our example, select the **sample** channel, and its name is displayed in the entry box.  
-            
+
             ![Select_Slack_Channel.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blteb1ecc953f705ff1/67c8092a21a60e396ea4829b/Select_Slack_Channel.png)
         6.  Click the **Message** textbox. You will see all the values related to the “1.HTTP Request trigger” you set up earlier. Click a parameter, say query.name, that you want to send as a message to the selected Slack channel.![Query_Name.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7d70071a6e0d526f/659a7c2fa8ee43b6ee19aaf0/Query_Name.png)  
             For example, if you want to send the name param, select query.name and type ahead a message if needed, say “1.query.name has sent a GET/POST request”.  
-            
+
             ![Slack_Message.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt057ad2174e54fd21/67c809e4d1b1de1796ca9427/Slack_Message.png)
         7.  Once done, click **Proceed**.
     6.  **Test Action**: Finally, you can test the configuration you have set up by clicking on the **Test Action** button.
-        
+
         The output shows the message that will be sent on the linked Slack channel.
-        
+
         ![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd20c72e21cd5f07d/659a7c2f0543c534458f3715/Save_Exit.png) Check your Slack channel. You will see the message delivered to the Slack channel as below:  
         ![Slack_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta59c965b8bfc3895/659a7c5dc3fb27daf919ef42/Slack_App.png)
-        
+
         Once it works as expected, click **Save and Exit**.
-        
+
         The action is now tested. If you hover over the number (2), the message “Tested” will be displayed.  
         ![Tested_Step.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6645e822438c28dc/659a7c6c1c5d7c75050f3e83/Tested_Step.png)
 5.  You can add multiple actions in an automation if needed. To do so, click the **\+ Add New Step** icon below the added action.
-    
+
 6.  ![Add_New_Step.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd98f313fe5db3f21/659a7c212d26123e5de763e3/Add_New_Step.png)
 
 Then, perform all the steps similar to steps that were covered in the Step 2.2 - [Configure Action](#configure-action) section.

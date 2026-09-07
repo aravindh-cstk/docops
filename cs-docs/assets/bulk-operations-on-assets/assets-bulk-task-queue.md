@@ -2,6 +2,7 @@
 title: "Assets Bulk Task Queue"
 description: "Efficiently track and manage bulk asset operations in Contentstack's Bulk Task Queue. Monitor task progress, status, and resolve issues with ease."
 url: /assets/assets-bulk-task-queue
+uid: bltd4063351e248ffbe
 ---
 
 # Assets Bulk Task Queue

@@ -2,6 +2,7 @@
 title: "About Global Field"
 description: "Create reusable Global fields in Contentstack to streamline content modeling, ensure consistency, and manage structured content efficiently.e"
 url: /headless-cms/about-global-field
+uid: blt3ec6d38d4af2e41f
 ---
 
 # About Global Field

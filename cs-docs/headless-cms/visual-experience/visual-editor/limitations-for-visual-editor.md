@@ -2,6 +2,7 @@
 title: "Limitations for Visual Editor"
 description: "Explore the limitations for Visual Editor, ensuring seamless integration and understanding for optimal content management strategies."
 url: /headless-cms/limitations-for-visual-editor
+uid: bltce5b0670f6f146a2
 ---
 
 # Limitations for Visual Editor

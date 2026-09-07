@@ -2,6 +2,7 @@
 title: "Variables Plugin Usage Guide"
 description: "Variables Plugin Usage Guide"
 url: /marketplace/variables-plugin-usage-guide
+uid: bltac542daf25efd4e0
 ---
 
 # Variables Plugin Usage Guide
@@ -28,23 +29,23 @@ The steps to set up and use the Variables plugin are as follows:
 3.  [Add the Variables Plugin within your JSON Rich Text Editor](#add-the-variables-plugin-within-your-json-rich-text-editor)
 
 1.  ## Create a Content Type to Render Variable Data
-    
+
     Let's create two content types called **Discount Codes** and **Product** for this use case. The **Discount Codes** content type will contain the varying information you can use within different JSON RTEs. The content type from which you render your variable content must match the following structure:
-    
+
     ![image6.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt29053709ab3dfe65/62cfe68ae1e8cc357ddc2ce2/image6.png)
-    
+
     **Note:** Your variable data content type must have a Group field set to type Multiple containing a Title field with the UID as title.
-    
+
     Create an entry for this content type as given below:
-    
+
     ![Marketplace_Variables_Entry.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt256d6e79384806c1/65674c3c7e63e35bed110250/Marketplace_Variables_Entry.png)
-    
+
     After you have created the content type with an entry from which you are rendering variable content, let's configure the Variables plugin.
-    
+
 2.  ## Install and Configure the Variables Plugin
-    
+
     Follow the steps below to install the application in Contentstack.
-    
+
     1.  Log in to your [Contentstack account](https://www.contentstack.com/login/).
     2.  Navigate to the “App Switcher” icon in the top-right corner and click **Marketplace**.![Contentstack-App-Switcher-Marketplace](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt47c618781b542b64/68ee96ad6bfd93c9913fee8a/Contentstack-App-Switcher-Marketplace.png)
     3.  Click **Apps** from the left panel.
@@ -56,11 +57,11 @@ The steps to set up and use the Variables plugin are as follows:
         ![Variables-Configuration](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc7079d8072f27256/65b7f3b508561660f15e0d6f/Variables-Configuration.png)
     7.  On the **UI Locations** tab, you can see the predefined app locations. You can use the toggle button corresponding to each UI location to enable or disable it based on your requirements.![Variables-UI-Locations](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt69f426db16056038/65b7f3b5d2067b3d8a8c5ad2/Variables-UI-Locations.png)
     8.  **Additional Resource:** For more information on UI locations, please refer to the [Installed Apps](/docs/marketplace/installed-apps#view-edit-configuration-ui-locations-and-webhook) guide.
-        
+
     9.  Click the **Save** button.
     10.  Click **Open Stack** to start using the plugin within your stack.
 3.  ## Add the Variables Plugin within your JSON Rich Text Editor
-    
+
     1.  Go to your stack and click the **Content Models** icon on the left navigation panel, and click the **\+ New Content Type** button.
     2.  Create a content type by adding relevant details and click the **Save and proceed** button.
     3.  ![image12.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt1306a85bf1bb1181/62cfe69c24c5e237d46f6976/image12.jpg)
@@ -75,7 +76,7 @@ The steps to set up and use the Variables plugin are as follows:
     11.  From the options, select the discount codes you want to add within your content and click the **Add** button.
     12.  ![image1.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt523d5e51c42b1d40/62cfe68a30ed0e3641c6328d/image1.png)
     13.  Your content with the variable Discount Codes data looks as follows:  
-         
+
     14.  ![image10.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltc14c37b09e3bd42f/6386e2d3a32209106e8b7921/image10.jpg)
-    
+
     Whenever you want to change or update a discount code, you must update the Discount Codes content type, and the change automatically reflects in all the JSON RTEs where the discount code was referred.

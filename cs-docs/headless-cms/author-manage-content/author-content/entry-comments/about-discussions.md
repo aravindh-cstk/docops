@@ -2,6 +2,7 @@
 title: "About Discussions"
 description: "About discussions in an entry."
 url: /headless-cms/about-discussions
+uid: blt0e3f439e626dd08a
 ---
 
 # About Discussions

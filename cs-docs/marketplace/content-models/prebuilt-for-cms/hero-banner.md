@@ -2,6 +2,7 @@
 title: "Hero Banner"
 description: "The Hero Banner Content Model defines the structure, fields, and schema to design the hero banner of your website."
 url: /marketplace/hero-banner
+uid: bltd00bde4b5dd79f00
 ---
 
 # Hero Banner

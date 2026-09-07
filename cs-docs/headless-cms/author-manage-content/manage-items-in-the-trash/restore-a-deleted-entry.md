@@ -2,6 +2,7 @@
 title: "Restore a Deleted Entry"
 description: "Restore a Deleted Entry"
 url: /headless-cms/restore-a-deleted-entry
+uid: blt283907c51698651d
 ---
 
 # Restore a Deleted Entry
@@ -18,18 +19,18 @@ To restore a deleted entry from the Trash, log in to your [Contentstack account,
 
 1.  Click the “Settings” icon (press “S”) on the left navigation panel and select **Trash** (or press “**alt + T**” for Windows OS, and “option + **T**” for Mac OS).
 2.  Click on the **Entries** tab, and hover over the entry you want to restore (e.g., **Author Bio**).![Restore_a_Deleted_Entry_1_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blta2431dfe3d6b785c/60c0c91068689d78c863164a/Restore_a_Deleted_Entry_1_no_highlight.png)  
-      
-    
+
+
 3.  Click on the **Restore** button that appears at the extreme right end.![Restore_a_Deleted_Entry_2_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltb9679613bff8abec/60c0c9452d47ce78c28ad111/Restore_a_Deleted_Entry_2_highlighted.png)  
-    
+
     **Note:** To be able to restore an entry that belongs to a deleted content type, you need to first restore the content type.
-    
+
 4.  The entry will then disappear from the Trash and will be available in the stack.
 5.  You can also edit the entry before you restore it back to the stack. Open the entry, edit field data, and click on **Restore**.![Restore_a_Deleted_Entry_3_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt84fb4b59fd36272e/60c0c9551b32a31d5305c07e/Restore_a_Deleted_Entry_3_highlighted.png)  
-      
-    
+
+
     **Note:** Every time a deleted entry is restored, its version number is incremented by default. At the same time, the **MODIFIED BY** column on the entry list page would also reflect the name of the user who restored the entry.
-    
+
 
 ## Filter Deleted Entries
 

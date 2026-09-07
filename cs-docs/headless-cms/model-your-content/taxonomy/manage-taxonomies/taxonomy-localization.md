@@ -2,6 +2,7 @@
 title: "Taxonomy Localization"
 description: "Learn how to localize taxonomies across branches and locales with centralized control and fallback support in Contentstack."
 url: /headless-cms/taxonomy-localization
+uid: bltc49c96e24616db92
 ---
 
 # Taxonomy Localization
@@ -35,9 +36,9 @@ To localize a taxonomy, log in to your [Contentstack account](https://www.conten
 1.  Navigate to your [stack](/docs/headless-cms/about-stack), go to **Settings**, and select **Taxonomy**.
 2.  Select the taxonomy you want to localize.
 3.  On the **Taxonomy Details** page, review the locale table.
-    
+
     **Note:** The list of locales is automatically derived from all locales available across the branches in the stack. This ensures that any locale configured in any branch is reflected in the taxonomy localization view.
-    
+
 4.  Click the vertical ellipsis next to the locale you want to localize, and select **Edit**.
 5.  In the **Edit Taxonomy** modal, enter the localized name for the selected locale.
 6.  Click **Save**.

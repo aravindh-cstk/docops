@@ -2,6 +2,7 @@
 title: "Blog Landing Page"
 description: "The Blog Landing Page Content Model defines the structure, fields, and schema to design the landing page for each blog."
 url: /marketplace/blog-landing-page
+uid: bltf4878784382898f7
 ---
 
 # Blog Landing Page

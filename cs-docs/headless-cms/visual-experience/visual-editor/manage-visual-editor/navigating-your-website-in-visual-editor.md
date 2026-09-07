@@ -2,6 +2,7 @@
 title: "Navigating Your Website in Visual Editor"
 description: "Optimize your website effortlessly with Contentstack's Visual Editor. Manage structures, preview changes, and tailor content in real time."
 url: /headless-cms/navigating-your-website-in-visual-editor
+uid: blt8b895319b6dd1c60
 ---
 
 # Navigating Your Website in Visual Editor
@@ -17,7 +18,7 @@ To navigate through your website, log in to your [Contentstack account](https://
 1.  Navigate to your [stack](/docs/headless-cms/about-stack) and select **Visual Experience**.
 2.  Click **Editor** in the bottom pill menu.
 3.  The Visual Editor interface includes five key areas to help you navigate and manage your website efficiently:
-    
+
     1.  **URL Bar**: Displays a list of all available web pages, including entries from content types defined in your custom URL configuration. It helps you understand the structure of your site and switch between pages for editing.
     2.  **Canvas**: Serves as the main workspace where you can preview your site and make visual edits directly. It reflects real-time changes and simulates the live appearance of the page.
     3.  **Toolbar**: Appears over page components and provides contextual tools to move elements, add comments, apply field modifiers, and view detailed field information such as the field name and its associated content type.
@@ -32,7 +33,7 @@ To navigate through your website, log in to your [Contentstack account](https://
     5.  **Publish Panel:**
         -   Displays all entries updated during a session, helping you track changes and organize updates.
         -   You can assign workflows, fix validation errors, and choose between quick publishing for fast deployment or advanced publishing for more control.
-    
+
     ![Navigating_Your_Website_in_Visual_Editor_.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfa2329dba887351a/6992e64f8b33e4000870a3b1/Navigating_Your_Website_in_Visual_Editor_.gif)
 
 ## View Pages From Custom URL Content Types

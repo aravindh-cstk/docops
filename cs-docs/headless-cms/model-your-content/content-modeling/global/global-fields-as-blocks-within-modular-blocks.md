@@ -2,6 +2,7 @@
 title: "Global Fields as Blocks within Modular Blocks"
 description: "Global Fields as Blocks within Modular Blocks"
 url: /headless-cms/global-fields-as-blocks-within-modular-blocks
+uid: blt1f9480630679576a
 ---
 
 # Global Fields as Blocks within Modular Blocks
@@ -30,9 +31,9 @@ To add Global fields within Modular Blocks, log in to your [Contentstack account
     -   **Clothes:** Select the **Clothes Store** Global Field.
     -   **Footwear:** Select the **Footwear Store** Global Field.
     -   **Mobiles:** Select the **Mobile Gallery** Global Field.
-        
+
         You can add additional blocks referencing other Global Fields such as Toy Store, Sports Equipment Store, Book Store, etc., as needed.
-        
+
 
 ![Modular blocks with global field integration](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5c5a431ebdccbc70/6805fc7698505f6afe0f2e38/1-global-fiels-within-modular-bl.gif)
 

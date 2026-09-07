@@ -2,6 +2,7 @@
 title: "Supported Capabilities of Agent OS"
 description: "Discover the capabilities and feature restrictions of Contentstack Agent OS."
 url: /agent-os/supported-capabilities-of-agent-os
+uid: bltddbbb6a2e630e29f
 ---
 
 # Supported Capabilities of Agent OS

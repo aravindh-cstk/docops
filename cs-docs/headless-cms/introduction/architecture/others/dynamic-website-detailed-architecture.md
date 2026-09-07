@@ -2,6 +2,7 @@
 title: "Dynamic Website"
 description: "Use our architecture to create your own dynamic website"
 url: /headless-cms/dynamic-website-detailed-architecture
+uid: blt539d82314df519e0
 ---
 
 # Dynamic Website

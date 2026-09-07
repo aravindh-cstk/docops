@@ -2,6 +2,7 @@
 title: "Managing Automations"
 description: "Learn how to create, edit, and delete automations and steps within Contentstack’s Agent OS."
 url: /agent-os/managing-automations
+uid: bltb73c076977fd390a
 ---
 
 # Managing Automations
@@ -23,9 +24,9 @@ To create an automation, perform the following steps:
     ![Create_New_Automation_button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt094d50c316ed4d3d/699bc08045700700085f5a77/Create_New_Automation_button.png)
 6.  In the **Create New Automation** modal, provide an **Automation Name** and an optional **Description**. Click **Create**.  
     ![Create_Automation.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4988549bcba86d73/699bc07f624a07000845fd57/Create_Automation.png)
-    
+
     **Additional Resource:** Refer to the [Get Started with Automations](< /docs/agent-os/get-started-with-automations>) documentation to learn the automation configuration.
-    
+
 
 ## Edit Automation Details
 

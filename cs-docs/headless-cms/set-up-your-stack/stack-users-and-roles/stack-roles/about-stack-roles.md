@@ -2,6 +2,7 @@
 title: "About Stack Roles"
 description: "Explore how to manage user permissions effectively with Contentstack Roles. Streamline access control across branches and content types."
 url: /headless-cms/about-stack-roles
+uid: blt0b25a8c4ba401da0
 ---
 
 # About Stack Roles

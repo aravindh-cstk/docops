@@ -2,6 +2,7 @@
 title: "Edit or Delete a Comment"
 description: "Learn to edit or delete comments in Contentstack."
 url: /headless-cms/edit-or-delete-a-comment
+uid: blta42e3e0076def4d5
 ---
 
 # Edit or Delete a Comment

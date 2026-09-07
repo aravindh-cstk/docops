@@ -2,6 +2,7 @@
 title: "Install the Delivery SDK"
 description: "Learn how to install and initialize the Contentstack Delivery SDK, configure environment variables, verify your connection, and set up non-US regions."
 url: /studio/install-the-delivery-sdk
+uid: blt620624b54fb48559
 ---
 
 # Install the Delivery SDK

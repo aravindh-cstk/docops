@@ -2,6 +2,7 @@
 title: "Minimum and Maximum Limits"
 description: "Learn how to configure minimum and maximum limits for fields in Contentstack to control the number of items users can add."
 url: /headless-cms/minimum-and-maximum-limit
+uid: bltf55a23c468d8d0f9
 ---
 
 # Minimum and Maximum Limits

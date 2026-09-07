@@ -2,6 +2,7 @@
 title: "Why Management Tokens"
 description: "Use Management Tokens to securely access Contentstack CMA for scripts, SSO users, and integrations—no personal Authtoken needed."
 url: /headless-cms/why-management-tokens
+uid: blt7ffa77f00b473f7f
 ---
 
 # Why Management Tokens
@@ -18,7 +19,7 @@ Here are some common use cases where management tokens are particularly useful:
     -   Automation scripts
     -   CI/CD pipelines
     -   External system integrations
-        
+
         Using management tokens ensures that you don’t have to expose or share your **personal Authtoken**, keeping your credentials secure.
-        
+
 -   **Risk Mitigation:** Management tokens can be invalidated at any time, providing flexibility and control. If a token is ever exposed or compromised, it can be revoked immediately—minimizing risk without affecting user accounts or requiring password resets.

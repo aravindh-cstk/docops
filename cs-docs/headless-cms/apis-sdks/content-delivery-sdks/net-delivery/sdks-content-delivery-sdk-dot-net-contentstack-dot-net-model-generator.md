@@ -2,6 +2,7 @@
 title: "Contentstack .NET Model Generator"
 description: "Generate models from Contentstack content types via .NET CLI. Supports OAuth 2.0 and API key authentication for fast, secure, automated model creation."
 url: /developers/sdks/content-delivery-sdk/dot-net/contentstack-dot-net-model-generator
+uid: blt73fe3257ce7bcf32
 ---
 
 # Contentstack .NET Model Generator
@@ -231,7 +232,7 @@ namespace ContentstackModels.Models
 -   **Client ID/Secret Issues**: Verify your OAuth app credentials
 -   **Network Issues**: Check your internet connection and Contentstack service status
 -   **Permission Issues**: Ensure your account has the necessary permissions for the stack  
-    
+
 
 ## MIT License
 

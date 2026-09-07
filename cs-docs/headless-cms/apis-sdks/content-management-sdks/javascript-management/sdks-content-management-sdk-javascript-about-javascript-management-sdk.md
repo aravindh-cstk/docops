@@ -2,6 +2,7 @@
 title: "About JavaScript Management SDK"
 description: "The JavaScript guide covers a series of topics on our CMS that ranges from a quickstart guide, queries that you can send to Contentstack to manage data for your JavaScript app, download the SDK for JavaScript Management, and example apps"
 url: /developers/sdks/content-management-sdk/javascript/about-javascript-management-sdk
+uid: blta0f2c95cc9779d1d
 ---
 
 # About JavaScript Management SDK

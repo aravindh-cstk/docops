@@ -2,6 +2,7 @@
 title: "Filter Assets"
 description: "Easily filter and manage assets in Contentstack using predefined and custom views, advanced filters, and personalized configurations."
 url: /headless-cms/filter-assets
+uid: blt6d81be1c9a388395
 ---
 
 # Filter Assets

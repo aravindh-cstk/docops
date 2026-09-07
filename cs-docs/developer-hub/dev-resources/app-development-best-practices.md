@@ -2,6 +2,7 @@
 title: "App Development Best Practices"
 description: "Best Practices for App Developers"
 url: /developer-hub/app-development-best-practices
+uid: blt6dbd149c0ea32309
 ---
 
 # App Development Best Practices

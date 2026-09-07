@@ -2,6 +2,7 @@
 title: "Mark as Title"
 description: "The Mark as Group title property sets a specific field’s value as the title of a Group field when marked as Multiple in Contentstack."
 url: /headless-cms/mark-as-title
+uid: blt717d2cbd4e50e1ba
 ---
 
 # Mark as Title

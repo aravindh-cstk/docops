@@ -2,6 +2,7 @@
 title: "About Workflow Tasks"
 description: "Manage your Contentstack workflow tasks efficiently. Access pending tasks, approvals, and insights for seamless content management."
 url: /headless-cms/about-workflow-tasks
+uid: bltff3ce4c421a3c562
 ---
 
 # About Workflow Tasks
@@ -23,5 +24,5 @@ To navigate to your **Tasks** section, log in to your [Contentstack account](htt
 
 1.  Go to the relevant stack.
 2.  Click the “Tasks” icon beside the “Help” icon (question mark **?**) located on the top right side corner, as shown below:  
-    
+
     ![tasks_section](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt24ac938e7f8e284c/63fdc4c11b33d910c37ade15/Workflow-Stage-Image.png)

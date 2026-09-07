@@ -2,6 +2,7 @@
 title: "About Ruby Utils Library"
 description: "The Ruby Utils library contains all the utilities for the Ruby SDK"
 url: /developers/sdks/utils-sdk/ruby/about-ruby-utils-library
+uid: bltf46de5e3871cde6e
 ---
 
 # About Ruby Utils Library

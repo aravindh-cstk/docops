@@ -2,6 +2,7 @@
 title: "About Typescript Utils Library"
 description: "Enhance your TypeScript projects with Contentstack Utils SDK: type-safe utilities for easy management of embedded entries, assets, and content references."
 url: /developers/sdks/utils-sdk/typescript/about-typescript-utils-library
+uid: blt14fa0a429c8eb16d
 ---
 
 # About Typescript Utils Library

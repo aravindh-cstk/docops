@@ -2,6 +2,7 @@
 title: "Set the Master Language"
 description: "Discover how to set and manage the master language for your Contentstack, enabling multilingual publishing and efficient localization seamlessly."
 url: /headless-cms/set-the-master-language
+uid: blt5245f90894b06ea3
 ---
 
 # Set the Master Language

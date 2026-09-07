@@ -2,6 +2,7 @@
 title: "JSON RTE Plugin for Contentstack App SDK"
 description: "Learn to build JSON RTE plugins using the Contentstack App SDK: access nodes, marks, paths, and editor events to customize rich text and improve plugin flexibility."
 url: /developers/sdks/contentstack-app-sdk/typescript/json-rte-plugin-for-contentstack-app-sdk
+uid: bltc66522ecb250ba41
 ---
 
 # JSON RTE Plugin for Contentstack App SDK
@@ -141,17 +142,17 @@ Use a Location object as input when targeting or modifying content in the editor
 To build a JSON RTE plugin:
 
 1.  **Install the SDK**
-    
+
     Add the @contentstack/app-sdk package to your React project:
-    
+
     ```
     npm install @contentstack/app-sdk
     ```
-    
+
 2.  **Clone the Boilerplate**
-    
+
     Use the JSON RTE plugin [boilerplate](https://github.com/contentstack/rte-plugin-boilerplate) from GitHub as a starting point. It includes the required project structure and configuration.
-    
+
 
 ## Classes
 

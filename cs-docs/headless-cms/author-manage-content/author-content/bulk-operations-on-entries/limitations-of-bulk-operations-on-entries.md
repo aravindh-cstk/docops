@@ -2,6 +2,7 @@
 title: "Limitations of Bulk Operations on Entries"
 description: "Learn about the limitations of performing bulk operations on entries in Contentstack."
 url: /headless-cms/limitations-of-bulk-operations-on-entries
+uid: bltfecc063276da0931
 ---
 
 # Limitations of Bulk Operations on Entries

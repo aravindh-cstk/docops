@@ -2,6 +2,7 @@
 title: "Blog Listing Page"
 description: "The Blog Listing Page Content Model defines the structure, fields, and schema to design the blog listing of your website."
 url: /marketplace/blog-listing-page
+uid: bltaff46eaa67f738a7
 ---
 
 # Blog Listing Page
@@ -32,9 +33,9 @@ The Blog Listing Page Content Model contains four [Content Types](/docs/headless
     -   **From Blog**: This [Modular Block](/docs/headless-cms/modular-blocks/) field includes the following components of a blog in the list:
         -   **Title H2**: This is a [Single Line Textbox](/docs/headless-cms/single-line-textbox/) field where you can add the title of the reference blog. The title is displayed as a level-two heading.
         -   **Featured Blogs**: This is a [Reference](/docs/headless-cms/reference/) field that refers to the [Blog Landing Page](/docs/marketplace/blog-landing-page#schema-for-blog-landing-page-content-type) content type.
-            
+
             **Note:** You can find the [Author](/docs/marketplace/blog-landing-page#schema-for-author-content-type) content type and the [Social Share](/docs/marketplace/blog-landing-page#schema-for-blog-landing-page-content-type) [Global](/docs/headless-cms/global) field in the [Blog Landing Page](/docs/marketplace/blog-landing-page) content model.
-            
+
         -   **View Articles**: This is a [Link](/docs/headless-cms/link/) field to add links to any related articles.
     -   **Widget**: This [Modular Block](/docs/headless-cms/modular-blocks/) field includes the following components of the widget section:
         -   **Title H2**: This is a [Single Line Textbox](/docs/headless-cms/single-line-textbox/) field to add the title of the blog in the list. The title is displayed as a level-two heading.

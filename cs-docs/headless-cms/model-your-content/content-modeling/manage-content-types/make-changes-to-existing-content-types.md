@@ -2,6 +2,7 @@
 title: "Make Changes to Existing Content Types"
 description: "Learn how to safely update Content Type schemas in Contentstack to avoid data loss and protect live content."
 url: /headless-cms/make-changes-to-existing-content-types
+uid: bltf5e1563d28208e6c
 ---
 
 # Make Changes to Existing Content Types

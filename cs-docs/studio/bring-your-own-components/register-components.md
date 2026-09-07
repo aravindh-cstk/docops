@@ -2,11 +2,16 @@
 title: "Register Components"
 description: "Learn how to use registerComponent, registerComponents, and registerLazyComponent to add your React components to the Contentstack Studio palette."
 url: /studio/register-components
+uid: bltcdcc85f8e1e80f7c
 ---
 
 # Register Components
 
 ## Register Components
+
+> 🧠 **Deciding _what_ to register?** Read Design a component library that composes, not sprawls first. It's the atomic + layout primitive pattern (aligned with Tailwind + shadcn/ui) that keeps your library small and your design system enforced.
+> 
+> ⚠️ **Deciding _how each component should be shaped_ to bind cleanly?** Read Component shape rules — the five-rule tactical checklist. Skipping it leads to silent blank renders (Rule 1), unreachable child bindings (Rule 2), compound monoliths (Rule 3), misaligned positional remaps (Rule 4), and per-Template rebuilds (Rule 5). This page covers the _API mechanics_; those pages cover the _what_ and the _how_.
 
 Three register APIs, picked by use case.
 
@@ -51,7 +56,8 @@ What each field does:
 | component | React component | ✅ | Your actual React component. Studio mounts this at render time. |
 | displayName | string |  | Label shown in the palette and Layers panel. Falls back to type if omitted. |
 | description | string |  | Tooltip / docs hover in the palette. |
-| thumbnailUrl | string (URL, imported asset, or data: URI) |  | Palette tile thumbnail. SVG works best: inline data:image/svg+xml,… URIs avoid separate asset files and ship in the eager bundle. Falls back to a generic placeholder if omitted, so all your tiles end up looking the same. |
+| thumbnailUrl | string (URL, imported asset, or data: URI) |  | Palette tile thumbnail. SVG works best — inline data:image/svg+xml,… URIs avoid separate asset files and ship in the eager bundle. Falls back to a generic placeholder if omitted, so all your tiles end up looking the same. |
+| layerIcon | string (inline SVG, URL, or servable path) |  | Icon shown in the **Layers tree**. Best sourced from a .svg file via a ?raw import (inline, themeable, sanitized). See [Layers-tree icons](#layers-tree-icons--layericon). |
 | sections | string | string\[\] |  | Which left-panel category this appears under. Defaults to "Registered Components". |
 | wrap | boolean | string |  | If true, Studio wraps the component in a <div> for selection / edit handles. If a string, wraps in that tag. **Default: false**, you opt in if your component doesn't render a single editable root. |
 | props | object |  | The prop schema. See [Component schema](/docs/studio/component-schema-prop-types) for every prop type. |
@@ -105,17 +111,45 @@ Why this shape:
 
 Verify visually before relying on it: open the project, drop into a composition, confirm every tile is _visually distinct_, not the placeholder.
 
-### Layers-tree icons (separate field)
+### Layers-tree icons — layerIcon
 
-thumbnailUrl drives the **palette tile** only. To set the Layers-tree icon, use a spread-cast to pass the icon field: Studio's TypeScript types strip it from the public API at compile time, but Studio honours it at runtime:
+thumbnailUrl drives the **palette tile** only. The **Layers tree** (left panel → Layers tab) reads a different field — layerIcon, a public field that accepts **your own** icon as an inline SVG string, an absolute URL, or a servable path. (This is separate from the internal built-in icon field covered below.)
+
+The cleanest pattern is to keep each icon in its own .svg file and import it with the bundler's **?raw** query — which returns the file's markup **as a string**:
 
 ```
+// hero.svg lives next to your registration, editable in any SVG tool.
+import heroLayerIcon from "@/assets/layer-icons/hero.svg?raw";
+
 registerComponent({
   type: "Hero",
   displayName: "Hero",
   thumbnailUrl: heroIcon,
   component: Hero,
-  // Layers-tree icon — typescript-stripped, runtime-honoured.
+  layerIcon: heroLayerIcon, // file markup as a string → inline, themeable, sanitized
+  // …
+});
+```
+
+Why ?raw and not a plain import:
+
+-   **import x from "./x.svg?raw"** → the file's **markup as a string**. Studio treats it as inline SVG: themeable via currentColor (recolors on hover/selection), DOMPurify-sanitized, and inlined into the bundle — no separate asset request, and no production path breakage.
+-   **import x from "./x.svg"** (no ?raw) → a **URL**, rendered as a static <img>. Fine for thumbnailUrl, but _not themeable_ and the wrong choice for layerIcon.
+-   Use currentColor (not hard-coded hex) in the SVG so the glyph follows the Layers-tree theme in light + dark mode.
+-   In TypeScript, ?raw imports are typed as string by vite/client (Vite) or your bundler's SVG type declarations — no cast needed.
+
+You can also pass an inline SVG string directly (skip the file), an absolute https://… URL, or a public/\-root-relative path like /icons/hero.svg. Raw _string_ source-tree paths ("./icons/hero.svg") are **not** supported — they break in production once the bundler hashes assets; use ?raw, a public/ path, or an imported URL instead.
+
+#### Legacy: the built-in icon field
+
+Before layerIcon was public, the only way to set a Layers-tree glyph was the internal icon field — typed as internal and stripped from the public API, opted into via a spread-cast. Prefer layerIcon above; reach for icon only if you specifically want one of Studio's own built-in glyphs:
+
+```
+registerComponent({
+  type: "Hero",
+  displayName: "Hero",
+  component: Hero,
+  // Built-in glyph — typescript-stripped, runtime-honoured.
   ...({ icon: "ComponentHeader" } as any),
   // …
 });
@@ -133,7 +167,7 @@ Only built-in BuilderIcon names are accepted: the closed set lives in the Render
 | Video | "ComponentVideo" |
 | A box / generic container | "ComponentBox" |
 
-Arbitrary SVG / URLs are **not** accepted here: the lookup is a switch on the name string. If you omit the field (or pass an unknown name), Layers falls back to "ComponentDefault" (4 small squares).
+Arbitrary SVG / URLs are **not** accepted in icon — the lookup is a switch on the name string (that's what layerIcon is for). If you omit both fields, Layers falls back to "ComponentDefault" (4 small squares).
 
 ## Use registerComponents for Many at Once
 
@@ -245,7 +279,7 @@ export function registerStudio() {
 import { studioSdk } from "@contentstack/studio-react";
 import { registerStudio } from "./studio-components";
 
-export const sdk = studioSdk.init({ stackSdk, contentTypeUid: "compositions" });
+export const csStudio = studioSdk.init({ stackSdk, contentTypeUid: "compositions" });
 registerStudio();   // explicit call — guaranteed to run AFTER init
 ```
 
@@ -271,7 +305,7 @@ Three ways this breaks in practice:
 
 ## Handle Next.js App Router: Register in Both Module Graphs
 
-App Router apps have two module graphs: a server graph (RSC pages that call sdk.fetchCompositionData) and a client graph (the bundle that hydrates). The component registry is a globalThis\-backed singleton, but it still needs to be **populated in whichever graph reaches it first**. If only one side registers, the other renders with an empty palette / unknown component errors.
+App Router apps have two module graphs: a server graph (RSC pages that call csStudio.fetchCompositionData) and a client graph (the bundle that hydrates). The component registry is a globalThis\-backed singleton, but it still needs to be **populated in whichever graph reaches it first**. If only one side registers, the other renders with an empty palette / unknown component errors.
 
 Recommended layout:
 
@@ -285,7 +319,7 @@ Then import + call it from **both** entry points:
 ```
 // src/lib/contentstack.ts — server-side import path
 import { registerStudio } from "./studio-components";
-export const sdk = studioSdk.init({ /* … */ });
+export const csStudio = studioSdk.init({ /* … */ });
 registerStudio();
 ```
 
@@ -319,3 +353,4 @@ Then: _"register my Button component as a Studio component"_. The LLM inspects y
 -   [Component schema](/docs/studio/component-schema-prop-types): every prop type, with examples
 -   [Default data](/docs/studio/set-component-default-data): what renders before binding
 -   [Optimizing load](/docs/studio/optimizing-load-with-lazy-registration): when and how to lazy-register
+-   Registered components API: read back what a project has synced, with prop schemas — for tooling outside the browser

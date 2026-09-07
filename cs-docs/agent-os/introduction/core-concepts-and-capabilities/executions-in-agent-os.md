@@ -2,6 +2,7 @@
 title: "Executions in Agent OS"
 description: "Track and debug execution logs in Agent OS with performance metrics and statuses for better workflow visibility."
 url: /agent-os/executions-in-agent-os
+uid: blt3264d308714db548
 ---
 
 # Executions in Agent OS
@@ -51,13 +52,13 @@ With this feature, you can retry the execution up to **2** times using the follo
     ![Failed_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt87ffe2f65d662117/66a2809e02bf2773893ba2ef/Failed_Icon.png)
 4.  Click the **Retry Execution** button to retry the execution.  
     ![Retry_Execution.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt06f7f50a0c528b01/66a280a60570204bcbcace9f/Retry_Execution.png)
-    
+
     **Note:** The first attempt occurs when you activate and execute the automation. In the Retry Execution pop-up, you can retry the execution up to **2** more times.
-    
+
 5.  Click the **Code** icon for the failed step to view the **Input**/**Output** payload for the action step. For a trigger, you can specifically view the **Input** option.
-    
+
     Additionally, you can click the **Copy** icon to copy and debug the code.
-    
+
     ![Code_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt929a0b6db7d4748b/66a2809e85d5053f8e3fc111/Code_Icon.png)
 
 Let’s explore a few use cases to understand the Retry Execution feature better.

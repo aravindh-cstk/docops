@@ -2,6 +2,7 @@
 title: "Working with Copy-Paste in JSON Rich Text Editor"
 description: "Learn how to copy and paste content into Contentstack’s JSON RTE while avoiding formatting issues and ensuring consistent frontend output."
 url: /headless-cms/copy-paste-in-json-rich-text-editor
+uid: blt2b7eb7c21d65eeb6
 ---
 
 # Working with Copy-Paste in JSON Rich Text Editor

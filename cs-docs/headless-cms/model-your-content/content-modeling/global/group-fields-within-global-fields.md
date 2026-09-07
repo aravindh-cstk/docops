@@ -2,6 +2,7 @@
 title: "Group Fields within Global Fields"
 description: "Learn to create a Group field within a Global field in Contentstack to streamline content modeling and maintain consistency across entries."
 url: /headless-cms/group-fields-within-global-fields
+uid: blt59ae88c96ddc6b43
 ---
 
 # Group Fields within Global Fields
@@ -26,9 +27,9 @@ To create a Group field within a Global field, log in to your [Contentstack acco
 1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Content Models” icon in the left navigation panel or use the shortcut key “C” (for Windows and Mac OS users).
 2.  On the **Content Models** page, select **Global Fields** and click **\+ New Global Field**.
 3.  Enter a **Name** and **Description** (optional), and click **Proceed**.
-    
+
     ![Global field setup modal in Contentstack](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4d3c9f9337fb7b77/6800b92045744f70edc9861e/1._Complex-Global-Fields_Group-Fields-Within-Global-Fields_New-Global-Field-Button.png)
-    
+
 4.  Click the **Insert a Field (+)** icon and select **Group** field.
 5.  In the **Group Properties** modal, enter a display name.
 6.  Click the **Insert a field (+)** icon inside the group and add the following fields:
@@ -37,9 +38,9 @@ To create a Group field within a Global field, log in to your [Contentstack acco
     3.  **File**: To upload an image for the banner
     4.  **Link**: For related webpage links
 7.  Click **Save** or **Save and Close**.
-    
+
     ![Saved Global field with nested group structure](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt360e1e865dfaff2e/6800b920996a89383121516a/2._global_field_created.png)
-    
+
 8.  Navigate to **Content Models** and open a content type.
 9.  Click the **Insert a field (+)** icon and select **Global** field.
 10.  Select the newly created Global field from the **Select Global Fields** modal and click **Save** or **Save and Close**.

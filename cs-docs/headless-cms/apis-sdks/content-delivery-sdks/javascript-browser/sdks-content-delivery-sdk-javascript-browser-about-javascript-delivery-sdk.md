@@ -2,6 +2,7 @@
 title: "About JavaScript Delivery SDK"
 description: "The JavaScript guide covers a series of topics on our CMS that ranges from a quickstart guide, queries that you can send to Contentstack to fetch data for your JavaScript app using the Content Delivery APIs, download the SDK for JavaScript, and example apps"
 url: /developers/sdks/content-delivery-sdk/javascript-browser/about-javascript-delivery-sdk
+uid: bltca4df78fd2d9dbfe
 ---
 
 # About JavaScript Delivery SDK

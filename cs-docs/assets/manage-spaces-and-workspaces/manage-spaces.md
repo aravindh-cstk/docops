@@ -2,6 +2,7 @@
 title: "Manage Spaces"
 description: "Effortlessly manage your Contentstack spaces by updating details or deleting them to maintain an organized asset environment. Learn how to edit or delete a space."
 url: /assets/manage-spaces
+uid: blt04e5902dbd145898
 ---
 
 # Manage Spaces

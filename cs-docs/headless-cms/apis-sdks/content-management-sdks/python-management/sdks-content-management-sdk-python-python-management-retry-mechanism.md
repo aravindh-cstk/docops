@@ -2,6 +2,7 @@
 title: "Implement Retry Mechanism with Python Management SDK"
 description: "Configure retries in the Contentstack Python Management SDK using max_retries and OAuth interceptors to handle 429s, 5xx errors, and token refresh reliably."
 url: /developers/sdks/content-management-sdk/python/python-management-retry-mechanism
+uid: blt73251bc401320728
 ---
 
 # Implement Retry Mechanism with Python Management SDK
@@ -54,11 +55,11 @@ The following steps describe how the SDK evaluates retries once a request failur
 5.  **Check Retry Limit:** The SDK verifies whether retry attempts remain by comparing the current retry count with the configured max\_retries value.
 6.  **Calculate Retry Delay:** The SDK calculates the wait time using an exponential backoff strategy.
     -   For OAuth requests, the delay is calculated as:
-        
+
         ```
         min(1000 × (2 raised to the power of retry_count), 30000) divided by 1000 seconds.
         ```
-        
+
     -   The maximum delay is capped at **30 seconds.**
 7.  **Wait Before Retry:** The SDK pauses execution for the calculated delay duration.
 8.  **Attempt Retry:** The SDK retries the request and increments the retry count.
@@ -171,11 +172,11 @@ The SDK includes an automatic retry mechanism with the following characteristics
     -   3rd retry: 4 seconds (4000 ms)
     -   Maximum delay: 30 seconds
 -   **Delay Calculation Formula:**
-    
+
     ```
     min(1000 * (2 ** retry_count), 30000) / 1000 seconds
     ```
-    
+
 
 **Note:** The retry\_count starts from 0.
 
@@ -213,31 +214,31 @@ entries = stack.content_type('content_type_uid').entry().find()
 ### Execution Flow
 
 1.  **Token Validation:**
-    
+
     Before each request, the interceptor checks whether the access token is valid (not expired).
-    
+
 2.  **Automatic Token Refresh:**
-    
+
     If the token has expired, it automatically refreshes the token using the refresh token.
-    
+
 3.  **401 Unauthorized Handling:**
-    
+
     If a request returns 401 Unauthorized:
-    
+
     -   The interceptor attempts to refresh the token.
     -   After a successful refresh, it retries the original request with the new token.
 4.  **Rate Limit Handling (429):**
-    
+
     On receiving 429 Too Many Requests, the interceptor waits using exponential backoff before retrying.
-    
+
 5.  **Server Error Handling (****5xx** **except** **501****):**
-    
+
     On receiving retryable server errors, the interceptor retries using the same exponential backoff calculation.
-    
+
 6.  **Final Failure:**
-    
+
     If all retry attempts are exhausted, the SDK raises the final error.
-    
+
 
 ## Complete Example
 

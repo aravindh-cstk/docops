@@ -2,6 +2,7 @@
 title: "Fetch Dynamic Content with Pinned Queries"
 description: "Learn how to pin a CDA query onto a Freeform template so a Repeater can iterate over dynamic list results that refresh automatically as content changes."
 url: /studio/fetch-dynamic-content-with-pinned-queries
+uid: blt63ad5b30fa2414cc
 ---
 
 # Fetch Dynamic Content with Pinned Queries
@@ -31,7 +32,7 @@ A query is a saved CDA query against your stack: a content type + optional filte
 Right panel  →  Data tab  →  Queries section
 ```
 
-The Data tab only appears when [**Enable Freeform Feature**](/docs/studio/freeform-templates) is on; without Freeform, the right panel collapses to **Settings only**. See [The Data tab](/docs/studio/page-data-tab-for-entry-data-queries-and-external-data) for the full structure.
+The Data tab only appears when Enable Freeform Feature is on; without Freeform, the right panel collapses to **Settings only**. See [The Data tab](/docs/studio/page-data-tab-for-entry-data-queries-and-external-data) for the full structure.
 
 ## Authoring Flow
 

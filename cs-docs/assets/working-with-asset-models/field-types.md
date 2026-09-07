@@ -2,6 +2,7 @@
 title: "Field Types"
 description: "Explore different field types in Asset Management for accurate metadata, including textboxes, links, selections, and more to streamline data handling."
 url: /assets/field-types
+uid: blta5cbafff38985359
 ---
 
 # Field Types

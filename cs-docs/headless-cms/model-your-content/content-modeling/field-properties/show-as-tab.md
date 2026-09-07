@@ -2,6 +2,7 @@
 title: "Show as Tab"
 description: "Learn how to organize entry fields into tabs within the entry editor to simplify large content types and improve the editing experience."
 url: /headless-cms/show-as-tab
+uid: blt63fcd6148666a3d4
 ---
 
 # Show as Tab

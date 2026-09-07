@@ -2,6 +2,7 @@
 title: "Examples to Create Custom Roles"
 description: "Learn how to create custom roles in Contentstack with entry, field, asset, language, and taxonomy permissions using common configuration examples."
 url: /headless-cms/examples-to-create-custom-roles
+uid: blt9c825fb66db2c36d
 ---
 
 # Examples to Create Custom Roles

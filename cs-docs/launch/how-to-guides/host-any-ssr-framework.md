@@ -2,6 +2,7 @@
 title: "Host any SSR Framework on Launch"
 description: "Learn to host any SSR framework on Launch built on NodeJS."
 url: /launch/host-any-ssr-framework
+uid: bltd75e02b065376e12
 ---
 
 # Host any SSR Framework on Launch

@@ -2,6 +2,7 @@
 title: "Managing Editorial Workflows at Scale"
 description: "How to integrate Studio compositions with Contentstack workflow stages, roles, scheduled publishing, and multi-environment promotion for editorial teams."
 url: /studio/managing-editorial-workflows-at-scale
+uid: blt5c01c6072294cda5
 ---
 
 # Managing Editorial Workflows at Scale

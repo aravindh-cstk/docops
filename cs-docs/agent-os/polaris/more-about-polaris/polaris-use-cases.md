@@ -2,6 +2,7 @@
 title: "Polaris Use Cases"
 description: "Explore common Polaris use cases in Contentstack, including schema generation, entry creation with Brand Kit, translation at scale, personalization, and campaign scheduling."
 url: /agent-os/polaris-use-cases
+uid: blt798acea854186b2f
 ---
 
 # Polaris Use Cases
@@ -40,11 +41,11 @@ Let's look at the steps to build a **Content Model** using **Polaris**:
 -   Log in to your Contentstack [account](https://www.contentstack.com/login) and navigate to your [stack](/docs/headless-cms/about-stack).
 -   Open the **Polaris** panel.
 -   In the **Polaris** panel, describe the structure you want in plain language. In the prompt text box, click **+** to add an image.
-    
+
     **Example:** Attach a website image. In the **Polaris** prompt enter, "Create a **Content Model** based on the attached image."
-    
+
     Polaris enters a planning state. No changes are made to the content type at this stage.
-    
+
 
 ### Review the preview
 
@@ -144,9 +145,9 @@ Building personalized content variants for different audiences, regions, or segm
 -   Log in to your Contentstack [account](https://www.contentstack.com/login) and navigate to your stack.
 -   Open the **Polaris** panel. Polaris receives the base entry content and any existing variant structure.
 -   In the **Polaris** prompt enter a prompt.  
-      
+
     **Example:** Update the CTA text in this entry for three variants: new users, returning users, and enterprise buyers.  
-      
+
     Polaris identifies which fields need variant-specific content, and prepares a write action for each audience segment. No variants are created at this stage.
 
 **Review the preview**
@@ -181,9 +182,9 @@ Getting a campaign entry ready for launch usually involves several small tasks: 
 -   Open the **Polaris** panel.
 
 -   In the **Polaris** prompt enter a prompt.  
-      
+
     **Example:** Schedule this entry to publish next Monday at 9 AM and unpublish two weeks later.  
-      
+
     Polaris interprets the dates and environments referenced, and prepares a write action covering the publish and unpublish schedule. No scheduling changes are made at this stage.
 
 ### Review the preview

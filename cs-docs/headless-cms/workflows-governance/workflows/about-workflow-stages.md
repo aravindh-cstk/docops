@@ -2,6 +2,7 @@
 title: "About Workflow Stages"
 description: "Streamline content creation with Contentstack's workflow stages, ensuring efficient management from drafting to final approval for optimized SEO."
 url: /headless-cms/about-workflow-stages
+uid: bltc2a0efbddeacf021
 ---
 
 # About Workflow Stages
@@ -14,7 +15,7 @@ As we know, content flows through different stages before it is published. A wor
 
 ![Contentstack Workflow Stages.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt3fe2c6898a94ad92/5d65130a3b1d3a0bf62c0b99/Contetnstack_Workflow_Stages.jpg)
 
-  
+
 
 In the above example:
 

@@ -2,6 +2,7 @@
 title: "Manage Variant Groups"
 description: "Learn how to view and manage variant groups in Contentstack, allowing you to create and target personalized content to your users."
 url: /headless-cms/manage-variant-groups
+uid: blt577fc91979a18964
 ---
 
 # Manage Variant Groups
@@ -52,19 +53,19 @@ To create and manage variant groups, log in to your [Contentstack account](https
 1.  Navigate to the desired [stack](/docs/headless-cms/about-stack) and click **Settings**.
 2.  Select **Variants** to open the **Variant Groups** list page.
 3.  On the **Variant Groups** page, click **New Variant Group**.
-    
+
     **Note:** By default, the create variant groups button is visible only in the main branch.
-    
+
 4.  In the modal, enter the **Variant Group Name**, and click **Create**.
 5.  Within the variant group, add a **Description** if required.
 6.  Under **Linked Variants**, enter the variants associated with this group. To add multiple variants, click the **+** icon.
-    
+
     **Note:** Variant group names and variant names are shared across all branches in the stack.
-    
+
 7.  In the **Linked Content Types** section, select one or more content types that this variant group will support for the main branch.
-    
+
     **Note:** Content type assignments can be configured independently in each branch.
-    
+
 8.  Click **Save** to apply the configuration.
 
 ![Create_and_Manage_Variant_Groups_in_the_CMS.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6baf5d96f7be059e/69bda20e554eb218ba371e6d/Create_and_Manage_Variant_Groups_in_the_CMS.gif)

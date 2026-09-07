@@ -2,6 +2,7 @@
 title: "Mark a Task as Complete"
 description: "Mark a task as complete"
 url: /headless-cms/mark-a-task-as-complete
+uid: bltcbcd566f268bd524
 ---
 
 # Mark a Task as Complete

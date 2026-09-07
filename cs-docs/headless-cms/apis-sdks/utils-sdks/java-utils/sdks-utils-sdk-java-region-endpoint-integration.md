@@ -2,6 +2,7 @@
 title: "Java Utils - Configure Region Endpoints in Java Utils SDK"
 description: "Configure region endpoints dynamically using the Contentstack Java Utils SDK. A Java developer guide to dynamic resolution without hardcoding URLs."
 url: /developers/sdks/utils-sdk/java/region-endpoint-integration
+uid: blte602a0d1ffd76bf4
 ---
 
 # Java Utils - Configure Region Endpoints in Java Utils SDK

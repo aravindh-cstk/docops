@@ -2,6 +2,7 @@
 title: "URL"
 description: "Configure the URL field in Contentstack, apply default patterns, and enforce unique URLs to ensure consistent and SEO-friendly entry paths."
 url: /headless-cms/url
+uid: blt28719c211e3c69e6
 ---
 
 # URL

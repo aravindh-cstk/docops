@@ -2,6 +2,7 @@
 title: "Basic Search"
 description: "Efficiently search your stack's entries and assets with our basic search. Find exactly what you need quickly with our robust search feature."
 url: /headless-cms/basic-search
+uid: blta97fed453bba9be3
 ---
 
 # Basic Search
@@ -29,15 +30,15 @@ Let’s look at these options in detail:
 -   **URL (Search within url only)**: This option restricts the search to the URL field of your entries or assets.  
     ![alt_text](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1770bb75a429ac6e/68402c6a3010e30c35e22a20/5._Search_Content-Basic_Search-URL.png)
 -   **Specific Field (Search within a specific field)**: This option allows you to search for entries where a specific field of a specific content type contains the given keyword.
-    
+
     Select the **Specific field** option to open up a modal enlisting all the content types and their respective fields. You can choose any field from any content type.
-    
+
     ![alt_text](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt48a10ad4beb97709/68402b6da1ab6527389b0586/6-Search-content-special-case.gif)
-    
+
     Your search results are filtered depending on the field selected.
-    
+
     **Note:** The Specific field search is exclusive to entries.
-    
+
 
 These filters enable you to refine your search results quickly and easily, ensuring you find precisely what you need with greater accuracy.
 

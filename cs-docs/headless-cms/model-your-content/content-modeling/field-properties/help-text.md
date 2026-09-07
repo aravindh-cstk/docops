@@ -2,6 +2,7 @@
 title: "Help Text"
 description: "Learn to enhance user experience in Contentstack by adding Help Text to fields, guiding users with tooltips for entries creation and management."
 url: /headless-cms/help-text
+uid: blta81e3be9672cf844
 ---
 
 # Help Text

@@ -2,6 +2,7 @@
 title: "About Permanent Asset URLs"
 description: "Learn about permanent asset URLs in Contentstack, ensuring stable references for assets even after updates or replacements."
 url: /headless-cms/permanent-asset-urls
+uid: blt5307302aed4d91ca
 ---
 
 # About Permanent Asset URLs

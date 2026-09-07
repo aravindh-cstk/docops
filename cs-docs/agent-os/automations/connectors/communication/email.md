@@ -2,6 +2,7 @@
 title: "Email"
 description: "Simplify email automation with Contentstack's Email connector."
 url: /agent-os/email
+uid: blt72d915393edb92f0
 ---
 
 # Email

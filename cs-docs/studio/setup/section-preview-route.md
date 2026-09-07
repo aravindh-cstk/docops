@@ -2,6 +2,7 @@
 title: "Section Preview Route"
 description: "Learn how to add the canvas route to your app, mount StudioCanvas, and configure the Canvas URL in Studio project settings for section preview."
 url: /studio/section-preview-route
+uid: blt1078852e0b862786
 ---
 
 # Section Preview Route

@@ -2,6 +2,7 @@
 title: "Vue on Launch"
 description: "Learn about the Vue framework and its supported features in Contentstack Launch."
 url: /launch/vue-on-launch
+uid: blt6839a4d05ee18d2e
 ---
 
 # Vue on Launch

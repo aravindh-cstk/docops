@@ -2,6 +2,7 @@
 title: "Multiple"
 description: "Learn how to use the Multiple property in Contentstack to allow users to add multiple values to a field, along with minimum and maximum instance limits."
 url: /headless-cms/multiple
+uid: blt411c33df472815c6
 ---
 
 # Multiple

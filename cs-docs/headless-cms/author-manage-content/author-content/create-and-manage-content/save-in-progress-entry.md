@@ -2,6 +2,7 @@
 title: "Save In-progress Entry"
 description: "Learn how to save entries with incomplete mandatory fields in Contentstack, allowing you to preserve work-in-progress content and prevent data loss."
 url: /headless-cms/save-in-progress-entry
+uid: blt3cf1fef3caf3ba31
 ---
 
 # Save In-progress Entry

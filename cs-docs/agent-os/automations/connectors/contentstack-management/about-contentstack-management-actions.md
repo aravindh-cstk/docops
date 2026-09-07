@@ -2,6 +2,7 @@
 title: "About Contentstack Management Actions"
 description: "Use the Contentstack Management connector to automate content types, entries, assets, releases, and publish queue related actions in Contentstack."
 url: /agent-os/about-contentstack-management-actions
+uid: blt0d093729d81cf180
 ---
 
 # About Contentstack Management Actions
@@ -45,9 +46,9 @@ To use the Contentstack Management connector, you first need to add your [Conten
     ![Authorize_Account.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6b3e4620943849cf/660a41ca1b5a584959adc9e8/Authorize_Account.png)
     1.  If you select **Contentstack OAuth** and click **Proceed**, the Manage Permissions modal will open, as shown below. Provide the OAuth permissions for all the values by checking the boxes and click **Authorize**.  
         ![Authorize_Contentstack.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt93bf26ee2cd1bfb1/6601a877bdfec33b8d582a67/Authorize_Contentstack.png)
-        
+
         **Note:** Contentstack offers support for [Branches](/docs/headless-cms/about-branches/). You must authenticate and re-authorize your existing account by checking all the permissions to add your Contentstack account.
-        
+
     2.  In the pop-up, select your organization to complete the authorization.  
         ![Select_Organization.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt96ced61a3a48f48b/656daf7dae62f7796af682fd/Select_Organization.png)
     3.  In the pop-up that appears, view the module-specific access rights provided to the app. Click **Authorize** to complete authorization.  
@@ -67,9 +68,9 @@ Perform the following steps to set up the Contentstack Management connector:
 2.  Then, click **Action Step** to configure third-party services.
 3.  Within the **Configure Action** Step, click the **Contentstack** connector.  
     ![Select_Connector.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta4039a5663896ca2/682b25fe24eaf7fd0d8182e1/Select_Connector.png)
-    
+
     **Note:** You can sort and search the connector(s) based on the filter.
-    
+
 4.  Select the **Contentstack Management** connector to perform CMS tasks.  
     ![Select_CS_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt672cc3a63b5ae303/682b25feef59b13d396b53cd/Select_CS_Action.png)
 5.  Under **Choose an Action**, you will see nine categories of actions: **Asset**, **Branch**, **Branch Alias**, **Content Type**, **Entry**, **Global Fields**, **Locales**, **Release**, **Taxonomy**, **User**, and **Variant**.  

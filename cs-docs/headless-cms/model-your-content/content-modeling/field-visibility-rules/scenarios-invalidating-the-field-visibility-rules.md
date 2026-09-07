@@ -2,6 +2,7 @@
 title: "Scenarios Invalidating the Field Visibility Rules"
 description: "Learn scenarios that invalidate field visibility rules in Contentstack, including field changes, deletions, and validation conflicts."
 url: /headless-cms/scenarios-invalidating-the-field-visibility-rules
+uid: blt3db454dfc8a751cb
 ---
 
 # Scenarios Invalidating the Field Visibility Rules
@@ -18,10 +19,10 @@ Modifying fields in a visibility rule invalidates the rule:
 -   Deleting or removing the operand or target field.
 -   Marking the operand field as **Multiple**.
 -   Moving only the operand or only the target field into a [Group](/docs/headless-cms/group) or [Modular Block](/docs/headless-cms/modular-blocks). For Field Visibility Rules to remain valid, **both the operand** and **target** fields must be within the same Group or the same Modular Block.
-    
+
 -   Changing the data type of the operand field to an unsupported type.
 -   When a Group is changed from **Single** to **Multiple**, the parent group field cannot be used as an operand.
-    
+
 -   Altering a Modular Block so that a field is no longer a valid operand or target.
 
 ## Field Validations that Invalidate the Rule

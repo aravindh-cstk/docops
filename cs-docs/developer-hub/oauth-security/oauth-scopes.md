@@ -2,6 +2,7 @@
 title: "OAuth Scopes"
 description: "OAuth Scopes"
 url: /developer-hub/oauth-scopes
+uid: bltcc91b2646f4e3c0a
 ---
 
 # OAuth Scopes

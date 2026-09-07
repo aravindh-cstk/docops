@@ -2,6 +2,7 @@
 title: "Single vs Multiple Content Types"
 description: "Whether creating a webpage or content block, you should mark it as either Single or Multiple. To understand this concept clearly, let’s consider two examples."
 url: /headless-cms/single-vs-multiple-content-types
+uid: blt6207ccd1b1222510
 ---
 
 # Single vs Multiple Content Types

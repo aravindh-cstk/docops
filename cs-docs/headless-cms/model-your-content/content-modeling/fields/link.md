@@ -2,6 +2,7 @@
 title: "Link"
 description: "Learn to utilize the Link field in Contentstack entries for dynamic URL display and easy link management, customizable for your content needs."
 url: /headless-cms/link
+uid: bltfc13a5603f6acc53
 ---
 
 # Link

@@ -2,6 +2,7 @@
 title: "Send an Entry for Publish or Unpublish Approval"
 description: "Send an entry for publish or unpublish approval"
 url: /headless-cms/send-an-entry-for-publish-or-unpublish-approval
+uid: blta145a9baaef6708f
 ---
 
 # Send an Entry for Publish or Unpublish Approval
@@ -20,7 +21,7 @@ To perform this action, log in to your [Contentstack account](https://app.conten
 2.  On the entry page, click on the “Status” icon on the right panel. ![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blte9c95f0256bd13ef/60de0cbaa1ff3159b593961c/image.png)
 3.  In the **Publish Rules** section, you will see the applicable publishing rules (if any). Click on **Request Approval** to send the entry for approval to the approvers. ![image.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt899f962a4772f1e1/60de0d269ef42b48592721af/image.png)
 4.  Once a request has been sent, you will see the current status of the request (awaiting approval, approved, rejected) in the same section.
-    
+
 
 ## **Via the Publish modal**
 

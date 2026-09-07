@@ -2,6 +2,7 @@
 title: "App Submission and Approval Guide"
 description: "Learn how to submit and publish your app to the Contentstack Marketplace, including review process, approval criteria, and deployment steps."
 url: /marketplace/app-submission-and-approval-guide
+uid: blt98f3d5f74b99808f
 ---
 
 # App Submission and Approval Guide
@@ -22,42 +23,42 @@ To submit your app for review, follow the requirements below and submit your app
 The following checklist will help you prepare your app for submission and approval.
 
 1.  ## Terms of Service
-    
+
     -   To begin creating apps on Contentstack Marketplace, you need to agree to our terms of service. Click the link below to view the document. [Contentstack Marketplace Terms of Service for Developers](https://www.contentstack.com/legal/marketplace-terms-of-service-for-developers/).
     -   The app development team can review the document and agree to the Terms of Service. Once approved, you become an official Contentstack Marketplace app developer.
     -   As a first step of the app listing process, it is mandatory for Partners to review, agree to the Terms of Service and submit the document to Contentstack.
 2.  ## App Development
-    
+
     -   The Contentstack Marketplace team will provide you detailed documentation on app creation and other guidelines.
     -   A knowledge transfer session can also be scheduled with our team, based on your request.
     -   Make sure to conduct a thorough testing of your app before you submit it for review.
 3.  ## Metadata and On-boarding
-    
+
     ### Metadata Content
-    
+
     -   As a pre-requisites for submitting Apps for the public Marketplace, the Partner is required to provide the Metadata content (descriptions) of your app.
     -   Fill the Metadata content [form](https://docs.google.com/forms/d/e/1FAIpQLSf7JdG2sA-6CXTlH75O_KRum9WtpMgxVH9h78yRaTvregjfuQ/viewform) with the appropriate details by following our [guidelines](/docs/marketplace/app-submission-and-approval-guide#metadata-content-descriptions).
-    
+
     ### On-boarding
-    
+
     -   After completing your app development, you can submit it to the Customer Service or Marketplace team for review. We strongly recommend you to submit a clone of your app for review, this will help you to revert to the original app in case of any difficulties.
     -   Submit the Metadata content form along with your app for review.
 4.  ## App Documentation
-    
+
     -   Your app details will be displayed on your Marketplace listing once your app is approved. You must also provide a link to a dedicated documentation page, which will be accessible directly from your app listing. This documentation should explain how users can configure and set up the app, along with any additional context, prerequisites, or steps required for the app to function properly.
 5.  ## App Review
-    
+
     -   Metadata and marketing content of the app will be reviewed and verified simultaneously.
     -   In case the app details or the content are not approved then the Marketplace team will send a feedback to the Partner.
-        
+
         **Additional Resource:** Read our detailed guide on [App Development Best Practices](/docs/developer-hub/app-development-best-practices) to ensure you build the app according to our guidelines.
-        
+
 6.  ## App Testing and Security Checks
-    
+
     -   After the app is reviewed and approved, the Marketplace team will need access to your organization and stack in order to perform the functional testing.
     -   After passing the functional test phase, the app will undergo a security test.
 7.  ## Publish the App
-    
+
     -   The Marketplace team will create an entry with the app's information in the Marketplace stack after the app has passed security tests and marketing content has been reviewed.
     -   The app is then published to the public Marketplace and the marketing content (Blog/ Email) is released.
 

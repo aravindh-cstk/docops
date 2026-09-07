@@ -2,6 +2,7 @@
 title: "Use SSL Pinning with iOS SDK"
 description: "steps for using SSL Pinning with iOS SDK"
 url: /developers/sdks/content-delivery-sdk/ios/use-ssl-pinning-with-ios-sdk
+uid: blt6b6f978af634f1ef
 ---
 
 # Use SSL Pinning with iOS SDK
@@ -24,7 +25,7 @@ Perform the following steps to create a class extending the CSURLSessionDelegate
 #import <Contentstack/Contentstack.h>
 
 @interface CustomSessionPinning:  NSObject <CSURLSessionDelegate>{
-    
+
 }
 @end
 ```
@@ -82,20 +83,20 @@ Perform the following steps to create a class extending the CSURLSessionDelegate
 
 1.  Create a CustomeSessionPinning.swift file  
     To implement SSL pinning, create a new Swift file named CustomSessionPinning.swift and add the following code:
-    
+
     ```
     import Contentstack
-    
+
     class CustomSessionPinning: NSObject, CSURLSessionDelegate {
-        
+
         func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping @Sendable (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
             handleSSLPinning(for: challenge, completionHandler: completionHandler)
         }
-    
+
         func urlSession(_ session: URLSession, task: URLSessionTask, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping @Sendable (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
             handleSSLPinning(for: challenge, completionHandler: completionHandler)
         }
-        
+
         private func handleSSLPinning(for challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
             guard let serverTrust = challenge.protectionSpace.serverTrust,
                   let certificate = SecTrustGetCertificateAtIndex(serverTrust, 0),
@@ -104,9 +105,9 @@ Perform the following steps to create a class extending the CSURLSessionDelegate
                 completionHandler(.cancelAuthenticationChallenge, nil)
                 return
             }
-    
+
             let serverCertificateData = SecCertificateCopyData(certificate) as Data
-    
+
             if serverCertificateData == localCertData {
                 let credential = URLCredential(trust: serverTrust)
                 completionHandler(.useCredential, credential)
@@ -116,7 +117,7 @@ Perform the following steps to create a class extending the CSURLSessionDelegate
         }
     }
     ```
-    
+
 
 ## Create a Config Object and Add Delegate for CSURLSessionDelegate
 

@@ -2,6 +2,7 @@
 title: "Card Grid with Slots"
 description: "Build a reusable card grid pattern in Contentstack Studio using section slots, repeaters, and auto-binding to render CMS-driven card lists on any template."
 url: /studio/card-grid-with-slots
+uid: blt73e86e335f700636
 ---
 
 # Card Grid with Slots
@@ -103,15 +104,15 @@ The Repeater inside card\_grid is now iterating over the entry's featured produc
 Studio uses **scope-root matching**: the iteration item shape is gf\_card, which matches product\_card's linked schema. No manual binding needed; product\_card is automatically bound to the current iteration item.
 
 1.  The product\_card's four slots now appear: **Media**, **Title**, **Body**, **CTA**. Fill them:
-    
+
 2.  **Media** → drop an **Image** component, bind src to template.image
-    
+
 3.  **Title** → drop a **Heading**, bind text to template.title
 4.  **Body** → leave empty (cards in gf\_card don't have body copy)
 5.  **CTA** → drop a **Button**, bind label to template.title (use as link text) and href to template.link
-    
+
 6.  **Save** the template.
-    
+
 
 ![Connected landing_page template canvas with card_grid filled by product_card, slots resolved to real entry data](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/amdab6d10d23adef72/dc57e93fd9b8ef53461589f9/connected-template-canvas.png)
 

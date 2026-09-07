@@ -2,6 +2,7 @@
 title: "Build Image"
 description: "Learn about Build Image used in Contentstack Launch."
 url: /launch/build-image
+uid: blt02da36083349b482
 ---
 
 # Build Image

@@ -2,6 +2,7 @@
 title: "Aprimo"
 description: "Use this connector to update and retrieve asset details stored in Aprimo."
 url: /agent-os/aprimo
+uid: blt06a86dae07bc93cb
 ---
 
 # Aprimo
@@ -27,56 +28,56 @@ This action lets you update the attributes such as Asset ID, Title, Description,
 2.  Click **Action Step** to configure third-party services.
 3.  Within the **Configure Action Step**, click the **Aprimo** connector.  
     ![Select_the_Connector_Aprimo.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt712955cec57c3b95/6527c9503347f310d80279d0/Select_the_Connector_Aprimo.png)  
-    
+
 4.  Under **Choose an Action** tab, select the **Edit a Record** action.  
     ![Edit-Record](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd6662da048fef6cc/6442cec50de4a8509dbb883d/Edit-Record.png)
 5.  Click the **\+ Add New Account** button to add your Aprimo account.  
     ![Add_New_Account_for_Edit_a_Record](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltaa7d0a2060741937/6470320c86bda56c0e52fb6c/Add_New_Account_for_Edit_a_Record.png)
 6.  In the Authorize pop-up window, provide the **Title**, **Aprimo URL**, **Client ID**, and **Client Secret**.  
     ![Authorize_Button_New](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcad39ebfb61aef4f/649c21e584a4c73193d8d95f/Authorize_Button_New.png)
-    
+
     To generate **Client ID** and **Client Secret**, log in to the Aprimo dashboard and perform the following steps:
-    
+
     1.  Click the **Administration** tab in the left navigation panel
     2.  Click **Integration** in the left navigation panel and then click **Registrations**.
     3.  Click the New icon present on the right side of the page.
     4.  Provide the required details and then click the **Save** icon.
     5.  You will be able to see the **Client ID**. Below is the list of Redirect URLs for different Contentstack Regions.
-        
+
         -   **US (North America, or NA)**
-            
+
             Redirect URL:
-            
+
             ```
             https://automations-api.contentstack.com/userauths/auth/callback
             ```
-            
+
         -   **Azure NA**
-            
+
             Redirect URL:
-            
+
             ```
             https://azure-na-app.contentstack.com/automationsapi/userauths/auth/callback
             ```
-            
+
         -   **Europe (EU)**
-            
+
             Redirect URL:
-            
+
             ```
             https://eu-prod-automations-api.contentstack.com/userauths/auth/callback
             ```
-            
-        
+
+
         **Note:** It is mandatory to select the **OAuth Flow Type** as **Client Credential**. The credentials are activated after 15 minutes so you can use them to authorize your Aprimo account.
-        
+
         ![Aprimo_Config_Screen](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt43a7003baf96d8f2/649c21e448bdd24c5a10441c/Aprimo_Config_Screen.png)
 7.  Enter an **Account Name** and then click **Save**.  
     ![Save-Account](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdb76df9291ef529e/6442cec51276ca183e1c0000/Save-Account.png)
 8.  Select an **Asset** which you want to update from the **Lookup** dropdown.  
-    
+
     **Note:** Contentstack Marketplace offers an [Aprimo](/docs/marketplace/aprimo/) app for its users, so they can fetch the assets/images into their Contentstack CMS entry. With the Aprimo connector, you can fetch the asset id from the Aprimo entry and you can edit the asset attributes.
-    
+
 9.  In the **Asset Attribute** field, provide the name of the attribute in the **Key** field and the value that you want to update in the **Value** field.  
     ![Select_Different_Fields_Edit_Record](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc077304f1f0dbde2/6470320bec223357c951b0b6/Select_Different_Fields_Edit_Record.png)
 10.  Click the **Proceed** button.
@@ -98,42 +99,42 @@ This action lets you fetch the asset details from your Aprimo dashboard.
     ![Add_New_Account_Get_Record](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2ed8c68eda5cfdf8/6470320bdfafe53c8c04974f/Add_New_Account_Get_Record.png)
 4.  In the Authorize pop-up window, provide the **Title**, **Aprimo URL**, **Client ID**, and **Client Secret**.  
     ![Authorize_Button_New](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcad39ebfb61aef4f/649c21e584a4c73193d8d95f/Authorize_Button_New.png)
-    
+
     To generate **Client ID** and **Client Secret**, log in to the Aprimo dashboard and perform the following steps:
-    
+
     1.  Click the **Administration** tab in the left navigation panel
     2.  Click **Integration** in the left navigation panel and then click **Registrations**.
     3.  Click the New icon present on the right side of the page.
     4.  Provide the required details and then click the **Save** icon.
     5.  You will be able to see the **Client ID**. Below is the list of Redirect URLs for different Contentstack Regions.
-        
+
         -   **US (North America, or NA)**
-            
+
             Redirect URL:
-            
+
             ```
             https://automations-api.contentstack.com/userauths/auth/callback
             ```
-            
+
         -   **Azure NA**
-            
+
             Redirect URL:
-            
+
             ```
             https://azure-na-app.contentstack.com/automationsapi/userauths/auth/callback
             ```
-            
+
         -   **Europe (EU)**
-            
+
             Redirect URL:
-            
+
             ```
             https://eu-prod-automations-api.contentstack.com/userauths/auth/callback
             ```
-            
-        
+
+
         **Note:** It is mandatory to select the **OAuth Flow Type** as **Client Credential**. The credentials are activated after 15 minutes so you can use them to authorize your Aprimo account.
-        
+
         ![Aprimo_Config_Screen](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt43a7003baf96d8f2/649c21e448bdd24c5a10441c/Aprimo_Config_Screen.png)
 5.  Enter an **Account Name** and then click **Save**.  
     ![Save-Account](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdb76df9291ef529e/6442cec51276ca183e1c0000/Save-Account.png)

@@ -2,6 +2,7 @@
 title: "Import an Entry"
 description: "Learn how to import entries in Contentstack using a JSON file for seamless content migration and management."
 url: /headless-cms/import-an-entry
+uid: bltc10a22b5333b2c0b
 ---
 
 # Import an Entry

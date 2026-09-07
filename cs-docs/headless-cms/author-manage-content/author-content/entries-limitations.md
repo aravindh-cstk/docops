@@ -2,6 +2,7 @@
 title: "Limitations for Entries"
 description: "Learn about the limitations for entries in Contentstack, including tag limits, reference query limits, and restrictions for unsaved entries."
 url: /headless-cms/entries-limitations
+uid: blt1269833208a42938
 ---
 
 # Limitations for Entries

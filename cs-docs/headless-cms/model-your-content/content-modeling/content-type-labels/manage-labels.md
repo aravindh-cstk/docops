@@ -2,6 +2,7 @@
 title: "Manage Labels"
 description: "Learn how to manage labels in Contentstack to organize content types effectively. Add, edit, delete, or nest labels for better content management."
 url: /headless-cms/manage-labels
+uid: bltf957a12d42606ab3
 ---
 
 # Manage Labels

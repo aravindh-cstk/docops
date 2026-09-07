@@ -2,6 +2,7 @@
 title: "Bring Your Own Components"
 description: "Learn how to register your own React components with Contentstack Studio so authors can use your design system components to compose pages."
 url: /studio/bring-your-own-components
+uid: blt9c574722748d0adb
 ---
 
 # Bring Your Own Components
@@ -12,9 +13,19 @@ Studio ships with a small set of default components: Box, Row, Heading, Text, Im
 
 For real work, you **register your own components**. After that, Studio's palette shows your Button, your Card, your Hero alongside the defaults, and authors compose pages with the components your design system already provides.
 
+> ⚠️ **Before you write your first registerComponent() call — read Component shape rules.** Five tactical rules for shaping React components that bind cleanly to Studio: one prop per CT field · never hardcode child components in a wrapper's .map() · wrappers use slots · structural name-matching · Sections are the reusable unit. Skipping the rules is the #1 source of "why is this rendering blank?" and "why can't the author edit this?" bugs.
+
+> **Coming from Tailwind + shadcn/ui / Radix / Headless UI?** Studio's registration model maps one-to-one to how you already structure a component library.
+> 
+> -   Register **Layer 1 atomics** first — leaf primitives like <Heading>, <Text>, <Image>, <Button>. These are your utility-styled <h1 className="text-4xl font-bold"> and <img className="w-full"> — one field maps to one visual.
+> -   Compose them into **Layer 2 containers** with slots — Card with a body slot, Split with left/right slots. Same shape as shadcn/ui's <Dialog><Dialog.Header/><Dialog.Body>{children}</Dialog.Body></Dialog> or Radix compound components — parent owns shape, slots carry content, slot props are typed children.
+> -   Also register **Layer 2 layout components** — <ThreeColumn> = <div className="grid grid-cols-3 gap-6"> extracted into a named component so every author uses the same grid.
+> 
+> Marketers then drop these Layer-1 and Layer-2 components onto Sections and Templates in the Studio Canvas. Full mapping table (Studio ↔ Tailwind/shadcn ↔ Figma) at From designs to Sections § For readers coming from Tailwind + shadcn/ui / Radix / Headless UI.
+
 ## The Model in One Diagram
 
-![Your React component flows through registerComponent into Studio — palette tile, drop on template, right-panel form for editable, bindable, and choice props](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am1afb014c4d6520de/5da9c170d2d4d2731d3dbff5/byo-component-registration-flow.png)
+![Your React component flows through registerComponent into Studio — palette tile, drop on template, right-panel form for editable, bindable, and choice props](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/ambf8084876bd26ca6/2ea1fe61e5d219984d440883/byo-component-registration-flow.svg)
 
 You declare a **schema** (prop names, types, defaults, validation, help text). Studio uses it to render the palette tile, the right-panel form, and the data picker. Your React component runs unchanged: Studio just feeds it the right props at render time. This separation means your component stays framework-agnostic; only the schema needs to understand Studio's UI contracts.
 
@@ -22,7 +33,7 @@ You declare a **schema** (prop names, types, defaults, validation, help text). S
 
 | Surface | What appears |
 | --- | --- |
-| **Left palette** | A tile labelled with your displayName, with your thumbnailUrl (rendered when the component declares a section; user-registered components default into the "Registered Components" section) |
+| **Left palette** | A tile labelled with your displayName, with your thumbnailUrl (placed under the palette category named in sections; user-registered components default into the "Registered Components" section) |
 | **Canvas** | Your component renders inline with the right props bound |
 | **Right panel — Settings** | Each prop gets a form field (typed input, dropdown, link picker, image picker) |
 | **Right panel — Data** | Each prop has a "bind to data" chip that opens the data picker |

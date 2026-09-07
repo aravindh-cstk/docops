@@ -2,13 +2,14 @@
 title: "Install the Studio SDK"
 description: "Step-by-step guide to installing and configuring @contentstack/studio-react, including SDK initialization, component registration, composition fetching, and canvas mounting."
 url: /studio/install-the-studio-sdk
+uid: bltc3346bb7060b4852
 ---
 
 # Install the Studio SDK
 
 ## Install the Studio SDK
 
-The Studio SDK is the visual editor bridge: studioSdk, <StudioCanvas />, <StudioComponent />, plus the hooks and registration APIs you'll use day-to-day.
+The Studio SDK is the visual editor bridge — studioSdk, <StudioCanvas />, <StudioComponent />, plus the hooks and registration APIs you'll use day-to-day.
 
 This page is the self-contained chapter for the SDK. Install at the top; everything else you need (registration, fetching, mounting, troubleshooting) follows in the order you actually do them.
 
@@ -18,7 +19,7 @@ This page is the self-contained chapter for the SDK. Install at the top; everyth
 2.  [Initialize studioSdk](#2-initialize-studiosdk)
 3.  [Register your components](#3-register-your-components)
 4.  [Fetch a composition with useCompositionData](#4-fetch-a-composition-with-usecompositiondata)
-5.  [Mount <StudioCanvas /> and <StudioComponent />](#5-mount-studiocanvas--and-studiocomponent-)
+5.  [Mount <StudioCanvas /> and <StudioComponent />](#5-mount-ltstudiocanvas-gt-and-ltstudiocomponent-gt)
 6.  [Common patterns](#6-common-patterns)
 7.  [Troubleshoot](#7-troubleshoot)
 
@@ -28,8 +29,8 @@ This page is the self-contained chapter for the SDK. Install at the top; everyth
 
 @contentstack/studio-react builds on the two SDKs from the earlier steps in this chapter. Complete both before continuing:
 
--   [Install the Delivery SDK](/docs/studio/install-the-delivery-sdk): @contentstack/delivery-sdk
--   [Install Live Preview](/docs/studio/install-live-preview): @contentstack/live-preview-utils
+-   [Install the Delivery SDK](/docs/studio/install-the-delivery-sdk) — @contentstack/delivery-sdk
+-   [Install Live Preview](/docs/studio/install-live-preview) — @contentstack/live-preview-utils
 
 ---
 
@@ -38,6 +39,8 @@ This page is the self-contained chapter for the SDK. Install at the top; everyth
 ```
 npm install @contentstack/studio-react
 ```
+
+@contentstack/studio-react depends on @contentstack/delivery-sdk and @contentstack/live-preview-utils being present. If you skipped the earlier steps in this chapter, complete [Install the Delivery SDK](/docs/studio/install-the-delivery-sdk) and [Install Live Preview](/docs/studio/install-live-preview) first.
 
 ## 2\. Initialize studioSdk
 
@@ -52,7 +55,7 @@ export const stack = Contentstack.stack({ /* … */ });
 
 ContentstackLivePreview.init({ /* … */ });
 
-studioSdk.init({
+export const csStudio = studioSdk.init({
   stackSdk:       stack,
   // contentTypeUid: "compositions",   // set once you've created a Studio project
 });
@@ -64,16 +67,16 @@ export { ContentstackLivePreview, studioSdk };
 
 | Option | Required | What it does |
 | --- | --- | --- |
-| stackSdk | ✅ | The Delivery SDK instance you created earlier. The Studio SDK reads content through it. |
+| stackSdk | ✅ | The Delivery SDK instance you created earlier. Studio reads content through it. |
 | contentTypeUid | once you have a project | The content type Studio writes composition records into. Set this once your Studio project is created (usually "compositions"). |
 
-Init is **side-effect**: it registers Studio's internal components and wires up the messaging bridge for the canvas iframe. Import @/lib/contentstack somewhere in your app shell so the init runs.
+Init is **side-effect** — it registers Studio's internal components and wires up the messaging bridge for the canvas iframe. Import @/lib/contentstack somewhere in your app shell so the init runs.
 
-## 3\. Register Your Components
+## 3\. Register your components
 
 Studio's palette in the canvas needs to know about **your** components. Without registering, authors can only drop Studio's defaults.
 
-### registerComponent: single
+### registerComponent — single
 
 ```
 import { registerComponent } from "@contentstack/studio-react";
@@ -97,7 +100,7 @@ registerComponent({
 });
 ```
 
-### registerComponents: many at once
+### registerComponents — many at once
 
 ```
 import { registerComponents } from "@contentstack/studio-react";
@@ -109,7 +112,7 @@ registerComponents([
 ]);
 ```
 
-### registerLazyComponent: code-split a component
+### registerLazyComponent — code-split a component
 
 For large component libraries, register a loader instead of the component itself. Studio holds the schema (thumbnailUrl, displayName, props) eagerly so it can render the palette tile; the actual component code loads only when an author drops it or a visitor's page renders it.
 
@@ -136,11 +139,11 @@ Under the hood Studio wraps the loader in React.lazy + <Suspense fallback={null}
 
 When to reach for it: - You have a large component library and bundle size matters - A component has heavy dependencies (chart libs, rich-text editors) you don't want in the initial bundle - You want per-route code splitting and Studio's canvas to play nicely
 
-Eager registerComponent is the right default; use registerLazyComponent when bundle size becomes a real concern.
+Eager registerComponent is the right default — use registerLazyComponent when bundle size becomes a real concern.
 
 For the full prop-schema shape (text, image, link, color, slot, etc.), see [Component schema](/docs/studio/component-schema-prop-types).
 
-## 4\. Fetch a Composition with useCompositionData
+## 4\. Fetch a composition with useCompositionData
 
 useCompositionData is the hook your templates and pages use to fetch a composition's spec from Contentstack.
 
@@ -155,31 +158,31 @@ function BlogPostPage({ slug }) {
   );
 
   if (isLoading) return <Loading />;
-  if (error)     return <Error message={error.message} />;
+  if (error)     return <Error message={error instanceof Error ? error.message : String(error)} />;
 
   return <StudioComponent specOptions={specOptions} />;
 }
 ```
 
-### Query shapes: five accepted forms
+### Query shapes — five accepted forms
 
 How you tell Studio which composition to fetch:
 
 | Shape | Use when |
 | --- | --- |
-| { compositionUid } | You already know the composition's UID (fastest). The only path for Freeform compositions. |
-| { url } | You only have the URL pattern. Works, but processes all compositions to find a match (slower). |
+| { compositionUid } | You already know the composition's UID — fastest. |
+| { url } | You only have the URL pattern. Works, but processes all compositions to find a match — slower. |
 | { compositionUid, url } | UID is used for the fetch; URL is preserved for diagnostics and iframe context. |
-| { templateContentTypeUid } | Fetch by content type; returns the first matching composition (limit 1). |
+| { templateContentTypeUid } | Fetch by content type — returns the first matching composition (limit 1). |
 | { url, templateContentTypeUid } | Use the content type for the composition lookup; URL is preserved for context. |
 
 The priority resolution: compositionUid > templateContentTypeUid > url.
 
-### Options: locale, variantAlias, templateEntryUid
+### Options — locale, variantAlias, templateEntryUid
 
 ```
 const { specOptions, isLoading } = useCompositionData(
-  { compositionUid: "blt123" },
+  { compositionUid: "marketing-hero" },
   {
     locale:           "fr",                          // override default locale
     variantAlias:     "winter-sale",                 // fetch a specific variant
@@ -196,7 +199,7 @@ const { specOptions, isLoading } = useCompositionData(
 | **locale** | Override the default stack locale for this query. Auto-fallback via Contentstack's native fallback. |
 | **variantAlias** | Fetch a specific variant (e.g. "winter-sale"). |
 | **templateEntryUid** | Fetch this exact entry from the connected content type, instead of resolving by URL or grabbing the first entry. **Priority: templateEntryUid > url > first entry.** |
-| **extendQuery** | Per-CT additions: includeReferences, only field projection. |
+| **extendQuery** | Per-CT additions — includeReferences, only field projection. |
 | **fetchComposition** | Per-query override that wraps or replaces the default composition fetch. |
 | **fetchTemplateEntry** | Per-query override for the template entry fetch. |
 
@@ -204,23 +207,23 @@ const { specOptions, isLoading } = useCompositionData(
 
 | Field | Type | Meaning |
 | --- | --- | --- |
-| specOptions | object | null | The full rendering payload: pass to <StudioComponent specOptions={specOptions} />. Contains spec, fetchOptions, hasSpec, hasTemplate, seo. |
+| specOptions | object | null | The full rendering payload — pass to <StudioComponent specOptions={specOptions} />. Contains spec, fetchOptions, hasSpec, hasTemplate, seo. |
 | isLoading | boolean | True while fetching |
 | error | unknown | null | Set if the fetch failed |
 | refetchSpec | () => void | Re-run the fetch (e.g. after a content edit) |
 | refetchData | () => void | Re-fetch only the data layer (entries) without re-fetching the spec |
 
-Custom fetchers (fetchComposition, fetchTemplateEntry) are advanced; they let you intercept Studio's content fetches to wrap, cache, or replace. The default works for almost everything.
+Custom fetchers (fetchComposition, fetchTemplateEntry) are advanced — they let you intercept Studio's content fetches to wrap, cache, or replace. The default works for almost everything.
 
 ### Server-side fetch (SSR / RSC / SSG)
 
-useCompositionData is a hook (client-only). For server-side rendering, use sdk.fetchCompositionData(queryOptions, options) instead:
+useCompositionData is a hook — client-only. For server-side rendering, use csStudio.fetchCompositionData(queryOptions, options) instead:
 
 ```
-import { studioSdk } from "@/lib/contentstack";
+import { csStudio } from "@/lib/contentstack";   // the initialized instance from studioSdk.init(...)
 
 // Server-side (e.g. in a Server Component or getServerSideProps)
-const specOptions = await sdk.fetchCompositionData({
+const specOptions = await csStudio.fetchCompositionData({
   url:         "/blog/ai-101",
   searchQuery: requestQueryString,   // required — see why below
 });
@@ -257,7 +260,7 @@ export default function CanvasRoute() {
 
 That's it. Studio drives the rest via URL params on the iframe.
 
-Once mounted, head to Studio, Project Settings, Configuration and set **Canvas URL** to this route's path (covered in [Section preview route](/docs/studio/section-preview-route)).
+Once mounted, head to Studio → Project Settings → Configuration and set **Canvas URL** to this route's path (covered in [Section preview route](/docs/studio/section-preview-route)).
 
 ### Mount <StudioComponent /> on your template preview routes
 
@@ -271,16 +274,17 @@ export default function BlogPostPage({ params }) {
   );
 
   if (isLoading) return <Loading />;
-  if (error)     return <Error message={error.message} />;
+  if (error)     return <Error message={error instanceof Error ? error.message : String(error)} />;
+  if (!specOptions?.spec) return <NotFound />;  // hook returns specOptions: ... | null
   return <StudioComponent specOptions={specOptions} />;
 }
 ```
 
-You'll do this for each route that renders a Studio-built template: /blog/\[slug\], /products/\[sku\], /contact-us, etc.
+You'll do this for each route that renders a Studio-built template — /blog/\[slug\], /products/\[sku\], /contact-us, etc.
 
 If the URL pattern doesn't match a composition, you'll see an in-product "Template did not load" error with a clear message. See [Troubleshoot](#7-troubleshoot).
 
-## 6\. Common Patterns
+## 6\. Common patterns
 
 ### Loading + error states
 
@@ -288,7 +292,8 @@ If the URL pattern doesn't match a composition, you'll see an in-product "Templa
 const { specOptions, isLoading, error } = useCompositionData({ url });
 
 if (isLoading) return <Skeleton />;
-if (error)     return <Error message={error.message} retry={refetchSpec} />;
+if (error)     return <Error message={error instanceof Error ? error.message : String(error)} retry={refetchSpec} />;
+if (!specOptions?.spec) return <NotFound />;
 return <StudioComponent specOptions={specOptions} />;
 ```
 
@@ -314,7 +319,7 @@ const { specOptions, isLoading } = useCompositionData(
 return (
   <>
     <button onClick={() => setLocale("fr")}>FR</button>
-    {!isLoading && <StudioComponent specOptions={specOptions} />}
+    {!isLoading && specOptions?.spec && <StudioComponent specOptions={specOptions} />}
   </>
 );
 ```
@@ -323,7 +328,7 @@ return (
 
 ```
 const { specOptions } = useCompositionData(
-  { compositionUid: "blt123" },
+  { compositionUid: "marketing-hero" },
   { variantAlias: "winter-sale" },
 );
 ```
@@ -346,26 +351,24 @@ const { specOptions } = useCompositionData(
 | **"No Canvas URL Found"** in Studio when opening a section | Project Settings → Configuration → set the Canvas URL field |
 | **"Environment Not Configured"** | Pick an Environment + Language in Project Configuration |
 | **"Template did not load"** when opening a linked template | The composition's URL pattern doesn't match a route on your site. Either fix the pattern or add the route. |
-| Canvas loads blank | Your canvas route exists but doesn't mount <StudioCanvas />; add the snippet from step 5 |
-| 401 fetching content | Stack API Key or Delivery Token wrong; copy them again from Stack → Settings → Tokens |
-| Preview doesn't update in real time | Live Preview not initialised, or onEntryChange not wired; see [Install Live Preview](/docs/studio/install-live-preview) |
+| Canvas loads blank | Your canvas route exists but doesn't mount <StudioCanvas /> — add the snippet from step 5 |
+| 401 fetching content | Stack API Key or Delivery Token wrong — copy them again from Stack → Settings → Tokens |
+| Preview doesn't update in real time | Live Preview not initialised, or onEntryChange not wired — see [Install Live Preview](/docs/studio/install-live-preview) |
 | Components don't appear in the palette | Register them via registerComponent / registerComponents _before_ the canvas iframe loads |
-| Lazy components flash blank | <Suspense fallback={null}> is the default; provide your own fallback if needed |
+| Lazy components flash blank | <Suspense fallback={null}> is the default — provide your own fallback if needed |
 
 For the full diagnostic tree, see [Troubleshoot](/docs/studio/troubleshoot-common-studio-issues).
 
-## Optional: Install with the CLI Skill
-
-The studio-skills CLI installs and wires the Studio SDK automatically:
+## Speed it up with an LLM
 
 ```
-npx @contentstack/studio-skills install
+curl -fsSL {{STUDIO_DOCS_BASE_URL}}/install.sh | sh
 ```
 
-Then ask your LLM: _"install Studio in this project"_. The skill detects your framework, installs all three SDKs, prompts for your stack credentials, and writes the init code to src/lib/contentstack.ts. It also registers a starter set of components and creates the canvas route.
+Then: _"install Studio in this project"_.
 
 ## Next
 
 The SDK side is done. The Studio web app side comes next.
 
-[Create a Studio project](/docs/studio/create-a-studio-project)
+→ [Create a Studio project](/docs/studio/create-a-studio-project)

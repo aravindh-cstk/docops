@@ -2,6 +2,7 @@
 title: "Secure Your Webhooks"
 description: "Secure your webhooks with Contentstack using basic auth, OAuth 2.0, bearer tokens, custom headers, webhook signatures, time stamped messages, and IP whitelisting."
 url: /headless-cms/secure-your-webhooks
+uid: bltd34932f1628440b7
 ---
 
 # Secure Your Webhooks
@@ -203,58 +204,98 @@ Here is a sample codebase of what your verification script (Java) should look li
 
 ```
 import java.io.IOException;
-import java.security.*;
+import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.security.spec.InvalidKeySpecException;
-import java.security.spec.X509EncodedKeySpec;
+import java.security.GeneralSecurityException;
+import java.security.KeyFactory;
+import java.security.PublicKey;
+import java.security.Signature;
+import java.security.spec.MGF1ParameterSpec;
+import java.security.spec.PSSParameterSpec;
+import java.security.spec.RSAPublicKeySpec;
 import java.util.Base64;
+
 public class CoreVerifyPublic {
-    private static final String SIGNATURE_ALGO = "SHA256withRSA";
-    public static void main(String[] args) {
-        try {
-            PublicKey publicKey = getPublicKeyFromPem("public_key.pem");
-            String signature = "X-Contentstack-Request-Signature";
-             //Replace X-Contentstack-Request-Signature with your public key.
-            String signatureBase64 = signature.split(",")[0].split("=")[1];
-             // Convert the signature from Base64 string to byte array
-            byte[] receivedSignatureBytes = Base64.getDecoder().decode(signatureBase64);
-            boolean isVerified = verifySignature(publicKey, receivedSignatureBytes, getJsonBody());
-            if (isVerified) {
-                System.out.println("Verified!");
-            } else {
-                System.out.println("Failed!");
-            }
-        } catch (IOException | NoSuchAlgorithmException | InvalidKeyException | SignatureException | InvalidKeySpecException e) {
-            e.printStackTrace();
-        }
+
+    public static void main(String[] args) throws Exception {
+        PublicKey publicKey = getPublicKeyFromPem("public_key.pem");
+
+        // Use the value your server actually received on this header:
+        String receivedHeaderValue = request.getHeader("X-Contentstack-Request-Signature");
+        String signatureBase64 = receivedHeaderValue.split(",")[0].split("=", 2)[1];
+        byte[] signatureBytes = Base64.getDecoder().decode(signatureBase64);
+
+        byte[] messageBytes = getJsonBody(); // raw request body bytes, exactly as received
+
+        boolean isVerified = verifySignature(publicKey, signatureBytes, messageBytes);
+        System.out.println(isVerified ? "Verified!" : "Failed!");
     }
-    private static PublicKey getPublicKeyFromPem(String filePath) throws IOException, NoSuchAlgorithmException, InvalidKeySpecException {
+
+    // The public key from /.well-known/public-keys.json is PKCS#1
+    // ("-----BEGIN RSA PUBLIC KEY-----"). Decode its DER
+    // (SEQUENCE { INTEGER modulus, INTEGER publicExponent }) directly.
+    private static PublicKey getPublicKeyFromPem(String filePath) throws IOException, GeneralSecurityException {
         Path path = Paths.get(filePath);
-        System.out.println(filePath);
-        byte[] publicKeyBytes = Files.readAllBytes(path);
-        String publicKeyPem = new String(publicKeyBytes, StandardCharsets.UTF_8);
+        String publicKeyPem = new String(Files.readAllBytes(path), StandardCharsets.UTF_8);
         publicKeyPem = publicKeyPem.replace("-----BEGIN RSA PUBLIC KEY-----", "");
         publicKeyPem = publicKeyPem.replace("-----END RSA PUBLIC KEY-----", "");
         publicKeyPem = publicKeyPem.replaceAll("\\s+", "");
-        System.out.println(publicKeyPem.length());
-        byte[] publicKeyDecoded = Base64.getMimeDecoder().decode(publicKeyPem);
+        byte[] der = Base64.getMimeDecoder().decode(publicKeyPem);
+
+        int[] pos = {0};
+        expectTag(der, pos, 0x30); // SEQUENCE
+        readLength(der, pos);
+        expectTag(der, pos, 0x02); // INTEGER modulus
+        BigInteger modulus = new BigInteger(readValue(der, pos));
+        expectTag(der, pos, 0x02); // INTEGER publicExponent
+        BigInteger exponent = new BigInteger(readValue(der, pos));
+
         KeyFactory keyFactory = KeyFactory.getInstance("RSA");
-        X509EncodedKeySpec keySpec = new X509EncodedKeySpec(publicKeyDecoded);
-        return keyFactory.generatePublic(keySpec);
+        return keyFactory.generatePublic(new RSAPublicKeySpec(modulus, exponent));
     }
+
+    // Contentstack signs with RSA-PSS (SHA-256, MGF1/SHA-256, salt length 32) -
+    // NOT plain "SHA256withRSA" (PKCS#1 v1.5).
     private static boolean verifySignature(PublicKey publicKey, byte[] signatureBytes, byte[] messageBytes)
-            throws NoSuchAlgorithmException, InvalidKeyException, SignatureException {
-        Signature signature = Signature.getInstance(SIGNATURE_ALGO);
+            throws GeneralSecurityException {
+        Signature signature = Signature.getInstance("RSASSA-PSS");
+        signature.setParameter(new PSSParameterSpec("SHA-256", "MGF1", MGF1ParameterSpec.SHA256, 32, 1));
         signature.initVerify(publicKey);
         signature.update(messageBytes);
         return signature.verify(signatureBytes);
     }
-    private static byte[] getJsonBody() {
-        String jsonString = "{ \"module\": \"entry\", \"api_key\": \"bltd83b84cfa0c48b61\", \"event\": \"publish\", \"triggered_at\": \"2023-03-28T19:35:13.578Z\", \"data\": { \"entry\": { \"uid\": \"blte9ebf4643da326b4\", \"title\": \"How do I deposit money into my digital checking account?\", \"locale\": \"en-us\", \"_version\": 5 }, \"content_type\": { \"uid\": \"help_center_article_template\", \"title\": \"Help Center Article\" }, \"environment\": { \"uid\": \"blte8035ec83616b4bc\", \"name\": \"integration\", \"urls\": [{ \"url\": \"\", \"locale\": \"en-us\" }] }, \"action\": \"publish\", \"status\": \"success\", \"locale\": \"en-us\" } }";
-        return jsonString.getBytes(StandardCharsets.UTF_8);
+
+    private static byte[] getJsonBody() throws IOException {
+        return Files.readAllBytes(Paths.get("payload.json"));
+    }
+
+    private static void expectTag(byte[] der, int[] pos, int tag) {
+        if ((der[pos[0]] & 0xFF) != tag) {
+            throw new IllegalArgumentException("Expected DER tag " + tag + " at offset " + pos[0]);
+        }
+        pos[0]++;
+    }
+
+    private static int readLength(byte[] der, int[] pos) {
+        int b = der[pos[0]++] & 0xFF;
+        if (b < 0x80) return b;
+        int numBytes = b & 0x7F;
+        int len = 0;
+        for (int i = 0; i < numBytes; i++) {
+            len = (len << 8) | (der[pos[0]++] & 0xFF);
+        }
+        return len;
+    }
+
+    private static byte[] readValue(byte[] der, int[] pos) {
+        int len = readLength(der, pos);
+        byte[] value = new byte[len];
+        System.arraycopy(der, pos[0], value, 0, len);
+        pos[0] += len;
+        return value;
     }
 }
 ```

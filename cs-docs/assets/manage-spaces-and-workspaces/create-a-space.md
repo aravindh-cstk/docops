@@ -2,6 +2,7 @@
 title: "Create a Space"
 description: "Learn how to create a new space in Contentstack to manage assets effectively for your website or brand. Get started with step-by-step instructions today!"
 url: /assets/create-a-space
+uid: blt20e843a5581d91a5
 ---
 
 # Create a Space

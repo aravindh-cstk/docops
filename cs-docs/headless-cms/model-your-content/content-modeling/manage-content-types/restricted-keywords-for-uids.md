@@ -2,6 +2,7 @@
 title: "Restricted Keywords for UIDs"
 description: "Learn which keywords are restricted for UIDs in Contentstack content types and fields to avoid errors and ensure smooth functionality."
 url: /headless-cms/restricted-keywords-for-uids
+uid: blt1f23ce6fb4cee8c3
 ---
 
 # Restricted Keywords for UIDs

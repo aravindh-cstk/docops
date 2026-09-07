@@ -2,6 +2,7 @@
 title: "About Us Page"
 description: "Create a dynamic About Us page with a structured content model to showcase your brand story, values, team, and milestones."
 url: /headless-cms/about-us-page
+uid: blt99c24e8144c42452
 ---
 
 # About Us Page
@@ -15,28 +16,28 @@ Using this content model, you can choose to display a comprehensive view of your
 Let’s dive deep into how this model will help you create your company’s “About Us” page.
 
 1.  ## Analyzing Requirements for the About Us Page
-    
+
     The About Us Page content model includes four main sections:
-    
+
     -   The “About Us” hero banner
     -   The “Our Mission” section with content buckets
     -   The “Our Story” section displaying the company story
     -   The “Our Team” section displaying the details of the core team members
-    
+
     Here’s how your About Us Page will look like on your website:  
-    
+
     ![Analyzing_Requirements_for_the_About_Us_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt97566248f56e5589/65360b90796b8e6ad025ce29/Analyzing_Requirements_for_the_About_Us_Page.png)
 2.  ## Identifying Content Model
-    
+
     Let's identify the fields that build up your About Us Page content type that you see in the above step.  
-    
+
     ![Identifying_Content_Model_for_the_About_Us_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt65e788872331f9d4/65360b9059c1b9e3e6ddfdef/Identifying_Content_Model_for_the_About_Us_Page.png)
 3.  ## Developing Content Type
-    
+
     The “About Us Page” content model contains the following set of fields. Let’s look in detail at what content types and fields were used to create the model.
-    
+
     **About Us**
-    
+
     -   **Title****:** This is where you'll provide your “About Us" page a name, such as “Who We Are," “Our Story," or even “About Us”. The [Title](/docs/headless-cms/title) field defines the title of the About Us page/entry.
     -   **URL****:** Here goes the web URL of your “About Us" page. When clicked on, this link provided in the [URL](/docs/headless-cms/url)[](/docs/headless-cms/link)field takes users straight to your About Us page.
     -   **Page Components****:** The different sections that you see on your “About Us" page have been collectively considered together, and hence have used the [Modular Block](/docs/headless-cms/modular-blocks/) field to create the following components:
@@ -74,11 +75,11 @@ Let’s dive deep into how this model will help you create your company’s “A
         -   **Meta Description****:** For the Meta Descriptions field, you will see a [Multi Line Textbox](/docs/headless-cms/multi-line-textbox/) field where you can add the meta description of your entry.
         -   **Meta Keywords****:** For the Meta Keywords field, you will see a [Single Line Textbox](/docs/headless-cms/single-line-textbox/) field where you can add the meta keywords of your entry.
         -   **Enable Search Indexing:** **Y**ou can enable or disable the searches in this [Boolean](/docs/headless-cms/boolean/) field. If you turn it on, it makes sure search engines can find your page. If you turn it off, it keeps the page more private.
-    
-      
-    
+
+
+
     **Our Team** Content Type:
-    
+
     -   **Title**: This is a [Title](/docs/headless-cms/title) field that defines the title of our team entry. It is a mandatory field and must be unique.
     -   **Description**: This is a [Multi Line Textbox](/docs/headless-cms/multi-line-textbox/) field to add the team’s description.
     -   **Employees**: This is a [Group](/docs/headless-cms/group/) field that holds the following information:
@@ -86,11 +87,11 @@ Let’s dive deep into how this model will help you create your company’s “A
         -   **Designation**: This is a [Single Line Textbox](/docs/headless-cms/single-line-textbox) field to add the employee designation.
         -   **Image**: This is a [File](/docs/headless-cms/file/) field that allows you to choose the photograph of an employee.
         -   **Short Description**: This is a [Multi Line Textbox](/docs/headless-cms/multi-line-textbox) field to add a short description about the employee.
-    
-      
-    
+
+
+
     This completes the creation of your “About Us Page" content model.
-    
+
     ![about-us-page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb58476ae7eba9bc3/65e0770bd85afff7bf47cc40/about-us-page.png)
 
 **Additional Resource**:

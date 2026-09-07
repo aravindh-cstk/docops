@@ -2,6 +2,7 @@
 title: "Unique ID"
 description: "Explore the importance of Unique ID (UID) in content fields. Learn about its role, restrictions, and tips for customizing UIDs effectively."
 url: /headless-cms/unique-id
+uid: blt24c9719cf79cccbe
 ---
 
 # Unique ID

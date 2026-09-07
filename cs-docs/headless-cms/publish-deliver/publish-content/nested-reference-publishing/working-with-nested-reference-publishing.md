@@ -2,6 +2,7 @@
 title: "Working with Nested Reference Publishing"
 description: "Master the art of working with Nested Reference Publishing. Unlock the potential of publishing related nested items with ease."
 url: /headless-cms/working-with-nested-reference-publishing
+uid: blt5b40c54395fef934
 ---
 
 # Working with Nested Reference Publishing
@@ -46,7 +47,7 @@ Consider that you need to bulk publish multiple entries, all of which are parent
 
 ![Working_with_NRP_-_Bulk_publish.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd4dd723d9677c660/646c4f57de34c31ba52d7cd0/Working_with_NRP_-_Bulk_publish.png)
 
-  
+
 When you select the entries to publish, a **Publish Entry** modal appears where you can choose the **Environment(s)** and **Language(s)** to which you want to publish your entry. In this scenario, two environments and five languages are selected. To publish all of the nested references along with their parent entries at once, click the **Send**, and then the **Send with References** button.
 
 ![Working_with_NRP_-_Bulk_publish_-_Publish_entries_modal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4f1ec80e5be03064/646b66e847d6c832b896f98e/Working_with_NRP_-_Bulk_publish_-_Publish_entries_modal.png)

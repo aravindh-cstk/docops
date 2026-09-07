@@ -2,6 +2,7 @@
 title: "Get Contentstack Endpoints"
 description: "Use getContentstackEndpoint to resolve region-based API endpoints with error handling and TypeScript support for multi-region apps."
 url: /developers/sdks/utils-sdk/javascript/get-contentstack-endpoints
+uid: bltffebdaa6dba3087b
 ---
 
 # Get Contentstack Endpoints
@@ -84,29 +85,29 @@ Regions can be passed by **ID** or **alias**.
 The function **throws** a descriptive Error instance on invalid input. It does **not** return null or undefined. It throws in these cases:
 
 -   **Empty region:** region is '' (empty string). Omitted region is allowed and defaults to 'us' (North America / na); only an explicit empty string throws.
-    
+
     ```
     Region could not be empty. Provide a valid region and try again.
     ```
-    
+
 -   **Unknown region:** region is not a valid ID or alias
-    
+
     ```
     Provided region <region> is invalid. Provide a valid region and try again.
     ```
-    
+
 -   **Unknown service:** service is non-empty but not defined for that region
-    
+
     ```
     Service "{service}" is not available in region "{regionId}". Provide a valid service name and region ID and try again.
     ```
-    
+
 -   **Invalid regions data:** Bundled regions file is malformed
-    
+
     ```
     The region's configuration file is not valid. Reinstall the SDK and try again.
     ```
-    
+
 
 **Catching Errors**
 

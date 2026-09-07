@@ -2,6 +2,7 @@
 title: "Mobile and Smart Devices System Architecture"
 description: "Architecture diagram for a mobile or a smart device"
 url: /headless-cms/mobile-and-smart-devices-system-architecture
+uid: bltfcc3f1c01e7b3fca
 ---
 
 # Mobile and Smart Devices System Architecture
@@ -30,11 +31,11 @@ The Devices component in the architectural diagram consists of various elements.
 
 -   The first element is your frontend device. Contentstack’s flexible architecture allows you to connect any front-end device of your choice. You can choose to associate either an intelligent IoT device or a mobile application. Irrespective of what your front-end component is, the architecture will remain the same. 
 -   The second element of the Device component is the database system. Devices such as mobile or IoT have their own databases to store data to display on the frontend once fetched from the CMS.  
-      
+
     One of the widely used database systems for mobile devices is Realm. It is an open-source, cross-platform database management solution for mobile operating systems such as Android and iOS.  
-    
+
 -   The third element is the Sync Persistent SDK that is part of the Contentstack SDK. You can think of it as a middleware required to sync content between Contentstack and the Realm database.  
-      
+
     Contentstack's Realm Persistence Library for iOS SDK helps you save the app data on the accessed device. This SDK enables your app to serve data offline. This Persistent Library contains methods required to map your content types data fields and use Realm for data storage.
 
 ## Contentstack Component
@@ -52,9 +53,9 @@ This component of the architecture diagram consists of your headless CMS. 
 -   [Simple Website](/docs/headless-cms/simple-website-detailed-architecture)
 -   [Dynamic website architecture](/docs/headless-cms/dynamic-website-detailed-architecture)
 -   [Partially headless setup architecture](/docs/headless-cms/partially-headless-setup-detailed-architecture)  
-    
+
 -   [Layered architecture for Contentstack-powered websites](/docs/headless-cms/contentstack-powered-website-layered-architecture)  
-    
+
 -   [Cloud infrastructure diagram](/docs/headless-cms/cloud-infrastructure-architecture-for-contentstack-powered-websites)
 -   [Simple Website using DataSync](/docs/headless-cms/simple-website-using-datasync)
 -   [MACH System Architecture](/docs/headless-cms/mach-architecture-diagram)

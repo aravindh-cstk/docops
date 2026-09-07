@@ -2,6 +2,7 @@
 title: "About Android SDK"
 description: "Android-based applications and use the Android SDK to fetch and deliver content from Contentstack."
 url: /developers/sdks/content-delivery-sdk/android/about-android-sdk
+uid: blt31d3d3f8595fdc85
 ---
 
 # About Android SDK

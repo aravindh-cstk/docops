@@ -2,6 +2,7 @@
 title: "Lists"
 description: "Learn how to use ordered and unordered lists in Contentstack’s JSON RTE to structure your content effectively."
 url: /headless-cms/lists
+uid: blt0200ebbd0d49c76c
 ---
 
 # Lists
@@ -16,9 +17,9 @@ There are two types of lists supported by the JSON RTE.
 
 1.  **Ordered List (OL)**: A numbered list indicating sequence or hierarchy.
 2.  **Unordered List (UL)**: A bulleted list for items without a specific order.
-    
+
     ![Example of unordered list in JSON RTE](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt65bb7afe2afeb14a/6819b96f0dc84f00f285a91f/1._ordered_and_unordered_list.png)
-    
+
 
 ## List Structure and JSON Schema
 

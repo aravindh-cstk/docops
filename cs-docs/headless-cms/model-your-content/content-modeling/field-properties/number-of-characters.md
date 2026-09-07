@@ -2,6 +2,7 @@
 title: "Number of Characters"
 description: "The Number of Characters property from Contentstack lets you specify a limit of the minimum or maximum number of characters that a user can input to a field."
 url: /headless-cms/number-of-characters
+uid: blte910c021930d70e3
 ---
 
 # Number of Characters

@@ -2,6 +2,7 @@
 title: "Updating an Installed App"
 description: "Learn how to update an installed app"
 url: /marketplace/updating-an-installed-app
+uid: blt53f893be661829ec
 ---
 
 # Updating an Installed App

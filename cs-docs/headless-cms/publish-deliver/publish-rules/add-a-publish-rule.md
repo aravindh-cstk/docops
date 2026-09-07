@@ -2,6 +2,7 @@
 title: "Add a Publish Rule"
 description: "Define publish rules to control entry publishing and approvals in Contentstack workflows."
 url: /headless-cms/add-a-publish-rule
+uid: bltbd0bc17081280927
 ---
 
 # Add a Publish Rule
@@ -20,39 +21,39 @@ To add a publish rule in your stack, log in to your [Contentstack account](https
 2.  Select **Workflows** and go to the **Publish Rules** tab.
 3.  Click **\+ New Publish Rule**.
 4.  On the **Rule Details** page:
-    
+
     1.  **Branch(es):** Select one or more branches to apply the rule.
-        
+
         **Tip:** You can select multiple branches.
-        
+
     2.  **Content Type:**
         1.  **All Content Types:** Apply the rule globally.
         2.  **Specific Content Type(s):** Select one or more types from the dropdown.
-            
+
             **Note:** You cannot add more than one rule to the same content type.
-            
+
     3.  **Language:**
         1.  **All Languages:** Apply the rule to all languages.
         2.  **Specific Language(s):** Choose desired languages from the dropdown.
     4.  **Environment:** Select the environment for which the rule applies (e.g., Production or Staging).
     5.  **Action:** Choose whether this rule applies to **Publish**, **Unpublish**, or **All** (both actions).
-        
+
         **Note:** All parameters are required fields.
-        
-    
+
+
     ![Publish_Rules_Parameters.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5332192aeb538a2d/690909b44ce7cc797b56971f/Publish_Rules_Parameters.png)
 5.  Expand the **Conditions** section (if not expanded by default). You must define at least one condition.
     1.  **Approver:** Add one or more users or roles who must approve before publishing or unpublishing.
     2.  **Workflow Stage:** Specify the workflow stage (e.g., Final Review or Legal Approved) that an entry must reach before it can be published or unpublished.
 6.  Enable **Prevent self-approval** to ensure independent validation:
-    
+
     1.  The last editor cannot approve or publish the entry.
     2.  Two distinct users must approve before publishing or unpublishing.
     3.  If only one user is assigned, the system displays a validation prompt asking you to add an additional approver.
-        
+
         **Tip:** Enable this option to maintain separation of duties between content creators and reviewers, ensuring independent review and accountability in workflows.
-        
-    
+
+
     ![Publish_Rules_Conditions.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3b339acbb564090e/690909e7aad664766fe34b33/Publish_Rules_Conditions.png)
 7.  After completing all required fields and conditions, click **Save**.
 

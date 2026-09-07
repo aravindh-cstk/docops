@@ -2,6 +2,7 @@
 title: "About JavaScript Live Preview Utils SDK"
 description: "Contentstack provides the Live Preview Utils SDK to establish a communication channel between the various Contentstack SDKs and your website, transmitting  live changes to the preview pane."
 url: /developers/sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk
+uid: bltbb8a4bc6a89f5473
 ---
 
 # About JavaScript Live Preview Utils SDK

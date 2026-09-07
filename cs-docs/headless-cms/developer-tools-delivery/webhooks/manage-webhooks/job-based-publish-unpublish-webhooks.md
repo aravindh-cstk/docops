@@ -2,6 +2,7 @@
 title: "Job-Based Publish/Unpublish Webhooks"
 description: "Discover how job-based webhooks summarize bulk publish/unpublish tasks, reducing notifications with key job outcomes for efficient post-processing."
 url: /headless-cms/job-based-publish-unpublish-webhooks
+uid: blte5697f0bbab8e85a
 ---
 
 # Job-Based Publish/Unpublish Webhooks
@@ -25,14 +26,14 @@ Job-based webhooks are especially useful for post-processing bulk operations. Yo
 Follow the steps below to retrieve entry/asset information via job\_id:
 
 1.  In the payload for job-based webhooks, you receive a job\_id similar to the following:
-    
+
     ```
     {
       ...
       "job_id": "00906443-2ba3-420e-a3bd-2b6b4cd7c5745"
     }
     ```
-    
+
 2.  Use this job\_id in the [Get job items status](/docs/developers/apis/content-management-api/job-status#get-job-items-status) API request to retrieve a list of entries and assets that were published or unpublished as part of the job.
 3.  Use the [Get a single entry](/docs/developers/apis/content-delivery-api/entries#single-entry) or [Get a single asset](/docs/developers/apis/content-delivery-api/assets#single-asset) APIs to further fetch the complete details.
 

@@ -2,6 +2,7 @@
 title: "Client Side Rendering (CSR) with Static Site Generation (SSG) Technical Implementation Architecture"
 description: "Optimize performance and personalize user experiences with Client-Side Rendering and Static Site Generation architecture."
 url: /personalize/csr-ssg-technical-implementation-architecture
+uid: bltd4f798b7c48c6843
 ---
 
 # Client Side Rendering (CSR) with Static Site Generation (SSG) Technical Implementation Architecture
@@ -25,9 +26,9 @@ For organizations aiming to deliver personalized content efficiently, this archi
 The diagram below illustrates the main components and flow of the architecture:
 
 -   **Build**: The initial step where the static page is built and prepared for rendering. During the build process, the content and structure of the pages are determined.
-    
+
     These pages are then stored and ready to be served to users when they visit the website. This approach ensures that the page load times are minimized as the static content is quickly accessible.
-    
+
 -   **Browser**: The user's web browser, responsible for loading and displaying web pages. The browser loads the static pages, executes the necessary scripts, and renders the content for the user. It's responsible for sending requests and receiving responses from various components, including fetching initial and personalized content.
 -   **Page Rendering**: The process where the static page built is rendered for the user. This step involves transforming the static content into a styled, interactive web page. Rendering ensures that the content is displayed correctly according to the design and layout specifications defined during the build process.
 -   **Host**: The server where your web application is deployed. The host component is responsible for delivering the static pages initially.

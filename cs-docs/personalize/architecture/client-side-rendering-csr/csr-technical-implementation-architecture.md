@@ -2,6 +2,7 @@
 title: "Client Side Rendering (CSR) Technical Implementation Architecture"
 description: "Client-Side Rendering (CSR) architecture dynamically delivers personalized web experiences through browser-based rendering."
 url: /personalize/csr-technical-implementation-architecture
+uid: blt687fbb75e6d2b638
 ---
 
 # Client Side Rendering (CSR) Technical Implementation Architecture
@@ -32,17 +33,17 @@ This architecture involves four key components: Browser, Customer Client Code (f
 
 -   **Browser**: The browser acts as the point of interaction for users. The code running in the browser is also responsible for calling the Personalize and Content Delivery APIs to retrieve active variants and their respective content It also collects events and attributes based on user behavior and preferences. These can include location, device type, or other contextual data. This data is sent to the next component, Customer Client Code, to initiate the personalization process.
 -   **Your Client Code**: This component represents the client-side codebase, which processes the events/attributes from the browser and interacts with the backend APIs for personalization. Unlike in server-side scenarios, caching here is noted as "not really possible".
-    
+
     This means every request will need to dynamically reach out to the backend, resulting in real-time content fetching and processing. Your Client Code acts as the intermediary between the browser and backend APIs, managing requests and data flow.
-    
+
 -   **Personalize Edge API**: The Personalize Edge API handles the processing of the user’s events and attributes. It evaluates the incoming data to determine the most appropriate User’s Variants. These variants provide the user with a tailored experience and are selected dynamically based on their interactions.
-    
+
     Once processed, the selected User’s Variants are returned to your Client Code to manage the content request.
-    
+
 -   **CMS Delivery API**: The CMS Delivery API is responsible for delivering the personalized content that is to be served to the user.
-    
+
     It fetches and returns the required content based on the user’s variant, ensuring that the content is up-to-date and relevant to the user. The personalized content is sent back to the Client Code, which then delivers it to the user's browser for display.
-    
+
 
 ## Benefits of this Architecture
 

@@ -2,6 +2,7 @@
 title: "How is it different from Authtoken"
 description: "Learn how Management Tokens differ from Authtokens in terms of access, scope, and use cases."
 url: /headless-cms/how-is-it-different-from-authtoken
+uid: blt37c09300c37a2b61
 ---
 
 # How is it different from Authtoken

@@ -2,6 +2,7 @@
 title: "Clone an Automation"
 description: "Clone an Automation"
 url: /agent-os/clone-an-automation
+uid: blt850fd1b26c6534f8
 ---
 
 # Clone an Automation
@@ -42,9 +43,9 @@ If you have defined project variables in your project and used them in your auto
 1.  In the Clone Automation modal, provide the **Automation Name** and **Select Project** from the dropdown to clone the automation to the selected project.
 2.  Click **Next Step** to view and copy the project variables in the destination project.  
     ![Next_Step.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2114e0da803f135a/656dbe1907f01a7544bf0451/Next_Step.png)
-    
+
     **Note:** Project Variables are defined at project level.
-    
+
 3.  Enable the toggle to copy the variables.
 4.  Click **Clone** to clone the automation.  
     ![Clone_Button_New.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt45a84e1b1ab1b92a/656dbe190e4fd115ee57fc4a/Clone_Button_New.png)

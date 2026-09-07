@@ -2,6 +2,7 @@
 title: "About Asset Localization"
 description: "Effortlessly manage and deliver localized digital assets for global audiences, ensuring culturally relevant experiences without asset duplication."
 url: /assets/about-asset-localization
+uid: bltcc2c61aa3057b690
 ---
 
 # About Asset Localization

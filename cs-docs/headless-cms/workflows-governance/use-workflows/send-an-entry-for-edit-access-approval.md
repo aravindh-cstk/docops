@@ -2,6 +2,7 @@
 title: "Send an Entry for Edit Access Approval"
 description: "Send an entry for edit access approval"
 url: /headless-cms/send-an-entry-for-edit-access-approval
+uid: blt88f344877256cc3e
 ---
 
 # Send an Entry for Edit Access Approval

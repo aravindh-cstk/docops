@@ -2,6 +2,7 @@
 title: "Drupal to Contentstack - New"
 description: "Effortlessly migrate content from Drupal to Contentstack with our intuitive Migration Tool, featuring a seamless step-by-step workflow."
 url: /headless-cms/drupal-to-contentstack
+uid: bltf97eb0cb368a07ae
 ---
 
 # Drupal to Contentstack - New
@@ -47,22 +48,22 @@ Follow these steps to migrate your Drupal content into Contentstack:
 
 1.  By default, Drupal is selected as your legacy CMS.
 2.  Enter a 2–5 character affix for the source name. 
-    
+
     -   Use only letters (no numbers or special characters).
     -   Make sure the affix does not match any of the [restricted keywords](https://www.contentstack.com/docs/headless-cms/restricted-keywords-for-uids).
     -   The affix is used as:
         -   A prefix if the content type UID matches the restricted UIDs.
         -   A suffix for field UIDs.
-    
+
     ![select cms-screen.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/amd26b4e915ce01c7e/e1857c94eb683532ba14b7bc/select_cms-screen.png?locale=en-us)
 3.  Click **Validate File** to validate the exported Drupal content.
-    
+
     **Note**: If validation fails, check for the following issues:
-    
+
     -   **File Format Error**: Ensure the file is in the desired format.
     -   **Missing Content**: Ensure the exported data contains all required content.
     -   **Incomplete Files**: Verify that no files are missing or corrupted.
-    
+
     ![legacy-cms-validation-screen.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am41058dbd128523a0/7598d80628b1817d58f35611/legacy-cms-validation-screen.png?locale=en-us)
 4.  Click **Save and Continue**.
 
@@ -114,23 +115,23 @@ By default, all fields are selected for migration; however, you can uncheck fiel
 #### Handle Different Mapping Scenarios
 
 1.  Select a content type from the dropdown to map fields accordingly. Adjust mappings manually if needed.
-    
+
     **Note:** If the stack is empty, mappings rely solely on Contentstack’s field data types.
-    
+
     Use the following advanced options to efficiently manage your mappings:
-    
+
     1.  **Search for Specific Fields**: Use the search bar in the mapping interface to locate field names.
     2.  **Reset Content Mapping**: Click the ‘Reset to default mapping’ icon to revert any changes made to the default mappings.
     3.  **Select an Existing Content Type from Destination Stack**: By default, the tool maps the source models to the destination stack as new content types. For example, a ‘Contact Us’ page model from your source CMS gets mapped as a new ‘Contact Us’ content type during migration. However, you can select an existing content type from the destination stack if it exists.
     4.  **Fetch Content Types**: During migration, if new content types or fields are created/updated/deleted in the destination stack, retrieve them by clicking the ‘Fetch content type’ icon to update the schema.
-        
+
         **Note**:
-        
+
         -   If you have created a new stack in [Step 5](/docs/headless-cms/drupal-to-contentstack#step-5-configure-destination-stack), the ‘Fetch content type’ or the ‘Select Content Type from Destination Stack’ icons do not appear.
         -   If an existing stack was selected (even if it is empty), the icons are available. You can go back to the stack, create new content types, and later use the 'Fetch content type' icon to update the schema and include the newly added content types.
-        
+
     5.  **Advanced Properties**: Click the ‘Advanced properties’ icon next to each field to adjust field-specific properties.
-    
+
     ![content-mapper-3.mp4](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am56b1bda809074fd2/2b5e55c83e1b4ce6106b8c5b/content-mapper-3.gif?locale=en-us)
 2.  Click **Save** after completing the mapping for each content type.
 3.  Click **Continue**.
@@ -139,9 +140,9 @@ By default, all fields are selected for migration; however, you can uncheck fiel
 
 1.  Click **Create Test Stack** to create a sample stack within your organization to test the migration.
 2.  Click **Start Test Migration**.![test-migration-screen.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am35b91ed7b1092272/c17adb1019c63378ecce5423/test-migration-screen.png?locale=en-us)
-    
+
     **Note:** This migrates a small subset of your data to validate the mapping before running the full migration.
-    
+
 3.  A success or error message will be displayed in the logs after completion.![test-migartion-completion-screen.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am334abd2a562692a9/9e2217b92b76515b864ed87d/test-migartion-completion-screen.png?locale=en-us)
 
 ### Step 8: Execute the Migration

@@ -2,6 +2,7 @@
 title: "Error Management for Action Steps"
 description: "Handle errors in Contentstack Automate workflows by stopping execution or skipping failed steps."
 url: /agent-os/error-management-for-action-steps
+uid: blt9bd74a0264c2a923
 ---
 
 # Error Management for Action Steps
@@ -41,9 +42,9 @@ Here’s an example scenario that outlines a process for setting up and testing 
     -   Test the HTTP Trigger and Transform Connector. Ensure these are functional.
     -   Leave the Slack Connector untested to simulate a failure.
 3.  **Execution:**
-    
+
     If the Slack Connector fails:
-    
+
     -   Select **Ignore and Skip Step, Continue Execution** to bypass the failure and allow the other actions to execute.
     -   Alternatively, select **Stop Automation** to terminate the execution immediately.
     -   You can view the history of the execution in the [Execution Log](/docs/agent-os/view-execution-log-of-agent-os) section.

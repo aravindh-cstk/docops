@@ -2,6 +2,7 @@
 title: "Implement TOTP Support for Java Management SDK"
 description: "Learn to integrate TOTP-based MFA in Contentstack’s Java SDK. Authenticate users via 2FA token or MFA secret to enhance login security and automation."
 url: /developers/sdks/content-management-sdk/java/implement-totp-with-java-management-sdk
+uid: blt492114df99d97d9b
 ---
 
 # Implement TOTP Support for Java Management SDK
@@ -32,7 +33,7 @@ Type LoginDetails
 
 <table><tbody><tr><td><strong>Name</strong></td><td><strong>Type</strong></td><td><strong>Description</strong></td></tr><tr><td>emailId (required)</td><td>String</td><td>The email ID of the user</td></tr><tr><td>password (required)</td><td>String</td><td>The password of the Contentstack user</td></tr><tr><td>params (required for MFA/TFA users)</td><td>Map&lt;String, String&gt;</td><td>Map containing the <span class="code">tfaToken</span> or <span class="code">mfaSecret</span></td></tr></tbody></table>
 
-  
+
 
 **Parameters for param Map:**
 
@@ -59,29 +60,29 @@ Contentstack contentstack = new Contentstack.Builder().setAuthtoken(AUTHTOKEN).b
 You can authenticate users using one of the following methods based on your account’s security setup. Each method returns a response object containing the authtoken.
 
 -   **Email and Password:**
-    
+
     ```
     Response<LoginDetails> response = contentstack.login("emailId", "password");
     ```
-    
+
 -   **2FA Token Authentication:**
-    
+
     ```
     Map<String, String> params = new HashMap<>();
     params.put("tfaToken", "123456");
     Response<LoginDetails> response = contentstack.login("emailId", "password", params);
     ```
-    
+
 -   **MFA Secret (TOTP) Authentication:**
-    
+
     ```
     Map<String, String> params = new HashMap<>();
     params.put("mfaSecret", "YOUR_SECRET");
     Response<LoginDetails> response = contentstack.login("emailId", "password", params);
     ```
-    
+
     **Note:** The mfaSecret is not sent in the request body. It is used internally by the SDK to generate a TOTP, which is then passed as the token during login.
-    
+
 
 **Handling the Response**
 
@@ -106,7 +107,7 @@ Type Call
 
 <table><tbody><tr><td><strong>Name</strong></td><td><strong>Type</strong></td><td><strong>Description</strong></td></tr><tr><td>emailId (required)</td><td>String</td><td>The email id of the user</td></tr><tr><td>password (required)</td><td>String</td><td>The password of the Contentstack user</td></tr><tr><td>params (required for MFA/TFA users)</td><td>Map&lt;String, String&gt;</td><td>Map containing the <span class="code">tfaToken</span> or <span class="code">mfaSecret</span></td></tr></tbody></table>
 
-  
+
 
 **Parameters for param Map:**
 
@@ -133,27 +134,27 @@ User user = contentstack.user();
 **Authentication**
 
 -   **Email and Password:**
-    
+
     ```
     Call<LoginDetails> response = user.login("emailID", "password");
     ```
-    
+
 -   **2FA Token Authentication:**
-    
+
     ```
     Map<String, String> params = new HashMap<>();
     params.put("tfaToken", "123456");
     Call<LoginDetails> response = user.login("emailID", "password", params);
     ```
-    
+
 -   **MFA Secret (TOTP) Authentication:**
-    
+
     ```
     Map<String, String> params = new HashMap<>();
     params.put("mfaSecret", "YOUR_SECRET");
     Call<LoginDetails> response = user.login("emailID", "password", params);
     ```
-    
+
 
 **Handling the Response**
 

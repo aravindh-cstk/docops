@@ -2,6 +2,7 @@
 title: "Set up Live Preview for your Website"
 description: "Set up Live Preview to see real-time content updates before publishing. Supports CSR, SSR, GraphQL, REST, Gatsby, and SSG-based sites for seamless previews."
 url: /headless-cms/set-up-live-preview-for-your-website
+uid: bltfbc7605ccab3ffad
 ---
 
 # Set up Live Preview for your Website

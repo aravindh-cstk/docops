@@ -2,6 +2,7 @@
 title: "About Dart Utils Library"
 description: "The Dart Utils library contains all the utilities for the Dart SDK."
 url: /developers/sdks/utils-sdk/dart/about-dart-utils-library
+uid: bltbee2a65aee32f8ac
 ---
 
 # About Dart Utils Library

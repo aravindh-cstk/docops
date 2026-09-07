@@ -2,6 +2,7 @@
 title: "About Asset Modeling"
 description: "Optimize your digital assets with Contentstack's asset modeling. Customize asset types and metadata fields for seamless management and smarter workflows."
 url: /assets/about-asset-modeling
+uid: bltcdc5d92449b2cf87
 ---
 
 # About Asset Modeling

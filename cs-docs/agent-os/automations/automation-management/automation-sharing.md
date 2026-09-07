@@ -2,6 +2,7 @@
 title: "Automation Sharing"
 description: "Discover how Contentstack's Automation Sharing feature allows you to effortlessly share and replicate automation workflows across different organizations."
 url: /agent-os/automation-sharing
+uid: blt285052f3200d3697
 ---
 
 # Automation Sharing
@@ -54,9 +55,9 @@ If your automation includes Project Variables, you can choose how to handle them
 
 1.  On the **Project Variables** screen, a list of variables will appear with both Keys and Values.
 2.  Check the **Mark to Copy** box to include these values in the imported automation.
-    
+
     **Note:** You can change the variable Value during the automation import process. The recipe and Project Variables tab update to reflect the project variable changes.
-    
+
     ![Automation Sharing.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt40dbfefcda1e26c9/67b845b53cf087164385ee9a/Automation_Sharing.png)
 
 **Finalize the Import:**
@@ -78,7 +79,7 @@ If your automation includes Project Variables, you can choose how to handle them
 **Finalize the Import:**
 
 1.  Click **Confirm and Import**. The cloned automation will include the project variables without their values.
-    
+
     ![Imported_Recipe.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte18c3c0786b3e082/67bc06622cce5be55d8f77ac/Imported_Recipe.png)
 
 ### Managing Project Variables Post-Import

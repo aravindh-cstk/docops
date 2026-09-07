@@ -2,6 +2,7 @@
 title: "Releases Limitations"
 description: "Explore efficient content release management in Contentstack. Learn about update, rollback, and deployment processes to optimize your workflow."
 url: /headless-cms/releases-limitations
+uid: blt497ab735c2a946d4
 ---
 
 # Releases Limitations

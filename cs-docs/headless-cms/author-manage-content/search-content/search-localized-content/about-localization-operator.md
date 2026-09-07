@@ -2,6 +2,7 @@
 title: "About Localization Operator"
 description: "Learn how to use the localization operator in Contentstack's Advanced Search to find entries based on their localization status in specific languages."
 url: /headless-cms/about-localization-operator
+uid: blt8ebdb89dce56d7b3
 ---
 
 # About Localization Operator
@@ -21,15 +22,15 @@ To use the localization operator, log in to your [Contentstack account](https://
 5.  From the **Operator** dropdown, select **Matches** to find entries where the language matches a specific value.
 6.  Choose the language you want to search for, such as **French**.![About Localization Operator_3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt85ca7cc7a20c5a4b/684299f121ef7a90ca188b15/3._operator_set_as_language.png)
 7.  Choose the operator that fits your needs:
-    
+
     1.  **Localized In**: Select this option if you want to find entries that have been localized in a specific language.
     2.  **Not Localized In**: Select this option to find entries that have not been localized in a specific language but might be available in their fallback languages.
-    
+
     For example, to find entries that have not been localized in **French**:
-    
+
     1.  Set the **Language** field to **French**.
     2.  Choose **Not Localized In** from the **Operator** dropdown.
-    
+
     ![About Localization Operator_4.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt47585388071b5015/684299f173466cdbee9f4c73/4._localized_filter.png)
 8.  You can add more criteria or filters as needed to narrow down your search. Once your query is set up, click the **Search** button to view the results.![About Localization Operator_5.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0dc45ebf95e7aa61/684299f2afd14d5c4b62a202/5._Localized_entry_output.png)
 

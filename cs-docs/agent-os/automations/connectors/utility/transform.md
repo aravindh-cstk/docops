@@ -2,6 +2,7 @@
 title: "Transform"
 description: "Use Automate's Transform Connector to efficiently process and convert data for specific requirements."
 url: /agent-os/transform
+uid: bltb9e7e081ef993258
 ---
 
 # Transform
@@ -43,11 +44,11 @@ Let’s see the configuration for this:
 2.  Click **\+ Add Fields to Aggregate** button. By default, the **Field Name** is visible. In the **Field** **Name**, enter the nested path to the numeric field. For example, “**user.details.age.**”
 3.  In the **Statistics** field, select the value you want to use for aggregating the data. Here, we are using _Total_ and _Average_.![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt79ba0697adbe2546/67beca2724e52c3021e6c3b8/Select_Fields.png)
 4.  Optionally, enable the **Show Optional Fields** toggle button to view the optional field.
-    
+
     In the **Select Null Value Handling** drop-down, select either **Exclude** or **Zero** to handle null values.
-    
+
     If **Null Value Handling** is set to **Exclude**, null or undefined values are ignored. However, if it is set to **Zero**, these values are not excluded and are instead assigned a value of 0.
-    
+
     ![Show_Optional_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte8a89c6319e53b65/67beca2787966d83ad9924dc/Show_Optional_Fields.png)
 5.  Click **Proceed**.
 6.  Click **Test** **Action**.
@@ -125,9 +126,9 @@ This operation removes the days, months, years, etc. from a given date.
 1.  In the **Input Date** field, enter the date from which you want to subtract the date-time components. If left blank, the current date is automatically selected.
 2.  In the **Select Unit** drop-down, select the date-time component to subtract from the input date. If you choose **Week**, the week is subtracted.
 3.  In the **Subtract Value** field, enter the value to subtract.
-    
+
     For example, if you choose **Week** in the **Select Unit** drop-down and enter **2** in the **Subtract Value** field, it removes two weeks from the input date.
-    
+
 4.  In the **Select Output Format**, select an output date format.  
     ![Subtract_Date_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt58fd82367e400f0d/67becc0f2c963bd1b81b7c1c/Subtract_Date_Fields.png)
 5.  Click **Proceed**.
@@ -153,9 +154,9 @@ Let’s see the configuration for this:
 
 1.  In the **Input** **Value** field, enter the JSON data (objects or array of objects) to filter.
 2.  In the **Filter Conditions** section, click **\+ Add Condition** button to add the filters.
-    
+
     Based on the example code, enter **"name"** in the **Select** **Input** field, choose the **Matches** operator, and enter a value (e.g., **"John"**). This filters the array and returns only the objects where the name is John.  
-    
+
     ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0625d50c907fbc38/67bed21ed1b1de0609ca444b/Select_Fields.png)
 3.  Click **Proceed**.
 4.  Click **Test Action**.
@@ -172,9 +173,9 @@ Let’s see the configuration for this:
 
 1.  In the **Input** **Value** field, enter the JSON data (objects or array of objects) to stringify.
 2.  Optionally, enable the **Show Optional Fields** toggle button to display the optional fields.
-    
+
     In the **Select Indentation Spaces**, select the spaces for JSON indentation in the output. By default, 0 is selected.
-    
+
     ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb5ec5fcf2a9d4c68/67bed2ab54cf2f02dc762a1d/Select_Fields.png)
 3.  Click **Proceed**.
 4.  Click **Test Action**.
@@ -189,41 +190,41 @@ Let’s see the configuration for each operation:
 
 1.  In the **Input Name** and **Input Value** field, enter the JSON data (array of objects) to merge.
 2.  In the **Merge Method** drop-down, select the method to merge the data.
-    
+
     If the **Merge Method** is **Merge**:
-    
+
     If the **Merge Option** is **Matching Fields**:
-    
+
     1.  In the **Select Merge Option** drop-down, select the type of merge method, i.e., **Matching Fields**, **Position**, and **All Possible Combinations**. Here we are selecting **Matching** **Fields**.
-        
+
         **Note:** Merge by **Position** applies to all provided input data, while **Matching Fields** and **All Possible Combinations** work only for the first two input data sets.
-        
+
     2.  In the **Field Name** field, enter the name of the field to compare and merge.
     3.  In the **Match Options** drop-down, select any one of the options:
-        
+
         1.  **Equal:** Returns objects where the specified field name matches in both objects.
         2.  **Not Equal:** Returns objects where the specified field name does not match in both objects.
         3.  **Keep Both:** Includes all objects in the output, regardless of matching criteria.
         4.  **Enrich First:** Merges both objects, keeping all fields while prioritizing values from the first object (similar to a left join).
         5.  **Enrich Second:** Merges both objects, keeping all fields while prioritizing values from the second object (similar to a right join).  
             ![Merge_Matching_Position.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte967d30fce1876da/67bedf3f938bf579caf9a67d/Merge_Matching_Position.png)
-        
+
         If the **Merge Option** is **Position**:
-        
+
         1.  In the **Select Merge Option** drop-down, select the type of merge method, i.e., **Position**.
-            
+
             **Position-based** merging takes the first object from each array and merges them. If you have three arrays of objects, it will pick the first object from each and combine them in the output.  
-            
+
             ![Merge_Position.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltde1f5c26d4b6ae47/67bedf40f5cfb3881dd6ba41/Merge_Position.png)
-        
+
         If the **Merge Option i**s **All Possible Combinations**:
-        
+
         1.  In the **Select Merge Option** drop-down, select the type of merge method, i.e., **All Possible Combinations**.
         2.  **All Possible Combinations** generates and merges every possible pair from the first two input arrays. For example, if the first array has 2 objects and the second array has 4 objects, the output contains 8 unique combinations.  
             ![Merge_All_Possible_Combinations.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt38f3ded3be5d4240/67bedf3f938bf5f312f9a67b/Merge_All_Possible_Combinations.png)
-    
+
     If the **Merge Method** is **Append**:
-    
+
     1.  If the **Merge Method** is **Append**, it will merge all the data from the array of objects into a single array.  
         ![Append_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0362edd3bc7b3e4a/67bedf48d1b1de0385ca44d7/Append_Fields.png)
 3.  Click **Proceed**.
@@ -310,9 +311,9 @@ Let’s see the configuration for this:
 
 1.  In the **Input Value** field, enter the JSON data (objects or array of objects) to remove the duplicate.
 2.  Optionally, enable the **Show Optional Fields** to display the optional fields.
-    
+
     In the **Key/Nested Path** field, enter the key or the nested path to remove the duplicate. You can enable the check for case-sensitive duplicate values.
-    
+
     ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt045d7cfdd8fcee06/67bedbc7f4b0b1f529987174/Select_Fields.png)
 3.  Click **Proceed**.
 4.  Click **Test Action**.
@@ -334,25 +335,25 @@ Let’s see the configuration for this:
 1.  In the **Input Value** field, enter the data to sort.
 2.  In the **Field Name**, enter the field name to sort based on the input value. If left blank, an empty string is automatically selected.
 3.  In the **Select Sort Direction**, enter the sort direction, i.e., **Ascending** or **Descending**.
-    
+
     If your input is an array of objects and you want to sort by a specific field (e.g., "age"), enter **age** in the **Field** **Name** and select **Ascending** from the **Sort Direction** drop-down.
-    
+
     **Example Input:**
-    
+
     ```
     return [{"name": "Alice", "age": 25}, {"name": "Bob", "age": 30}, {"name": "Charlie", "age": 20}];
     ```
-    
+
     **Example Output:**
-    
+
     ```
     [ {"name": "Charlie", "age": 20}, {"name": "Alice", "age": 25}, {"name": "Bob", "age": 30}]
     ```
-    
+
 4.  Optionally, enable the **Show Optional Fields** toggle to display the optional fields.
-    
+
     Click the **Enable case-sensitive sorting** checkbox to match cases when sorting data.
-    
+
     ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltefec39d8c220bfa0/67bedc9420c9dd4c581c1c34/Select_Fields.png)
 5.  Click **Proceed**.
 6.  Click **Test** **Action**.
@@ -377,9 +378,9 @@ The Transform connector also helps in mapping different JSON objects into one ob
 
 1.  On the **Transform Configure Action** page, enter the following details:
     1.  Click the **Add Input** button, and enter a variable name for the **Input Name** (say, “name”) and an **Input Value** for the variable (say, “john” in lowercase letters).  
-        
+
         **Note:** You can even pass the value directly into the **Transformation** box.
-        
+
     2.  Let’s enter the JSON code that uses the “capitalize()” modifier in the **Transformation** box. Use the following code: {“result” : “{capitalize(name)}” }  
         ![Transform_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc5d6e8a4f389109e/66c5f3c84b8e144bbfbc82d1/Transform_Fields.png)
 2.  Click **Proceed**.
@@ -529,313 +530,313 @@ You can also pass the data configured from the previous step and replace the con
     ![Replace_Trigger_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3093ef0b04aaf965/66c5f63ee712ef00fb311f5c/Replace_Trigger_Input.png)
 2.  To replace all the occurrences of the word _hello_ with _hi_.  
     ![Replace_Trigger_Transform.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8fe20b587ecde2d1/66c5f63ec711710cca69af0d/Replace_Trigger_Transform.png)
-    
+
     Here’s a screenshot that shows the output:  
     ![Replace_Trigger_Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltaeb5322545a37db3/66c5f63edd1a361faa40cb22/Replace_Trigger_Output.png)
-    
+
     #### trim
-    
+
     Use this modifier to remove white spaces at the beginning and end of the string, including tab, space, null byte, new line, and carriage return.  
     **Example:** trim(Data)
-    
+
     Here’s a screenshot that shows the input: ![Trim_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltcea6ccd77bf4e27d/66c5f8385c1ba463f6269aaa/Trim_Input.png)
-    
+
     Here’s a screenshot that shows the output:  
     ![Trim_Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt27b96cba0337c3e2/66c5f839038881adb51efd53/Trim_Output.png)
-    
+
     #### capitalize
-    
+
     Use this modifier to convert the input data into the capital (upper) case.  
     **Example:** capitalize('input data') or capitalize(variable)
-    
+
     Here’s a screenshot that shows the input:  
     ![Capitalize_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt721cc17687139cfe/66c5f89cc71171571369af49/Capitalize_Input.png)
-    
+
     Here’s a screenshot that shows the output:![Capitalize_Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9856f6273c4758cd/66c5f89cb506aa5636c6f58a/Capitalize_Output.png)
-    
+
     #### camelCase
-    
+
     Use this modifier to convert the input text into the camel case.  
     **Example:** camelCase('input data')
-    
+
     Here’s a screenshot that shows the input:  
     ![CamelCase_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt85bc506a59a17ec0/66c5f8d7ca95951ae853b9bd/CamelCase_Input.png)
-    
+
     Here’s a screenshot that shows the output:  
     ![CamelCase_Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2d4feb34df3ab892/66c5f8d61342863405c3eaac/CamelCase_Output.png)
-    
+
     #### kebabCase
-    
+
     Use this modifier to convert the input text into the kebab case.  
     **Example:** kebabCase('input data')
-    
+
     Here’s a screenshot that shows the input:
-    
+
     ![KebabCase_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt62accc4f4cb65b01/66c5f95d1342864425c3eacb/KebabCase_Input.png)
-    
+
     Here’s a screenshot that shows the output:
-    
+
     ![KebabCase_Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt83982e931ddf573f/66c5f95d5c9bfe3a7c0f1d38/KebabCase_Output.png)
-    
+
     #### snakeCase
-    
+
     Use this modifier to convert the input text into the snake case.  
     **Example:** snakeCase('input data')
-    
+
     Here’s a screenshot that shows the input:
-    
+
     ![SnakeCase_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta12ede2e1edcff51/66c5f9a471186741d5aa23f6/SnakeCase_Input.png)
-    
-      
+
+
     Here’s a screenshot that shows the output:
-    
+
     ![SnakeCase_Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7cb32bb1abd61d32/66c5f9a33bab114714a2d898/SnakeCase_Output.png)
-    
+
     #### escape
-    
+
     Use this modifier to escape HTML characters.  
     **Example:** escape('<data input>')
-    
+
     Here’s a screenshot that shows the input:
-    
+
     ![Escape_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5cf44161a33011d3/66c5f9e4ab1b6905e93cb635/Escape_Input.png)
-    
+
     Here’s a screenshot that shows the output:
-    
+
     ![Escape_Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2301a059557e87a7/66c5f9e3e712ef0ff7311f7f/Escape_Output.png)
-    
+
     #### split
-    
+
     Use this modifier to split the text into an array.  
     **Example:** split('data-input' , '-')
-    
+
     Here’s a screenshot that shows the input:
-    
+
     ![Split_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2029bbf0766df781/66c5fa245c9bfe27060f1d55/Split_Input.png)
-    
+
     Here’s a screenshot that shows the output:
-    
+
     ![Split_Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9b31b39bca7ae70f/66c5fa24e712ef3608311f84/Split_Output.png)
-    
+
     #### join
-    
+
     Use this modifier to join all items of an array to make a single string.  
     **Example:** join(…arrayRef|string , '-')
-    
+
     Here’s a screenshot that shows the input:
-    
+
     ![Join_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8f49acfa25b6d11b/66c5fa783bab1138a5a2d8bc/Join_Input.png)
-    
+
     Here’s a screenshot that shows the output:
-    
+
     ![Join_Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfeb0654a11c26bb3/66c5fa784b8e146c3fbc834e/Join_Output.png)
-    
+
     #### upperCase
-    
+
     Use this modifier to convert the input text into upper case.  
     **Example:** upperCase(Data)
-    
+
     Here’s a screenshot that shows the input:
-    
+
     ![UpperCase_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt21744fa5ffc1b0e7/66c5fd619727681c22b5cabe/UpperCase_Input.png)
-    
+
     Here’s a screenshot that shows the output:
-    
+
     ![UpperCase_Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3e515e2c596b94e8/66c5fd6120995e11b7d2d1f8/UpperCase_Output.png)
-    
+
     #### lowerCase
-    
+
     Use this modifier to convert the input text into lower case.  
     **Example:** lowerCase(Data)
-    
+
     Here’s a screenshot that shows the input:
-    
+
     ![LowerCase_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt513f7d9ef3b26afc/66c5fdae4c3912367eac06f7/LowerCase_Input.png)
-    
+
     Here’s a screenshot that shows the output:
-    
+
     ![LowerCase_Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt874a7e85b1f9fbac/66c5fdae5c1ba4b70b269b1c/LowerCase_Output.png)
-    
+
     #### repeat
-    
+
     Use this function to repeat the input string a specified number of times.
-    
+
     **Example:** \[\[repeat string\_name number\]\].
-    
+
     In the above example:
-    
+
     -   **repeat** is the helper function
     -   **string\_name** is the input string which you want to repeat
     -   **number** specifies the count of repetition for the string
-    
+
     **Note:** The input value must be a string, and the number should be an integer value.
-    
+
     Here’s a screenshot that shows the input:  
-    
+
     ![repeat_input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blteb6e0a564bd75a83/66c6d251dd1a36cd4440d51c/repeat_input.png)
-    
+
     Here’s a screenshot that shows the output:
-    
+
     ![repeat_output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb849b526299c21d4/66c6d2515c9bfe66850f25c9/repeat_output.png)
-    
+
     #### startsWith
-    
+
     Use this function to check whether the input string starts with the specified letter or string. This returns a boolean value, i.e., **true** or **false**.
-    
+
     **Example:** \[\[startsWith string\_name “letter/string”\]\].
-    
+
     In the above example:
-    
+
     -   **startsWith** is the helper function
     -   **string\_name** is the input string which you want to verify
     -   **letter/string** is the string that you want to check against the beginning of the input string.
-    
+
     Here’s a screenshot that shows the input:  
-    
+
     ![StartsWith_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2153beff90dde941/66c6d39803888177051f0700/StartsWith_Input.png)
-    
+
     Here’s a screenshot that shows the output:
-    
+
     ![StartsWith_Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt581137f42c48697d/66c6d3983bab115e79a2e2f4/StartsWith_Output.png)
-    
+
     In case of incorrect input:
-    
+
     ![StartsWith_Input_Wrong.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2855fea755b0abc5/66c6d3980baf9b3592af7970/StartsWith_Input_Wrong.png)
-    
+
     Output:
-    
+
     ![startsWith_Output_Wrong.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfb656c899d6fba7c/66c6d399c71171652269bb8b/startsWith_Output_Wrong.png)
-    
+
     #### endsWith
-    
+
     Use this function to check whether the input string starts with the specified letter or string. This returns a boolean value, i.e., **true** or **false**.
-    
+
     **Example:** \[\[endsWith string\_name “letter/string”\]\].
-    
+
     In the above example:
-    
+
     -   **endsWith** is the helper function
     -   **string\_name** is the input string which you want to verify
     -   **letter/string** is the string that you want to check against the end of the input string.
-    
+
     Here’s a screenshot that shows the input:
-    
+
     ![endsWith_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt42d575648a93667d/66c6d4e6b506aa7877c70033/endsWith_Input.png)
-    
+
     Here’s a screenshot that shows the output:
-    
+
     ![endsWith_Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0b450ea8cb48ea93/66c6d4e6c7117155fb69bba3/endsWith_Output.png)
-    
+
     In case of incorrect input:
-    
+
     ![endsWith_Output_Wrong.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt85af22710ffd15fd/66c6d4e613428668c5c3f56e/endsWith_Output_Wrong.png)
-    
+
     Output:
-    
+
     ![endsWith_wrong_output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltaa60691c654f6cc2/66c6d60e1ee805f94a168448/endsWith_wrong_output.png)
-    
+
     #### contains
-    
+
     Use this function to check whether the input string contains the specified letter or substring. This function returns a boolean value: **true** if the specified text is found, and **false** otherwise.
-    
+
     **Example:** \[\[contains “string\_name” “letter/substring”\]\].
-    
+
     In the above example:
-    
+
     -   **contains** is the helper function
     -   **string\_name** is the input string
     -   **letter/string** is the substring that you want to search in the input string.
-    
+
     Here’s a screenshot that shows the input:
-    
+
     ![contains_input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt301300f3e0d63abb/66c6d99a5c1ba427b626a3a1/contains_input.png)
-    
+
     Here’s a screenshot that shows the output:
-    
+
     ![contains_output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltff83adc72523e7d5/66c6d99a4b8e14da9dbc8c68/contains_output.png)
-    
+
     ### Data Processing and Transformation
-    
+
     #### uniqueItems
-    
+
     Use this modifier to remove duplicate items and return unique values from an array.  
     **Example:** uniqueItems(Data)
-    
+
     Here’s a screenshot that shows the input:  
     ![UniqueItems_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt665d57a55846d002/66c5ff5133f9a5d3917a9ae2/UniqueItems_Input.png)
-    
+
     Here’s a screenshot that shows the output:
-    
+
     ![UniqueItems_Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt025a4a2ea3c24ab8/66c5ff5120995e75cad2d23b/UniqueItems_Output.png)
-    
+
     #### findInCollection
-    
+
     Use this modifier to return objects from an array specified in the conditions.  
     **Example:** findInCollection(Data, 'Name= John Harper')
-    
+
     Here’s a screenshot that shows the input:
-    
+
     ![FilterCollection_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfbe78c7159e17b8b/66c5ffc05c1ba4b015269b51/FilterCollection_Input.png)
-    
+
     Here’s a screenshot that shows the output:
-    
+
     ![FilterCollection_Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5cc3f2f437e90b83/66c5ffc0c71171f9ba69b047/FilterCollection_Output.png)
-    
+
     #### filterCollection
-    
+
     Use this modifier to filter an array and remove all objects which do not match the condition.  
     **Example:** filterCollection(Data, 'Name=John Harper')
-    
+
     Here’s a screenshot that shows the input:
-    
+
     ![FindInCollection_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt81570087abbfdc0b/66c5ff9d1342868014c3eb6a/FindInCollection_Input.png)
-    
+
     Here’s a screenshot that shows the output:
-    
+
     ![FindInCollection_Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta27e48f921f07709/66c5ff9dab1b690d803cb6b5/FindInCollection_Output.png)
-    
+
     #### mapCollection
-    
+
     Use this modifier to map the collection data. This function will help users create a new collection by mapping data to different keys.  
     **Example:** { "userslist": "{mapCollection(users,'Name=John Harper&book =Harry Potter')}" }
-    
+
     Here’s a screenshot that shows the input:
-    
+
     ![MapCollection_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blteae6792bb4cd7143/66c6002a4b8e140f92bc83dd/MapCollection_Input.png)
-    
+
     Here’s a screenshot that shows the output:
-    
+
     ![MapCollection_Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0b4749dd5f32e2c4/66c6002a3bab110545a2d95b/MapCollection_Output.png)
-    
+
     #### size
-    
+
     Use this modifier to retrieve the size of an array.  
     **Example:** size(Data)
-    
+
     Here’s a screenshot that shows the input:  
-    
+
     ![Size_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt81f99ee4c36e6467/66c6008d4b8e1458d0bc83e7/Size_Input.png)
-    
+
     Here’s a screenshot that shows the output:
-    
+
     ![Size_Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta9008e0a500bcf46/66c6008dab1b696ca73cb6c9/Size_Output.png)
-    
+
     ### Miscellaneous
-    
+
     #### Using Multiple Filters
-    
+
     You can also pass data in for more than one filter, as shown below:  
-      
+
     {  
     “name”: “{lowerCase(firstname)|upperCase($pipe)}”  
     }  
-    
+
     Here’s a screenshot that shows the input:  
-    
+
     ![Multiple_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt64ad61e62a515c65/66c601a3ab1b69b5093cb6e1/Multiple_Input.png)
-    
+
     Here’s a screenshot that shows the output:
-    
+
     ![Multiple_Output.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt73d95ef05c0b2611/66c601a3c711717d6069b07e/Multiple_Output.png)
 
 #### text
@@ -892,9 +893,9 @@ This action enables you to format your data using HTML, incorporate inline CSS, 
     ![Select_Template_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt385a64e64cc1ca10/66c5f223ca9595cd9153b8e6/Select_Template_Action.png)
 2.  On the **Template Configure Action** page, enter the details given below:
     1.  Click the **Add Input** button, and enter a variable name and value in the **Input Name** and **Input Value** fields respectively. For example, enter **Entry Title** in the **Input Name** field and in the **Input Value** field, fetch the entry title configured in the previous step as shown in the screenshot below:
-        
+
         **Note:** You can also pass the value directly into the **Template** box.
-        
+
     2.  In the **Template** field, provide a template and fetch the values from the previous step as shown below:  
         ![Template_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta525567b2e8fe2ed/66c5f2235c1ba4740e269a0a/Template_Fields.png)
 3.  Click **Proceed**.

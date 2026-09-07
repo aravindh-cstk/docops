@@ -2,6 +2,7 @@
 title: "What is a Conditional Path"
 description: "Learn how to use Conditional Paths and customize workflows in Automations to create if-else logic with precise conditions."
 url: /agent-os/what-is-a-conditional-path
+uid: bltd1dcd5cf32a10dee
 ---
 
 # What is a Conditional Path

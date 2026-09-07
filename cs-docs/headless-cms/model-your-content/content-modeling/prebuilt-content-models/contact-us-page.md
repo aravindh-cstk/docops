@@ -2,6 +2,7 @@
 title: "Contact Us Page"
 description: "The Contact Us content model is structured to provide information about a website's 'Contact Us' page, such as name, address, phone, email, and social links."
 url: /headless-cms/contact-us-page
+uid: bltea120d5883945db3
 ---
 
 # Contact Us Page
@@ -18,33 +19,33 @@ Here are some of the elements that a Contact Us page should typically include:
 -   A contact form
 -   Social media handles
 -   A brief message about the website or organization  
-    
+
 
 Let’s understand how this model will assist you create your company’s “Contact Us” page.
 
 1.  ## Analyzing Requirements for the Contact Us Page
-    
+
     The Contact Us content model contains the following main sections:
-    
+
     -   The “Primary Contact Details” Group Field
     -   The “Other Locations” section for address of the organization
     -   The “Section with HTML Code” Global Field
     -   The “Contact Us form” in case the user has any message/feedback.
-    
+
     Here’s how our “Contact Us” page will look like on your website
-    
+
     ![Analyzing_Requirements_for_the_Contact_Us_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt091a26919c107c2e/65360bc559c1b948d3ddfdf8/Analyzing_Requirements_for_the_Contact_Us_Page.png)
 2.  ## Identifying Content Model
-    
+
     Let's identify the fields that build up your Contact Us Page content type that you see in the above step.
-    
+
     ![Identifying_Content_Model_for_the_Contact_Us_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt571cd3f64f53d863/65360bc53775885f0f648b08/Identifying_Content_Model_for_the_Contact_Us_Page.png)
 3.  ## Developing Content Type
-    
+
     The “Contact Us Page” content model contains the following set of fields. Let’s look in detail at what content types and fields were used to create the model.
-    
+
     **Contact Us Page** Content Type:
-    
+
     -   **Title**: The [Title](/docs/headless-cms/title) field is where you will provide your webpage a unique name. It should be clear and concise, and accurately reflect the contents of the webpage. The title field is a required field.
     -   **Primary Contact Details**: This is the first section on your webpage which contains the contact details of the owner/administrator of the webpage. It is a [Reference](/docs/headless-cms/reference) field that refers to the **Contact** content type as explained in the section below.
     -   **Page Components**: This content type hosts different sections that you see in your webpage. The field is a [Modular Block](/docs/headless-cms/modular-blocks/) that contains three other Modular Blocks. Let’s take a closer look at each one.
@@ -70,16 +71,16 @@ Let’s understand how this model will assist you create your company’s “Con
         -   **Meta Description**: This is a [Multi Line Textbox](/docs/headless-cms/multi-line-textbox/) field that allows you to add the meta description of your webpage.
         -   **Meta Keywords**: This is a [Single Line Textbox](/docs/headless-cms/single-line-textbox/) field that allows you to add the meta keywords of your webpage.
         -   **Enable Search Indexing**: This is a [Boolean](/docs/headless-cms/boolean/) field that allows you to enable or disable search indexing for your webpage.
-    
+
     **Contact** Content Type:
-    
+
     The **Contact** content type holds the contact information for the user. It is referenced in the **Contact Us** content Type as **Primary Contact Details.** Let us take a closer look at what fields are used in this content type:
-    
+
     -   **Title**: This is a [Title](/docs/headless-cms/title) field where you will provide a unique name for your contact entry. It is a mandatory field and must be clear and concise.
     -   **Address**: This is a [Multi Line Textbox](/docs/headless-cms/multi-line-textbox) field where you will provide the full address of the company.
     -   **Contact Number**: This is a [Number](/docs/headless-cms/number) field where you can store the contact numbers of the organization. You can enter multiple contact numbers here.
     -   **Email Address**: This is a [Single Line Textbox](/docs/headless-cms/single-line-textbox/) field where you enter the company’s email Id.
-    
+
 
 This completes the creation of the “Contact Us Page" content model.
 

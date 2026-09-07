@@ -2,6 +2,7 @@
 title: "Limitations of Branches"
 description: "Understand the limitations associated with branches in Contentstack. This document provides insights into the constraints and considerations when working with branches."
 url: /headless-cms/limitations-of-branches
+uid: blt6cb4d4734572b692
 ---
 
 # Limitations of Branches

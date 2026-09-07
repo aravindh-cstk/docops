@@ -2,6 +2,7 @@
 title: "Transfer Stack Ownership to Other User"
 description: "steps to transfer Stack Ownership to other user"
 url: /headless-cms/transfer-stack-ownership-to-other-user
+uid: bltbafd52d8cebb325f
 ---
 
 # Transfer Stack Ownership to Other User

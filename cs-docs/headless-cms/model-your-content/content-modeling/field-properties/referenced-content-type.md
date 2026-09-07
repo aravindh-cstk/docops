@@ -2,6 +2,7 @@
 title: "Referenced Content Type"
 description: "Learn how to configure referenced content types in Contentstack to control which entries users can select in a reference field."
 url: /headless-cms/referenced-content-type
+uid: blt3d83cb06b1551df5
 ---
 
 # Referenced Content Type

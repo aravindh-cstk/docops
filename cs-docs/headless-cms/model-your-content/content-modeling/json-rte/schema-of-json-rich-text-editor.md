@@ -2,6 +2,7 @@
 title: "Schema of JSON Rich Text Editor"
 description: "Understand the schema structure of Contentstack’s JSON Rich Text Editor, including block, span, node types, formatting, and extensibility."
 url: /headless-cms/schema-of-json-rich-text-editor
+uid: bltfac628c8332cf743
 ---
 
 # Schema of JSON Rich Text Editor

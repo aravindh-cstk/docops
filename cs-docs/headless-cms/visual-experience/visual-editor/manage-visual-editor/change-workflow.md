@@ -2,6 +2,7 @@
 title: "Change Workflow"
 description: "Learn to change workflow stages in Visual Editor for seamless task coordination, progress tracking, and page editing in Contentstack."
 url: /headless-cms/change-workflow
+uid: bltc2ac1815a0bd9e7d
 ---
 
 # Change Workflow
@@ -23,16 +24,16 @@ To change the workflow of a web page using Visual Editor, log in to your [Conten
     4.  Assign the stage using one or both of the following dropdowns:
         -   **User(s):** Assigns the stage to selected individual users.
         -   **Role(s):** Assigns the stage to all users associated with the selected roles.
-            
+
             **Tip:** The assigned workflow appears in the user’s [**Tasks**](/docs/headless-cms/about-workflow-tasks) section.
-            
+
     5.  Check **Notify via email** to send email notifications to the assignees.
     6.  Optionally, provide any additional information or instructions in the **Add comment** field.
     7.  Click **Update Workflow** to apply your changes.
 
 ![Change_Workflow.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8a4045782bdd2156/6992e8d390d761000803df0f/Change_Workflow.gif)
 
-  
+
 The selected entries are updated with the new workflow.
 
 **Note:**

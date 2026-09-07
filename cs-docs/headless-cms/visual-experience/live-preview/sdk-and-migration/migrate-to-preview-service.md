@@ -2,6 +2,7 @@
 title: "Migrate to Preview Service"
 description: "Migrate to the Preview Service for faster Live Preview, improved performance, and seamless content updates with reduced load times, also enabling Timeline and Visual Builder."
 url: /headless-cms/migrate-to-preview-service
+uid: bltd08ec6aa86984cb8
 ---
 
 # Migrate to Preview Service
@@ -25,25 +26,25 @@ Follow the steps below to migrate from the CMA to the Preview Service.
 If your application uses a **Contentstack Delivery SDK**, migration is simple. You only need to update the **API Base URL** and **authentication token** to start fetching content from the Preview Service.
 
 1.  #### Update API Base URL
-    
+
     Modify your project configuration to change the API Base URL:
-    
+
     **From:**
-    
+
     ```
     api.contentstack.io
     ```
-    
+
     **To:**
-    
+
     ```
     rest-preview.contentstack.com
     ```
-    
+
     This ensures your application fetches preview content from the Preview Service instead of the CMA.
-    
+
     Your final code will look like this:
-    
+
     ```
     contentstack.stack({
         ...,
@@ -54,44 +55,44 @@ If your application uses a **Contentstack Delivery SDK**, migration is simple. Y
         }
     })
     ```
-    
+
     **Note:** For region-specific base URLs, refer to the [Preview API](/docs/headless-cms/preview-api) documentation.
-    
+
 2.  #### Update API Token
-    
+
     Replace the **authen****tication token** with the **preview token** in your API configuration to authenticate requests correctly.
-    
+
 
 ### For Developers not using Contentstack Delivery SDK
 
 If your application makes direct API calls without a **Contentstack Delivery SDK**, update the **API Base URLs** and **Headers** to complete the migration.
 
 1.  #### Update API Base URL
-    
+
     Modify your code to update the API Base URL:
-    
+
     **From:**
-    
+
     ```
     api.contentstack.io
     ```
-    
+
     **To:**
-    
+
     ```
     rest-preview.contentstack.com
     ```
-    
+
     This ensures your application fetches preview content from the Preview Service instead of the CMA.
-    
+
     **Note:** For region-specific base URLs, refer to the [Preview API](/docs/headless-cms/preview-api) documentation.
-    
+
 2.  #### Modify API Request Headers
-    
+
     Your application receives a **Live Preview hash**, which you must include in the request headers along with the **preview token** to fetch the latest unpublished content.
-    
+
     **Example:**
-    
+
     ```
     const CONTENTSTACK_CDN_URL = "cdn.contentstack.io";
     const PREVIEW_HOST_NAME = "rest-preview.contentstack.com";
@@ -121,11 +122,11 @@ If your application makes direct API calls without a **Contentstack Delivery SDK
         return res.json();
     };
     ```
-    
+
     **Note:** This example uses the REST Preview Service. To use the GraphQL Preview service, refer to:
-    
+
     -   [Set Up Live Preview with GraphQL for SSR](/docs/headless-cms/set-up-live-preview-with-graphql-for-server-side-rendering/)
     -   [Set Up Live Preview with GraphQL for CSR](/docs/headless-cms/set-up-live-preview-with-graphql-for-client-side-rendering/)
-    
+
 
 **Additional Resource:** For more information on Live Preview, refer to [About Live Preview](https://www.contentstack.com/docs/headless-cms/about-live-preview/) to understand its benefits and functionality, or follow [Set up Live Preview for your Website](https://www.contentstack.com/docs/headless-cms/set-up-live-preview-for-your-website/) for a step-by-step configuration guide.

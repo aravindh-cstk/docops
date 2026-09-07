@@ -2,6 +2,7 @@
 title: "AWS Bedrock"
 description: "Use this connector to generate content using the different Foundation model."
 url: /agent-os/aws-bedrock
+uid: bltb226d6a1fd065ac8
 ---
 
 # AWS Bedrock
@@ -30,30 +31,30 @@ Perform the following steps to set up the AWS Bedrock action connector:
     ![Add_Account_New.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltac3bba6ef7427cfa/659d218c43e8cb8b4ea4a67d/Add_Account_New.png)
 6.  In the **Authorize** modal, provide details such as **Title**, **Access Key**, **Secret Key**, and **Region**. You can generate the **Access** and **Secret Key** by navigating through **Security credentials** \> **Access Keys** \> **Create New Access Key** in your AWS account.  
     ![Access_key.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt615160445db1484a/650c47aa8a15ce787cd999d1/Access_key.png)
-    
+
     **Additional Resource:** For more information, refer to the [Managing access keys for IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html) document.
-    
+
 7.  Once done, click **Authorize**.  
     ![Authorize_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2142f6f3a7bdd670/6504320e9bf261a2a16bd65b/Authorize_Button.png)
 8.  Select the **Foundation Model** from the dropdown list to generate content for the prompt. The **Foundation Model(s)** are large Machine Learning models comprising vast amounts of data that enable them to perform multiple tasks across multiple domains.
-    
+
     **Note:** Stable Diffusion model is not supported at this time.
-    
+
 9.  Provide the **Prompt Text** to generate the prompt response(s).  
     ![AWS_Bedrock.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8a1df2b01dbd570c/671a4280221dabe070c17f1d/AWS_Bedrock.png)
 10.  \[optional\] Click the **Show optional fields** toggle button to view the **Number of Tokens**, **Randomness of Responses**, and **Top P** fields.
 11.  Enter the **Number of Tokens** to generate the content. This must be within the range of 1 to 4096.
-     
+
      **Note:** Prompt text is split into multiple tokens so the language model can process and deliver more accurate responses.
-     
+
 12.  Enter a value for the **Randomness of Responses** of the generated content. 0 being the most precise and 2 being the most random content predictions. This must be within the range of 0 to 2.
-     
+
      **Note:** If you set the randomness to 0, you will get deterministic responses for your prompt, whereas if the randomness is 1 or more, the responses become more random. You will get a different response each time.
-     
+
 13.  Enter the value for the **Top P (Nucleus sampling)** field. With **Top P**, you can enter the probability to predict the next set of words expected for your response. This must be within the range of 0 to 1.  
-       
+
      If the Top P is 0.4, the foundation model will consider only the following 40 most likely words expected for the response. If the Top P is 0.9, it will find 90 most likely anticipated words expected for the response.  
-     
+
 14.  You can mark the **Sanitize text** checkbox to remove special characters or spaces from the chat response. By enabling this checkbox, any special characters or spaces in the chat response will be eliminated, resulting in a clean and compatible text.  
      ![Sanitize_text.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltec147552331a3943/656c3f2f4c0b9a3724d564b2/Sanitize_text.png)
 15.  Click the **Proceed** button.

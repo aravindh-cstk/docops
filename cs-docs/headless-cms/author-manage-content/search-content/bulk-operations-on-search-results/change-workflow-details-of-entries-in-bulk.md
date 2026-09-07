@@ -2,6 +2,7 @@
 title: "Change Workflow Details of Entries in Bulk"
 description: "Update workflow stages in bulk for multiple entries in Contentstack using search, filters, and views."
 url: /headless-cms/change-workflow-details-of-entries-in-bulk
+uid: blt7949105a0f343140
 ---
 
 # Change Workflow Details of Entries in Bulk
@@ -17,9 +18,9 @@ To change the workflow details of multiple entries from your search results, log
     1.  Under **Workflow Stage**, select the stage that you want to set for this entry.
     2.  Set a due date for this new stage by using the **Date Picker** tool.
     3.  You can assign this stage to multiple users by selecting a user from the **Assign to User(s)** dropdown.
-        
+
         **Tip:** When you assign an entry stage to a user, it is added as a new task in the assignee’s **Tasks** section. Learn more about [Tasks](/docs/headless-cms/about-workflow-tasks).
-        
+
     4.  You can also assign the stage to multiple roles by selecting a role from the **Assign to Role(s)** dropdown.
     5.  Send a notification email to the assignee by selecting the **Notify via email** checkbox.
     6.  Use the **Add Comment** field to provide any additional information or instructions.![Change Workflow Details of Entries in Bulk_2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt634fb2da15c1d976/67d9670407d0f90bcf5d2540/2._Bulk_Workflow_Change-Edit_Workflow_Modal.png)

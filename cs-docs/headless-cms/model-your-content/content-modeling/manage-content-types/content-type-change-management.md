@@ -2,6 +2,7 @@
 title: "Content Type Change Management"
 description: "Learn guidelines to safely manage content type schema changes in Contentstack, ensuring no data loss or live site issues."
 url: /headless-cms/content-type-change-management
+uid: blta0355ce6160fcd6b
 ---
 
 # Content Type Change Management

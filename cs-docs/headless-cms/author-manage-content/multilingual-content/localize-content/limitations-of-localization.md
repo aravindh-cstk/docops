@@ -2,6 +2,7 @@
 title: "Limitations of Localization"
 description: "certain limitations of Localization"
 url: /headless-cms/limitations-of-localization
+uid: blt9fd71a06d7389cb3
 ---
 
 # Limitations of Localization

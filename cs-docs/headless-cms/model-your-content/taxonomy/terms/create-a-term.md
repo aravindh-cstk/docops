@@ -2,6 +2,7 @@
 title: "Create a Term"
 description: "Learn creating taxonomy terms in Contentstack with our comprehensive guide."
 url: /headless-cms/create-a-term
+uid: bltdd38607bfe9ff215
 ---
 
 # Create a Term
@@ -16,14 +17,14 @@ To create a term, log in to your [Contentstack account](https://www.contentstack
 2.  Create a new taxonomy or select an existing taxonomy in which you want to create terms.
 3.  Click the **Add Term** button.
 4.  Enter the **Name** for the term. Contentstack auto-generates a **Unique ID**, which you can edit before saving.
-    
+
     **Note:** Once saved, you cannot change the UID.
-    
+
 5.  Click the **Save** button to save the term within your taxonomy.
 6.  To add another term at the parent level, click **Add Term** and enter the details for the new term. You can also create a sibling term by clicking the vertical ellipsis next to an existing term and selecting **Create Sibling**.
-    
+
 7.  To create a nested term within a parent term, click the vertical ellipsis next to that term and select **Create Child**, then enter the details for the child term.
-    
+
 
 ![Create_a_Term.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt651a24774939cfc6/69163204243cc955816fc6b0/Create_a_Term.gif)
 
