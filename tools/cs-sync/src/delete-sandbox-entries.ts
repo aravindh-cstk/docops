@@ -7,6 +7,18 @@
  * Read this file's UIDS list before running — it is meant to be edited per
  * use, not a general-purpose deletion tool. Sandbox only, never Prod.
  *
+ * ALWAYS UNPUBLISH BEFORE YOU DELETE, in every environment, and confirm the
+ * page 404s first. Deleting an entry does not unpublish it: Contentstack keeps
+ * serving the published copy out of its delivery layer, so the page stays in
+ * the left nav on every docs page while its own url 404s. Once the entry is
+ * gone there is nothing left in the CMS to edit, and only the team that owns
+ * the site build can clear it.
+ *
+ * That is not hypothetical. A test entry hard-deleted from Prod on 2026-08-14
+ * was still being served in the Assets nav on 2026-09-08, which QA reported as
+ * ~30 broken links (one dead nav item, counted once per page that embeds the
+ * nav). See internal-docs/test-sheets/README.md for the removal order.
+ *
  * Usage: npx tsx src/delete-sandbox-entries.ts
  */
 import path from "node:path";
