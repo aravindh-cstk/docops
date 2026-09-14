@@ -41,7 +41,7 @@ Let's follow this step-by-step guide to install and configure the Digizuite app 
 
     To install the app in Contentstack, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow the steps below:
 
-    1.  Navigate to the “App Switcher” icon in the top-right corner and click **Marketplace**.![Contentstack-App-Switcher-Marketplace](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt47c618781b542b64/68ee96ad6bfd93c9913fee8a/Contentstack-App-Switcher-Marketplace.png)
+    1.  Navigate to the ���App Switcher” icon in the top-right corner and click **Marketplace**.![Contentstack-App-Switcher-Marketplace](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt47c618781b542b64/68ee96ad6bfd93c9913fee8a/Contentstack-App-Switcher-Marketplace.png)
     2.  Within the Marketplace, you can see all the available apps. Hover over the **Digizuite** app and click **Install**.
     3.  In the pop-up window, select the stack where you want to install the Digizuite app, accept the **Terms of Service**, and click the **Install** button.![2-Digizuite-App-Install](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2c523cd6bea7138a/6667f75176fac4d1c9c0fd1a/2-Digizuite-App-Install.png)
     4.  On the **Configuration** screen, enter the following:

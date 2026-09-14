@@ -2,6 +2,7 @@
 title: "Understanding Contentstack"
 description: "Discover Contentstack: a headless CMS offering flexible, scalable, and tailored content delivery for enterprises across multiple platforms."
 url: /headless-cms/understanding-contentstack
+uid: blt7eca57c3f9198c01
 ---
 
 # Understanding Contentstack

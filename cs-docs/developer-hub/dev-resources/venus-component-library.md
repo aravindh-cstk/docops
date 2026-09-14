@@ -2,6 +2,7 @@
 title: "Venus Component Library"
 description: "Discover how to use the Contentstack Venus Component Library to build dynamic UI Extensions with React. Perfect for modernizing your app development."
 url: /headless-cms/venus-component-library
+uid: blt94ad6c25a6388378
 ---
 
 # Venus Component Library
@@ -20,7 +21,7 @@ Let’s check out a sample code that will help you integrate the React component
 
 ### Integrating Venus Components With Extension
 
-Venus components can be used in [creating a React app](https://reactjs.org/docs/getting-started.html) or any React app build that uses webpack or any other bundler.
+Venus components can be used in [creating a React app](https://react.dev/learn) or any React app build that uses webpack or any other bundler.
 
 Follow the instructions given below to integrate the components with existing UI extensions built using React.
 

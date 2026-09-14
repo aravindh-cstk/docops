@@ -2,6 +2,7 @@
 title: "Set Up your Account"
 description: "Learn how to set up your organization, data center location, migration or import of content, account security, and other attributes while creating a new Contentstack account."
 url: /headless-cms/set-up-your-account
+uid: blta5cb3799fb6b8ffe
 ---
 
 # Set Up your Account
@@ -40,7 +41,7 @@ Learn more about [Export Guides for CMSs](/docs/headless-cms/set-up-content-migr
 
 Contact our [support](mailto:support@contentstack.com) if you need assistance with any technical aspects of setting up your Contentstack account or if you simply have questions about your account.
 
-Learn more about the resources for your [support](/docs/faqs/#support-faqs).
+Learn more about the resources for your [support](/docs/headless-cms/faqs).
 
 ## Join the Community
 
@@ -53,4 +54,4 @@ Be a part of the Contentstack community and enjoy the following benefits:
 -   Obtain valuable tips and guidance from experts
 -   Learn how to troubleshoot common issues
 
-Learn more about the [Contentstack Community](https://community.contentstack.com/).
+Learn more about the [Contentstack Community](https://www.contentstack.com/community).

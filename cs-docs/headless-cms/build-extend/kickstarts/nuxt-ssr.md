@@ -2,6 +2,7 @@
 title: "Kickstart Nuxt (SSR)"
 description: "Build a Nuxt SSR app with Contentstack. Use this starter to master the Contentstack Delivery SDK, enable Live Preview, and integrate the Visual Editor."
 url: /headless-cms/nuxt-ssr
+uid: bltee67801230f267a7
 ---
 
 # Kickstart Nuxt (SSR)
@@ -90,42 +91,42 @@ This approach works well for terminal-first workflows or when you do not use the
 **Note:** If you already created a stack from this seed, or from another compatible Kickstart project, you can reuse that stack and skip creating another one.
 
 1.  Install the Contentstack globally:
-    
+
     ```
     npm install -g @contentstack/cli
     ```
-    
+
 2.  If you are configuring the CLI for the first time, set your region:
-    
+
     ```
     csdx config:set:region EU
     ```
-    
+
     **Note:** Free developer stacks typically use the **EU** region. Refer to the [About Regions](/docs/administration/about-regions) document to know more about Contentstack regions.
-    
+
 3.  Sign in, and provide your [Contentstack account](https://www.contentstack.com/login/) details when prompted:
-    
+
     ```
     csdx auth:login
     ```
-    
+
 4.  Perform the following steps to get your Organization UID:
-    
+
     1.  Go to Contentstack CMS and Select **Administration** from the “App Switcher”.
     2.  Copy the **Organization UID** to use with the seed command.
 5.  Create a stack and seed it from the repository. Replace <ORG\_ID> with your organization UID:
-    
+
     ```
     csdx cm:stacks:seed --repo "contentstack/kickstart-stack-seed" --org "<ORG_ID>" -n "Kickstart Stack"
     ```
-    
+
 
 Once your stack contains compatible sample content, clone the app and install dependencies.
 
 **Additional Resources:**
 
 -   You can run an interactive bootstrap flow with csdx cm:bootstrap.
--   Watch the [Seed a stack in the CLI](https://youtu.be/2dQheUo7uH4) video for a walkthrough of the stack seeding process.
+-   Watch the [Seed a stack in the CLI](https://www.youtube.com/watch?v=2dQheUo7uH4&feature=youtu.be) video for a walkthrough of the stack seeding process.
 
 ## Get Delivery and Preview Tokens
 
@@ -146,7 +147,7 @@ After you have a stack and a local clone, follow the instructions to connect the
 
 1.  Copy .env.example to .env in the repository root.
 2.  Set the required values:
-    
+
     ```
     NUXT_CONTENTSTACK_API_KEY=<STACK_API_KEY>
     NUXT_CONTENTSTACK_DELIVERY_TOKEN=<DELIVERY_TOKEN>
@@ -155,7 +156,7 @@ After you have a stack and a local clone, follow the instructions to connect the
     NUXT_CONTENTSTACK_REGION=EU
     NUXT_CONTENTSTACK_PREVIEW=true
     ```
-    
+
 
 ### How the configuration works
 
@@ -163,9 +164,9 @@ The app reads these variables through runtimeConfig.public in [nuxt.config.ts](h
 
 -   NUXT\_CONTENTSTACK\_PREVIEW=true enables preview-aware behavior.
 -   The app uses region-aware endpoints.
-    
+
     **Additional Resource:** Refer to the [Get Contentstack Endpoints](/docs/developers/sdks/utils-sdk/javascript/get-contentstack-endpoints) document for more information.
-    
+
 -   The app passes Nuxt route query parameters to $stack.livePreviewQuery(...) when live\_preview is present.
 
 ### Optional configuration overrides
@@ -330,4 +331,4 @@ After you understand the implementation, use the next section to avoid common se
 -   Define a test strategy for composables and rendering behavior.
 -   Review Nuxt deployment options for SSR and static output.
 
-For support and questions, join the [Contentstack Community on Discord](https://community.contentstack.com/).
+For support and questions, join the [Contentstack Community on Discord](https://www.contentstack.com/community).

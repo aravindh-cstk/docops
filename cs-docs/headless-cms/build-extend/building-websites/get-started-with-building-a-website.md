@@ -2,6 +2,7 @@
 title: "Get Started With Building a Website"
 description: "Learn to build a website by integrating Contentstack and React. This beginner-friendly guide includes step-by-step instructions, prerequisites, and examples for a seamless setup and deployment."
 url: /headless-cms/get-started-with-building-a-website
+uid: blt1dc3d91482197073
 ---
 
 # Get Started With Building a Website
@@ -17,7 +18,7 @@ It is designed for users with no prior experience in Contentstack or React integ
 -   [Contentstack Account](https://www.contentstack.com/login) (with Admin access to your Org)
 -   [Node.js version 18 or later](https://nodejs.org/en/download/)
 -   [Git](https://github.com/git-guides/install-git)
--   [GitHub account](https://github.com/) ([Git](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git) configured in Local)
+-   [GitHub account](https://github.com/) ([Git](https://docs.github.com/en/get-started/git-basics/set-up-git) configured in Local)
 -   [VS code](https://code.visualstudio.com/) (preferred) or any code editor
 
 ## Steps To Be Followed
@@ -90,7 +91,7 @@ First, perform the steps in the [create an environment](/docs/headless-cms/add-a
 
 Here's how the modal will look like:
 
-  
+
 ![06. Create the development environment.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8b4864566b501276/66a3469a1b1b45043aeec476/6._Create_the_development_environment.png)
 
 Next, perform the steps in the [generate a Delivery Token](/docs/headless-cms/create-a-delivery-token) guide. In the **Create New Delivery Token** page, enter/select the following values for these fields:
@@ -117,22 +118,22 @@ To create an entry, perform the following steps:
 3.  Within the Entry Editor page, enter/select the following content against the respective fields:
     -   **Title**: Enter “Header.”
     -   **Logo** : To upload the logo, perform the following set of actions:
-        
+
         1.  Click on **Upload a new file**.![09. Click on Upload a new file under Logo.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3c1f92a66c4bca7e/66a346999625015f21b51fba/9._Click_on_Upload_a_new_file_under_Logo.png)
         2.  Click on **Choose files** and select the desired asset file (in our case, select the Assets/Header/Header Logo.png), then click on **Open**.![10. Select the Header Logo file.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1488e33669bd5387/66a3469a7749f51f323b2236/10._Select_the_Header_Logo_file.png)
-        
+
         This uploads and successfully adds the asset uploaded into your entry.
-        
+
         **Note:** This guide uses relative paths to reference asset files within the downloaded asset folder. To ensure proper functionality, you'll need to add these same files as assets within the corresponding entries.
-        
+
     -   **Navigation Links**: You will need to add multiple instances for this field with the values mentioned below.
-        
+
         **Note:** If an entry field is designated as “Multiple,” you will see the Add “+” icon located beside the existing instance.
-        
+
         ![11.  Click on Add “+” icon beside the existing instance of the Link field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc84eecd6d1bd4e12/66a346a81cbda83427869066/11._Click_on_Add_“_”_icon_beside_the_existing_instance_of_the_Link_field.png)
-        
+
         Here are the instances you need to add:
-        
+
         -   Instance 1: (**Title**: Home, **URL**: /)
         -   Instance 2: (**Title**: Menu, **URL**: /menu)
         -   Instance 3: (**Title**: About us, **URL**: /about-us)
@@ -140,9 +141,9 @@ To create an entry, perform the following steps:
 4.  After successfully entering the details of the entry, click on **Publish**.
 5.  Select the **development** environment and click on **Send**.![12. Select development and click on Send.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0623248d39d3ed20/66a346a84e822dcc820e4c62/12._Select_development_and_click_on_Send.png)
 6.  You need to publish this entry along with its references, i.e., the Asset file. So, click on **Send With References.**![13. Click on Send with References to publish all referenced entries.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt762b4cec4ffa948a/66a346a94252d519acebb14e/13._Click_on_Send_with_References_to_publish_all_referenced_entries.png)
-    
+
     **Note:** By clicking on **Send with References**, you can publish all referenced entries along with their parent entry, all at once. For more information, you can read our guides on [publishing referenced entries](/docs/headless-cms/publish-an-entry#publish-referenced-entries) and [publishing nested references](/docs/headless-cms/publish-an-entry#publish-entries-with-nested-references).
-    
+
 
 #### Create Entries for the “Footer” Content Type
 
@@ -158,13 +159,13 @@ Within the Entry Editor page, enter/select the following content against the res
 -   **Navigation Links**: You will need to add the values mentioned below.
     -   **Title**: Enter “Links”
     -   **Link**: Add multiple instances for this field with the values mentioned below.
-        
+
         **Note:** If an entry field is designated as “Multiple,” you will see the Add “+” icon located beside the existing instance.
-        
+
         ![15.  Click on Add “+” icon beside the existing instance of the Link field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0e98234a92557f68/66a346a9e91a176c00159e2f/15._Click_on_Add_“_”_icon_beside_the_existing_instance_of_the_Link_field.png)
-        
+
         Here are the instances you need to add:
-        
+
         -   Instance 1: (**Title**: Home, **URL**: /)
         -   Instance 2: (**Title**: Menu, **URL**: /menu)
         -   Instance 3: (**Title**: About us, **URL**: /about-us)
@@ -221,23 +222,23 @@ To fork the GitHub repository of the starter app into your account, perform the 
 1.  Login to [Github](https://github.com/), and visit the [GitHub repository](https://github.com/contentstack/contentstack-getting-started-react-app) of the starter React app.
 2.  Click on the **Fork** button (highlighted in the below screenshot).![19. Click on the Fork button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt7ff0745dbf4801e1/66a34ce0cc9175c19d2ee335/19._Click_on_the_Fork_button.png)
 3.  Ensure to uncheck the **Copy the main branch only** checkbox and click on **Create fork**.![20. Uncheck Copy the main branch only checkbox and click on Create fork.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8d0eb6d956bf4287/66a34ce04e822d227e0e4c9a/20._Uncheck_Copy_the_main_branch_only_checkbox_and_click_on_Create_fork.png)
-    
+
     The repository is now forked, and you should see it in your personal GitHub account.
-    
+
 4.  Now, open **VS code** and click on **Open Folder** select **Open** from the **File** menu, or simply press. You can also use shortcut key _command_ + _O_ (Mac OS) or _ctrl_ + _O_ (Windows).
 5.  In the “Open” dialog box, choose the directory (in our case, contentstack-react) to clone the repository. And click on **Open**.
-    
+
     **Note:** The directory name can be anything of your choice.
-    
+
     ![21. Open the directory.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt87bebbe3f4a75bea/66a346b91b1b452c97eec480/21._Open_the_directory.png)
 6.  Open a new terminal (Press _control_ + _shift_ + _\`_ or click on **Terminal** > **New Terminal**) and run the below command to clone your forked repository:
-    
+
     ```
     git clone https://github.com/your-username/your-repo-name.git
     ```
-    
+
     **Note:** Make sure to replace placeholders such as your-username and your-repo-name in the above code snippets with your actual values.
-    
+
 
 Now you should be able to see the repository code in the directory as follows:
 
@@ -248,22 +249,22 @@ Now you should be able to see the repository code in the directory as follows:
 Next we need to install the dependencies for your repository. To do so, perform the following steps:
 
 1.  Navigate to the root directory of the cloned repository. You can do this using the command:
-    
+
     ```
     cd contentstack-getting-started-react-app/
     ```
-    
+
 2.  Run the following command to install dependencies using npm:
-    
+
     ```
     npm install
     ```
-    
+
     **Note:** The command result may differ for different versions.  
-    
+
     -   You might get npm ERR! in this step, if you haven’t installed Node.js version 18 or later.
     -   In case of access related error, try running with the command sudo npm install.
-    
+
 
 ### Configure Contentstack
 
@@ -301,22 +302,22 @@ To deploy your app using Launch, you need to first [create a project in Launch a
 To do so, perform the following set of steps:
 
 1.  Go to [Launch](https://app.contentstack.com/#!/launch) and click on **\+ New Project** and select **Import from a Git Repository**.
-    
+
     **Note:** Connecting your Git repository with Launch provides various benefits like easy tracking and auto deployment.
-    
+
 2.  Click on **Connect Account** and enter login credentials of your GitHub account.
 3.  Select **Only select repositories** and then on **Save**.
 4.  In the **Install & Authorize** Contentstack Launch modal, select the contentstack-getting-started-react-app repository from the dropdown menu and then on **Install & Authorize.**![23. Install & Authorize Contentstack Launch.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltce2a9fa802ac0fb5/66a346bacc917516762ee2df/23._Install_&_Authorize_Contentstack_Launch.png)
 5.  You will be redirected to Contentstack Launch with the **Create New Project** pop up open. Enter the following details:
-    
+
     -   **Repository**: Select the **contentstack-getting-started-react-app** repository from dropdown menu
     -   **Git Branch**: Select **main**
     -   **Project Name**: Enter “contentstack-getting-started-react-app”
     -   **Environment name:** Enter “development”
     -   **Build and Output Settings:** Details in this section will be auto generated. It can be the same as seen below.
-    
+
     This is how your details will look like:
-    
+
     ![24. Create New Project Modal Details.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0afff9cd99efa5ed/66a346ba4d4229faa58f0884/24._Create_New_Project_Modal_Details.png)
 6.  Now, to run our application we need the following four environment variables that you need to add to your .env file:
     -   REACT\_APP\_CONTENTSTACK\_API\_KEY=STACK\_API\_KEY
@@ -326,17 +327,17 @@ To do so, perform the following set of steps:
 7.  Scroll a little bit down and under the **Environment Variables** section, Click on **\+ Add Environment Variable** and add these variables with their values one by one. Or, you can go to the **Bulk Edit** tab and copy paste the content of the .env file and proceed.
 8.  After adding these variables your screen should look like below. Now, click on **Deploy**.  
     ![25. Create New Project Modal - Environment Details.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt240c498987b595d2/66a346ba7749f50cca3b223b/25._Create_New_Project_Modal_-_Environment_Details.png)
-    
+
     **Note:** We need to add the four environment variables highlighted in the above image during the project creation manually.
-    
+
     Once done, you will be redirected to the **Deployment Information** page as follows:  
-    
+
     ![26. Deployment Information page of Project.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt77745af2dc4fb788/66a346bae91a172470159e3a/26._Deployment_Information_page_of_Project.png)
-    
-      
-    
+
+
+
     Once the deployment is complete, you will be able to see the snapshot of the application as follows:
-    
+
     ![27. Snapshot of the application post deployment.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb802221e41cb9e73/66a346ba0570203ef6cad7f6/27._Snapshot_of_the_application_post_deployment.png)
 9.  Click on the URL displayed on the page. You will be redirected to the application deployed using Launch.![28. Redirected to application deployed using Launch.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb3d5ec1b15a09798/66a346bc9625011f7fb51fbf/28._Redirected_to_application_deployed_using_Launch.png)
 

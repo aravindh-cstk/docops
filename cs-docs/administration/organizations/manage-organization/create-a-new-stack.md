@@ -2,6 +2,7 @@
 title: "Create a New Stack"
 description: "Discover how to efficiently create and manage stacks in Contentstack. Learn step-by-step processes, key roles, and API integrations for seamless collaboration."
 url: /headless-cms/create-a-new-stack
+uid: blta1b64cf65d0f54b2
 ---
 
 # Create a New Stack
@@ -20,9 +21,9 @@ A stack is a centralized repository that stores and manages all [entries](/docs/
 ## What You Will Learn
 
 -   How to create a new stack in an organization.
-    
+
 -   How to set a stack's name, description, master language, and color.
-    
+
 
 ## Create a Stack
 
@@ -35,15 +36,15 @@ To create a stack, log in to your [Contentstack account](https://www.contentstac
     2.  **Description** (optional): Provide a relevant description for the stack.
     3.  **Set Master Language** (required): Select the primary language for your stack.
     4.  **Stack Color** (optional): Choose a predefined color to visually identify your stack across the interface. If you do not select a color, a default color is applied.
-        
+
 4.  Click **Create**.
-    
+
     ![Create New Stack modal with stack color options](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt99d734a3c71bc706/69a400fbcc5c6954da941e60/Stack_Color.gif)
-    
+
 
 After creating the stack, you are automatically redirected to it. You can now [create content types](/docs/headless-cms/create-a-content-type) and [upload assets](/docs/headless-cms/create-upload-assets).
 
-**Note:** An organization user can create only **one stack per minute**. For more information, visit our [Service Description](https://www.contentstack.com/legal/fair-use-policy/) document.
+**Note:** An organization user can create only **one stack per minute**. For more information, visit our [Service Description](https://www.contentstack.com/legal/services-description) document.
 
 ## Related Resource
 

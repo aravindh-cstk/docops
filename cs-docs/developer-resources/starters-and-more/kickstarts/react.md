@@ -2,6 +2,7 @@
 title: "React"
 description: "Kickstart your React and Vite single-page app with Contentstack. Integrate the Delivery SDK, Live Preview, and Visual Editor using the TypeScript starter."
 url: /headless-cms/react
+uid: blt18e6817999b64016
 ---
 
 # React
@@ -101,37 +102,37 @@ This approach works well for terminal-first workflows or when you do not use the
 **Note:** If you already created a stack from this seed, or from another compatible Kickstart project, you can reuse that stack and skip creating another one.
 
 1.  Install the Contentstack CLI globally:
-    
+
     ```
     npm install -g @contentstack/cli
     ```
-    
+
 2.  If you are configuring the CLI for the first time, set your region to match where your stack lives:
     -   Refer to the [Login Endpoints](/docs/administration/login-endpoints) documentation for login URLs and their region codes, or check the browser URL while logged into Contentstack.
     -   Replace <YOUR\_REGION\_CODE> with the region code you identified above:
-        
+
         ```
         csdx config:set:region <YOUR_REGION_CODE>
         ```
-        
+
     -   Run csdx config:get:region to confirm the active region and API hosts. Use the same region code for VITE\_CONTENTSTACK\_REGION in .env.
 3.  Sign in, and provide your Contentstack account details when prompted:
-    
+
     ```
     csdx auth:login
     ```
-    
+
 4.  To get your Organization UID:
     -   Open Contentstack CMS and select **Administration** from the “App Switcher”.
     -   Copy the **Organization UID** to use with the seed command.
 5.  Create a stack and seed it from the repository. Replace <ORG\_ID> with your organization UID:
-    
+
     ```
     csdx cm:stacks:seed --repo "contentstack/kickstart-stack-seed" --org "<ORG_ID>" -n "Kickstart Stack"
     ```
-    
 
-**Additional Resource:** Watch the [Seed a Stack in the CLI](https://youtu.be/2dQheUo7uH4) video for a full walkthrough of seeding a stack using the Contentstack CLI.
+
+**Additional Resource:** Watch the [Seed a Stack in the CLI](https://www.youtube.com/watch?v=2dQheUo7uH4&feature=youtu.be) video for a full walkthrough of seeding a stack using the Contentstack CLI.
 
 ## Clone the Project and Install Dependencies
 
@@ -175,7 +176,7 @@ Connect the app to Contentstack:
 
 1.  Copy .env.example to .env in the repository root.
 2.  Set the required values:
-    
+
     ```
     VITE_CONTENTSTACK_API_KEY=<STACK_API_KEY>
     VITE_CONTENTSTACK_DELIVERY_TOKEN=<DELIVERY_TOKEN>
@@ -184,7 +185,7 @@ Connect the app to Contentstack:
     VITE_CONTENTSTACK_REGION=EU
     VITE_CONTENTSTACK_PREVIEW=true
     ```
-    
+
 
 Keep .env local only. It contains secrets and must not be committed (see Committing .env under the [Common Mistakes to Avoid](/docs/headless-cms/react#common-mistakes-to-avoid) section).
 
@@ -406,14 +407,14 @@ kickstart-react/
 -   **Rendering rich text or block copy without sanitization in production**
     -   **Why it breaks:** src/App.tsx uses dangerouslySetInnerHTML to render rich\_text and copy HTML. Untrusted or unsanitized HTML can introduce XSS in production forks.
     -   **Fix:** Sanitize HTML with [DOMPurify](https://github.com/cure53/DOMPurify/) (already a dependency of the repo) before passing it to dangerouslySetInnerHTML. Import it and wrap the HTML string:
-        
+
         ```
         import DOMPurify from "dompurify";
         dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(page.rich_text) }}
         ```
-        
+
         Apply the same pattern to block.copy in modular blocks.
-        
+
 -   **Renaming content contract without updating code**
     -   **Why it breaks:** The app targets contentType("page") and .where("url", ...). Renaming types or fields without updating code breaks queries and the homepage render.
     -   **Fix:** Update src/lib/contentstack.ts, src/lib/types.ts, and rendering in src/App.tsx so they match your content model.
@@ -425,4 +426,4 @@ kickstart-react/
 -   Harden production HTML rendering: sanitize rich\_text and block copy before dangerouslySetInnerHTML (see Rendering rich text or block copy without sanitization in production under the [Common Mistakes to Avoid](/docs/headless-cms/react#common-mistakes-to-avoid) section).
 -   Define a test strategy (e.g, [Vitest](https://vitest.dev/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)) for data fetching and rendering behavior.
 
-For support and questions, join the [Contentstack Community on Discord](https://community.contentstack.com/).
+For support and questions, join the [Contentstack Community on Discord](https://www.contentstack.com/community).

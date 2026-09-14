@@ -2,6 +2,7 @@
 title: "SvelteKit"
 description: "Build a SvelteKit SSR app with Contentstack using the Delivery SDK, Live Preview, and Visual Editor with the official kickstart starter."
 url: /headless-cms/sveltekit
+uid: blt52abe9429486e434
 ---
 
 # SvelteKit
@@ -85,19 +86,19 @@ This approach works well for terminal-first workflows or when you do not use the
 **Note:** If you already created a stack from this seed, or from another compatible Kickstart project, you can reuse that stack and skip creating another one.
 
 1.  Install the Contentstack CLI globally:
-    
+
     ```
     npm install -g @contentstack/cli
     ```
-    
+
 2.  If you are configuring the CLI for the first time, set your region to match where your stack lives:
     1.  Refer to the [Login Endpoints](/docs/administration/login-endpoints) documentation for login URLs and their region codes, or check the browser URL while logged into Contentstack.
     2.  Replace <YOUR\_REGION\_CODE> with the region code you identified above:
-        
+
         ```
         csdx config:set:region <YOUR_REGION_CODE>
         ```
-        
+
     3.  Run csdx config:get:region to confirm the active region and API hosts. Use the same region code for VITE\_CONTENTSTACK\_REGION in .env.
 3.  Sign in, and provide your Contentstack account details when prompted:  
     csdx auth:login
@@ -105,16 +106,16 @@ This approach works well for terminal-first workflows or when you do not use the
     1.  Go to Contentstack and select **Administration** from the “App Switcher”.
     2.  Copy the **Organization UID** to use with the seed command.
 5.  Create a stack and seed it from the repository. Replace <ORG\_ID> with your organization UID:
-    
+
     ```
     csdx cm:stacks:seed --repo "contentstack/kickstart-stack-seed" --org "<ORG_ID>" -n "Kickstart Stack"
     ```
-    
+
 
 **Additional resource:**
 
 -   You can run an interactive bootstrap flow with csdx cm:bootstrap.
--   Watch the [Seed a stack in the CLI](https://youtu.be/2dQheUo7uH4) video for a walkthrough of the stack seeding process.
+-   Watch the [Seed a stack in the CLI](https://www.youtube.com/watch?v=2dQheUo7uH4) video for a walkthrough of the stack seeding process.
 
 Once your stack contains compatible sample content, clone the app and install dependencies.
 
@@ -155,7 +156,7 @@ After you have a stack and a local clone, follow the instructions to connect the
 
 1.  Copy .env.example to .env in the repository root.
 2.  Set the required values:
-    
+
     ```
     VITE_CONTENTSTACK_API_KEY=<STACK_API_KEY>
     VITE_CONTENTSTACK_DELIVERY_TOKEN=<DELIVERY_TOKEN>
@@ -164,7 +165,7 @@ After you have a stack and a local clone, follow the instructions to connect the
     VITE_CONTENTSTACK_REGION=EU
     VITE_CONTENTSTACK_PREVIEW=true
     ```
-    
+
 
 **Note:** Variables prefixed with VITE\_ are exposed to browser code. The API key and delivery token in this kickstart are therefore visible in the client bundle after you build or deploy. Move your secrets to $env/static/private, import them only from server-only modules (for example, +page.server.ts), and pass only safe data to the client.
 
@@ -248,14 +249,14 @@ When the application loads the home route (/), the content is fetched as follows
     -   Reads Live Preview-related query parameters from the request URL (live\_preview, content\_type\_uid, entry\_uid).
     -   Calls getPage("/", { ... }) from src/lib/index.ts with those values typed as LivePreviewQuery.
     -   After the page data resolves, calls initLivePreview() only in the browser so client-side Live Preview can initialize. Import browser from $app/environment and guard the call:
-        
+
         ```
         import { browser } from '$app/environment';
         if (browser) {
           initLivePreview();
         }
         ```
-        
+
 3.  getPage in src/lib/index.ts uses the shared stack client. When the live\_preview query parameter is present, it applies stack.livePreviewQuery(...) before querying entries of the page content type whose url field matches the requested path.
 
 ### Preview Behavior Tiers
@@ -401,4 +402,4 @@ After you understand the implementation, use the next section to avoid common se
 -   Define a test strategy for load functions and rendering behavior.
 -   Read [SvelteKit adapters](https://svelte.dev/docs/kit/adapters/) and Node hosting options for production SSR.
 
-For support and questions, join the [Contentstack Community on Discord](https://community.contentstack.com/).
+For support and questions, join the [Contentstack Community on Discord](https://www.contentstack.com/community).

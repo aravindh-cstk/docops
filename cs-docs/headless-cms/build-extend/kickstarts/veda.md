@@ -2,6 +2,7 @@
 title: "Veda"
 description: "Build a Next.js App Router catalog and marketing site with Contentstack using the Delivery SDK, Live Preview, and Visual Editor with the Kickstart Veda starter."
 url: /headless-cms/veda
+uid: blt2592733086b935ee
 ---
 
 # Veda
@@ -53,9 +54,9 @@ By the end of this guide, you can:
 Select a path that matches your workflow. You can skip stack setup if you already have a stack that satisfies the Kickstart Veda content contract, including:
 
 -   Content types, page, header, category, product, and product\_line
-    
+
     **Note:** UIDs must match what the app queries. Note the underscore in product\_line
-    
+
 -   Published entries for the routes you intend to browse (e.g., a home page whose url field resolves to /, plus seeded category, product line, and product URLs as defined in your stack)
 -   Preview tokens and stack settings for Live Preview, if you plan to use preview mode
 
@@ -98,42 +99,42 @@ This approach works well for terminal-first workflows or when you do not use the
 After updating the Contentstack CLI, run csdx cm:stacks:seed --help to view the latest available flags and options.
 
 1.  Install the Contentstack CLI globally:
-    
+
     ```
     npm install -g @contentstack/cli
     ```
-    
+
 2.  If you are configuring the CLI for the first time, set your region to match where your stack lives:
     1.  Refer to the [**Login Endpoints**](/docs/administration/login-endpoints) documentation for login URLs and their region codes, or check the browser URL while logged into Contentstack.
     2.  Replace <YOUR\_REGION\_CODE> with the region code you identified above:
-        
+
         ```
         csdx config:set:region <YOUR_REGION_CODE>
         ```
-        
+
     3.  Run csdx config:get:region to confirm the active region and API hosts. Use the same region code for NEXT\_PUBLIC\_CONTENTSTACK\_REGION in .env.
 3.  Sign in and provide your Contentstack account details when prompted:
-    
+
     ```
     csdx auth:login
     ```
-    
+
 4.  To get your Organization UID:
     1.  Open Contentstack CMS and select **Administration** from the “App Switcher”.
     2.  Copy the **Organization UID** to use with the seed command.
 5.  Create a stack and seed it from the repository. Replace <ORG\_ID> with your organization UID.
-    
+
     ```
     csdx cm:stacks:seed --repo "contentstack/kickstart-veda-seed" --org "<ORG_ID>" -n "Veda: The Revival Collection"
     ```
-    
+
 
 Use the \-n flag (or \--stack-name) to define the display name for your new stack. Ensure this name is unique across your Organization.
 
 **Additional Resources:**
 
--   [For detailed steps, refer to Import content using the seed command](/docs/headless-cms/import-content-using-the-seed-command/).
--   For a general walkthrough of stack seeding, watch [Seed a stack in the CLI](https://youtu.be/2dQheUo7uH4).
+-   [For detailed steps, refer to Import content using the seed command](/docs/headless-cms/cli-import-content-using-the-seed-command).
+-   For a general walkthrough of stack seeding, watch [Seed a stack in the CLI](https://www.youtube.com/watch?v=2dQheUo7uH4&feature=youtu.be).
 
 ## Clone the Project and Install Dependencies
 
@@ -364,9 +365,9 @@ kickstart-veda/
 -   **Local scripts:** package.json
     -   npm run dev starts the Next.js dev server at http://localhost:3000/ by default
     -   npm run build runs prebuild (update-launch-config), then runs the next build.
-        
+
         **Note:** A prebuild script executes [updateLaunchConfig.mjs](https://github.com/timbenniks/kickstart-veda/blob/main/updateLaunchConfig.mjs). It uses environment-defined stack credentials to fetch url fields from page, product, category, and product\_line entries. This data is written to launch.json to optimize first-visit performance via Contentstack Launch cache priming, rather than managing routing or Next.js environment configuration.
-        
+
     -   npm run start serves the production build locally
     -   npm run lint runs ESLint
 -   **Build output:** .next/ is the default Next.js output directory and is ignored by .gitignore
@@ -374,9 +375,9 @@ kickstart-veda/
 ### Key source files
 
 -   **SDK and Live Preview initialization:** [lib/contentstack.ts](https://github.com/timbenniks/kickstart-veda/blob/main/lib/contentstack.ts)
-    
+
     This performs the following functions:
-    
+
     -   Creates the Contentstack stack client
     -   Configures live\_preview on the SDK, exports initLivePreview() (which calls ContentstackLivePreview.init(...) with ssr: false and options oriented toward the Visual Editor)
     -   Exports data accessors (getPage, getCategory, getProduct
@@ -435,4 +436,4 @@ kickstart-veda/
 -   Add automated tests (e.g., [Vitest](https://vitest.dev/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)) around data fetching helpers and critical routes.
 -   Read other Contentstack Kickstart guides: [Angular](/docs/headless-cms/angular), [Astro](/docs/headless-cms/astro), [Next.js](/docs/headless-cms/next), [Nuxt](/docs/headless-cms/nuxt), and [Nuxt SSR](/docs/headless-cms/nuxt-ssr).
 
-For support and questions, join the [Contentstack Community on Discord](https://community.contentstack.com/).
+For support and questions, join the [Contentstack Community on Discord](https://www.contentstack.com:443/community).
