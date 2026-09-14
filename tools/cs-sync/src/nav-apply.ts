@@ -736,32 +736,65 @@ function applyCleanup(tree: NavTree, dryRun: boolean): Stats {
   const stats: Stats = { written: 0, moved: 0, faqFiles: 0, deleted: 0, skippedNoContent: 0, emptyFaqAnswers: 0 };
   const productSlugs = new Set(tree.products.map((p) => p.slug));
 
+  // Scope everything this pass would remove before removing anything. This is
+  // a hand-maintained deletion list (STALE_TOP_LEVEL etc.), and the risk here
+  // is different from Pass 2's: not a thin crawl, but someone adding a path to
+  // one of these lists that turns out to still matter, or a path that grew
+  // since the list was written. --all runs this unconditionally alongside the
+  // 13 products, with no dry-run review of its own, so it needs the same
+  // ceiling Pass 2 has rather than trusting the list forever.
+  const topLevelFiles = new Map<string, string[]>();
+  for (const dir of STALE_TOP_LEVEL) {
+    if (productSlugs.has(dir)) continue; // now a real nav product; kept below
+    const abs = path.join(repoRoot, DOCS_ROOT, dir);
+    if (!fs.existsSync(abs)) continue;
+    const files: string[] = [];
+    listMarkdown(abs, files);
+    topLevelFiles.set(dir, files);
+  }
+  const rootFiles = STALE_ROOT_FILES.filter((f) =>
+    fs.existsSync(path.join(repoRoot, DOCS_ROOT, f)),
+  );
+  const assetDirs = STALE_ASSET_DIRS.filter((d) =>
+    fs.existsSync(path.join(repoRoot, DOCS_ROOT, d)),
+  );
+
+  const totalDoomed =
+    [...topLevelFiles.values()].reduce((n, files) => n + files.length, 0) + rootFiles.length;
+
+  if (totalDoomed > maxDeletions) {
+    console.error(
+      `\n🛑 cleanup: ${totalDoomed} files would be deleted, over the limit of ${maxDeletions}.\n` +
+        `   Refusing the whole cleanup pass rather than deleting part of it.\n` +
+        `   ${[...topLevelFiles.entries()].map(([d, f]) => `${d}/ (${f.length} files)`).join(", ")}` +
+        `${rootFiles.length ? `, ${rootFiles.join(", ")}` : ""}\n` +
+        `   If this is genuinely intended, re-run with NAV_APPLY_MAX_DELETIONS=${totalDoomed}.`,
+    );
+    process.exit(1);
+  }
+
   for (const dir of STALE_TOP_LEVEL) {
     if (productSlugs.has(dir)) {
       // A slug that became a real nav product since the list was written.
       console.log(`  KEEP ${dir}/ (now a nav product)`);
       continue;
     }
-    const abs = path.join(repoRoot, DOCS_ROOT, dir);
-    if (!fs.existsSync(abs)) continue;
-    const files: string[] = [];
-    listMarkdown(abs, files);
+    const files = topLevelFiles.get(dir);
+    if (!files) continue;
     removePath(`${DOCS_ROOT}/${dir}`, dryRun);
     stats.deleted += files.length;
     console.log(`  removed ${DOCS_ROOT}/${dir}/ (${files.length} files)`);
   }
 
-  for (const file of STALE_ROOT_FILES) {
+  for (const file of rootFiles) {
     const rel = `${DOCS_ROOT}/${file}`;
-    if (!fs.existsSync(path.join(repoRoot, rel))) continue;
     removePath(rel, dryRun);
     stats.deleted++;
     console.log(`  removed ${rel}`);
   }
 
-  for (const dir of STALE_ASSET_DIRS) {
+  for (const dir of assetDirs) {
     const rel = `${DOCS_ROOT}/${dir}`;
-    if (!fs.existsSync(path.join(repoRoot, rel))) continue;
     removePath(rel, dryRun);
     console.log(`  removed ${rel}/ (image folder)`);
   }
