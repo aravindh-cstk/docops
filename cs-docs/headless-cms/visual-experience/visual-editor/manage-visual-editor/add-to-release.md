@@ -24,9 +24,9 @@ To add multiple entries to a release using Visual Editor, log in to your [Conten
 6.  Select an existing **Release** or create a new one.
 7.  Select one or more **Locales**.
 8.  Click **Add with Reference** to publish the referenced entries along with the selected entry.
-    
+
     **Note:** You must select at least one entry to proceed.
-    
+
 
 ![Add_Entries_to_a_Release_from_Visual_Editor.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt29feabf97409003d/69af080c59ccea000816d695/Add_Entries_to_a_Release_from_Visual_Editor.gif)
 

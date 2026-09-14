@@ -1,7 +1,7 @@
 ---
 title: "iOS Playground App"
 description: "iOS Playground App"
-url: https://github.com/contentstack/contentstack-ios-sync-playground
+url: "https://github.com/contentstack/contentstack-ios-sync-playground"
 doc_type: link
 ---
 

@@ -19,13 +19,13 @@ Use Instant Rollbacks to:
 ## What You Will Learn
 
 -   How instant rollbacks recover quickly from a problematic release.
-    
+
 -   How rollbacks reduce downtime and help maintain application stability.
-    
+
 -   Which deployments are eligible for rollback and how long they are retained.
-    
+
 -   How to perform a rollback and what happens during it.
-    
+
 
 ## How Instant Rollbacks Work
 

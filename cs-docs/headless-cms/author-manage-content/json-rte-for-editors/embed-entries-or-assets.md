@@ -98,10 +98,125 @@ You can edit an embedded asset directly within the JSON RTE:
     -   **Open link in a new tab:** Enable or disable link target behavior.
     -   **Inline image:** Display the asset inline with the text.
 3.  Click **Save**.
-    
+
     ![Edit embedded asset in JSON RTE](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4f02f4b9a8b380d1/6819d07ab55bf31e8007eaa2/2._edit_embedded_assets_walkthrough.gif)
-    
+
     **Note:** These edits affect only the current embed instance and do not modify the original asset in the Asset Manager.
-    
+
+
+## Fetch the Latest or Original Embedded Data
+
+When you embed an entry or asset in the JSON RTE, its details, such as URL and title, are captured at the time of saving. If the embedded item is updated or republished afterward, the RTE field does not automatically reflect those changes.
+
+This gives you two options, depending on your use case:
+
+-   **Original (as-saved) data:** Use the values stored directly on the RTE node (node.attrs). This is the snapshot from when the item was embedded.
+-   **Latest published data:** Read the item from the \_embedded\_items section of the response. Fetch the entry with include\_embedded\_items\[\]=BASE or include\_embedded\_items\[\]=RECURSIVE, then match each embedded node by uid to the corresponding object in \_embedded\_items. This returns the entry or asset's currently published state.
+
+If you use a Contentstack Utils SDK, this resolution is done for you. Read the resolved values from node.attrs.\_resolved, and treat the legacy node.attrs\['asset-link'\] and similar properties as a soft-deprecated fallback. Match by uid manually only when you consume the Content Delivery API or the Content Management API directly.
+
+### Example
+
+An asset was embedded in an RTE field, then later renamed or replaced in its asset library.
+
+The original value, stored on the RTE node as a snapshot from when it was embedded:
+
+```
+{
+  "type": "asset",
+  "attrs": {
+    "asset-uid": "blt1a2b3c4d5e6f",
+    "asset-link": "https://images.contentstack.io/v3/assets/.../photo-v1.jpg",
+    "asset-name": "Old Photo Name",
+    "content-type-uid": "sys_assets",
+    "display-type": "display"
+  }
+}
+```
+
+The latest value, which is the same asset's current state returned in \_embedded\_items when you fetch the entry with include\_embedded\_items\[\]=BASE:
+
+```
+{
+  "_embedded_items": {
+    "rte_field": [
+      {
+        "uid": "blt1a2b3c4d5e6f",
+        "_content_type_uid": "sys_assets",
+        "url": "https://images.contentstack.io/v3/assets/.../photo-v2.jpg",
+        "title": "New Photo Name"
+      }
+    ]
+  }
+}
+```
+
+To resolve the latest value for each embedded node:
+
+```
+entry = fetchEntry(entryUid, { include_embedded_items: ["BASE"] })
+
+for each rteField in entry:
+  for each node in rteField.nodes where node.type is "entry" or "asset":
+    originalValue = node.attrs                       // snapshot from save time
+    embeddedItems = entry._embedded_items[rteField.name] || []
+    latestValue   = embeddedItems.find(item => item.uid === node.attrs["asset-uid" or "entry-uid"])
+    render(latestValue || originalValue)              // prefer latestValue; fall back if item was deleted
+```
+
+**Note:** If an embedded entry itself embeds more items, use include\_embedded\_items\[\]=RECURSIVE with embedded\_items\_depth to resolve the whole chain in one request. Refer to the Retrieve Nested Embedded Items with RECURSIVE section below.
+
+## Retrieve Nested Embedded Items with RECURSIVE
+
+Passing include\_embedded\_items\[\]=BASE, which is the existing behavior, returns first-level embedded items. To retrieve nested embedded items, set include\_embedded\_items\[\] to RECURSIVE. For example, an entry embeds an entry that embeds an asset:
+
+```
+Entry
+└── JSON RTE
+    └── Embedded entry
+        └── Embedded asset
+```
+
+Using RECURSIVE retrieves the embedded entry and its nested asset in the same response:
+
+```
+include_embedded_items[]=RECURSIVE
+```
+
+Contentstack resolves the nested items and returns them in the \_embedded\_items object.
+
+### Control Retrieval Depth
+
+Use embedded\_items\_depth with RECURSIVE to specify how many levels of nested embedded items to retrieve:
+
+```
+include_embedded_items[]=RECURSIVE&embedded_items_depth=2
+```
+
+-   If you don't specify embedded\_items\_depth, the depth defaults to 5.
+-   The maximum supported depth is 5.
+-   Values greater than 5 are clamped to 5.
+-   Use the smallest depth that meets your need to avoid unnecessarily increasing the response size.
+
+### Understand Payload Size
+
+Recursive retrieval increases response size because more embedded items are included at each level. Contentstack deduplicates repeated references, so real-world payloads are often smaller.
+
+### Use Resolved Metadata in Utils SDKs
+
+When you render JSON RTE content with a Contentstack Utils SDK, the SDK resolves embedded entry and asset metadata from \_embedded\_items and exposes it at node.attrs.\_resolved. Read resolved values from there. The legacy node.attrs\['asset-link'\] and similar properties remain readable as a soft-deprecated fallback.
+
+### What Stays Unchanged
+
+-   Passing include\_embedded\_items\[\]=BASE, or omitting the parameter, returns the same response as before. No migration is required.
+-   RECURSIVE is opt-in and available only for GET or read operations. There are no changes to Content Management API POST or PUT requests.
+-   The Content Delivery API resolves the published state, and the Content Management API resolves the latest or draft state.
+-   Access-control checks are applied to embedded items at every depth.
+-   RECURSIVE is available to any API key with entry read access.
+
+**Additional Resources:**
+
+-   Refer to [CDA | Entries](/docs/developers/apis/content-delivery-api/entries) for the full parameter reference.
+-   Refer to [CMA | Embed Entries and Assets in the Rich Text Editor](/docs/developers/apis/content-management-api/embed-entries-and-assets-in-the-rich-text-editor) to retrieve embedded item information through the Content Management API.
 
 Embedding entries and assets within the JSON RTE enriches your content with dynamic and structured elements. By following this guide, you can seamlessly integrate entries and assets, whether as inline components, blocks, or hyperlinks.

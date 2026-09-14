@@ -13,11 +13,11 @@ Stay informed about crucial account activities with Notifications in Contentstac
 ## What You Will Learn
 
 -   How to access notifications.
-    
+
 -   How to view and interact with notifications.
-    
+
 -   How to group and sort notifications.
-    
+
 
 ## Access Notifications
 

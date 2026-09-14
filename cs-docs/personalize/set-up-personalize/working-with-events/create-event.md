@@ -14,22 +14,22 @@ Events in Contentstack Personalize A/B Test experiences let you capture and moni
 
 -   [Contentstack account](https://www.contentstack.com/login)
 -   Personalize-enabled Organization with [permissions](/docs/administration/about-administration-roles)
-    
+
     **Note:** Users with **Owner** and **Member** access to a Personalize project can create new events.
-    
+
 -   Access to Personalize project
-    
+
     **Note:** We assumed that you have already created a Personalize project. If not, follow [this guide](/docs/personalize/create-personalize-project) to create a project in Personalize.
-    
+
 
 ## What You Will Learn
 
 -   How to create a new event in a Personalize project.
-    
+
 -   How to set an event Key and optional Description.
-    
+
 -   How to use the event next as a metric in an A/B Test experience.
-    
+
 
 ## Steps for Execution
 

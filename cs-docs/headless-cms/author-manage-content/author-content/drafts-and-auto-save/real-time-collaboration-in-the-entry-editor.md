@@ -124,28 +124,28 @@ Follow these recommendations to collaborate effectively.
     -   Avoid editing the same field simultaneously
     -   Use comments or internal communication tools to align on structural updates
 2.  Communicate Structural Edits
-    
+
     Before performing major structural actions such as:
-    
+
     -   Reordering modular blocks
     -   Deleting grouped content
     -   Performing large structural updates
-    
+
     Ensure no nested fields are actively locked.
-    
+
 3.  Refresh Before Major Edits
-    
+
     If you have had the entry open for an extended period:
-    
+
     -   Refresh the page before making structural changes
     -   Confirm that no newer version exists
 4.  Use Draft Compare for Review
     -   Compare minor draft updates with major saved versions
     -   Review changes before publishing in high-collaboration environments
 5.  Keep Sessions Intentional
-    
+
     Avoid keeping entries open in unused tabs. Active sessions may retain locks longer than necessary.
-    
+
 
 ## When to Use Real-Time Collaboration
 

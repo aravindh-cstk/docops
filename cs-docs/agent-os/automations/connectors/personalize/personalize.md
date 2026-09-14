@@ -26,22 +26,22 @@ Details of each action are covered in their respective sections.
 ## What You Will Learn
 
 -   How to connect your Personalize account to the connector.
-    
+
 -   How to set up the Personalize connector in a Configure Action Step.
-    
+
 -   How to configure each connector action to fetch audiences, experiences, and versions.
-    
+
 
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login/)
 -   A Personalize project with audiences and experiences
 -   A connected Personalize account  
-    
+
     To use the Personalize connector, you must first add your account. To do so, follow the steps given below:
-    
+
     ### Connect your Personalize Account
-    
+
     1.  Click **Configure Action Step** from the left navigation panel.
     2.  Click **Action Step** to configure third-party services.
     3.  Within the **Configure Action Step**, click the **Personalize** connector.![Select the Personalize connector](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta4f95eba2d182b52/66477249d4d02e94412ea5fe/Select_Connector.png)
@@ -61,9 +61,9 @@ Perform the following steps to set up the Personalize connector:
 1.  From the left navigation panel, click **Configure Action Step**.
 2.  Then, click **Action Step** to configure third-party services.
 3.  Within the **Configure Action Step**, click the **Personalize** connector.![Select the Personalize connector](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta4f95eba2d182b52/66477249d4d02e94412ea5fe/Select_Connector.png)
-    
+
     **Note:** You can sort and search the connector(s) based on the filter.
-    
+
 4.  Under **Choose an Action**, you will see these actions: **Get All Audiences**, **Get All Experiences**, **Get All Versions**, **Get a Single Audience**, **Get a Single Experience**, and **Get Audience(s) of a Variant**.![Choose an Action list](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd394bce7ebdd9682/66f411003666b01f92badd41/Select_Actions.png)
 
 Let’s look at each of them in detail.

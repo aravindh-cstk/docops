@@ -188,7 +188,7 @@ The schema for the JSON RTE field within a content type is as follows:
 
 **Note:** The JSON Rich Text Editor will have the same formatting options as the [HTML-based RTE](/docs/headless-cms/json-schema-for-creating-a-content-type#rich-text-editor) that can be added to your customized RTE toolbar. The only difference would be that the JSON RTE will not have the HTML source code viewer.
 
-**Additional Resource:** You can also migrate content from your HTML-based RTE to the new JSON RTE using our CLI. Read more about our [migration guide](/docs/headless-cms/migrate-content-from-html-rte-to-json-rte).
+**Additional Resource:** You can also migrate content from your HTML-based RTE to the new JSON RTE using our CLI. Read more about our [migration guide](/docs/headless-cms/cli-migrate-content-from-html-rte-to-json-rte/v1).
 
 ### Markdown
 
@@ -247,7 +247,7 @@ The schema of the **Select** field is given as follows:
 }
 ```
 
-  
+
 
 When the **Key-value pair** option is toggled on, the advanced parameter in the Select field schema is set to true and the schema displays the key and value added by the user.
 
@@ -286,7 +286,7 @@ The schema of such a Select field is given as follows:
 }
 ```
 
-  
+
 
 The parameters in the JSON body above are explained in the “[Field Parameters](/docs/headless-cms/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
 

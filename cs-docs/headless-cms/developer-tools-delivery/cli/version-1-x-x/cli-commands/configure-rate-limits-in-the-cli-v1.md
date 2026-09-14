@@ -1,10 +1,10 @@
 ---
-title: "Configure Rate Limits in the CLI"
+title: "Configure Rate Limits in the CLI | V1.x.x"
 description: "Configure Contentstack CLI rate limits with csdx config:set:rate-limit. Manage bulkLimit, set utilization, and get or remove settings for bulk publishing control."
 url: /headless-cms/configure-rate-limits-in-the-cli/v1
 ---
 
-# Configure Rate Limits in the CLI
+# Configure Rate Limits in the CLI | V1.x.x
 
 ## Configure Rate Limits in the CLI
 
@@ -14,13 +14,13 @@ This guide provides step-by-step instructions on how to configure and manage rat
 
 By following these instructions, you can effectively control the number of requests made to the Contentstack API within a specified timeframe, ensuring optimal performance and preventing any disruptions due to exceeding rate limits.
 
-**Warning:** The CLI supports rate limit configuration only for the bulkLimit parameter, which is [used in bulk publish commands](/docs/headless-cms/configure-rate-limits-in-the-cli#using-rate-limits-for-enhanced-bulk-publishing-control) to control requests.
+**Warning:** The CLI supports rate limit configuration only for the bulkLimit parameter, which is [used in bulk publish commands](/docs/headless-cms/configure-rate-limits-in-the-cli/v1#using-rate-limits-for-enhanced-bulk-publishing-control) to control requests.
 
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login/)
--   [CLI installed](/docs/headless-cms/install-the-cli/) and [configured](/docs/headless-cms/configure-regions-in-the-cli/) (version 1.25.0 and above)
--   [CLI authenticated](/docs/headless-cms/cli-authentication/)
+-   [CLI installed](/docs/headless-cms/install-the-cli/v1) and [configured](/docs/headless-cms/configure-regions-in-the-cli/v1) (version 1.25.0 and above)
+-   [CLI authenticated](/docs/headless-cms/cli-authentication/v1)
 
 ## Commands
 
@@ -30,11 +30,11 @@ The config:set:rate-limit command lets you set a Custom rate limit for your orga
 
 1.  Open the terminal.
 2.  Enter the following command:
-    
+
     ```
     csdx config:set:rate-limit
     ```
-    
+
 3.  Then, enter the **organization UID**.
 
 With these steps, you have successfully set a rate limit in the CLI.
@@ -61,17 +61,17 @@ csdx config:set:rate-limit
 **Examples**
 
 -   To set a default rate limit for your organization:
-    
+
     ```
     csdx config:set:rate-limit  --org blt***********1b  --default
     ```
-    
+
 -   To set a Custom rate limit for your organization:
-    
+
     ```
     csdx config:set:rate-limit  --org blt***********1b  --utilize 60 --limit-name bulkLimit
     ```
-    
+
 
 **Note:**
 
@@ -85,11 +85,11 @@ The config:get:rate-limit command fetches the rate limit that you have set in an
 
 1.  Open the terminal.
 2.  Enter the following command:
-    
+
     ```
     csdx config:get:rate-limit
     ```
-    
+
 
 With these steps, you have successfully retrieved the rate limit you have set in the CLI.
 
@@ -105,11 +105,11 @@ The config:remove:rate-limit command lets you remove an existing rate limit conf
 
 1.  Open the terminal.
 2.  Enter the following command:
-    
+
     ```
     csdx config:remove:rate-limit
     ```
-    
+
 3.  Then, enter the **organization UID**.
 
 With these steps, you have successfully removed the rate limit configuration of an organization.
@@ -127,11 +127,11 @@ csdx config:remove:rate-limit
 **Examples**
 
 -   To remove the configuration of the rate limit from the CLI by providing the organization UID:
-    
+
     ```
     csdx config:remove:rate-limit --org
     ```
-    
+
 
 ## Using Rate Limits for Enhanced Bulk Publishing Control
 

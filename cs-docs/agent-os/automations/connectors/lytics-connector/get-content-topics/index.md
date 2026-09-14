@@ -1,7 +1,7 @@
 ---
 title: "Get Content Topics"
 description: "Get Content Topics"
-url: https://docs.lytics.com/docs/topics
+url: "https://docs.lytics.com/docs/topics"
 doc_type: link
 ---
 

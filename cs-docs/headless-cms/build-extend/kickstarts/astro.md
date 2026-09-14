@@ -10,7 +10,7 @@ url: /headless-cms/astro
 
 ## Introduction
 
-Kickstart Astro is a minimal starter that connects Astro applications to Contentstack. The repository uses server-side rendering (SSR) with output:"server" and the [@astrojs/node](https://docs.astro.build/en/guides/integrations-guide/node/) adapter in standalone mode. For more background, see [SSR](https://docs.astro.build/en/guides/server-side-rendering/).
+Kickstart Astro is a minimal starter that connects Astro applications to Contentstack. The repository uses server-side rendering (SSR) with output:"server" and the [@astrojs/node](https://docs.astro.build/en/guides/integrations-guide/node/) adapter in standalone mode. For more background, see [SSR](https://docs.astro.build/en/guides/on-demand-rendering).
 
 Use this starter to set up an Astro app that connects to Contentstack with these preconfigured features:
 
@@ -106,7 +106,7 @@ After the process completes, the CLI creates a stack, imports the Kickstart cont
 **Additional Resources:**
 
 -   You can run an interactive bootstrap flow with csdx cm:bootstrap.
--   Watch the [Seed a stack in the CLI](https://youtu.be/2dQheUo7uH4) video for a walkthrough of the stack seeding process.
+-   Watch the [Seed a stack in the CLI](https://www.youtube.com/watch?v=2dQheUo7uH4&feature=youtu.be) video for a walkthrough of the stack seeding process.
 
 Once the seed completes, continue with the local clone and configuration steps below.
 
@@ -153,7 +153,7 @@ After you have a stack, the required tokens, and a local clone, connect the app 
 
 1.  Rename .env.example to .env in the project root, or create .env with the same variables.
 2.  Add your Contentstack credentials:
-    
+
     ```
     PUBLIC_CONTENTSTACK_API_KEY=<STACK_API_KEY>
     PUBLIC_CONTENTSTACK_DELIVERY_TOKEN=<DELIVERY_TOKEN>
@@ -162,7 +162,7 @@ After you have a stack, the required tokens, and a local clone, connect the app 
     PUBLIC_CONTENTSTACK_REGION=EU
     PUBLIC_CONTENTSTACK_PREVIEW=true
     ```
-    
+
 
 **Note:** When you set PUBLIC\_CONTENTSTACK\_PREVIEW=true, the app enables Live Preview behavior in code paths that read this flag.
 
@@ -210,11 +210,11 @@ Run the app, and confirm that it loads content from your stack.
 ### Start the development server
 
 1.  From the project root, run:
-    
+
     ```
     npm run dev
     ```
-    
+
 2.  Open http://localhost:4321/ in your browser.
 
 You should see the homepage with:
@@ -323,53 +323,53 @@ Use these checks if the homepage is empty, the SDK cannot authenticate, or Live 
     -   Free developer accounts are often bound to the **EU**. If PUBLIC\_CONTENTSTACK\_REGION does not match the stack, API calls can fail, and content can appear empty.
     -   Use **EU** in .env and run csdx config:set:region EU when you work with EU-bound stacks.
 -   **Stack not seeded**
-    
+
     The application expects the **page** content type and sample entries from the **Kickstart stack seed** or an equivalent Starter. If the model or entries are missing, the home page may appear empty or fail to resolve /.
-    
+
 -   **.env** **is missing or using the wrong prefix**
-    
+
     The project reads **PUBLIC\_CONTENTSTACK\_\*** variables. If .env is missing, or if the keys do not use the correct Astro prefix, import.meta.env values are empty, and the SDK cannot authenticate.
-    
+
 -   **Wrong Live Preview or Preview Token base URL**
-    
+
     Local Astro uses http://localhost:4321/ by default. Hosted apps must use the real deployment URL. If you use the wrong origin, Live Preview and Visual Editor break even when delivery works.
-    
+
 -   **Live Preview is not enabled in the stack**
-    
+
     Enable Live Preview under **Settings**, and select the environment that matches PUBLIC\_CONTENTSTACK\_ENVIRONMENT.
-    
+
 
 ## Additional Checks
 
 -   **Committing** **.env**
-    
+
     **Warning:** The file contains secrets. Keep it out of git and rely on .gitignore.
-    
+
 -   **Wrong or swapped delivery and preview tokens**
-    
+
     Use the correct tokens from the stack, or map the correct values from Launch.
-    
+
 -   **Incorrect publishing environment name**
-    
+
     PUBLIC\_CONTENTSTACK\_ENVIRONMENT must match an environment that exists in your stack.
-    
+
 -   **Skipping** **npm install**
-    
+
     Install dependencies after you clone the repository so scripts and types resolve correctly.
-    
+
 -   **Querying unpublished or mismatched environment content**
-    
+
     The app reads from the environment named in .env. Content that is unpublished or published to a different environment does not appear.
-    
+
 -   **Changing the** **page** **content type or** **URL** **contract without updating the code**
-    
+
     getPage() queries the **page** content type and matches **the URL** to the path (e.g., /). If you rename fields or content types in the stack, update the query and types accordingly.
-    
+
 
 ## Next Steps
 
 -   Learn more about [Live Preview](/docs/headless-cms/about-live-preview) and [Visual Editor](/docs/headless-cms/about-visual-editor) for your workflow
 -   Extend routing by adding Astro pages and reusing **getPage()**, or by adding more queries for URLs that exist in your stack
--   Review [Astro server-side rendering](https://docs.astro.build/en/guides/server-side-rendering/) and the [Node adapter](https://docs.astro.build/en/guides/integrations-guide/node/) as you prepare for production hosting
+-   Review [Astro server-side rendering](https://docs.astro.build/en/guides/on-demand-rendering) and the [Node adapter](https://docs.astro.build/en/guides/integrations-guide/node/) as you prepare for production hosting
 
-For questions or issues, join the [Contentstack Community on Discord](https://community.contentstack.com/).
+For questions or issues, join the [Contentstack Community on Discord](https://www.contentstack.com:443/community).

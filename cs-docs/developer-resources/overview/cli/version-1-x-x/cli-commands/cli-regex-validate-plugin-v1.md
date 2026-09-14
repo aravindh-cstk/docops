@@ -1,14 +1,14 @@
 ---
-title: "Regex Validate Plugin"
+title: "Regex Validate Plugin | V1.x.x"
 description: "Use the Contentstack CLI Regex Validate Plugin to scan content types and global fields for regex patterns vulnerable to catastrophic backtracking."
 url: /headless-cms/cli-regex-validate-plugin/v1
 ---
 
-# Regex Validate Plugin
+# Regex Validate Plugin | V1.x.x
 
 ## Regex Validate Plugin
 
-A newer version of this command is available. See [Regex Validate Plugin (v2)](/docs/headless-cms/cli-regex-validate-plugin/beta) for the current flag syntax before installing v1.
+A newer version of this command is available. See [Regex Validate Plugin (v2)](/docs/headless-cms/cli-regex-validate-plugin) for the current flag syntax before installing v1.
 
 ## Overview
 
@@ -29,21 +29,21 @@ Before running the command, ensure the following.
 
 ### Mandatory
 
--   **Contentstack CLI v1 installed**: See the [Contentstack CLI installation guide](/docs/developers/cli/install-the-cli).
-    
+-   **Contentstack CLI v1 installed**: See the [Contentstack CLI installation guide](/docs/headless-cms/install-the-cli/v1).
+
     ```
     npm install -g @contentstack/cli
     ```
-    
+
 -   **Plugin installed**: The regex validation command is distributed as a separate plugin. See [Installation](#installation).
 -   **Management token added**: The scan authenticates against your stack using a saved management token alias. Add one scoped to the stack you want to scan:
-    
+
     ```
     csdx auth:tokens:add -a <alias> -k <stack-api-key> --management --token <management-token>
     ```
-    
-    Reference: [Add a management token](/docs/developers/cli/cli-authentication#add-management-token). The token's role must grant read access to the modules you scan: Content Type: Read for \--contentType, Global Field: Read for \--globalField.
--   **Region configured, if your stack is not in North America**: [Set your region](/docs/developers/cli/configure-regions-in-the-cli#set-region) before running any stack commands. Skipping this on a non-North America stack causes the connection error described in [Troubleshooting](#error-in-connecting-to-the-stack-please-try-again).
+
+    Reference: [Add a management token](/docs/headless-cms/cli-authentication/v1#add-management-token). The token's role must grant read access to the modules you scan: Content Type: Read for \--contentType, Global Field: Read for \--globalField.
+-   **Region configured, if your stack is not in North America**: [Set your region](/docs/headless-cms/configure-regions-in-the-cli/v1#set-region) before running any stack commands. Skipping this on a non-North America stack causes the connection error described in [Troubleshooting](#error-in-connecting-to-the-stack-please-try-again).
 
 ### Optional
 
@@ -54,17 +54,17 @@ None.
 This command is distributed as a separate plugin:
 
 1.  Install the plugin:
-    
+
     ```
     csdx plugins:install @contentstack/cli-cm-regex-validate
     ```
-    
+
 2.  Verify the plugin is installed:
-    
+
     ```
     csdx plugins
     ```
-    
+
     You should see @contentstack/cli-cm-regex-validate in the list with version 1.x.
 
 ## Command Reference
@@ -196,7 +196,7 @@ To fix a flagged regex:
 1.  Update the field's format value in the Content Type Builder (or Global Field builder) to a pattern that does not nest repeated groups.
 2.  Re-run the scan to confirm the field no longer appears in the results.
 
-For guidance on rewriting a specific vulnerable pattern, see the [Prevent Catastrophic Backtracking documentation](/docs/developers/create-content-types/validation-regex/#prevent-catastrophic-backtracking).
+For guidance on rewriting a specific vulnerable pattern, see the [Prevent Catastrophic Backtracking documentation](/docs/headless-cms/validation-regex).
 
 ## Examples
 
@@ -327,11 +327,11 @@ Results are displayed as a terminal table and saved to a CSV file for further re
 **Resolution**:
 
 1.  If saving to a custom path, verify the directory is writable and avoid special characters (\*, &, {, }, \[, \], $, %, <, \>, ?, !). Try an absolute path if unsure:
-    
+
     ```
     csdx cm:stacks:validate-regex -a my-token-alias -c -f /tmp/regex-output
     ```
-    
+
 2.  Verify the management token is valid and has Content Type: Read and Global Field: Read permissions on the stack.
 3.  Confirm your region: csdx config:get:region. If on a non-North America region, set it: csdx config:set:region. See [Region configured](#mandatory) in Prerequisites.
 4.  Test connectivity by running another CMA (Content Management API) command against the same stack.
@@ -351,6 +351,6 @@ Results are displayed as a terminal table and saved to a CSV file for further re
 
 ## Next Steps
 
--   [Regex Validate Plugin (v2)](/docs/headless-cms/cli-regex-validate-plugin/beta): the v2 command reference. Flag names and the results.csv column order changed in v2, read this before upgrading.
--   [Regex Validation in Content Type Fields (v1)](/docs/headless-cms/cli-content-type-plugin): how the format regex is configured on a field in the Contentstack UI.
--   [Prevent Catastrophic Backtracking (Contentstack Docs)](/docs/developers/create-content-types/validation-regex/#prevent-catastrophic-backtracking): background on why certain regex patterns are unsafe and how to rewrite them.
+-   [Regex Validate Plugin (v2)](/docs/headless-cms/cli-regex-validate-plugin): the v2 command reference. Flag names and the results.csv column order changed in v2, read this before upgrading.
+-   [Regex Validation in Content Type Fields (v1)](/docs/headless-cms/cli-content-type-plugin/v1): how the format regex is configured on a field in the Contentstack UI.
+-   [Prevent Catastrophic Backtracking (Contentstack Docs)](/docs/headless-cms/validation-regex): background on why certain regex patterns are unsafe and how to rewrite them.

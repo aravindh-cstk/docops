@@ -9,4 +9,4 @@ _cms_faq_uid: cs9110c4cef742c91a
 
 # Are there any examples of validations that you can set on a field?
 
-The “[Validation (Regex)](/docs/headless-cms/validation-regex)” field property is available for “[Single Line Textbox](/docs/headless-cms/single-line-textbox)” and “[Multi Line textbox](/docs/headless-cms/multi-line-textbox)” fields. You can find common examples of validations in our [documentation](/docs/administration/validations). Since you can add validations using regex, learning [how regex works](http://www.regular-expressions.info/) might be helpful.
+The “[Validation (Regex)](/docs/headless-cms/validation-regex)” field property is available for “[Single Line Textbox](/docs/headless-cms/single-line-textbox)” and “[Multi Line textbox](/docs/headless-cms/multi-line-textbox)” fields. You can find common examples of validations in our [documentation](/docs/administration/validations). Since you can add validations using regex, learning [how regex works](https://www.regular-expressions.info/) might be helpful.

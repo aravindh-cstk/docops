@@ -122,7 +122,7 @@ After the process completes, the CLI creates a stack, imports the Kickstart cont
 **Additional Resources:**
 
 -   You can run an interactive bootstrap flow with csdx cm:bootstrap.
--   Watch the [Seed a stack in the CLI](https://youtu.be/2dQheUo7uH4) video for a walkthrough of the stack seeding process.
+-   Watch the [Seed a stack in the CLI](https://www.youtube.com/watch?v=2dQheUo7uH4&feature=youtu.be) video for a walkthrough of the stack seeding process.
 
 Once the seed completes, continue with the local clone and configuration steps below.
 
@@ -344,15 +344,15 @@ Use the links below to view the current source on GitHub.
     -   Free developer accounts are bound to the EU region. Setting NG\_APP\_CONTENTSTACK\_REGION=NA (or another region) causes API calls to fail and content not to load.
     -   Use NG\_APP\_CONTENTSTACK\_REGION=EU in .env and when configuring the CLI (e.g., csdx config:set:region EU).
 -   **Stack not seeded**
-    
+
     The application requires the page content type and sample entries to function correctly. You can provide this data by any one of the following methods:
-    
+
     -   **Import the Angular Starter**: Use the provided starter package to create the content model.
     -   **Seed via CLI**: Run the csdx cm:stacks:seed command with the contentstack/kickstart-stack-seed repository.
     -   **Manual Configuration**: Create a matching content model and entries that align with the application's data requirements.
-    
+
     **Note:** If the stack lacks a matching content model or entries, the application fails to fetch data for the home route (/). This results in an empty homepage or a 404 error.
-    
+
 -   **.env.example not renamed to .env**  
     The project reads configuration from .env. If you do not rename (or copy) .env.example to .env and add your credentials, the environment generation script has no values to use, and the SDK configuration fails.
 -   **Wrong Live Preview URL**  
@@ -390,4 +390,4 @@ Use the links below to view the current source on GitHub.
 
 You can extend this kickstart with more routes and pages, or add server-side rendering with Angular Universal. The same ideas (SDK init, fetching by URL, Live Preview, and Visual Builder) apply across frameworks.
 
-For questions or issues, join the [Contentstack Community on Discord](https://community.contentstack.com/).
+For questions or issues, join the [Contentstack Community on Discord](https://www.contentstack.com/community).

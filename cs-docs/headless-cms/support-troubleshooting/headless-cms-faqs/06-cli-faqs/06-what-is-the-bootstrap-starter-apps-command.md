@@ -9,4 +9,4 @@ _cms_faq_uid: csb0dba0fb40d6763d
 
 # What is the Bootstrap Starter Apps command?
 
-The Bootstrap Starter Apps command automates the procedure of stack creation and setting up the project (starter app). Follow [this](/docs/headless-cms/bootstrap-starter-apps) guide to set up and run a starter app with minimal steps.
+The Bootstrap Starter Apps command automates the procedure of stack creation and setting up the project (starter app). Follow [this](/docs/headless-cms/cli-bootstrap-starter-apps) guide to set up and run a starter app with minimal steps.

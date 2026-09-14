@@ -9,4 +9,4 @@ _cms_faq_uid: cs74f97e5e3c0853e2
 
 # Can I add custom fields to a content type?
 
-Yes. You can create and add custom fields to your content type. To learn more, refer to the [Custom Fields](/docs/developers/create-custom-fields/about-custom-fields) documentation.
+Yes. You can create and add custom fields to your content type. To learn more, refer to the [Custom Fields](/docs/developer-hub/custom-field-location) documentation.

@@ -95,12 +95,12 @@ If you already have a server-side rendered website, adopting this architecture c
 If your website is hosted with a provider, these popular hosting providers offer Edge function options:
 
 -   Contentstack Launch ([Edge Functions](/docs/launch/edge-functions))
--   Vercel ([Edge Middleware](https://vercel.com/docs/functions/edge-middleware))
--   Netlify ([Edge Functions](https://docs.netlify.com/edge-functions/overview/))
+-   Vercel ([Edge Middleware](https://vercel.com/docs/routing-middleware))
+-   Netlify ([Edge Functions](https://docs.netlify.com/build/edge-functions/overview/))
 
 Alternatively, if you’re hosting on your own and using a CDN, here are some popular CDN providers with Edge compute offerings:
 
--   Cloudflare ([Cloudflare Workers](https://workers.cloudflare.com/))
+-   Cloudflare ([Cloudflare Workers](https://www.cloudflare.com/products/workers/))
 -   Fastly ([Compute@Edge](https://www.fastly.com/products/edge-compute))
 -   Akamai ([EdgeWorkers](https://www.akamai.com/products/serverless-computing-edgeworkers))
 -   AWS Cloudfront ([Lambda@Edge](https://aws.amazon.com/lambda/edge/))

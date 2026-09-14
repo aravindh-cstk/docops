@@ -21,22 +21,22 @@ Details of each action are covered in their respective sections.
 ## What You Will Learn
 
 -   How to connect your Brand Kit account to Automate.
-    
+
 -   How to set up the Brand Kit connector.
-    
+
 -   How to configure the Generative AI, Knowledge Vault, and Voice Profile actions.
-    
+
 
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login/)
 -   Brand Kit-enabled Organization with [Owner or Admin](/docs/administration/about-administration-roles) permissions
 -   A connected Brand Kit account
-    
+
     To use the Brand Kit connector, you first need to add your Brand Kit account. To do so, follow the steps given below:
-    
+
     ### Connect your Brand Kit Account
-    
+
     1.  Click **Configure Action Step** from the left navigation panel.
     2.  Click **Action Step** to configure third-party services.
     3.  Within the **Configure Action Step**, click the **Brand Kit** connector.  
@@ -64,9 +64,9 @@ Perform the following steps to set up the Brand Kit connector:
 2.  Then, click **Action Step** to configure third-party services.
 3.  Within the **Configure Action** Step, click the **Brand Kit** connector.  
     ![Select_Connector.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbcadf6e61a2bfa02/6647665e5fd9af3a7470dc69/Select_Connector.png)
-    
+
     **Note:** You can sort and search the connector(s) based on the filter.
-    
+
 4.  Under **Choose an Action**, you will see these categories of actions: **Generative AI**, **Knowledge Vault**, and **Voice Profile**.  
     ![Select_Actions.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5b1bcd4bfccbe3e1/6647665e6d70550f9e4d8a7a/Select_Actions.png)
 
@@ -188,12 +188,12 @@ This action retrieves the most relevant data chunks by querying the existing Kno
     1.  Click **\+ Add New Account** button to connect your Brand Kit account as shown in the [Connect your Brand Kit Account](#connect-your-brand-kit-account) step.
     2.  Select a **Brand** **Kit** from the **Lookup** list to fetch the details of the data chunks from the Knowledge Vault.
     3.  In the **Search** **Content** field, enter the content you want to query within the existing Knowledge Vault to retrieve the most accurate and relevant data chunks.
-        
+
         **Note**:
-        
+
         -   Ensure that items are added to the Knowledge Vault to enable the retrieval of data chunks.
         -   If the Knowledge Vault does not contain content matching the **Search** **Content**, the output will be generated based on the highest similarity score.
-        
+
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfd050d8a45b46b17/6746ebfcde20c0d0d7d2dea4/Select_Fields.png)
 3.  Once done, click **Proceed**.
 4.  Click **Test Action** to test the configured action.  
@@ -244,59 +244,59 @@ This action creates a new Voice Profile in a specific Brand Kit.
         1.  **Formality Level**: You can set the formality level as **None**, **Casual**, **Business**, or **Professional**. Let’s discuss these in detail:
             1.  **None**: Generic content without any specifications.
             2.  **Casual**: Uses an informal but engaging tone that makes content more compelling.
-                
+
                 **Example:** "It’s true, nobody really enjoys grocery shopping. Here's five ways to make it less painful."
-                
+
             3.  **Business**: Employs clear and concise language that maintains a tone suitable for business settings.
-                
+
                 **Example:** "Please note that customer support is available 24/7 via our online customer portal."
-                
+
             4.  **Professional**: Uses polished language often found in legal documents or important announcements.
-                
+
                 **Example:** "We are pleased to announce the official launch of our new product line."
-                
+
         2.  **Tone Of Voice**: You can set the tone of Voice as **None**, **Informative**, **Assertive**, or **Persuasive**. Let’s discuss these in detail:
             1.  **None**: Generic content without any specifications.
             2.  **Informative**: Delivers facts in a neutral way, without opinions or personal slants.
-                
+
                 **Example:** "The report shows a 15% increase in sales."
-                
+
             3.  **Assertive**: Presents arguments and ideas with confidence, making clear recommendations.
-                
+
                 **Example:** "This method is the most effective based on our research."
-                
+
             4.  **Persuasive**: Uses strong arguments and emotional appeals to influence action or belief.
-                
+
                 **Example:** "Upgrade now and unlock exclusive features to transform your experience!"
-                
+
         3.  **Humor Level**: You can set the humor level as **None**, **Serious**, **Subtle**, or **Lighthearted**. Let’s discuss these in detail:
             1.  **None**: Generic content without any specifications.
             2.  **Serious**: Maintains a strictly professional tone, avoiding humor altogether.
-                
+
                 **Example:** "Lack of data security can have serious consequences."
-                
+
             3.  **Subtle**: Uses light touches of humor or wit to keep the audience engaged without compromising professionalism.
-                
+
                 **Example:** "Here are ten tips for writing email subject lines that won’t end up in the dreaded spam folder."
-                
+
             4.  **Lighthearted**: Incorporates relevant humor to connect with the audience and create a more playful atmosphere.
-                
+
                 **Example:** "Sometimes my biggest accomplishment of the day is simply remembering to mute myself during a virtual meeting."
-                
+
         4.  **Language Complexity Level**: You can set the complexity level as **None**, **Plain**, **Straightforward**, or **Technical**. Let’s discuss these in detail:
             1.  **None**: Generic content without any specifications.
             2.  **Plain**: Uses everyday words that are clear and understandable to a broad audience.
-                
+
                 **Example:** "Turn on the device and follow the on-screen instructions."
-                
+
             3.  **Straightforward**: Employs clear communication, potentially including industry-specific terms relevant to the target audience.
-                
+
                 **Example:** "The ROI of this investment is significant."
-                
+
             4.  **Technical**: Leverages advanced concepts and specialized vocabulary for audiences with prior knowledge.
-                
+
                 **Example:** "The software leverages machine learning algorithms for optimization.
-                
+
     7.  Enter the content in the **Insights** field which will serve as additional information that you can provide to the AI model.
     8.  Enter the **Sample Content** for your Voice Profile to generate similar content in action.  
         ![Show_Optional_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt86dde7ef235d55b3/6657f2ffe557cb6d0a7f1b9e/Show_Optional_Fields.png)
@@ -371,16 +371,16 @@ This action updates an existing Voice Profile in a specific Brand Kit.
     2.  Select a **Brand Kit** and **Voice Profile** from the **Lookup** list.  
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt891f7d6dc0e68b72/6657f3158e34d54998e19bff/Select_Fields.png)
     3.  **\[Optional\]** Enable the **Show Optional Fields** toggle button to display the additional fields.
-        
+
         **Note:** If you have enabled the **Show Optional Fields** toggle button, you must select at least **one** optional field to update a Voice Profile.
-        
+
     4.  Enter a new **Voice Profile Name** to update the title of the Voice Profile.
     5.  Enter or update the short **Description** for the existing Voice Profile.  
         ![Show_Optional_Fields_One.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc65c0267bf133646/6657f315b752e0eda381b93b/Show_Optional_Fields_One.png)
     6.  Select the **Formality Level**, **Tone of Voice**, **Humor Level**, **Language Complexity Level** from the drop-down list.
-        
+
         You can update the Formality Level, Tone Of Voice, Humor Level, and Language Complexity Level for the Voice Profile as required. Additionally, you can update the information inside the **Insights** and **Sample Content** fields as shown in the [Create a Voice Profile](#create-a-voice-profile) step.
-        
+
         ![Show_Optional_Fields_Two.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt75dc7e2291b73ea3/6657f3156d77590875e47385/Show_Optional_Fields_Two.png)
 3.  Once done, click **Proceed**.
 4.  Click **Test Action** to test the configured action. ![Test_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blted501badbd9adbec/664765dd342fb5743062c5c6/Test_Action.png)

@@ -18,11 +18,11 @@ The Analytics dashboard for [Automations](/docs/agent-os/what-is-an-automation) 
 ## What You Will Learn
 
 -   How to navigate to the Automations Analytics dashboard.
-    
+
 -   What each dashboard section displays and how to use it.
-    
+
 -   How to filter data by status code, time interval, and date range.
-    
+
 
 ## Access the Automations Analytics Dashboard
 
@@ -79,9 +79,9 @@ The following filters are available:
 -   **Group By:** Organize the data by daily, weekly, or monthly intervals.
 -   **Date Range:** Choose from predefined time filters (1 week, 30 days (default), 60 days, or 90 days). Additionally, some sections include a date selector below the graph to refine the range within the last 90 days.
 -   **Custom Date:** Use the date dropdown filter to select a specific range or set a custom date range.
-    
+
     **Note:** The custom date range should not exceed **90 days**.
-    
+
 
 To save a specific filter for later use, click the horizontal ellipsis (**...**) beside Reset and choose **Save As New View**.
 

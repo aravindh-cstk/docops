@@ -1,10 +1,10 @@
 ---
-title: "Bulk Operations in CLI"
+title: "Bulk Operations in CLI | V1.x.x"
 description: "Run bulk publish and bulk unpublish operations with the Contentstack CLI for entries and assets across environments and locales at scale with built-in retries."
 url: /headless-cms/bulk-operations-in-cli/v1
 ---
 
-# Bulk Operations in CLI
+# Bulk Operations in CLI | V1.x.x
 
 ## Bulk Operations in CLI
 
@@ -657,11 +657,11 @@ csdx cm:stacks:bulk-entries \
 -   The bulk-operation folder stores detailed logs of the last operation only
 -   Each new operation overwrites the previous logs
 -   To preserve logs for audit purposes, copy the folder before running a new operation:
-    
+
     ```
     cp -r bulk-operation bulk-operation-backup-$(date +%Y%m%d-%H%M%S)
     ```
-    
+
 
 ---
 

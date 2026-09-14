@@ -1,10 +1,10 @@
 ---
-title: "CLI-Supported Features for Export, Import, and Clone Operations"
+title: "CLI-Supported Features for Export, Import, and Clone Operations | V1.x.x"
 description: "Explore the CLI-supported features for export, import, and clone operations including Marketplace app handling, module imports, error management, and Personalize project support."
 url: /headless-cms/cli-supported-features-for-export-import-and-clone-operations/v1
 ---
 
-# CLI-Supported Features for Export, Import, and Clone Operations
+# CLI-Supported Features for Export, Import, and Clone Operations | V1.x.x
 
 ## CLI-Supported Features for Export, Import, and Clone Operations
 
@@ -12,7 +12,7 @@ url: /headless-cms/cli-supported-features-for-export-import-and-clone-operations
 
 ## Overview
 
-Contentstack CLI offers support for [export](/docs/headless-cms/export-content-using-the-cli), [import](/docs/headless-cms/import-content-using-the-cli), and clone operations, including Marketplace apps, module-wise imports, error handling, and Personalize project integration.
+Contentstack CLI offers support for [export](/docs/headless-cms/export-content-using-the-cli/v1), [import](/docs/headless-cms/import-content-using-the-cli/v1), and clone operations, including Marketplace apps, module-wise imports, error handling, and Personalize project integration.
 
 This guide outlines these features to help you manage content migration operations with flexibility and control.
 
@@ -49,7 +49,7 @@ You can export/import public and private Marketplace apps into a stack using CLI
 
 ### Prerequisites
 
--   **Logged In:** CLI authenticated (see [CLI Authentication and Adding Tokens](/docs/headless-cms/cli-authentication))
+-   **Logged In:** CLI authenticated (see [CLI Authentication and Adding Tokens](/docs/headless-cms/cli-authentication/v1))
 -   **Permissions:** Owner or Admin rights to export Marketplace apps
 -   **Marketplace Apps Support:** Enabled in the destination organization
 
@@ -64,13 +64,13 @@ You can export/import public and private Marketplace apps into a stack using CLI
 If a public Marketplace app with a specific configuration already exists in the destination organization, you will be prompted with the following options during import:
 
 -   **Update** - Update the app with the new configuration from the source organization
-    
+
 -   **Skip updating** - Skip updating the app configuration
-    
+
     **Warning:** Skipping may result in issues with imported content.
-    
+
 -   **Exit** - Cancel the entire stack import process
-    
+
 
 **Example:**
 
@@ -172,7 +172,7 @@ csdx cm:stacks:import \
 
 ### Personalize and Entry Variants Limitation
 
-**Important:** The \-a <alias> flag (management token) skips Personalize modules as they require an [auth token for import](/docs/headless-cms/import-content-using-the-cli#import-content-using-management-token) and cannot be imported using a management token.
+**Important:** The \-a <alias> flag (management token) skips Personalize modules as they require an [auth token for import](/docs/headless-cms/import-content-using-the-cli/v1#import-content-using-management-token) and cannot be imported using a management token.
 
 **Workaround:**
 
@@ -331,7 +331,7 @@ For more best practices, see the CLI Best Practices Guide.
 
 ## Limitations
 
-For detailed limitations, see the [CLI Limitations Guide](/docs/headless-cms/cli-limitations).
+For detailed limitations, see the [CLI Limitations Guide](/docs/headless-cms/cli-limitations/v1).
 
 **Key Limitations:**
 
@@ -344,10 +344,10 @@ For detailed limitations, see the [CLI Limitations Guide](/docs/headless-cms/cli
 
 ## Related Documentation
 
--   [Export Content Using the CLI](/docs/headless-cms/export-content-using-the-cli)
--   [Import Content Using the CLI](/docs/headless-cms/import-content-using-the-cli#import-content-using-management-token)
+-   [Export Content Using the CLI](/docs/headless-cms/export-content-using-the-cli/v1)
+-   [Import Content Using the CLI](/docs/headless-cms/import-content-using-the-cli/v1#import-content-using-management-token)
 -   Cloning a Stack
--   [Overwrite Existing Content Using CLI Import](/docs/headless-cms/overwrite-existing-content-using-cli-import)
+-   [Overwrite Existing Content Using CLI Import](/docs/headless-cms/overwrite-existing-content-using-cli-import/v1)
 -   CLI Troubleshooting Guide
--   [CLI Limitations Guide](/docs/headless-cms/cli-limitations)
+-   [CLI Limitations Guide](/docs/headless-cms/cli-limitations/v1)
 -   CLI Best Practices Guide

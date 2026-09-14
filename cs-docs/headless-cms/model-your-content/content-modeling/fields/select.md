@@ -36,9 +36,9 @@ You can define options for the Select field in the following ways:
     **For example**: S, M, L, XL
 
 -   **Key-value pair choices**: Define options as key-value pairs using a colon (:) separator. The key appears in the entry editor, and the value is stored in the backend.
-    
+
     **For example**: New York:NY
-    
+
 
 **Note:** Each key and value can contain up to **100 characters**.
 

@@ -113,6 +113,17 @@ This helps protect applications from:
 -   Excessive automated traffic
 -   Non-approved crawlers accessing the site content
 
+This protection:
+
+-   Applies automatically, with no configuration required.
+-   Does not affect custom domains added to your environment.
+
+**Additional Resource:** For additional protection options, refer to the [Blocking Default Launch Domains From Google Search](/docs/developers/launch/blocking-default-launch-domains-from-google-search) guide.
+
+## Default Domain Search Engine Protection
+
+Every Launch project receives a default domain of .contentstackapps.com. To prevent this default domain from being indexed by search engines and avoid duplicate-content SEO issues, Launch automatically applies an X-Robots-Tag: noindex response header on all \*.contentstackapps.com requests, including root, deep routes, static assets, and error responses.
+
 ## Geolocation-based Traffic Control
 
 Contentstack Launch automatically includes [geolocation headers](/docs/launch/geolocation-headers) with incoming requests, providing geographic information such as **country**, **region**, and **city** based on the **visitor’s IP address**.
@@ -230,5 +241,6 @@ Contentstack Launch provides a hosting platform with security enabled by default
 -   Regular runtime and Node.js security updates
 -   Security event notifications
 -   Configuration-based security controls
+-   Automatic noindex protection for default (\*.contentstackapps.com) domains
 
 By combining these platform capabilities with secure development practices, users can deploy and operate applications using documented platform and development controls on Launch.

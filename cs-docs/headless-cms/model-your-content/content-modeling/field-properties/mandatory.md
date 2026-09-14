@@ -19,7 +19,7 @@ If you leave a mandatory field blank, you can still save the entry as a draft or
 You can enable the **Mandatory** property for the following field types:
 
 -   **URL Field**: You can mark the URL field as mandatory to ensure content contributors provide a valid path before publishing an entry. This is useful for enforcing structured URLs across content types.
-    
+
 -   **Group Fields**: Mark the entire group as required to ensure users fill out at least one of its subfields.
 -   **Global Fields**: Apply the mandatory setting to any global field to enforce input across all entries that use it.
 -   **Reference Fields**: Ensure users select at least one referenced entry when the reference field is marked as required.

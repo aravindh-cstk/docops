@@ -15,5 +15,5 @@ Here's the list of file types that the “File” field supports when you select
 When you select this option, you can specify the **File size limit** by selecting the minimum and maximum **MB.** This will prompt the user to upload an image of the specific dimension on the [entry](/docs/headless-cms/about-entries) page.
 
 **Additional Resource:** You can check out the [Validations](/docs/administration/validations) guide to learn more about the several types of validation that you can set up on a field.  
-  
+
 If you want to make changes to any field’s properties, make sure you go through our [Content Type Change Management](/docs/headless-cms/content-type-change-management) guide to avoid data loss.

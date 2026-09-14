@@ -1,7 +1,7 @@
 ---
 title: "iOS"
 description: "iOS"
-url: https://github.com/contentstack/contentstack-ios-graphql-example
+url: "https://github.com/contentstack/contentstack-ios-graphql-example"
 doc_type: link
 ---
 

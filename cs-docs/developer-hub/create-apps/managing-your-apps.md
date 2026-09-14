@@ -17,11 +17,11 @@ You can manage all your installed/authorized apps and installation requests from
 ## What You Will Learn
 
 -   How to reach the Manage section.
-    
+
 -   Where to find your installed apps.
-    
+
 -   Where to find your authorized apps.
-    
+
 
 ## View your Apps
 

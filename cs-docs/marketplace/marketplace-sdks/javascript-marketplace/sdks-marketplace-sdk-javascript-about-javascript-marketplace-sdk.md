@@ -59,4 +59,4 @@ client.marketplace('organization_uid').app('manifest_uid').fetch()
 
 ### More Resources
 
-[JavaScript Marketplace SDK GitHub Repository](https://github.com/contentstack/contentstack-marketplace-javascript)
+[JavaScript Marketplace SDK GitHub Repository](https://github.com/contentstack/contentstack-marketplace-sdk)

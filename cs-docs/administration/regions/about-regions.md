@@ -45,7 +45,7 @@ For example: The AWS Europe data center is installed in the European region and 
 -   You cannot store your organization's content in multiple regions.  
     For example: If you choose the AWS Europe data center as your region, all of your organization's data will reside in the AWS Europe region
 -   Each region has its own login URLs and other endpoints.  
-    
+
 
 ### Speed and Security
 

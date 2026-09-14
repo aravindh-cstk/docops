@@ -176,6 +176,6 @@ data.then(function(data) {
 
 ## More resources
 
--   [JavaScript playground app](https://github.com/contentstack/contentstack-js-sync-playground.git)
+-   [JavaScript playground app](https://github.com/contentstack/contentstack-js-sync-playground)
 -   [JavaScript Delivery SDK API reference](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference/)
 -   [View and Download JavaScript Delivery SDK repository on GitHub](https://github.com/contentstack/contentstack-javascript)

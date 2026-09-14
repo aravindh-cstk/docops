@@ -21,9 +21,9 @@ By prioritizing your experiences, you can enhance user engagement and deliver mo
 -   [Contentstack account](https://www.contentstack.com/login)
 -   Personalize-enabled Organization with [permissions](/docs/administration/about-administration-roles)
 -   Access to Personalize project
-    
+
     **Note:** We assumed that you have already created a Personalize project. If not, follow [this guide](/docs/personalize/create-personalize-project) to create a project in Personalize.
-    
+
 -   [Experiences](/docs/personalize/about-experiences) created in your Personalize project
 
 ## Steps for Execution

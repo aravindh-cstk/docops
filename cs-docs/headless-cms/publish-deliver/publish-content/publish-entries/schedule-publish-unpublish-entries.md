@@ -19,10 +19,10 @@ To schedule an entry publish, log in to your [Contentstack account](https://www.
     1.  **Now**: Publishes/unpublishes the entry immediately.
     2.  **Later**: Schedules the action for a specific date and time.
 3.  If you choose **Later**:
-    
+
     1.  Select the date from the calendar.
     2.  Enter the time (hh:mm:ss) and select the time zone.
-    
+
     ![Schedule_an_Entry_Publish.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blte260318f6b6162c2/68c93a908850a01b8636ead8/Schedule_an_Entry_Publish.png)
 
 **Note:** The scheduled date cannot exceed **12 months** from the current date.

@@ -9,4 +9,4 @@ _cms_faq_uid: csfd3671dc7f5e109f
 
 # How do I add CSS styles to an image using Markdown?
 
-Markdown is a markup language with plain text formatting syntax. It does not support inline styling (CSS). However, you can input HTML in Markdown. Here's the [official Markdown documentation on inline HTML](http://daringfireball.net/projects/markdown/syntax#html).
+Markdown is a markup language with plain text formatting syntax. It does not support inline styling (CSS). However, you can input HTML in Markdown. Here's the [official Markdown documentation on inline HTML](https://daringfireball.net/projects/markdown/syntax#html).

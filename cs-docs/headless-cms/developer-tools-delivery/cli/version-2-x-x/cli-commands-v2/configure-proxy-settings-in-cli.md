@@ -88,27 +88,27 @@ csdx config:set:proxy
 **Examples**
 
 -   To set a basic proxy configuration:
-    
+
     ```
     csdx config:set:proxy --host 127.0.0.1 --port 3128
     ```
-    
+
     When you omit the \--username flag, the proxy is configured without authentication.
-    
+
 -   To set a proxy with HTTPS protocol:
-    
+
     ```
     csdx config:set:proxy --host proxy.example.com --port 8080 --protocol https
     ```
-    
+
 -   To set a proxy with authentication:
-    
+
     ```
     csdx config:set:proxy --host proxy.example.com --port 8080 --username user
     ```
-    
+
     When you include the \--username flag, the CLI prompts you to enter the password securely.
-    
+
 
 ### Get Proxy Configuration
 

@@ -14,9 +14,9 @@ To upload assets, log in to your [Contentstack account](https://www.contentstack
 
 1.  Navigate to the **Assets** listing page within your space.
 2.  Drag and drop files from your computer into the listing area, or click **\+ New** and click **Upload File**.
-    
+
     **Note:** Select or drag and drop up to **100 assets** at once. The size of an asset should not exceed **1.5 GB**.
-    
+
 3.  Browse your local system and select the files you want to upload.
 4.  Click **Open**.
 

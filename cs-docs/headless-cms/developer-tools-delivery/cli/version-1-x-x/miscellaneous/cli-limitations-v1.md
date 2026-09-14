@@ -1,10 +1,10 @@
 ---
-title: "CLI Limitations"
+title: "CLI Limitations | V1.x.x"
 description: "Understand Contentstack CLI limitations, supported environments, and workarounds for import/export, authentication, OS support, and more."
 url: /headless-cms/cli-limitations/v1
 ---
 
-# CLI Limitations
+# CLI Limitations | V1.x.x
 
 ## CLI Limitations
 
@@ -22,12 +22,12 @@ url: /headless-cms/cli-limitations/v1
 
 -   Install supported Node.js version (18.0.0+, recommended: 20.x or 22.x)
 -   Use nvm for version management:
-    
+
     ```
     nvm install 20
     nvm use 20
     ```
-    
+
 
 **Related Commands:**
 
@@ -193,14 +193,14 @@ url: /headless-cms/cli-limitations/v1
 **Workaround:**
 
 -   Add to configuration file:
-    
+
     ```
     {
       "maxContentLength": 200000000,
       "maxBodyLength": 200000000
     }
     ```
-    
+
 -   Process exports in smaller batches
 -   Export specific modules
 
@@ -326,14 +326,14 @@ csdx cm:stacks:export -k <stack-api-key> --data-dir ./export
 **Workaround:**
 
 -   Add to configuration file:
-    
+
     ```
     {
       "maxContentLength": 200000000,
       "maxBodyLength": 200000000
     }
     ```
-    
+
 -   Process imports in smaller batches
 -   Export/import specific modules
 
@@ -531,7 +531,7 @@ csdx cm:stacks:export -k <stack-api-key> --data-dir ./export
 -   csdx cm:stacks:import --skip-assets-publish
 -   csdx cm:assets:publish --backup-dir
 
-**Related Documentation:** [Asset Scanning in CLI](/docs/headless-cms/asset-scanning-in-cli)
+**Related Documentation:** [Asset Scanning in CLI](/docs/headless-cms/asset-scanning-in-cli/v1)
 
 **Version Information:** All versions with asset scanning enabled
 
@@ -720,7 +720,7 @@ csdx cm:stacks:export -k <stack-api-key> --data-dir ./export
 
 -   csdx cm:assets:publish --backup-dir
 
-**Related Documentation:** [Asset Scanning in CLI](/docs/headless-cms/asset-scanning-in-cli)
+**Related Documentation:** [Asset Scanning in CLI](/docs/headless-cms/asset-scanning-in-cli/v1)
 
 **Version Information:** All versions with asset scanning enabled
 
@@ -951,11 +951,11 @@ csdx cm:stacks:import -k <target-api-key> --data-dir ./export
 **Workaround:**
 
 -   Set NODE\_PATH before running migrations:
-    
+
     ```
     export NODE_PATH="$(npm root -g @contentstack/cli)/@contentstack/cli/node_modules"
     ```
-    
+
 -   Add to shell profile for permanent fix
 
 **Related Commands:**

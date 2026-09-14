@@ -14,19 +14,19 @@ You can edit an existing team by updating its name, description, assigned roles,
 
 -   [Contentstack account](https://www.contentstack.com/login/)
 -   Organization [Owner or Admin](/docs/administration/about-administration-roles) permissions
-    
+
     **Note:** Only the Organization **Owner** or **Admin** can edit teams created by other stakeholders.
-    
+
 -   An existing [team](/docs/administration/create-a-team)
 
 ## What You Will Learn
 
 -   How to update a team's name and description.
-    
+
 -   How to update a team's assigned Administration, product, and project-level roles.
-    
+
 -   How to add or remove users on a team.
-    
+
 
 ## Edit a Team
 

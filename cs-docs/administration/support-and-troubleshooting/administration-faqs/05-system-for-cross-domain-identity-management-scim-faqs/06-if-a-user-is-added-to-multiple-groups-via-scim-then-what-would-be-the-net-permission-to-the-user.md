@@ -11,7 +11,7 @@ _cms_faq_uid: cs44e02e0762f05ed2
 
 If a user belongs to multiple groups, he/she will get the highest order of permission on the organization and stack(s). For example, user1 belongs to group1 and group2, and these groups have the following set of permissions:
 
--   Group1:[Organization Admin](/docs/administration/about-administration-roles)“[Developer](/headless-cms/types-of-roles#developer)” role in all stacks
--   Group2: [Organization Member](/docs/administration/about-administration-roles)“[Content manager](/headless-cms/types-of-roles#content-manager)” role in all stacks
+-   Group1:[Organization Admin](/docs/administration/about-administration-roles)“[Developer](/docs/headless-cms/types-of-roles#developer)” role in all stacks
+-   Group2: [Organization Member](/docs/administration/about-administration-roles)“[Content manager](/docs/headless-cms/types-of-roles#content-manager)” role in all stacks
 
 In this case, user1 will be the admin of the organization and have the “Developer” and "Content manager" roles in all the stacks.

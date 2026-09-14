@@ -9,4 +9,4 @@ _cms_faq_uid: csbae83ca92d754168
 
 # What is the Contentstack Developer Hub Framework?
 
-[Contentstack Developer Hub](/developer-hub/about-developer-hub) Framework is an app development platform you can use to build, host, and publish apps. It lets you define further details for your app by adding [UI locations](/developer-hub#managing-ui-locations), Integrating [OAuth](/developer-hub/contentstack-oauth/), and setting up [Webhooks](/developer-hub/managing-webhooks-in-an-app/).
+[Contentstack Developer Hub](/docs/developer-hub/about-developer-hub) Framework is an app development platform you can use to build, host, and publish apps. It lets you define further details for your app by adding [UI locations](/docs/developer-hub#managing-ui-locations), Integrating [OAuth](/docs/developer-hub/contentstack-oauth/), and setting up [Webhooks](/docs/developer-hub/managing-webhooks-in-an-app/).

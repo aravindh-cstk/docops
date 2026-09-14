@@ -128,4 +128,4 @@ let blogQuery = Stack.ContentType('example').Query();
 ## More Resources
 
 -   [React Native API Reference](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference/)
--   [React Native SDK Changelog](/docs/developers/sdks/content-delivery-sdk/javascript-browser/javascript-sdk-changelog/)
+-   [React Native SDK Changelog](/docs/changelog?filter=sdks)

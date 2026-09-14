@@ -12,7 +12,7 @@ This step-by-step guide will help you get started with the [Java Marketplace SDK
 
 ## Prerequisites
 
--   [Java version 8](https://www.java.com/download/ie_manual.jsp) or later.
+-   [Java version 8](https://www.java.com/en/download/) or later.
 -   [Contentstack Account](https://www.contentstack.com/login/)
 -   Basic understanding of Java programming language.
 -   Familiarity with your chosen Integrated Development Environment (IDE), such as Eclipse or IntelliJ IDEA.

@@ -18,11 +18,11 @@ The Analytics dashboard for Polaris provides detailed insights into how Contents
 ## What You Will Learn
 
 -   How to navigate to the Polaris Analytics dashboard.
-    
+
 -   What each of the seven dashboard sections shows and when to use it.
-    
+
 -   How to apply filters, set date ranges, and save custom views.
-    
+
 
 ## Access the Polaris Analytics Dashboard
 
@@ -97,9 +97,9 @@ The following filters are available:
 
 -   **Date Range:** Choose from **1 week**, **30 days** (default), **60 days**, or **90 days**. Some charts include a timeline selector for further refinement.
 -   **Custom Date:** Set a custom date range using the dropdown.
-    
+
     **Note:** The custom date range should not exceed **90 days**.
-    
+
 -   **Zoom:** Switch between **1 week**, **30 days**, **60 days**, or **90 days** for trend analysis.
 -   **Group By:** View data grouped by day, week, or month, depending on the selected section.
 

@@ -1,7 +1,7 @@
 ---
 title: "Android Playground App"
 description: "Android Playground App"
-url: https://github.com/contentstack/contentstack-android-sync-playground
+url: "https://github.com/contentstack/contentstack-android-sync-playground"
 doc_type: link
 ---
 

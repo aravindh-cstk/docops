@@ -37,25 +37,25 @@ Perform the following steps to install Utils SDK using Swift package manager:
 
 1.  Install libxml2 in your system:
     1.  macOS users:
-        
+
         ```
         //For xcode 11.3 and earlier, the following settings are required
         $ brew install libxml2
         $ brew link --force libxml2
         ```
-        
+
     2.  Linux (Ubuntu) users:
-        
+
         ```
         $ sudo apt-get install libxml2-dev
         ```
-        
+
 2.  Add the following code to your Package.swift file:
-    
+
     ```
     // swift-tools-version:5.0
     import PackageDescription
-    
+
     let package = Package(
         name: "YourProject",
         dependencies: [
@@ -68,24 +68,24 @@ Perform the following steps to install Utils SDK using Swift package manager:
         ]
     )
     ```
-    
+
 3.  Build the code with this command:
-    
+
     ```
     $ swift build
     ```
-    
+
     **Note:** For Linux (Ubuntu) users, if a build error occurs, run the following command: $ sudo apt-get install pkg-config
-    
+
 
 ### Manual Installation
 
 Install the Utils SDK by manually adding the files to your project:
 
-1.  Add the [ContentstackUtils](https://github.com/contentstack/contentstack-utils-swift/blob/master/Sources/ContentstackUtils) file to your project
+1.  Add the [ContentstackUtils](https://github.com/contentstack/contentstack-utils-swift/tree/master/Sources/ContentstackUtils) file to your project
 2.  Add Kanna files to your project:
-    1.  [Kanna](https://github.com/contentstack/contentstack-utils-swift/blob/master/Sources/Kanna)
-    2.  [Modules](https://github.com/contentstack/contentstack-utils-swift/blob/master/Modules)
+    1.  [Kanna](https://github.com/contentstack/contentstack-utils-swift/tree/master/Sources/Kanna)
+    2.  [Modules](https://github.com/contentstack/contentstack-utils-swift/tree/master/Modules)
 3.  In the target settings, add $(SDKROOT)/usr/include/libxml2 to the **Search Paths > Header Search Paths** field
 4.  Next, in the target settings, add $(SRCROOT)/Modules to the **Swift Compiler - Search Paths > Import Paths** field
 
@@ -103,7 +103,7 @@ To render embedded items on the front-end, create a class implementing Option pr
 import Foundation
 import ContentstackUtils
 class CustomRenderOption: Option {
-    
+
     func renderOptions(embeddedObject: EmbeddedObject, metadata: Metadata) -> String? {
         switch metadata.styleType {
         case .block:
@@ -141,7 +141,7 @@ class CustomRenderOption: Option {
             return super.renderMark(markType: markType, text: text)
         }
     }
-    
+
     override func renderNode(nodeType: String, node: Node, next: (([Node]) -> String)) -> String {
         switch nodeType {
         case "p":
@@ -254,3 +254,14 @@ stack.contentType(uid: contentTypeUID)
         }  
     }
 ```
+
+### Resolve Embedded Item Metadata
+
+The SDK resolves embedded entry and asset metadata from the \_embedded\_items object in the API response and exposes the resolved values at node.attrs.\_resolved. Read resolved values from there so that your rendered output reflects the current state of the embedded item. The legacy node.attrs\['asset-link'\] property, and the equivalent properties for other node types, remain readable as a soft-deprecated fallback.
+
+**Note:** The includeEmbeddedItems method retrieves first-level embedded items only. To retrieve embedded items that are nested inside other embedded items, request the entry directly through the Content Delivery API with include\_embedded\_items\[\]=RECURSIVE.
+
+**Additional Resources:**
+
+-   Refer to [Embed Entries or Assets](/docs/headless-cms/embed-entries-or-assets) to understand how embedded item data is stored and resolved.
+-   Refer to [CDA | Entries](/docs/developers/apis/content-delivery-api/entries) for the include\_embedded\_items\[\] and embedded\_items\_depth parameter reference.

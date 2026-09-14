@@ -39,7 +39,7 @@ Contentstack removes all auto-saved changes and restores the entry to its last s
 -   If the entry was in a **Draft** state, deleting the draft removes all unsaved content associated with that entry.
 -   If another user is actively editing the entry, field-level locks may restrict certain actions. Confirm that no active edits are in progress before discarding a draft.
 -   Draft versions are retained only for the **five most recent major versions** of an entry. When new major versions are created, draft versions associated with older major versions are automatically removed.
-    
+
 
 ## When to Delete a Draft
 

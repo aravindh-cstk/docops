@@ -22,11 +22,11 @@ Before you begin, ensure the following:
 
 -   You have exported content from the stack to a local folder.
 -   You are authenticated using the CLI:
-    
+
     ```
     csdx auth:login
     ```
-    
+
 -   You have the **Stack API key** of the target stack.
 -   You have the necessary [permissions](/docs/headless-cms/types-of-roles).
 

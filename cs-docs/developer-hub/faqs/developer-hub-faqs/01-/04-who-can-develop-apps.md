@@ -11,5 +11,5 @@ _cms_faq_uid: cse84be181952f52c2
 
 Contentstack supports two types of apps:
 
-1.  **Stack Apps:** Users registered as the [owners](/headless-cms/types-of-roles#owner)/[admins](/headless-cms/types-of-roles#admin) of the stack, or owners/admins of the corresponding organization can create and install stack apps.
+1.  **Stack Apps:** Users registered as the [owners](/docs/headless-cms/types-of-roles#owner)/[admins](/docs/headless-cms/types-of-roles#admin) of the stack, or owners/admins of the corresponding organization can create and install stack apps.
 2.  **Organization Apps:** Only the [owners](/docs/administration/about-administration-roles#organization-owner)/[admins](/docs/administration/about-administration-roles#organization-admin) of the corresponding organization can develop and install the apps.

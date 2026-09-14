@@ -37,9 +37,9 @@ To add the apps permissions In the UI Locations tab, follow these steps:
 4.  Click the **UI Locations** tab.
 5.  Go to the **Permissions** section in the **UI Locations** tab.
 6.  Select all the permissions you wish to add.
-    
+
     **Note:** By default, no permissions are selected.
-    
+
     ![permissions.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9bbd9a5843b9bad8/68a6bd5f9319d8bfc187e46b/permissions.png)
 7.  Once you have selected the desired permissions, click the **Save** button.
 

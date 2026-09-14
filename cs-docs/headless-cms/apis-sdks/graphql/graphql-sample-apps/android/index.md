@@ -1,7 +1,7 @@
 ---
 title: "Android"
 description: "Android"
-url: https://github.com/contentstack/contentstack-android-graphql-example
+url: "https://github.com/contentstack/contentstack-android-graphql-example"
 doc_type: link
 ---
 

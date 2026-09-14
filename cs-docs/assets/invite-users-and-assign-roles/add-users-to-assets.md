@@ -23,9 +23,9 @@ To invite users to **Assets**, log in to your [Contentstack account](https://www
 2.  Click **Invite User**.
 3.  Enter one or more email addresses (comma-separated).
 4.  In **Assign Product Access**, click **Manage Roles** for **Administration**. By default, the **Member** role is selected.
-    
+
     **Note:** Modify this selection only if elevated administrative access is required.
-    
+
 5.  Click **Manage Roles** for **Assets**.
 6.  A side panel opens, listing the default and custom organization-level roles available for Assets. Select one or more roles as required.
 7.  Optionally select one or more spaces to which the user should be added.

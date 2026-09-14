@@ -15,7 +15,7 @@ This step-by-step guide will help you get started with the Typescript SDK and bu
 To get started with the Typescript Delivery SDK, you will need the following:
 
 -   [Contentstack account](https://www.contentstack.com/login)
--   [Node.js](https://nodejs.org/) version 22 or later
+-   [Node.js](https://nodejs.org/en) version 22 or later
 
 ## Authentication
 

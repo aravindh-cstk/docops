@@ -29,7 +29,7 @@ git clone https://github.com/contentstack/kickstart-nuxt.git
 cd kickstart-nuxt
 ```
 
-Github for Frontend Nuxt App: [Contentstack Kickstart - Nuxt](https://github.com/contentstack/kickstart-nuxt.git)
+Github for Frontend Nuxt App: [Contentstack Kickstart - Nuxt](https://github.com/contentstack/kickstart-nuxt)
 
 ### 2\. Install Dependencies
 
@@ -66,23 +66,23 @@ After you clone the repo and install dependencies, your project should resemble 
 
 ### 3\. Create a Stack
 
-Log in to your Contentstack account and [create a new Stack](/docs/developers/set-up-stack/create-a-new-stack). Follow these steps to seed your Stack with the necessary data:
+Log in to your Contentstack account and [create a new Stack](/docs/headless-cms/create-a-new-stack). Follow these steps to seed your Stack with the necessary data:
 
 1.  Download the Stack seed data from GitHub.
 2.  Install the Contentstack CLI:
-    
+
     ```
     npm install -g @contentstack/cli
     ```
-    
+
 3.  If you are running the CLI for the first time, set your region:
-    
+
     ```
     csdx config:set:region AWS-EU
     ```
-    
+
     **Note**:
-    
+
     -   AWS North America: Set the region as **AWS-NA**.
     -   AWS Europe: Set the region as **AWS-EU**.
     -   AWS Australia: Set the region as **AWS-EU**.
@@ -90,28 +90,28 @@ Log in to your Contentstack account and [create a new Stack](/docs/developers/se
     -   Azure Europe: Set the region as **AZURE-EU**.
     -   Google Cloud Platform North America: Set the region as **GCP-NA**.
     -   Google Cloud Platform Europe: Set the region as **GCP-EU**.
-    
+
 4.  Log in via the CLI:
-    
+
     ```
     csdx auth:login
     ```
-    
+
     This command will ask you to provide your Contentstack’s account credentials (email and password).
-    
+
 5.  Get your **Organization ID** from the Contentstack dashboard: Go to Org Admin > **Info** and copy the Org ID![get-orgID.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt250c40ce6173b773/680254ba9a3191443e63edc7/get-orgID.png)
 6.  Seed your Stack:
-    
+
     ```
     csdx cm:stacks:seed --repo "contentstack/kickstart-stack-seed" --org "<YOUR_ORG_ID>" -n "CS Kickstart Nuxt"
     ```
-    
 
-Need more information, watch a quick video on how to [seed a stack in the CLI](https://youtu.be/2dQheUo7uH4).
+
+Need more information, watch a quick video on how to [seed a stack in the CLI](https://www.youtube.com/watch?v=2dQheUo7uH4).
 
 ### 4\. Create a Delivery Token
 
-In you stack, go to **Settings** > **Tokens** in your Contentstack dashboard and [create a delivery token](/docs/developers/create-tokens/create-a-delivery-token) with the preview setting toggled to **On**.  
+In you stack, go to **Settings** > **Tokens** in your Contentstack dashboard and [create a delivery token](/docs/headless-cms/create-a-delivery-token) with the preview setting toggled to **On**.  
 Alternatively, watch a quick step-by-step tutorial on [How to create delivery tokens](https://share.layerpath.com/share/cm4n0a7ta0001mk0cd8w85lf9/tour).
 
 ### 5\. Setup environment variables

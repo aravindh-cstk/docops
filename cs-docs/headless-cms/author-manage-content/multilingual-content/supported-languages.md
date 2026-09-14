@@ -51,7 +51,7 @@ In Contentstack, each supported language is identified by a corresponding code:
 
 ## Code Standards
 
-For the language designator, Contenstack uses [ISO 639-1 Alpha-2 standard](http://www.loc.gov/standards/iso639-2/php/English_list.php).
+For the language designator, Contenstack uses [ISO 639-1 Alpha-2 standard](https://www.loc.gov/standards/iso639-2/php/English_list.php).
 
 For the country designator, Contentstack uses [ISO 3166-1 Alpha-2 country code](https://datahub.io/core/country-list).
 

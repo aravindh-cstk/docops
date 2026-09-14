@@ -19,11 +19,11 @@ This page uses the Algolia app as an example.
 ## What You Will Learn
 
 -   How to provide configuration details for an installed app.
-    
+
 -   How to save an app's configuration.
-    
+
 -   How to uninstall an app from the configuration screen.
-    
+
 
 ## Configure the app
 

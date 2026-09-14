@@ -17,9 +17,9 @@ Session Management in Contentstack allows you to monitor and manage all active s
 ## What You Will Learn
 
 -   How to find Session Management under the Security tab in Profile Settings.
-    
+
 -   How to terminate active sessions on other devices and browsers.
-    
+
 
 ## Terminate Other Sessions
 

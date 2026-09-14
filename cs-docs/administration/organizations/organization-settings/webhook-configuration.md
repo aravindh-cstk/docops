@@ -20,9 +20,9 @@ By configuring [webhooks](/docs/headless-cms/about-webhooks), you can designate 
 ## What You Will Learn
 
 -   How to set the connection rate limit for your organization's webhooks.
-    
+
 -   How throttling applies once the connection limit is reached.
-    
+
 
 ## Set Connection limit
 

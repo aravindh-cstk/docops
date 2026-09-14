@@ -16,9 +16,9 @@ To edit an existing management token, log in to your [Contentstack account](http
 2.  Select **Tokens** from the list.
 3.  Navigate to the **Management Tokens** tab and click a management token you want to edit.
 4.  Update the necessary fields such as name, description, selected branches or aliases (scope), stack-level permissions (read/write), expiration date, or manage rate limits.
-    
+
     **Note:** Manage Rate Limits is a plan-based feature. For more details, contact our [support](mailto:support@contentstack.com) team.
-    
+
 5.  Click **Save** to apply the changes.
 
 ![Edit management token screen](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt146196e797427451/67fe51b51650674fea249d4a/Edit_Mgmt_Token.png)

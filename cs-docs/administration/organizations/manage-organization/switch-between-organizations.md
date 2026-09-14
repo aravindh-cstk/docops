@@ -14,16 +14,16 @@ Contentstack allows you to switch between [organizations](/docs/administration/a
 
 -   [Contentstack account](https://www.contentstack.com/login)
 -   Administration-enabled Organizations with [Member](/docs/administration/about-administration-roles) permissions
-    
+
     **Note:** You can only view organizations in which you are a **Member**.
-    
+
 
 ## What You Will Learn
 
 -   How to switch the active organization.
-    
+
 -   Where to find the organization switcher in the interface.
-    
+
 
 ## Switch the Active Organization
 

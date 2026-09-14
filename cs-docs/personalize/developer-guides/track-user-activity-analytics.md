@@ -13,13 +13,13 @@ Tracking user activity, such as [Impressions](/docs/personalize/about-events#imp
 ## What You Will Learn
 
 -   How to trigger impressions with the JavaScript Personalize Edge SDK and the Personalize Edge API.
-    
+
 -   How to track impressions dynamically so analytics reflect what the user actually saw.
-    
+
 -   How to track conversions and attribute them to variants in A/B tests.
-    
+
 -   How to track impressions and conversions using Google Tag Manager.
-    
+
 
 ## Track Impressions
 

@@ -20,9 +20,9 @@ To create a custom role, log in to your [Contentstack account](https://www.conte
 4.  Click **\+ New Role**.
 5.  Enter a name and description for the role.
 6.  Under **Scope**, select one or more workspaces. This role applies only to the selected workspaces.
-    
+
     **Note:** Changing the selected workspace(s) resets previously configured permissions.
-    
+
 7.  In the **Assets** section, click **\+ Add Rule** to define what the role can do.
     -   Select permissions: **Read**, **Create**, **Update**, **Delete**.
     -   Choose the scope:
@@ -36,9 +36,9 @@ To create a custom role, log in to your [Contentstack account](https://www.conte
      -   Click **\+ Add Rule**.
      -   Select permissions: **Read**, **Create**, **Update**, **Delete**.
      -   Select language(s) from the dropdown to which the selected permissions apply.
-         
+
          **Warning:** If you remove access to the default language, assets that inherit from it become inaccessible.
-         
+
 12.  Click **Save** to create the custom space role.
 
 The new role appears in the **Roles** list for the space. You can now assign it to users when adding or editing space users.

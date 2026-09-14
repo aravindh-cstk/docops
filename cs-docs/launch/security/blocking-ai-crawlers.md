@@ -28,11 +28,11 @@ Launch provides two ways to help you control access by AI crawlers:
 ## What You Will Learn
 
 -   How to use robots.txt to disallow compliant AI crawlers.
-    
+
 -   How to block crawlers at runtime with a Launch Edge Function.
-    
+
 -   How to deploy and maintain the blocking rules.
-    
+
 
 ## Using robots.txt to Disallow AI Crawlers
 

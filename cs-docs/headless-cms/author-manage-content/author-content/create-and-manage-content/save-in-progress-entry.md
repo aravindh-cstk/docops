@@ -8,8 +8,6 @@ url: /headless-cms/save-in-progress-entry
 
 ## Save In-progress Entry
 
-**Note:** This feature is available only for V3 stacks and may require activation. If the feature is not enabled in your account, contact Contentstack [support](mailto:support@contentstack.com).
-
 When working with large or complex content types, completing an entry in a single session may not always be practical. Contentstack allows you to save your work while editing, even if some mandatory fields are not yet completed. These entries are referred to as **in-progress entries**.
 
 Saving in-progress entries helps preserve unfinished work so you can return later to complete and publish the entry.

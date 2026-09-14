@@ -13,13 +13,13 @@ The Contentstack App SDK .api() method offers a unified approach for making inte
 ## What You Will Learn
 
 -   When to use internal versus external API calls.
-    
+
 -   How to configure App Permissions and make internal calls to Contentstack APIs.
-    
+
 -   How to configure Advanced Settings Variables, Mappings, and Rewrites for external calls.
-    
+
 -   Best practices and troubleshooting for API integration.
-    
+
 
 ### When to Use Each Approach
 
@@ -190,14 +190,14 @@ async function generateAIContent(userPrompt) {
 
   } catch (error) {
     console.error('Error generating AI content:', error);
-    
+
     // Handle specific error cases
     if (error.status === 401) {
       throw new Error('Invalid API key. Please check your AI configuration.');
     } else if (error.status === 429) {
       throw new Error('Rate limit exceeded. Please try again later.');
     }
-    
+
     throw error;
   }
 }
@@ -217,11 +217,11 @@ async function makeApiCallWithRetry(url, options, maxRetries = 3) {
       return response.json();
     } catch (error) {
       console.warn(`Attempt ${attempt} failed:`, error.message);
-      
+
       if (attempt === maxRetries) {
         throw error;
       }
-      
+
       // Wait before retrying (exponential backoff)
       await new Promise(resolve => setTimeout(resolve, Math.pow(2, attempt) * 1000));
     }

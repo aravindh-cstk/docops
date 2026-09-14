@@ -53,7 +53,7 @@ If the Live Preview Onboarding UI displays errors, the setup may be incomplete o
 -   Verify that the correct **environment** and **base URL** are selected in Live Preview settings.
 -   Check if a CORS policy or X-Frame-Options is blocking access. Add https://\*.contentstack.com as an allowed origin in your CORS policy.
 -   Use the **Always** **Open in New Tab** feature to avoid iFrame limitations. Starting with **Live Preview SDK v4.0.0**, this feature opens your site in a standalone browser tab, outside the Contentstack iFrame.
-    
+
 
  |
 | 
@@ -83,7 +83,7 @@ If the Live Preview Onboarding UI displays errors, the setup may be incomplete o
 
 -   Update your Live Preview SDK to the latest version to ensure compatibility and access to new features.
 -   If your plan includes this feature but you use an SDK earlier than v4.0.0, selecting **Open in New Tab** still opens the site inside the Contentstack iFrame.
-    
+
 -   If you are using a post message instead of the Live Preview SDK, set the sdkVersion value to 1.4.5 in your init post message configuration. Refer to the [Live Preview SDK](/docs/headless-cms/how-live-preview-works-with-sdk) document for more details.
 
  |

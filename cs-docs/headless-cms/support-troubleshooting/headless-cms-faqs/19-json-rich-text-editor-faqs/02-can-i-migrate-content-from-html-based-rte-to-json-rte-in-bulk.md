@@ -9,4 +9,4 @@ _cms_faq_uid: csb44b32c66ecffe7e
 
 # Can I migrate content from HTML-based RTE to JSON RTE in bulk?
 
-Yes, Contentstack allows you to migrate your rich text content from your existing HTML-based RTE fields to the new JSON RTE fields for all entries of a content type in just a few minutes. Please refer to our [migration guide](/docs/headless-cms/migrate-content-from-html-rte-to-json-rte) for more details.
+Yes, Contentstack allows you to migrate your rich text content from your existing HTML-based RTE fields to the new JSON RTE fields for all entries of a content type in just a few minutes. Please refer to our [migration guide](/docs/headless-cms/cli-migrate-content-from-html-rte-to-json-rte/v1) for more details.

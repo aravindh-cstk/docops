@@ -1,7 +1,7 @@
 ---
 title: "Ocavu Asset Viewer"
 description: "Ocavu Asset Viewer"
-url: https://api.seekxr.com/docs/cs-ocavu-viewer/
+url: "https://api.seekxr.com/docs/cs-ocavu-viewer/"
 doc_type: link
 ---
 

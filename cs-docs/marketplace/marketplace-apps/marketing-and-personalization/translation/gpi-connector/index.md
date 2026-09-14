@@ -1,7 +1,7 @@
 ---
 title: "GPI Connector"
 description: "GPI Connector"
-url: https://www.translationplugin.com/index.php/contentstack-translation/
+url: "https://www.translationplugin.com/index.php/contentstack-translation/"
 doc_type: link
 ---
 

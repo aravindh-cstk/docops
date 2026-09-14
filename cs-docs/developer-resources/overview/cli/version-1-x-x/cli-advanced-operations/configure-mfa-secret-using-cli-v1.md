@@ -1,10 +1,10 @@
 ---
-title: "Configure MFA Secret Using CLI"
+title: "Configure MFA Secret Using CLI | V1.x.x"
 description: "Learn to set or remove your Multi-Factor Authentication (MFA) secret using Contentstack CLI for enhanced security and seamless MFA management."
 url: /headless-cms/configure-mfa-secret-using-cli/v1
 ---
 
-# Configure MFA Secret Using CLI
+# Configure MFA Secret Using CLI | V1.x.x
 
 ## Configure MFA Secret Using CLI
 
@@ -13,7 +13,7 @@ To use [Multi-Factor Authentication (MFA)](/docs/administration/multi-factor-aut
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login/)
--   [CLI installed](/docs/headless-cms/install-the-cli/)
+-   [CLI installed](/docs/headless-cms/install-the-cli/v1)
 -   [MFA enabled](/docs/administration/multi-factor-authentication#enable-mfa)
 -   A copy of MFA secret
 
@@ -44,7 +44,7 @@ csdx config:mfa:remove
 **Example**
 
 -   To remove the MFA secret by skipping the confirmation prompt:
-    
+
     ```
     csdx config:mfa:remove -y
     ```

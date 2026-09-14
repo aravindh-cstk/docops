@@ -95,6 +95,10 @@ Contentstack Utils SDK lets you interact with the Content Delivery APIs and retr
 
 To get an embedded item of a single entry, you need to provide the stack API key, environment name, delivery token, content type and entry UID. Then, use the **includeEmbeddedItems** and **Contentstack.Utils.render** functions as shown below:
 
+```
+import contentstack, { stackconfig } from '@contentstack delivery-sdk' const params: apikey: '<api_key>' , deliverytoken: '<environment_specific_delivery_token>' environment: '<environment>' stack="contentstack.stack(params)" result="await" .contenttype('<content_type_uid>') .entry('<entry_uid>') .includeembeddeditems() .fetch<blogpostentry>(); contentstack.utils.render({ result, renderoption })
+```
+
 If you have multiple HTML-based RTE fields in an entry and want to fetch the embedded items from a particular RTE field, you need to provide a path of those RTE fields.
 
 Refer to the example code below:
@@ -198,3 +202,14 @@ result.entries.forEach(entry => {
 
 -   To get all embedded items while fetching an entry with a JSON RTE field use **includeEmbeddedItems** function.
 -   The methods jsonToHTML() and htmlToJson() allow you to transform data between JSON and HTML formats.
+
+### Resolve Embedded Item Metadata
+
+The SDK resolves embedded entry and asset metadata from the \_embedded\_items object in the API response and exposes the resolved values at node.attrs.\_resolved. Read resolved values from there so that your rendered output reflects the current state of the embedded item. The legacy node.attrs\['asset-link'\] property, and the equivalent properties for other node types, remain readable as a soft-deprecated fallback.
+
+**Note:** The includeEmbeddedItems() method retrieves first-level embedded items only. To retrieve embedded items that are nested inside other embedded items, request the entry directly through the Content Delivery API with include\_embedded\_items\[\]=RECURSIVE.
+
+**Additional Resources:**
+
+-   Refer to [Embed Entries or Assets](/docs/headless-cms/embed-entries-or-assets) to understand how embedded item data is stored and resolved.
+-   Refer to [CDA | Entries](/docs/developers/apis/content-delivery-api/entries) for the include\_embedded\_items\[\] and embedded\_items\_depth parameter reference.

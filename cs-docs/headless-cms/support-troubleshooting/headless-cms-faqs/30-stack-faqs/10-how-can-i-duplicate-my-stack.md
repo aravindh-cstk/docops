@@ -9,4 +9,4 @@ _cms_faq_uid: cs4360fdd9f59bbf1c
 
 # How can I duplicate my Stack?
 
-Yes, you can [duplicate stacks](https://www.contentstack.com/docs/headless-cms/cloning-a-stack). You can also use [Branches](https://www.contentstack.com/docs/headless-cms/about-branches) to create multiple copies of your stack content.
+Yes, you can [duplicate stacks](https://www.contentstack.com/docs/headless-cms/cli-cloning-a-stack). You can also use [Branches](https://www.contentstack.com/docs/headless-cms/about-branches) to create multiple copies of your stack content.

@@ -10,6 +10,8 @@ url: /assets/assets-limitations
 
 Contentstack Assets enforces certain limits and constraints to ensure performance, security, consistency, and scalability across asset operations. These limitations apply to asset uploads, metadata, localization, workspaces, versioning, permissions, delivery, and asset usage.
 
+**Note:** These limits apply to new Assets. For assets stored directly in a stack, see [Asset Limitations](/docs/headless-cms/asset-limitations).
+
 ## File Naming and URL Constraints
 
 Asset filenames and asset URLs **cannot include** the following characters:
@@ -22,13 +24,11 @@ Any restricted character is **automatically replaced with an underscore (****\_*
 
 ## File Size and Upload Limits
 
--   **Maximum file size:**
-    -   **UI uploads:** Up to **1 GB** per asset
-    -   **API uploads:** Up to **10 GB** per asset per request
--   **Batch upload limit:** Up to **10 assets** per batch operation
--   **Maximum assets across organization:** Up to **5,0****0,000 assets**
+-   **Maximum file size:** Up to **1.5 GB** per asset
+-   **Upload limit:** Up to **100 assets** per upload
+-   **Maximum assets per workspace:** Up to **500,000 assets**
 
-**Note:** To request an increase in file size, batch limits, or total asset count, contact [Contentstack support](mailto:support@contentstack.com).
+**Note:** To request an increase in file size, upload limits, or total asset count, contact [Contentstack support](mailto:support@contentstack.com).
 
 ## Image Optimization Limits
 

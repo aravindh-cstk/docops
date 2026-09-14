@@ -17,9 +17,9 @@ To add a Global field to your content type, log in to your [Contentstack account
 3.  Click the “+” (Insert a field) icon and select **Global** from the list.
 4.  To modify the properties of the Global field, click the **Properties** icon. This opens a modal with two tabs: **Basic** and **Advanced**.
 5.  In the **Basic** tab, under **Select Global Field**, choose your Global field. The selected field appears in your content type as a field, containing the required sub-fields.
-    
+
     **Note:** You can add up to **25 Global** fields in a content type.
-    
+
 6.  In the **Basic** tab, you can modify the following properties of a Global field at any time:
     1.  [**Display Name**](/docs/headless-cms/display-name): Defines how the field appears in the UI.
     2.  [**Unique ID**](/docs/headless-cms/unique-id): A system-generated identifier for the field.
@@ -30,9 +30,9 @@ To add a Global field to your content type, log in to your [Contentstack account
     2.  [**Multiple**](/docs/headless-cms/multiple): Allows multiple instances for the field.
     3.  [**Non-localizable**](/docs/headless-cms/non-localizable): Set the field’s data only in the master-language entry.
     4.  [**Show as Tab**](/docs/headless-cms/show-as-tab): Organizes entry fields into separate tabs within the entry editor. This is a plan-based feature and may not be available to all users.
-        
+
         ![Add the Global Field to Content Types](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9e5f5011327ebaee/680a0d0cf2b32efed2658c77/add-global-fields-to-the-content.gif)
-        
+
 
 **Note:**
 

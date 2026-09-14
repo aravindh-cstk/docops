@@ -19,9 +19,9 @@ You can permanently delete an app you own in Developer Hub. This page shows how 
 ## What You Will Learn
 
 -   How to delete an app from Developer Hub.
-    
+
 -   What happens to an app and its resources after deletion.
-    
+
 
 ## Delete the App
 

@@ -83,9 +83,9 @@ Through this approach Client/ Browser can directly access Contentstack Delivery 
 -   [Static website architecture](/docs/headless-cms/static-website-detailed-architecture)
 -   [Dynamic website architecture](/docs/headless-cms/dynamic-website-detailed-architecture)
 -   [Partially headless setup architecture](/docs/headless-cms/partially-headless-setup-detailed-architecture)  
-    
+
 -   [Layered architecture for Contentstack-powered websites](/docs/headless-cms/contentstack-powered-website-layered-architecture)  
-    
+
 -   [Cloud infrastructure diagram](/docs/headless-cms/cloud-infrastructure-architecture-for-contentstack-powered-websites) 
 -   [MACH System Architecture](/docs/headless-cms/mach-architecture-diagram)
 -   [Simple Website Using DataSync](/docs/headless-cms/simple-website-using-datasync)

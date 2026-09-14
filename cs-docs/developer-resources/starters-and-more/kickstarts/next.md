@@ -37,7 +37,7 @@ cd kickstart-next
 
 This repository contains a minimal Next.js project already wired up to use Contentstack's SDK and Live Preview utilities.
 
-Github for Frontend Next App: [Kickstart Next.js](https://github.com/contentstack/kickstart-next.git)
+Github for Frontend Next App: [Kickstart Next.js](https://github.com/contentstack/kickstart-next)
 
 ### 2\. Install Dependencies
 
@@ -80,19 +80,19 @@ Next, set up a Contentstack Stack loaded with sample content for the Kickstart. 
 
 1.  Download the Stack seed data from GitHub.
 2.  Install the Contentstack CLI (if not already installed):
-    
+
     ```
     npm install -g @contentstack/cli
     ```
-    
+
 3.  If you are running the CLI for the first time, set your region:
-    
+
     ```
     csdx config:set:region AWS-EU
     ```
-    
+
     **Note**:
-    
+
     -   AWS North America: Set the region as **AWS-NA**.
     -   AWS Europe: Set the region as **AWS-EU**.
     -   AWS Australia: Set the region as **AWS-EU**.
@@ -100,26 +100,26 @@ Next, set up a Contentstack Stack loaded with sample content for the Kickstart. 
     -   Azure Europe: Set the region as **AZURE-EU**.
     -   Google Cloud Platform North America: Set the region as **GCP-NA**.
     -   Google Cloud Platform Europe: Set the region as **GCP-EU**.
-    
+
 4.  Log in via the CLI:
-    
+
     ```
     csdx auth:login
     ```
-    
+
     This command will ask you to provide your Contentstack's account credentials (email and password).
-    
+
 5.  Get your **Organization ID** from the Contentstack dashboard: Go to Org Admin > **Info** and copy the Org ID:![Get-Org-ID](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt250c40ce6173b773/680254ba9a3191443e63edc7/get-orgID.png)
 6.  Seed your Stack:
-    
+
     ```
     csdx cm:stacks:seed --repo "contentstack/kickstart-stack-seed" --org "<YOUR_ORG_ID>" -n "CS Kickstart Next"
     ```
-    
-    This command creates a new Stack (named "CS Kickstart Next") in your organization and populates it with the content types and entries needed for the Kickstart. (If you've already set up a Kickstart Stack earlier, you can reuse it and skip this step.)
-    
 
-Need more information, watch a quick video on how to [seed a stack in the CLI](https://youtu.be/2dQheUo7uH4).
+    This command creates a new Stack (named "CS Kickstart Next") in your organization and populates it with the content types and entries needed for the Kickstart. (If you've already set up a Kickstart Stack earlier, you can reuse it and skip this step.)
+
+
+Need more information, watch a quick video on how to [seed a stack in the CLI](https://www.youtube.com/watch?v=2dQheUo7uH4&feature=youtu.be).
 
 ### Bootstrap with the CLI
 
@@ -839,4 +839,4 @@ By exploring these Kickstart variants, you've seen multiple ways to integrate Ne
 
 Feel free to mix and match ideas from these Kickstarts. For example, you could combine SSR with GraphQL, or add middleware to an SSR project. The core concepts of initializing the SDK, fetching content, and setting up Live Preview/Visual Editor will remain similar.
 
-You now have a comprehensive understanding of how to set up and run Next.js projects integrated with Contentstack across multiple rendering modes. If you have any questions or run into an error, join the [Contentstack Community in Discord](https://community.contentstack.com) for further support. Happy coding with Contentstack and Next.js!
+You now have a comprehensive understanding of how to set up and run Next.js projects integrated with Contentstack across multiple rendering modes. If you have any questions or run into an error, join the [Contentstack Community in Discord](https://www.contentstack.com/community) for further support. Happy coding with Contentstack and Next.js!

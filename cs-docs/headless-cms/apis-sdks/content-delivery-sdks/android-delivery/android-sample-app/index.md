@@ -1,7 +1,7 @@
 ---
 title: "Android Sample App"
 description: "Android Sample App"
-url: https://github.com/contentstack/contentstack-android-persistence-example
+url: "https://github.com/contentstack/contentstack-android-persistence-example"
 doc_type: link
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Smartling"
 description: "Smartling"
-url: https://help.smartling.com/hc/en-us/articles/4865477629083
+url: "https://help.smartling.com/hc/en-us/articles/4865477629083"
 doc_type: link
 ---
 

@@ -92,5 +92,5 @@ For more information, refer to our [Timeline Preview](/docs/headless-cms/set-up-
 -   [JavaScript Live Preview Utils SDK](/docs/developers/sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk)
 -   [JavaScript Playground App](https://github.com/contentstack/contentstack-js-sync-playground)
 -   [API Reference for JavaScript Delivery SDK](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference/)
--   [JavaScript SDK Changelog](/docs/developers/sdks/content-delivery-sdk/javascript-browser/javascript-sdk-changelog/)
+-   [JavaScript SDK Changelog](/docs/changelog?filter=sdks)
 -   [View and Download JavaScript Delivery SDK repository on GitHub](https://github.com/contentstack/contentstack-javascript)

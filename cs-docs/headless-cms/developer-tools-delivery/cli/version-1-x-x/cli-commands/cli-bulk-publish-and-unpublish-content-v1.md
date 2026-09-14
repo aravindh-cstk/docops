@@ -1,10 +1,10 @@
 ---
-title: "Bulk Publish and Unpublish Content"
+title: "Bulk Publish and Unpublish Content | V1.x.x"
 description: "Use the CLI to bulk publish and unpublish entries and assets in Contentstack for efficient content management across environments."
 url: /headless-cms/cli-bulk-publish-and-unpublish-content/v1
 ---
 
-# Bulk Publish and Unpublish Content
+# Bulk Publish and Unpublish Content | V1.x.x
 
 ## Bulk Publish and Unpublish Content
 
@@ -13,9 +13,9 @@ The Bulk publish and unpublish commands allow you to publish entries and assets
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login)
--   CLI [installed](/docs/headless-cms/install-the-cli) and [configured](/docs/headless-cms/configure-regions-in-the-cli/) (version 1.7.0 and above)
--   [Authentication](/docs/headless-cms/cli-authentication) to use CLI
--   A [configured management token](/docs/headless-cms/cli-authentication#add-management-token) 
+-   CLI [installed](/docs/headless-cms/install-the-cli/v1) and [configured](/docs/headless-cms/configure-regions-in-the-cli/v1) (version 1.7.0 and above)
+-   [Authentication](/docs/headless-cms/cli-authentication/v1) to use CLI
+-   A [configured management token](/docs/headless-cms/cli-authentication/v1#add-management-token) 
 
 ## Commands
 
@@ -23,7 +23,7 @@ To perform bulk publish and unpublish operations on entries and assets, there ar
 
 Let's discuss them in detail.
 
-**Additional Resource:** Contentstack CLI lets you configure rate limits for various bulk publishing operations. Read more about [using rate limits for enhanced bulk publishing control](/docs/headless-cms/configure-rate-limits-in-the-cli#using-rate-limits-for-enhanced-bulk-publishing-control).
+**Additional Resource:** Contentstack CLI lets you configure rate limits for various bulk publishing operations. Read more about [using rate limits for enhanced bulk publishing control](/docs/headless-cms/configure-rate-limits-in-the-cli/v1#using-rate-limits-for-enhanced-bulk-publishing-control).
 
 ### Bulk Publish All Entries
 
@@ -122,14 +122,14 @@ csdx cm:assets:publish -e <environment_name> --locales <locale_code> --stack-api
 -   \--bulk-publish=bulk-publish: Set this flag to use Contentstack's Bulk Publish APIs. It is **true,** by default.
 -   \--retry-failed=retry-failed: _(optional)_ Use this option to retry publishing the failed assets from the logfile. Specify the name of the logfile that lists failed publish calls. If this option is used, it will override all other flags.
 -   \--folder-uid=folder-uid: _(optional)_ The UID of the Assets' folder from which the assets need to be published. The default value is **cs\_root**.
--   \--backup-dir=backup-dir: _(optional)_ Path to the import backup directory. When set, each imported asset is published only to the environments and locales it was published to in the source stack, read from the backup's publish details and asset UID mapping. Exclusive with \--source-env, \--folder-uid, \--environments, and \--locales. Use this option for the post-import publish flow described in [Import Content Using the CLI](/docs/headless-cms/import-content-using-the-cli).
+-   \--backup-dir=backup-dir: _(optional)_ Path to the import backup directory. When set, each imported asset is published only to the environments and locales it was published to in the source stack, read from the backup's publish details and asset UID mapping. Exclusive with \--source-env, \--folder-uid, \--environments, and \--locales. Use this option for the post-import publish flow described in [Import Content Using the CLI](/docs/headless-cms/import-content-using-the-cli/v1).
 -   \--locales=locales: Locales in which assets will be published, e.g., _en-us_. In the case of multiple locales, specify the codes separated by spaces.
 -   \-y, \--yes: Set it to **true** to process the command with the current configuration.
 -   \-c, \--config=config: _(optional)_ The path of the optional configuration JSON file containing all the options for a single run. Refer to the [configure](#build-the-configuration-file) command to create a configuration file.
 
 **Asset Scan Skip Behavior:** If asset scanning is enabled for the stack, cm:assets:publish skips quarantined assets permanently and skips in-queue (pending) assets with no automatic retry. Wait for scanning to finish, then rerun the command to publish a skipped asset.
 
-**Additional Resources:** For more information, refer to the [Asset Scanning in CLI](/docs/headless-cms/asset-scanning-in-cli) documentation.
+**Additional Resources:** For more information, refer to the [Asset Scanning in CLI](/docs/headless-cms/asset-scanning-in-cli/v1) documentation.
 
 ### Bulk Publish Entries/Assets from One Environment to Another
 
@@ -344,7 +344,7 @@ csdx cm:entries:unpublish -e <environment_name> --locale <locale_code> --stack-a
 
 The cm:stacks:publish-configure command lets you generate a template for the configuration JSON file. It will set the variables for the Bulk Publish commands.
 
-After you generate the configuration file, you can simply use its path in the -c , \--config=config option of any Bulk Publish commands. You can view this [reference configuration file](https://github.com/contentstack/cli/blob/v2.0.0-beta/packages/contentstack-bulk-publish/src/config/index.js) for Bulk Publish commands.
+After you generate the configuration file, you can simply use its path in the -c , \--config=config option of any Bulk Publish commands. You can view this [reference configuration file](https://github.com/contentstack/cli-plugins/blob/main/packages/contentstack-bulk-operations/src/config/index.ts) for Bulk Publish commands.
 
 **Usage:**
 
@@ -381,4 +381,4 @@ csdx cm:stacks:publish-configure --stack-api-key <stack_api_key>
 
 -   The [cm:bulk-publish:add-fields](#bulk-publish-all-entries-after-adding-a-new-field-in-the-content-type) command does not work for [custom](/docs/headless-cms/custom) and [mandatory](/docs/headless-cms/mandatory) fields.
 -   To manage API request timing and prevent concurrency issues, add the delayMs parameter to your configuration file to add controlled delays between requests. For example, use delayMs: 1000 (for 1-second delays).
--   On stacks with asset scanning enabled, cm:assets:publish does not retry assets that are still in the scan queue. See [Assets remain unpublished after cm:assets:publish --backup-dir](#assets-remain-unpublished-after-cmassetspublish---backup-dir) for the resolution.
+-   On stacks with asset scanning enabled, cm:assets:publish does not retry assets that are still in the scan queue. See [Assets remain unpublished after cm:assets:publish --backup-dir](#assets-remain-unpublished-after) for the resolution.

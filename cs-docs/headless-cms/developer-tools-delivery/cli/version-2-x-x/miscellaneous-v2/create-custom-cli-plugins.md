@@ -1,37 +1,41 @@
 ---
-title: "Create Custom CLI Plugins for Contentstack"
+title: "Create Custom CLI Plugins for Contentstack | V2.x.x"
 description: "Learn how to build, test, and publish custom CLI plugins for Contentstack using oclif. Covers setup, development workflow, and best practices."
 url: /headless-cms/create-custom-cli-plugins
 ---
 
-# Create Custom CLI Plugins for Contentstack
+# Create Custom CLI Plugins for Contentstack | V2.x.x
 
-## Create Custom CLI Plugins for Contentstack
+## Creating Custom CLI Plugins for Contentstack
 
-This guide explains how to develop an external plugin for [Contentstack CLI](https://www.contentstack.com/docs/headless-cms/install-the-cli), including requirements, project structure, best practices, testing, publishing steps, and key internal behaviors to consider.
+## Overview
 
-## Introduction
+Build an external plugin that extends the Contentstack CLI with custom commands, using the oclif framework together with Contentstack CLI utilities for authentication, configuration, and API access.
 
-The Contentstack CLI supports modular extensibility through external plugins.
+The Contentstack CLI supports modular extensibility via external plugins, which:
 
-These plugins offer the following capabilities:
+-   Extend CLI functionality with custom commands
+-   Can be installed globally or locally
+-   Are built using the [oclif framework](https://oclif.io/)
 
--   Extend CLI functionality with custom commands.
--   Allow global (system-wide) or local (project-specific) installation.
--   Integrate with the [oclif framework](https://oclif.io/) for structured command development.
-
-**Example plugin**: [@contentstack/apps-cli](https://www.npmjs.com/package/@contentstack/apps-cli)
+**Reference plugin:** [@contentstack/apps-cli](https://www.npmjs.com/package/@contentstack/apps-cli)
 
 ## Prerequisites
 
--   [Node.js version 22.x and above](https://nodejs.org/en/download/)
--   [Contentstack account](https://www.contentstack.com/login/)
--   Familiarity with the oclif CLI framework (recommended)
--   Contentstack CLI [installed](/docs/headless-cms/install-the-cli)
+Before you start, ensure the following:
+
+-   **Node.js version 22 or above**
+-   **Contentstack account** ([Sign up](https://www.contentstack.com/login) if you don't have one)
+-   **Familiarity with the oclif CLI framework** (recommended)
+-   **Contentstack CLI installed globally:**
+
+```
+npm install -g @contentstack/cli
+```
 
 ## Plugin Structure
 
-A well-organized plugin should follow the recommended directory layout:
+A well-organized plugin follows this recommended directory layout:
 
 ```
 my-plugin/
@@ -48,7 +52,7 @@ my-plugin/
 └── oclif.manifest.json
 ```
 
-**Note:** Use namespacing to prefix all commands to avoid collision. For example, use csdx myplugin:do instead of csdx do.
+**Note:** Use namespacing to prefix all commands to avoid collision, e.g., csdx myplugin:do instead of csdx do.
 
 ## Creating a Plugin
 
@@ -59,19 +63,19 @@ npx oclif generate myplugin
 cd myplugin
 ```
 
-The generator prompts you with the following questions:
+The generator will prompt you with the following questions (shown in the order they appear):
 
-1.  **Select a module type**: Choose ESM or CommonJS.
-2.  **NPM package name**: Example: @contentstack/myplugin or myplugin
-3.  **Command bin name the CLI will export**: Example: myplugin (this is the binary name, not the full command namespace)
-4.  **Description**: Example: A new CLI generated with oclif
-5.  **Author**: Example: Contentstack or your organization name
-6.  **License**: Default: MIT
-7.  **Who is the GitHub owner of repository**: Example: @contentstack
-8.  **What is the GitHub name of repository**: Example: myplugin
-9.  **Select a package manager**: Choose: npm, yarn, or pnpm
+1.  **Select a module type** - Choose ESM or CommonJS
+2.  **NPM package name** - Example @contentstack/myplugin or myplugin
+3.  **Command bin name the CLI will export** - Example: myplugin (this is the binary name, not the full command namespace)
+4.  **Description** - Example: A new CLI generated with oclif
+5.  **Author** - Example: Contentstack or your organization name
+6.  **License** - Default: MIT
+7.  **Who is the GitHub owner of repository** (https://github.com/OWNER/repo) - Example: @contentstack
+8.  **What is the GitHub name of repository** (https://github.com/owner/REPO) - Example: myplugin
+9.  **Select a package manager** - Choose: npm, yarn, or pnpm
 
-After answering these prompts, the generator creates the plugin structure in your current directory.
+After answering these prompts, the generator will create the plugin structure in your current directory.
 
 ### Configure package.json
 
@@ -82,21 +86,24 @@ Modify the generated package.json to include the necessary oclif configuration:
   "name": "myplugin",
   "version": "1.0.0",
   "oclif": {
-    "plugins": [],
-    "commands": "./src/commands"
+    "commands": "./lib/commands",
+    "bin": "csdx"
   },
   "dependencies": {
-    "@oclif/core": "^3.0.0"
+    "@contentstack/cli-command": "~2.0.0",
+    "@contentstack/cli-utilities": "~2.0.0",
+    "@oclif/core": "^4.11.14"
   }
 }
 ```
 
-### Move to plugin-directory
+**Note:** oclif.commands must point to ./lib/commands (the compiled JavaScript output), not ./src/commands. Pointing to TypeScript source will cause command discovery to fail when the plugin is linked or installed.
+
+### Move to Plugin-Directory
 
 ```
-cd <plugin-directory>
-// Example:
-cd ./myplugin
+cd 
+# Example: cd ./myplugin
 ```
 
 ### Generate a command
@@ -115,230 +122,264 @@ Before linking or using your plugin, you must build it to compile TypeScript to 
 npm run build
 ```
 
-This command compiles your TypeScript commands from src/commands/ to dist/commands/.
-
-During development, oclif reads from src. When published, the CLI loads compiled commands from dist (based on your build settings).
+This compiles your TypeScript commands from src/commands/ to lib/commands/.
 
 ### Generate the manifest
 
-After building the plugin, generate the oclif manifest file by running the following command:
+After building, generate the oclif manifest file:
 
 ```
 npx oclif manifest
 ```
 
-This command creates the oclif.manifest.json file, which is required for the CLI to discover your commands.
+This creates oclif.manifest.json, which is required for the CLI to discover your commands.
 
 ## Plugin Registration and Linking
 
-When developing a plugin locally, you must link it to the Contentstack CLI for testing:
+When developing a plugin locally, you need to link it to the Contentstack CLI for testing:
 
 ```
-cd <plugin-directory>
-csdx plugins:link
+cd 
+csdx plugins:link .
 ```
 
 This sets up the plugin within the csdx namespace, allowing you to use your custom commands directly.
 
-### Verify the Setup
+### Verify the setup
 
-Test that your plugin is properly linked by running the following command:
+Test that your plugin is properly linked:
 
 ```
-csdx myplugin:do
+csdx myplugin:do --help
 ```
 
-You should see your plugin's output in the terminal.
+You should see your command's help output in the terminal.
 
 ### Development Workflow
 
-During development, you can use the development mode, which automatically transpiles TypeScript as you make changes.
-
-Alternatively, run the plugin directly using Node.js:
+During development, you can run the plugin directly using Node.js:
 
 ```
-node bin/run myplugin:do
+# Production mode (compiled JS from lib/)
+node bin/run.js myplugin:do
+
+# Development mode (TypeScript via ts-node, no build step needed)
+node bin/dev.js myplugin:do
 ```
 
 **Tip:** After making changes to your plugin, rebuild and regenerate the manifest, then test with csdx myplugin:do to ensure everything works correctly.
 
 ## Commands and Flags
 
-Each command in your plugin must follow the oclif command structure:
+Each command in your plugin should follow the oclif command structure:
 
 ### Command Structure
 
 -   static description - Help text displayed in the CLI
--   static flags - CLI options and arguments
+-   static args - Positional arguments (optional)
+-   static flags - Named CLI flags/options
 -   async run() - Main command logic
 
 ### Example Command
 
 ```
-import {Command, Flags} from '@oclif/core'
+import { Command } from '@contentstack/cli-command'
+import { Args, flags } from '@contentstack/cli-utilities'
 
 export default class MyCommand extends Command {
-  static description = 'Performs operations with Contentstack'
-  
+  static description = 'Does something cool with Contentstack'
+
+  // Positional arguments — import Args from @contentstack/cli-utilities
+  static args = {
+    environment: Args.string({
+      description: 'Environment name',
+      required: true,
+    }),
+  }
+
   static flags = {
-    stack: Flags.string({
+    'stack-api-key': flags.string({
       char: 's',
       description: 'Stack API key',
       required: true,
     }),
-    help: Flags.help({char: 'h'}),
   }
 
   async run() {
-    const {flags} = await this.parse(MyCommand)
-    this.log(`Working with stack: ${flags.stack}`)
+    const { args: cmdArgs, flags: cmdFlags } = await this.parse(MyCommand)
+    // All base Command class properties are available automatically:
+    this.log(`Stack: ${cmdFlags['stack-api-key']}, Env: ${cmdArgs.environment}`)
+    this.log(`CMA: ${this.cmaAPIUrl}, Region: ${this.region.name}`)
   }
 }
 ```
+
+**Note:** Import Command from @contentstack/cli-command (not @oclif/core). Import flags (lowercase) and Args from @contentstack/cli-utilities. flags and Args are re-exported from @oclif/core, they are not Contentstack-specific, but importing them from @contentstack/cli-utilities is the recommended approach so your plugin does not need a direct @oclif/core dependency.
 
 ## Testing
 
 ### Testing Setup
 
-Use @oclif/test with Mocha or Jest for testing your commands.
+Use @oclif/test with Mocha and sinon for testing your commands.
 
-### Example Test
+**Note:** @oclif/test v4 (which aligns with @oclif/core v4) removed the old chained test.stdout().command().it() API entirely. The package now exports only runCommand, captureOutput, and runHook. Using the old API will throw TypeError: Cannot read properties of undefined.
+
+#### Example Test
 
 ```
-import {expect, test} from '@oclif/test'
+import { expect } from 'chai'
+import { describe, it, afterEach } from 'mocha'
+import { stub, restore } from 'sinon'
+import MyCommand from '../../../src/commands/myplugin/do'
 
 describe('myplugin:do', () => {
-  test
-    .stdout()
-    .command(['myplugin:do', '--stack', 'dummy_key'])
-    .it('runs myplugin:do', ctx => {
-      expect(ctx.stdout).to.contain('Working with stack: dummy_key')
-    })
+  afterEach(() => restore())
+
+  it('runs with required flag', async () => {
+    const runStub = stub(MyCommand.prototype, 'run').resolves()
+    await MyCommand.run(['--stack-api-key', 'dummy_key'])
+    expect(runStub.calledOnce).to.be.true
+  })
 })
 ```
 
-**Run Tests**
+#### Run Tests
 
 ```
 npm test
 ```
 
-## Testing Workflows
+### Testing Workflows
 
-### Production Testing
+#### Production Testing
 
-To simulate the end-user experience, follow these steps to test your published plugin:
+Test your published plugin as end users would:
 
-1.  [**Install the Contentstack CLI globally**](/docs/headless-cms/install-the-cli):  
-    
+1.  **Install the Contentstack CLI globally:**  
+
     ```
     npm i -g @contentstack/cli
     ```
-    
-2.  [**Set the region**](/docs/headless-cms/configure-regions-in-the-cli#set-region):  
-    
+
+2.  **Set the region:**  
+
     ```
-    csdx config:set:region <region-name>
+    csdx config:set:region
     ```
-    
-3.  [**Authenticate**](/docs/headless-cms/cli-authentication#authentication):  
-    
+
+3.  **Authenticate:**  
+
     ```
-    csdx login
+    csdx auth:login
     ```
-    
-4.  **Install your published plugin**:  
-    
+
+4.  **Install your published plugin:**  
+
     ```
     csdx plugins:install @contentstack/myplugin
     ```
-    
-5.  **Test the plugin command**:  
-    
+
+5.  **Test the plugin command:**  
+
     ```
     csdx myplugin:do --help
     ```
-    
 
-### Development Testing
+
+#### Development Testing
 
 Test your plugin during development:
 
-1.  **Install the Contentstack CLI globally**:  
-    
+1.  **Install the Contentstack CLI globally:**  
+
     ```
     npm i -g @contentstack/cli
     ```
-    
-2.  **Set the region**:  
-    
+
+2.  **Set the region:**  
+
     ```
-    csdx config:set:region <region-name>
+    csdx config:set:region
     ```
-    
-3.  **Authenticate**:  
-    
+
+3.  **Authenticate:**  
+
     ```
-    csdx login
+    csdx auth:login
     ```
-    
-4.  **Link your local plugin**:  
-    
+
+4.  **Link your local plugin:**  
+
     ```
-    csdx plugins:link <plugin-local-path>
+    csdx plugins:link
     ```
-    
-5.  **Test the plugin command**:  
-    
+
+5.  **Test the plugin command:**  
+
     ```
     csdx myplugin:do --help
     ```
-    
+
 
 ## Important Considerations
 
 ### Region and Authentication
 
-Core plugins handle region and authentication automatically. Before using any command, ensure the user has configured the region and completed authentication.
+**Note:** Core plugins handle region and authentication automatically. Before using any command, ensure the user has configured the **region** and completed **authentication**.
 
-1.  [**Set the region**](/docs/headless-cms/configure-regions-in-the-cli#set-region):  
-    
+1.  **Set the region:**  
+
     ```
-    csdx config:set:region <region-name>
+    csdx config:set:region
     ```
-    
-2.  [**Authenticate**](/docs/headless-cms/cli-authentication#authentication):  
-    
+
+    For more information, see [Configure Regions](/docs/headless-cms/configure-regions-in-the-cli).
+2.  **Authenticate:**  
+
     ```
-    csdx login
+    csdx auth:login
     ```
-    
+
+    For more information, see [CLI Authentication](/docs/headless-cms/cli-authentication).
 
 ### Contentstack CLI Features
 
-The @contentstack/cli package provides additional features that plugins can leverage:
+The @contentstack/cli-command base Command class exposes the following properties automatically, with no manual config lookup needed. Properties use two API abbreviations: Content Management API (CMA) and Content Delivery API (CDA).
 
-| Feature | Description |
-| --- | --- |
-| cdaHost, cmaHost, region | Region-aware endpoints |
-| authToken, email, region, config | Auto-loaded from CSDX config |
-| utilities | Common helpers for I/O, logging, formatting, etc. |
-| Shared base command classes | Consistent CLI behavior |
+| Property | Type | Description |
+| --- | --- | --- |
+| this.region | { name, cma, cda, uiHost, ... } | Full region object |
+| this.cmaHost | string | CMA hostname, protocol stripped (api.contentstack.io) |
+| this.cdaHost | string | CDA hostname, protocol stripped (cdn.contentstack.io) |
+| this.cmaAPIUrl | string | Full CMA URL with https:// (https://api.contentstack.io) |
+| this.cdaAPIUrl | string | Full CDA URL with https:// |
+| this.uiHost | string | App UI URL (https://app.contentstack.com) |
+| this.email | string | Logged-in user's email. Throws CLIError if not logged in |
+| this.rateLimit | number | User-configured rate limit (default: 5) |
+| this.getToken(alias) | function | Look up a stored management token by alias |
+| this.deliveryAPIClient | contentstack SDK | Contentstack Delivery SDK, ready to initialize |
+| this.developerHubUrl | string | Developer Hub API URL |
+| this.launchHubUrl | string | Launch Hub API URL |
+| this.personalizeUrl | string | Personalize API URL |
+| this.composableStudioUrl | string | Composable Studio URL |
+| this.context | object | oclif config context |
 
-### Publishing the Plugin
+## Publishing the Plugin
 
-1.  Publish your plugin package to npm:  
-    
+### Publish to npm
+
+1.  **Publish your plugin package to npm:**  
+
     ```
     npm publish
     ```
-    
-2.  Install via CLI:  
-    
+
+2.  **Install via CLI:**  
+
     ```
     csdx plugins:install @contentstack/myplugin
     ```
-    
+
 
 Once installed, users can use your custom plugin to execute tasks.
 
@@ -348,432 +389,650 @@ Once installed, users can use your custom plugin to execute tasks.
 
 | Practice | Description |
 | --- | --- |
-| Use namespacing | Prefix commands like myplugin:action to avoid collisions. |
-| Follow oclif standards | Maintain command/flag conventions for consistency. |
-| Use proper CLI feedback | Use this.log, this.error, ux.prompt for user interaction. |
-| Validate inputs | Check required flags/args early in your command logic. |
-| Add tests | Include basic tests for every command. |
-| Document commands | Add descriptions, usage, and examples. |
-| Use Contentstack SDKs | Prefer official [SDKs](/docs/developers/sdks) like contentstack-management. |
-| Respect user configs | Use ~/.csdx/config.json when needed. |
-| Log errors gracefully | Use clear error messages and helpful hints. |
+| **Use namespacing** | Prefix commands like myplugin:action to avoid collisions |
+| **Follow oclif standards** | Maintain command/flag conventions for consistency |
+| **Use proper CLI feedback** | Use this.log, this.error, ux.prompt for user interaction |
+| **Validate inputs** | Check required flags/args early in your command logic |
+| **Add tests** | Include basic tests for every command |
+| **Document commands** | Add descriptions, usage, and examples |
+| **Use Contentstack SDKs** | Prefer official SDKs like contentstack-management |
+| **Respect user configs** | Use ~/.csdx/config.json when needed |
+| **Log errors gracefully** | Use clear error messages and helpful hints |
 
 ### Don'ts
 
 | Practice | Reason |
 | --- | --- |
-| Don't overwrite global configs | Avoid altering shared state. |
-| Don't hardcode values | Make plugins configurable. |
-| Don't break existing flows | Avoid side effects in CLI. |
-| Don't ignore security | Never log sensitive information. |
-| Don't bypass CLI output patterns | Ensure UX consistency. |
+| **Don't overwrite global configs** | Avoid altering shared state |
+| **Don't hardcode values** | Make plugins configurable |
+| **Don't break existing flows** | Avoid side effects in CLI |
+| **Don't ignore security** | Never log sensitive information |
+| **Don't bypass CLI output patterns** | Ensure UX consistency |
 
-## Uninstall a Plugin
+## Managing Installed Plugins
 
-To uninstall a plugin, perform the following steps:
+### Uninstalling a Plugin
 
-1.  **List the installed plugins**:  
-    
+If you need to uninstall a plugin:
+
+1.  **List installed plugins:**  
+
     ```
-    csdx plugins:list
+    csdx plugins
     ```
-    
-2.  **Uninstall a specific plugin**:  
-    
+
+2.  **Uninstall a specific plugin:**  
+
     ```
-    csdx plugins:uninstall <plugin_name>
+    csdx plugins:uninstall
     ```
-    
 
-**Note:** This command **does not delete** the plugin's code folder from your local machine. It only removes the plugin from the CLI's plugin registry.
 
-## Update a Plugin
+**Note:** This command will not delete the plugin's code folder from your local machine, only remove it from the CLI's plugin registry.
 
-To update an installed plugin, run the following command:
+### Updating a Plugin
+
+If you need to update an installed plugin:
 
 ```
 csdx plugins:update
 ```
 
-## Remove All User Installed Plugins
+### Resetting All Plugins
 
-To remove all user-installed plugins, run the following command:
+To remove all user-installed plugins:
 
 ```
 csdx plugins:reset
 ```
 
-## Display Installation Properties of a Plugin
+### Inspecting a Plugin
 
-To display the installation properties of a plugin, run the following commands:
+To display the installation properties of a plugin:
 
 ```
-cd <plugin-directory>
+cd 
 csdx plugins:inspect
 ```
 
 ## Available Methods and Utilities
 
-When building your plugin, you have access to various methods and utilities from both oclif and the Contentstack CLI. Here are the most commonly used ones:
-
 ### Basic oclif Command Methods
 
-These methods are available directly in the Command class:
-
 ```
-// Logging
-this.log('Message')                    // Print a message
-this.error('Error message')           // Print an error and exit
-this.warn('Warning message')           // Print a warning
-
-// Exit handling
-this.exit(code)                       // Exit with code (0 = success)
-this.error('Message', {exit: 1})      // Error and exit with code
-
-// Configuration access
-this.config.bin                        // CLI binary name
-this.config.version                    // CLI version
+this.log('Message')               // Print a message
+this.error('Error message')       // Print an error and exit
+this.warn('Warning message')      // Print a warning
+this.exit(0)                      // Exit with code
+this.config.bin                   // CLI binary name ('csdx')
+this.config.version               // CLI version
 ```
 
-### Contentstack CLI Utilities
+### Contentstack CLI Utilities (@contentstack/cli-utilities)
 
-**Note:** @contentstack/cli-utilities is optional and only required if you plan to use Contentstack-specific utilities such as cliux, configHandler, or managementSDKClient. Skip this if you're building a simple plugin that doesn't interact with Contentstack APIs.
-
-To use Contentstack CLI utilities, install the following package:
+**Note:** Only needed if you want Contentstack-specific utilities (cliux, managementSDKClient, etc.). Simple plugins that don't interact with Contentstack APIs can skip this.
 
 ```
 npm install @contentstack/cli-utilities
 ```
 
-This ensures your plugin works correctly when published and installed via csdx plugins:install.
-
-**User Interface (cliux)**
+#### User Interface (cliux)
 
 ```
 import { cliux } from '@contentstack/cli-utilities'
 
-// Printing messages
-cliux.print('Message')                 // Print message
-cliux.print('Message', {color: 'cyan'}) // Print with color
-cliux.success('Success message')       // Print success message
-cliux.error('Error message')           // Print error message
-cliux.warning('Warning message')       // Print warning message
-cliux.info('Info message')             // Print info message
+// Print messages
+cliux.print('Message')
+cliux.print('Info', { color: 'cyan' })           // cyan = info style
+cliux.print('Warning', { color: 'yellow' })      // yellow = warning style
+cliux.print('Bold text', { bold: true })
+cliux.success('Done!')                           // green
+cliux.error('Something failed')                  // red
 
-// User prompts
-const answer = await cliux.inquire({
-  type: 'input',
-  name: 'value',
-  message: 'Enter a value:',
-  default: 'default-value'
-})
+// Note: cliux.info() and cliux.warning() do NOT exist — use cliux.print() with color
 
+// Spinner — cliux.loader() is a TOGGLE: first call starts, second call stops
+cliux.loader('Processing...')   // start
+// ... do work ...
+cliux.loader()                  // stop — never forget this or the spinner hangs
+
+// loaderV2 — returns an Ora instance for more control
+const spinner = cliux.loaderV2('Fetching...')  // start, returns Ora
+// ... do work ...
+cliux.loaderV2('Done', spinner)                // set text and stop
+
+// Table output — value = data key, alias = display header
+cliux.table(
+  [
+    { value: 'title', alias: 'Title' },
+    { value: 'uid',   alias: 'UID' },
+  ],
+  entries.map((e: any) => ({ title: e.title, uid: e.uid })),
+)
+
+// Progress bar — returns a cli-progress SingleBar
+const bar = cliux.progress({ format: 'Writing |{bar}| {value}/{total}' })
+bar.start(total, 0)
+bar.increment()
+bar.stop()
+
+// Prompts
+const answer = await cliux.inquire({ type: 'input', name: 'value', message: 'Enter value:' })
 const confirmed = await cliux.confirm('Are you sure?')
-
-// Loading indicators
-cliux.loader('Processing...')          // Show loading spinner
 ```
 
-**Configuration Access (configHandler)**
+#### Structured Errors (CLIError)
+
+Use CLIError instead of cliux.error() + this.exit() to throw a clean, structured CLI error:
+
+```
+import { CLIError } from '@contentstack/cli-utilities'
+
+if (!isAuthenticated()) {
+  throw new CLIError('Please login first: csdx auth:login')
+}
+```
+
+#### Positional Arguments (Args)
+
+```
+import { Args, flags } from '@contentstack/cli-utilities'
+
+static args = {
+  environment: Args.string({ description: 'Environment name', required: true }),
+  uid: Args.string({ description: 'Entry UID' }),
+}
+
+async run() {
+  const { args: cmdArgs } = await this.parse(MyCommand)
+  this.log(cmdArgs.environment)
+}
+```
+
+#### Configuration Access (configHandler)
 
 ```
 import { configHandler } from '@contentstack/cli-utilities'
 
-// Get configuration values
-const email = configHandler.get('email')
-const region = configHandler.get('region')  // Returns { name, cma, cda }
-const config = configHandler.get('config')   // Full config object
+const email  = configHandler.get('email')
+const region = configHandler.get('region')    // { name, cma, cda, uiHost, ... }
+const token  = configHandler.get('authtoken')
 
-// Set configuration values
-configHandler.set('key', 'value')
+configHandler.set('myKey', 'value')
+```
 
-// Check authentication
-import { isAuthenticated } from '@contentstack/cli-utilities'
-if (isAuthenticated()) {
-  // User is logged in
+#### Authentication
+
+```
+import { isAuthenticated, isManagementTokenValid } from '@contentstack/cli-utilities'
+
+// Check if user is logged in (reads authtoken/oauthAccessToken from config)
+if (!isAuthenticated()) {
+  throw new CLIError('Please login first: csdx auth:login')
+}
+
+// Validate a stored management token before using it in a long operation
+const { token } = this.getToken(alias)
+const result = await isManagementTokenValid(stackApiKey, token)
+if (result.valid !== true) {
+  throw new CLIError(`Token invalid: ${result.message}`)
 }
 ```
 
-**Management SDK Client**
+#### Management SDK Client
 
 ```
 import { managementSDKClient } from '@contentstack/cli-utilities'
 
-// Get authenticated SDK client
-const region = configHandler.get('region')
-const client = await managementSDKClient({ host: region.cma })
-
-// Use the client
-const stack = await client.stack({ api_key: 'your-api-key' })
-const entries = await stack.contentType('content_type_uid').entry().query().find()
+// Always use this.cmaHost from the base Command class — it's already region-aware
+const client = await managementSDKClient({ host: this.cmaHost })
+const stack  = client.stack({ api_key: cmdFlags['stack-api-key'] })
+const result = await stack.contentType('blog_post').entry().query().find()
 ```
 
-**Essential Helper Functions**
+#### Direct HTTP Client (HttpClient)
+
+For calls that don't go through the management SDK (custom endpoints, third-party APIs):
 
 ```
-import { 
-  isAuthenticated,
+import { HttpClient, configHandler } from '@contentstack/cli-utilities'
+
+const httpClient = new HttpClient({
+  headers: {
+    api_key:   cmdFlags['stack-api-key'],
+    authtoken: configHandler.get('authtoken'),
+  },
+})
+
+const response = await httpClient.get(`${this.cmaAPIUrl}/v3/stacks`)
+const stack = response?.data?.stack
+```
+
+HttpClient handles proxy configuration, retry logic, and Open Authorization (OAuth) headers automatically.
+
+#### File System Utility (FsUtility)
+
+For chunked streaming reads and writes of large datasets, used by all import/export plugins:
+
+```
+import { FsUtility } from '@contentstack/cli-utilities'
+
+const fsUtil = new FsUtility({
+  basePath:            './exports/entries',
+  moduleName:          'entries',
+  fileExt:             'json',
+  createDirIfNotExist: true,
+})
+
+// Write entries in chunks (auto-creates UUID-named chunk files + index)
+for (const entry of entries) {
+  fsUtil.writeIntoFile([entry] as any, { keyName: 'uid', mapKeyVal: true })
+}
+```
+
+#### Progress Tracking (CLIProgressManager + SummaryManager)
+
+CLIProgressManager is the standard way to track progress in complex multi-module operations (used by import/export plugins). It handles spinners, progress bars, and per-module success/failure counts.
+
+Use the static factory createSimple for a single-module progress bar. The constructor auto-starts the spinner or progress bar, there is no separate start() call. Use tick() to record each item result, and complete() to finalize:
+
+```
+import { CLIProgressManager } from '@contentstack/cli-utilities'
+
+// createSimple(moduleName, total) — auto-starts on construction
+const manager = CLIProgressManager.createSimple('entries', entries.length)
+
+for (const entry of entries) {
+  try {
+    await processEntry(entry)
+    manager.tick(true, entry.uid)           // success
+  } catch (err: any) {
+    manager.tick(false, entry.uid, err.message)  // failure
+  }
+}
+
+// complete() stops the bar and triggers summary callbacks
+manager.complete(manager.getFailureCount() === 0)
+```
+
+For multi-module operations with a shared summary (used by import/export):
+
+```
+import { CLIProgressManager } from '@contentstack/cli-utilities'
+
+// Initialize a global summary before creating any managers
+CLIProgressManager.initializeGlobalSummary('export', 'main', 'EXPORT CONTENT')
+
+const entriesManager    = CLIProgressManager.createSimple('entries', entries.length)
+const assetsManager     = CLIProgressManager.createSimple('assets', assets.length)
+
+for (const entry of entries) {
+  entriesManager.tick(true, entry.uid)
+}
+entriesManager.complete(true)
+
+for (const asset of assets) {
+  assetsManager.tick(true, asset.uid)
+}
+assetsManager.complete(true)
+
+// Print final success/failure counts for all modules
+CLIProgressManager.printGlobalSummary()
+```
+
+SummaryManager is used internally by CLIProgressManager, so you rarely need it directly. Access the shared instance via the static method:
+
+```
+const hasFailed = CLIProgressManager.hasFailures()  // true if any module had failures
+CLIProgressManager.printGlobalSummary()             // print all module counts
+CLIProgressManager.clearGlobalSummary()             // reset for a new run
+```
+
+#### Reading Content Type Schemas (readContentTypeSchemas / readGlobalFieldSchemas)
+
+For plugins that work with exported content type or global field schema files:
+
+```
+import { readContentTypeSchemas, readGlobalFieldSchemas } from '@contentstack/cli-utilities'
+
+// Read all CT schema JSON files from a directory
+const contentTypes = readContentTypeSchemas('./exports/content_types')
+
+// Read all global field schema files (excludes schema.json, __master.json, etc.)
+const globalFields = readGlobalFieldSchemas('./exports/global_fields')
+```
+
+#### Chalk (loadChalk / getChalk)
+
+Chalk 5 is ESM-only. Use the built-in compatibility layer rather than requiring chalk directly:
+
+```
+import { loadChalk, getChalk } from '@contentstack/cli-utilities'
+
+// During CLI init / command setup — loads and caches chalk
+await loadChalk()
+
+// After loadChalk() has been called — get the cached instance
+const chalk = getChalk()
+cliux.print(chalk.bold.cyan('Bold cyan text'))
+```
+
+#### Helper Utilities
+
+```
+import {
   formatError,
   validatePath,
-  sanitizePath
+  sanitizePath,
+  pathValidator,
+  redactObject,
+  generateUid,
+  generateShortUid,
+  formatDate,
+  formatTime,
+  isManagementTokenValid,
+  getAuthenticationMethod,
+  validateUids,
+  validateFileName,
+  escapeRegExp,
 } from '@contentstack/cli-utilities'
 
-// Check authentication
-if (isAuthenticated()) {
-  // User is logged in
+// Format Contentstack API errors into a clean message string
+try { /* API call */ } catch (error) {
+  throw new CLIError(formatError(error))
 }
 
-// Format Contentstack API errors
-try {
-  // API call
-} catch (error) {
-  const formattedError = formatError(error)
-  cliux.error(formattedError)
-}
+// Path validation — rejects paths with special chars (*,$,%,#,<>,{},!,&,?)
+if (!validatePath(cmdFlags.output)) throw new CLIError('Invalid path')
 
-// Path validation and sanitization
-if (validatePath('/some/path')) {
-  const cleanPath = sanitizePath('../../../some/path') // Removes directory traversal
-}
+// Path sanitization — strips directory traversal (../) and normalises slashes
+const safe = sanitizePath(path.resolve(cmdFlags.output))
+
+// Path normalization — resolves against cwd and strips traversal
+const normalized = pathValidator('./relative/path')
+
+// Redact sensitive keys before logging
+// Strips: authtoken, token, api_key, management token, delivery token, password, secret, email
+const safePayload = redactObject({ apiKey: 'bltXXX', authtoken: 'csXXX', email: 'user@example.com', data: 'ok' })
+// => { apiKey: '[REDACTED]', authtoken: '[REDACTED]', email: '[REDACTED]', data: 'ok' }
+
+// UUID generation
+const uid      = generateUid()       // UUID v4
+const shortUid = generateShortUid()  // short UUID
+
+// Date/time formatting (produces YYYYMMDD and HHMMSS strings)
+const now  = new Date()
+const date = formatDate(now)   // '20260813'
+const time = formatTime(now)   // '183916'
+
+// Auth method detection
+const method = getAuthenticationMethod()  // 'OAuth' | 'Basic Auth' | ''
+
+// UID and filename validation
+validateUids('blt123abc')      // true/false — alphanumeric only
+validateFileName('export.json') // true/false — alphanumeric, dash, underscore, dot
+escapeRegExp('a.b*c')          // 'a\\.b\\*c'
 ```
 
-**Logger Service**
-
-The logger automatically initializes with the log path determined by the following priority:
-
-1.  Environment variable: CS\_CLI\_LOG\_PATH (highest priority)
-2.  User config: log.path from CLI config (set via csdx config:set:log --path <path>)
+#### Logger Service
 
 ```
-import { log, handleAndLogError, getLogPath } from '@contentstack/cli-utilities'
+import { log, handleAndLogError, getLogPath, getSessionLogPath } from '@contentstack/cli-utilities'
 
-// Get the current log path (useful for debugging)
-const logPath = getLogPath()
-console.log(`Logs are being written to: ${logPath}`)
+const logPath     = getLogPath()        // base log path for the current run
+const sessionPath = getSessionLogPath() // session-specific log file path
 
-// Simple logging (uses singleton logger, automatically initializes)
 log.info('Info message')
 log.success('Success message')
 log.warn('Warning message')
-log.debug('Debug message', { context: 'additional data' })
-
-// Structured error logging
+log.debug('Debug message', { context: 'extra data' })
 log.logError({
-  type: 'API_ERROR',
+  type:    'API_ERROR',
   message: 'Failed to fetch entries',
-  error: error,
-  context: { stackApiKey: 'your-key' },
-  meta: { additionalInfo: 'value' }
+  error:   error,
+  context: { stackApiKey: 'bltXXX' },
 })
 
-// Error handling with classification
 try {
-  // Your code
+  // your code
 } catch (error) {
   handleAndLogError(error, { command: 'myplugin:do' }, 'Custom error message')
 }
 ```
 
-**Configuring Log Path**
-
-Users can configure the log path using the CLI logging preference as follows:
+Configure log path:
 
 ```
 csdx config:set:log --path /path/to/logs
-```
-
-Or set the environment variable:
-
-```
+# or
 export CS_CLI_LOG_PATH=/path/to/logs
 ```
 
-### Complete Example: Using Utilities
+### Complete Example
 
-Here's a complete example showing how to use these utilities together:
+A production-quality command using all major utilities:
 
 ```
-import {Command, Flags} from '@oclif/core'
-import { 
-  cliux, 
-  configHandler, 
-  isAuthenticated,
-  managementSDKClient 
+import { Command } from '@contentstack/cli-command'
+import {
+  Args,
+  flags,
+  cliux,
+  CLIError,
+  isAuthenticated,
+  managementSDKClient,
+  redactObject,
+  generateUid,
+  formatDate,
+  formatTime,
+  configHandler,
 } from '@contentstack/cli-utilities'
 
 export default class MyCommand extends Command {
-  static description = 'Fetches entries from Contentstack'
-  
-  static flags = {
-    'content-type': Flags.string({
-      char: 'c',
-      description: 'Content type UID',
-      required: true,
-    }),
-    'stack-api-key': Flags.string({
-      char: 's',
-      description: 'Stack API key',
-      required: true,
-    }),
-  }
+  static description = 'Fetch and display entries from a content type'
 
-  async run() {
-    const {flags} = await this.parse(MyCommand)
-    
-    // Check authentication
-    if (!isAuthenticated()) {
-      cliux.error('Please login first: csdx login')
-      this.exit(1)
-    }
-    
-    // Get region configuration
-    const region = configHandler.get('region')
-    if (!region) {
-      cliux.error('Please set a region: csdx config:set:region <region>')
-      this.exit(1)
-    }
-    
-    cliux.info(`Using region: ${region.name}`)
-    
-    try {
-      // Get authenticated client
-      const client = await managementSDKClient({ host: region.cma })
-      const stack = client.stack({ api_key: flags['stack-api-key'] })
-      
-      // Show loading indicator
-      cliux.loader('Fetching entries...')
-      
-      // Fetch entries
-      const entries = await stack
-        .contentType(flags['content-type'])
-        .entry()
-        .query()
-        .find()
-      
-      cliux.success(`Found ${entries.items.length} entries`)
-      
-      // Display results
-      entries.items.forEach((entry: any) => {
-        cliux.print(`- ${entry.title} (${entry.uid})`)
-      })
-      
-    } catch (error: any) {
-      cliux.error(`Error: ${error.message}`)
-      this.exit(1)
-    }
-  }
+  static examples = ['csdx myplugin:do blog_post --stack-api-key ']
+
+  static args = {
+    'content-type': Args.string({ description: 'Content type UID', required: true }),
+  }
+
+  static flags = {
+    'stack-api-key': flags.string({ char: 's', description: 'Stack API key', required: true }),
+    alias: flags.string({ char: 'a', description: 'Management token alias' }),
+  }
+
+  async run() {
+    const { args: cmdArgs, flags: cmdFlags } = await this.parse(MyCommand)
+
+    if (!isAuthenticated()) {
+      throw new CLIError('Please login first: csdx auth:login')
+    }
+
+    const requestId = generateUid()
+    const now       = new Date()
+
+    // All base Command class properties — available automatically
+    cliux.print(`Region:      ${this.region.name}`, { color: 'cyan' })
+    cliux.print(`CMA URL:     ${this.cmaAPIUrl}`, { color: 'cyan' })
+    cliux.print(`CDA URL:     ${this.cdaAPIUrl}`, { color: 'cyan' })
+    cliux.print(`UI host:     ${this.uiHost}`, { color: 'cyan' })
+    cliux.print(`Rate limit:  ${this.rateLimit} req/s`, { color: 'cyan' })
+    cliux.print(`Request ID:  ${requestId} — ${formatDate(now)}_${formatTime(now)}`, { color: 'cyan' })
+
+    // loaderV2: start spinner, returns Ora instance
+    const spinner = cliux.loaderV2(`Fetching entries from '${cmdArgs['content-type']}'...`)
+
+    try {
+      const client = await managementSDKClient({ host: this.cmaHost })
+      const stack  = client.stack({ api_key: cmdFlags['stack-api-key'] })
+      const result = await stack.contentType(cmdArgs['content-type']).entry().query().find()
+
+      cliux.loaderV2('Done', spinner)  // stop spinner
+      cliux.success(`Found ${result.items.length} entries`)
+
+      // cliux.table(): value = data key, alias = column header
+      cliux.table(
+        [
+          { value: 'title',      alias: 'Title' },
+          { value: 'uid',        alias: 'UID' },
+          { value: 'locale',     alias: 'Locale' },
+          { value: 'created_at', alias: 'Created' },
+        ],
+        result.items.map((e: any) => ({
+          title:      e.title || '(no title)',
+          uid:        e.uid,
+          locale:     e.locale || 'en-us',
+          created_at: e.created_at?.substring(0, 10) || '-',
+        })),
+      )
+
+      // redactObject strips sensitive keys before logging
+      const safeLog = redactObject({
+        requestId,
+        stackApiKey: cmdFlags['stack-api-key'],
+        authtoken:   configHandler.get('authtoken'),
+        entries:     result.items.length,
+      })
+      cliux.print(JSON.stringify(safeLog, null, 2))
+
+    } catch (error: any) {
+      cliux.loaderV2('', spinner)  // always stop spinner on error
+      throw new CLIError(error.errorMessage || error.message)
+    }
+  }
 }
 ```
 
-### Quick Reference: Essential Utilities
+### Utilities Quick Reference
 
-Here's a quick reference of essential utilities from @contentstack/cli-utilities:
+For the full list of base Command properties available on this (this.region, this.cmaHost, this.cdaHost, and the rest), see [Contentstack CLI Features](#contentstack-cli-features) above.
 
-| Utility | Import | Purpose |
-| --- | --- | --- |
-| User Interface | cliux | Print messages, prompts, confirmations |
-| Configuration | configHandler | Access CLI config (authToken, email, region) |
-| Authentication | isAuthenticated | Check if the user is logged in |
-| Management SDK | managementSDKClient | Contentstack Management API client |
-| Error Handling | formatError | Format Contentstack API errors |
-| Path Utilities | validatePath, sanitizePath | Validate and sanitize file paths |
-| Logging | LoggerService | Logging for your plugin |
+#### @contentstack/cli-utilities: All Exports
+
+| Export | Purpose |
+| --- | --- |
+| cliux | print, success, error, loader (toggle), loaderV2 (Ora), table, progress, inquire, confirm |
+| CLIError | Throw a structured CLI error |
+| flags | Flag definitions (flags.string, flags.boolean, flags.integer, ...) |
+| Args | Positional argument definitions (Args.string, Args.integer, ...) |
+| configHandler | Read/write CLI config (get, set) |
+| isAuthenticated | Returns true if logged in |
+| isManagementTokenValid | Validates a management token against the API |
+| getAuthenticationMethod | Returns 'OAuth' | 'Basic Auth' | '' |
+| managementSDKClient | Authenticated CMA SDK client |
+| HttpClient | Direct HTTP client with proxy/retry support |
+| FsUtility | Chunked file read/write for large datasets |
+| CLIProgressManager | Full progress tracking: spinner, bar, success/failure counts |
+| SummaryManager | Per-module operation summary |
+| readContentTypeSchemas | Read content type JSON files from a directory |
+| readGlobalFieldSchemas | Read global field JSON files from a directory |
+| marketplaceSDKClient | Contentstack Marketplace SDK client |
+| formatError | Parse and format Contentstack API errors |
+| validatePath | Reject paths with special chars |
+| sanitizePath | Remove ../ traversal, normalise slashes |
+| pathValidator | Resolve path against cwd, strip traversal |
+| redactObject | Strip sensitive keys (authtoken, api\_key, token, etc.) before logging |
+| generateUid | UUID v4 |
+| generateShortUid | Short UUID |
+| formatDate | Date → 'YYYYMMDD' |
+| formatTime | Date → 'HHMMSS' |
+| validateUids | Validate alphanumeric UID |
+| validateFileName | Validate filename characters |
+| escapeRegExp | Escape special chars for use in RegExp |
+| loadChalk / getChalk | Chalk 5 ESM compatibility layer |
+| log | Singleton logger (info, success, warn, debug, logError) |
+| handleAndLogError | Classify and log an error |
+| getLogPath | Base log directory path |
+| getSessionLogPath | Session-specific log file path |
+| LoggerService | Logger class for custom logger instances |
+| CLITable | Table rendering class |
+| NodeCrypto | Encryption/decryption utility |
+| messageHandler | i18n key→string resolution |
+| authHandler | Authentication handler |
+| managementSDKInitiator | Low-level SDK initiator |
+| ContentstackClient, ContentstackConfig | TypeScript types for management SDK |
 
 ## Troubleshooting
 
 ### Command Not Found After Linking
 
-If your command isn't recognized after linking:
+**Root Cause(s)**: The plugin was linked before it was built, or the oclif manifest is stale, so the CLI has no record of the command.
 
-1.  Verify that the build completed successfully:  
-    
+**Resolution**:
+
+1.  **Verify the build completed successfully:**  
+
     ```
     npm run build
     ```
-    
-2.  Regenerate the manifest:  
-    
+
+2.  **Regenerate the manifest:**  
+
     ```
     npx oclif manifest
     ```
-    
-3.  Check that the command exists in the dist/commands/ directory:  
-    
+
+3.  **Check that the command exists in** lib/commands/**:**  
+
     ```
-    ls dist/commands/myplugin/
+    ls lib/commands/myplugin/
     ```
-    
-4.  Relink the plugin:  
-    
+
+4.  **Relink the plugin:**  
+
     ```
     csdx plugins:uninstall myplugin
-    csdx plugins:link
+    csdx plugins:link .
     ```
-    
+
 
 ### ESM Module Warnings
 
-You may see a warning as given below:
+**Root Cause(s)**: oclif cannot auto-transpile a linked ESM plugin, so it prints a warning like the one below even though the plugin runs fine from its compiled output:
 
+```
 Warning: @contentstack/myplugin is a linked ESM module and cannot be auto-transpiled.
+```
 
-This warning is expected. The plugin loads compiled code from the dist/ directory. Ensure to build your plugin before linking.
+**Resolution**: No action is needed if you've already built the plugin. The plugin runs from the compiled code in the lib/ directory, not from the warning's source. Build your plugin before linking to avoid the warning altogether.
 
 ### Changes Not Reflecting
 
-If your changes aren't showing up:
+**Root Cause(s)**: The linked plugin still points at a previous build, since linking does not automatically rebuild or refresh the plugin's compiled output.
 
-1.  Rebuild the plugin:  
-    
-    ```
-    npm run build
-    ```
-    
-2.  Regenerate the manifest:  
-    
-    ```
-    npx oclif manifest
-    ```
-    
-3.  Relink if necessary:  
-    
-    ```
-    csdx plugins:link
-    ```
-    
+**Resolution**:
+
+1.  Rebuild the plugin: npm run build
+2.  Regenerate the manifest: npx oclif manifest
+3.  Relink if necessary: csdx plugins:link .
 
 ### Authentication or Region Errors
 
-If you get authentication or region errors:
+**Root Cause(s)**: The CLI has no active session, or no region configured, for the account being used.
 
-1.  Verify you're logged in:  
-    
-    ```
-    csdx login
-    ```
-    
-2.  Check your region:  
-    
-    ```
-    csdx config:get:region
-    ```
-    
-3.  Set region if required:  
-    
-    ```
-    csdx config:set:region <region-name>
-    ```
-    
+**Resolution**:
+
+1.  Verify you're logged in: csdx auth:login
+2.  Check your region: csdx config:get:region
+3.  Set region if needed: csdx config:set:region <region-name>
 
 ### Plugin Installation Issues
 
-If installation fails:
+**Root Cause(s)**:
 
-1.  Verify that the package is published on npm.
-2.  Check that the package name matches:  
-    
-    ```
-    csdx plugins:install @contentstack/myplugin
-    ```
-    
-3.  Ensure that the package has the correct oclif.manifest.json file (generated during npm publish).
+-   The package isn't published on npm.
+-   The package name in the install command doesn't match the published name.
+-   The package is missing a valid oclif.manifest.json file.
+
+**Resolution**:
+
+1.  Verify the package is published on npm.
+2.  Check the package name matches: csdx plugins:install @contentstack/myplugin.
+3.  Ensure the package has the correct oclif.manifest.json file (generated during npm publish).
+
+## Next Steps
+
+-   [CLI Authentication](/docs/headless-cms/cli-authentication): set up and verify authentication for the Contentstack CLI before publishing or testing your plugin.
+-   [Configure Regions](/docs/headless-cms/configure-regions-in-the-cli): point the CLI at the correct Contentstack region for your organization.
+-   [@contentstack/apps-cli](https://www.npmjs.com/package/@contentstack/apps-cli): review a real, published plugin for command structure and namespacing conventions.

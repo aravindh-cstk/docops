@@ -1,7 +1,7 @@
 ---
 title: "Get a User Profile"
 description: "Get a User Profile"
-url: https://docs.lytics.com/docs/finding-a-user
+url: "https://docs.lytics.com/docs/finding-a-user"
 doc_type: link
 ---
 

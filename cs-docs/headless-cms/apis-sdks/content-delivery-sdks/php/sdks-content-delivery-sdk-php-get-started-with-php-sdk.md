@@ -119,5 +119,5 @@ $result = $stack->ContentType(CONTENT_TYPE_UID)->Query()->toJSON()->skip(20)->li
 
 -   [Download PHP SDK](/docs/developers/sdks/content-delivery-sdk/php/download-php-sdk)
 -   [PHP SDK API Reference](/docs/developers/sdks/content-delivery-sdk/php/reference/)
--   [PHP SDK Changelog](/docs/developers/sdks/content-delivery-sdk/php/php-sdk-changelog/)
+-   [PHP SDK Changelog](/docs/changelog?filter=sdks)
 -   [View and Download PHP SDK repository on GitHub](https://github.com/contentstack/contentstack-php)

@@ -23,13 +23,13 @@ Use this guide to configure Contentstack Authentication at project creation, env
 ## What You Will Learn
 
 -   How to enable or disable Contentstack Authentication during project creation.
-    
+
 -   How to enable or disable it during environment creation.
-    
+
 -   How to enable or disable it from Environment Settings.
-    
+
 -   How Contentstack Authentication compares to and combines with Password Protection.
-    
+
 
 ## Configure Contentstack Authentication
 

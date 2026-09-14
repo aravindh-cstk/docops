@@ -14,7 +14,7 @@ The Live Preview Utils SDK version 2 allows you to listen to entry change events
 
 ## Prerequisite
 
--   [Node.js](https://nodejs.org/) version 4.4.7 or later
+-   [Node.js](https://nodejs.org/en) version 4.4.7 or later
 
 ## Installation and Setup
 

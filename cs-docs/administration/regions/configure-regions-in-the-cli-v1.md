@@ -1,10 +1,10 @@
 ---
-title: "Configure Regions in the CLI"
+title: "Configure Regions in the CLI | V1.x.x"
 description: "Configure regions in Contentstack Command-line Interface to optimize your setup and streamline workflows across multiple data centers."
 url: /headless-cms/configure-regions-in-the-cli/v1
 ---
 
-# Configure Regions in the CLI
+# Configure Regions in the CLI | V1.x.x
 
 ## Configure Regions in the CLI
 
@@ -32,12 +32,23 @@ You can also configure custom hosts for different APIs and set a custom region n
 
 ## Prerequisites
 
--   **Contentstack Account:** Active account
--   **CLI Installed:** Version 1.7.0 or above (see [Install the CLI](/docs/developers/cli/install-the-cli))
+-   [Contentstack account](https://www.contentstack.com/login/)
+-   **CLI Installed:** Version 1.7.0 or above (see [Install the CLI](/docs/headless-cms/install-the-cli/v1))
+
+## What You Will Learn
+
+-   How to view the region the CLI is currently using.
+
+-   How to set a predefined region for CLI operations.
+
+-   How to select a region interactively.
+
+-   How to configure a custom region with custom API hosts.
+
 
 ---
 
-## Quick Start
+## Common Commands
 
 ### Get Current Region
 
@@ -160,15 +171,15 @@ csdx config:set:region \
 
 **Options:**
 
-| Option | Short | Description | Required |
-| --- | --- | --- | --- |
-| --cda | -d | Custom host for Content Delivery API. If used, --cma, --ui-host, and -n are required | Conditional\* |
-| --cma | -m | Custom host for Content Management API. If used, --cda, --ui-host, and -n are required | Conditional\* |
-| --ui-host |  | Custom UI host for CLI. If used, --cda, --cma, and -n are required | Conditional\* |
-| --name | -n | Name for the custom region. If used, --cda, --cma, and --ui-host are required | Conditional\* |
-| --developer-hub |  | Custom host for Developer Hub API | No |
-| --launch |  | Custom host for Launch API | No |
-| --personalize |  | Custom host for Personalize Management API | No |
+| Flag | Type | Required | Default | Description | Notes |
+| --- | --- | --- | --- | --- | --- |
+| --cda, -d | string | Conditional\* | - | Custom host for Content Delivery API. If used, --cma, --ui-host, and -n are required |  |
+| --cma, -m | string | Conditional\* | - | Custom host for Content Management API. If used, --cda, --ui-host, and -n are required |  |
+| --ui-host | string | Conditional\* | - | Custom UI host for CLI. If used, --cda, --cma, and -n are required |  |
+| --name, -n | string | Conditional\* | - | Name for the custom region. If used, --cda, --cma, and --ui-host are required |  |
+| --developer-hub | string | No | - | Custom host for Developer Hub API |  |
+| --launch | string | No | - | Custom host for Launch API |  |
+| --personalize | string | No | - | Custom host for Personalize Management API |  |
 
 \* If any of \--cda, \--cma, \--ui-host, or \-n is used, all four are required.
 
@@ -189,7 +200,7 @@ csdx config:set:region \
 
 ---
 
-## Developer Examples
+## Examples
 
 ### Example 1: Configure Region for Different Environments
 
@@ -244,9 +255,16 @@ csdx config:get:region
 
 ---
 
-## Related Documentation
+**Additional Resource**
 
--   [Install the CLI](/docs/developers/cli/install-the-cli)
--   [CLI Authentication and Adding Tokens](/docs/developers/cli/cli-authentication)
--   [Configure Rate Limits in the CLI](/docs/developers/cli/configure-rate-limits-in-the-cli)
--   [Contentstack Regions](/docs/developers/contentstack-regions)
+For more information, refer to the following documents:
+
+-   [Install the CLI](/docs/headless-cms/install-the-cli/v1)
+-   [CLI Authentication and Adding Tokens](/docs/headless-cms/cli-authentication/v1)
+-   [Configure Rate Limits in the CLI](/docs/headless-cms/configure-rate-limits-in-the-cli/v1)
+-   [Contentstack Regions](/docs/administration/about-regions)
+
+## Limitations
+
+-   The region argument accepts only the predefined list: NA, EU, AU, AWS-NA, AWS-EU, AWS-AU, AZURE-NA, AZURE-EU, GCP-NA, GCP-EU. Any other value is rejected.
+-   A custom region requires \--cda, \--cma, \--ui-host, and \--name together. None of the four can be set on its own.

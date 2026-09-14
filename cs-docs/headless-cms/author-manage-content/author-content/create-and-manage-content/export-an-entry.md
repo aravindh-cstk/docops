@@ -20,7 +20,7 @@ To export an existing entry, log in to your [Contentstack account](https://www.c
     1.  Locate the entry you want to export and click the **vertical ellipsis** in the **Actions** column
     2.  From the dropdown menu, select **Export**.
 
-**Additional Resource:** To export content types or multiple entries, refer to the [Export Content Using the CLI](/docs/headless-cms/export-content-using-the-cli/) documentation.
+**Additional Resource:** To export content types or multiple entries, refer to the [Export Content Using the CLI](/docs/headless-cms/export-content-using-the-cli) documentation.
 
 ## API Reference
 

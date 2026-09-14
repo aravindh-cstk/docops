@@ -1,10 +1,10 @@
 ---
-title: "Configure Regions in the CLI | Beta Commands"
+title: "Configure Regions in the CLI | V2.x.x"
 description: "Configure regions in Contentstack Command-line Interface to optimize your setup and streamline workflows across multiple data centers."
 url: /headless-cms/configure-regions-in-the-cli
 ---
 
-# Configure Regions in the CLI | Beta Commands
+# Configure Regions in the CLI | V2.x.x
 
 ## Configure Regions in the CLI
 
@@ -27,7 +27,7 @@ Using the following set of commands you can configure the [regions](/docs/admini
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login)
--   CLI [installed](/docs/headless-cms/install-the-cli) 
+-   CLI [installed](/docs/headless-cms/install-the-cli/v1) 
 
 ## Commands
 

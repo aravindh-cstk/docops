@@ -24,11 +24,11 @@ This section acts as a queuing system for each organization, which processes com
 ## What You Will Learn
 
 -   How to access the Bulk Task Queue for your organization.
-    
+
 -   What each task status means.
-    
+
 -   How to filter tasks in the queue.
-    
+
 
 ## Access the Bulk Task Queue
 

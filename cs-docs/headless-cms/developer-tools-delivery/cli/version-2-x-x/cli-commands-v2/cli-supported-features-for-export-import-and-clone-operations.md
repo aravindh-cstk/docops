@@ -68,13 +68,13 @@ You can export/import public and private Marketplace apps into a stack using CLI
 If a public Marketplace app with a specific configuration already exists in the destination organization, you will be prompted with the following options during import:
 
 -   **Update** - Update the app with the new configuration from the source organization
-    
+
 -   **Skip updating** - Skip updating the app configuration
-    
+
     **Warning:** Skipping may result in issues with imported content.
-    
+
 -   **Exit** - Cancel the entire stack import process
-    
+
 
 **Example:**
 

@@ -8,14 +8,16 @@ url: /headless-cms/asset-limitations
 
 ## Asset Limitations
 
+**Note:** These limits apply to assets stored in a stack. [New Assets](/docs/assets/assets-limitations) raises several of them, supporting files up to **1.5 GB** per asset, up to **100 assets** per upload, and up to **500,000** assets per workspace.
+
 -   The filename or URL of an asset cannot include the following characters:
-    
+
     ```
     # % ^ + \ / ? \ * : | " ' < > \ s { } = ,
     ```
-    
+
     **Note:** Any restricted character will automatically be replaced with an underscore (\_).
-    
+
 -   The maximum file size allowed for an asset is **700 MB** via UI and **100 MB** via API.
 -   A maximum of **10 assets** can be uploaded in a single batch.
 -   Each stack can store up to **10,000** assets.

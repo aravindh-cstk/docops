@@ -19,6 +19,6 @@ cm:stacks:import resolves references in two passes: it first creates entries and
 
 1.  Confirm the referenced entries were created successfully; check the failed-entries log in the --backup-dir folder for that content type.
 2.  Confirm the UID mapping file under --backup-dir contains an entry for each referenced UID. If the two content types were imported with different backup directories, re-import both using the same --backup-dir so their mappings live in one file.
-3.  Follow Contentstack's [Update Missing Reference UIDs](/docs/headless-cms/update-missing-reference-uids) documentation: download the examples folder, and set mapper-path in config.json to the backup directory shown after a successful import (<path>/\_backup\_<number>/), with contentTypes listing the affected content type UIDs.
+3.  Follow Contentstack's [Update Missing Reference UIDs](/docs/headless-cms/cli-update-missing-reference-uids) documentation: download the examples folder, and set mapper-path in config.json to the backup directory shown after a successful import (<path>/\_backup\_<number>/), with contentTypes listing the affected content type UIDs.
 4.  Run the 05-Update-reference-entry-from-mapper script: csdx cm:stacks:migration --file-path ./05-Update-reference-entry-from-mapper.js --config-file ./config.json -k <stack\_ApiKey>.
 5.  Validate the previously unlinked references now populate. If not, confirm the referenced entries still exist under the same UIDs recorded in the mapping - entries deleted and recreated outside the CLI won't match.

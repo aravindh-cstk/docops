@@ -45,7 +45,7 @@ Once we have these basics ready, we can set up the required automation for trans
 5.  **Update the Translated Content**  
     Configure Connector → Contentstack → Localize Entry.  
     Add the required data, including the Entry Data. Here is an example:  
-    
+
     ```
     {
         "entry": {
@@ -55,7 +55,7 @@ Once we have these basics ready, we can set up the required automation for trans
         }
     }
     ```
-    
+
 6.  **Update the Workflow Status**  
     Choose Connector → Contentstack → Workflow Trigger.  
     Fill the required fields and then set the workflow stage to “Translation Complete”

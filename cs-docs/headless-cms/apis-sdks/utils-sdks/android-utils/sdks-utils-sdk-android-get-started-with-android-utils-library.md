@@ -18,7 +18,7 @@ This guide will help you get started with Contentstack [Android Utils SDK](/docs
 
 ## SDK Installation and Setup
 
-To set up the Utils SDK in your Android project, add the following dependency to your `build.gradle` file:
+To set up the Utils SDK in your Android project, add the following dependency to your build.gradle file:
 
 ```
 implementation 'com.contentstack.sdk:utils:latest'
@@ -36,7 +36,7 @@ Let’s learn how you can use Utils SDK to render embedded items.
 
 ### Create Render Option:
 
-To render embedded items on the front-end, use the `renderContents` function, and define the UI elements you want to show in the front-end of your app, as shown in the example code below:
+To render embedded items on the front-end, use the renderContents function, and define the UI elements you want to show in the front-end of your app, as shown in the example code below:
 
 ```
 package com.contentstack.utils;
@@ -95,7 +95,7 @@ Contentstack Utils SDK lets you interact with the Content Delivery APIs and retr
 
 ### Fetch Embedded Item(s) from a Single Entry
 
-To get an embedded item of a single entry, you need to provide the stack API key, environment name, delivery token, content type’s UID, and entry’s UID. Then, use the `includeEmbeddedItems` function as shown below:
+To get an embedded item of a single entry, you need to provide the stack API key, environment name, delivery token, content type’s UID, and entry’s UID. Then, use the includeEmbeddedItems function as shown below:
 
 ```
 import Contentstack
@@ -147,7 +147,7 @@ publicvoidonCompletion(ResponseType responseType, QueryResult queryResult, Error
 
 ### Render JSON RTE Contents
 
-To get multiple entries, you need to provide the stack API key, environment name, delivery token, content type and entry UID. Then, use the `Contentstack.Utils.jsonToHTML` function as shown below:
+To get multiple entries, you need to provide the stack API key, environment name, delivery token, content type and entry UID. Then, use the Contentstack.Utils.jsonToHTML function as shown below:
 
 ```
 import Contentstack
@@ -169,3 +169,14 @@ query.find(new QueryResultsCallBack() {
         }}
 });
 ```
+
+### Resolve Embedded Item Metadata
+
+The SDK resolves embedded entry and asset metadata from the \_embedded\_items object in the API response and exposes the resolved values at node.attrs.\_resolved. Read resolved values from there so that your rendered output reflects the current state of the embedded item. The legacy node.attrs\['asset-link'\] property, and the equivalent properties for other node types, remain readable as a soft-deprecated fallback.
+
+**Note:** The includeEmbeddedItems() method retrieves first-level embedded items only. To retrieve embedded items that are nested inside other embedded items, request the entry directly through the Content Delivery API with include\_embedded\_items\[\]=RECURSIVE.
+
+**Additional Resources:**
+
+-   Refer to [Embed Entries or Assets](/docs/headless-cms/embed-entries-or-assets) to understand how embedded item data is stored and resolved.
+-   Refer to [CDA | Entries](/docs/developers/apis/content-delivery-api/entries) for the include\_embedded\_items\[\] and embedded\_items\_depth parameter reference.

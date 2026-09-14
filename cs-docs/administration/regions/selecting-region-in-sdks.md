@@ -20,11 +20,11 @@ In order to use the SDK for a particular region, you need to make certain change
 ## What You Will Learn
 
 -   How to set a non-default region in each supported Contentstack SDK.
-    
+
 -   The region code or host value that maps to each Contentstack region.
-    
+
 -   How to set a branch together with a region where the SDK supports it.
-    
+
 
 ## iOS
 

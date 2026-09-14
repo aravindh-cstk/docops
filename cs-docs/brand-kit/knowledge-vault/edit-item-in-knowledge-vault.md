@@ -14,19 +14,19 @@ Update and manage items in the Knowledge Vault to keep your documents and data o
 
 -   [Contentstack account](https://www.contentstack.com/login/)
 -   Brand Kit-enabled Organization with [Owner or Admin](/docs/administration/about-administration-roles) permissions, or as [Collaborator](/docs/brand-kit/invite-collaborators)
-    
+
     **Note:** Only Brand Kit **Owner** or **Admin** can edit items in the Knowledge Vault.
-    
+
 -   An existing [Knowledge Vault Item](/docs/brand-kit/add-item-in-knowledge-vault)
 
 ## What You Will Learn
 
 -   How to open a Knowledge Vault item for editing.
-    
+
 -   How to update an item's text or its uploaded file.
-    
+
 -   How to rename a subfolder in the Knowledge Vault.
-    
+
 
 ## Steps for Execution
 

@@ -405,7 +405,7 @@ WARNING: SSL certificate verification failed. Retrying without verification.
          To fix permanently, run: /Applications/Python*/Install Certificates.command
 ```
 
-**Root cause:** On macOS with a [Python.org](http://Python.org) build, refresh-region.py may encounter an SSL certificate error on first run. The script retries automatically without verification.
+**Root cause:** On macOS with a [Python.org](https://www.python.org/) build, refresh-region.py may encounter an SSL certificate error on first run. The script retries automatically without verification.
 
 **Resolution:** Run /Applications/Python\*/Install Certificates.command to install the required root certificates permanently.
 

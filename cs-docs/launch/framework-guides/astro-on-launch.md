@@ -13,15 +13,15 @@ Astro is an open-source, content-focused framework that helps developers build f
 ## What You Will Learn
 
 -   How to enable server-side rendering (SSR) for Astro on Launch.
-    
+
 -   How to pre-render static pages and configure ISR-like revalidation with cache headers.
-    
+
 -   How to create Astro API routes with custom cache behavior.
-    
+
 -   How to set up edge redirects and rewrites for an Astro project.
-    
+
 -   How to configure environment variables for Astro on Launch.
-    
+
 
 ## Supported Features in Contentstack Launch
 

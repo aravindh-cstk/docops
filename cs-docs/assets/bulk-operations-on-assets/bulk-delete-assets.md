@@ -18,9 +18,9 @@ To delete multiple assets, sign in to your [Contentstack account](https://www.c
 
 1.  Navigate to the **Assets** listing page within your space.
 2.  Select the assets you want to delete using the checkbox next to each asset.  
-    
+
     **Note:** You can select and delete up to **100 assets** at a time. To delete more than 100 assets, repeat the process in batches.
-    
+
 3.  The selection toolbar appears above the listing and shows the number of selected assets.
 4.  On the selection toolbar, click **Delete**.
 5.  The **Delete Assets** confirmation appears. Click **Delete** to confirm.

@@ -13,13 +13,13 @@ Teams groups users so you can assign organization, product, and project-level ro
 ## What You Will Learn
 
 -   When to use a team for cross-functional project collaboration.
-    
+
 -   How to onboard a group of new users with the same access at once.
-    
+
 -   How to realign team roles after an organizational change.
-    
+
 -   How to grant and later remove temporary access for seasonal campaigns.
-    
+
 
 ## Cross-Functional Project Collaboration
 

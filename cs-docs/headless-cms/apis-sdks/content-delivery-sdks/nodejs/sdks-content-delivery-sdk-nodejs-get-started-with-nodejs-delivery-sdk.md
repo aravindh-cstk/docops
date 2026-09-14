@@ -125,4 +125,4 @@ Currently, the NodeJS SDK does not yet support querying Global Field schemas ([A
 -   [Sample website using Nuxt.js](/docs/headless-cms/nuxt)
 -   [Sample website using Next.js](/docs/headless-cms/next)
 -   [API Reference](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference/)
--   [Node.js (JavaScript) SDK Changelog](/docs/developers/sdks/content-delivery-sdk/javascript-browser/javascript-sdk-changelog)
+-   [Node.js (JavaScript) SDK Changelog](/docs/changelog?filter=sdks)

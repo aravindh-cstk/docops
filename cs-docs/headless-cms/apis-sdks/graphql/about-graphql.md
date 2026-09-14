@@ -15,6 +15,6 @@ For example, you can fetch the values of the **Title** and **Description** [fiel
 If you haven’t worked with GraphQL before, we highly recommend reading the following resources:
 
 -   [Introduction to GraphQL](https://graphql.org/learn/)
--   [GraphQL Guides](https://www.graphql.com/guides/)
+-   [GraphQL Guides](https://graphql.com/tutorials)
 
 You can browse through the following topics, mentioned in the “More Articles” section, to learn how you can use GraphQL with Contentstack.

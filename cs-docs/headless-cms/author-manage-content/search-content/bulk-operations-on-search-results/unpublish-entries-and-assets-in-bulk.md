@@ -16,9 +16,9 @@ To unpublish entries and assets found in your search results in bulk, log in to 
 4.  On the **Unpublish Entries**/**Unpublish Assets** screen:
     1.  **Select Environment(s)** to which you want to unpublish the selected entries.
     2.  **Select Language(s)** for which you want to unpublish the selected entries.
-        
+
         **Note:** While unpublishing multiple localized and unlocalized versions of a single entry, you can select a maximum of **50** **languages** and **50** **environments**.
-        
+
     3.  Under **Unpublish**, you can select – **Now** (to unpublish immediately) or **Later** (to unpublish at a later date/time that you provide)
     4.  Click **Send** to unpublish the entries/assets.![Unpublish Entries and Assets in Bulk_2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9dbedc31382b9a26/67d96590dc713111100e3d18/2._Bulk_Actions_on_Search_Items-Bulk_Unpublish-Unpublish_Modal.png)
 

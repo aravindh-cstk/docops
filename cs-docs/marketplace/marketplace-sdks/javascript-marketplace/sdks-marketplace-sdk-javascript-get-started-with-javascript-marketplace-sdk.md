@@ -15,7 +15,7 @@ This step-by-step guide will help you get started with the [JavaScript Marketpla
 To get started with the JavaScript Marketplace SDK, you will need the following:
 
 -   [Contentstack account](https://www.contentstack.com/login/)
--   [Node.js](https://nodejs.org/) version 22 or later
+-   [Node.js](https://nodejs.org/en) version 22 or later
 
 ## Installation and Setup
 
@@ -192,7 +192,7 @@ client.marketplace('organization_uid').app().create(app)
 
 ### More Resources
 
-[JavaScript Marketplace GitHub Repository](https://github.com/contentstack/contentstack-marketplace-javascript)
+[JavaScript Marketplace GitHub Repository](https://github.com/contentstack/contentstack-marketplace-sdk)
 
 ### Next Steps
 

@@ -1,10 +1,10 @@
 ---
-title: "Configure Early Access in the CLI"
+title: "Configure Early Access in the CLI | V1.x.x"
 description: "Learn how to configure and use the Early Access header in Contentstack Command-line Interface with this clear, step-by-step setup guide."
 url: /headless-cms/configure-early-access-program-in-the-cli/v1
 ---
 
-# Configure Early Access in the CLI
+# Configure Early Access in the CLI | V1.x.x
 
 ## Configure Early Access in the CLI
 
@@ -17,8 +17,8 @@ This step-by-step guide lets you configure and use the Early Access header in th
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login/)
--   [CLI installed](/docs/headless-cms/install-the-cli/) and [configured](/docs/headless-cms/configure-regions-in-the-cli/) (version 1.12.1 and above)
--   [CLI authenticated](/docs/headless-cms/cli-authentication/)
+-   [CLI installed](/docs/headless-cms/install-the-cli/v1) and [configured](/docs/headless-cms/configure-regions-in-the-cli/v1) (version 1.12.1 and above)
+-   [CLI authenticated](/docs/headless-cms/cli-authentication/v1)
 
 ## Commands
 
@@ -28,11 +28,11 @@ The config:set:early-access-header command lets you set an Early Access header w
 
 1.  Open the terminal.
 2.  Fire the following command:
-    
+
     ```
     csdx config:set:early-access-header
     ```
-    
+
 3.  Enter an **alias** name for the Early Access header.
 4.  Enter a **value** for the Early Access header.
 
@@ -64,17 +64,17 @@ csdx config:set:ea-header
 **Examples**
 
 -   To set an Early Access header by providing the header value:
-    
+
     ```
     csdx config:set:early-access-header  --header 3.2
     ```
-    
+
 -   To set an Early Access header by providing the header value and alias name:
-    
+
     ```
     csdx config:set:early-access-header  --header-alias ta****my --header tx
     ```
-    
+
 
 ### Get Early Access Header
 
@@ -82,11 +82,11 @@ The config:get:early-access-header command fetches a list of the Early Access he
 
 1.  Open the terminal.
 2.  Fire the following command:
-    
+
     ```
     csdx config:get:early-access-header
     ```
-    
+
 
 You have successfully retrieved a list of Early Access headers you have set in the CLI.
 
@@ -108,11 +108,11 @@ The config:remove:early-access-header command lets you remove an existing Early 
 
 1.  Open the terminal.
 2.  Fire the following command:
-    
+
     ```
     csdx config:remove:early-access-header
     ```
-    
+
 3.  Enter the **alias** name of the Early Access header for which you want to remove the configuration.
 4.  In the prompt that appears, enter the following:
     -   **Yes**, to remove the configuration of the provided Early Access header.
@@ -140,13 +140,13 @@ csdx config:remove:ea-header
 **Examples**
 
 -   To remove the configuration of an Early Access header by skipping the confirmation:
-    
+
     ```
     csdx config:remove:early-access-header  --yes
     ```
-    
+
 -   To remove the configuration of an Early Access header by providing the header alias name:
-    
+
     ```
     csdx config:remove:early-access-header  --header-alias ta****my
     ```

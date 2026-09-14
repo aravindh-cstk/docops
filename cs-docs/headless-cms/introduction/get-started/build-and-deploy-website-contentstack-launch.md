@@ -10,7 +10,7 @@ url: /headless-cms/build-and-deploy-website-contentstack-launch
 
 Building a production website with a headless CMS requires a clear, repeatable workflow. This guide walks you through every step, from creating your first stack to deploying a live site on Launch, without relying on AI-assisted tools. Every command, API call, and configuration setting is shown explicitly so you can follow along, reproduce results, and understand how each layer connects to the next.
 
-**Note:** If you prefer AI-assisted development, refer to our [Build a Website with Contentstack and AI](/docs/get-started/build-websites-with-contentstack-and-ai) guide.
+**Note:** If you prefer AI-assisted development, refer to our [Build a Website with Contentstack and AI](/docs/headless-cms/build-websites-with-contentstack-and-ai) guide.
 
 Use this guide when you need:
 
@@ -34,13 +34,13 @@ By the end of this guide, you will be able to:
 This workflow consists of four layers. Each layer must work correctly and independently before you move to the next.
 
 ```
-Contentstack (content + publish)
+Contentstack (content and publish)
     ↓
 Content Delivery API (CDN)
     ↓
-Application (fetch + render)
+Application (fetch and render)
     ↓
-Launch (build + host)
+Launch (build and host)
 ```
 
 Treat this architecture as a series of gates: validate each layer before building on top of it. A working curl call confirms the API layer before you write a single line of application code. A successful local build confirms the application layer before you configure Launch.
@@ -65,7 +65,7 @@ The first decision is how your application will retrieve content from Contentsta
 | Server runtime (SSR / API route) | Fresh content per request | Server | Hidden |
 | Build-time (static export) | Static hosting, high performance | CI / build step | Hidden |
 
-**Note:** This guide uses build-time fetching with static export. This approach keeps tokens off the client, works well with Launch's static hosting, and produces the best performance. Do not mix modes accidentally, prefixing a secret with NEXT\_PUBLIC\_ will expose it in the browser bundle.
+**Note:** This guide uses build-time fetching with static export. This approach keeps tokens off the client, works well with Launch's static hosting, and maximizes performance. Do not mix modes accidentally, prefixing a secret with NEXT\_PUBLIC\_ will expose it in the browser bundle.
 
 ## Step 2: Set Up Contentstack
 
@@ -174,7 +174,7 @@ To create and publish an entry, perform the following steps:
 5.  In the Publish modal, select your target environment, for example, staging, and the appropriate locale.
 6.  Click **Send**. Confirm the entry status shows **Published**.
 
-Refer to the [Create an Entry](/docs/headless-cms/create-an-entry) documentation for full details.
+**Additional Resource:** Refer to the [Create an Entry](/docs/headless-cms/create-an-entry) documentation for full details.
 
 ## Step 3: Create a Delivery Token
 
@@ -366,7 +366,7 @@ With build-time fetching, publishing new or updated content in Contentstack does
 
 ## Step 7: Deploy with Launch
 
-[Contentstack Launch](/docs/launch/about-launch) is a front-end hosting and deployment platform built for Contentstack-powered websites. It connects directly to your Git repository and builds your site on every push.
+[Contentstack Launch](/docs/launch/about-launch) is a frontend hosting and deployment platform built for Contentstack-powered websites. It connects directly to your Git repository and builds your site on every push.
 
 **Note:** Only the Organization Admin or Owner can create new projects in Launch. Learn more about [Administration Roles](/docs/administration/about-administration-roles).
 
@@ -377,22 +377,23 @@ With build-time fetching, publishing new or updated content in Contentstack does
 To deploy your site, perform the following steps:
 
 1.  From the Contentstack CMS homepage, click **Launch**.
-2.  On the Launch Projects screen, click **\+ New Project**.
-3.  In the **Create New Project** modal, click **Import from a Git Repository**.
-4.  Click **GitHub** and sign in with your GitHub credentials.
-5.  In the **Repository Access** section, select **All repositories** or choose specific ones, then click **Save**. If this is your first time connecting, click **Install & Authorize**.
-6.  Back in the **Create New Project** modal, fill in the following details:
+2.  On the Launch Projects screen, click **\+ New Project**. A dropdown appears with **GitHub**, **BitBucket**, and **File Upload** options.
+3.  Select **GitHub** and sign in with your GitHub credentials.
+4.  In the **Repository Access** section, select **All repositories** or choose specific ones, then click **Save**. If this is your first time connecting, click **Install & Authorize**.
+5.  Once the repository is connected, fill in the following project details:
     -   **Repository** (required): Select your Git repository.
     -   **Git Branch** (required): Select the branch to deploy from, for example, main.
     -   **Project Name** (required): This is auto-populated from your repository name.
     -   **Environment Name** (required): Enter a name, for example, production.
+    -   **Framework Preset**: Select **Other**. Launch may auto-detect the preset as **NextJs**; leave it on NextJs and the deployment fails with an Invalid output directory: out error, so change it to **Other**.
     -   **Build Command**: npm run build
-    -   **Publish Directory**: out
+    -   **Output Directory**: out. Launch may auto-populate this as ./.next for the detected framework; change it to out.
 
 **Note:** This is Launch's deployment environment label and does not need to match your Contentstack environment. Which content is fetched is controlled by the CONTENTSTACK\_ENVIRONMENT variable and it must **match the environment your Delivery Token covers**.
 
 1.  Click **\+ Add Environment Variable** and add every CONTENTSTACK\_\* variable from your .env.local file. These must be present for both the build step and runtime, or the build will fail.
-2.  Click **Deploy**.
+2.  Turn off the **Enable Contentstack Authentication** toggle if you want the deployed site to be publicly accessible. It is enabled by default; leaving it on shows a Contentstack login wall to every visitor.
+3.  Click **Deploy**.
 
 The screen shows a **Deploying** status while the build runs. When the deployment completes, your site is live at a unique URL shown in the **Domains** section.
 
@@ -402,9 +403,10 @@ The screen shows a **Deploying** status while the build runs. When the deploymen
 
 After deployment completes, open the Launch URL and confirm that content from Contentstack is rendering correctly. If the page appears blank or returns a 404, check the following:
 
--   The publish directory is set to out, not dist or .next
+-   The output directory is set to out, not dist or .next
 -   The output: "export" setting is present in next.config.ts
 -   All CONTENTSTACK\_\* environment variables are set in Launch — check the build logs for any Missing env var errors thrown by the fetch helper
+-   If the page shows a Contentstack login screen instead of your content, the **Enable Contentstack Authentication** toggle is on. Turn it off in the project settings for a public site.
 
 ## Troubleshooting
 
@@ -416,13 +418,14 @@ After deployment completes, open the Launch URL and confirm that content from Co
 | 200 but wrong or missing fields | Field UIDs in your code do not match the API response, or a locale is required but not specified | Inspect the raw JSON response. Align your code's field keys with the actual payload. Add the locale query parameter if your stack requires it. |
 | 414 | URL query string exceeds the API's size limit (approximately 8 KB) | Shorten the query or split it into multiple requests. |
 | Site not updating after publish | Build-time fetching is in use | Trigger a new Launch build manually. Configure a Contentstack webhook to automate rebuilds on publish. |
-| Launch 404 or blank page | Wrong publish directory, missing output: "export", or build-time fetch failed | Confirm the publish directory is out. Check Launch build logs for thrown errors, a missing environment variable or a failed API call at build time are the most common causes. |
+| Launch 404 or blank page | Wrong output directory, missing output: "export", or build-time fetch failed | Confirm the output directory is out. Check Launch build logs for thrown errors, a missing environment variable or a failed API call at build time are the most common causes. |
 | Launch build stops at _Creating an optimized production build…_ with no error | output: "export" ignored because next.config.ts uses module.exports | Use export default nextConfig; in .ts config. Confirm an out/ directory is generated by npm run build locally. |
+| Deployment fails with Invalid output directory: out | Framework Preset is set to the auto-detected NextJs | Change the Framework Preset to Other and redeploy, keeping the Output Directory as out. |
 | Local build succeeds but Launch build fails | Node version mismatch between local and Launch | Pin the Node version (e.g. add an engines.node field in package.json or set it in Launch) so both environments match. |
 
 ## Using Other Frameworks
 
-The workflow described in this guide applies to any front-end framework, not just Next.js. Once your curl call succeeds, the application integration follows the same four steps regardless of the framework you use:
+The workflow described in this guide applies to any frontend framework, not just Next.js. Once your curl call succeeds, the application integration follows the same four steps regardless of the framework you use:
 
 1.  Send an HTTP GET request to the Content Delivery API
 2.  Include api\_key and delivery\_token as request headers, never as query parameters
@@ -454,6 +457,6 @@ Now that your site is live, you can extend it with the following:
 | [Environment](/docs/headless-cms/about-environments) | A publishing target such as development, staging, or production. Environment names are case-sensitive. |
 | API Key | Identifies your stack in all API requests. Found in **Settings** → **Stack**. |
 | [Delivery Token](/docs/headless-cms/about-delivery-tokens) | A read-only, environment-scoped token for fetching published content via the CDA. |
-| [CDA](/docs/developers/apis/content-delivery-api) | Content Delivery API, the read-only API your front-end uses to fetch published content. |
+| [CDA](/docs/developers/apis/content-delivery-api) | Content Delivery API, the read-only API your frontend uses to fetch published content. |
 | UID | The unique identifier for a content type, entry, or field. Auto-generated in snake\_case and permanent after creation. |
-| [Launch](/docs/launch/about-launch) | Contentstack's front-end hosting and deployment platform. |
+| [Launch](/docs/launch/about-launch) | Contentstack's frontend hosting and deployment platform. |

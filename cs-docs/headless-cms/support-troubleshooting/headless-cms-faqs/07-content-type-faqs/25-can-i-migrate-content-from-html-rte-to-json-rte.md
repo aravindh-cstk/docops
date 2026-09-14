@@ -9,4 +9,4 @@ _cms_faq_uid: cs1eb7b836ce7346a1
 
 # Can I migrate content from HTML RTE to JSON RTE?
 
-Yes. You can migrate content using CLI. Refer to the [JSON RTE Migration](/docs/headless-cms/migrate-content-from-html-rte-to-json-rte/) Guide.
+Yes. You can migrate content using CLI. Refer to the [JSON RTE Migration](/docs/headless-cms/cli-migrate-content-from-html-rte-to-json-rte/v1) Guide.

@@ -9,4 +9,4 @@ _cms_faq_uid: cs7f6d31d482b190a6
 
 # Can I migrate HTML RTE to JSON RTE in bulk?
 
-Yes. You can migrate all entries in a content type from HTML RTE fields to JSON RTE fields in just a few minutes. Refer to the [JSON RTE Migration](/docs/headless-cms/migrate-content-from-html-rte-to-json-rte/) guide.
+Yes. You can migrate all entries in a content type from HTML RTE fields to JSON RTE fields in just a few minutes. Refer to the [JSON RTE Migration](/docs/headless-cms/cli-migrate-content-from-html-rte-to-json-rte/v1) guide.

@@ -1,10 +1,10 @@
 ---
-title: "Configure CLI Logging Preferences"
+title: "Configure CLI Logging Preferences | V1.x.x"
 description: "Set and retrieve logging preferences in Contentstack CLI, including log level and file path configuration."
 url: /headless-cms/configure-cli-logging-preferences/v1
 ---
 
-# Configure CLI Logging Preferences
+# Configure CLI Logging Preferences | V1.x.x
 
 ## Configure CLI Logging Preferences
 
@@ -13,7 +13,7 @@ The config namespace in the Contentstack CLI provides commands to configure vari
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login/)
--   Contentstack CLI [installed](/docs/headless-cms/install-the-cli/)
+-   Contentstack CLI [installed](/docs/headless-cms/install-the-cli/v1)
 
 ## Commands
 
@@ -38,17 +38,17 @@ csdx config:set:log [--level <level>] [--path <path>]
 **Examples**
 
 -   Set log level to debug
-    
+
     ```
     csdx config:set:log --level debug
     ```
-    
+
 -   Set log level to info and specify a log file path:
-    
+
     ```
     csdx config:set:log --level info --path ./logs/app.log
     ```
-    
+
 
 ### Get the Current Logging Configuration for the CLI
 

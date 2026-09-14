@@ -1,7 +1,7 @@
 ---
 title: "GlobalLink Connect"
 description: "GlobalLink Connect"
-url: https://gl-contentstack.translations.com/docs/
+url: "https://gl-contentstack.translations.com/docs/"
 doc_type: link
 ---
 

@@ -14,4 +14,6 @@ These bulk operations, integrated into the search functionality, lets you quickl
 
 For example, if you want to publish all entries with the content type "Blog," search for "Blog" using Basic or Advanced Search. Apply relevant filters if needed, and save the search as a view for future use. From the search results, select the relevant entries and click the Publish option to bulk publish them.
 
+To update the same text across many entries at once, use **Find and Replace**. After you narrow your results, select the entries and run a find-and-replace operation to replace or remove a text string in bulk. For more information, refer to the [Find and Replace Entries in Bulk](/docs/headless-cms/find-and-replace-entries-in-bulk) documentation.
+
 **Additional Resource:** To learn how to perform bulk operations using the [Content Management API (CMA)](/docs/developers/apis/content-management-api), refer to the [Bulk Operations](/docs/developers/apis/content-management-api/bulk-operations) section.

@@ -1,7 +1,7 @@
 ---
 title: "Get a Single Audience"
 description: "Get a Single Audience"
-url: https://docs.lytics.com/docs/developer-segments
+url: "https://docs.lytics.com/docs/developer-segments"
 doc_type: link
 ---
 

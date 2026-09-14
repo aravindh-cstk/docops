@@ -9,4 +9,4 @@ _cms_faq_uid: cs4369b331843eac8e
 
 # How to export content into a .CSV file?
 
-You can use the **cm:export-to-csv** CLI command to export stack data into a CSV file. For more details refer our detailed [guide](/docs/headless-cms/export-content-to-csv-file) on the topic.
+You can use the **cm:export-to-csv** CLI command to export stack data into a CSV file. For more details refer our detailed [guide](/docs/headless-cms/cli-export-content-to-csv-file) on the topic.

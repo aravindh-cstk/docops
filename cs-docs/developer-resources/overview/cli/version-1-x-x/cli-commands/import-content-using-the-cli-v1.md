@@ -1,10 +1,10 @@
 ---
-title: "Import Content Using the CLI"
+title: "Import Content Using the CLI | V1.x.x"
 description: "Import content efficiently with Contentstack’s latest Command-line Interface commands to streamline data onboarding and content setup."
 url: /headless-cms/import-content-using-the-cli/v1
 ---
 
-# Import Content Using the CLI
+# Import Content Using the CLI | V1.x.x
 
 ## Import Content Using the CLI
 
@@ -17,10 +17,10 @@ This guide explains how to use the cm:stacks:import command by logging in to CLI
 Before importing content, ensure you have:
 
 -   [Contentstack account](https://www.contentstack.com/login)
--   Contentstack CLI [installed](/docs/headless-cms/install-the-cli)
--   CLI [authenticated](/docs/headless-cms/cli-authentication)
--   [Configured management token](/docs/headless-cms/cli-authentication#add-management-token) _(optional, but recommended for CI/CD)_
--   [Exported content](/docs/headless-cms/export-content-using-the-cli) extracted (unzipped) in a local folder
+-   Contentstack CLI [installed](/docs/headless-cms/install-the-cli/v1)
+-   CLI [authenticated](/docs/headless-cms/cli-authentication/v1)
+-   [Configured management token](/docs/headless-cms/cli-authentication/v1#add-management-token) _(optional, but recommended for CI/CD)_
+-   [Exported content](/docs/headless-cms/export-content-using-the-cli/v1) extracted (unzipped) in a local folder
 
 ## Quick Start
 
@@ -463,7 +463,7 @@ csdx cm:stacks:import -a production -c "C:\Users\Username\Desktop\config.json"
 
 ## Import Content Using Management Token
 
-You can import content to your stack using a [management token](/docs/headless-cms/cli-authentication#add-management-token). This is the recommended approach for CI/CD environments.
+You can import content to your stack using a [management token](/docs/headless-cms/cli-authentication/v1#add-management-token). This is the recommended approach for CI/CD environments.
 
 ### Basic Usage
 
@@ -560,7 +560,7 @@ The Overwrite feature in the import command enhances the import process by allow
 csdx cm:stacks:import -a production --data-dir ./export --module content-types --replace-existing
 ```
 
-Learn more in the [Overwrite Existing Content using CLI Import](/docs/headless-cms/overwrite-existing-content-using-cli-import) guide.
+Learn more in the [Overwrite Existing Content using CLI Import](/docs/headless-cms/overwrite-existing-content-using-cli-import/v1) guide.
 
 ## Toggle Between Console Logs and Progress Manager View
 
@@ -694,7 +694,7 @@ csdx cm:stacks:import -a production -c ./high-performance-config.json
 
 ## Limitations
 
-For comprehensive information about import limitations, see the [CLI Limitations Guide](/docs/headless-cms/cli-limitations#import-module-limitations).
+For comprehensive information about import limitations, see the [CLI Limitations Guide](/docs/headless-cms/cli-limitations/v1#import-module-limitations).
 
 ## Troubleshooting
 
@@ -708,8 +708,8 @@ For best practices on import workflows, see the CLI Best Practices Guide.
 
 After successful import:
 
--   [Export content](/docs/headless-cms/export-content-using-the-cli)
+-   [Export content](/docs/headless-cms/export-content-using-the-cli/v1)
 -   Clone a stack
--   [Migrate content](/docs/headless-cms/migrate-content-between-stacks-using-the-cli)
--   [Overwrite existing content](/docs/headless-cms/overwrite-existing-content-using-cli-import)
--   [Asset Scanning in CLI](/docs/headless-cms/asset-scanning-in-cli): asset-scan gating behavior during import, including the automatic \--skip-assets-publish trigger and the post-scan publish command.
+-   [Migrate content](/docs/headless-cms/migrate-content-between-stacks-using-the-cli/v1)
+-   [Overwrite existing content](/docs/headless-cms/overwrite-existing-content-using-cli-import/v1)
+-   [Asset Scanning in CLI](/docs/headless-cms/asset-scanning-in-cli/v1): asset-scan gating behavior during import, including the automatic \--skip-assets-publish trigger and the post-scan publish command.

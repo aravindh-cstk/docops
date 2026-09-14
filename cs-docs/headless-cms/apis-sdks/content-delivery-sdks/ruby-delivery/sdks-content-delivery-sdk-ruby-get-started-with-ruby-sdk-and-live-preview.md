@@ -104,5 +104,5 @@ entry = $client.content_type('content_type_uid')
 
 -   [JavaScript Live Preview Utils SDK](/docs/developers/sdks/utils-sdk/javascript/about-javascript-live-preview-utils-sdk)
 -   [Ruby SDK API Reference](/docs/developers/sdks/content-delivery-sdk/ruby/reference)
--   [Ruby SDK Changelog](/docs/developers/sdks/content-delivery-sdk/ruby/ruby-sdk-changelog/)
+-   [Ruby SDK Changelog](/docs/changelog?filter=sdks)
 -   [View and Download Ruby SDK repository on GitHub](https://github.com/contentstack/contentstack-ruby)

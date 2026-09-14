@@ -19,4 +19,4 @@ The in-product Server Logs view limits look-back at **24 hours**. Launch does no
 
 1.  Configure a Log Target to forward logs to a third-party monitoring service so the third-party service retains them beyond the **24-hour** window.
 
-Refer to the [Log Targets](/docs/developers/launch/log-targets) documentation for setup details.
+Refer to the [Log Targets](/docs/launch/log-targets) documentation for setup details.

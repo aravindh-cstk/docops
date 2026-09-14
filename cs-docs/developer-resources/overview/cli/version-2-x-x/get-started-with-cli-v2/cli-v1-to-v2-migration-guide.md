@@ -724,13 +724,13 @@ csdx cm:stacks:bulk-assets \
 **Requirements:**
 
 -   Configure csAssetsUrl in region settings first:
-    
+
     ```
     csdx config:set:region --cs-assets <url>
     ```
-    
+
 -   Do not combine CMS flags (\--stack-api-key, \--alias, \--environments, \--locales, \--branch) with CS Assets flags.
-    
+
 
 | Operation | --locale |
 | --- | --- |
@@ -1355,11 +1355,11 @@ V2 adds taxonomy publishing support across export, import, and bulk operations.
 
 -   **Export** captures publish\_details per locale for each taxonomy.
 -   **Import** re-publishes taxonomies after import by default. To skip publishing (for example, if you want to review entries before publishing):
-    
+
     ```
     csdx cm:stacks:import --skip-taxonomy-publish -d ./export -k bltXXX
     ```
-    
+
 -   cm:stacks:bulk-taxonomies handles bulk taxonomy publish operations (see [cm:stacks:bulk-taxonomies](#cmstacksbulk-taxonomies)).
 
 ## Troubleshooting

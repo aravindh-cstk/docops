@@ -38,7 +38,7 @@ To render embedded items on the front-end, use the renderOptions function, and d
 declare(strict_types=1);  
 
 namespace Sample\App;  
-  
+
 use Contentstack\Utils\Resource\EntryEmbedable;  
 use Contentstack\Utils\Resource\RenderableInterface;  
 use Contentstack\Utils\Resource\EmbeddedObject;  
@@ -130,7 +130,7 @@ To get a single entry, you need to provide the stack API key, environment name, 
 ```
 use Contentstack\Contentstack;  
 use Contentstack\Utils\Model\Option;  
-  
+
 $stack = Contentstack::Stack('<API_KEY>', '<ENVIRONMENT_SPECIFIC_DELIVERY_TOKEN>', '<ENVIRONMENT>');  
 $entry = $stack->ContentType('<CONTENT_TYPE_UID>')->Entry('<ENTRY_UID>')->includeEmbeddedItems()->toJSON()->fetch();  
 $json_rte = json_decode(json_encode($entry['rte_field_uid']));
@@ -166,7 +166,7 @@ To get a single entry, you need to provide the stack API key, environment name, 
 ```
 use Contentstack\Contentstack;  
 use Contentstack\Utils\Model\Option;  
-  
+
 $stack = Contentstack::Stack('<API_KEY>', '<ENVIRONMENT_SPECIFIC_DELIVERY_TOKEN>', '<ENVIRONMENT>');  
 $result = $stack->ContentType('<CONTENT_TYPE_UID>')->Query()->toJSON()->includeEmbeddedItems()->find()  
 for($i = 0; $i < count($result[0]); $i++) {  
@@ -175,3 +175,14 @@ for($i = 0; $i < count($result[0]); $i++) {
     $render_rich_text = Contentstack::jsonToHtml($json_rte, new Option($entry));  
 }
 ```
+
+### Resolve Embedded Item Metadata
+
+The SDK resolves embedded entry and asset metadata from the \_embedded\_items object in the API response and exposes the resolved values at node.attrs.\_resolved. Read resolved values from there so that your rendered output reflects the current state of the embedded item. The legacy node.attrs\['asset-link'\] property, and the equivalent properties for other node types, remain readable as a soft-deprecated fallback.
+
+**Note:** The includeEmbeddedItems() method retrieves first-level embedded items only. To retrieve embedded items that are nested inside other embedded items, request the entry directly through the Content Delivery API with include\_embedded\_items\[\]=RECURSIVE.
+
+**Additional Resources:**
+
+-   Refer to [Embed Entries or Assets](/docs/headless-cms/embed-entries-or-assets) to understand how embedded item data is stored and resolved.
+-   Refer to [CDA | Entries](/docs/developers/apis/content-delivery-api/entries) for the include\_embedded\_items\[\] and embedded\_items\_depth parameter reference.

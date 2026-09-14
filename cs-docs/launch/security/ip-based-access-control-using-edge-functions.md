@@ -13,9 +13,9 @@ This guide explains how to implement **IP-based access control** using [**Edge F
 ## What You Will Learn
 
 -   How to allow traffic only from a trusted list of IP addresses.
-    
+
 -   How to deny traffic from a blocked list of IP addresses.
-    
+
 
 ## Implementing IP Filtering with Edge Functions
 

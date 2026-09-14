@@ -24,11 +24,11 @@ To create a new branch, log in to your [Contentstack account](https://www.conten
 4.  In **Create New Branch**, enter:
     -   **Branch ID:** Enter a unique ID (for example, staging or dev).
     -   **Source Branch:** Select the branch that the new branch should inherit from.
-        
+
         **Note:** For the first child branch, main is typically selected by default.
-        
+
         The spaces and workspaces linked with the source branch appear in the **Workspace setup** section.
-        
+
 5.  For each linked workspace, choose one of the following:
     -   **Link existing workspace:** Select this to keep the branch connected to the same workspace as the source branch.
     -   **Fork and link workspace:** Select this to create a new workspace copy for the new branch.

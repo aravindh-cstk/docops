@@ -36,9 +36,9 @@ For any saved view, click the vertical ellipsis next to it and choose from the f
 -   **Rename**: Change the view name.
 -   **Share**: Share the view with users or roles in your stack.
 -   **Copy Link**: Share the view link with collaborators for quick access.
-    
+
     **Note**: Anyone with the link can access the view and save it as their new view.
-    
+
 -   **View Details**: See key information such as creator, last modified date, and access permissions.
 -   **Delete**: Permanently remove the view if no longer needed. For shared views, the owner can remove it for all users or transfer ownership to another user before deleting it from their account.
 

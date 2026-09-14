@@ -17,9 +17,9 @@ To edit a stack, log in to your [Contentstack account](https://www.contentstack.
 1.  Navigate to your [stack](/docs/headless-cms/about-stack) and click the “Settings” icon or use the shortcut key “S” (for Windows and Mac OS users).
 2.  In the **General** section, modify the stack’s **Name** and **Description**.
 3.  Click **Save** to confirm your changes.
-    
+
     ![Edit Stack Settings in Contentstack](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb772f4ff187f7e86/67befadc5e83f4b872cb41f9/Setup-a-Stack-Edit-Stack-Settings-General-Section.png)
-    
+
 
 These updates help ensure your stack remains up-to-date.
 

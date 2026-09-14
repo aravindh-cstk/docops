@@ -29,11 +29,11 @@ To enable live preview in our website you need to perform the following steps:
 3.  Click on **\+ Create Preview Token**  
     ![1. Create Preview Token.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8ecebe9e379f9079/66d5c0d455d3e050d8d1ac3c/1._Create_Preview_Token.png)
 4.  Copy the Generated Preview token and save it in the .env file as:
-    
+
     ```
     REACT_APP_CONTENTSTACK_PREVIEW_TOKEN=<YOUR_PREVIEW_TOKEN>
     ```
-    
+
 5.  Click on **Save** to save the **Preview** token.
 
 ### Enable Live Preview in the Stack
@@ -49,9 +49,9 @@ To enable live preview in our website you need to perform the following steps:
 Follow these steps to set up live preview through the code:
 
 1.  Go to src/sdk/utils.ts file. This file has all the SDK initialization logic.
-    
+
     1.  Add the following two methods at the top of the file:
-        
+
         ```
         const getLivePreviewHostByRegion = (region: string) => {
             switch (region) {
@@ -84,9 +84,9 @@ Follow these steps to set up live preview through the code:
             }
           };
         ```
-        
+
     2.  Update the Environment Variable with REACT\_APP\_CONTENTSTACK\_PREVIEW\_TOKEN at the top of initializeContentstackSdk
-        
+
         ```
         const {
             REACT_APP_CONTENTSTACK_API_KEY,
@@ -96,9 +96,9 @@ Follow these steps to set up live preview through the code:
             REACT_APP_CONTENTSTACK_PREVIEW_TOKEN
           } = process.env;
         ```
-        
+
     3.  Update the Contentstack.Stack method within the initializeContentstackSdk with the below code:
-        
+
         ```
         const Stack = Contentstack.Stack({
             api_key: REACT_APP_CONTENTSTACK_API_KEY as string,
@@ -112,37 +112,37 @@ Follow these steps to set up live preview through the code:
             }
           });
         ```
-        
+
     4.  Install Live Preview Utils SDK package via npm using the following command:
-        
+
         ```
         npm install @contentstack/live-preview-utils
         ```
-        
+
     5.  Import ContentstackLivePreview along with other imports at the top of the file:
-        
+
         ```
         import ContentstackLivePreview from "@contentstack/live-preview-utils";
         ```
-        
+
     6.  Initialize the Live Preview SDK below the Contentstack.Stack method and before return stack:
-        
+
         ```
         ContentstackLivePreview.init({
             stackSdk: Stack
         });
         ```
-        
+
     7.  Finally, at the end of the file export the onEntryChange method:
-        
+
         ```
         export const onEntryChange = ContentstackLivePreview.onEntryChange;
         ```
-        
+
     8.  Finally, save the file.
-    
+
     Here’s what you did above:
-    
+
     1.  Added getLivePreviewHostByRegion and getHostByRegion to the top of the file
     2.  Updated the Environment Variable import for REACT\_APP\_CONTENTSTACK\_PREVIEW\_TOKEN
     3.  Updated Stack Initialization with the live\_preview parameter
@@ -151,15 +151,15 @@ Follow these steps to set up live preview through the code:
     6.  Initialized the Live Preview SDK by passing stack information
     7.  Added onEntryChange to the exports at the end of file
 2.  Go to src/routes/index.ts file. This is the file that maintains the routing logic of our application.
-    
+
     1.  Import onEntryChange from src/sdk/utils at the top of the file:
-        
+
         ```
         import { onEntryChange } from "../sdk/utils";
         ```
-        
+
     2.  In the useEffect function, wrap the fetchInitialData method within the onEntryChange handler before invoking it:
-        
+
         ```
         useEffect(() => {
             onEntryChange(() => {
@@ -167,23 +167,23 @@ Follow these steps to set up live preview through the code:
             });
           }, [dispatch]);
         ```
-        
+
     3.  Save the file.
-    
+
     Here's what you did above:
-    
+
     1.  Added onEntryChange to the import statement
     2.  Wrapped fetchInitialData function with onEntryChange
 3.  Go to src/components/menu/Menu.tsx file. This file consists of the Rendering Logic of the Menu Page of our Restaurant Menu Website.
-    
+
     1.  Import onEntryChange from src/sdk/utils at the top of the file:
-        
+
         ```
         import { onEntryChange } from "../../sdk/utils";
         ```
-        
+
     2.  In the useEffect function, wrap the fetchMenuPageData method within the onEntryChange handler before invoking it:
-        
+
         ```
         useEffect(() => {
             onEntryChange(() => {
@@ -191,11 +191,11 @@ Follow these steps to set up live preview through the code:
             });
           }, [dispatch]);
         ```
-        
+
     3.  Save the file.
-    
+
     Here's what you did above:
-    
+
     1.  Added onEntryChange to the import statement.
     2.  Wrapped fetchMenuPageData Function with onEntryChange
 
@@ -206,31 +206,31 @@ The changes done above are in your local machine. Let’s see how to deploy this
 1.  Open a new Terminal in VS code (press control + shift + \` or click on **Terminal** > **New Terminal**).
 2.  With multiple files modified, it is essential to commit and push them to Git to facilitate a successful deployment.
 3.  Now, let’s stage all the files that you need to commit. Run the below command in the terminal. You will see the list of files staged.
-    
+
     ```
     git add . -v
     ```
-    
+
     ![3. View the list of files staged.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1f9c7bb7663a6376/66d5c0d4305302bd3d77eb22/3._View_the_list_of_files_staged.png)
 4.  After the changes are staged, commit the staged files to the repository. Run the below command in the terminal. You will see the number of files changed.:
-    
+
     ```
     git commit -m "Add Live Preview changes"
     ```
-    
+
     ![4. View the number of files changed.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd417b52bfcf30e9b/66d5c0d4305302bc2277eb24/4._View_the_number_of_files_changed.png)
-    
+
     Note:
-    
+
     -   Let’s give a commit message “Add Live Preview changes” with -m flag. It’s a good practice to provide a commit message whenever you add new changes to the repository.
     -   Insertions and deletions count may differ for you.
-    
+
 5.  After committing the changes, push the changes to the repository. Run the below command in the terminal:
-    
+
     ```
     git push origin main
     ```
-    
+
     ![5. push the changes to the repository.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd7e47febc0f4de8c/66d5c0d43bf41eef81a40b97/5._push_the_changes_to_the_repository.png)
 
 You have successfully pushed your changes to Git. Now let’s deploy the new changes using Launch.
@@ -245,11 +245,11 @@ To deploy the changes you added to your application, perform the following set o
 4.  Select the **development** environment and navigate to **Environment Variables**.
 5.  Scroll down and under the **Environment Variables** section, click on **\+ Add Environment Variable**.
 6.  Now, to run our application with **Live Preview**, we need to add following environment variable from your .env file:
-    
+
     ```
     REACT_APP_CONTENTSTACK_PREVIEW_TOKEN=YOUR_PREVIEW_TOKEN
     ```
-    
+
 7.  Finally, click **Save Environment Variables**.
 8.  Click on the “Environments” icon (press “E”) on the left navigation panel, and click the **Default** environment.
 9.  Finally, click on **Redeploy**.
@@ -275,7 +275,7 @@ For example of Live Edit Tags let us consider the header entry and the Respectiv
 1.  To enable the Live Edit Tag buttons, add addEditableTags from @contentstack/utils
 2.  When making API calls to retrieve an entry, pass that entry to the following function. This function modifies the entry and adds additional data, as discussed below.
 3.  For example, in the header entry you have the following data:
-    
+
     ```
     {
       "logo": {
@@ -292,9 +292,9 @@ For example of Live Edit Tags let us consider the header entry and the Respectiv
       }
     }
     ```
-    
+
 4.  Once it is passed to the addEditableTags, the entry is modified as follows:
-    
+
     ```
     {
       "logo": {
@@ -343,19 +343,19 @@ For example of Live Edit Tags let us consider the header entry and the Respectiv
       }
     }
     ```
-    
+
 5.  The “$” object consists of a key called data-cslp which follows a specific syntax that enables the live preview SDK to map fields within the entry page.
-    
+
     ```
     {content_type_uid}.{entry_uid}.{locale}.{field_uid}
     ```
-    
+
 6.  By using the “$” object, you need to map each and every element in the frontend code that needs to have a live edit button. For example the logo of header
-    
+
     ```
     <img {...logo.$.url}="" src="{logo?.url}" alt="Logo">
     ```
-    
+
 
 For complete Live Preview code with Live Edit tags, please check out the **livePreview** Branch by executing the below command:
 

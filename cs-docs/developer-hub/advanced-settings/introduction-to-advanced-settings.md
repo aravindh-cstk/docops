@@ -46,9 +46,9 @@ To use Advanced Settings, perform the following steps:
 2.  On the Dashboard page, click the **Developer Hub** icon as shown below:![Developer_Hub_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd183a670891dc235/6908cfb85e75bb3ef8ed9139/Developer_Hub_Icon.png)
 3.  Click the **\+ New App** button.
 4.  Contentstack supports two types of Apps based on two categories: [Standard and Machine to Machine](/docs/developer-hub/introduction-to-contentstack-applications).
-    
+
     **Additional Resource:** Refer to the [Creating an App in Developer Hub](/docs/developer-hub/creating-an-app-in-developer-hub) document to know more about Standard and Machine to Machine app categories.
-    
+
 5.  In the **Create Standard App** modal, select the **App Type**, and give a suitable app **Name** and an optional **Description.**![Create_App.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltec6001966cfb17c4/6909de707973062fe7a2a348/Create_App.png)
 6.  Click **Create**. You will be redirected to the UI Locations landing page.
 7.  To continue, go to the **Advanced** section. You will see the three integrated features, i.e., **Variables**, **Mappings**, and **Rewrites**.  

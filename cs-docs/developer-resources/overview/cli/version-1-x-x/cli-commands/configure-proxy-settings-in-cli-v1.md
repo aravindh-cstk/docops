@@ -1,10 +1,10 @@
 ---
-title: "Configure Proxy Settings in CLI"
+title: "Configure Proxy Settings in CLI | V1.x.x"
 description: "Configure HTTP or HTTPS proxy settings in the Contentstack CLI using global config or environment variables to ensure reliable API access behind firewalls."
 url: /headless-cms/configure-proxy-settings-in-cli/v1
 ---
 
-# Configure Proxy Settings in CLI
+# Configure Proxy Settings in CLI | V1.x.x
 
 ## Configure Proxy Settings in CLI
 
@@ -47,7 +47,7 @@ csdx config:remove:proxy
 ## Prerequisites
 
 -   **Contentstack CLI installed and configured**
-    -   CLI version **1.55.0** or above (see [Install the CLI](/docs/headless-cms/install-the-cli))
+    -   CLI version **1.55.0** or above (see [Install the CLI](/docs/headless-cms/install-the-cli/v1))
 -   **Proxy server details**
     -   Proxy host
     -   Proxy port
@@ -88,27 +88,27 @@ csdx config:set:proxy
 **Examples**
 
 -   To set a basic proxy configuration:
-    
+
     ```
     csdx config:set:proxy --host 127.0.0.1 --port 3128
     ```
-    
+
     When you omit the \--username flag, the proxy is configured without authentication.
-    
+
 -   To set a proxy with HTTPS protocol:
-    
+
     ```
     csdx config:set:proxy --host proxy.example.com --port 8080 --protocol https
     ```
-    
+
 -   To set a proxy with authentication:
-    
+
     ```
     csdx config:set:proxy --host proxy.example.com --port 8080 --username user
     ```
-    
+
     When you include the \--username flag, the CLI prompts you to enter the password securely.
-    
+
 
 ### Get Proxy Configuration
 

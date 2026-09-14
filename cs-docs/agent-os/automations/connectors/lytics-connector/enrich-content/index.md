@@ -1,7 +1,7 @@
 ---
 title: "Enrich Content"
 description: "Enrich Content"
-url: https://docs.lytics.com/docs/enrichment#content-enrichment
+url: "https://docs.lytics.com/docs/enrichment#content-enrichment"
 doc_type: link
 ---
 

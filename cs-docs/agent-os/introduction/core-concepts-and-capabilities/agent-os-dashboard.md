@@ -35,9 +35,9 @@ At the top of the dashboard, you get a quick glance at the following:
 
 -   Total count of **Agents** and **Automations** created in a project.
 -   **Success Rate** reflects the total count of successful execution for Agents and Automations. Suppose, there are a total of 100 executions in a day, out of which 60 are successful and 40 are in some other statuses such as Failed, Running, Paused, etc. So the success rate would be **60%** for the day.
-    
+
     **Note:** The data is recorded for **24 hours**.
-    
+
 -   **Execution Summary (Today)** to track the total number of executions in a day for both Agents and Automations.
 -   **Average Execution Time** is the time taken by each Automation and Agent (in a project) to run.
 

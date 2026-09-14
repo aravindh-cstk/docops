@@ -1,7 +1,7 @@
 ---
 title: "Uniform"
 description: "Uniform"
-url: https://docs.uniform.app/docs/integrations/content/contentstack/uniform-in-contentstack
+url: "https://docs.uniform.app/docs/integrations/content/contentstack/uniform-in-contentstack"
 doc_type: link
 ---
 

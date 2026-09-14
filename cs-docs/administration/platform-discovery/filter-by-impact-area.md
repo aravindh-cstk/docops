@@ -19,11 +19,11 @@ Platform Discovery includes an **Impact Areas** filter that helps you identify f
 ### What You Will Learn
 
 -   What impact areas are and how Platform Discovery uses them.
-    
+
 -   Which impact areas are available and what business outcomes they represent.
-    
+
 -   How to apply the Impact Areas filter in Platform Discovery.
-    
+
 
 ## Available Impact Areas
 
@@ -46,20 +46,20 @@ The following seven impact areas are available as filter values.
 To filter features by impact area:
 
 1.  Open **Platform Discovery**.
-    
+
 2.  Click the **Impact Areas** dropdown in the top-right corner.
-    
+
 3.  Select an impact area.
-    
+
 
 The dashboard updates to display features associated with the selected business outcome.
 
 Impact area filters can help teams:
 
 -   Prioritize feature adoption initiatives.
-    
+
 -   Align platform capabilities with strategic goals.
-    
+
 -   Identify tools that support operational improvements.
-    
+
 -   Discover underused features relevant to current projects.

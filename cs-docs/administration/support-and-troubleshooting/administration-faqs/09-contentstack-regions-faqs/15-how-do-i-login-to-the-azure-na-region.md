@@ -9,4 +9,4 @@ _cms_faq_uid: cs19ae508c14a5413a
 
 # How do I login to the Azure NA region?
 
-You can either use the [Azure NA region login endpoint](https://azure-na-app.contentstack.com/#!/login) or navigate to the [login page](https://contentstack.com/login) and select “Azure North America” as your region.
+You can either use the [Azure NA region login endpoint](https://azure-na-app.contentstack.com/#!/login) or navigate to the [login page](https://www.contentstack.com/login) and select “Azure North America” as your region.

@@ -26,7 +26,7 @@ Key Features
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login/)
--   [CLI installed](/docs/headless-cms/install-the-cli/) and [configured](/docs/headless-cms/configure-regions-in-the-cli/) (version 1.44 or higher)
+-   [CLI installed](/docs/headless-cms/install-the-cli) and [configured](/docs/headless-cms/configure-regions-in-the-cli) (version 1.44 or higher)
 -   CLI [authenticated](/docs/headless-cms/cli-authentication#authentication)
 
 ## Installation
@@ -57,9 +57,9 @@ Options
 -   \-a, --alias=alias: Management token alias of the source stack.
 -   \--branch=branch: \[default: main\] Name of the branch where you want to export content.
 -   \--branch-alias=branch-alias: Alias of the branch to export from. (Version: 1.0.0-beta.4 or above)
-    
+
     **Note:** If no branch or branch alias is provided, and the stack is branch-enabled, the default main branch will be exported.
-    
+
 -   \-c, --config=config: Path to the configuration JSON file containing all options for a single run.
 -   \--skip-references: Skip referenced content types.
 -   \--skip-dependencies: Skip global fields, extensions, and taxonomies.
@@ -90,17 +90,17 @@ Use the following query structure to filter content types. Replace placeholders 
 **Examples**
 
 -   To export content types by title:
-    
+
     ```
     csdx cm:stacks:export-query -a prod-alias --query '{"modules":{"content-types":{"title":{"$in":["Blog","Author"]}}}}'
     ```
-    
+
 
 -   To export using a query from a file:
-    
+
     ```
     csdx cm:stacks:export-query -a prod-alias --query ./my-query.json
-    
+
     my-query.json:
     {
       "modules": {
@@ -112,7 +112,7 @@ Use the following query structure to filter content types. Replace placeholders 
       }
     }
     ```
-    
+
 
 ### Supported Modules
 

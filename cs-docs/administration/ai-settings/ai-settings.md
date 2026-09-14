@@ -19,11 +19,11 @@ Use the Global AI Settings page to control which products have access to AI feat
 ## What You Will Learn
 
 -   How to open the Global AI Settings page.
-    
+
 -   How to accept the Contentstack AI Terms of Service.
-    
+
 -   How to enable or disable AI features for individual products.
-    
+
 
 ## Manage Your AI Configuration
 

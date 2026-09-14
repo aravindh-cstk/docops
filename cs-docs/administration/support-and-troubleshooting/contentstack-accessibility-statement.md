@@ -51,7 +51,7 @@ Ensuring digital accessibility requires regular testing and validation. We recom
 
 -   [Axe](https://www.deque.com/axe/) by Deque Systems
 -   [WAVE](https://wave.webaim.org/) by WebAIM
--   [Lighthouse](https://developers.google.com/web/tools/lighthouse) by Google
+-   [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview?hl=it) by Google
 
 ### Assistive Technologies
 
@@ -71,5 +71,5 @@ For further guidance on accessibility standards and best practices, explore the 
 
 -   [WCAG Standards](https://www.w3.org/WAI/standards-guidelines/wcag/)
 -   [Contentstack Browser Support](/docs/headless-cms/what-you-need-to-get-started)
-    
+
     **Note:** Devices that exclusively use a touch interface are not supported.

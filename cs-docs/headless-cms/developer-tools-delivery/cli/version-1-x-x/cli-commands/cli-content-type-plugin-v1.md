@@ -1,14 +1,14 @@
 ---
-title: "Content Type Plugin"
+title: "Content Type Plugin | V1.x.x"
 description: "Use the Contentstack CLI Content Type Plugin to audit logs, compare schema diffs across stacks, and visualize your content model with SVG/DOT diagrams."
 url: /headless-cms/cli-content-type-plugin/v1
 ---
 
-# Content Type Plugin
+# Content Type Plugin | V1.x.x
 
 ## Content Type Plugin
 
-A newer version of this plugin is available. See [Content Type Plugin (v2)](/docs/headless-cms/cli-content-type-plugin/beta) for the current flag syntax before installing v1.
+A newer version of this plugin is available. See [Content Type Plugin (v2)](/docs/headless-cms/cli-content-type-plugin) for the current flag syntax before installing v1.
 
 ## Overview
 
@@ -33,27 +33,27 @@ These commands only read your stack's content types. They don't write, update, o
 
 ## Prerequisites
 
--   **Contentstack CLI v1 installed**. See [Contentstack CLI installation](/docs/developers/cli/install-the-cli):
+-   **Contentstack CLI v1 installed**. See [Contentstack CLI installation](/docs/headless-cms/install-the-cli/v1):
 -   **Plugin installed**: See [Installation](#installation).
 -   **Authentication**: Either a saved management token alias or a stack API key. See [Authentication](#authentication). If using a management token, its [role](/docs/headless-cms/about-stack-roles) must grant Content Type: Read permission.
--   **Region configured, if your stack is not in North America**. Requests default to the North America endpoint, so set your region if your stack is hosted elsewhere. See [Configure Regions in the CLI](/docs/developers/cli/configure-regions-in-the-cli#set-region):
+-   **Region configured, if your stack is not in North America**. Requests default to the North America endpoint, so set your region if your stack is hosted elsewhere. See [Configure Regions in the CLI](/docs/headless-cms/configure-regions-in-the-cli/v1#set-region):
 
 ---
 
 ## Installation
 
 1.  Install the plugin:
-    
+
     ```
     csdx plugins:install contentstack-cli-content-type
     ```
-    
+
 2.  Verify the plugin is installed:
-    
+
     ```
     csdx plugins
     ```
-    
+
     You should see contentstack-cli-content-type in the list.
 
 ## Commands
@@ -336,7 +336,7 @@ csdx content-type:diagram -k <stack-api-key> --output ./diagram.svg
 
 ## Deprecated Flags (v1)
 
-v1's short flags and the \--stack / \--token-alias long flags are deprecated in favor of the long-form flags used in v2. See [Upgrading from v1](/docs/headless-cms/cli-content-type-plugin/beta#upgrading-from-v1) for the full old-to-new flag mapping.
+v1's short flags and the \--stack / \--token-alias long flags are deprecated in favor of the long-form flags used in v2. See [Upgrading from v1](/docs/headless-cms/cli-content-type-plugin#upgrading-from-v1) for the full old-to-new flag mapping.
 
 When you use a deprecated flag, the CLI prints a deprecation warning pointing to the replacement.
 
@@ -495,8 +495,8 @@ See [content-type:diagram](#content-typediagram) for the full flag and output re
 
 ## Next Steps
 
--   [Regex Validate Plugin (v1)](/docs/headless-cms/cli-regex-validate-plugin): scan your content types and [global fields](/docs/headless-cms/about-global-field) for regex patterns vulnerable to catastrophic backtracking (a regex performance bug that can make matching hang).
--   [Audit Plugin](/docs/headless-cms/audit-plugin): a related Contentstack plugin for reviewing audit log activity across your stack.
--   [CLI Authentication: Add Management Token](/docs/developers/cli/cli-authentication#add-management-token): create and save the management token alias these commands use.
--   [Configure Regions in the CLI](/docs/developers/cli/configure-regions-in-the-cli#set-region): set your region if your stack is not in North America.
--   [About Content Types](/docs/developers/create-content-types/about-content-types): conceptual background on how content types and their fields are structured.
+-   [Regex Validate Plugin (v1)](/docs/headless-cms/cli-regex-validate-plugin/v1): scan your content types and [global fields](/docs/headless-cms/about-global-field) for regex patterns vulnerable to catastrophic backtracking (a regex performance bug that can make matching hang).
+-   [Audit Plugin](/docs/headless-cms/cli-audit-plugin/v1): a related Contentstack plugin for reviewing audit log activity across your stack.
+-   [CLI Authentication: Add Management Token](/docs/headless-cms/cli-authentication/v1#add-management-token): create and save the management token alias these commands use.
+-   [Configure Regions in the CLI](/docs/headless-cms/configure-regions-in-the-cli/v1#set-region): set your region if your stack is not in North America.
+-   [About Content Types](/docs/headless-cms/about-content-types): conceptual background on how content types and their fields are structured.

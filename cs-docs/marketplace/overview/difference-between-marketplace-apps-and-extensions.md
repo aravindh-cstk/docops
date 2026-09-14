@@ -59,6 +59,6 @@ ContentstackAppSdk.init().then(function (appSdk) {    // Your UI logic goes here
 ContentstackUIExtension.init().then(function (extension) {
 // Your UI logic goes here})</pre></td></tr></tbody></table>
 
-  
+
 
 **Additional Resource:** Refer to our [App Development pages](/docs/developer-hub), to learn how to build an app for Contentstack Marketplace.

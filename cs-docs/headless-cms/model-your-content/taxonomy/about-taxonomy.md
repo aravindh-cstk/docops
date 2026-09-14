@@ -22,7 +22,7 @@ Here are the key features of Taxonomy:
 -   Help categorize and classify entries using terms, making it simple to group similar elements together.
 -   Enhances search efficiency by narrowing down results to relevant categories.
 -   Supports localization for managing taxonomy data across multiple languages.
-    
+
 -   Allows publishing taxonomies to specific environments, locales, and branches.
 
 ## Role-based Advantages

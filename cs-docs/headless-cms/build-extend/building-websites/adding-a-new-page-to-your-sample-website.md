@@ -39,9 +39,9 @@ Within the Entry Editor page, enter/select the following content against the res
 Let's create an entry for the “APPETIZERS” Course
 
 -   **Title**: Enter “Fried Prawns”
-    
+
     **Note:** Make sure to keep the title of all dishes similar to the respective asset/image name.
-    
+
 -   **Image:** To upload the logo, perform the following set of actions (refer [About File Field](https://www.contentstack.com/docs/headless-cms/file)):
     1.  Click on **Upload a new file**.
     2.  Click on **Choose files** and select the desired asset file (in our case, select the Assets/Page - Menu /APPETIZERS/Fried Prawns.jpg), then click on **Open**.
@@ -86,13 +86,13 @@ Click on **Publish** and select the **development** environment for all respecti
     -   **URL:** Enter “/menu”
     -   **Menu**: Add a **Menu** section by clicking “**\+ Menu**”.
 3.  Expand the **Course** group by clicking on the down arrow.  
-    
+
     You will need to add multiple instances for this field with the values mentioned below.
-    
+
     **Note:** If an entry field is designated as “Multiple,” you will see the Add “+” icon located beside the existing instance.
-    
+
     Here are the instances you need to add:
-    
+
     -   Instance 1:
         -   **Course Name**: APPETIZERS
         -   **Dishes**: To select an option, perform the following steps:
@@ -100,13 +100,13 @@ Click on **Publish** and select the **development** environment for all respecti
                 ![Click on Choose existing entry to select the entry for Appetizers course.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb5ee0b460c9f5acc/66c87f4c788dbe21a399808c/Click_on_Choose_existing_entry_to_select_the_entry_for_Appetizers_course.png)
             2.  Select the entry, **Fried Prawns**, of the referred Content type, **Dishes**, and click on **Add Selected Entries**.  
                 ![Select Fried Prawns and click on Add Selected Entries.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8b9f35dbd4a1feba/66c87f4cefc13a00f7830cef/Select_Fried_Prawns_and_click_on_Add_Selected_Entries.png)
-    
+
     **Note:** You can similarly add the other dishes for the next three instances.
-    
+
     -   Instance 2:
         -   **Course Name**: MAIN DISHES
         -   **Dishes: Fresh Seafood Stew**
-    
+
     -   Instance 3:
         -   **Course Name**: DESSERTS
         -   Dishes: **Brownie Vanilla Cake**
@@ -156,11 +156,11 @@ To effectively implement Redux in our website, follow these steps:
 
 1.  Go to the src/reducer/index.ts file. This file has the AppState, initialState, slice, and reducers of our application.
 2.  Now, add TMenu to the import statement in line number 3 as follows:
-    
+
     ```
     import{TFooterData,THeaderData,THomePageData, **TMenu**}from"../types";
     ```
-    
+
 3.  Please follow “COMMENT” and uncomment all the commented lines.
 
 Here’s what the above action does:
@@ -257,31 +257,31 @@ Let’s see how to deploy the website using Launch to take it live.
 1.  Open a new Terminal in VS code. You can simply press _control_ **+** _shift_\+ **\`** () or click on **Terminal**\> **New Terminal**,
 2.  Commit all the changes added in the source code files and push it to Git to deploy.
 3.  Now, let’s stage all the files that you need to commit. Run the below command in the terminal. You will see the list of files staged.
-    
+
     ```
     git add . -v
     ```
-    
+
     ![List of staged files.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt347d4547c0f0d302/66c87f4c01f1a410a20110cc/List_of_staged_files.png)
 4.  After the changes are staged, you need to commit your staged files to the repository. Run the below command in the terminal. You will see the number of files changed.
-    
+
     ```
     git commit -m "Add Menu page changes"
     ```
-    
+
     ![Number of files changed.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb7b16af069375684/66c87f4c6a8049531749ae3a/Number_of_files_changed.png)
-    
+
     **NOTE:**
-    
+
     -   Here you can give a commit message “Add Menu page changes” with -m flag. It’s a good practice to provide a commit message whenever you add new changes to the repository.
     -   Insertions and deletions count may differ for you.
-    
+
 5.  After the changes are committed, you need to push the changes to the repository. Run the following command in the terminal.
-    
+
     ```
     git push origin main
     ```
-    
+
     ![Push the changes to the repository.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt10b50c3be845cc04/66c87f4cac55b57ff8eaf4cf/Push_the_changes_to_the_repository.png)
 
 You have successfully pushed your changes to Git. Now, let’s deploy the new changes using Launch.

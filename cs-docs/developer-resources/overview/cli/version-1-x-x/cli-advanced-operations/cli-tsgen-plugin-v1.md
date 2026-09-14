@@ -1,10 +1,10 @@
 ---
-title: "Generate Typescript Typings with TSGen Plugin"
+title: "Generate Typescript Typings with TSGen Plugin | V1.x.x"
 description: "The tsgen plugin is a Contentstack CLI plugin that generates TypeScript typings from content types. This step-by-step guide lets you install and use the tsgen plugin in CLI."
 url: /headless-cms/cli-tsgen-plugin/v1
 ---
 
-# Generate Typescript Typings with TSGen Plugin
+# Generate Typescript Typings with TSGen Plugin | V1.x.x
 
 ## Generate Typescript Typings with TSGen Plugin
 
@@ -19,25 +19,25 @@ This step-by-step guide lets you install and use the tsgen plugin in the CLI.
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login/)
--   [CLI installed](/docs/headless-cms/install-the-cli/) (version 1.1.0 and above)
+-   [CLI installed](/docs/headless-cms/install-the-cli/v1) (version 1.1.0 and above)
 -   [Delivery token](/docs/headless-cms/create-a-delivery-token/)
 
 ## Steps for execution
 
 1.  Install the TSGen plugin using the following command:
-    
+
     ```
     csdx plugins:install contentstack-cli-tsgen
     ```
-    
+
 2.  Add the delivery token as an alias to the CLI using the following command:
-    
+
     ```
     csdx auth:tokens:add --delivery
     ```
-    
+
     **Note:** Skip this step if you already have a delivery token as an alias.
-    
+
 
 ## Usage
 
@@ -61,59 +61,59 @@ csdx tsgen
 ## Examples
 
 1.  To generate a type file with a delivery token alias and output file path:
-    
+
     ```
     csdx tsgen -a "delivery token alias" -o "contentstack/generated.d.ts"
     ```
-    
+
 2.  To generate a type file with a delivery token alias and output file path for a branch named develop:
-    
+
     ```
     csdx tsgen -a "delivery token alias" -o "contentstack/generated.d.ts" --branch "develop"
     ```
-    
+
 3.  To generate a type file with a prefix:
-    
+
     ```
     csdx tsgen -a "delivery token alias" -o "contentstack/generated.d.ts" -p "I"
     ```
-    
+
 4.  To generate a type file excluding documentation comments:
-    
+
     ```
     csdx tsgen -a "delivery token alias" -o "contentstack/generated.d.ts" --no-doc
     ```
-    
+
 5.  To generate a type file with the graphql API type:
-    
+
     ```
     csdx tsgen -a "delivery token alias" -o "contentstack/generated.d.ts" --api-type graphql
     ```
-    
+
 6.  To generate a type file with the graphql API type and GraphQL as the namespace:
-    
+
     ```
     csdx tsgen -a "delivery token alias" -o "contentstack/generated.d.ts" --api-type graphql --namespace "GraphQL"
     ```
-    
+
 7.  To generate a type file with editable tags:
-    
+
     ```
     csdx tsgen -a "delivery token alias" -o "contentstack/generated.d.ts" --include-editable-tags
     ```
-    
+
 8.  To generate a type file with ReferencedEntry interface:
-    
+
     ```
     csdx tsgen -a "delivery token alias" -o "contentstack/generated.d.ts" --include-referenced-entry
     ```
-    
+
 9.  To generate typings with full Entry support:
-    
+
     ```
     csdx tsgen -a "delivery token alias" -o "contentstack/generated.d.ts" --include-system-fields --include-referenced-entry
     ```
-    
+
 
 **Note:** Together, these two flags enable **full, accurate Entry typings**, ensuring that relationships, system metadata, and dynamic references are all represented correctly in the generated TypeScript definitions.
 

@@ -61,6 +61,6 @@ Within a space, you can create workspaces. Workspaces act as parallel environmen
 | Safely test new asset schemas or metadata | cancel | check\_circle |
 | Branch assets to align with CMS content variants | cancel | check\_circle |
 
-  
+
 
 By combining spaces and workspaces correctly, Assets provides both structural clarity and operational flexibility, ensuring assets are always organized, governed, and adaptable.

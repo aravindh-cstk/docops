@@ -22,6 +22,6 @@ Let’s see them in detail.
 -   **Highly Available Architecture**
 -   Contentstack has a network architecture that is designed for maximum reliability and uptime, and offers up to 99.95% Service Level Agreement (SLA) for its services, just as promised. The infrastructure consisting of highly-available, redundant number of data centers ensures minimum service interruption due to natural disasters, hardware failures, or other incidents.
 -   **CDN and Caching**
--   Our highly efficient [CDN](/docs/administration/cdn-and-caching/what-is-cdn-and-how-it-works) ensures faster delivery of content irrespective of the destination with the help of nodes that are spread all around the world. Also, it allows caching – keeping copies of content that were requested earlier thus making it available for future requests.
+-   Our highly efficient [CDN](/docs/headless-cms/what-is-cdn-and-how-it-works) ensures faster delivery of content irrespective of the destination with the help of nodes that are spread all around the world. Also, it allows caching – keeping copies of content that were requested earlier thus making it available for future requests.
 -   **Data is constantly backed up**
 -   We use a Cloud-based backup solution to backup our database. For every request made, your data is constantly backed up.

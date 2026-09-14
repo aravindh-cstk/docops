@@ -9,4 +9,4 @@ _cms_faq_uid: cs0e2c1e6fa194e9eb
 
 # ​Is there a difference between the “Admin” and “Developer” roles?
 
-Yes, both the roles are different and the differences that are mentioned in the [Stack Admin vs Stack Developer](/docs/administration/stack-admin-vs-stack-developer) section.
+Yes, both the roles are different and the differences that are mentioned in the [Stack Admin vs Stack Developer](/docs/administration/about-product-roles) section.

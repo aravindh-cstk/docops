@@ -175,6 +175,6 @@ public void onCompletion(SyncStack syncStack, Error error) {
 
 ## More resources
 
--   [Android playground app](https://github.com/contentstack/contentstack-android-sync-playground.git)
+-   [Android playground app](https://github.com/contentstack/contentstack-android-sync-playground)
 -   [Android SDK API reference](/docs/developers/sdks/content-delivery-sdk/android/reference/)
 -   [View and Download Android SDK repository on GitHub](https://github.com/contentstack/contentstack-android)

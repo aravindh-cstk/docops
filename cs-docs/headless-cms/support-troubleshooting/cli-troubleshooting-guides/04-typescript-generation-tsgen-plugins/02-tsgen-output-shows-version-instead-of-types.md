@@ -34,10 +34,10 @@ Apply the scenario that matches the customer setup (often more than one check is
     -   Run csdx auth:tokens and confirm alias, API key, **environment**, and **delivery** token for the intended stack.
     -   Re-add the token if needed, then re-run:csdx tsgen -a "<correct\_delivery\_alias>" -o ./types/generated.d.ts
 2.  **Management token instead of delivery**
-    
+
     -   Use a **delivery** token alias for the target stack and environment.
     -   For GraphQL typings:
-    
+
     csdx tsgen -a "<alias>" -o ./types/graphql.d.ts --api-type graphql
     -   Optional namespace: add --namespace "YourNamespace".
 3.  **Wrong branch**csdx tsgen -a "<alias>" -o ./types/generated.d.ts --branch "<branch\_uid>"

@@ -24,4 +24,4 @@ CS Assets, Contentstack's space-based asset management system, is now generally 
 
 Folder and asset metadata are available for both legacy and CS Assets stacks once the correct authentication method is used.
 
-**Note:** [csdx cm:stacks:clone](/docs/developers/cli/clone-a-stack) does not export or import CS Assets space-based assets; use export/import instead if cloning a CS Assets-enabled stack.
+**Note:** [csdx cm:stacks:clone](/docs/headless-cms/cli-cloning-a-stack) does not export or import CS Assets space-based assets; use export/import instead if cloning a CS Assets-enabled stack.
