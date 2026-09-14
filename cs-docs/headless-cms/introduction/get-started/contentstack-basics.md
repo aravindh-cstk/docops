@@ -2,6 +2,7 @@
 title: "Contentstack Basics"
 description: "Contentstack Basics"
 url: /headless-cms/contentstack-basics
+uid: blt10b8056bb16c7b38
 ---
 
 # Contentstack Basics

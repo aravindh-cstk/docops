@@ -2,6 +2,7 @@
 title: "Build your Digital Property"
 description: "Build your Digital Property"
 url: /headless-cms/build-your-digital-property
+uid: blt821030ed7c484b60
 ---
 
 # Build your Digital Property
