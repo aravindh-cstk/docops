@@ -1,0 +1,167 @@
+---
+title: "URL variables reference"
+description: "Complete reference for every URL variable Studio accepts in composition URL patterns, including entry fields, taxonomy, context metadata, date pseudo variables, and validation rules."
+url: /studio/url-variables-reference
+---
+
+# URL variables reference
+
+## URL variables reference
+
+Every variable Studio accepts inside a composition URL pattern, grouped by category. Studio's URL editor validates patterns against this set: typos and unknown variables are rejected before save.
+
+## Variable categories
+
+| Category | Form | Example |
+| --- | --- | --- |
+| **Entry field** | {{entry.<field>}} | {{entry.title}} |
+| **Entry reference field** | {{entry.<reference>.<field>}} | {{entry.author.name}} |
+| **Entry system field** | {{entry.<system\_field>}} | {{entry.uid}} |
+| **Taxonomy** | {{taxonomy:<taxonomy\_uid>}} | {{taxonomy:brand}} |
+| **Context (metadata)** | {{<metadata\_field>}} | {{environment}} |
+| **Date pseudo** | {{entry\_created\_date:<part>}} | {{entry\_created\_date:year}} |
+| **Legacy wildcard** | \* | /blogs/\* |
+
+Every category is available on Connected templates. Sections don't render at a visitor URL, so URL variables don't apply to them.
+
+## Entry field
+
+{{entry.<field>}}: any field declared on the content type connected to the template.
+
+```
+URL pattern: /blogs/{{entry.title}}
+Resolves to: /blogs/AI%20101                (entry.title = "AI 101")
+```
+
+Spaces are URL-encoded as %20. Studio's URL editor validates that <field> exists on the connected content type's schema: typos produce a field\_not\_exists validation error.
+
+## Entry reference field
+
+{{entry.<reference>.<field>}}: a field on an entry referenced by the current entry.
+
+```
+URL pattern: /authors/{{entry.primary_author.handle}}/posts/{{entry.title}}
+```
+
+primary\_author must be a Reference field on the connected content type, and handle must exist on the referenced content type's schema.
+
+For multi-reference fields (reference\_to.length > 1), the sub-field is accepted if it exists on at least one of the referenced content types. The first match wins at resolve time.
+
+References are auto-included in the SDK's useCompositionData fetch. You don't need to declare extendQuery.includeReferences for fields used in URL patterns.
+
+## Entry system fields
+
+Properties present on every Content Management API (CMA) entry but not declared in the content type's schema. Allowed in patterns without a schema lookup:
+
+| System field | What it is |
+| --- | --- |
+| {{entry.uid}} | The entry's unique identifier (UID) |
+| {{entry.created\_at}} | ISO timestamp when the entry was created |
+| {{entry.updated\_at}} | ISO timestamp of the most recent update |
+| {{entry.created\_by}} | UID of the user who created the entry |
+| {{entry.updated\_by}} | UID of the user who most recently updated the entry |
+| {{entry.locale}} | The locale code the entry was fetched in |
+| {{entry.\_version}} | Numeric version of the entry |
+
+## Taxonomy
+
+{{taxonomy:<taxonomy\_uid>}}: the value of a taxonomy assigned to the entry.
+
+```
+URL pattern: /{{taxonomy:industry}}/{{entry.title}}
+Resolves to: /finance/quarterly-report       (entry has taxonomy industry = "finance")
+```
+
+Studio collects taxonomies referenced in patterns but doesn't validate the <taxonomy\_uid> against the schema: taxonomy terms aren't part of the content type schema.
+
+## Context (metadata) variables
+
+Five built-in metadata variables resolved from the request / project context, not from the entry.
+
+| Variable | Value at resolve time |
+| --- | --- |
+| {{environment}} | **Inert**: accepted by the pattern engine but resolves to nothing and repoints no fetch. Environment is set once at SDK init and applies uniformly to the whole page. |
+| {{locale}} | The selected locale code (e.g. en-us, fr-fr). **Not recommended in URL patterns**: carry locale via your routing layer + the SDK's locale query option instead. See [Multi-locale at scale](/docs/studio/managing-multiple-locales-at-scale). |
+| {{branch}} | **Inert**: accepted by the pattern engine but resolves to nothing. Branch is set once at SDK init. |
+| {{composition\_uid}} | The composition's UID |
+| {{content\_type\_uid}} | The connected content type's UID |
+
+In the Edit URL modal, Connected templates show Insert chips for {{environment}}, {{entry.title}}, {{entry.uid}}, {{taxonomy:brand}}, {{locale}} (the chip exists, but prefer routing-layer locale + the SDK locale query option instead of inserting it).
+
+The chips are quick-insert shortcuts. The full set above is typeable manually: {{content\_type\_uid}} and other entry / taxonomy variants work the same. ({{environment}} and {{branch}} can be typed too, but are inert, see above.)
+
+## Date pseudo variables (auto-generated only)
+
+When you configure a content type's URL pattern (/blogs/:year/:month/:title), Studio auto-generates these pseudo variables from the matching pattern:
+
+| Pattern part | Auto-generated to |
+| --- | --- |
+| :year | {{entry\_created\_date:year}} |
+| :year\_short | {{entry\_created\_date:year\_short}} |
+| :month | {{entry\_created\_date:month}} |
+| :monthname | {{entry\_created\_date:monthname}} |
+| :monthname\_short | {{entry\_created\_date:monthname\_short}} |
+| :day | {{entry\_created\_date:day}} |
+
+**You can't type these manually** in the URL editor: pasting {{entry\_created\_date:year}} produces a pseudo\_variable\_not\_allowed validation error. They're an internal marker the URL engine uses. The content type's :year\-style pattern is the user-facing surface.
+
+If you want a year in your URL without using the content type's URL pattern, store the year as an entry field and use {{entry.published\_year}} instead.
+
+## Legacy wildcard
+
+\*: matches exactly one path segment, captures it for routing alignment, carries no value.
+
+```
+URL pattern: /blogs/*
+Matches:     /blogs/ai-101, /blogs/llm-economics, /blogs/agent-design
+```
+
+Used by legacy linked patterns from before variable-based URLs landed. The Edit URL modal warns when it detects a legacy pattern with a "This composition has a legacy URL pattern. Once changed, you cannot revert it." banner.
+
+> **One-way migration.** Confirming the change in the Edit URL modal upgrades the composition to a variable-based URL permanently: there is no rollback. Be sure the new pattern resolves correctly against your CT's fields before saving.
+
+For new templates, prefer variable-based patterns (/blogs/{{entry.title}}): they carry data into the resolved URL instead of routing it.
+
+> **Pick a SLUG field, not the title.** {{entry.title}} renders the display-name verbatim, so "AI 101" becomes /blogs/AI%20101, which is fragile (capitals, spaces, %20\-encoding, breaks on title rename). **Bind the URL to your CT's slug field** (commonly entry.url or entry.slug). Studio gives you /blogs/ai-101. The CT's url field is the canonical Contentstack URL slug, use it for the URL pattern, use {{entry.title}} for display only.
+
+## Where URLs come from (recap)
+
+For a new linked template, Studio derives the URL pattern from the first available source:
+
+1.  **Custom Preview URL** for the content type: **strongly recommended. Configure this once per CT.** tryCustomPreviewUrl() runs first.
+2.  **Content type URL pattern** (e.g. /blogs/:title): tryContentTypeUrlPattern() runs if #1 returned null.
+3.  **Default fallback** (/<content\_type\_uid>/<composition\_uid>/{{entry.title}}): createDefaultLinkedUrl() runs if #2 also returned null.
+
+For Sections (always render in canvas, no visitor URL) the derivation skips #1+#2 and uses the default pattern directly.
+
+**Two extra URL-source values exist** but apply OUTSIDE this derivation flow:
+
+-   USER\_SPECIFIED\_PATTERN: the author hand-edited the URL via the URL pattern editor AFTER creation
+-   LEGACY\_URL: the composition pre-dates the URL-source metadata and runs on the legacy URL path
+
+> **Dev configures once. Authors never touch URLs.** Set the **Custom Preview URL** on each content type when the CT is created (in Contentstack, open Content Models, select the CT, go to Settings, and set Custom Preview URL, for example /blogs/{{entry.url}} for blogs or /products/{{entry.slug}} for products). After that, every new linked template against that CT auto-derives the correct URL pattern: **authors never edit URLs in Studio**. Hand-editing a template's URL pattern is a smell that something upstream wasn't configured.
+
+See [Templates: Connected content type](/docs/studio/connected-content-type) for the derivation flow.
+
+## Validation rules
+
+Studio's URL editor blocks save on any of these:
+
+| Error | Trigger |
+| --- | --- |
+| invalid\_syntax | Malformed {{ }} braces, unclosed pairs |
+| field\_not\_exists | {{entry.foo}} where foo isn't on the schema |
+| unknown\_variable | {{some\_random\_thing}} that matches no category |
+| pseudo\_variable\_not\_allowed | {{entry\_created\_date:\*}} typed manually |
+| empty\_pattern | The pattern field is empty |
+
+## Resolved-value behavior
+
+-   **Spaces** in variable values are URL-encoded as %20
+-   **Reference variables** trigger an includeReferences query addition automatically: you don't need to declare it via extendQuery
+-   **Taxonomy variables** resolve from the entry's taxonomies.<uid> array. First value wins for multi-value taxonomies
+
+## See also
+
+-   [Templates: Connected content type](/docs/studio/connected-content-type): URL derivation order
+-   [Install the Studio SDK: Fetch a composition](/docs/studio/install-the-studio-sdk#4-fetch-a-composition-with): the extendQuery option
