@@ -18,7 +18,7 @@ The fastest way to get started with Launch is to clone and deploy a [sample Cont
 -   Launch-enabled Organization with [Owner or Admin](/docs/administration/about-administration-roles) permissions
 -   [GitHub account](https://github.com/login)
 
-## What You Will Learn
+## What You Can Learn
 
 -   How to import a GitHub repository into Launch.
 -   How to configure build and output settings for a NextJS project.
@@ -65,13 +65,13 @@ Follow the steps given below to deploy your first Launch project using GitHub:
     -   **Enable Contentstack Authentication:** By default, [Contentstack Authentication](/docs/launch/contentstack-authentication) is enabled for your project environment.
     -   **Environment Variables (Optional):** Enter the key and value of one or more environment variables.
 
-        For the Contentstack NextJS Starter to work, we need to provide the following environment variables:
+        For the Contentstack NextJS Starter to work, provide the following environment variables:
 
         ```
         NEXT_PUBLIC_CONTENTSTACK_API_KEY=your_api_key_here
         NEXT_PUBLIC_CONTENTSTACK_DELIVERY_TOKEN=your_delivery_token_here
         NEXT_PUBLIC_CONTENTSTACK_PREVIEW_TOKEN=your_preview_token_here
-        NEXT_PUBLIC_CONTENTSTACK_ENVIRONMENT=preview
+        NEXT_PUBLIC_CONTENTSTACK_ENVIRONMENT=your_environment_here
         NEXT_PUBLIC_CONTENTSTACK_REGION=EU # Options: NA, EU, AU, AZURE-NA, AZURE-EU, GCP-NA, GCP-EU
         NEXT_PUBLIC_CONTENTSTACK_PREVIEW=true # Set to true to enable preview
         ```
@@ -86,7 +86,7 @@ Follow the steps given below to deploy your first Launch project using GitHub:
 
     ![Launch_QSGuide_NextJS_Deploying.png](https://images.contentstack.io/spaces/am51d76353d996c1fe/assets/amcd7e14b30a95c0bd/b49e556c9b8b3da3c032f135/Launch_QSGuide_NextJS_Deploying.png?locale=en-us)
 
-Upon successful deployment, you will see the following screen. You can preview the deployed website by clicking the icon next to the URL in the **Domains** section: 
+Upon successful deployment, the system displays the confirmation screen. You can preview the deployed website by clicking the icon next to the URL in the **Domains** section: 
 
 ![Launch_QSGuide_NextJS_Live.png](https://images.contentstack.io/spaces/am51d76353d996c1fe/assets/am813615737599ec8f/81ca5abf785ca969ef83323d/Launch_QSGuide_NextJS_Live.png?locale=en-us)
 
