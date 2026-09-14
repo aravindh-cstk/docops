@@ -59,19 +59,20 @@ export const LEAF_CONTENT_TYPES = new Set([
 /**
  * Nav positions we deliberately do not mirror, as slugified chains.
  *
- * Confirmed live 2026-09-14: there is now exactly one CLI container node,
- * links_2026/bltd697fa2bc1e38b53, titled "CLI" (the earlier sibling "CLI
- * Test" node this comment used to describe no longer exists under any
- * title). That single node is correctly placed under Developer Resources >
- * Overview (cs-docs/developer-resources/overview/cli/), and is ALSO still
- * referenced from a leftover position under Headless CMS > Developer Tools &
- * Delivery. Both positions resolve to the same 94 leaves, so without this
- * exclusion the crawl would generate them twice.
+ * Currently empty, and that is the intended state.
  *
- * Remove this entry once the stale headless-cms reference is deleted from
- * the nav directly (a CMS cleanup, not a repo change).
+ * This set used to hold "headless-cms/developer-tools-delivery/cli". That was
+ * wrong. The CLI container node, links_2026/bltd697fa2bc1e38b53, is referenced
+ * from two nav positions on purpose: Developer Resources > Overview, and
+ * Headless CMS > Developer Tools & Delivery. Readers reach the CLI docs from
+ * either product, so both positions are mirrored and the repo carries the tree
+ * twice. Confirmed by the docs owner 2026-09-14.
+ *
+ * Before adding a chain here, confirm with the docs owner that the position is
+ * genuinely unwanted. A cross-listing looks identical to a stale reference from
+ * the data alone, and excluding a real one silently drops a whole subtree.
  */
-export const EXCLUDED_CHAINS = new Set(["headless-cms/developer-tools-delivery/cli"]);
+export const EXCLUDED_CHAINS = new Set<string>([]);
 
 /**
  * Entries excluded even though they are published, because they are the losing
