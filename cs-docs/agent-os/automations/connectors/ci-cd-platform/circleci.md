@@ -2,6 +2,7 @@
 title: "CircleCI"
 description: "CircleCI"
 url: /agent-os/circleci
+uid: blt7dbefb65f5c3b06e
 ---
 
 # CircleCI

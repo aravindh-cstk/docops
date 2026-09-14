@@ -2,6 +2,7 @@
 title: "Go-Live Guide"
 description: "Go live with Contentstack Launch! Learn key steps for smooth deployment, domain routing, TLS setup, and website performance optimization."
 url: /launch/go-live-guide
+uid: bltbcc36f485e621e72
 ---
 
 # Go-Live Guide

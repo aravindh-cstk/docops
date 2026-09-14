@@ -2,6 +2,7 @@
 title: "Managing Projects"
 description: "Create, edit, favorite, and delete projects in Agent OS to streamline your automation and agent management."
 url: /agent-os/managing-projects
+uid: blte0279dbed8f8ce02
 ---
 
 # Managing Projects

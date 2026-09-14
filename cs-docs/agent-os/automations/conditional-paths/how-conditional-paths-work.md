@@ -2,6 +2,7 @@
 title: "How Conditional Paths Work"
 description: "Learn how to use Conditional Path in automations to create if-else logic and customize workflows with precise conditions."
 url: /agent-os/how-conditional-paths-work
+uid: blt710c1203ed733a5f
 ---
 
 # How Conditional Paths Work

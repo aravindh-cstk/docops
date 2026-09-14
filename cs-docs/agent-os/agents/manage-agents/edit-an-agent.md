@@ -2,6 +2,7 @@
 title: "Edit an Agent"
 description: "Learn how to edit or modify agents in Agent OS using the Agent Builder."
 url: /agent-os/edit-an-agent
+uid: blt57d73db17705f0c8
 ---
 
 # Edit an Agent

@@ -2,6 +2,7 @@
 title: "Custom Domains"
 description: "Learn how to create, deploy, and manage custom domains in Contentstack Launch."
 url: /launch/custom-domain
+uid: blt6d870761d3e3bea6
 ---
 
 # Custom Domains

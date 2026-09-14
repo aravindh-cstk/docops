@@ -2,6 +2,7 @@
 title: "Blocking Default Launch Domains From Google Search"
 description: "Prevent search engines from indexing your default Launch domains (*.contentstackapps.com) using robots.txt, headers, 403 responses, or CDN authentication."
 url: /launch/blocking-default-launch-domains-from-google-search
+uid: blt37c2b068aac82ea2
 ---
 
 # Blocking Default Launch Domains From Google Search

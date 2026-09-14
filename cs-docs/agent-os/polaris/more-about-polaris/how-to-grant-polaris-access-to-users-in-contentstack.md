@@ -2,6 +2,7 @@
 title: "How to Grant Polaris Access to Users in Contentstack"
 description: "Learn how to enable Polaris for your users in Contentstack by creating a Custom Role with Polaris Read access and assigning it to the right users."
 url: /agent-os/how-to-grant-polaris-access-to-users-in-contentstack
+uid: blt57ff62978001635d
 ---
 
 # How to Grant Polaris Access to Users in Contentstack

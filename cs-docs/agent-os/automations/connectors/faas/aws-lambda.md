@@ -2,6 +2,7 @@
 title: "AWS Lambda"
 description: "AWS Lambda"
 url: /agent-os/aws-lambda
+uid: blt613daad5046331ea
 ---
 
 # AWS Lambda
