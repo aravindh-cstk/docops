@@ -2,13 +2,14 @@
 title: "Building Websites with Contentstack and AI"
 description: "Build AI-first websites with Contentstack Headless CMS and Next.js. Use AI coding assistants like Cursor to master CDA, SDK integration, and deployment on Launch."
 url: /headless-cms/build-websites-with-contentstack-and-ai
+uid: blt47b5c6cbb5777ad0
 ---
 
 # Building Websites with Contentstack and AI
 
 ## Build a Website with Contentstack and AI
 
-Contentstack is a [headless CMS](https://www.contentstack.com/docs/headless-cms/what-is-headless-cms) that delivers content as JSON through its [Content Delivery API (CDA)](https://www.contentstack.com/docs/developers/apis/content-delivery-api). This guide connects a Next.js front-end to the CDA using AI coding assistants to generate the integration code, so content editors can publish entries in Contentstack and the website reflects those changes without code changes.
+Contentstack is a [headless CMS](/docs/headless-cms/what-is-headless-cms) that delivers content as JSON through its [Content Delivery API (CDA)](/docs/developers/apis/content-delivery-api). This guide connects a Next.js front-end to the CDA using AI coding assistants to generate the integration code, so content editors can publish entries in Contentstack and the website reflects those changes without code changes.
 
 ## Quick Decision Guide
 
@@ -18,7 +19,7 @@ Use this table to choose the AI coding assistant path before reading the setup r
 | --- | --- | --- |
 | Claude Code | Plugin-based skills install. MCP via Claude Desktop | You want a chat-first workflow with full MCP support and terminal access |
 | Cursor | Rules-file approach. MCP configured in Cursor settings | You prefer an AI-native code editor with full project file context |
-| Codex / OpenAI agents | AGENTS.md entry point. No MCP | You are running OpenAI-based agents in a programmatic pipeline |
+| Codex / OpenAI agents | [AGENTS.md](http://AGENTS.md) entry point. No MCP | You are running OpenAI-based agents in a programmatic pipeline |
 | Gemini CLI | Extension-based install. No MCP | You are working within Google IDEs or the Gemini CLI toolchain |
 
 ## AI Integrations in This Guide
@@ -27,7 +28,7 @@ This guide uses three Contentstack AI integrations alongside your AI coding assi
 
 -   **Skills**: Gives your AI coding assistant Contentstack-specific knowledge making your prompts produce accurate, working code without boilerplate context.
 -   [**MCP (Model Context Protocol)**](/docs/developers/contentstack-mcp-server): Connects your AI coding assistant directly to Contentstack APIs so it can create content types, entries, and trigger deployments without switching to the dashboard.
--   [**Polaris**](https://www.contentstack.com/docs/agent-os/what-is-polaris): Contentstack's in-CMS AI co-pilot. Content editors can create, edit, and publish content via natural language entirely inside the CMS, with no developer involvement.
+-   [**Polaris**](/docs/agent-os/what-is-polaris): Contentstack's in-CMS AI co-pilot. Content editors can create, edit, and publish content via natural language entirely inside the CMS, with no developer involvement.
 
 ## Prerequisites
 
@@ -102,49 +103,48 @@ The Contentstack MCP server exposes tools spanning the Content Management API, C
 
 **Note:** The Contentstack MCP server is currently available for internal experimentation and is not officially supported.
 
-**Authenticate**
+#### Authenticate
 
 Before configuring any client, authenticate once:
 
 1.  Run the following command in your terminal:
-    
-    ```
-    npx @contentstack/mcp --auth -y
-    ```
-    
-2.  Select **Authorization**, then **Login**.
-3.  Choose your Contentstack region (for example, **North America AWS**).
-4.  Complete [OAuth](https://www.contentstack.com/docs/developer-hub/contentstack-oauth) in the browser window that opens.
-5.  Select your organization.
-6.  Confirm the success message in the terminal before proceeding.
-    
-    Authentication is required for CMA, Analytics, Brand Kit, Launch, and Personalize tools. CDA tools require only the delivery token set in the config env block.
-    
 
-**Configure for Claude Desktop**
+```
+npx @contentstack/mcp --auth -y
+```
+
+1.  Select **Authorization**, then **Login**.
+2.  Choose your Contentstack region (for example, **North America AWS**).
+3.  Complete [OAuth](/docs/developer-hub/contentstack-oauth) in the browser window that opens.
+4.  Select your organization.
+5.  Confirm the success message in the terminal before proceeding.
+
+> Authentication is required for CMA, Analytics, Brand Kit, Launch, and Personalize tools. CDA tools require only the delivery token set in the config env block.
+
+#### Configure for Claude Desktop
 
 1.  Open Claude Desktop and go to **Settings > Developer > Edit Config**. This opens claude\_desktop\_config.json.
 2.  Add the following to the file:
-    
-    ```
-    {
-       "mcpServers": {
-         "contentstack": {
-           "command": "npx",
-           "args": ["-y", "@contentstack/mcp"],
-           "env": {
-             "CONTENTSTACK_API_KEY": "<your_api_key>",
-             "CONTENTSTACK_DELIVERY_TOKEN": "<your_delivery_token>",
-             "GROUPS": "cma,cda"
-           }
-         }
+
+```
+{
+   "mcpServers": {
+     "contentstack": {
+       "command": "npx",
+       "args": ["-y", "@contentstack/mcp"],
+       "env": {
+         "CONTENTSTACK_API_KEY": "<your_api_key>",
+         "CONTENTSTACK_DELIVERY_TOKEN": "<your_delivery_token>",
+         "GROUPS": "cma,cda"
        }
      }
-    ```
-    
-3.  Save the file and restart Claude Desktop. The MCP server starts in the background automatically.
+   }
+ }
+```
 
-**Configure for Cursor**
+1.  Save the file and restart Claude Desktop. The MCP server starts in the background automatically.
+
+#### Configure for Cursor
 
 1.  Open Cursor and go to **Settings > MCP > Add Custom MCP**.
 2.  Paste the same JSON block from the Claude Desktop configuration, changing the configuration file location.
@@ -156,7 +156,7 @@ The server starts when Cursor launches.
 
 The GROUPS environment variable is optional and controls which API tool groups the MCP server exposes. An unrecognised group name causes the MCP server to start without exposing any tools, with no error reported.
 
-Default (not set): both CMA and CDA tools are exposed:
+Default (not set): only CMA tools are exposed:
 
 ```
 "env": {}
@@ -189,16 +189,18 @@ Accepted group names:
 | launch | Launch deployment platform | OAuth (Stack API Key + Launch Project ID) |
 | lytics | Data and Insights (Lytics) | Lytics Access Token |
 | personalize | Personalize API | OAuth (Stack API Key + Personalize Project ID) |
-| developer-hub | Developer Hub / Marketplace | OAuth (Stack API Key) |
+| developerhub | Developer Hub / Marketplace | OAuth (Stack API Key) |
+| cma-extended | Audit logs, version history, workflow inspection (load alongside cma) | OAuth or Management Token (Stack API Key) |
+| automations | Agent OS projects and workflow execution | OAuth (Stack API Key) |
 | all | All available tools | All of the above |
 
-Use the default value for this guide. You can expand to additional groups as you progress through later parts.
+This guide needs both CMA and CDA tools, so set GROUPS explicitly to "cma,cda" as shown in the Claude Desktop configuration above rather than relying on the default. You can expand to additional groups as you progress through later parts.
 
-**Verify**
+#### Verify
 
 Prompt your AI coding assistant: "List my Contentstack stacks". It should respond via MCP without you writing any code. If it returns stack names from your organization, the MCP server is configured correctly.
 
-**Note:** "List my stacks" is an org-level operation and requires a user authtoken (a session credential tied to your Contentstack login). For a full breakdown, refer to [Types of Tokens](https://www.contentstack.com/docs/headless-cms/types-of-tokens) documentation.
+**Note:** "List my stacks" is an org-level operation and requires a user authtoken (a session credential tied to your Contentstack login). For a full breakdown, refer to [Types of Tokens](/docs/headless-cms/types-of-tokens) documentation.
 
 ### Step 3: Verify Skills and MCP Setup
 
@@ -210,11 +212,11 @@ If you receive a generic response or the AI coding assistant says it has no Cont
 
 ## Part 2: Setting Up Contentstack
 
-Complete the following setup steps before writing any front-end code. Each step includes an **MCP Prompt** block — run it in your AI coding assistant via the Contentstack MCP server — and a **Manual** alternative for CMS dashboard users. MCP is the primary path; the manual alternative is provided where available.
+Complete the following setup steps before writing any front-end code. Each step includes an **MCP Prompt** block (run it in your AI coding assistant via the Contentstack MCP server) and a **Manual** alternative for CMS dashboard users. MCP is the primary path, the manual alternative is provided where available.
 
 ### Step 4: Create Your Stack
 
-A [stack](https://www.contentstack.com/docs/headless-cms/about-stack) is Contentstack's project container. It holds all your [content types](https://www.contentstack.com/docs/headless-cms/about-content-types), [entries](https://www.contentstack.com/docs/headless-cms/about-entries), [assets](https://www.contentstack.com/docs/headless-cms/about-assets), and [environments](https://www.contentstack.com/docs/headless-cms/about-environments).
+A [stack](/docs/headless-cms/about-stack) is Contentstack's project container. It holds all your [content types](/docs/headless-cms/about-content-types), [entries](/docs/headless-cms/about-entries), [assets](/docs/headless-cms/about-assets), and [environments](/docs/headless-cms/about-environments).
 
 **MCP Prompt:**
 
@@ -222,13 +224,13 @@ A [stack](https://www.contentstack.com/docs/headless-cms/about-stack) is Content
 Create a new Contentstack stack named "My Company Website" in the <YOUR_REGION> region.
 ```
 
-Replace <YOUR\_REGION> with your organization's region. For the list of available regions, see [Regions](https://www.contentstack.com/docs/administration/about-regions).
+Replace <YOUR\_REGION> with your organization's region. For the list of available regions, see [Regions](/docs/administration/about-regions).
 
-The AI coding assistant calls the CMA via MCP and the stack is created immediately. If you prefer to do this manually, see [Create a New Stack](https://www.contentstack.com/docs/headless-cms/create-a-new-stack) for full steps.
+The AI coding assistant calls the CMA via MCP and the stack is created immediately. If you prefer to do this manually, see [Create a New Stack](/docs/headless-cms/create-a-new-stack) for full steps.
 
 ### Step 5: Design Your Content Model
 
-You can describe a [content model](https://www.contentstack.com/docs/marketplace/about-content-models) to your AI coding assistant in natural language and it creates the content type via the CMA directly. The Content Type Builder — the schema editor in the Contentstack dashboard where you define fields, UIDs, and validation rules — is the manual equivalent.
+You can describe a [content model](/docs/marketplace/about-content-models) to your AI coding assistant in natural language and it creates the content type via the CMA directly. The Content Type Builder (the schema editor in the Contentstack dashboard where you define fields, UIDs, and validation rules) is the manual equivalent.
 
 **MCP Prompt:**
 
@@ -242,7 +244,7 @@ Create a content type called "Blog Post" with these fields:
 - tags (Tags)
 ```
 
-The cms-data-modeling-best-practices skill validates UID naming conventions automatically, so you can describe fields using plain English and the AI coding assistant applies the correct UID format.
+The cms-data-modeling-best-practices skill offers guidance on content model structure (content types, references, global fields, groups, modular blocks, taxonomy, and tags), so you can describe your model in plain English. Follow Contentstack's own [UID naming rules](/docs/headless-cms/create-a-content-type) when reviewing the field UIDs the AI coding assistant generates.
 
 ### Step 6: Set Up an Environment
 
@@ -254,7 +256,7 @@ You need a publishing environment before your front-end can fetch content. An en
 Create an environment named development with base URL http://localhost:3000
 ```
 
-The AI coding assistant calls the CMA via MCP and the environment is created. If you prefer to do this manually, see [Add an Environment](https://www.contentstack.com/docs/headless-cms/add-an-environment) documentation for full steps.
+The AI coding assistant calls the CMA via MCP and the environment is created. If you prefer to do this manually, see [Add an Environment](/docs/headless-cms/add-an-environment) documentation for full steps.
 
 ### Step 7: Create Some Sample Content
 
@@ -275,11 +277,11 @@ The AI coding assistant calls the CMA via MCP and the entries are created in you
 
 **Manually using CMS**
 
-You can also create entries manually in the Contentstack dashboard. See [Create an Entry](https://www.contentstack.com/docs/headless-cms/create-an-entry) for full steps.
+You can also create entries manually in the Contentstack dashboard. See [Create an Entry](/docs/headless-cms/create-an-entry) for full steps.
 
 **Using Polaris**
 
-Polaris is a separately licensed AI co-pilot embedded within the Contentstack CMS. It accepts natural language prompts and executes them as CMA calls within the CMS interface and permission model. If your organization has access, contact [support@contentstack.com](mailto:support@contentstack.com) to request access. See the [Get Started with Polaris](https://www.contentstack.com/docs/agent-os/get-started-with-polaris) documentation for step-by-step instructions.
+Polaris is a separately licensed AI co-pilot embedded within the Contentstack CMS. It accepts natural language prompts and executes them as CMA calls within the CMS interface and permission model. If your organization has access, contact [support@contentstack.com](mailto:support@contentstack.com) to request access. See the [Get Started with Polaris](/docs/agent-os/get-started-with-polaris) documentation for step-by-step instructions.
 
 **Note:** Polaris requires a separate Polaris plan. Contact support to check access before following this path.
 
@@ -292,28 +294,27 @@ The following steps use an AI coding assistant to generate the front-end code. P
 This guide uses Next.js as the front-end framework.
 
 1.  Scaffold the project:
-    
-    ```
-    npx create-next-app@latest my-contentstack-site
-     cd my-contentstack-site
-    ```
-    
-2.  When prompted, enable: **TypeScript**, **ESLint**, **Tailwind CSS**, and **App Router**. Disable the src/ directory and custom import alias. Accept defaults for any other prompts. The scaffolder installs all required framework dependencies automatically.
-3.  Install the Contentstack Delivery SDK (Contentstack's TypeScript-first Delivery SDK):
-    
-    ```
-    npm install @contentstack/delivery-sdk
-    ```
-    
 
-**Get Your API Credentials**
+```
+npx create-next-app@latest my-contentstack-site
+ cd my-contentstack-site
+```
+
+1.  When prompted, enable: **TypeScript**, **ESLint**, **Tailwind CSS**, and **App Router**. Disable the src/ directory and custom import alias. Accept defaults for any other prompts. The scaffolder installs all required framework dependencies automatically.
+2.  Install the Contentstack Delivery SDK (Contentstack's TypeScript-first Delivery SDK):
+
+```
+npm install @contentstack/delivery-sdk
+```
+
+#### Get Your API Credentials
 
 Your front-end needs two credentials to fetch published content from Contentstack:
 
 -   **Stack API Key**
 -   **Delivery Token**.
 
-Retrieve your API Key and create a Delivery Token scoped to the development environment. See [Create a Delivery Token](https://www.contentstack.com/docs/headless-cms/create-a-delivery-token) for complete steps.
+Retrieve your API Key and create a Delivery Token scoped to the development environment. See [Create a Delivery Token](/docs/headless-cms/create-a-delivery-token) for complete steps.
 
 **Warning:** Exposure of a Delivery Token or API Key allows anyone to read your published content. Never commit these credentials to a public repository. Unlike the authtoken, these credentials are long-lived and scoped to your stack. Store them in a .env.local file and add .env\*.local to your .gitignore.
 
@@ -425,7 +426,8 @@ Contentstack's Rich Text Editor stores content as JSON. Use the following prompt
 ```
 1. Install and configure @contentstack/utils (the modern replacement for the legacy serializer) to convert this JSON to HTML.
 2. Create a React component called RichTextRenderer that accepts a JSON prop.
-3. Use the jsonToHtml function from the SDK to convert the JSON and render it as sanitized HTML using dangerouslySetInnerHTML.
+3. Build the entry object passed to jsonToHtml with a uid field (the entry's actual uid, or a placeholder if unavailable) alongside the rich text field, since the SDK's EntryEmbedable type requires uid.
+4. Use the jsonToHtml function from the SDK to convert the JSON and render it as sanitized HTML using dangerouslySetInnerHTML.
 
 Expected Output: Provide a reusable React component in a file named components/RichTextRenderer.tsx. The output should include the necessary imports from the Contentstack Utility SDK and a clean implementation that handles empty or null JSON props gracefully.
 ```
@@ -434,7 +436,7 @@ For the full list of available JSON transforms, see the [@contentstack/utils doc
 
 ### Step 15: Handling Images from Contentstack
 
-Images from Contentstack are returned as objects with a url property. See the [Image Delivery API](https://www.contentstack.com/docs/developers/apis/image-delivery-api) for the full list of supported query parameters. Use the following in your prompt:
+Images from Contentstack are returned as objects with a url property. See the [Image Delivery API](/docs/developers/apis/image-delivery-api) for the full list of supported query parameters. Use the following in your prompt:
 
 ```
 Use this URL as the src for the Next.js Image component. Contentstack image URLs support query parameters for resizing. Add width=800 to optimize.
@@ -450,7 +452,7 @@ Run your development server and check your site:
 npm run dev
 ```
 
-Open http://localhost:3000 in your browser. If the setup is correct, the page displays content fetched from Contentstack.
+Open [http://localhost:3000](http://localhost:3000) in your browser. If the setup is correct, the page displays content fetched from Contentstack.
 
 If the page does not display content, check the following in order:
 
@@ -462,9 +464,9 @@ To debug build errors, paste the error message and the relevant file into your A
 
 ## Part 4: Deploying with Contentstack Launch
 
-[Contentstack Launch](https://www.contentstack.com/docs/launch) is a front-end hosting and deployment platform built for Contentstack-powered websites. It connects your GitHub repository and triggers deployments from the Contentstack interface.
+[Contentstack Launch](/docs/launch) is a front-end hosting and deployment platform built for Contentstack-powered websites. It connects your GitHub repository and triggers deployments from the Contentstack interface.
 
-Only Organization [Admins](https://www.contentstack.com/docs/headless-cms/types-of-roles#admin) and [Owners](https://www.contentstack.com/docs/headless-cms/types-of-roles#owner) can create projects in Launch.
+Only Organization [Admins](/docs/headless-cms/types-of-roles#admin) and [Owners](/docs/headless-cms/types-of-roles#owner) can create projects in Launch.
 
 If the build fails because environment variables are not configured in Launch, see [Troubleshooting: Build fails during Collecting page data](#build-fails-on-contentstack-launch-during-collecting-page-data).
 
@@ -493,7 +495,7 @@ By default, the skill only reports gaps. It does not modify any variables.
 
 ### Deploy the Project
 
-Follow the [Launch Quick Start Guide with NextJS](https://www.contentstack.com/docs/launch/quick-start-nextjs) for the complete step-by-step walkthrough, including connecting your GitHub repository, configuring build settings, and triggering your first deployment.
+Follow the [Launch Quick Start Guide with NextJS](/docs/launch/quick-start-nextjs) for the complete step-by-step walkthrough, including connecting your GitHub repository, configuring build settings, and triggering your first deployment.
 
 Auto-deploy is enabled by default. Any push to the connected Git branch triggers a new deployment.
 
@@ -513,7 +515,7 @@ The launch-trigger-and-monitor-launch-deployments skill can trigger a Launch dep
 Trigger a Launch deployment for the main branch and monitor it to completion.
 ```
 
-**Important:** The skill requires explicit confirmation before triggering a production deployment. It does not deploy without your approval.
+> **Important:** The skill requires explicit confirmation before triggering a production deployment. It does not deploy without your approval.
 
 ### Keeping Content in Sync with Webhooks
 
@@ -717,6 +719,8 @@ No ED25519 host key is known for github.com
 ssh-keyscan github.com >> ~/.ssh/known_hosts
 ```
 
+---
+
 **Symptom 2:** After resolving the host key error, the install still fails with:
 
 ```
@@ -765,7 +769,7 @@ The following skills are included in the Contentstack Agent Skills bundle instal
 
 ### Key Contentstack API Endpoints
 
-The following endpoints are used to fetch content from the CDA. Refer to the [Content Delivery API](https://www.contentstack.com/docs/developers/apis/content-delivery-api) documentation for all available endpoints.
+The following endpoints are used to fetch content from the CDA. Refer to the [Content Delivery API](/docs/developers/apis/content-delivery-api) documentation for all available endpoints.
 
 ```
 # Fetch all entries from a content type
@@ -788,7 +792,8 @@ Content-Type: application/json
 | SDK Method | Description |
 | --- | --- |
 | .Query().find() | Fetches all entries |
-| .Query().where('slug', slug).find() | Filters entries by a field value |
+| .Query().where('slug', QueryOperation.EQUALS, slug).find() | Filters entries by a field value |
+| .Query().equalTo('slug', slug).find() | Filters entries by a field value (equality only, no QueryOperation needed) |
 | .Query().limit(9).skip(0).find() | Paginates results |
 | .Query().ascending('date').find() | Sorts entries by a field |
 | .Query().includeReference('author').find() | Includes referenced entries |
@@ -796,16 +801,16 @@ Content-Type: application/json
 
 ### Related Documentation
 
--   [Quickstart in 5 Mins](https://www.contentstack.com/docs/headless-cms/quickstart-in-5-mins): Minimal working example connecting one content type to a front-end fetch call, useful for verifying credentials before building the full site.
--   [Content Delivery API](https://www.contentstack.com/docs/developers/apis/content-delivery-api): Complete endpoint reference for fetching entries, assets, and content types. Use this when you need a query parameter or response field not covered in this guide.
--   [TypeScript Delivery SDK Reference](https://www.contentstack.com/docs/developers/sdks/content-delivery-sdk/typescript/reference): Full method signatures, parameters, and return types for @contentstack/delivery-sdk used in lib/contentstack.ts.
--   [Create a Content Type](https://www.contentstack.com/docs/headless-cms/create-a-content-type): Step-by-step instructions for adding fields, setting field UIDs, and configuring validation rules in the Contentstack dashboard.
--   [Create a Delivery Token](https://www.contentstack.com/docs/headless-cms/create-a-delivery-token): Instructions for generating the scoped read-only token required by the CDA and stored in CONTENTSTACK\_DELIVERY\_TOKEN.
--   [About Environments](https://www.contentstack.com/docs/headless-cms/about-environments): Explains how environments scope published content and how to add or configure them beyond the development environment created in this guide.
--   [Create an Entry](https://www.contentstack.com/docs/headless-cms/create-an-entry): Full instructions for authoring, saving, and publishing content in the Contentstack dashboard.
--   [Contentstack Launch](https://www.contentstack.com/docs/launch): Overview of the Launch hosting platform, including custom domains, environment variables, and deploy hooks.
--   [Launch Quick Start Guide with NextJS](https://www.contentstack.com/docs/launch/quick-start-nextjs): Step-by-step walkthrough for deploying a Next.js app on Launch, with configuration details beyond what this guide covers.
--   [Contentstack CLI](https://www.contentstack.com/docs/headless-cms/install-the-cli): Command-line tools for stack management, content migration, and local development workflows.
+-   [Quickstart in 5 Mins](/docs/headless-cms/quickstart-in-5-mins): Minimal working example connecting one content type to a front-end fetch call, useful for verifying credentials before building the full site.
+-   [Content Delivery API](/docs/developers/apis/content-delivery-api): Complete endpoint reference for fetching entries, assets, and content types. Use this when you need a query parameter or response field not covered in this guide.
+-   [TypeScript Delivery SDK Reference](/docs/developers/sdks/content-delivery-sdk/typescript/reference): Full method signatures, parameters, and return types for @contentstack/delivery-sdk used in lib/contentstack.ts.
+-   [Create a Content Type](/docs/headless-cms/create-a-content-type): Step-by-step instructions for adding fields, setting field UIDs, and configuring validation rules in the Contentstack dashboard.
+-   [Create a Delivery Token](/docs/headless-cms/create-a-delivery-token): Instructions for generating the scoped read-only token required by the CDA and stored in CONTENTSTACK\_DELIVERY\_TOKEN.
+-   [About Environments](/docs/headless-cms/about-environments): Explains how environments scope published content and how to add or configure them beyond the development environment created in this guide.
+-   [Create an Entry](/docs/headless-cms/create-an-entry): Full instructions for authoring, saving, and publishing content in the Contentstack dashboard.
+-   [Contentstack Launch](/docs/launch): Overview of the Launch hosting platform, including custom domains, environment variables, and deploy hooks.
+-   [Launch Quick Start Guide with NextJS](/docs/launch/quick-start-nextjs): Step-by-step walkthrough for deploying a Next.js app on Launch, with configuration details beyond what this guide covers.
+-   [Contentstack CLI](/docs/headless-cms/install-the-cli/v1): Command-line tools for stack management, content migration, and local development workflows.
 -   [Contentstack Agent Skills](https://github.com/contentstack/contentstack-agent-skills): The skills bundle repository. Install it for Claude Code, Cursor, Codex, or Gemini CLI.
 -   [Contentstack MCP Server](https://www.npmjs.com/package/@contentstack/mcp): @contentstack/mcp on npm. AI-driven Contentstack operations via the CMA, CDA, Launch, and more.
 
@@ -813,9 +818,9 @@ Content-Type: application/json
 
 Use the following resources to extend your Contentstack implementation beyond the basics covered in this guide.
 
-1.  [**Contentstack Personalize**](https://www.contentstack.com/docs/personalize)**:** Deliver content variants to specific audience segments.
-2.  [**Contentstack Automate**](https://www.contentstack.com/docs/agent-os)**:** Automate content migration and cross-system syncing.
-3.  [**Visual Editor**](https://www.contentstack.com/docs/headless-cms/about-visual-editor)**:** Enable content editors to compose pages without code.
-4.  [**Marketplace**](https://www.contentstack.com/marketplace)**:** Integrate with translation, SEO, analytics, and e-commerce tools.
-5.  [**Contentstack Community**](https://www.contentstack.com/community)**:** Ask questions and find examples from other developers.
-6.  [**Contentstack Agent Skills**](https://github.com/contentstack/contentstack-agent-skills)**:** Update the installed skills bundle when a new version is released to get coverage for new Contentstack product features and API changes.
+1.  **[Contentstack Personalize](/docs/personalize):** Deliver content variants to specific audience segments.
+2.  **[Contentstack Automate](/docs/agent-os):** Automate content migration and cross-system syncing.
+3.  **[Visual Editor](/docs/headless-cms/about-visual-editor):** Enable content editors to compose pages without code.
+4.  **[Marketplace](https://www.contentstack.com/marketplace):** Integrate with translation, SEO, analytics, and e-commerce tools.
+5.  **[Contentstack Community](https://www.contentstack.com/community):** Ask questions and find examples from other developers.
+6.  **[Contentstack Agent Skills](https://github.com/contentstack/contentstack-agent-skills):** Update the installed skills bundle when a new version is released to get coverage for new Contentstack product features and API changes.
