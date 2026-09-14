@@ -61,7 +61,7 @@ Let’s look at the steps in detail.
     3.  Add the required details in all the fields. In Step 2. B. 2 given below, you will learn how to generate the URL for the **URL to notify** field. As of now, you can put a placeholder and proceed with the remaining steps. However, make sure you replace the placeholder URL with the actual URL once you create one in the next step.
     4.  Add the parameters in the **When** section as given below.  
 
-        -   **Any**: ‘Any�� (no change)
+        -   **Any**: ‘Any’ (no change)
         -   **Select Module:** ‘Entry’
         -   **Select Content Type (Optional)**: Select a content type only if needed, else leave it blank
         -   **Select Action**: ‘Created’
