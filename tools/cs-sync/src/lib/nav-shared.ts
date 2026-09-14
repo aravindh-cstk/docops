@@ -59,10 +59,17 @@ export const LEAF_CONTENT_TYPES = new Set([
 /**
  * Nav positions we deliberately do not mirror, as slugified chains.
  *
- * "CLI" and "CLI Test" are sibling links_2026 nodes under Headless CMS >
- * Developer Tools & Delivery holding largely the same articles. Per the
- * product owner, CLI is being retired and CLI Test becomes the new CLI, so we
- * keep cli-test and drop cli. Revisit once that rename lands in the CMS.
+ * Confirmed live 2026-09-14: there is now exactly one CLI container node,
+ * links_2026/bltd697fa2bc1e38b53, titled "CLI" (the earlier sibling "CLI
+ * Test" node this comment used to describe no longer exists under any
+ * title). That single node is correctly placed under Developer Resources >
+ * Overview (cs-docs/developer-resources/overview/cli/), and is ALSO still
+ * referenced from a leftover position under Headless CMS > Developer Tools &
+ * Delivery. Both positions resolve to the same 94 leaves, so without this
+ * exclusion the crawl would generate them twice.
+ *
+ * Remove this entry once the stale headless-cms reference is deleted from
+ * the nav directly (a CMS cleanup, not a repo change).
  */
 export const EXCLUDED_CHAINS = new Set(["headless-cms/developer-tools-delivery/cli"]);
 

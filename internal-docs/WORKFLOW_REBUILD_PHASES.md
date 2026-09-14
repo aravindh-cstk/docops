@@ -187,7 +187,9 @@ Approved and published to production the same day. All three environments now se
 
 **Worth understanding for the reconcile:** `nav-tree.ts` reads the latest version of nav structure entries rather than the published one, which is why the crawl cleared immediately even though Production is still on version 29. Article leaves are a separate matter, since those are gated on `isPublishedToProd`.
 
-## The CLI content is the single largest move
+## The CLI content, moved 2026-09-14
+
+**Already done, ahead of Build 1.** 83 files moved with `git mv` at 100% rename similarity, 9 byte-identical duplicates removed, and 2 files deliberately left in place. Build 1 should find this folder already correct and plan no action on it. The rest of this section records what happened and why.
 
 The `EXCLUDED_CHAINS` comment in `nav-shared.ts` describes a temporary state: "CLI" and "CLI Test" as sibling `links_2026` nodes under Headless CMS, with CLI Test expected to become the new CLI once the CMS caught up. Checked directly against the live stack, that has already happened, and the actual result is not quite what the comment predicted.
 
@@ -200,10 +202,25 @@ The reorg moved the node's parent, not its identity. That same node is reference
 
 So the folder name `cli-test` in the repo is not stale naming from a node that still exists. It is the name a backfill run gave the folder in early August, before this reorg, when "CLI Test" was still a real, separate node. That node no longer exists under that name. The content it held is now one part of the single "CLI" node, moved to Developer Resources.
 
-Two follow-ups, one for the reconcile and one for the CMS:
+### What the move actually did
 
-- **In the reconcile:** treat this as a straightforward move to `cs-docs/developer-resources/overview/cli/`, exactly as already planned. `EXCLUDED_CHAINS` still needs to drop the stale `headless-cms/developer-tools-delivery/cli` entry, or the crawl regresses to producing 188 leaves instead of 94 the next time someone touches that list.
-- **In the CMS, separately:** the leftover reference under Headless CMS is a duplicate pointer to a node that has moved, not just a naming mismatch in the repo. Worth removing from the nav directly, the same class of cleanup as the dangling Assets link above, though not blocking (it is actively excluded, so it produces no live 404 today).
+Target paths came from the fresh nav chain per file, matched on canonical url. Of the 94 files:
+
+- **83 moved** into `cs-docs/developer-resources/overview/cli/<version>/<section>/`, all recorded by git at 100% rename similarity, so `git log --follow` still works on every one.
+- **9 removed as duplicates.** Each was a second on-disk copy of an entry the nav lists under both a v1 and a v2 position. Every pair was verified byte-identical before removing one side, and the surviving copy is the canonical target. Where an entry had two candidate positions, the tie broke on the lexicographically first chain, which consistently prefers the lower version folder.
+- **2 left in place**, both copies of `create-custom-cli-commands.md`. See below.
+
+### The 2 files left behind
+
+`cs-docs/headless-cms/developer-tools-delivery/cli-test/` still holds two identical copies of `create-custom-cli-commands.md`, at url `/headless-cms/create-custom-cli-commands`.
+
+No nav leaf anywhere references that url, so the reconcile has no target path to move them to. The entry behind them is real and live: `docs_article/blt18f5edee45f9d6c2`, "Create Custom CLI Commands", **published to production at version 13**. So this is a page that ships to readers but is reachable from no navigation position, one of the 44 `orphanPublished` entries the crawl counts.
+
+Deliberately untouched, because the three possible answers need a human: relink it in the nav, unpublish it, or delete the files and let the entry stand alone. This is the same quarantine case Build 1 handles rather than guesses at.
+
+### Still outstanding, in the CMS
+
+The leftover reference under Headless CMS is a duplicate pointer to a node that has moved, not just a naming mismatch in the repo. `EXCLUDED_CHAINS` still carries `headless-cms/developer-tools-delivery/cli` and must keep carrying it until that reference is deleted from the nav, otherwise the crawl produces the same 94 leaves twice. Removing it is the same class of cleanup as the dangling Assets link above, and is not blocking, since the exclusion means it produces no live 404 today.
 
 On disk those files sit in the wrong place:
 
