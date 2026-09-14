@@ -2,6 +2,7 @@
 title: "Create and Publish Content"
 description: "Create and Publish Content"
 url: /headless-cms/create-and-publish-content
+uid: bltbf8e2fe58c350e41
 ---
 
 # Create and Publish Content
