@@ -2,6 +2,7 @@
 title: "Change Git Repository for a Project"
 description: "Learn how to change the GitHub repository linked to an existing Contentstack Launch project without losing your configuration, settings, or deployment history."
 url: /launch/change-git-repository-for-a-project
+uid: bltd7ed919840c01051
 ---
 
 # Change Git Repository for a Project

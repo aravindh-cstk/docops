@@ -2,6 +2,7 @@
 title: "Static IPs (Egress)"
 description: "Learn how Static IP addresses work in Contentstack Launch and how to set up outbound IP allowlisting for your backend systems."
 url: /launch/static-ip-addresses
+uid: blt67315f9cda7e9b1e
 ---
 
 # Static IPs (Egress)

@@ -2,6 +2,7 @@
 title: "Launch Definitions and Core Concepts"
 description: "Definitions of core Launch concepts, including build time, compute time, and bandwidth, that determine usage and cost across the CDN and origin."
 url: /launch/launch-definitions-and-core-concepts
+uid: blta11a91e54b0830c5
 ---
 
 # Launch Definitions and Core Concepts

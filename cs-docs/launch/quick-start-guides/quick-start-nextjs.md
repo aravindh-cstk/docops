@@ -2,6 +2,7 @@
 title: "Launch Quick Start Guide with NextJS"
 description: "Learn how to deploy your first NextJS Starter Launch project using GitHub."
 url: /launch/quick-start-nextjs
+uid: blt7a8e453166ce6627
 ---
 
 # Launch Quick Start Guide with NextJS

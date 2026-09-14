@@ -2,6 +2,7 @@
 title: "Transfer Project Ownership"
 description: "Learn how to transfer ownership of a Contentstack Launch project to another collaborator, including prerequisites and post-transfer steps."
 url: /launch/transfer-project-ownership
+uid: blte40d461c5e927467
 ---
 
 # Transfer Project Ownership

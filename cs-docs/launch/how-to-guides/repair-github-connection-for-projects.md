@@ -2,6 +2,7 @@
 title: "Repair GitHub Connection for Projects"
 description: "Troubleshoot and fix GitHub connection issues in Contentstack Launch. Resolve errors and get your projects back on track."
 url: /launch/repair-github-connection-for-projects
+uid: blt381bca8f740a7c6d
 ---
 
 # Repair GitHub Connection for Projects

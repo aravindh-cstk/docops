@@ -2,6 +2,7 @@
 title: "Private Network Deployments"
 description: "Learn to configure Private Network Deployments with static egress IPs and AWS VPC peering for secure connectivity to your backend infrastructure."
 url: /launch/private-network-deployments
+uid: blt1103c2f3dbdeefff
 ---
 
 # Private Network Deployments
