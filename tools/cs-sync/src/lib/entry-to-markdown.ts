@@ -97,8 +97,45 @@ export interface EntryMarkdownOptions {
   includeTags?: boolean;
 }
 
-function escapeForFrontmatter(value: string): string {
-  return value.replace(/"/g, '\\"');
+/**
+ * A YAML double-quoted scalar for `value`, quotes included.
+ *
+ * This used to be `value.replace(/"/g, '\\"')`, which escaped the quote but not
+ * a backslash already sitting in front of it. CMS descriptions routinely carry
+ * pre-escaped `\"` sequences, and that turned into `\\"` on the way out: YAML
+ * reads `\\` as one escaped backslash and then takes the `"` as the end of the
+ * string, so the scalar closed early and the next line's `url:` was left
+ * dangling as a stray key. The parser's complaint was
+ * "a multiline key may not be an implicit key at line 4", and because nothing
+ * caught it, one entry stopped the Prod → GitHub sync for every product for a
+ * week (docs_article/blt91bd209852adbded, a Studio page).
+ *
+ * JSON string escaping is a subset of YAML's double-quoted style, so
+ * JSON.stringify is both correct and, for a value with no quote or backslash in
+ * it, byte-identical to what the old code emitted. That matters: the sync treats
+ * a byte difference as an edit, so a serializer that merely reformatted would
+ * have rewritten all ~1,700 synced files in one run.
+ */
+export function yamlQuoted(value: string): string {
+  return JSON.stringify(value);
+}
+
+/**
+ * Characters that are safe to leave unquoted as a YAML plain scalar.
+ *
+ * `url` and `uid` were emitted bare and stayed readable that way, so they keep
+ * being emitted bare whenever they can be. A value that could change meaning
+ * unquoted (a colon, a leading indicator character, anything non-ASCII) falls
+ * back to a quoted scalar instead of being written as-is and hoping.
+ */
+// A leading "/" is deliberate and load-bearing: every url is rooted ("/studio/…")
+// and "/" is not a YAML indicator character, so it is safe to leave bare. Quoting
+// it instead would have changed one byte in all ~1,700 already-synced files,
+// which the sync reads as an edit to every page at once.
+const PLAIN_SAFE = /^[A-Za-z0-9/][A-Za-z0-9/_#.~-]*$/;
+
+export function yamlScalar(value: string): string {
+  return PLAIN_SAFE.test(value) ? value : yamlQuoted(value);
 }
 
 /** The authored tags on an entry, with this pipeline's bookkeeping removed. */
@@ -166,10 +203,10 @@ export function entryToMarkdown(
 
   const url = options.urlOverride ?? (entry.url as string | undefined) ?? "";
 
-  const lines = ["---", `title: "${escapeForFrontmatter(heading)}"`];
-  lines.push(`description: "${escapeForFrontmatter(description)}"`);
-  lines.push(`url: ${url}`);
-  if (options.stampUid !== false && entry.uid) lines.push(`uid: ${entry.uid}`);
+  const lines = ["---", `title: ${yamlQuoted(heading)}`];
+  lines.push(`description: ${yamlQuoted(description)}`);
+  lines.push(`url: ${yamlScalar(url)}`);
+  if (options.stampUid !== false && entry.uid) lines.push(`uid: ${yamlScalar(entry.uid)}`);
 
   // A tag-only edit has to produce a visible file change, otherwise no PR opens
   // for it and the change is lost. Emitted sorted so tag reordering in the CMS
@@ -204,7 +241,17 @@ function normalizeTagsForDiff(value: unknown): string {
  * An absent `previous` means the page is new, reported as every field present.
  */
 export function diffMarkdownFields(previous: string | null, next: string): MarkdownField[] {
-  const after = matter(next);
+  // The generated side gets the same guard its `previous` sibling below has
+  // always had. yamlQuoted should make an unparseable `next` impossible now,
+  // but this function sits inside the per-entry loop of the Prod → GitHub sync,
+  // and a throw here is what took that sync down for a week. Reporting every
+  // field as changed is the honest answer when the frontmatter cannot be read.
+  let after: matter.GrayMatterFile<string>;
+  try {
+    after = matter(next);
+  } catch {
+    return ["title", "description", "url", "tags", "body"];
+  }
 
   if (previous === null) {
     const fields: MarkdownField[] = ["title", "description", "url"];

@@ -24,6 +24,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { config } from "dotenv";
 
@@ -117,6 +118,19 @@ async function request(reqPath: string, retriesLeft = 4): Promise<any> {
   return res.json();
 }
 
+
+/** Best-effort git revision for the snapshot's provenance stamp. */
+function currentGitRevision(): string {
+  try {
+    return execFileSync("git", ["rev-parse", "--short", "HEAD"], {
+      cwd: repoRoot,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    }).trim();
+  } catch {
+    return "unknown";
+  }
+}
 
 export async function buildNavTree(): Promise<NavTree> {
   process.stderr.write("Fetching nav content types...\n");
@@ -411,6 +425,11 @@ export async function buildNavTree(): Promise<NavTree> {
 
   return {
     generatedAt: new Date().toISOString(),
+    provenance: {
+      excludedChains: [...EXCLUDED_CHAINS].sort(),
+      deprecatedUids: [...DEPRECATED_UIDS.keys()].sort(),
+      gitRevision: currentGitRevision(),
+    },
     leftNavUid: LEFT_NAV_UID,
     products,
     leaves,

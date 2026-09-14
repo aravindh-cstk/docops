@@ -127,6 +127,22 @@ export interface NavIssue {
 
 export interface NavTree {
   generatedAt: string;
+  /**
+   * The editorial filters in force when this snapshot was crawled.
+   *
+   * Without this a snapshot is indistinguishable from a current one even when it
+   * was taken under a different exclusion set. That is not hypothetical: the
+   * 2026-09-14T12:04Z snapshot was crawled while
+   * "headless-cms/developer-tools-delivery/cli" was still in EXCLUDED_CHAINS, so
+   * it was quietly missing 94 CLI leaves, and every count derived from it was
+   * wrong. Readers compare this against the code they are running and refuse a
+   * mismatch rather than writing files from a nav that no longer exists.
+   */
+  provenance?: {
+    excludedChains: string[];
+    deprecatedUids: string[];
+    gitRevision: string;
+  };
   leftNavUid: string;
   products: Array<{ uid: string; title: string; slug: string }>;
   leaves: NavLeaf[];

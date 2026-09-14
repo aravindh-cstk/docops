@@ -298,6 +298,7 @@ async function main(): Promise<void> {
     updated: 0,
     deleted: 0,
     navMismatch: 0,
+    failed: 0,
   };
 
   const docIndex = buildDocIndex(REPO_ROOT, DOCS_ROOT);
@@ -306,12 +307,32 @@ async function main(): Promise<void> {
   const liveEntryUids = new Set<string>();
 
   for (const item of published) {
-    const outcome = await evaluate(item, {
-      sandboxClient,
-      membership,
-      docIndex,
-      stats,
-    });
+    // One entry must never be able to discard the whole run.
+    //
+    // This loop used to call evaluate() unguarded, so any throw unwound to
+    // main().catch and exited 1 before a single file was committed. A Studio
+    // page whose description contained a pre-escaped \" serialized to invalid
+    // YAML, gray-matter threw on it, and that took the Prod → GitHub sync down
+    // for every one of the 13 products for a week (40+ consecutive failed runs,
+    // 2026-09-07 to 2026-09-14). Two entries had the same defect, so fixing the
+    // serializer alone would only have moved the crash to the next one.
+    //
+    // The entry is reported, counted, and skipped. Everything else still syncs.
+    let outcome: Outcome;
+    try {
+      outcome = await evaluate(item, {
+        sandboxClient,
+        membership,
+        docIndex,
+        stats,
+      });
+    } catch (error) {
+      stats.failed++;
+      console.log(
+        `  ✗ ${item.uid} (${(item.entry.url as string) || "no url"}): ${(error as Error).message}`,
+      );
+      continue;
+    }
 
     if (outcome.kind === "skip") continue;
 
@@ -619,6 +640,15 @@ function report(summary: PullSummary, stats: Record<string, number>, dryRun: boo
   }
   if (stats.navMismatch > 0) {
     console.log(`   ⚠️  ${stats.navMismatch} entries whose breadcrumb disagrees with the nav`);
+  }
+  // Loud, because the alternative is what happened before: the run reported
+  // success while quietly dropping a page every time. A non-zero count here
+  // means a specific entry cannot be converted and needs looking at, not that
+  // the sync is unhealthy.
+  if (stats.failed > 0) {
+    console.log(
+      `   🛑 ${stats.failed} entries failed to convert and were skipped (see the ✗ lines above)`,
+    );
   }
 
   console.log("");
