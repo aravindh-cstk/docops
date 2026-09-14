@@ -508,9 +508,52 @@ async function applyProduct(
         console.log(`  WARNING ${leaf.title}: ${empties.length} FAQ answer(s) rendered empty, not written`);
         stats.emptyFaqAnswers += empties.length;
       }
+      // FAQ files are named by position ("01-", "02-"), so inserting one
+      // question at the top of a section renames every file below it. Without
+      // move matching that reads as a pile of deletions plus a pile of
+      // creations: launch alone showed 43 such pairs, all of them the same
+      // question at a new number, and each one would have dropped its git
+      // history. Articles already avoid this by matching on url (Pass 1 below);
+      // a FAQ question has no url, so match on the filename minus its numeric
+      // prefix instead.
+      const targetRels = new Set(files.map((f) => f.rel));
+      const existingByQuestion = new Map<string, string[]>();
+      const absContainer = path.join(repoRoot, targetDir);
+      if (fs.existsSync(absContainer)) {
+        const found: string[] = [];
+        listMarkdown(absContainer, found);
+        for (const abs of found) {
+          const rel = path.relative(repoRoot, abs);
+          const key = path.basename(rel, ".md").replace(/^\d+-/, "");
+          if (!existingByQuestion.has(key)) existingByQuestion.set(key, []);
+          existingByQuestion.get(key)!.push(rel);
+        }
+      }
+
       for (const f of files) {
         keep.add(f.rel);
-        if (f.content !== null) writeFile(f.rel, f.content, dryRun);
+        if (f.content === null) continue;
+
+        if (!fs.existsSync(path.join(repoRoot, f.rel))) {
+          const key = path.basename(f.rel, ".md").replace(/^\d+-/, "");
+          // Only a file the CMS no longer wants at its current path is movable,
+          // and only when exactly one candidate matches. Two sections can carry
+          // the same question text, and guessing between them would scramble
+          // both.
+          const candidates = (existingByQuestion.get(key) ?? []).filter(
+            (c) =>
+              !consumed.has(c) &&
+              !targetRels.has(c) &&
+              fs.existsSync(path.join(repoRoot, c)),
+          );
+          if (candidates.length === 1) {
+            consumed.add(candidates[0]!);
+            movePath(candidates[0]!, f.rel, dryRun);
+            stats.moved++;
+          }
+        }
+
+        writeFile(f.rel, f.content, dryRun);
       }
       stats.faqFiles += files.filter((f) => f.content !== null).length;
       continue;

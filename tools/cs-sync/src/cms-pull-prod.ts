@@ -299,6 +299,7 @@ async function main(): Promise<void> {
     deleted: 0,
     navMismatch: 0,
     failed: 0,
+    mirrored: 0,
   };
 
   const docIndex = buildDocIndex(REPO_ROOT, DOCS_ROOT);
@@ -339,13 +340,15 @@ async function main(): Promise<void> {
     liveEntryUids.add(item.uid);
     if (outcome.kind === "in-nav-unchanged") continue;
 
-    staged.set(outcome.change.filePath, outcome.content);
-    changes.push(outcome.change);
-    if (outcome.change.changeKind === "created") stats.created++;
-    else stats.updated++;
+    for (const change of outcome.changes) {
+      staged.set(change.filePath, outcome.content);
+      changes.push(change);
+      if (change.changeKind === "created") stats.created++;
+      else stats.updated++;
 
-    console.log(`  ✓ ${outcome.change.changeKind} ${outcome.change.filePath}`);
-    console.log(`    ${outcome.change.fieldsModified.join(", ") || "no field diff"}`);
+      console.log(`  ✓ ${change.changeKind} ${change.filePath}`);
+      console.log(`    ${change.fieldsModified.join(", ") || "no field diff"}`);
+    }
   }
 
   // ── Step 5: removals ──────────────────────────────────────────────────────
@@ -421,7 +424,8 @@ interface EvaluateContext {
 type Outcome =
   | { kind: "skip" }
   | { kind: "in-nav-unchanged" }
-  | { kind: "change"; change: ChangedFile; content: string };
+  /** One entry can land in more than one file when the nav cross-lists it. */
+  | { kind: "change"; changes: ChangedFile[]; content: string };
 
 /** Run one published entry through the four qualifying conditions. */
 async function evaluate(item: PublishedProdEntry, ctx: EvaluateContext): Promise<Outcome> {
@@ -484,41 +488,54 @@ async function evaluate(item: PublishedProdEntry, ctx: EvaluateContext): Promise
 
   const resolved = resolveEntry(ctx.docIndex, { uid: item.uid, url });
 
+  // Where this entry's content belongs. Usually one file, but a page the nav
+  // deliberately lists at two positions is mirrored as two files sharing a url,
+  // and both have to be written or they drift apart.
+  //
+  // This used to skip a duplicated url outright as "ambiguous", on the reasoning
+  // that guessing between two files is worse than doing nothing. The cost of
+  // that turned out to be high: 144 published entries covering 320 files could
+  // never receive a CMS edit, silently, on every run. And drifting is exactly
+  // what lint.ts's checkDuplicateUrls forbids ("Diverged copies of url ... share
+  // one CMS entry but their content differs"), while it accepts byte-identical
+  // copies. So the copies are legitimate and the right move is to write all of
+  // them, not to pick one and not to skip.
+  let targets: Array<{ filePath: string; previous: string | null; changeKind: ChangeKind }>;
+
   if (resolved.status === "ambiguous") {
-    console.log(
-      `  ! ${resolved.candidates.length} cs-docs files share url ${url}, skipped as ambiguous ` +
-        `(${resolved.candidates.map((c) => c.relPath).join(", ")})`,
-    );
-    ctx.stats.ambiguous++;
-    return { kind: "skip" };
-  }
-
-  let filePath: string;
-  let previous: string | null;
-  let changeKind: ChangeKind;
-
-  if (resolved.status === "unmatched") {
+    targets = resolved.candidates.map((candidate) => ({
+      filePath: candidate.relPath,
+      previous: fs.readFileSync(candidate.filePath, "utf-8"),
+      changeKind: "updated" as ChangeKind,
+    }));
+  } else if (resolved.status === "unmatched") {
     const derived = newFilePathFor(position, url);
     if (!derived) {
       console.log(`  ! ${item.title}: cannot derive a filename from url "${url}", skipped`);
       ctx.stats.ambiguous++;
       return { kind: "skip" };
     }
-    filePath = derived;
-    previous = null;
-    changeKind = "created";
+    targets = [{ filePath: derived, previous: null, changeKind: "created" }];
   } else {
-    filePath = resolved.file.relPath;
-    previous = fs.readFileSync(resolved.file.filePath, "utf-8");
-    changeKind = "updated";
+    targets = [
+      {
+        filePath: resolved.file.relPath,
+        previous: fs.readFileSync(resolved.file.filePath, "utf-8"),
+        changeKind: "updated",
+      },
+    ];
   }
 
   // Condition 4 — does anything actually differ? Without this the script
-  // rewrites every published file on every 5-minute run.
-  if (previous !== null && previous === content) {
+  // rewrites every published file on every 5-minute run. With mirrored copies
+  // it is per copy, so a mirror that fell out of step is repaired even when its
+  // twin is already correct.
+  const stale = targets.filter((t) => t.previous !== content);
+  if (stale.length === 0) {
     ctx.stats.unchanged++;
     return { kind: "in-nav-unchanged" };
   }
+  if (stale.length > 1) ctx.stats.mirrored += stale.length - 1;
 
   const mismatch = crossCheckProduct(position, claimedProductSlug(entry));
   if (mismatch) {
@@ -526,19 +543,21 @@ async function evaluate(item: PublishedProdEntry, ctx: EvaluateContext): Promise
     ctx.stats.navMismatch++;
   }
 
+  const updatedAt = (entry.updated_at as string) || new Date().toISOString();
+
   return {
     kind: "change",
     content,
-    change: {
-      filePath,
+    changes: stale.map((t) => ({
+      filePath: t.filePath,
       entryUid: item.uid,
       url,
       navChain: position.chain,
-      changeKind,
-      fieldsModified: diffMarkdownFields(previous, content),
-      updatedAt: (entry.updated_at as string) || new Date().toISOString(),
+      changeKind: t.changeKind,
+      fieldsModified: diffMarkdownFields(t.previous, content),
+      updatedAt,
       ...(mismatch ? { warning: mismatch } : {}),
-    },
+    })),
   };
 }
 
@@ -632,6 +651,13 @@ function report(summary: PullSummary, stats: Record<string, number>, dryRun: boo
     `   skipped: ${stats.notInNav} not in nav, ${stats.promotionEcho} promotion echoes, ` +
       `${stats.unchanged} unchanged, ${stats.ambiguous} ambiguous, ${stats.noContent} without content`,
   );
+  // Extra files written because the nav lists their page at more than one
+  // position. Not a warning: it counts mirrored copies kept in step.
+  if (stats.mirrored > 0) {
+    console.log(
+      `   ${stats.mirrored} extra file(s) written to keep cross-listed copies identical`,
+    );
+  }
   if (stats.unresolved > 0) {
     console.log(
       `   🛑 ${stats.unresolved} skipped: published version unreadable — run ` +
