@@ -2,6 +2,7 @@
 title: "Revalidate CDN Cache"
 description: "Learn how to revalidate the cache for the changes made to your content/configuration in an environment in Contentstack Launch."
 url: /launch/revalidate-cdn-cache
+uid: blt4af402931f6f3255
 ---
 
 # Revalidate CDN Cache
@@ -24,13 +25,13 @@ CDN cache revalidation allows you to refresh cached content in your environment 
 To revalidate the CDN cache for a website using URL path, you must provide the following:
 
 1.  **Revalidation path**
-    
+
     The revalidation path is the URL path that you can revalidate across all the domains in your environment. For example, if you have an environment that consists of https://example.com, https://example.net, and https://example.org, and your revalidation path is /blog, then the CDN revalidates https://example.com/blog, https://example.net/blog, and https://example.org/blog.  
-    
+
 2.  **Is Prefix**
-    
+
     The boolean value Is Prefix indicates whether you can revalidate only the exact path or also all the nested paths under it. For example, if your revalidation path is /blog and you set Is Prefix to true, then the CDN revalidates https://example.com/blog, and also all the pages under it, such as https://example.com/blog/post1, https://example.com/blog/post2, etc. If you set Is Prefix to false, then the CDN revalidates only https://example.com/blog. Similarly, CDN cache will also be revalidated for all other domains that are a part of the same environment.
-    
+
 
 ### Cache Purging Using Cache-Tags
 
@@ -62,11 +63,43 @@ If your site is configured with multiple domains, such as domain1.com, domain2.c
 
 **Note:** You can pass **only one** of the inputs.
 
-## Revalidate CDN Cache using Automate
+## Revalidate CDN Cache from the Launch UI
 
-To revalidate the CDN cache for an environment, you can use the Revalidate CDN Cache action in the Automate Launch connector.
+You can also trigger a cache revalidation directly from the Launch UI, without the API or Automations. Go to **Settings** > **Environments** > **Cache**, and use the **Cache Revalidation** section to purge by path, cache tags, specific domains, or all domains in the environment.
 
-**Additional Resource:** For detailed information on creating the Revalidate CDN Cache action in Automate, refer to the [Launch Connector](/docs/agent-os/launch#action-2-revalidate-cdn-cache) document.
+**Note:** You need permission to update the environment to use this section. If you don't have it, the Purge button is disabled.
+
+![Revalidate_CDN_Cache_UI.png](https://images.contentstack.io/spaces/am51d76353d996c1fe/assets/am121e9ba60b7e64f0/a93910f187bc58f0ad29a057/Revalidate_CDN_Cache_UI.png?locale=en-us)
+
+### All Domains
+
+Purges the cache for every domain in the environment. The section shows the first 3 domains as checked, disabled checkboxes so you can confirm what will be purged, with a "+ N more domains" note below the list if the environment has more than 3. Because this clears every domain, clicking **Purge** opens a confirmation dialog, "Purge cache for all domains?", before the purge actually runs; click **Purge All Domains** to confirm or **Cancel** to back out.
+
+![Purge_COnfirmation_Modal.png](https://images.contentstack.io/spaces/am51d76353d996c1fe/assets/am47663d896d90fdd1/c1c16bc249922cf51a2fb61b/Purge_COnfirmation_Modal.png?locale=en-us)
+
+### Specific Path
+
+Purges the cache for a single URL path. Enter the path in the **Revalidation Path** field, for example, /blog and select **Includes all nested paths** to also purge every URL beneath it. For example, /blog with this checked, also purges /blog/post-1.
+
+### Cache Tags
+
+Purges the cache for content associated with one or more Cache-Tags, instead of clearing the whole cache. Enter a comma-separated list in the **Cache tags** field — for example, blogs, featured.
+
+### Specific Domains
+
+Purges the cache for one or more selected domains only. The **Domains** field lists every domain in the environment as a checkbox, selecting the ones you want to purge. If the environment has more than 3 domains, the list scrolls.  
+
+![Specific_Domain.png](https://images.contentstack.io/spaces/am51d76353d996c1fe/assets/am52a0b5a86cbf63a8/ee81298f22c4c84d6513927f/Specific_Domain.png?locale=en-us)
+
+After filling in the fields for your chosen scope, click **Purge**. A confirmation notification appears once the purge is triggered (for the All Domains scope, this happens after you confirm the dialog above).
+
+![Success_Purge.png](https://images.contentstack.io/spaces/am51d76353d996c1fe/assets/am3302a70c0b12fe5c/0386dd120bc49ba50997cf08/Success_Purge.png?locale=en-us)
+
+## Revalidate CDN Cache using Automations
+
+To revalidate the CDN cache for an environment, you can use the Revalidate CDN Cache action in the Agent OS Launch connector.
+
+**Additional Resource:** For detailed information on creating the Revalidate CDN Cache action in Automations, refer to the [Launch Connector](/docs/agent-os/launch#action-2-revalidate-cdn-cache) document.
 
 ## Examples of Revalidating CDN Cache
 
@@ -80,31 +113,41 @@ To revalidate the CDN cache for an environment, you can use the Revalidate CDN C
 ### Using Cache-Tags
 
 1.  Set Cache-Tag header in your app (for example, Next.js):
-    
+
     ```
     import { NextResponse } from 'next/server';
     export async function GET() {
       const data = await fetchBlogPost();
+
+
+
+
+
+
+
+
+
+
       const response = NextResponse.json(data);
       // Set Cache-Tag header
       response.headers.set("Cache-Tag", "blog-post-123");
       return response;
     }
     ```
-    
-2.  Trigger purge by Cache-Tags using the revalidateCDNCache API via Automate:
-    
+
+2.  Trigger purge by Cache-Tags using the revalidateCDNCache API via Automations:
+
     ```
     {
       "cacheTags": ["blog-post-123"]
     }
     ```
-    
+
 
 ### Using Hostnames (Domains)
 
-1.  Trigger purge by hostnames using the revalidateCDNCache API via Automate:
-    
+1.  Trigger purge by hostnames using the revalidateCDNCache API via Automations:
+
     ```
     {
       "hostnames": ["domain1.com", "domain2.com"]

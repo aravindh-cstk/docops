@@ -2,6 +2,7 @@
 title: "Go-Live Guide"
 description: "Go live with Contentstack Launch! Learn key steps for smooth deployment, domain routing, TLS setup, and website performance optimization."
 url: /launch/go-live-guide
+uid: bltbcc36f485e621e72
 ---
 
 # Go-Live Guide
@@ -18,7 +19,7 @@ Websites have different routing rules and configurations. Typically, hosting is 
 
 ### Apex Domain Routing
 
-An apex domain—also known as a naked domain or zone apex—refers to the root of a domain that does not include any subdomains. For example, example.com is an apex domain, whereas www.example.com is not.
+An apex domain, also known as a naked domain or zone apex, refers to the root of a domain that does not include any subdomains. For example, example.com is an apex domain, whereas www.example.com is not.
 
 Launch **supports** serving content directly from apex domains. It also **supports** redirecting apex domain traffic to a subdomain, such as www.example.com, which is a widely adopted industry best practice. On visiting the website on the apex domain, they’re redirected to the subdomain.
 
@@ -111,8 +112,9 @@ Launch already includes robust features such as DNS management, caching, DDoS pr
 -   **Security:** The proxy must handle DDoS protection and firewall configurations, as these features won’t be available for you from Launch with a proxy.
 -   **Caching:** Caching must be managed by the proxy. For example, you’ll need to purge cache manually on every deployment in Launch. A recommended alternative is to **turn off caching entirely** for your CDN, so that it can be managed by Launch.
 -   **Host Header Forwarding:** The proxy must correctly forward the Host header to Launch to prevent request failures and ensure proper routing.
+-   Launch attaches an [X-Robots-Tag](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/X-Robots-Tag#noindex) header on requests served via its default domain, meant to stop search engines from indexing that domain when you're using a custom domain for production. But if you're routing production traffic through your own CDN/proxy on top of the Launch default domain (not a custom domain), this header ends up blocking crawlers from indexing your live site. To fix it, configure your CDN/proxy to strip the X-Robots-Tag header before responses reach end users. This isn't necessary if a custom domain is your production-facing URL.
 
-**Note:** If you use Cloudflare as a CDN layer on top of the Launch CDN, refer to the next section for configuration details.
+**Additional Resource:** If you use Cloudflare as a CDN layer on top of the Launch CDN, refer to the next section for configuration details.
 
 ## Cloudflare Orange-to-Orange (O2O)
 
@@ -135,11 +137,11 @@ The Go-Live Checklist helps ensure your web application is fully prepared for a 
 
 ### Test Lower Environments
 
-Before going live, thoroughly test your application in all configured environments—**development**, **staging**, and **pre-production**. This helps identify and resolve any issues early, ensuring that the production environment is stable and ready for user traffic.
+Before going live, thoroughly test your application in all configured environments, **development**, **staging**, and **pre-production**. This helps identify and resolve any issues early, ensuring that the production environment is stable and ready for user traffic.
 
 ### Security
 
--   Implement a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) to control the sources of scripts, styles, and images, reducing potential vulnerabilities.
+-   Implement a [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP) to control the sources of scripts, styles, and images, reducing potential vulnerabilities.
 -   Utilize [Role-Based Access Control (RBAC)](/docs/launch/users) in Launch to manage team access effectively.
 -   Regularly audit and update user access to ensure only authorized users have the appropriate roles.
 -   Implement IP-based access controls (Allow and Restrict) to manage access to trusted networks, block suspicious or malicious IPs, protect internal environments, and support compliance with regulatory standards (see: [IP Allow Example](https://github.com/contentstack-launch-examples/launch-edge-ip-allowlist-example), [IP Restrict Example](https://github.com/contentstack-launch-examples/launch-edge-ip-restrict-example)).
@@ -161,7 +163,7 @@ There are several ways to optimize your site's performance while fully leveragin
 -   **Configure Launch Edge Features**: Set up and test [Redirects](/docs/launch/edge-url-redirects), [Rewrites](/docs/launch/edge-url-rewrites), or [Edge functions](/docs/launch/edge-functions) to ensure smooth operation.
 -   **Enable CDN Cache Revalidation**: Ensure that [cache revalidation in Launch](/docs/launch/revalidate-cdn-cache) is enabled so outdated content is not served.
 -   **Perform Load Test**: [Load testing](/docs/launch/load-testing) is essential to assess your application's performance, scalability, and reliability under expected traffic conditions. By simulating high traffic, it helps identify potential bottlenecks and ensures readiness for real-world scenarios.
--   **Search Engine Optimization**: After setting up a custom domain, the default \*.contentstackapps.com domain remains accessible. To prevent duplicate content issues and ensure the default domain is not indexed by search engines, follow the [Blocking Default Launch Domains From Google Search](/docs/launch/blocking-default-launch-domains-from-google-search) guide.
+-   **Search Engine Optimization**: After setting up a custom domain, the default \*.contentstackapps.com domain remains accessible. Launch automatically applies an X-Robots-Tag: noindex header to this default domain to prevent it from being indexed by search engines and avoid duplicate content issues; no setup required. If you need additional protection (such as blocking all traffic to the default domain), see the Blocking Default Launch Domains From Google Search guide.
 
 ### Plans and Entitlements
 
