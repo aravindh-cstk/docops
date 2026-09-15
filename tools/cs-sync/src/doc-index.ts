@@ -101,9 +101,9 @@ export function buildDocIndex(repoRoot: string, docsRoot: string): DocIndex {
     // Array-valued for the same reason urlIndex is. This used to be
     // `if (!uidIndex.has(uid)) set(uid, doc)`, silently keeping whichever file
     // sorted first and discarding the rest. That was harmless only because no
-    // file carried `uid:`. It stops being harmless the moment they do: 147
-    // entries are deliberately cross-listed across 333 files, so first-wins
-    // would drop 186 of them from the index with nothing reported.
+    // file carried `uid:`. It stops being harmless the moment they do: 144
+    // entries are deliberately cross-listed across 306 files, so first-wins
+    // would drop 162 of them from the index with nothing reported.
     if (doc.uid) {
       const arr = uidIndex.get(doc.uid) ?? [];
       arr.push(doc);
