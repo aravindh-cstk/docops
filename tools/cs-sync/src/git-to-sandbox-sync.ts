@@ -22,6 +22,7 @@
  */
 
 import fs from "node:fs";
+import { credentialNamesFor, sandboxCredentials, type StackType } from "./lib/credentials.js";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { SandboxClient, ContentstackEntry } from "./lib/sandbox-client.js";
@@ -112,12 +113,17 @@ async function loadConfig(): Promise<Config> {
     throw new Error("STACK_TYPE environment variable not set (apidocs|csdocs)");
   }
 
-  const sandboxApiKey = process.env[`${stackType.toUpperCase()}_SANDBOX_STACK_API_KEY`];
-  const sandboxToken = process.env[`${stackType.toUpperCase()}_SANDBOX_MANAGEMENT_TOKEN`];
-
-  if (!sandboxApiKey || !sandboxToken) {
-    throw new Error(`Missing Sandbox credentials for stack type: ${stackType}`);
+  // Via lib/credentials.ts rather than building the name inline. The name was
+  // assembled at runtime here, so a rename by search would not have found it.
+  const sandbox = sandboxCredentials(stackType as StackType);
+  if (!sandbox) {
+    throw new Error(
+      `Missing Sandbox credentials for stack type: ${stackType}. Set one of: ` +
+        credentialNamesFor(stackType as StackType, "sandbox").join(", "),
+    );
   }
+  const sandboxApiKey = sandbox.apiKey;
+  const sandboxToken = sandbox.managementToken;
 
   const docsPath = stackType === "apidocs" ? "api-docs" : "cs-docs";
 

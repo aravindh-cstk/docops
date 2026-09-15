@@ -41,6 +41,12 @@ import { evaluatePromotionGuard, type ConflictMode } from "./lib/promotion-guard
 import { linkNewEntryIntoNav } from "./lib/left-nav-linker.js";
 import { createReleaseForPromotion, extractPrNumberFromTags } from "./lib/release-manager.js";
 import { remapBreadcrumbForProd, unmappedBreadcrumbUids } from "./lib/content-type-mappings/docs-article.js";
+import {
+  credentialNamesFor,
+  prodCredentials,
+  sandboxCredentials,
+  type StackType,
+} from "./lib/credentials.js";
 import { getUserName } from "./lib/user-index.js";
 import * as core from "@actions/core";
 import * as fs from "node:fs";
@@ -202,14 +208,24 @@ export async function loadConfig(stackTypeOverride?: "apidocs" | "csdocs"): Prom
     throw new Error("STACK_TYPE environment variable not set (apidocs|csdocs)");
   }
 
-  const sandboxApiKey = process.env[`${stackType.toUpperCase()}_SANDBOX_STACK_API_KEY`];
-  const sandboxToken = process.env[`${stackType.toUpperCase()}_SANDBOX_MANAGEMENT_TOKEN`];
-  const prodApiKey = process.env[`PROD_${stackType.toUpperCase()}_STACK_API_KEY`];
-  const prodToken = process.env[`PROD_${stackType.toUpperCase()}_STACK_MANAGEMENT_TOKEN`];
-
-  if (!sandboxApiKey || !sandboxToken || !prodApiKey || !prodToken) {
-    throw new Error(`Missing required credentials for stack type: ${stackType}`);
+  // Via lib/credentials.ts rather than building the names inline. Both pairs
+  // were assembled at runtime here, so a rename by search would not have found
+  // them, and this is the promotion path.
+  const sandbox = sandboxCredentials(stackType as StackType);
+  const prod = prodCredentials(stackType as StackType);
+  if (!sandbox || !prod) {
+    throw new Error(
+      `Missing required credentials for stack type: ${stackType}. Set one of: ` +
+        [
+          ...credentialNamesFor(stackType as StackType, "sandbox"),
+          ...credentialNamesFor(stackType as StackType, "prod"),
+        ].join(", "),
+    );
   }
+  const sandboxApiKey = sandbox.apiKey;
+  const sandboxToken = sandbox.managementToken;
+  const prodApiKey = prod.apiKey;
+  const prodToken = prod.managementToken;
 
   const entryUidsStr = process.env.ENTRY_UIDS;
   const entryUids = entryUidsStr ? entryUidsStr.split(",").map((s) => s.trim()) : undefined;

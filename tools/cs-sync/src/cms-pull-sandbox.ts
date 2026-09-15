@@ -24,6 +24,7 @@ import { parseTitle } from "./lib/entry-content.js";
 // Shared with the Prod → GitHub pull and nav-apply. Previously a local copy
 // here, which is how the Prod pull came to be missing the tag filter entirely.
 import { authoredTags, yamlQuoted, yamlScalar } from "./lib/entry-to-markdown.js";
+import { credentialNamesFor, sandboxCredentials, type StackType } from "./lib/credentials.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -41,12 +42,17 @@ async function loadConfig(): Promise<Config> {
     throw new Error("STACK_TYPE environment variable not set (apidocs|csdocs)");
   }
 
-  const sandboxApiKey = process.env[`${stackType.toUpperCase()}_SANDBOX_STACK_API_KEY`];
-  const sandboxToken = process.env[`${stackType.toUpperCase()}_SANDBOX_MANAGEMENT_TOKEN`];
-
-  if (!sandboxApiKey || !sandboxToken) {
-    throw new Error(`Missing Sandbox credentials for stack type: ${stackType}`);
+  // Via lib/credentials.ts rather than building the name inline. The name was
+  // assembled at runtime here, so a rename by search would not have found it.
+  const sandbox = sandboxCredentials(stackType as StackType);
+  if (!sandbox) {
+    throw new Error(
+      `Missing Sandbox credentials for stack type: ${stackType}. Set one of: ` +
+        credentialNamesFor(stackType as StackType, "sandbox").join(", "),
+    );
   }
+  const sandboxApiKey = sandbox.apiKey;
+  const sandboxToken = sandbox.managementToken;
 
   const lookbackMinutes = parseInt(process.env.LOOKBACK_MINUTES || "20", 10);
 

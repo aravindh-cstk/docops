@@ -64,6 +64,11 @@ jobs:
         working-directory: tools/cs-sync
         env:
           STACK_TYPE: csdocs
+          # Canonical names first, legacy kept for one release. An unset secret
+          # resolves to empty, which lib/credentials.ts skips, so this is safe to
+          # land before CONTENTSTACK_DOCS_STACK_* exists in repo secrets.
+          CONTENTSTACK_DOCS_STACK_API_KEY: ${{ secrets.CONTENTSTACK_DOCS_STACK_API_KEY }}
+          CONTENTSTACK_DOCS_STACK_MANAGEMENT_TOKEN: ${{ secrets.CONTENTSTACK_DOCS_STACK_MANAGEMENT_TOKEN }}
           PROD_CSDOCS_STACK_API_KEY: ${{ secrets.PROD_CSDOCS_STACK_API_KEY }}
           PROD_CSDOCS_STACK_MANAGEMENT_TOKEN: ${{ secrets.PROD_CSDOCS_STACK_MANAGEMENT_TOKEN }}
           # A name, not a UID. The script resolves it against GET /v3/environments.

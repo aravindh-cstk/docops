@@ -78,6 +78,7 @@ import {
 // Not imported from nav-apply.ts: that module runs main() and demands
 // CONTENTSTACK_DOCS_STACK_* credentials at import time.
 import { articleFileName, slugify } from "./lib/nav-shared.js";
+import { credentialNamesFor, prodCredentials, sandboxCredentials } from "./lib/credentials.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, "../../..");
@@ -182,19 +183,25 @@ function loadConfig(): Config {
     );
   }
 
-  const prodApiKey = process.env.PROD_CSDOCS_STACK_API_KEY;
-  const prodToken = process.env.PROD_CSDOCS_STACK_MANAGEMENT_TOKEN;
-  if (!prodApiKey || !prodToken) {
-    throw new Error("Missing PROD_CSDOCS_STACK_API_KEY / PROD_CSDOCS_STACK_MANAGEMENT_TOKEN");
+  // Accepts CONTENTSTACK_DOCS_STACK_* first and the older PROD_CSDOCS_STACK_*
+  // pair as a fallback. See lib/credentials.ts for why both are read.
+  const prod = prodCredentials("csdocs");
+  if (!prod) {
+    throw new Error(
+      `Missing Prod csdocs credentials. Set one of: ${credentialNamesFor("csdocs", "prod").join(", ")}`,
+    );
   }
+  const prodApiKey = prod.apiKey;
+  const prodToken = prod.managementToken;
 
   // Sandbox is optional. Echo suppression is primarily the src-hash tag on the
   // Prod entry itself, which needs no second stack. Sandbox read access only
   // sharpens the answer for entries promoted before that tag existed, so a
   // missing credential degrades accuracy during the rollout rather than
   // breaking the run.
-  const sandboxApiKey = process.env.CSDOCS_SANDBOX_STACK_API_KEY;
-  const sandboxToken = process.env.CSDOCS_SANDBOX_MANAGEMENT_TOKEN;
+  const sandbox = sandboxCredentials("csdocs");
+  const sandboxApiKey = sandbox?.apiKey;
+  const sandboxToken = sandbox?.managementToken;
 
   const maxDeletions = Number.parseInt(
     process.env.PROD_SYNC_MAX_DELETIONS || String(DEFAULT_MAX_DELETIONS),

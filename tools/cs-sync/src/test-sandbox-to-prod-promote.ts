@@ -19,6 +19,7 @@
  * since the bug this is guarding against (duplicate entries in Prod) can only
  * be seen by actually calling the real CMA create/update/query endpoints.
  */
+import { prodCredentials, sandboxCredentials } from "./lib/credentials.js";
 import "./loadEnv.js";
 import { execSync } from "node:child_process";
 import path from "node:path";
@@ -38,19 +39,28 @@ interface TestConfig {
 }
 
 function requireCredentials(): TestConfig | null {
-  const sandboxApiKey = process.env.CSDOCS_SANDBOX_STACK_API_KEY ?? "";
-  const sandboxToken = process.env.CSDOCS_SANDBOX_MANAGEMENT_TOKEN ?? "";
-  const prodApiKey = process.env.PROD_CSDOCS_STACK_API_KEY ?? "";
-  const prodToken = process.env.PROD_CSDOCS_STACK_MANAGEMENT_TOKEN ?? "";
+  // Through lib/credentials.ts so this accepts the canonical names too. It
+  // previously listed only the legacy ones, which is why it skipped even on a
+  // machine whose repo-root .env was fully populated.
+  const sandbox = sandboxCredentials("csdocs");
+  const prod = prodCredentials("csdocs");
 
-  if (!sandboxApiKey || !sandboxToken || !prodApiKey || !prodToken) {
+  if (!sandbox || !prod) {
     console.warn(
-      "\n[SKIP] Sandbox/Prod credentials not found. Create tools/cs-sync/.env with:\n" +
-      "  CSDOCS_SANDBOX_STACK_API_KEY=...\n  CSDOCS_SANDBOX_MANAGEMENT_TOKEN=...\n" +
-      "  PROD_CSDOCS_STACK_API_KEY=...\n  PROD_CSDOCS_STACK_MANAGEMENT_TOKEN=...\n",
+      "\n[SKIP] Sandbox/Prod credentials not found. Set either pair, in the repo-root\n" +
+      ".env or the environment:\n" +
+      "  CONTENTSTACK_DOCS_STACK_API_KEY / _MANAGEMENT_TOKEN            (prod, canonical)\n" +
+      "  SANDBOX_CONTENTSTACK_DOCS_STACK_API_KEY / _MANAGEMENT_TOKEN    (sandbox, canonical)\n" +
+      "  PROD_CSDOCS_STACK_API_KEY / _MANAGEMENT_TOKEN                  (prod, legacy)\n" +
+      "  CSDOCS_SANDBOX_STACK_API_KEY / CSDOCS_SANDBOX_MANAGEMENT_TOKEN (sandbox, legacy)\n",
     );
     return null;
   }
+
+  const sandboxApiKey = sandbox.apiKey;
+  const sandboxToken = sandbox.managementToken;
+  const prodApiKey = prod.apiKey;
+  const prodToken = prod.managementToken;
 
   return {
     sandboxApiKey,

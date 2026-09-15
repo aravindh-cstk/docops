@@ -21,6 +21,7 @@
  * the Prod stack in the same run.
  */
 
+import { prodCredentials, sandboxCredentials, type StackType } from "./lib/credentials.js";
 import { SandboxClient } from "./lib/sandbox-client.js";
 import { ProdPromoteClient } from "./lib/prod-promote-client.js";
 import { getPublishedVersion, hasPublishRecord, ContentstackEntry } from "./lib/entry-content.js";
@@ -120,8 +121,9 @@ async function main() {
   let allGood = true;
   let checkedAnything = false;
 
-  const sandboxApiKey = process.env[`${upper}_SANDBOX_STACK_API_KEY`];
-  const sandboxToken = process.env[`${upper}_SANDBOX_MANAGEMENT_TOKEN`];
+  const sandboxCreds = sandboxCredentials(stackType as StackType);
+  const sandboxApiKey = sandboxCreds?.apiKey;
+  const sandboxToken = sandboxCreds?.managementToken;
 
   if (sandboxApiKey && sandboxToken) {
     checkedAnything = true;
@@ -136,8 +138,9 @@ async function main() {
     console.log("\n(skipping Sandbox — credentials not set)");
   }
 
-  const prodApiKey = process.env[`PROD_${upper}_STACK_API_KEY`];
-  const prodToken = process.env[`PROD_${upper}_STACK_MANAGEMENT_TOKEN`];
+  const prodCreds = prodCredentials(stackType as StackType);
+  const prodApiKey = prodCreds?.apiKey;
+  const prodToken = prodCreds?.managementToken;
 
   if (prodApiKey && prodToken) {
     checkedAnything = true;

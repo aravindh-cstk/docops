@@ -1,3 +1,4 @@
+import { credentialNamesFor, sandboxCredentials } from "./lib/credentials.js";
 import { z } from "zod";
 
 const envSchema = z.object({
@@ -69,13 +70,17 @@ export function loadSandboxConfig(
   repoRoot: string,
   stackType: "apidocs" | "csdocs",
 ): AppConfig {
-  const prefix = stackType.toUpperCase();
-  const apiKey = process.env[`${prefix}_SANDBOX_STACK_API_KEY`];
-  const managementToken = process.env[`${prefix}_SANDBOX_MANAGEMENT_TOKEN`];
-
-  if (!apiKey || !managementToken) {
-    throw new Error(`Missing Sandbox credentials for stack type: ${stackType}`);
+  // Via lib/credentials.ts. The name was built from stackType at runtime, so it
+  // was invisible to a search for the literal variable name.
+  const sandbox = sandboxCredentials(stackType);
+  if (!sandbox) {
+    throw new Error(
+      `Missing Sandbox credentials for stack type: ${stackType}. Set one of: ` +
+        credentialNamesFor(stackType, "sandbox").join(", "),
+    );
   }
+  const apiKey = sandbox.apiKey;
+  const managementToken = sandbox.managementToken;
 
   const env = envSchema.parse({
     CS_API_KEY: apiKey,
