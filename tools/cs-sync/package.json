@@ -17,6 +17,7 @@
     "nav-tree": "tsx src/nav-tree.ts",
     "nav-audit": "tsx src/nav-audit.ts",
     "nav-link-audit": "tsx src/nav-link-audit.ts",
+    "nav-verify": "tsx src/nav-verify.ts",
     "verify-publish-details": "tsx src/verify-publish-details.ts",
     "image-inject": "tsx src/image-inject.ts",
     "rebuild-stubs": "tsx src/rebuild-stubs.ts",
