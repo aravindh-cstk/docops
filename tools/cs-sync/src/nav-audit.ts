@@ -95,8 +95,11 @@ export { articleFileName };
 export function targetPathForLeaf(leaf: NavLeaf): string | null {
   const dir = leaf.chain.join("/");
   if (leaf.kind === "stub") {
-    const slug = slugify(leaf.title) || "untitled";
-    return `${DOCS_ROOT}/${dir}/${slug}/index.md`;
+    // A nav position that links outside this repo owns no file. It used to get a
+    // doc_type: link placeholder, which nothing read. Returning null keeps the
+    // audit convergent: were this still a path, every run would report all 89 as
+    // `create` and the tree could never reach a clean state.
+    return null;
   }
   if (leaf.kind === "faqs") {
     // A container, not a file. Handled separately as a directory move.
@@ -211,11 +214,9 @@ function main() {
       contentType: leaf.contentType,
       targetPath: target,
       sourcePath: "",
-      reason: leaf.kind === "stub"
-        ? "new link stub"
-        : duplicated
-          ? "additional copy, this entry sits at more than one nav position"
-          : "no existing file with this url",
+      reason: duplicated
+        ? "additional copy, this entry sits at more than one nav position"
+        : "no existing file with this url",
     });
   }
 

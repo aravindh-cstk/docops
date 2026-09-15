@@ -39,13 +39,9 @@ import { articleFileName, EXCLUDED_CHAINS } from "./lib/nav-shared.js";
 import { canonicalizeUrl } from "./doc-index.js";
 import {
   slugify,
-  normalizeUrl,
   cleanTitle,
-  isPublishedToProd,
   PRODUCTION_ENV_UID,
-  DOCS_BASE_URL,
   type Entry,
-  type NavLeaf,
   type NavTree,
 } from "./nav-tree.js";
 
@@ -208,9 +204,13 @@ function assertTreeIsUsable(tree: NavTree): void {
     process.exit(1);
   }
 
+  // Compared as JSON rather than by joining on a separator. An earlier version
+  // joined on a literal NUL, which embedded two 0x00 bytes in this source file
+  // and made grep classify the whole file as binary, so searches for anything in
+  // it silently returned nothing.
   const want = [...EXCLUDED_CHAINS].sort();
   const got = [...tree.provenance.excludedChains].sort();
-  if (want.join(" ") !== got.join(" ")) {
+  if (JSON.stringify(want) !== JSON.stringify(got)) {
     console.error(
       `\n🛑 Nav tree was crawled under a different EXCLUDED_CHAINS than this code uses.\n` +
         `   snapshot: ${got.length ? got.join(", ") : "(none)"}\n` +
@@ -326,23 +326,20 @@ export function buildSampleApp(entry: Entry): string | null {
   return `${frontmatter}\n\n# ${heading}\n\n${body}\n`;
 }
 
-export function buildStub(leaf: NavLeaf): string {
-  const title = leaf.title || "Untitled";
-  // Nav authors write these by hand and some include the site's /docs prefix,
-  // which is part of the public URL but not of the entry path the rest of the
-  // repo uses. Strip it so a stub and an article agree on how a url looks.
-  const raw = (leaf.url ?? "").trim().replace(/^\/docs(?=\/)/, "");
-  const href = raw.startsWith("/") ? `${DOCS_BASE_URL}${raw}` : raw;
-  const frontmatter = [
-    "---",
-    `title: ${yamlQuoted(title)}`,
-    `description: ${yamlQuoted(title)}`,
-    `url: ${yamlScalar(raw)}`,
-    "doc_type: link",
-    "---",
-  ].join("\n");
-  return `${frontmatter}\n\n# ${title}\n\nThis navigation entry links to [${title}](${href}).\n`;
-}
+// buildStub() was removed with the doc_type: link files it generated. A stub was
+// a placeholder for a nav position pointing outside this repo (an external site,
+// a section anchor, or API and SDK reference owned by the api-docs and sdk-docs
+// pipelines). It held no CMS content and every sync path already skipped it via
+// docTypeMapsToDocsArticle(), so it was a file nothing read.
+//
+// The nav positions still exist in the CMS and still appear in .nav-tree.json as
+// kind: "stub". They are simply not mirrored to disk. The 89 that were deleted
+// are recorded in nav-audit/deleted-link-stubs.csv, including the 41 whose url
+// no entry serves.
+//
+// parser.ts keeps its doc_type: link schema exemption on purpose: hand-authored
+// link files remain legal, and 17 of the deleted ones carried absolute external
+// urls that the article url rules would have rejected.
 
 function orderPrefix(index: number, total: number): string {
   const width = String(total).length;
@@ -455,11 +452,11 @@ function allExpectedPaths(tree: NavTree): Set<string> {
   const out = new Set<string>();
   for (const leaf of tree.leaves) {
     if (leaf.kind === "faqs") continue;
+    // Stubs no longer produce files, so they must not reserve paths here either.
+    // This set vetoes move sources, and a stub path left in it would block a real
+    // article from moving into the path a deleted stub just freed.
+    if (leaf.kind === "stub") continue;
     const dir = leaf.chain.join("/");
-    if (leaf.kind === "stub") {
-      out.add(`${DOCS_ROOT}/${dir}/${slugify(leaf.title) || "untitled"}/index.md`);
-      continue;
-    }
     const name = articleFileName(leaf.url);
     if (name) out.add(`${DOCS_ROOT}/${dir}/${name}`);
   }
@@ -559,14 +556,20 @@ async function applyProduct(
       continue;
     }
 
+    // A stub is a nav position that links somewhere this repo does not own: an
+    // external site, a section anchor, or API and SDK reference served by the
+    // api-docs and sdk-docs pipelines. It carries no CMS content, and
+    // docTypeMapsToDocsArticle() excludes doc_type: link from every sync path,
+    // so the file it used to generate was a placeholder nothing consumed.
+    // Leaving it out of `keep` is what makes Pass 2 delete the 89 that exist.
+    // The nav positions themselves are unaffected; they live in the CMS.
+    if (leaf.kind === "stub") continue;
+
     const dir = leaf.chain.join("/");
     let rel: string;
     let content: string | null;
 
-    if (leaf.kind === "stub") {
-      rel = `${DOCS_ROOT}/${dir}/${slugify(leaf.title) || "untitled"}/index.md`;
-      content = buildStub(leaf);
-    } else {
+    {
       // leaf.contentType is the NAV node's type. For a stub the nav resolved by
       // url it is links_2026, while entryUid points at a docs_article, so the
       // entry's own type has to be derived rather than taken from the leaf.
@@ -828,6 +831,17 @@ async function main() {
   const tree: NavTree = JSON.parse(fs.readFileSync(treePath, "utf8"));
   assertTreeIsUsable(tree);
 
+  // State the passes up front. The failure this prevents is a silent one: a run
+  // that quietly did more than was asked, into a gitignored directory, leaves no
+  // diff and no error to notice afterwards.
+  const passes = [
+    orphansOnly ? "orphan-docs" : null,
+    !orphansOnly && !cleanupOnly ? (all ? "all 13 products" : `product: ${product}`) : null,
+    cleanupOnly ? "cleanup (stale path list)" : null,
+  ].filter(Boolean);
+  console.log(`${dryRun ? "[dry-run] " : ""}passes: ${passes.join(", ")}`);
+  console.log(`  deletion cap: ${maxDeletions} per product (NAV_APPLY_MAX_DELETIONS)`);
+
   process.stderr.write("Fetching entries...\n");
   const store = new Map<string, Map<string, Entry>>();
   for (const ct of ["docs_article", "product_faqs_2026", "sample_apps_demo_page"]) {
@@ -848,7 +862,14 @@ async function main() {
   };
 
   // Orphans are lifted out of the stale folders before anything deletes them.
-  if (orphansOnly || all) {
+  //
+  // `--all` deliberately does NOT imply this. It used to, and that is a trap: an
+  // orphan is by definition a published entry the nav cannot reach, so writing
+  // one is the opposite of mirroring the nav. Twice now, a run intended as "all
+  // 13 products" silently recreated cs-docs/orphan-docs/ with 44 files. The
+  // directory is gitignored, so nothing failed and nothing showed up in a diff,
+  // which is exactly what made it easy to miss. Ask for it explicitly.
+  if (orphansOnly) {
     console.log(`\n${label}orphan-docs/`);
     add(await applyOrphans(tree, store, urlIndex, globalExpected, dryRun));
   }
@@ -880,7 +901,11 @@ async function main() {
     }
   }
 
-  if (cleanupOnly || all) {
+  // Same reasoning as orphans above: `--all` means all 13 products, not "every
+  // pass in this file". Cleanup deletes from a hand-maintained list of stale
+  // paths, which is a different decision from rebuilding a product tree and
+  // deserves to be asked for.
+  if (cleanupOnly) {
     console.log(`\n${label}cleanup`);
     add(applyCleanup(tree, dryRun));
   }
