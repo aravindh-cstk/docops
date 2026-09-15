@@ -33,7 +33,7 @@ To view the Audit Log, log in to your [Contentstack account](https://www.content
 
 1.  Select the Organization from the dropdown on the header and click the “Org Admin” icon in the left navigation panel.
 
-    Or, you can simply click the “Org Admin” cog beside the Organization that you intend to open.
+    Or, you can simply click the ���Org Admin” cog beside the Organization that you intend to open.
 
 2.  Click the **Audit Log** tab on the left panel.
 
