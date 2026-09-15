@@ -1,0 +1,108 @@
+name: Verify cs-docs mirrors the left navigation
+
+# Proves that cs-docs still matches the CMS left navigation: every nav leaf has
+# exactly one file, per-product counts agree, every leaf resolves to an entry,
+# frontmatter validates, mirrored copies are identical, and each file is still
+# byte-identical to a fresh render of its entry.
+#
+# Scheduled rather than a pull-request gate, deliberately. A PR gate is the
+# stronger check and may come later, but it needs a NEW required status context:
+# "lint" is already required on main and is posted as a check-run name by four
+# other workflows, so it cannot be reused for this.
+
+on:
+  schedule:
+    # Daily, clear of the */15 cms-pull cron so the two never contend.
+    - cron: "30 2 * * *"
+  workflow_dispatch:
+    inputs:
+      skip_cms:
+        description: "Skip the CMS byte-equality check (faster, much weaker)"
+        default: "false"
+        required: false
+
+concurrency:
+  group: nav-verify-scheduled
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  nav-verify:
+    runs-on: ubuntu-latest
+    # A full crawl plus per-entry version fetches runs 6 to 10 minutes.
+    timeout-minutes: 30
+    steps:
+      # No fetch-depth: 0. nav-verify reads the working tree and the CMS, and
+      # never diffs git history.
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: tools/cs-sync/package-lock.json
+
+      - name: Install dependencies
+        working-directory: tools/cs-sync
+        run: npm ci
+
+      # .nav-tree.json is gitignored, so there is no snapshot in a fresh
+      # checkout and one has to be crawled. Crawling here also means the
+      # snapshot is seconds old, well inside nav-verify's freshness limit.
+      - name: Crawl the production left navigation
+        working-directory: tools/cs-sync
+        env:
+          CONTENTSTACK_DOCS_STACK_API_KEY: ${{ secrets.CONTENTSTACK_DOCS_STACK_API_KEY }}
+          CONTENTSTACK_DOCS_STACK_MANAGEMENT_TOKEN: ${{ secrets.CONTENTSTACK_DOCS_STACK_MANAGEMENT_TOKEN }}
+        run: npm run nav-tree
+
+      # The CSV carries one summary line per check. The per-file detail is on
+      # stdout, so both are kept.
+      - name: Verify cs-docs against the nav and the CMS
+        id: verify
+        working-directory: tools/cs-sync
+        env:
+          CONTENTSTACK_DOCS_STACK_API_KEY: ${{ secrets.CONTENTSTACK_DOCS_STACK_API_KEY }}
+          CONTENTSTACK_DOCS_STACK_MANAGEMENT_TOKEN: ${{ secrets.CONTENTSTACK_DOCS_STACK_MANAGEMENT_TOKEN }}
+        run: |
+          SKIP=""
+          if [ "${{ github.event.inputs.skip_cms }}" = "true" ]; then
+            SKIP="--skip-cms"
+          fi
+          mkdir -p nav-verify
+          set -o pipefail
+          npm run nav-verify -- --csv $SKIP 2>&1 | tee nav-verify/run.log
+
+      - name: Summarize
+        if: always()
+        working-directory: tools/cs-sync
+        run: |
+          {
+            echo "## nav-verify"
+            echo ""
+            echo '```'
+            tail -40 nav-verify/run.log 2>/dev/null || echo "no output captured"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload verification report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nav-verify-report-${{ github.run_id }}
+          path: tools/cs-sync/nav-verify/
+          retention-days: 30
+          if-no-files-found: ignore
+
+      - name: Notify on failure
+        if: failure()
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          if [ -n "$SLACK_WEBHOOK_URL" ]; then
+            curl -s -X POST "$SLACK_WEBHOOK_URL" \
+              -H 'Content-Type: application/json' \
+              -d "{\"text\":\"*cs-docs no longer mirrors the left navigation* :x:\nRun: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"
+          fi

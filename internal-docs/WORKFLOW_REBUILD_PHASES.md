@@ -1,6 +1,6 @@
 # Docs workflow rebuild: build-by-build briefs
 
-**Status:** planned, not started
+**Status:** partly built. Build 1's goal is met and verified (`cs-docs` mirrors the Production left navigation, checked daily by `nav-verify-scheduled.yml`). Several items on Build 1's own checklist remain open, listed in that section. Build 2 has not started.
 **Scope:** `cs-docs` only. `api-docs` and `sdk-docs` keep their existing pipelines.
 **Target repo:** build and prove in `aravindh-cstk/docops`, then port to `contentstack/contentstack-docs`.
 
@@ -211,7 +211,7 @@ The correction, applied in the same commit as this note:
 - `EXCLUDED_CHAINS` is now empty, and the comment above it says why adding to it needs owner confirmation first.
 - `cs-docs/headless-cms/developer-tools-delivery/cli/` holds the same 83 files as `cs-docs/developer-resources/overview/cli/`, verified byte for byte identical.
 
-**The lesson for Build 1.** A deliberate cross-listing and a stale reference look exactly alike in the nav data. Both appear as one node reached from two chains. Nothing in the CMS distinguishes them. So the reconcile must never resolve that case on its own: it reports the duplicate positions and a human says which kind it is.
+**The lesson for Build 1.** A deliberate cross-listing and a stale reference look exactly alike in the nav data. Both appear as one node reached from two chains. Nothing in the CMS distinguishes them. So the reconcile must never resolve that case automatically: it reports the duplicate positions and a human says which kind it is.
 
 ### What this means for decision D5
 
@@ -257,11 +257,11 @@ Read this before deciding anything is missing. It writes every leaf from the CMS
 
 ## The gaps to close
 
-1. **Turn on `uid:` and `tags:` stamping.** `buildArticle()` at `nav-apply.ts:224` passes `stampUid: false` and `includeTags: false`. Zero of the 3,168 files carry `uid:` today. Both must change, in one commit.
+1. **Turn on `uid:` and `tags:` stamping.** `buildArticle()` at `nav-apply.ts:224` passes `stampUid: false` and `includeTags: false`. Zero of the files carried `uid:` when this was written. **Done 2026-09-15:** 2,087 of 3,610 files now carry it. The remaining 1,523 are FAQ and sample-app files, which a different code path writes.
    - `uid:` is the ownership marker. The incremental sync only ever deletes files carrying it, so without it Build 3 can never delete anything.
    - `tags:` carries the `template-<type>` tag that Build 2 needs.
    - The frontmatter schema in `parser.ts` is not strict, so both keys pass lint.
-2. **One file per entry, not per nav position.** `nav-tree.ts:395` builds `entryPaths[uid]` as an array of chains, so a cross-listed page (the Studio SDK doc listed under Developer Resources, for example) is one entry at two nav positions. Today that writes two identical files sharing a url and a uid. Write one, in the folder `resolveProductSlugFromBreadcrumb()` names. This removes roughly 120 files and makes the uid index unique.
+2. ~~**One file per entry, not per nav position.**~~ **Superseded, and the opposite is now true.** The owner's rule is that `cs-docs` mirrors the left navigation exactly, so a cross-listed page keeps one file per nav position: 144 entries own 306 files. D5 below records the re-decision. What the pipeline needed instead landed 2026-09-15: `lib/mirror-groups.ts` groups the copies, `npm run fix` propagates an edit across them, and the writeback writes the entry once. This removes roughly 120 files and makes the uid index unique.
 3. **Delete the 87 `doc_type: link` stubs.** `buildStub()` generates the entire file and its body is one line. No CMS content, and `docTypeMapsToDocsArticle()` excludes them from sync. They exist only to show a nav position.
 4. **Retry before treating an entry as empty.** When `entryToMarkdown()` returns null, refetch with a single-entry GET rather than the bulk list, because the list endpoint stubs JSON RTE fields (this is why FAQ containers already use `fetchEntry()`). If still empty, try the latest version and report the discrepancy. Only then is the file a deletion candidate, and it goes to quarantine rather than being deleted.
 5. **Unify credentials on `CONTENTSTACK_DOCS_STACK_*`.** Add the GitHub secrets and update the roughly 6 workflows passing `secrets.PROD_CSDOCS_STACK_*`. Keep the old names readable as a fallback for one release, so a missed workflow raises a credential error instead of resolving to nothing.
@@ -309,6 +309,10 @@ The loop is: dry-run, read the report, get fixes from the human, re-run. Nothing
 
 `npm run nav-verify`, which **refetches from Production independently** rather than reusing the reconcile snapshot. That independence is the point.
 
+**It runs daily, not per pull request.** `.github/workflows/nav-verify-scheduled.yml` crawls a fresh nav tree and then verifies with the full CMS byte-equality check, keeps its report as a 30-day artifact, and on failure fails the job and posts to `SLACK_WEBHOOK_URL` when that secret exists. `.nav-tree.json` is gitignored, so the workflow must crawl before it verifies.
+
+**A pull-request gate is the stronger option, and the team deferred it deliberately.** It would need a **new** required status context. `lint` is already required on `main` and four workflows post it as a check-run name by `gh api` (`cms-to-github-csdocs.yml`, `cms-to-github-apidocs.yml`, `sdk-cms-to-github.yml`, `sandbox-auto-promote-csdocs.yml`), so nothing can reuse that name. A gate also adds a full CMS crawl to every pull request, which costs minutes and can fail for unrelated network reasons.
+
 | Check | Pass criterion |
 |---|---|
 | Path sets, both directions | 0 differences |
@@ -331,11 +335,15 @@ Byte equality plus idempotence together are the actual proof.
 
 Encode each answer as a named constant with a comment, never as an omission from a list.
 
-- 19 nav leaves are not published to Production (12 CLI v2 pages, 4 sample apps, 2 Launch pages, 1 test fixture). Recommendation: omit and report, with an explicit allow-list. Separately ask why 19 nav positions point at unpublished pages, because that is a live 404 surface.
-- `cs-docs/README.md` is hand-authored and stale.
-- `mcp-profile-hub.md` plus 4 PNGs were merged manually and are not in the CMS.
-- `EXCLUDED_CHAINS` and `DEPRECATED_UIDS` in `nav-shared.ts` are hardcoded editorial overrides. Re-confirm with the owner.
-- Direct push to `main` skips `docs-lint.yml`, which only fires on `pull_request`. Run `npm run lint` locally as part of verification.
+- **301 nav leaves point at entries that no environment publishes, and the reconcile wrote files for all 301.** Re-measured 2026-09-15, against the 19 this section first recorded. The rise comes from better `article_via_url` detection, which now finds 358 of those leaves against 60 in the older snapshot. 296 of the 301 are Lytics CDP, plus 1 Android SDK article and 4 sample apps. Spot-checked 9 against the Content Management API (CMA): every one returns no publish record for any environment. Neither `nav-apply.ts` nor `nav-verify.ts` reads the published flag, which is how the files got written. Two decisions follow: whether the files stay (the owner's rule says no, because only Production counts), and why 301 nav positions point at unpublished pages, because that is a live 404 surface. The list sits at `tools/cs-sync/nav-audit/unpublished-nav-leaves.csv`.
+- `DEPRECATED_UIDS` in `nav-shared.ts` holds 2 hardcoded editorial overrides, both losing halves of a url collision (`/headless-cms/mark-a-task-as-complete` and `/administration/supported-identity-providers`). Re-confirm with the owner that the surviving twin is the right one in each case.
+- Direct push to `main` skips `docs-lint.yml`, which only fires on `pull_request`. Run `npm run lint` locally as part of verification. The team decided on 2026-09-15 that the CMS to GitHub sync keeps pushing straight to `main` with no PR and no lint until the workflow is complete, so that GitHub and the CMS stay in sync.
+
+Resolved since this list was written:
+
+- `cs-docs/README.md` described an export workflow that no longer exists. Deleted 2026-09-15, along with the two exemptions `nav-verify.ts` carried for it.
+- `mcp-profile-hub.md` **is** a normal CMS-owned page: `uid: blt400ec21ccb40a9c4`, content type `docs_article`, published to Production, and reached by the nav at `developer-resources/contentstack-mcp`. The claim that it sits outside the CMS was true when written and is not true now. The 4 PNGs are deleted.
+- `EXCLUDED_CHAINS` is now `new Set<string>([])`, so it holds no overrides to re-confirm. The comment above it records that adding one needs owner confirmation first.
 
 Known and accepted: locale is hardcoded `en-us`, and images stay as remote URLs, so this is a text mirror.
 
@@ -361,6 +369,8 @@ DocOps holds **zero lint rules for `cs-docs`**. One small script fetches `github
 
 Measured against the real corpus: `cs-docs` produces **6,283 tier-1 errors across 3,168 files, and only 53% of files are clean**. Top rules: em-dash 1,282, acronym-first-use 783, anthropomorphism 577, no-italics 527, banned-phrases 519, no-emoji 507.
 
+**Re-measure before quoting those numbers.** The corpus is 3,610 files now, not 3,168, and 306 of them are mirrored copies of 144 entries, so linting every file counts the same error two to four times. Group with `representativeFiles` from `lib/mirror-groups.ts`, which collapses the corpus to 3,448 documents, and lint one copy per entry. Fixing one copy and not its twins also breaks the mirror, which `checkDuplicateUrls` then rejects.
+
 A blocking cutover on day one stops every merge in the repo. That is why the sequence below starts advisory.
 
 ## Two traps
@@ -383,7 +393,7 @@ A blocking cutover on day one stops every merge in the repo. That is why the seq
 | `description` length 120 to 165 | Trivial |
 | Local image existence and alt text | Absorbs today's `checkImages` |
 | Resolvable internal links | `check-links.js` already resolves against the filesystem. Add the urlPrefix-to-file mapping as config. |
-| Duplicate urls | The only one needing corpus-wide state. Build 1 removes every existing duplicate, so this guards against new ones. |
+| Duplicate urls | The only one needing corpus-wide state. **Duplicate urls are intentional and permanent**, because the repo mirrors nav positions exactly: 144 entries own 306 files. The check must pass byte-identical twins and fail only on diverged copies, matching `checkDuplicateUrls` in `lint.ts`. Reuse `buildMirrorGroupsFromFiles` from `lib/mirror-groups.ts` so the grouping matches the rest of the pipeline. |
 | HTML info-panel classes | `<p class="note\|tip\|warning\|add-resource">`. Upstream `callout-taxonomy.js` expects markdown blockquotes, so this needs its own check. |
 
 **Cannot move:** the `.md` extension rule fires on non-markdown files, and `collectDocs` only yields `.md`. Three lines. Keep inline or drop.
@@ -512,7 +522,7 @@ Three layers:
 
 ## Cross-listed docs
 
-A doc listed under two products is **one entry with one file**, in the folder its breadcrumb names. The Studio SDK page listed under Developer Resources lives at `cs-docs/studio/...` and is edited on `stag-studio`. Build 1 already collapsed the duplicates, so the folder structure encodes the answer and nobody needs to know the rule.
+A doc listed under two products is **one entry with one file per nav position**, because `cs-docs` mirrors the navigation exactly. 144 entries own 306 files. Edit any copy and `npm run fix` copies it to the rest, and the writeback still writes the entry once. Which branch a shared page belongs to stays a human call, because both products legitimately list it.
 
 Add a continuous integration (CI) guard: a PR into `stag-{product}` touching a file whose breadcrumb product differs fails with a message naming the right branch and path. `crossCheckProduct()` in `nav-membership.ts` already does the comparison.
 

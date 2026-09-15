@@ -25,6 +25,7 @@ tools/cs-sync/.prod-sync-staging/
 tools/cs-sync/prod-orphan-report.csv
 tools/cs-sync/.nav-tree.json
 tools/cs-sync/nav-audit/
+tools/cs-sync/nav-verify/
 
 # OS files
 .DS_Store

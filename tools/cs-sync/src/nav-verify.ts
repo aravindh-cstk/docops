@@ -192,8 +192,7 @@ function checkPathSets(tree: NavTree, index: DocIndex): Set<string> {
     .map((f) => f.relPath)
     .filter((rel) => !expected.has(rel))
     .filter((rel) => !faqDirs.some((d) => rel.startsWith(d)))
-    .filter((rel) => !IGNORED_PREFIXES.some((p) => rel.startsWith(p)))
-    .filter((rel) => rel !== `${DOCS_ROOT}/README.md`);
+    .filter((rel) => !IGNORED_PREFIXES.some((p) => rel.startsWith(p)));
 
   report("1c file -> nav leaf", extra.length === 0, `${extra.length} files no leaf claims`, extra);
   return expected;
@@ -257,7 +256,6 @@ function checkFrontmatter(index: DocIndex): void {
   const bad: string[] = [];
   for (const file of index.files) {
     if (IGNORED_PREFIXES.some((p) => file.relPath.startsWith(p))) continue;
-    if (file.relPath === `${DOCS_ROOT}/README.md`) continue;
     let data: unknown;
     try {
       data = matter(fs.readFileSync(file.filePath, "utf8")).data;
