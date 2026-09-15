@@ -60,7 +60,7 @@ To delete an existing referenced event, log in to your [Contentstack account](ht
 2.  You will be redirected to the **Personalize Projects** landing page. Click the project for which you want to delete an event.
 3.  On the **Experiences** page, to remove the referenced event from the A/B Test experience, navigate to the experience you want to remove the referred event by clicking your experience to open it or by clicking the corresponding vertical ellipses under the **Actions** section and selecting **Edit**.![Edit option for an experience on the Experiences page](https://lh7-rt.googleusercontent.com/docsz/AD_4nXe_SP6hWWkYYi0__5UbBBOqgnjo2ugvfeYKXqk9soEgqXVoXb6HIlc0YahHUF-KJSt0TNhs_vYUq8cKrqj-OTApXS_1tDJ0M6Sdqtu35vfDuIiZlrgkfyolxC1UlwJ0r3yFYWtWWg?key=kxf9b3oCOX-WSRLUHilftg)
 
-    **Note:** An A/B Test experience must be in the ‘Draft’ status to delete event(s) from it.
+    **Note:** An A/B Test experience must be in the ‘Draft��� status to delete event(s) from it.
 
 4.  Click the **Configuration** tab, scroll to the Metrics section and then click the **Delete** icon next to the preferred event from the list.
 
