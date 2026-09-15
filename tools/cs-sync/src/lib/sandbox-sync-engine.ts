@@ -13,6 +13,14 @@ import {
   rebuildFaqsSectionFromFolder,
   type ExistingFaqsSection,
 } from "./content-type-mappings/product-faqs.js";
+import { buildDocIndex } from "../doc-index.js";
+import {
+  breadcrumbMoveNote,
+  deleteBecomesUpdate,
+  groupChangesByEntry,
+  selectPrimary,
+  type EntryGroup,
+} from "./sync-groups.js";
 import { parseDocContent, parseDocFile, extractH1, type ParsedDoc } from "../parser.js";
 import { markdownToHtml } from "../transform.js";
 import { processImagesInHtml, rewriteMarkdownImages } from "../assets.js";
@@ -53,6 +61,126 @@ export interface SyncResult {
   url?: string;
   uid?: string;
   error?: string;
+  /** Canonical url of the CMS entry this row belongs to, when grouped. */
+  groupKey?: string;
+  /** "primary" wrote the entry, "mirror" is another copy of the same entry. */
+  role?: "primary" | "mirror";
+  /** Why a row was handled differently from a plain one-file change. */
+  note?: string;
+}
+
+/**
+ * Handle every changed copy of one CMS entry with a single write.
+ *
+ * A singleton group (the overwhelming majority) takes the same path it always
+ * did. Groups only diverge from the old behavior where they must: several
+ * copies changed at once, or a copy was deleted while others survive.
+ */
+async function processGroup(
+  config: AppConfig,
+  client: ContentstackClient,
+  group: EntryGroup,
+  beforeSha: string,
+  ctx: RewriteCtx,
+): Promise<SyncResult[]> {
+  if (group.error) {
+    return group.changes.map((c) => ({
+      path: c.relativePath,
+      action: "skipped" as const,
+      url: group.rawUrl || undefined,
+      groupKey: group.key,
+      error: group.error,
+    }));
+  }
+
+  // A delete that leaves copies behind is not a delete of the entry.
+  const asUpdate = deleteBecomesUpdate(group, config.CS_DOCS_ROOT);
+
+  // Every copy deleted at once, and none survive: the entry really is gone, so
+  // unpublish it, but exactly once rather than once per copy.
+  const deletes = group.changes.filter((c) => c.type === "deleted");
+  if (!asUpdate && deletes.length > 1 && deletes.length === group.changes.length) {
+    const primary = await processChange(config, client, deletes[0]!, beforeSha, ctx);
+    return [
+      { ...primary, groupKey: group.key, role: "primary", note: "all copies removed" },
+      ...deletes.slice(1).map((c) => ({
+        path: c.relativePath,
+        action: primary.action,
+        url: primary.url,
+        uid: primary.uid,
+        groupKey: group.key,
+        role: "mirror" as const,
+        note: `mirror of ${deletes[0]!.relativePath}`,
+      })),
+    ];
+  }
+
+  if (asUpdate) {
+    const primary = await processChange(config, client, asUpdate.change, beforeSha, ctx);
+    const rows: SyncResult[] = group.changes.map((c) => ({
+      path: c.relativePath,
+      action: "skipped" as const,
+      url: group.rawUrl || undefined,
+      uid: primary.uid,
+      groupKey: group.key,
+      role: "mirror" as const,
+      note: [
+        asUpdate.note,
+        breadcrumbMoveNote(c.relativePath, asUpdate.change.relativePath, config.CS_DOCS_ROOT),
+      ]
+        .filter(Boolean)
+        .join(", "),
+    }));
+    rows.push({ ...primary, groupKey: group.key, role: "primary", note: asUpdate.note });
+    return rows;
+  }
+
+  if (group.changes.length === 1) {
+    return [await processChange(config, client, group.changes[0]!, beforeSha, ctx)];
+  }
+
+  // Several copies changed, and groupError has already proven them identical.
+  // Read the entry first so the copy whose folder already matches its breadcrumb
+  // can be preferred, which keeps repeated runs from moving the entry's nav
+  // placement back and forth.
+  let existingBreadcrumbUid: string | undefined;
+  try {
+    const existing = await client.findEntryByUrl(group.rawUrl);
+    const breadcrumb = (existing as { breadcrumb?: Array<{ uid?: string }> } | null)?.breadcrumb;
+    existingBreadcrumbUid = breadcrumb?.[0]?.uid;
+  } catch {
+    /* a missing entry just means processChange will create it */
+  }
+
+  const primaryChange = selectPrimary(group, config.CS_DOCS_ROOT, existingBreadcrumbUid);
+  if (!primaryChange) {
+    return group.changes.map((c) => ({
+      path: c.relativePath,
+      action: "skipped" as const,
+      groupKey: group.key,
+    }));
+  }
+
+  const primary = await processChange(config, client, primaryChange, beforeSha, ctx);
+  const rows: SyncResult[] = [
+    { ...primary, groupKey: group.key, role: "primary" },
+  ];
+  for (const c of group.changes) {
+    if (c.relativePath === primaryChange.relativePath) continue;
+    rows.push({
+      path: c.relativePath,
+      action: c.type === "deleted" ? "skipped" : primary.action,
+      url: primary.url,
+      uid: primary.uid,
+      groupKey: group.key,
+      role: "mirror",
+      note:
+        c.type === "deleted"
+          ? "copy removed, other copies still changed this entry"
+          : `mirror of ${primaryChange.relativePath}`,
+    });
+  }
+  return rows;
 }
 
 export async function runSync(
@@ -92,23 +220,36 @@ export async function runSync(
   const results: SyncResult[] = [];
   const CONCURRENCY = 5;
 
-  for (let i = 0; i < changes.length; i += CONCURRENCY) {
-    const batch = changes.slice(i, i + CONCURRENCY);
+  // Batch over groups, not changes. Concurrency across two copies of one entry
+  // is exactly the race this replaces: both read the entry before either wrote,
+  // so whichever landed last decided the entry's title marker and breadcrumb.
+  const groups = groupChangesByEntry(
+    changes,
+    config.repoRoot,
+    config.CS_DOCS_ROOT,
+    beforeSha,
+    buildDocIndex(config.repoRoot, config.CS_DOCS_ROOT),
+  );
+
+  for (let i = 0; i < groups.length; i += CONCURRENCY) {
+    const batch = groups.slice(i, i + CONCURRENCY);
     const settled = await Promise.allSettled(
-      batch.map((change) => processChange(config, client, change, beforeSha, ctx)),
+      batch.map((group) => processGroup(config, client, group, beforeSha, ctx)),
     );
     for (let j = 0; j < settled.length; j++) {
       const s = settled[j];
-      const result: SyncResult =
+      const rows: SyncResult[] =
         s.status === "fulfilled"
           ? s.value
-          : {
-              path: batch[j].relativePath,
-              action: "skipped",
+          : batch[j]!.changes.map((c) => ({
+              path: c.relativePath,
+              action: "skipped" as const,
               error: s.reason instanceof Error ? s.reason.message : String(s.reason),
-            };
-      results.push(result);
-      logResult(result);
+            }));
+      for (const row of rows) {
+        results.push(row);
+        logResult(row);
+      }
     }
   }
 
@@ -472,7 +613,9 @@ async function handleRename(
 
 function logResult(result: SyncResult): void {
   const status = result.error ? "FAIL" : "OK";
-  const detail = result.error ?? `${result.action} ${result.url ?? ""} ${result.uid ?? ""}`.trim();
+  const base = `${result.action} ${result.url ?? ""} ${result.uid ?? ""}`.trim();
+  const suffix = result.note ? ` (${result.note})` : "";
+  const detail = result.error ?? `${base}${suffix}`;
   console.log(`[${status}] ${result.path}: ${detail}`);
 }
 
@@ -480,13 +623,14 @@ function writeSummary(results: SyncResult[], ctx: RewriteCtx): void {
   const lines = [
     "## Contentstack docs sync",
     "",
-    "| File | Action | URL | UID |",
-    "|------|--------|-----|-----|",
+    "| File | Action | Role | URL | UID | Note |",
+    "|------|--------|------|-----|-----|------|",
   ];
 
   for (const r of results) {
+    const action = r.error ? `ERROR: ${r.error.split("\n")[0]}` : r.action;
     lines.push(
-      `| ${r.path} | ${r.error ? `ERROR: ${r.error}` : r.action} | ${r.url ?? ""} | ${r.uid ?? ""} |`,
+      `| ${r.path} | ${action} | ${r.role ?? ""} | ${r.url ?? ""} | ${r.uid ?? ""} | ${r.note ?? ""} |`,
     );
   }
 
