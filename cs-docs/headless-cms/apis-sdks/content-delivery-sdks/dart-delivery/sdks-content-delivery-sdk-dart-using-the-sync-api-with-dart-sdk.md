@@ -68,7 +68,7 @@ await response.then((response) {
 });
 ```
 
-The acceptable values for “publish\_type” are “entry\_published,” “entry\_unpublished,” “entry\_deleted,” “asset\_published,” “asset\_unpublished,” “asset\_deleted,” and “content\_type\_deleted.”
+The acceptable values for “publish\_type” are “entry\_published,” “entry\_unpublished,” ���entry\_deleted,” “asset\_published,” “asset\_unpublished,” “asset\_deleted,” and “content\_type\_deleted.”
 
 ## More resources
 
