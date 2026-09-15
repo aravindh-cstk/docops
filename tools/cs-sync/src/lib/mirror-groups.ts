@@ -38,7 +38,19 @@ function keyOf(doc: DocFile): { key: string; keyedBy: MirrorGroup["keyedBy"] } {
  * this is cheap to add now: it fails the moment someone breaks the invariant,
  * rather than corrupting an entry quietly.
  */
-function assertPartitionsAgree(index: DocIndex): void {
+function indexBy(files: DocFile[], key: (f: DocFile) => string | null): Map<string, DocFile[]> {
+  const map = new Map<string, DocFile[]>();
+  for (const f of files) {
+    const k = key(f);
+    if (!k) continue;
+    const arr = map.get(k) ?? [];
+    arr.push(f);
+    map.set(k, arr);
+  }
+  return map;
+}
+
+function assertPartitionsAgree(index: { uidIndex: Map<string, DocFile[]>; urlIndex: Map<string, DocFile[]> }): void {
   for (const [uid, files] of index.uidIndex) {
     const urls = new Set(files.map((f) => f.canonicalUrl).filter((u): u is string => !!u));
     if (urls.size > 1) {
@@ -67,10 +79,24 @@ function assertPartitionsAgree(index: DocIndex): void {
  * it from this one list instead of grouping and then re-adding the remainder.
  */
 export function buildMirrorGroups(index: DocIndex): MirrorGroup[] {
-  assertPartitionsAgree(index);
+  return buildMirrorGroupsFromFiles(index.files);
+}
+
+/**
+ * The same grouping over an explicit file list, for callers whose universe is
+ * narrower than the whole tree. lint.ts passes only `git ls-files` output, which
+ * keeps gitignored `cs-docs/orphan-docs/` out: those pages are quarantined
+ * copies that share urls with real files, so including them would report every
+ * one of them as a diverged duplicate.
+ */
+export function buildMirrorGroupsFromFiles(files: DocFile[]): MirrorGroup[] {
+  assertPartitionsAgree({
+    uidIndex: indexBy(files, (f) => f.uid),
+    urlIndex: indexBy(files, (f) => f.canonicalUrl),
+  });
 
   const buckets = new Map<string, { keyedBy: MirrorGroup["keyedBy"]; members: DocFile[] }>();
-  for (const doc of index.files) {
+  for (const doc of files) {
     const { key, keyedBy } = keyOf(doc);
     const bucket = buckets.get(key) ?? { keyedBy, members: [] };
     bucket.members.push(doc);
@@ -135,6 +161,34 @@ export function formatMirrorMessage(args: {
     "",
     args.fixExplanation,
   ].join("\n");
+}
+
+/**
+ * Label each copy by which version of the content it holds, noting separately
+ * whether this change set touched it.
+ *
+ * Labelling purely by "did you change this" breaks down as soon as more than
+ * one copy is in the change set, which happens on any wide diff: every row
+ * reads "YOU CHANGED" and the reader still cannot see which file holds which
+ * content. The version letter is the part that always carries information.
+ */
+export function labelMembers(
+  members: Array<{ relPath: string; content: string }>,
+  changedPaths: ReadonlySet<string>,
+): Array<{ label: string; relPath: string }> {
+  const variants: string[] = [];
+  return members.map((m) => {
+    let i = variants.indexOf(m.content);
+    if (i === -1) {
+      variants.push(m.content);
+      i = variants.length - 1;
+    }
+    const version = `version ${String.fromCharCode(65 + i)}`;
+    return {
+      label: changedPaths.has(m.relPath) ? `${version} (you changed)` : version,
+      relPath: m.relPath,
+    };
+  });
 }
 
 export function stripDocsRoot(relPath: string, docsRoot: string): string {
@@ -213,10 +267,10 @@ export function planPropagation(
     return propagateFrom(group, read, content, source);
   }
 
-  const lines = read.map((r) => ({
-    label: changedPaths.has(r.doc.relPath) ? "YOU CHANGED" : "unchanged",
-    relPath: r.doc.relPath,
-  }));
+  const lines = labelMembers(
+    read.map((r) => ({ relPath: r.doc.relPath, content: r.content })),
+    changedPaths,
+  );
 
   if (changedContents.size > 1) {
     return {

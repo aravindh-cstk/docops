@@ -10,14 +10,22 @@ function isAssetFile(filePath: string): boolean {
   return ASSET_EXTENSIONS.has(path.extname(filePath).toLowerCase());
 }
 
-export function parseArgs(argv: string[]): { base: string; worktree: boolean } {
+export function parseArgs(argv: string[]): {
+  base: string;
+  worktree: boolean;
+  source?: string;
+} {
   let base = "origin/main";
   let worktree = false;
+  let source: string | undefined;
   for (let i = 0; i < argv.length; i++) {
     if (argv[i] === "--base" && argv[i + 1]) base = argv[++i]!;
     if (argv[i] === "--worktree") worktree = true;
+    // Breaks a tie between mirrored copies of one CMS entry that were edited
+    // in different ways, where there is no single winner to copy from.
+    if (argv[i] === "--source" && argv[i + 1]) source = argv[++i]!;
   }
-  return { base, worktree };
+  return { base, worktree, source };
 }
 
 // Lists .md files under docsRoot with uncommitted changes — modified (tracked)

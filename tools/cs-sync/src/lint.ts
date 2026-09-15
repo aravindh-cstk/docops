@@ -8,6 +8,13 @@ import matter from "gray-matter";
 import { findRepoRoot, listChangedDocs, parseArgs } from "./diff.js";
 import { parseDocFile, resolveDocPaths, frontMatterSchema, sdkFrontMatterSchema, extractH1 } from "./parser.js";
 import { collectLocalImageRefs, checkImagePath } from "./assets.js";
+import { buildDocIndex } from "./doc-index.js";
+import {
+  buildMirrorGroupsFromFiles,
+  formatMirrorMessage,
+  labelMembers,
+  mirroredGroups,
+} from "./lib/mirror-groups.js";
 import { lintStyle } from "./style-lint.js";
 import { docTypeMapsToDocsArticle } from "./lib/content-type-mappings/docs-article.js";
 
@@ -177,29 +184,48 @@ function buildAllDocs(repoRoot: string, docsRoot: string): Set<string> {
  * Identical copies are therefore expected and not an error. Copies whose bodies
  * have diverged are a real problem, because only one of them can be synced back
  * to the single CMS entry, so those are still reported.
+ *
+ * Reported once per group rather than once per differing pair, and with every
+ * copy listed. The author has to know how many copies exist and which ones
+ * still need changing, and `npm run fix` does the copying for them.
  */
 function checkDuplicateUrls(
   repoRoot: string,
   docsRoot: string,
   allDocs: Set<string>,
+  changedFiles: ReadonlySet<string>,
 ): string[] {
+  const index = buildDocIndex(repoRoot, docsRoot);
+  const groups = mirroredGroups(
+    buildMirrorGroupsFromFiles(index.files.filter((f) => allDocs.has(f.relPath))),
+  );
+
   const errors: string[] = [];
-  const seen = new Map<string, { path: string; body: string }>();
-  for (const p of allDocs) {
-    try {
-      const d = parseDocFile(repoRoot, docsRoot, p);
-      const body = fs.readFileSync(path.join(repoRoot, p), "utf8");
-      const prior = seen.get(d.frontMatter.url);
-      if (!prior) {
-        seen.set(d.frontMatter.url, { path: p, body });
-      } else if (prior.body !== body) {
-        errors.push(
-          `Diverged copies of url "${d.frontMatter.url}": ${prior.path} and ${p} share one CMS entry but their content differs, so only one can sync back`,
-        );
+  for (const group of groups) {
+    const read: Array<{ relPath: string; content: string }> = [];
+    for (const member of group.members) {
+      try {
+        read.push({ relPath: member.relPath, content: fs.readFileSync(member.filePath, "utf8") });
+      } catch {
+        /* unreadable files are reported separately by lintDoc */
       }
-    } catch {
-      /* skip files with invalid frontmatter — reported separately in lintDoc */
     }
+    if (new Set(read.map((r) => r.content)).size <= 1) continue;
+
+    errors.push(
+      formatMirrorMessage({
+        title: "Diverged copies of one CMS page",
+        pageUrl: group.representative.url,
+        memberCount: group.members.length,
+        lines: labelMembers(read, changedFiles),
+        fixCommand: "npm run fix",
+        fixExplanation:
+          `That makes all ${group.members.length} copies identical. Then commit the result.\n` +
+          "If it cannot tell which version you meant, name the one to keep\n" +
+          "with --source <path>.",
+        docsRoot,
+      }),
+    );
   }
   return errors;
 }
@@ -303,7 +329,7 @@ async function main(): Promise<void> {
   const allDocs = buildAllDocs(repoRoot, docsRoot);
   // Duplicate-URL check only applies to roots that use unique URL slugs (see ROOT_CONFIG).
   if (getRootConfig(docsRoot).checkDuplicateUrls) {
-    allErrors.push(...checkDuplicateUrls(repoRoot, docsRoot, allDocs));
+    allErrors.push(...checkDuplicateUrls(repoRoot, docsRoot, allDocs, new Set(mdFiles)));
   }
 
   for (const file of mdFiles) {

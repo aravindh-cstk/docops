@@ -5,6 +5,7 @@ import { buildDocIndex } from "./doc-index.js";
 import {
   buildMirrorGroups,
   groupForFile,
+  labelMembers,
   mirroredGroups,
   planPropagation,
   representativeFiles,
@@ -208,7 +209,8 @@ test("m10", "two copies edited DIFFERENTLY is refused with both named", () => {
   ok(plan.kind === "refuse", `kind ${plan.kind}`);
   if (plan.kind !== "refuse") return;
   ok(plan.message.includes("two different ways"), "explains the conflict");
-  ok(plan.message.includes("YOU CHANGED"), "labels the touched copies");
+  ok(plan.message.includes("(you changed)"), "labels the touched copies");
+  ok(plan.message.includes("version A") && plan.message.includes("version B"), "names variants");
   ok(plan.message.includes("--source"), "names the escape hatch");
   ok(plan.message.includes("studio/page-a.md"), "lists studio copy");
   ok(plan.message.includes("headless-cms/page-a.md"), "lists the untouched copy too");
@@ -222,7 +224,7 @@ test("m11", "divergence with nothing in the change set is refused", () => {
   ok(plan.kind === "refuse", `kind ${plan.kind}`);
   if (plan.kind !== "refuse") return;
   ok(plan.message.includes("already differ"), "explains there is no intent signal");
-  ok(!plan.message.includes("YOU CHANGED"), "nothing should be labelled as changed");
+  ok(!plan.message.includes("(you changed)"), "nothing should be labelled as changed");
   f.cleanup();
   return "no intent signal, so no guess";
 });
@@ -270,6 +272,25 @@ test("m14", "a propagated group re-plans as a noop", () => {
   ok(second.kind === "noop", `second kind ${second.kind}`);
   f.cleanup();
   return "second run does nothing";
+});
+
+test("m15", "labels stay informative when every copy is in the change set", () => {
+  // A wide diff (the uid-stamping commit touched 2,092 files) puts every copy
+  // in the change set at once. Labelling only by changed-ness would print the
+  // same label on every row and tell the reader nothing.
+  const members = [
+    { relPath: "cs-docs/a.md", content: "same" },
+    { relPath: "cs-docs/b.md", content: "same" },
+    { relPath: "cs-docs/c.md", content: "different" },
+  ];
+  const all = labelMembers(members, new Set(members.map((m) => m.relPath)));
+  ok(all[0]!.label === "version A (you changed)", `a -> ${all[0]!.label}`);
+  ok(all[1]!.label === "version A (you changed)", `b -> ${all[1]!.label}`);
+  ok(all[2]!.label === "version B (you changed)", `c -> ${all[2]!.label}`);
+
+  const none = labelMembers(members, new Set());
+  ok(none[2]!.label === "version B", `untouched -> ${none[2]!.label}`);
+  return "variant letter carries the signal";
 });
 
 const passed = results.filter((r) => r.status === "PASS").length;
