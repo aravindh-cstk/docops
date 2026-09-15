@@ -2,6 +2,7 @@
 title: "Set up Live Preview with REST for SSR"
 description: "Learn how to configure live preview for SSR websites using REST APIs in Contentstack."
 url: /headless-cms/set-up-live-preview-with-rest-for-server-side-rendering
+uid: blt4475e60e989111bb
 ---
 
 # Set up Live Preview with REST for SSR

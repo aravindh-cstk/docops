@@ -2,6 +2,7 @@
 title: "Studio API Endpoint Reference"
 description: "The API surface is 16 routes across three groups. Compositions are the reason the service exists. The rest support them, and projects hold the."
 url: /studio/studio-api-endpoint-reference
+uid: bltd592b9c2529830d3
 ---
 
 # Studio API Endpoint Reference

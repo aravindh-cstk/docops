@@ -2,6 +2,7 @@
 title: "Preview API"
 description: "Discover how Contentstack's Preview API enables content retrieval for preview, supporting Live Preview and Timeline. Access content by switching hosts and including specified headers."
 url: /headless-cms/preview-api
+uid: bltc0c88d53c01fb15e
 ---
 
 # Preview API

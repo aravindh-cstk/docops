@@ -2,6 +2,7 @@
 title: "Selecting Region in SDKs"
 description: "Selecting Region in SDKs"
 url: /administration/selecting-region-in-sdks
+uid: blt20127cee9ed4b879
 ---
 
 # Selecting Region in SDKs

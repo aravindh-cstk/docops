@@ -2,6 +2,7 @@
 title: "Delete a Term"
 description: "Effortlessly delete a term within a taxonomy with our step-by-step guide."
 url: /headless-cms/delete-a-term
+uid: blte3c1f5643408731a
 ---
 
 # Delete a Term

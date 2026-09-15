@@ -2,6 +2,7 @@
 title: "Use Default URL Pattern"
 description: "Define and customize URL patterns in Contentstack to generate structured, consistent entry URLs using fields, locales, and formatting rules."
 url: /headless-cms/use-default-url-pattern
+uid: blt8cfe13ca70126fdd
 ---
 
 # Use Default URL Pattern

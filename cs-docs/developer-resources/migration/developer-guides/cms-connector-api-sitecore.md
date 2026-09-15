@@ -2,6 +2,7 @@
 title: "CMS Connector API - Sitecore"
 description: "Discover how to streamline your Sitecore content migration with the comprehensive Node.js tool, migration-sitecore, and ensure seamless transitions."
 url: /headless-cms/cms-connector-api-sitecore
+uid: blt15e89644116bef82
 ---
 
 # CMS Connector API - Sitecore

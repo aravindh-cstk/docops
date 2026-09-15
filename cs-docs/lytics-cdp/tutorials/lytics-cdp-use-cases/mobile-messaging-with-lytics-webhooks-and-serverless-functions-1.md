@@ -2,6 +2,7 @@
 title: "Mobile Messaging with Lytics Webhooks and Serverless Functions"
 description: "Mobile Messaging with Lytics Webhooks and Serverless Functions"
 url: /lytics/mobile-messaging-with-lytics-webhooks-and-serverless-functions-1
+uid: blt841b7289d9b48e2e
 ---
 
 # Mobile Messaging with Lytics Webhooks and Serverless Functions

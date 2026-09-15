@@ -2,6 +2,7 @@
 title: "Compose a Hero from primitives"
 description: "Build five distinct Hero variants (centered, split, full-bleed, thumbnail-on-top, two-CTA) from the same 10 registered primitives without a code change."
 url: /studio/hero-from-primitives
+uid: blt68b73d53da4a988f
 ---
 
 # Compose a Hero from primitives

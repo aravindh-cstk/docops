@@ -2,6 +2,7 @@
 title: "Get Started with .NET Delivery SDK"
 description: "Steps for getting started with .Net SDK"
 url: /developers/sdks/content-delivery-sdk/dot-net/get-started-with-dot-net-delivery-sdk
+uid: blt1302e8381103e3fa
 ---
 
 # Get Started with .NET Delivery SDK

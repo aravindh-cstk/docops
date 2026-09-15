@@ -2,6 +2,7 @@
 title: "Job Processing"
 description: "Lytics Job runtime and APIs control the mechanics of how data flows in and out of Lytics. Lytics jobs can be generally broken down into a few important…"
 url: /lytics/background-processing
+uid: blt3824fedbd28f2748
 ---
 
 # Job Processing

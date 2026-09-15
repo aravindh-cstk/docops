@@ -2,6 +2,7 @@
 title: "Personalize Connector"
 description: "Use the Personalize connector to automate the retrieval of audiences and experiences from Contentstack’s Personalize platform."
 url: /agent-os/personalize
+uid: blt40cf497503414b4e
 ---
 
 # Personalize Connector

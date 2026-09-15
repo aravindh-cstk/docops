@@ -2,6 +2,7 @@
 title: "Import a Global Field"
 description: "Easily import Global fields in Contentstack for streamlined content modeling by following simple steps or using API, enhancing your content management."
 url: /headless-cms/import-a-global-field
+uid: blt30edde1aa2ee7daf
 ---
 
 # Import a Global Field

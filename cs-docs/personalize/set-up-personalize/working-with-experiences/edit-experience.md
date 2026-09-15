@@ -2,6 +2,7 @@
 title: "Edit an Experience"
 description: "Learn how to edit experiences in Contentstack Personalize to maintain accurate content targeting."
 url: /personalize/edit-experience
+uid: blt9ca235d50ce938c2
 ---
 
 # Edit an Experience

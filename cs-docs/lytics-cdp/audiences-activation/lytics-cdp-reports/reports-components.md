@@ -2,6 +2,7 @@
 title: "Components"
 description: "Reports can consist of one or many Components . Think of a Component as a method of visualizing data. Each Component provides different ways of displaying…"
 url: /lytics/reports-components
+uid: blt11a06549cc838ffb
 ---
 
 # Components

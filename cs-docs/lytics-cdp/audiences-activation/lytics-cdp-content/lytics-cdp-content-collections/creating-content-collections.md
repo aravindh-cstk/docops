@@ -2,6 +2,7 @@
 title: "Creating Content Collections"
 description: "You can build a content collection in Lytics by navigating to Content > Collections from the dashboard. Then click the New Collection button above the…"
 url: /lytics/creating-content-collections
+uid: blt5884f6cc6e06019f
 ---
 
 # Creating Content Collections

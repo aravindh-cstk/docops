@@ -2,6 +2,7 @@
 title: "Android CDA - Configure Region Endpoints in Android Delivery SDK"
 description: "Configure region endpoints dynamically using the Contentstack Android Delivery SDK. An Android developer guide to dynamic resolution without hardcoding hosts."
 url: /developers/sdks/content-delivery-sdk/android/region-endpoint-integration
+uid: blt27493936273b7b39
 ---
 
 # Android CDA - Configure Region Endpoints in Android Delivery SDK

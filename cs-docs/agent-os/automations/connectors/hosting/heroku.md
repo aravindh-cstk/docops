@@ -2,6 +2,7 @@
 title: "Heroku"
 description: "Heroku"
 url: /agent-os/heroku
+uid: bltfa8e90abda20241f
 ---
 
 # Heroku

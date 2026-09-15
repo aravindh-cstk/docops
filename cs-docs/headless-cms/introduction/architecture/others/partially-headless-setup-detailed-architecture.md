@@ -2,6 +2,7 @@
 title: "Partially Headless Setup"
 description: "Use our partially headless setup to create your own website"
 url: /headless-cms/partially-headless-setup-detailed-architecture
+uid: bltf5496760399ddd11
 ---
 
 # Partially Headless Setup

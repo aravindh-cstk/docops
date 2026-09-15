@@ -2,6 +2,7 @@
 title: "Installed Apps"
 description: "Learn how to view and manage installed apps from the Contentstack Marketplace, configure settings, and control app access across environments."
 url: /marketplace/installed-apps
+uid: blt94762165a6a8e282
 ---
 
 # Installed Apps

@@ -2,6 +2,7 @@
 title: "User Permissions"
 description: "Learn how to manage user roles, permissions, and access controls in Contentstack Personalize. Invite or remove users, and control project access."
 url: /personalize/user-permissions
+uid: blt1dc2e19c287eff1b
 ---
 
 # User Permissions

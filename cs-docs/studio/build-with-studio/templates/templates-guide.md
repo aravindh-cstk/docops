@@ -2,6 +2,7 @@
 title: "Templates Chapter Guide"
 description: "Templates eliminate repetition for content-driven pages: write the layout once, connect it to a content type, and every entry of that type gets its own."
 url: /studio/templates-guide
+uid: blt03cb91351eca4e46
 ---
 
 # Templates Chapter Guide

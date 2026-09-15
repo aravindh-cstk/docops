@@ -2,6 +2,7 @@
 title: "Quickstart Guide to Creating Your First Page"
 description: "Step-by-step guide to composing your first Studio page: create a template, bind components to entry data, and render a live page in minutes."
 url: /studio/quickstart-guide-to-creating-your-first-page
+uid: blt0565465f25dfd2f7
 ---
 
 # Quickstart Guide to Creating Your First Page

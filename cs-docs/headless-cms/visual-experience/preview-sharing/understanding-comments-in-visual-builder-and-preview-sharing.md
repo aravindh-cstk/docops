@@ -2,6 +2,7 @@
 title: "Understanding Comments in Visual Builder and Preview Sharing"
 description: "Learn the key differences between Visual Builder Discussions and Preview Sharing Comments in Contentstack to optimize collaboration and content review workflows."
 url: /headless-cms/understanding-comments-in-visual-builder-and-preview-sharing
+uid: blte07fde421b662d95
 ---
 
 # Understanding Comments in Visual Builder and Preview Sharing

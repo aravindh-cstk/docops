@@ -2,6 +2,7 @@
 title: "Manage Translation in Contentstack"
 description: "ways to manage translation in Contentstack"
 url: /headless-cms/manage-translation-in-contentstack
+uid: bltfce7ad9f2bd28054
 ---
 
 # Manage Translation in Contentstack

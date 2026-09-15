@@ -2,6 +2,7 @@
 title: "Move/Reorder a Term"
 description: "Effortlessly move or reorder terms in a taxonomy with our step-by-step guide."
 url: /headless-cms/move-or-reorder-a-term
+uid: blte4322592d77dadfa
 ---
 
 # Move/Reorder a Term

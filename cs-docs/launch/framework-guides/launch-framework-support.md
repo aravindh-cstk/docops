@@ -2,6 +2,7 @@
 title: "About Launch Framework Support"
 description: "Learn about the popular frameworks supported by Contentstack Launch."
 url: /launch/launch-framework-support
+uid: blt0a7967d76d5bc9d1
 ---
 
 # About Launch Framework Support

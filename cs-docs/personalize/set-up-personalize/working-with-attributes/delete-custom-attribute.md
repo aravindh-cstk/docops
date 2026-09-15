@@ -2,6 +2,7 @@
 title: "Delete a Custom Attribute"
 description: "Learn how to delete referenced and non-referenced custom attributes in Contentstack Personalize."
 url: /personalize/delete-custom-attribute
+uid: blt09314362b8333067
 ---
 
 # Delete a Custom Attribute

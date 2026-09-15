@@ -2,6 +2,7 @@
 title: "Session Management"
 description: "Easily manage and secure your Contentstack sessions. Learn how to terminate unwanted sessions to protect your account on shared devices."
 url: /administration/session-management
+uid: blt539b04d7a03f995f
 ---
 
 # Session Management

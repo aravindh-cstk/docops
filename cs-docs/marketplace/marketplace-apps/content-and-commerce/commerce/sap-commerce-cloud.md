@@ -2,6 +2,7 @@
 title: "SAP Commerce Cloud App Installation Guide"
 description: "Fetch and display products and categories from your SAP store in a field of your Contentstack entries."
 url: /marketplace/sap-commerce-cloud
+uid: bltb4a762041ca825fb
 ---
 
 # SAP Commerce Cloud App Installation Guide

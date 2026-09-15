@@ -2,6 +2,7 @@
 title: "Compose Testimonial cards from primitives"
 description: "Build a testimonial section with quote, avatar, author name, and role per card, composed from the same 10 registered primitives, bound to a Reference-multi field."
 url: /studio/testimonial-cards-from-primitives
+uid: bltbbfa6d4ef88fc859
 ---
 
 # Compose Testimonial cards from primitives

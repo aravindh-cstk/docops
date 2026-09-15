@@ -2,6 +2,7 @@
 title: "Lytics Communication"
 description: "There are many reasons why Lytics and partners need to communicate across different tools, here are some best practices on how to get the most out of your…"
 url: /lytics/lytics-communication
+uid: bltcbd88f81e42361e4
 ---
 
 # Lytics Communication

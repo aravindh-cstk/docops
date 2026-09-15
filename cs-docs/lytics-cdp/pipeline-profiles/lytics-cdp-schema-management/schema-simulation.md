@@ -2,6 +2,7 @@
 title: "Schema Simulation"
 description: "Test schema definitions against sample data to preview how entities will be built."
 url: /lytics/schema-simulation
+uid: blt6b1d629b4a78dfbe
 ---
 
 # Schema Simulation

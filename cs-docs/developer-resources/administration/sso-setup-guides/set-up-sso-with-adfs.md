@@ -2,6 +2,7 @@
 title: "Set up SSO with Active Directory Federation Services (AD FS)"
 description: "Set up single sign-on in Contentstack with AD FS as your SAML 2.0 identity provider, as one of up to five IdP connections in an organization."
 url: /administration/set-up-sso-with-adfs
+uid: bltfff09282b5e4cec5
 ---
 
 # Set up SSO with Active Directory Federation Services (AD FS)

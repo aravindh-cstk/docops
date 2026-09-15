@@ -2,6 +2,7 @@
 title: "Response"
 description: "Response"
 url: /agent-os/response
+uid: bltb4dad72afee33c69
 ---
 
 # Response

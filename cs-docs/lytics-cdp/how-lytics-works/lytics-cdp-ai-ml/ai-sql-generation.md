@@ -2,6 +2,7 @@
 title: "AI SQL Generation"
 description: "Generate SQL queries from natural language descriptions for your connected data sources."
 url: /lytics/ai-sql-generation
+uid: blt6a7831a65d32aa71
 ---
 
 # AI SQL Generation

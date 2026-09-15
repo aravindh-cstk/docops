@@ -2,6 +2,7 @@
 title: "Create New Page"
 description: "Learn to create and customize web pages in Contentstack’s Visual Editor using no-code tools, real-time previews, and structured components for seamless publishing."
 url: /headless-cms/create-new-page
+uid: blt0267cae055b26283
 ---
 
 # Create New Page

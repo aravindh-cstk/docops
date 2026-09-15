@@ -2,6 +2,7 @@
 title: "What’s Changed for Admins and Developers"
 description: "Discover how Contentstack revolutionizes asset management with a new system for streamlined organization, governance, and cross-stack reuse."
 url: /assets/whats-changed-for-admins-and-developers
+uid: blt09b2cef0109c431e
 ---
 
 # What’s Changed for Admins and Developers

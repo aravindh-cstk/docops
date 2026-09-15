@@ -2,6 +2,7 @@
 title: "Other Frameworks on Launch"
 description: "Host projects using the “Other” framework option in Contentstack Launch with flexible configuration and deployment support."
 url: /launch/other-frameworks-on-launch
+uid: blt4dacb7653289fae5
 ---
 
 # Other Frameworks on Launch

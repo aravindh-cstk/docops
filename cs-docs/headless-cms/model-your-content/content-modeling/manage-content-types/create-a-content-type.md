@@ -2,6 +2,7 @@
 title: "Create a Content Type"
 description: "Learn how to create and configure content types in Contentstack to define reusable content structures."
 url: /headless-cms/create-a-content-type
+uid: bltc895a4a926c204ca
 ---
 
 # Create a Content Type

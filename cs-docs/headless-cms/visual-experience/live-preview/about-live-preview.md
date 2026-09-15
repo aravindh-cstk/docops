@@ -2,6 +2,7 @@
 title: "About Live Preview"
 description: "Experience seamless content editing with Contentstack's Live Preview, ensuring accurate, mobile-ready, and locale-specific content in real time."
 url: /headless-cms/about-live-preview
+uid: blt8fb413d681fa6740
 ---
 
 # About Live Preview

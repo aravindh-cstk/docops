@@ -2,6 +2,7 @@
 title: "AWS Bedrock"
 description: "Use this connector to generate content using the different Foundation model."
 url: /agent-os/aws-bedrock
+uid: bltb226d6a1fd065ac8
 ---
 
 # AWS Bedrock

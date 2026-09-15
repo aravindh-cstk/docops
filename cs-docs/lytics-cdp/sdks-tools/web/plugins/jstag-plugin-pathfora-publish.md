@@ -2,6 +2,7 @@
 title: "pathfora.publish Plugin"
 description: "Publish Pathfora web experiences powered by Lytics"
 url: /lytics/jstag-plugin-pathfora-publish
+uid: blt6147c5b40eb7183e
 ---
 
 # pathfora.publish Plugin

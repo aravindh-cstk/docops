@@ -2,6 +2,7 @@
 title: "Set up Live Preview for Static-Site Generator (SSG)"
 description: "Explore seamless live preview setup for static site generators on Contentstack. Enhance development efficiency with our developer-friendly documentation."
 url: /headless-cms/set-up-live-preview-for-static-site-generator-ssg
+uid: blt90bc0b1b4dc080c8
 ---
 
 # Set up Live Preview for Static-Site Generator (SSG)

@@ -2,6 +2,7 @@
 title: "Install the Lytics Tag"
 description: "In the Web SDK, Lytics provides a tag that can be placed on your site to collect behavioral data and surface the materialized profile back to your browser…"
 url: /lytics/developer-quickstart-3-install-lytics
+uid: blt37bfe67a1175b59e
 ---
 
 # Install the Lytics Tag

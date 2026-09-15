@@ -2,6 +2,7 @@
 title: "Metric Threshold Alerts"
 description: "Set min/max alert thresholds on audience, job, and stream activity charts."
 url: /lytics/metric-thresholds
+uid: blt50295920fa6c49a1
 ---
 
 # Metric Threshold Alerts

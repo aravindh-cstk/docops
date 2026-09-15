@@ -2,6 +2,7 @@
 title: "Create a Delivery Token"
 description: "Unlock seamless access to secure published content with Contentstack's Delivery Tokens for websites and apps. Perfect for developers managing environments."
 url: /headless-cms/create-a-delivery-token
+uid: bltf3c25c7528b48628
 ---
 
 # Create a Delivery Token

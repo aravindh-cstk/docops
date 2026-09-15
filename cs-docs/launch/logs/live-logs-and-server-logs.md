@@ -2,6 +2,7 @@
 title: "Live Logs and Server Logs"
 description: "Learn how to use Live Logs and Server Logs in Contentstack Launch to monitor and review runtime server logs for your deployments."
 url: /launch/live-logs-and-server-logs
+uid: blt0fec81de34846aca
 ---
 
 # Live Logs and Server Logs

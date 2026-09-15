@@ -2,6 +2,7 @@
 title: "Hero Banner"
 description: "The Hero Banner content model is a well-structured system designed for front-page hero banner content information on your website."
 url: /headless-cms/hero-banner
+uid: blt6fb888fb78a2ac7d
 ---
 
 # Hero Banner

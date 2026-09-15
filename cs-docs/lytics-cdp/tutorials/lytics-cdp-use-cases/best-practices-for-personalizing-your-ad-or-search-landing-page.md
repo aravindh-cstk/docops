@@ -2,6 +2,7 @@
 title: "Best Practices for Personalizing Your Ad or Search Landing Page"
 description: "Today's most popular ad platforms, such as Google and Facebook, care a great deal about the overall user experience from the time they are shown an ad…"
 url: /lytics/best-practices-for-personalizing-your-ad-or-search-landing-page
+uid: blt1f290298e14fb317
 ---
 
 # Best Practices for Personalizing Your Ad or Search Landing Page

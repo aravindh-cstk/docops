@@ -2,6 +2,7 @@
 title: "Create a Project using File Upload"
 description: "Learn how to create a Launch project using file upload in Contentstack Launch."
 url: /launch/import-project-using-file-upload
+uid: blt8feb7de5f38a8fa9
 ---
 
 # Create a Project using File Upload

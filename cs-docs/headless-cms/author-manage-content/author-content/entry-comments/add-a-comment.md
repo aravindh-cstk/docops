@@ -2,6 +2,7 @@
 title: "Add a Comment"
 description: "Learn how to add comments in Contentstack entries, including JSON RTE, for team collaboration."
 url: /headless-cms/add-a-comment
+uid: blt14d4a21c118c1eef
 ---
 
 # Add a Comment

@@ -2,6 +2,7 @@
 title: "Choice Data Type"
 description: "The Choice Data Type property of the Select field lets you specify the format for the Add Choice property. Click here to learn more on Contentstack."
 url: /headless-cms/choice-data-type
+uid: blte5a9f797ef1f3ca4
 ---
 
 # Choice Data Type

@@ -2,6 +2,7 @@
 title: "XTM App Installation Guide"
 description: "XTM is a translation platform that helps to translate data into different languages. Learn how to install and integrate the XTM app with Contentstack."
 url: /marketplace/xtm
+uid: blt920ecaaf80bb2193
 ---
 
 # XTM App Installation Guide

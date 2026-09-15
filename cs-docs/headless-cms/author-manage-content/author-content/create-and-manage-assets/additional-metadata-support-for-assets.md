@@ -2,6 +2,7 @@
 title: "Additional Metadata Support for Assets"
 description: "Manage assets efficiently in Contentstack with additional metadata support. Add custom metadata via API for categorization and classification."
 url: /headless-cms/additional-metadata-support-for-assets
+uid: blt8dd65a5a652dbbfe
 ---
 
 # Additional Metadata Support for Assets

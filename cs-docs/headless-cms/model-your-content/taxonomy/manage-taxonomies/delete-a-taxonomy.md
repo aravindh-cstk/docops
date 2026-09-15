@@ -2,6 +2,7 @@
 title: "Delete a Taxonomy"
 description: "Effortlessly delete a Contentstack taxonomy with our step-by-step guide."
 url: /headless-cms/delete-a-taxonomy
+uid: bltbf640cb8a9825350
 ---
 
 # Delete a Taxonomy

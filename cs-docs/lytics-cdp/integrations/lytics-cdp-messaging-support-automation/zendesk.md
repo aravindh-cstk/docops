@@ -2,6 +2,7 @@
 title: "Zendesk"
 description: "Zendesk"
 url: /lytics/zendesk
+uid: blt04a7cc392be144ab
 ---
 
 # Zendesk

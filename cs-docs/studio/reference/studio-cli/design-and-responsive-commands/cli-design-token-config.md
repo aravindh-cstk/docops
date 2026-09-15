@@ -2,6 +2,7 @@
 title: "Update design-token config"
 description: "Update configuration values, such as the token access level, in the generated register-design-tokens file."
 url: /studio/cli-design-token-config
+uid: bltcab726334d923af0
 ---
 
 # Update design-token config

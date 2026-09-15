@@ -2,6 +2,7 @@
 title: "Vercel"
 description: "Use this connector to deploy your GitHub projects to Vercel domain."
 url: /agent-os/vercel
+uid: blte426315476b5b769
 ---
 
 # Vercel

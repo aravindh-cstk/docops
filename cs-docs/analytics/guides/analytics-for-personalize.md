@@ -2,6 +2,7 @@
 title: "Analytics for Personalize"
 description: "Track Personalize usage with Contentstack's Analytics dashboard. Monitor API requests, impressions, events, and more."
 url: /analytics/analytics-for-personalize
+uid: bltd6584ade2c367965
 ---
 
 # Analytics for Personalize

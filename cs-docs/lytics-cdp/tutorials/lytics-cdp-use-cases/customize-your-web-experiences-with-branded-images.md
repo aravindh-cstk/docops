@@ -2,6 +2,7 @@
 title: "Customize your Web Experiences with Branded Images"
 description: "Learn how to customize images in Lytics web Experiences and Pathfora widgets using custom CSS and inline HTML, including styling the default image feature and inline images for a polished, branded look."
 url: /lytics/customize-your-web-experiences-with-branded-images
+uid: bltbe9d0b53ea11e7a2
 ---
 
 # Customize your Web Experiences with Branded Images

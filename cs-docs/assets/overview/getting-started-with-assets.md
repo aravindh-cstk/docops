@@ -2,6 +2,7 @@
 title: "Getting Started with Assets"
 description: "Learn how to set up Contentstack Assets with spaces, asset models, metadata, AI search, and governance to manage and reuse digital assets efficiently."
 url: /assets/getting-started-with-assets
+uid: blt48fee3e016e1e718
 ---
 
 # Getting Started with Assets

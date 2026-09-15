@@ -2,6 +2,7 @@
 title: "JavaScript to DataSync SDK Migration"
 description: "About JavaScript to DataSync SDK migration"
 url: /headless-cms/javascript-to-datasync-sdk-migration
+uid: blt6b589359d4c5b79d
 ---
 
 # JavaScript to DataSync SDK Migration

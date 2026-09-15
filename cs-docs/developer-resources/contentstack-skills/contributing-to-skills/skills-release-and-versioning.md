@@ -2,6 +2,7 @@
 title: "Release and Versioning"
 description: "How the Contentstack Agent Skills bundle is versioned and released across its five formats."
 url: /developers/skills-release-and-versioning
+uid: blt93bca894172c1b8a
 ---
 
 # Release and Versioning

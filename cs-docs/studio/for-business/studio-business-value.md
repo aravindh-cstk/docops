@@ -2,6 +2,7 @@
 title: "Understanding Studio's Business Value"
 description: "Studio is the layer that makes your component library accessible to marketing. Engineers ship components once. Marketing then assembles, re-binds, and."
 url: /studio/studio-business-value
+uid: blt6d8199c966aeace3
 ---
 
 # Understanding Studio's Business Value

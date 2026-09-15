@@ -2,6 +2,7 @@
 title: "New Relic"
 description: "New Relic"
 url: /lytics/new-relic
+uid: blt96f572727a074773
 ---
 
 # New Relic

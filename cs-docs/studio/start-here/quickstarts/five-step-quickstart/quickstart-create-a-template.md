@@ -2,6 +2,7 @@
 title: "Quickstart 5: Create a Template and URL"
 description: "Create a Connected Template bound to blogpost, drop the Sections you built, set the URL pattern, deploy."
 url: /studio/quickstart-create-a-template
+uid: blt3832075aca74c5d3
 ---
 
 # Quickstart 5: Create a Template and URL

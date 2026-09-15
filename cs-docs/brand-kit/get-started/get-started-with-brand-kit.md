@@ -2,6 +2,7 @@
 title: "Get Started with Brand Kit"
 description: "Get up and run with Brand Kit and generate brand-specific content through its integration with the AI Assistant app."
 url: /brand-kit/get-started-with-brand-kit
+uid: blt075bab8b39a75e5e
 ---
 
 # Get Started with Brand Kit

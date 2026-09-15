@@ -2,6 +2,7 @@
 title: "Automate Recurring Processes"
 description: "Automate Recurring Processes"
 url: /headless-cms/automate-recurring-processes
+uid: bltb76254f0ed706aae
 ---
 
 # Automate Recurring Processes

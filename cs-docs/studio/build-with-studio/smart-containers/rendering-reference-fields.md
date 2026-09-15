@@ -2,6 +2,7 @@
 title: "Rendering Reference Fields"
 description: "Learn how to render Contentstack reference fields on the canvas using Repeaters and Condition Blocks, including single-CT and multi-CT patterns."
 url: /studio/rendering-reference-fields
+uid: blt845b4cb78b73487c
 ---
 
 # Rendering Reference Fields

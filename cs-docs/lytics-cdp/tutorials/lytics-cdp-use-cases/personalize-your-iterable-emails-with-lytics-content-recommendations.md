@@ -2,6 +2,7 @@
 title: "Personalize your Iterable emails With Lytics content recommendations"
 description: "Personalize your Iterable emails With Lytics content recommendations"
 url: /lytics/personalize-your-iterable-emails-with-lytics-content-recommendations
+uid: blt423cfa22f177eb76
 ---
 
 # Personalize your Iterable emails With Lytics content recommendations

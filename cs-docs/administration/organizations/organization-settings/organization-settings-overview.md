@@ -2,6 +2,7 @@
 title: "Organization Settings Overview"
 description: "Explore the Organization Settings in Contentstack to manage users, analytics, and stacks efficiently. Perfect for Owners and Admins."
 url: /administration/organization-settings-overview
+uid: blt81d924fbf7721430
 ---
 
 # Organization Settings Overview

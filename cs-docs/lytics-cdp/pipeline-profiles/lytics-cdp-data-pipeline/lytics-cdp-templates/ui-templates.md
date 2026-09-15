@@ -2,6 +2,7 @@
 title: "Creating Templates Using the UI"
 description: "Clicking the + Create New button will open a wizard that will guide you through creating a new Template. The first step involves selecting a Name…"
 url: /lytics/ui-templates
+uid: bltf331ce884cfe77ea
 ---
 
 # Creating Templates Using the UI

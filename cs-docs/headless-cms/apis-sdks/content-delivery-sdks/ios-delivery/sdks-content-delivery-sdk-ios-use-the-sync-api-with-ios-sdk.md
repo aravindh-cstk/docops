@@ -2,6 +2,7 @@
 title: "Use the Sync API With iOS SDK"
 description: "steps for using the Sync API With iOS SDK"
 url: /developers/sdks/content-delivery-sdk/ios/use-the-sync-api-with-ios-sdk
+uid: blt4cf6d9d54ced5ac7
 ---
 
 # Use the Sync API With iOS SDK

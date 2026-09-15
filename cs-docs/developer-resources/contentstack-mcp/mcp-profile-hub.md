@@ -2,6 +2,7 @@
 title: "MCP Profile Hub"
 description: "Create governed MCP profiles that expose a curated set of Contentstack tools, then connect them to Claude, ChatGPT, Cursor, and other AI clients."
 url: /developers/mcp-profile-hub
+uid: blt400ec21ccb40a9c4
 ---
 
 # MCP Profile Hub

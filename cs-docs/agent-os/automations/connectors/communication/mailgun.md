@@ -2,6 +2,7 @@
 title: "Mailgun"
 description: "Mailgun"
 url: /agent-os/mailgun
+uid: blt9dbca0550d2518ea
 ---
 
 # Mailgun

@@ -2,6 +2,7 @@
 title: "Activating Data Models"
 description: "Because the queries that power your Cloud Connect Data Models can have costs associated with your database usage, Lytics doesn’t run the scheduled sync…"
 url: /lytics/leveraging-cloud-connect-audiences
+uid: bltc62846158e8b2b8d
 ---
 
 # Activating Data Models

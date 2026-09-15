@@ -2,6 +2,7 @@
 title: "About Entries"
 description: "Learn about entries in Contentstack, their role in content management, and how to create and manage them effectively within content types."
 url: /headless-cms/about-entries
+uid: bltdfc71674b8ca9f09
 ---
 
 # About Entries

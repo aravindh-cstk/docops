@@ -2,6 +2,7 @@
 title: "About Languages"
 description: "Explore Contentstack's robust multilingual capabilities to easily create, publish, and localize content in over 200 languages, all without coding."
 url: /headless-cms/about-languages
+uid: blt1e37ece5f68b287b
 ---
 
 # About Languages

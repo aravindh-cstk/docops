@@ -2,6 +2,7 @@
 title: "Add a Language"
 description: "Easily manage multilingual content in Contentstack by adding supported or custom languages to your stack and enhancing localization."
 url: /headless-cms/add-a-language
+uid: bltcfd5111dd28d58f2
 ---
 
 # Add a Language

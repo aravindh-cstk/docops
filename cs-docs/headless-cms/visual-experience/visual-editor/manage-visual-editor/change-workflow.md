@@ -2,6 +2,7 @@
 title: "Change Workflow"
 description: "Learn to change workflow stages in Visual Editor for seamless task coordination, progress tracking, and page editing in Contentstack."
 url: /headless-cms/change-workflow
+uid: bltc2ac1815a0bd9e7d
 ---
 
 # Change Workflow

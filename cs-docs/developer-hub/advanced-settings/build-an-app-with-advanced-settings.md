@@ -2,6 +2,7 @@
 title: "Build an App with Advanced Settings"
 description: "Learn how to configure Advanced Settings in Contentstack to integrate external APIs securely using Contentstack Developer Hub."
 url: /developer-hub/build-an-app-with-advanced-settings
+uid: blt35763480740e45d2
 ---
 
 # Build an App with Advanced Settings

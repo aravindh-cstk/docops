@@ -2,6 +2,7 @@
 title: "Group"
 description: "Combine fields into reusable groups in Contentstack to streamline content modeling and real-world use cases."
 url: /headless-cms/group
+uid: blt638da471650adb46
 ---
 
 # Group

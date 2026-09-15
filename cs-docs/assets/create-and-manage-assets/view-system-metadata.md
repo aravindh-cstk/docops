@@ -2,6 +2,7 @@
 title: "View System Metadata"
 description: "Discover the essentials of system metadata in Contentstack. Learn how it tracks asset history, identity, and more for seamless governance and audit."
 url: /assets/view-system-metadata
+uid: blt60515560cba7e76b
 ---
 
 # View System Metadata

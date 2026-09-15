@@ -2,6 +2,7 @@
 title: "Create a Team"
 description: "Learn how to create a team in Contentstack for efficient user grouping and role assignments."
 url: /administration/create-a-team
+uid: blt27b6e088bfdbdc9e
 ---
 
 # Create a Team

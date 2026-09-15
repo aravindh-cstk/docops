@@ -2,6 +2,7 @@
 title: "React UI Implementation Guide"
 description: "Explore our comprehensive guide to the React app codebase, detailing structure, architecture, and key components for developers. Download now!"
 url: /headless-cms/react-ui-implementation-guide
+uid: blt2328545426e4d5bc
 ---
 
 # React UI Implementation Guide

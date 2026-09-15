@@ -2,6 +2,7 @@
 title: "Create a Node.js app using Contentstack DataSync"
 description: "Create a Node.js app using Contentstack DataSync"
 url: /headless-cms/create-a-node-js-app-using-contentstack-datasync
+uid: bltc5e397692f797227
 ---
 
 # Create a Node.js app using Contentstack DataSync

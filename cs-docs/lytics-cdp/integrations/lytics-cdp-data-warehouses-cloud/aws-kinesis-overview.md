@@ -2,6 +2,7 @@
 title: "Amazon Kinesis"
 description: "Amazon Kinesis Data Streams is a real-time data streaming service provided by Amazon."
 url: /lytics/aws-kinesis-overview
+uid: blt34bd2e433c39cf83
 ---
 
 # Amazon Kinesis

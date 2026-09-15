@@ -2,6 +2,7 @@
 title: "Edit a Content Type"
 description: "Learn how to edit a content type in Contentstack, including updating fields, properties, and schema safely."
 url: /headless-cms/edit-a-content-type
+uid: bltd669584d6e3e73e5
 ---
 
 # Edit a Content Type

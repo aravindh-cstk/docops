@@ -2,6 +2,7 @@
 title: "AWS SQS"
 description: "AWS SQS"
 url: /agent-os/aws-sqs
+uid: bltc07e281af6848fb4
 ---
 
 # AWS SQS

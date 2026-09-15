@@ -2,6 +2,7 @@
 title: "Glossary of Terms"
 description: "Glossary of Terms"
 url: /lytics/glossary-of-terms
+uid: blted4af5b4b416800a
 ---
 
 # Glossary of Terms

@@ -2,6 +2,7 @@
 title: "Export a Taxonomy"
 description: "Easily export a Taxonomy from Contentstack to JSON or CSV. Follow simple steps to download and save your taxonomy locally."
 url: /headless-cms/export-a-taxonomy
+uid: blt5eb203f1198da4e1
 ---
 
 # Export a Taxonomy

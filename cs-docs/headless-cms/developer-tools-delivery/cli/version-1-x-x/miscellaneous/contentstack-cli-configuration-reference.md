@@ -2,6 +2,7 @@
 title: "Contentstack CLI Configuration Reference"
 description: "Configure Contentstack CLI export, import, audit, and migration with clear precedence rules, env vars, and module overrides for automation in CI/CD pipelines."
 url: /headless-cms/contentstack-cli-configuration-reference
+uid: bltc7c58ab7c7d76974
 ---
 
 # Contentstack CLI Configuration Reference

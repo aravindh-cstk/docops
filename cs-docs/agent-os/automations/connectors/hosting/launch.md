@@ -2,6 +2,7 @@
 title: "Launch"
 description: "Learn how to use the Launch Connector in Automate to deploy builds and revalidate CDN cache for your Contentstack-powered website."
 url: /agent-os/launch
+uid: blt0e1c028c993eac4a
 ---
 
 # Launch

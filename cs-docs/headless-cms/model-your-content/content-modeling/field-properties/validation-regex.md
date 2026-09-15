@@ -2,6 +2,7 @@
 title: "Validation (Regex)"
 description: "Learn how to use regex validation in Contentstack to enforce field input formats and prevent invalid or unsafe values."
 url: /headless-cms/validation-regex
+uid: blt2504d144a43141b5
 ---
 
 # Validation (Regex)

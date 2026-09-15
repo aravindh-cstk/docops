@@ -2,6 +2,7 @@
 title: "iOS"
 description: "The Lytics SDK for iOS makes it easy for developers to identify, manage consent, and collect user activity data from their native mobile apps. This…"
 url: /lytics/sdk-for-ios
+uid: blt73668dc408c8c0aa
 ---
 
 # iOS

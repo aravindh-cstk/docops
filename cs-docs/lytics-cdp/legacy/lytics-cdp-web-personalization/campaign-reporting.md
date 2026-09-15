@@ -2,6 +2,7 @@
 title: "Campaign Reporting"
 description: "Learn how to use the Web Personalization campaign report to monitor a published campaign's conversions and reach, view widget appearance and event history, and manage the campaign."
 url: /lytics/campaign-reporting
+uid: blt64c60b993b498422
 ---
 
 # Campaign Reporting

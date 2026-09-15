@@ -2,6 +2,7 @@
 title: "Netlify"
 description: "Use this connector to deploy the frontend changes of your web applications."
 url: /agent-os/netlify
+uid: bltb7c3a4775edc88bb
 ---
 
 # Netlify

@@ -2,6 +2,7 @@
 title: "Contentstack Management - Taxonomy Actions"
 description: "Use the Contentstack Management Taxonomy actions to automate taxonomies based operations."
 url: /agent-os/contentstack-management-taxonomy-actions
+uid: blt09a749c652dc6e3c
 ---
 
 # Contentstack Management - Taxonomy Actions

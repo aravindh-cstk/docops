@@ -2,6 +2,7 @@
 title: "Widgets"
 description: "Discover how to enhance your content with Widgets in Contentstack's Visual Editor. Optimize your web pages with powerful apps and extensions."
 url: /headless-cms/widgets
+uid: bltfcb7e13ebca2309b
 ---
 
 # Widgets

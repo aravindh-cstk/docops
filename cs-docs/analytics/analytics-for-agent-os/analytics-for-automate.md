@@ -2,6 +2,7 @@
 title: "Analytics for Automations"
 description: "Track execution counts, API requests, and resource usage in Automations with our Analytics dashboard to optimize your automation processes effectively."
 url: /analytics/analytics-for-automate
+uid: blt7ed7edbdd5d47f3d
 ---
 
 # Analytics for Automations

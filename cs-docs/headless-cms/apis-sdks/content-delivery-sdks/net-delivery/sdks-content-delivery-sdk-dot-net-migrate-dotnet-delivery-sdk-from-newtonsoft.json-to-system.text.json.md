@@ -2,6 +2,7 @@
 title: "Migrate .NET Delivery SDK from Newtonsoft.Json to System.Text.Json"
 description: "Upgrade your Contentstack Delivery .NET SDK by migrating to System.Text.Json, with this comprehensive guide to handle breaking changes and simplify code."
 url: /developers/sdks/content-delivery-sdk/dot-net/migrate-dotnet-delivery-sdk-from-newtonsoft.json-to-system.text.json
+uid: blt21e8a2416badca1f
 ---
 
 # Migrate .NET Delivery SDK from Newtonsoft.Json to System.Text.Json

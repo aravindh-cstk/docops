@@ -2,6 +2,7 @@
 title: "Standard Studio Page Anatomy"
 description: "You ship a blog post route in React today. This walkthrough converts it into Studio's model: a Template at the top, holding an ordered list of Sections."
 url: /studio/standard-studio-page-anatomy
+uid: blt10bfacd4d822b267
 ---
 
 # Standard Studio Page Anatomy

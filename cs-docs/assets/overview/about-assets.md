@@ -2,6 +2,7 @@
 title: "About Assets"
 description: "Centralize, organize, and optimize digital assets with Contentstack Assets featuring AI-powered search, metadata, versioning, and enterprise governance."
 url: /assets/about-assets
+uid: blt702b01614d1afb0b
 ---
 
 # About Assets

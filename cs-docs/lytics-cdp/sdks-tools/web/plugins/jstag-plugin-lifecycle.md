@@ -2,6 +2,7 @@
 title: "lifecycle Plugin"
 description: "Hook into the plugin lifecycle to run code on setup and teardown"
 url: /lytics/jstag-plugin-lifecycle
+uid: blt3948a66384a60351
 ---
 
 # lifecycle Plugin

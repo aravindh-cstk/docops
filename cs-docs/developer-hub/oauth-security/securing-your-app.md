@@ -2,6 +2,7 @@
 title: "Securing your App"
 description: "Secure your Contentstack app with Signed Webhooks, JWT for UI Locations, IP whitelisting, and replay attack protection."
 url: /developer-hub/securing-your-app
+uid: blt2fcd9c90884f095f
 ---
 
 # Securing your App

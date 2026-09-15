@@ -2,6 +2,7 @@
 title: "Create a Project Using Bitbucket Cloud"
 description: "Learn how to import a project using Bitbucket Cloud in Contentstack Launch with this step-by-step guide."
 url: /launch/import-a-project-using-bitbucket-cloud
+uid: blt23504c593f732f0a
 ---
 
 # Create a Project Using Bitbucket Cloud

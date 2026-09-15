@@ -2,6 +2,7 @@
 title: "Frequently Asked Questions (FAQs)"
 description: "The FAQs Content Model is tailored to gather & organize essential information for your website's FAQ section, providing easy access to key details."
 url: /headless-cms/faqs-page
+uid: bltabfded0cfcc2fe9f
 ---
 
 # Frequently Asked Questions (FAQs)

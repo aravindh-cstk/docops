@@ -2,6 +2,7 @@
 title: "Assets"
 description: "Manage assets seamlessly in Contentstack’s JSON Rich Text Editor. Learn how to embed existing assets, upload new ones, and follow best practices for optimized workflows."
 url: /headless-cms/assets
+uid: bltebb4ead9ffe29003
 ---
 
 # Assets

@@ -2,6 +2,7 @@
 title: "Behavioral Scores"
 description: "Learn how Lytics uses behavioral scores to analyze user activity and predict engagement, enabling smarter audience targeting and personalized campaigns."
 url: /lytics/behavioral-scores
+uid: blt15ed68c788b35ccc
 ---
 
 # Behavioral Scores

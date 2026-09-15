@@ -2,6 +2,7 @@
 title: "Advanced Search"
 description: "Use Contentstack's Advanced Search to refine results with detailed conditions and operators for precise search results."
 url: /headless-cms/advanced-search
+uid: blt2345521cb865f796
 ---
 
 # Advanced Search

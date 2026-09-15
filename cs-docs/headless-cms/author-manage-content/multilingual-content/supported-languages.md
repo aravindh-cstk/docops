@@ -2,6 +2,7 @@
 title: "Supported Languages"
 description: "Contentstack offers over 200 supported languages that are either country-specific, area-specific, or generic. Learn more about these types of languages here."
 url: /headless-cms/supported-languages
+uid: blt1303baaf2ee04ee4
 ---
 
 # Supported Languages

@@ -2,6 +2,7 @@
 title: "Bulk Export Entries"
 description: "Bulk export entries in Contentstack. Export selected, page-level, or all entries in JSON or CSV format for analysis or backup."
 url: /headless-cms/bulk-export-entries
+uid: bltf5f2d941630f5977
 ---
 
 # Bulk Export Entries

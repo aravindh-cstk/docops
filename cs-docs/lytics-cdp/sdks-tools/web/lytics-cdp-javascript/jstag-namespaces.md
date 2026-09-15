@@ -2,6 +2,7 @@
 title: "Namespaces"
 description: "How JSTag plugins use namespaces for configuration and communication"
 url: /lytics/jstag-namespaces
+uid: blt267aa7270ba1cd85
 ---
 
 # Namespaces

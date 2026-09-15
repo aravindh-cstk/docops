@@ -2,6 +2,7 @@
 title: "Import an Audience from your Data Warehouse"
 description: "Import an Audience from your Data Warehouse"
 url: /lytics/import-an-audience-from-your-data-warehouse
+uid: bltb710762185a3cdf7
 ---
 
 # Import an Audience from your Data Warehouse

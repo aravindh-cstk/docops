@@ -2,6 +2,7 @@
 title: "Delete Draft Entry"
 description: "Learn how to delete unwanted draft changes in Contentstack, including how to identify draft entries and what happens after discarding a draft."
 url: /headless-cms/delete-draft-entry
+uid: blt3d576cae5f438b54
 ---
 
 # Delete Draft Entry

@@ -2,6 +2,7 @@
 title: "Quick Search"
 description: "Quick Search in Contentstack speeds up finding entries or assets with instant results and easy navigation, enhancing productivity across the app."
 url: /headless-cms/quick-search
+uid: blt3a3efa4a4cc22fb2
 ---
 
 # Quick Search

@@ -2,6 +2,7 @@
 title: "iContact"
 description: "iContact develops an award winning email marketing solution. Connecting your iContact account to Lytics gives you the ability to import your user and…"
 url: /lytics/icontact
+uid: bltc3d8c63895f51c18
 ---
 
 # iContact

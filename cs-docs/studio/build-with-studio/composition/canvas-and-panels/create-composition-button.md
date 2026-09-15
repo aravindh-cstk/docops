@@ -2,6 +2,7 @@
 title: "Create a composition"
 description: "The Create Composition button on the Studio compositions list. Where it lives, what it opens, and what happens after you pick Template or Section."
 url: /studio/create-composition-button
+uid: bltda72fa4160f7f12e
 ---
 
 # Create a composition

@@ -2,6 +2,7 @@
 title: "call Plugin"
 description: "Call a method on the JSTag instance by name"
 url: /lytics/jstag-plugin-call
+uid: blt43b492131d654691
 ---
 
 # call Plugin

@@ -2,6 +2,7 @@
 title: "Using Repeat Paths to Automate Repetitive Task"
 description: "Using Repeat Paths to Automate Repetitive Tasks"
 url: /agent-os/using-repeat-paths-to-automate-repetitive-tasks
+uid: blt06fbfbd53ca5b7e7
 ---
 
 # Using Repeat Paths to Automate Repetitive Task

@@ -2,6 +2,7 @@
 title: "Publish Entries and Assets in Bulk"
 description: "Bulk publish entries/assets using Contentstack search. Streamline workflows with efficient publishing options."
 url: /headless-cms/publish-entries-and-assets-in-bulk
+uid: blte9609443957657d4
 ---
 
 # Publish Entries and Assets in Bulk

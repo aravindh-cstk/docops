@@ -2,6 +2,7 @@
 title: "Mandrill"
 description: "Mandrill"
 url: /lytics/mandrill
+uid: blt68f38272e3315bdf
 ---
 
 # Mandrill

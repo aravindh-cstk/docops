@@ -2,6 +2,7 @@
 title: "Unpublish an Entry"
 description: "Learn how to unpublish entries in Contentstack to remove content from your web or mobile properties. Follow step-by-step instructions to unpublish entries effectively."
 url: /headless-cms/unpublish-an-entry
+uid: blt0e7291d25cce8020
 ---
 
 # Unpublish an Entry

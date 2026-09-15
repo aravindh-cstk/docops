@@ -2,6 +2,7 @@
 title: "Subresource Integrity (SRI)"
 description: "Subresource Integrity (SRI)"
 url: /lytics/subresource-integrity-sri
+uid: blt6485b0c3a7719b0f
 ---
 
 # Subresource Integrity (SRI)

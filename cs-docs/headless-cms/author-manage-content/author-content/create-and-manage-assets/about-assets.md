@@ -2,6 +2,7 @@
 title: "About Assets"
 description: "Learn how to upload, manage, and reuse files like images, videos, and PDFs using Contentstack Assets. Simplify your content workflows effortlessly."
 url: /headless-cms/about-assets
+uid: bltbb4f60be99682457
 ---
 
 # About Assets

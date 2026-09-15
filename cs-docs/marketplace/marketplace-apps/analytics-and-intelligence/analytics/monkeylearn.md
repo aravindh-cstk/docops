@@ -2,6 +2,7 @@
 title: "MonkeyLearn App Installation Guide"
 description: "MonkeyLearn is an AI-based text analytics platform that uses machine learning to analyze texts based on customer sentiments."
 url: /marketplace/monkeylearn
+uid: bltc33e0b0dd434d366
 ---
 
 # MonkeyLearn App Installation Guide

@@ -2,6 +2,7 @@
 title: "Freeform Overview"
 description: "By default, every template in Studio is a Connected Template, tied to a content type, with each entry of that type rendering through the template at its."
 url: /studio/freeform-overview
+uid: blt5616911fc2d02d43
 ---
 
 # Freeform Overview

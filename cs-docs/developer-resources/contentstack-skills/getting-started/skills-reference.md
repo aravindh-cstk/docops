@@ -2,6 +2,7 @@
 title: "Skills Reference"
 description: "Browse all 21 Contentstack Agent Skills by goal or product area, CMS, Delivery SDK, Launch, Brand Kit, and Developer Hub, to find the right skill fast."
 url: /developers/skills-reference
+uid: blt5a64d86a9fe7fad1
 ---
 
 # Skills Reference

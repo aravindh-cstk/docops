@@ -2,6 +2,7 @@
 title: "About Entry Comments"
 description: "Learn how to streamline collaboration by enabling users to add comments, tag teammates, and discuss directly within entry fields."
 url: /headless-cms/about-entry-comments
+uid: blt8e6d63df5bc72fb3
 ---
 
 # About Entry Comments

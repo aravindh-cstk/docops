@@ -2,6 +2,7 @@
 title: "Authenticate the Migration Framework via SSO"
 description: "Optimize your content migration process with Contentstack's Migration Tool. Learn to configure SSO securely with our comprehensive step-by-step guide."
 url: /headless-cms/authenticate-the-migration-framework-via-sso
+uid: blt877190efcb6e58aa
 ---
 
 # Authenticate the Migration Framework via SSO

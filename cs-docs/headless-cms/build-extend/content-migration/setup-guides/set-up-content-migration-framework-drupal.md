@@ -2,6 +2,7 @@
 title: "Set Up Content Migration Framework (Drupal)"
 description: "Effortlessly migrate from legacy CMS to Contentstack using the Contentstack Migration Tool. Supports Drupal 8-11 with a streamlined setup process."
 url: /headless-cms/set-up-content-migration-framework-drupal
+uid: blt9a5b83470e7b1629
 ---
 
 # Set Up Content Migration Framework (Drupal)

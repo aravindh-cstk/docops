@@ -2,6 +2,7 @@
 title: "Google BigQuery"
 description: "Google BigQuery is a fully managed, analytics data warehouse that is part of the Google Cloud Platform."
 url: /lytics/google-bigquery-overview
+uid: blt0da3836c07fafc80
 ---
 
 # Google BigQuery

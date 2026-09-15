@@ -2,6 +2,7 @@
 title: "Brandfolder App Installation Guide"
 description: "Learn to install the Brandfolder app from the Contentstack Marketplace and to fetch digital assets from the Brandfolder account into your entries."
 url: /marketplace/brandfolder
+uid: blt71862218b4c64b7c
 ---
 
 # Brandfolder App Installation Guide

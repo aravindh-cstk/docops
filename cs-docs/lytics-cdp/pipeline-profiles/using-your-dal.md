@@ -2,6 +2,7 @@
 title: "Using Data & Insights"
 description: "Once Data & Insights is fully configured, you'll gain the insights you need to power smarter, more effective marketing across channels via the Audience…"
 url: /lytics/using-your-dal
+uid: blt8aabde590984c4ef
 ---
 
 # Using Data & Insights

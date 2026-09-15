@@ -2,6 +2,7 @@
 title: "About Contentstack Launch"
 description: "Contentstack Launch is a front-end hosting and deployment platform for websites built using the Contentstack headless CMS."
 url: /launch/about-launch
+uid: blt9624ca64f1f0bbe7
 ---
 
 # About Contentstack Launch

@@ -2,6 +2,7 @@
 title: "Lookalike Models: Determine which subscribers are likely to churn"
 description: "Retaining customers is more important now than ever, and for businesses that have a subscription model, reaching out to users who are risk of churning is…"
 url: /lytics/lookalike-models-determine-which-subscribers-are-likely-to-churn
+uid: bltc43c873a95b9d5f3
 ---
 
 # Lookalike Models: Determine which subscribers are likely to churn

@@ -2,6 +2,7 @@
 title: "About Spaces and Workspaces"
 description: "Optimize asset management and experimentation with Spaces and Workspaces in Contentstack. Ensure organized, compliant, and flexible governance."
 url: /assets/about-spaces-and-workspaces
+uid: blt49a899ce4183717d
 ---
 
 # About Spaces and Workspaces

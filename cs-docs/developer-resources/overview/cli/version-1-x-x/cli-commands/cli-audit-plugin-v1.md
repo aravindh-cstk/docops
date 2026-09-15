@@ -2,6 +2,7 @@
 title: "Audit Plugin | V1.x.x"
 description: "The Audit plugin in Contentstack CLI lets you perform audit operations to identify and fix various issues in the exported stack data."
 url: /headless-cms/cli-audit-plugin/v1
+uid: blt5bf8ffa6d7788728
 ---
 
 # Audit Plugin | V1.x.x

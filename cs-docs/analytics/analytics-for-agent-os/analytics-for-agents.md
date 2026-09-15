@@ -2,6 +2,7 @@
 title: "Analytics for Agents"
 description: "Gain insights into agent executions, AI model adoption, token consumption, and activity trends with the Contentstack Agents Analytics dashboard."
 url: /analytics/analytics-for-agents
+uid: bltec58235a9fac5b2f
 ---
 
 # Analytics for Agents

@@ -2,6 +2,7 @@
 title: "Create a Custom Attribute"
 description: "Create custom attributes in Contentstack Personalize to better target and segment your audience. Enhance personalization and improve your marketing campaigns."
 url: /personalize/create-custom-attribute
+uid: blt61853f78a5c750c8
 ---
 
 # Create a Custom Attribute

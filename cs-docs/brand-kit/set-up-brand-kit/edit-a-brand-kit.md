@@ -2,6 +2,7 @@
 title: "Edit a Brand Kit"
 description: "Edit your Brand Kit by updating the name or description, adding stacks, or unlinking them within Contentstack."
 url: /brand-kit/edit-a-brand-kit
+uid: blte9cc105c6a220f55
 ---
 
 # Edit a Brand Kit

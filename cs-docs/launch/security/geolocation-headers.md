@@ -2,6 +2,7 @@
 title: "Geolocation Headers in Launch"
 description: "Learn about the geolocation headers in Contentstack Launch that help personalize content and power location-aware edge functions."
 url: /launch/geolocation-headers
+uid: bltec13871cf3ee0258
 ---
 
 # Geolocation Headers in Launch

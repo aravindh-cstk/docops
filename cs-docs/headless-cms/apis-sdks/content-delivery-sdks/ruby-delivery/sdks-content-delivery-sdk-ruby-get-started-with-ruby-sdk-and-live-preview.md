@@ -2,6 +2,7 @@
 title: "Get Started with Ruby SDK and Live Preview"
 description: "Get started with Contentstack using the Ruby SDK. Learn installation, stack initialization, middleware setup, and query requests for efficient content delivery."
 url: /developers/sdks/content-delivery-sdk/ruby/get-started-with-ruby-sdk-and-live-preview
+uid: blte9810a7d19ab0db8
 ---
 
 # Get Started with Ruby SDK and Live Preview

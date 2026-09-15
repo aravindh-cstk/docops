@@ -2,6 +2,7 @@
 title: "Backfilling Data"
 description: "Some use cases involve having historical data available for segmentation. This data might be demographic in nature, or describe how customers prefer to be…"
 url: /lytics/backfilling-data
+uid: bltad02e08a3f3143c3
 ---
 
 # Backfilling Data

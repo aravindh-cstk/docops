@@ -2,6 +2,7 @@
 title: "Segment.com"
 description: "Segment.com"
 url: /lytics/segmentcom
+uid: blte87e763e0d1d388f
 ---
 
 # Segment.com

@@ -2,6 +2,7 @@
 title: "What is Cloud Connect?"
 description: "An introduction to Lytics Cloud Connect, which runs SQL queries directly against a customer's data warehouse and turns the results into profile attributes and audiences without needing to replicate data."
 url: /lytics/cloud-connect-intro
+uid: blta833a37f44a00f87
 ---
 
 # What is Cloud Connect?

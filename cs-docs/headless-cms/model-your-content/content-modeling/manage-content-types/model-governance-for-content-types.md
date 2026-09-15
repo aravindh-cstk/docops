@@ -2,6 +2,7 @@
 title: "Model Governance for Content Types"
 description: "Define governance standards for your content models—naming, versioning, deprecation, and change management—so you can evolve your stack without breaking downstream systems."
 url: /headless-cms/model-governance-for-content-types
+uid: blt966bfa3d68a2a7b0
 ---
 
 # Model Governance for Content Types

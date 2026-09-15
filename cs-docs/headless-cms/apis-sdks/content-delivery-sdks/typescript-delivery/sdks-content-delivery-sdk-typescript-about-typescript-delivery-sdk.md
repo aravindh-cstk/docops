@@ -2,6 +2,7 @@
 title: "About TypeScript Delivery SDK"
 description: "Create TypeScript-based applications and use the TypeScript SDK to fetch and deliver content from Contentstack."
 url: /developers/sdks/content-delivery-sdk/typescript/about-typescript-delivery-sdk
+uid: bltc58c7b7a42970dce
 ---
 
 # About TypeScript Delivery SDK

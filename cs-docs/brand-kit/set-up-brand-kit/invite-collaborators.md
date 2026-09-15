@@ -2,6 +2,7 @@
 title: "Invite Collaborators"
 description: "Invite collaborators to your Brand Kit to manage permissions, ensuring a consistent brand voice across content."
 url: /brand-kit/invite-collaborators
+uid: blt0975a55f766243af
 ---
 
 # Invite Collaborators

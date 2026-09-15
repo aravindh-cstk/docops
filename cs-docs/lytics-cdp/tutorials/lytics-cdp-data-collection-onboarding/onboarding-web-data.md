@@ -2,6 +2,7 @@
 title: "Working with Web Data"
 description: "Lytics provides two ways to onboard data from your website, email marketing, and online advertising. The Lytics JavaScript tag, once installed on your…"
 url: /lytics/onboarding-web-data
+uid: blt7ebbaa42ca0126da
 ---
 
 # Working with Web Data

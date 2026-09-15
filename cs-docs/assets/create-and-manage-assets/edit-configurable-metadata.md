@@ -2,6 +2,7 @@
 title: "Edit Configurable Metadata"
 description: "Enhance asset management with customizable metadata and AI tools for improved searchability and workflow efficiency in Contentstack."
 url: /assets/edit-configurable-metadata
+uid: blt5e2b8c5e3ae04242
 ---
 
 # Edit Configurable Metadata

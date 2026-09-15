@@ -2,6 +2,7 @@
 title: "Bulk Unpublish Assets"
 description: "Learn how to unpublish assets in bulk in Contentstack."
 url: /headless-cms/bulk-unpublish-assets
+uid: blt9c1ece5ce7f6c782
 ---
 
 # Bulk Unpublish Assets

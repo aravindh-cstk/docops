@@ -2,6 +2,7 @@
 title: "Amazon Pinpoint"
 description: "Amazon Pinpoint is an AWS service that you can use to engage with your customers across multiple messaging channels. You can use Amazon Pinpoint to send…"
 url: /lytics/amazon-pinpoint-overview
+uid: blt19c6a3f4cc764047
 ---
 
 # Amazon Pinpoint

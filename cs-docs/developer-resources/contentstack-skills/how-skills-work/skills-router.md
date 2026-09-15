@@ -2,6 +2,7 @@
 title: "Router"
 description: "Learn how the Contentstack Agent Skills router matches your request to the right skill across CMS, Delivery SDK, Launch, and Brand Kit automatically."
 url: /developers/skills-router
+uid: bltf34d920453b5a788
 ---
 
 # Router

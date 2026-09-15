@@ -2,6 +2,7 @@
 title: "Configure Proxy Settings in CLI | V1.x.x"
 description: "Configure HTTP or HTTPS proxy settings in the Contentstack CLI using global config or environment variables to ensure reliable API access behind firewalls."
 url: /headless-cms/configure-proxy-settings-in-cli/v1
+uid: bltd66941065e0c9244
 ---
 
 # Configure Proxy Settings in CLI | V1.x.x

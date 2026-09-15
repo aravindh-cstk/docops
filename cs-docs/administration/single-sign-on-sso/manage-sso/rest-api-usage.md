@@ -2,6 +2,7 @@
 title: "REST API Usage"
 description: "Discover how SSO affects Contentstack's Content Management API for seamless integration with management tokens and user authtokens."
 url: /administration/rest-api-usage
+uid: blt6609ab4f983d128f
 ---
 
 # REST API Usage

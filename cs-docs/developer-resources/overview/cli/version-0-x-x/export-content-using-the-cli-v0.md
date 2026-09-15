@@ -2,6 +2,7 @@
 title: "Export Content using the CLI | V0.x.x"
 description: "Efficiently export content using Contentstack's CLI commands."
 url: /headless-cms/export-content-using-the-cli/v0
+uid: blt88f14f6af9eca1d9
 ---
 
 # Export Content using the CLI | V0.x.x

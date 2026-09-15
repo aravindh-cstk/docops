@@ -2,6 +2,7 @@
 title: "Export a Global Field"
 description: "Discover how to export Global fields in Contentstack effortlessly using the UI or API. Save JSON files for reuse and streamline content modeling."
 url: /headless-cms/export-a-global-field
+uid: blt2ebe8f0678f0474e
 ---
 
 # Export a Global Field

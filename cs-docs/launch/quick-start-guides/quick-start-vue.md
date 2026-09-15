@@ -2,6 +2,7 @@
 title: "Launch Quick Start Guide with Vue"
 description: "Learn how to deploy your first Vue Starter Launch project using GitHub."
 url: /launch/quick-start-vue
+uid: blt64bde43a288ae6a5
 ---
 
 # Launch Quick Start Guide with Vue

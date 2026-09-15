@@ -2,6 +2,7 @@
 title: "Add an Event to an A/B Test Experience"
 description: "Learn how to add events to an A/B Test Experience in Contentstack Personalize to measure variant performance."
 url: /personalize/add-event-to-ab-test-experience
+uid: bltb63b118ee714f622
 ---
 
 # Add an Event to an A/B Test Experience

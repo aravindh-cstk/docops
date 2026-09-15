@@ -2,6 +2,7 @@
 title: "Set Up Shopify Live Preview"
 description: "Instantly sync CMS changes with your Shopify storefront using Live Preview, no publishing or reloading required."
 url: /headless-cms/set-up-shopify-live-preview
+uid: blt74de159405a4e09f
 ---
 
 # Set Up Shopify Live Preview

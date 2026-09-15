@@ -2,6 +2,7 @@
 title: "Creating Lookalike Audiences"
 description: "Once your Lookalike Model is built and users are scored (ensure the Model Training Only option is unchecked, or press Activate in the top left of the…"
 url: /lytics/creating-predictive-audiences
+uid: bltde3810454f0d05f5
 ---
 
 # Creating Lookalike Audiences

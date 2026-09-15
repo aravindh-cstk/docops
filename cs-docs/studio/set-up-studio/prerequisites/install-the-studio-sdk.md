@@ -2,6 +2,7 @@
 title: "Install the Studio SDK"
 description: "Step-by-step guide to installing and configuring @contentstack/studio-react, including SDK initialization, component registration, composition fetching, and canvas mounting."
 url: /studio/install-the-studio-sdk
+uid: bltc3346bb7060b4852
 ---
 
 # Install the Studio SDK

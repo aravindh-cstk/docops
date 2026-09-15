@@ -2,6 +2,7 @@
 title: "Salesforce Marketing Cloud"
 description: "Salesforce Marketing Cloud is a digital marketing platform that allows you to create and manage marketing relationships and campaigns with customers."
 url: /lytics/salesforce-marketing-cloud-overview
+uid: blt511e0a3c3c7a5eaa
 ---
 
 # Salesforce Marketing Cloud

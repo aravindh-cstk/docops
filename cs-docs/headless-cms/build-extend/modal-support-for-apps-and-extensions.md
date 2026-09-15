@@ -2,6 +2,7 @@
 title: "Modal Support for Apps/Extensions"
 description: "The newly introduced functionality for “venus-components” allows you to open modal within apps and extensions for custom fields."
 url: /headless-cms/modal-support-for-apps-and-extensions
+uid: blt5f11328c4ea2bb7e
 ---
 
 # Modal Support for Apps/Extensions

@@ -2,6 +2,7 @@
 title: "Optimize Remarketing Spend"
 description: "Optimize Remarketing Spend"
 url: /lytics/optimize-remarketing-spend
+uid: blt8d4b6c280103a802
 ---
 
 # Optimize Remarketing Spend

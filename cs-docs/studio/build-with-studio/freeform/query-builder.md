@@ -2,6 +2,7 @@
 title: "Query Builder"
 description: "Learn how to use the Query Builder to create Pinned Queries with filters, operators, params, and dynamic expressions for freeform compositions."
 url: /studio/query-builder
+uid: blt3081f0dbad691b2c
 ---
 
 # Query Builder

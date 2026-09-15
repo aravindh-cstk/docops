@@ -2,6 +2,7 @@
 title: "Blog Listing Page"
 description: "The Blog Listing Page defines the structure, fields, and schema to design the blog listing page of your website."
 url: /headless-cms/blog-listing-page
+uid: blt534d066b68267399
 ---
 
 # Blog Listing Page

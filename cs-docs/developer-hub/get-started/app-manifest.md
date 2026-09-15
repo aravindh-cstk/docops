@@ -2,6 +2,7 @@
 title: "Marketplace App Manifest"
 description: "Discover the essential properties of an App Manifest file, including name, type, description, icon, target type, framework version, and version."
 url: /developer-hub/app-manifest
+uid: blt154bec0a078ac59f
 ---
 
 # Marketplace App Manifest

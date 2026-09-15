@@ -2,6 +2,7 @@
 title: "Analytics for AI Credits"
 description: "Monitor AI credit usage, track monthly allocation, analyze product-wise trends, and manage credit utilization with the AI Credits analytics dashboard."
 url: /analytics/analytics-for-ai-credits
+uid: blt3a397233ee523e16
 ---
 
 # Analytics for AI Credits

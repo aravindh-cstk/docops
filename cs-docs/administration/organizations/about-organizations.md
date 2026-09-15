@@ -2,6 +2,7 @@
 title: "About Organizations"
 description: "Manage your Contentstack organization efficiently with centralized control over users, stacks, permissions, and subscription insights."
 url: /administration/about-organizations
+uid: bltc000729b6ad7701d
 ---
 
 # About Organizations

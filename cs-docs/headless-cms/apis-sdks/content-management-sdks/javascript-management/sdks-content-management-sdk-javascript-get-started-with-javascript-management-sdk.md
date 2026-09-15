@@ -2,6 +2,7 @@
 title: "Get Started with JavaScript Management SDK"
 description: "Getting Started with JavaScript Management SDK"
 url: /developers/sdks/content-management-sdk/javascript/get-started-with-javascript-management-sdk
+uid: blt0c62b21232e81510
 ---
 
 # Get Started with JavaScript Management SDK

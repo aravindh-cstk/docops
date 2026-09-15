@@ -2,6 +2,7 @@
 title: "Schema Copilot"
 description: "Schema Copilot revolutionizes how users manage data connections, streamlining the integration process with our Customer Data Platform (CDP), Lytics."
 url: /lytics/schema-copilot
+uid: blt9579290078d6802a
 ---
 
 # Schema Copilot

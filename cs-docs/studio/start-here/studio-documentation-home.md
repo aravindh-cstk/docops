@@ -2,6 +2,7 @@
 title: "Studio Documentation Home"
 description: "Contentstack Studio is the visual composition layer on top of your React app + Contentstack."
 url: /studio/studio-documentation-home
+uid: bltbe2a3f6bfa210625
 ---
 
 # Studio Documentation Home

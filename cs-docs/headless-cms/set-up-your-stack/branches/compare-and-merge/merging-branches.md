@@ -2,6 +2,7 @@
 title: "Merging Branches"
 description: "Learn how to efficiently merge branches in Contentstack's developer documentation. Explore step-by-step instructions and best practices for seamless branch merging."
 url: /headless-cms/merging-branches
+uid: bltf8f7b8a18b2e750d
 ---
 
 # Merging Branches

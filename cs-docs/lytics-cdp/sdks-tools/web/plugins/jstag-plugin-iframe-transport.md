@@ -2,6 +2,7 @@
 title: "iframeTransport Plugin"
 description: "Send data using an iframe-based POST protocol"
 url: /lytics/jstag-plugin-iframe-transport
+uid: bltfd16b979aad0eb8f
 ---
 
 # iframeTransport Plugin

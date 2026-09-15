@@ -2,6 +2,7 @@
 title: "Reference"
 description: "Learn how to use the Reference field to link entries across content types and manage content relationships in Contentstack."
 url: /headless-cms/reference
+uid: blt1c9df07f3f7064b9
 ---
 
 # Reference

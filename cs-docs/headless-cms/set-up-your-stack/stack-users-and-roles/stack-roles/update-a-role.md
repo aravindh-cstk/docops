@@ -2,6 +2,7 @@
 title: "Update a Role"
 description: "steps to update a custom role"
 url: /headless-cms/update-a-role
+uid: blt6c0ee7c259a59a45
 ---
 
 # Update a Role

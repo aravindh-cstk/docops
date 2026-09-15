@@ -2,6 +2,7 @@
 title: "API Endpoints"
 description: "Explore Contentstack's comprehensive API endpoints documentation to streamline your development process. Learn how to leverage Contentstack Regions for seamless content management across your applications."
 url: /administration/api-endpoints
+uid: blt10ba40466ed2ed8f
 ---
 
 # API Endpoints

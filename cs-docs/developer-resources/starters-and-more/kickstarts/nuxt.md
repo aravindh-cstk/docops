@@ -2,6 +2,7 @@
 title: "Nuxt"
 description: "Kickstart your Nuxt project with Contentstack’s Nuxt Kickstart, featuring Nuxt 3, Vue 3, Live Preview, and Visual Builder for a fast, seamless setup."
 url: /headless-cms/nuxt
+uid: blt09884149dcb9af12
 ---
 
 # Nuxt

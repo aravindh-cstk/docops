@@ -2,6 +2,7 @@
 title: "Shopify"
 description: "Shopify is an ecommerce platform that enables you to sell in multiple places including online with your ecommerce store, online marketplaces, social…"
 url: /lytics/shopify
+uid: blt0e8ed0a5cb58133a
 ---
 
 # Shopify

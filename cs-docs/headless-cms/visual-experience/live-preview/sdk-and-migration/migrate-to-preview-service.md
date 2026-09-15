@@ -2,6 +2,7 @@
 title: "Migrate to Preview Service"
 description: "Migrate to the Preview Service for faster Live Preview, improved performance, and seamless content updates with reduced load times, also enabling Timeline and Visual Builder."
 url: /headless-cms/migrate-to-preview-service
+uid: bltd08ec6aa86984cb8
 ---
 
 # Migrate to Preview Service

@@ -2,6 +2,7 @@
 title: "Zuora"
 description: "Zuora provides cloud-based software on a subscription basis that helps companies launch, manage, and transform into a subscription business. Enrich your…"
 url: /lytics/zuora
+uid: blt2dd5429c77ccf5fa
 ---
 
 # Zuora

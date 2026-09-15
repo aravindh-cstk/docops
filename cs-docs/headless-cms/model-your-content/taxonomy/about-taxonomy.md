@@ -2,6 +2,7 @@
 title: "About Taxonomy"
 description: "Contentstack's Taxonomy feature enhances enterprise content organization, management, and user access by organizing web properties according to business needs."
 url: /headless-cms/about-taxonomy
+uid: blt707fdf51807074b5
 ---
 
 # About Taxonomy

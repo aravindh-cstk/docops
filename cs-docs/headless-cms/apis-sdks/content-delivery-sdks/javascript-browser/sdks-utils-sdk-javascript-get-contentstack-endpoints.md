@@ -2,6 +2,7 @@
 title: "Get Contentstack Endpoints"
 description: "Use getContentstackEndpoint to resolve region-based API endpoints with error handling and TypeScript support for multi-region apps."
 url: /developers/sdks/utils-sdk/javascript/get-contentstack-endpoints
+uid: bltffebdaa6dba3087b
 ---
 
 # Get Contentstack Endpoints

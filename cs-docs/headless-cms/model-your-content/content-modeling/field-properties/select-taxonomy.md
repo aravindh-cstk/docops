@@ -2,6 +2,7 @@
 title: "Select Taxonomy"
 description: "Effortlessly integrate existing taxonomies using the Select Taxonomy field property in Contentstack."
 url: /headless-cms/select-taxonomy
+uid: bltb75c9870990fc1f1
 ---
 
 # Select Taxonomy

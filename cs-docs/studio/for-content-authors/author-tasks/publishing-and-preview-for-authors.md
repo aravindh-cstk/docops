@@ -2,6 +2,7 @@
 title: "Publish and Preview Studio Pages"
 description: "Studio compositions have two states: draft (only you see them in the canvas) and deployed (visitors see them on the live site)."
 url: /studio/publishing-and-preview-for-authors
+uid: bltce9b079e196db337
 ---
 
 # Publish and Preview Studio Pages

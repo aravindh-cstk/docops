@@ -2,6 +2,7 @@
 title: "Customize JSON Rich Text Editor"
 description: "Learn how to customize the JSON Rich Text Editor in Contentstack by configuring toolbar options and applying advanced editor settings."
 url: /headless-cms/customize-json-rich-text-editor
+uid: blt06a83d8879db3bf0
 ---
 
 # Customize JSON Rich Text Editor

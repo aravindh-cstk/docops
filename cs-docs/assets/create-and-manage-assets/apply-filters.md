@@ -2,6 +2,7 @@
 title: "Apply Filters"
 description: "Refine asset searches effortlessly with customizable filters in Contentstack. Discover assets by type, size, color, date, tags, and more."
 url: /assets/apply-filters
+uid: blt82343c172902dc93
 ---
 
 # Apply Filters

@@ -2,6 +2,7 @@
 title: "Azure Blob Storage"
 description: "Use the Azure Blob Storage connector to create or upload a blob in your Microsoft Azure Blob Storage account."
 url: /agent-os/azure-blob-storage
+uid: blt8b352b4ba315060b
 ---
 
 # Azure Blob Storage

@@ -2,6 +2,7 @@
 title: "Quickstart with LLM Skills"
 description: "Instead of following the 5 developer Quickstarts manually, let a coding LLM (Claude Code, Codex CLI, Gemini CLI, Cursor, Windsurf, Continue, Cline) drive the setup."
 url: /studio/quickstart-with-llm-skills
+uid: bltf31aac403e2a07c1
 ---
 
 # Quickstart with LLM Skills

@@ -2,6 +2,7 @@
 title: "App Versioning"
 description: "Track changes and manage app versions with Contentstack's Version Logs in the Developer Hub."
 url: /developer-hub/app-versioning
+uid: blt48da4ff5c31838a6
 ---
 
 # App Versioning

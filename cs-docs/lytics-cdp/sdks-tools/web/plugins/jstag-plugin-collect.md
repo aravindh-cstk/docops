@@ -2,6 +2,7 @@
 title: "collect Plugin"
 description: "Send data into Lytics using the most appropriate transport"
 url: /lytics/jstag-plugin-collect
+uid: blt0ed4bdffdcfa5763
 ---
 
 # collect Plugin

@@ -2,6 +2,7 @@
 title: "How Languages Work in Contentstack"
 description: "Contentstack provides certain features that lets you to create and publish entries in any language."
 url: /headless-cms/how-languages-work-in-contentstack
+uid: blt0899fdd837a74e6a
 ---
 
 # How Languages Work in Contentstack

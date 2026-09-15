@@ -2,6 +2,7 @@
 title: "SDK API Reference"
 description: "Complete public API surface of @contentstack/studio-react, covering hooks, components, registration functions, design tokens, and exported types."
 url: /studio/sdk-api-reference
+uid: bltce78f5b33bf7d4c3
 ---
 
 # SDK API Reference

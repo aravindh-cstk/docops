@@ -2,6 +2,7 @@
 title: "Auto-populate Environment Variables from a Linked Stack"
 description: "Learn how to auto-populate environment variables from a linked stack in Contentstack Launch."
 url: /launch/auto-populate-environment-variables-from-a-linked-stack
+uid: blt834198d7a4c90c11
 ---
 
 # Auto-populate Environment Variables from a Linked Stack

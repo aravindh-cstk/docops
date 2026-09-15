@@ -2,6 +2,7 @@
 title: "Get Started with NodeJS Delivery SDK"
 description: "Steps for getting started with NodeJS SDK"
 url: /developers/sdks/content-delivery-sdk/nodejs/get-started-with-nodejs-delivery-sdk
+uid: blt39ac11fda5fbf2d8
 ---
 
 # Get Started with NodeJS Delivery SDK

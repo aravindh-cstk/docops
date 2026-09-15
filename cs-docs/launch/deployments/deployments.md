@@ -2,6 +2,7 @@
 title: "Deployments"
 description: "Manage deployments in Contentstack Launch—track statuses, view logs, and redeploy using Git or file upload methods with ease."
 url: /launch/deployments
+uid: blt7c5cfa9979a8202f
 ---
 
 # Deployments

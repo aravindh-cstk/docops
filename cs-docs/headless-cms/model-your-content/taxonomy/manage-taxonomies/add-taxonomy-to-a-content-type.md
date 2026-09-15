@@ -2,6 +2,7 @@
 title: "Add Taxonomy to a Content Type"
 description: "Learn the seamless process of adding and configuring taxonomies to categorize content within Contentstack's Content Types."
 url: /headless-cms/add-taxonomy-to-a-content-type
+uid: blt7b5563f23335563b
 ---
 
 # Add Taxonomy to a Content Type

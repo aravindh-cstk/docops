@@ -2,6 +2,7 @@
 title: "Building Websites with Contentstack and AI"
 description: "Build AI-first websites with Contentstack Headless CMS and Next.js. Use AI coding assistants like Cursor to master CDA, SDK integration, and deployment on Launch."
 url: /headless-cms/build-websites-with-contentstack-and-ai
+uid: blt47b5c6cbb5777ad0
 ---
 
 # Building Websites with Contentstack and AI

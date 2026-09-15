@@ -2,6 +2,7 @@
 title: "Job Alerts"
 description: "Monitor and alert on your import and export workflows"
 url: /lytics/job-alerts
+uid: blt95d2c6200d0d8e0d
 ---
 
 # Job Alerts

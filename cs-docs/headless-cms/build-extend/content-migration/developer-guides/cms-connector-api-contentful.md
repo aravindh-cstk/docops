@@ -2,6 +2,7 @@
 title: "CMS Connector API - Contentful"
 description: "Discover the seamless way to migrate data from Contentful to Contentstack CMS using the migration-contentful package. Optimize your migration process now."
 url: /headless-cms/cms-connector-api-contentful
+uid: blt8131db9a91db1aed
 ---
 
 # CMS Connector API - Contentful

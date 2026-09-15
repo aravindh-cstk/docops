@@ -2,6 +2,7 @@
 title: "Using sections and components in a template"
 description: "Learn how to compose templates in Contentstack Studio by dragging sections and components onto the canvas, binding data, and managing save and deploy actions."
 url: /studio/using-sections-and-components-in-a-template
+uid: bltd262b1a6341c83c6
 ---
 
 # Using sections and components in a template

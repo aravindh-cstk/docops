@@ -2,6 +2,7 @@
 title: "Deploy a Project from a Monorepo on Launch"
 description: "Learn how to configure, build, and deploy your project using the Monorepo architecture in Contentstack Launch."
 url: /launch/deploy-a-project-from-a-monorepo
+uid: blt1ae9457764f31518
 ---
 
 # Deploy a Project from a Monorepo on Launch

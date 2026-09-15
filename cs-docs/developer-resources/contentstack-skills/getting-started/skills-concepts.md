@@ -2,6 +2,7 @@
 title: "Concepts"
 description: "Understand the core concepts behind Contentstack Agent Skills, skills, slugs, the router, and manifests, to customize and extend your AI coding assistant."
 url: /developers/skills-concepts
+uid: blt447eb38daeb0ca4e
 ---
 
 # Concepts

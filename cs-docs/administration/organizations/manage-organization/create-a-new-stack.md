@@ -2,6 +2,7 @@
 title: "Create a New Stack"
 description: "Discover how to efficiently create and manage stacks in Contentstack. Learn step-by-step processes, key roles, and API integrations for seamless collaboration."
 url: /headless-cms/create-a-new-stack
+uid: blta1b64cf65d0f54b2
 ---
 
 # Create a New Stack

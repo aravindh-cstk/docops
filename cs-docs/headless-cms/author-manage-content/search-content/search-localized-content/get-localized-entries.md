@@ -2,6 +2,7 @@
 title: "Get Localized Entries"
 description: "Learn to filter and view localized entries in Contentstack using language settings to streamline multilingual content management and improve localization accuracy."
 url: /headless-cms/get-localized-entries
+uid: bltfb8c8064333e8d81
 ---
 
 # Get Localized Entries

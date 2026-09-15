@@ -2,6 +2,7 @@
 title: "Customer.io"
 description: "Customer.io is an automated messaging platform that supports strengthens the relationship between subscription businesses and their customers by sending…"
 url: /lytics/customerio
+uid: blt47d72bd6f30e89f6
 ---
 
 # Customer.io

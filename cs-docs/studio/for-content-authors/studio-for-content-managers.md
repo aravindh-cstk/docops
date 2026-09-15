@@ -2,6 +2,7 @@
 title: "Get Started with Studio for Content Managers"
 description: "Welcome. Studio is where you compose pages by dropping Sections onto Templates and swapping content per instance, with no code and no deploy per page."
 url: /studio/studio-for-content-managers
+uid: blt65c0cd09c6954dc2
 ---
 
 # Get Started with Studio for Content Managers

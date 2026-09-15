@@ -2,6 +2,7 @@
 title: "Use GraphQL Queries with Apollo Client JavaScript SDK"
 description: "Use the Apollo client and Contentstack GraphQL queries to power the content of your JavaScript SDK apps. Get the step-by-step guide here."
 url: /headless-cms/use-graphql-queries-with-apollo-client-javascript-sdk
+uid: blt1574d3ab342c29d7
 ---
 
 # Use GraphQL Queries with Apollo Client JavaScript SDK

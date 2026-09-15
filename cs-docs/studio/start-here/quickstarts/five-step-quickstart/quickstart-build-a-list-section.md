@@ -2,6 +2,7 @@
 title: "Quickstart 4: Build a List Section with Section Slots"
 description: "Iterate a Modular Block (or multi-Reference) field. Let each Template drop different content per block-type via a Section Slot."
 url: /studio/quickstart-build-a-list-section
+uid: blt0b495faa6fcefbee
 ---
 
 # Quickstart 4: Build a List Section with Section Slots

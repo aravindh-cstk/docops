@@ -2,6 +2,7 @@
 title: "CLI for Launch | V2.x.x"
 description: "Use Contentstack CLI for Launch: Step-by-step guide to deploy & manage your JAMstack sites. Learn to create projects, view logs & more!"
 url: /headless-cms/cli-for-launch
+uid: blt2d8bdf2eef3c2aa7
 ---
 
 # CLI for Launch | V2.x.x

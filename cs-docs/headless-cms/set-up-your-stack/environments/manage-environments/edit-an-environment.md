@@ -2,6 +2,7 @@
 title: "Edit an Environment"
 description: "Learn to update your Contentstack Environment to adjust deployment settings via UI or API for seamless publishing."
 url: /headless-cms/edit-an-environment
+uid: blte35aa192e80f03cd
 ---
 
 # Edit an Environment

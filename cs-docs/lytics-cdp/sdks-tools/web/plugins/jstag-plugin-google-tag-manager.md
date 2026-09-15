@@ -2,6 +2,7 @@
 title: "google.tagManager Plugin"
 description: "Integrate with the Google Tag Manager data layer for audience push and data pull"
 url: /lytics/jstag-plugin-google-tag-manager
+uid: blt00b9d1eed329b5d3
 ---
 
 # google.tagManager Plugin

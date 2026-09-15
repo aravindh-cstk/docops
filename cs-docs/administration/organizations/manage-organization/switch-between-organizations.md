@@ -2,6 +2,7 @@
 title: "Switch Between Organizations"
 description: "Switch organizations in Contentstack to access and manage stacks across multiple organizations, ensuring smooth workflow and navigation."
 url: /administration/switch-between-organizations
+uid: bltd5dfabada3d6c777
 ---
 
 # Switch Between Organizations

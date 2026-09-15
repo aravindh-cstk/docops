@@ -2,6 +2,7 @@
 title: "MCP Client: Connect Remote Tools"
 description: "Learn how to connect any remote MCP server to your Agent using the MCP Client tool, covering header-based authentication, OAuth setup, tool selection, troubleshooting, and real-world use cases."
 url: /agent-os/mcp-client-connect-remote-tools
+uid: blt1216aca20d4716bd
 ---
 
 # MCP Client: Connect Remote Tools

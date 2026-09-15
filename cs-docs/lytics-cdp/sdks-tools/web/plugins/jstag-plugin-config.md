@@ -2,6 +2,7 @@
 title: "config Plugin"
 description: "Configuration framework for interacting with the monolithic configuration"
 url: /lytics/jstag-plugin-config
+uid: blt911d09a57f1f8035
 ---
 
 # config Plugin

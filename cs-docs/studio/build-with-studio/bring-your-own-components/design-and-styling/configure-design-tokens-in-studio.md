@@ -2,6 +2,7 @@
 title: "Configure Design Tokens in Studio"
 description: "Learn how to register your design system's color, spacing, and typography tokens in Contentstack Studio to replace the default neutral values in the Design panel."
 url: /studio/configure-design-tokens-in-studio
+uid: bltb38d0a3b7be2184c
 ---
 
 # Configure Design Tokens in Studio

@@ -2,6 +2,7 @@
 title: "Customize Your Dashboard View"
 description: "steps to customize dashboard view of your stack."
 url: /headless-cms/customize-your-dashboard-view
+uid: bltb62db03dcc52ca41
 ---
 
 # Customize Your Dashboard View

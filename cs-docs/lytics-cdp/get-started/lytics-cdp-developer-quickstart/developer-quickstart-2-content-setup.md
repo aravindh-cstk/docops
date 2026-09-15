@@ -2,6 +2,7 @@
 title: "Content Setup"
 description: "Lytics' Context Layers effectively analyze your content with minimal effort required. However, to guarantee that the classification results align with…"
 url: /lytics/developer-quickstart-2-content-setup
+uid: blt239232f6357e3c1a
 ---
 
 # Content Setup

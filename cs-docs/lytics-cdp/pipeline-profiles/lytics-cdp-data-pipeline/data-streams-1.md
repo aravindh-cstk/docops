@@ -2,6 +2,7 @@
 title: "Data Streams"
 description: "A data stream is a continuous flow of data generated from various sources such as websites, mobile apps, email providers, social media, and other digital…"
 url: /lytics/data-streams-1
+uid: bltd4f287836b999c89
 ---
 
 # Data Streams

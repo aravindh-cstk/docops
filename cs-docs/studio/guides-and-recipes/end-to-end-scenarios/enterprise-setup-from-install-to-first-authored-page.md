@@ -2,6 +2,7 @@
 title: "Enterprise Setup From Install to First Authored Page"
 description: "End-to-end guide for enterprise teams to install the Studio, Live Preview, and Delivery SDKs, register components, and author the first page in about 30 minutes."
 url: /studio/enterprise-setup-from-install-to-first-authored-page
+uid: blt1f6fb384dedfe286
 ---
 
 # Enterprise Setup From Install to First Authored Page

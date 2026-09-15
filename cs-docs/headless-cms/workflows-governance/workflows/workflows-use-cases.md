@@ -2,6 +2,7 @@
 title: "Workflows Use Cases"
 description: "Workflows Use Cases"
 url: /headless-cms/workflows-use-cases
+uid: blte922704dc378a132
 ---
 
 # Workflows Use Cases

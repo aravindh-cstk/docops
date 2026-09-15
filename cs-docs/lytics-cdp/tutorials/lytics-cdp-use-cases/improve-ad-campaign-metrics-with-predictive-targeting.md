@@ -2,6 +2,7 @@
 title: "Improve Ad Campaign Metrics with Predictive Targeting"
 description: "Improve Ad Campaign Metrics with Predictive Targeting"
 url: /lytics/improve-ad-campaign-metrics-with-predictive-targeting
+uid: blt03b05bdbfa37fe45
 ---
 
 # Improve Ad Campaign Metrics with Predictive Targeting

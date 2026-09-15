@@ -2,6 +2,7 @@
 title: "Manage In-App Notifications in Contentstack"
 description: "Stay updated with Contentstack notifications. Manage, sort, and act on account activities easily for timely decision-making and responsiveness."
 url: /headless-cms/manage-notifications
+uid: bltec2799b3729ed0bc
 ---
 
 # Manage In-App Notifications in Contentstack

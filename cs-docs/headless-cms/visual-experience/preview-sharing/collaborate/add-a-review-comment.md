@@ -2,6 +2,7 @@
 title: "Add a Review Comment"
 description: "Learn how to add review comments to a shared preview in Contentstack."
 url: /headless-cms/add-a-review-comment
+uid: bltfbe4e0f3ac4d227e
 ---
 
 # Add a Review Comment

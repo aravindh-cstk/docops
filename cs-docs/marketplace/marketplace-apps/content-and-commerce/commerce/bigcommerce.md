@@ -2,6 +2,7 @@
 title: "BigCommerce App Installation Guide"
 description: "The Contentstack Marketplace BigCommerce app lets you search and retrieve the products and categories from the BigCommerce store into the Contentstack entries."
 url: /marketplace/bigcommerce
+uid: bltb5c005366f668097
 ---
 
 # BigCommerce App Installation Guide

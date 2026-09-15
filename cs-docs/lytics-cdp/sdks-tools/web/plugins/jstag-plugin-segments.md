@@ -2,6 +2,7 @@
 title: "segments Plugin"
 description: "Load and access the user's Lytics segment membership"
 url: /lytics/jstag-plugin-segments
+uid: blt9c03b7d6c54b8fc8
 ---
 
 # segments Plugin

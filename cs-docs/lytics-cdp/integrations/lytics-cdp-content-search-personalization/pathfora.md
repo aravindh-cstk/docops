@@ -2,6 +2,7 @@
 title: "Pathfora Web Personalization"
 description: "Deliver personalized on-site experiences using the Pathfora JavaScript SDK."
 url: /lytics/pathfora
+uid: bltaa6a2e3ac682ed57
 ---
 
 # Pathfora Web Personalization

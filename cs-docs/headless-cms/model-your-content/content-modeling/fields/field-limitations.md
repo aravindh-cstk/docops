@@ -2,6 +2,7 @@
 title: "Field Limitations"
 description: "Learn about Contentstack field limitations, including limits for content types, global fields, modular blocks, select fields, and visibility rules."
 url: /headless-cms/field-limitations
+uid: bltfffccabe31bc58e2
 ---
 
 # Field Limitations

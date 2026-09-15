@@ -2,6 +2,7 @@
 title: "Collect Mobile Data with Firebase + GTM"
 description: "A step-by-step tutorial for collecting real-time mobile app data in Lytics by pairing Firebase Analytics with Google Tag Manager, using the Lytics Image Pixel to forward user properties and events to a Lytics data stream."
 url: /lytics/collect-mobile-data-with-firebase-gtm
+uid: blt932e493d47fc3160
 ---
 
 # Collect Mobile Data with Firebase + GTM

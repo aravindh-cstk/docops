@@ -2,6 +2,7 @@
 title: "Microsoft"
 description: "Microsoft Advertising is a powerful ad management tool that is designed for advertisers of any experience level."
 url: /lytics/microsoft
+uid: blt428310b437977601
 ---
 
 # Microsoft

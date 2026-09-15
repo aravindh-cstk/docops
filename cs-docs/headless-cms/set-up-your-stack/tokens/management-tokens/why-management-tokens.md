@@ -2,6 +2,7 @@
 title: "Why Management Tokens"
 description: "Use Management Tokens to securely access Contentstack CMA for scripts, SSO users, and integrations—no personal Authtoken needed."
 url: /headless-cms/why-management-tokens
+uid: blt7ffa77f00b473f7f
 ---
 
 # Why Management Tokens

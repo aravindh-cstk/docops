@@ -2,6 +2,7 @@
 title: "Migrate from Release Preview App to Timeline"
 description: "Seamlessly migrate from Release Preview App to Timeline. Follow our detailed guide for upgrading packages and removing outdated setup logic for CSR and SSR."
 url: /headless-cms/migrate-from-release-preview-app-to-timeline
+uid: blt08d914684f72e1ec
 ---
 
 # Migrate from Release Preview App to Timeline

@@ -2,6 +2,7 @@
 title: "Installing Apps"
 description: "Installing Apps"
 url: /marketplace/installing-apps
+uid: bltd8f0cb9398e99edb
 ---
 
 # Installing Apps

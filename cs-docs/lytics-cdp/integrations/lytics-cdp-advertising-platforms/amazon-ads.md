@@ -2,6 +2,7 @@
 title: "Amazon Ads"
 description: "Amazon Ads is a demand-side platform that allows advertisers to programmatically buy display and video ads at scale. Connect Lytics with Amazon Ads to…"
 url: /lytics/amazon-ads
+uid: blte0d251400a244d49
 ---
 
 # Amazon Ads

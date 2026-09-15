@@ -2,6 +2,7 @@
 title: "Launch Quick Start Guide with Generic CSR"
 description: "Learn to deploy your first Generic CSR Starter (Stencil) Launch project using GitHub."
 url: /launch/quick-start-generic-csr
+uid: bltc9bea040d11acd36
 ---
 
 # Launch Quick Start Guide with Generic CSR

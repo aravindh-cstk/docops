@@ -2,6 +2,7 @@
 title: "About Platform Discovery"
 description: "Explore Platform Discovery to understand feature usage, uncover unused capabilities, and align Contentstack features with business goals."
 url: /administration/about-platform-discovery
+uid: bltbda5f33d33185e43
 ---
 
 # About Platform Discovery

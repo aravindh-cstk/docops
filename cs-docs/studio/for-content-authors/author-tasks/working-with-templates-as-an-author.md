@@ -2,6 +2,7 @@
 title: "Work with Templates as a Content Author"
 description: "A Template is a page recipe, bound to a content type and a URL pattern, composed from the Sections and components your engineering team registered."
 url: /studio/working-with-templates-as-an-author
+uid: blt60214ed10725d60f
 ---
 
 # Work with Templates as a Content Author

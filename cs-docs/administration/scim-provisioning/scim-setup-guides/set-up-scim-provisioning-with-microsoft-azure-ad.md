@@ -2,6 +2,7 @@
 title: "Set Up SCIM Provisioning with Microsoft Entra ID/Azure AD"
 description: "Set Up SCIM Provisioning with Microsoft Azure AD that allows you to use Microsoft Azure AD to provision or deprovision users automatically with Contentstack."
 url: /administration/set-up-scim-provisioning-with-microsoft-azure-ad
+uid: blte60a8a02798d40d3
 ---
 
 # Set Up SCIM Provisioning with Microsoft Entra ID/Azure AD

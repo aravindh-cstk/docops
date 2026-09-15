@@ -2,6 +2,7 @@
 title: "Embed Entries or Assets"
 description: "Streamline content management with Contentstack's JSON Rich Text Editor. Easily embed and update entries and assets for dynamic, SEO-friendly content."
 url: /headless-cms/embed-entries-or-assets
+uid: blt89945ae5feff1690
 ---
 
 # Embed Entries or Assets

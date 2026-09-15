@@ -2,6 +2,7 @@
 title: "Brownfield Migration Playbook"
 description: "You have a working site. Its list-shaped sections (product carousels, card grids, related-post shelves) render through production components with."
 url: /studio/brownfield-migration-playbook
+uid: blt1c980b939125d7ac
 ---
 
 # Brownfield Migration Playbook

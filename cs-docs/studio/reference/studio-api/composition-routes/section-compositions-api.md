@@ -2,6 +2,7 @@
 title: "Section Compositions in the API"
 description: "A section composition is a reusable block bound to a content type through linkedschemas."
 url: /studio/section-compositions-api
+uid: bltccf943f62855bf44
 ---
 
 # Section Compositions in the API

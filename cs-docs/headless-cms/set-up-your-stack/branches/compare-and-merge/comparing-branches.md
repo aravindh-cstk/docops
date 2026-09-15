@@ -2,6 +2,7 @@
 title: "Comparing Branches"
 description: "Learn how to effectively compare branches, identify differences, and make informed decisions for your project's version control."
 url: /headless-cms/comparing-branches
+uid: blt12cbee33f4188914
 ---
 
 # Comparing Branches

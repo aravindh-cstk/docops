@@ -2,6 +2,7 @@
 title: "Studio Video Walkthroughs"
 description: "Six recorded walkthroughs, about 34 minutes in total. Each one runs against a real stack and mirrors a written guide, so you can watch, read, or do both."
 url: /studio/studio-video-walkthroughs
+uid: bltb25265ba141c0f30
 ---
 
 # Studio Video Walkthroughs

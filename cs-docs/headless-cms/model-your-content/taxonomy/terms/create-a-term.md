@@ -2,6 +2,7 @@
 title: "Create a Term"
 description: "Learn creating taxonomy terms in Contentstack with our comprehensive guide."
 url: /headless-cms/create-a-term
+uid: bltdd38607bfe9ff215
 ---
 
 # Create a Term

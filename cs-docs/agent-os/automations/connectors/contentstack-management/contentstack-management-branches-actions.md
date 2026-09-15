@@ -2,6 +2,7 @@
 title: "Contentstack Management - Branches Actions"
 description: "Use the Contentstack Management Branches actions to automate branch based operations."
 url: /agent-os/contentstack-management-branches-actions
+uid: bltf9b14a962e48773e
 ---
 
 # Contentstack Management - Branches Actions

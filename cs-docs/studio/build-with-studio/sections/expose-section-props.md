@@ -2,6 +2,7 @@
 title: "Expose Section Props"
 description: "Learn how to expose individual component props from a section so template authors can override specific values like text, labels, and colors per page instance."
 url: /studio/expose-section-props
+uid: blt8f364299efc369d2
 ---
 
 # Expose Section Props

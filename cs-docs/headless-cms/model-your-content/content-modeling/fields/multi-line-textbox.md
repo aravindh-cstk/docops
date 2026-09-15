@@ -2,6 +2,7 @@
 title: "Multi Line Textbox"
 description: "When you add a Multi Line Textbox field, it displays a text area on the entry page to enter multi-line arbitrary text as content. Learn how with Contentstack."
 url: /headless-cms/multi-line-textbox
+uid: blt7bd2191e784ca872
 ---
 
 # Multi Line Textbox

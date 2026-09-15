@@ -2,6 +2,7 @@
 title: "Get Started with Java Delivery SDK and Live Preview"
 description: "Get started with Contentstack’s Java Delivery SDK for browsers and Live Preview to enable real-time content updates easily."
 url: /developers/sdks/content-delivery-sdk/java/get-started-with-java-sdk-and-live-preview
+uid: bltbb8be5e589cd0e41
 ---
 
 # Get Started with Java Delivery SDK and Live Preview

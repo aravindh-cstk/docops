@@ -2,6 +2,7 @@
 title: "Implement OAuth 2.0 with Python Management SDK"
 description: "Build secure Python apps with Contentstack CMA using OAuth 2.0. Simplify authentication with token refresh, session/env storage, and scoped access."
 url: /developers/sdks/content-management-sdk/python/implement-oauth-2-0-with-python-management-sdk
+uid: blt0358f3c156bb20f0
 ---
 
 # Implement OAuth 2.0 with Python Management SDK

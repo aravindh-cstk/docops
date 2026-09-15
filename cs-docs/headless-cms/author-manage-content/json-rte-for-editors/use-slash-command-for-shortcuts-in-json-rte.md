@@ -2,6 +2,7 @@
 title: "Use Slash Command for Shortcuts in JSON RTE"
 description: "Use slash command shortcuts in JSON RTE to quickly format text, add lists, and apply styling—boost your content editing speed and flexibility."
 url: /headless-cms/use-slash-command-for-shortcuts-in-json-rte
+uid: bltbd198f4fb73ca3a2
 ---
 
 # Use Slash Command for Shortcuts in JSON RTE

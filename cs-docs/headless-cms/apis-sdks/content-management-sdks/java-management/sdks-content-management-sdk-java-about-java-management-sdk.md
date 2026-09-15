@@ -2,6 +2,7 @@
 title: "About Java Management SDK"
 description: "This documentation on Java Management SDK provides insights into leveraging the SDK to manage and manipulate content within your Java applications efficiently."
 url: /developers/sdks/content-management-sdk/java/about-java-management-sdk
+uid: blt8ee64b5ba5ea6d67
 ---
 
 # About Java Management SDK

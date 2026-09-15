@@ -2,6 +2,7 @@
 title: "Snowflake"
 description: "Snowflake is a cloud-based data platform that allows for easy and reliable access to your data. Integrating Lytics with Snowflake allows you to seamlessly…"
 url: /lytics/snowflake
+uid: blt579102c4c13b3e1b
 ---
 
 # Snowflake

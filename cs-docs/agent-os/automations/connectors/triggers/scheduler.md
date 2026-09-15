@@ -2,6 +2,7 @@
 title: "Scheduler"
 description: "Learn how to set up timed automations with Scheduler. Simplify your tasks effortlessly."
 url: /agent-os/scheduler
+uid: blt80c9fd3dceccf51b
 ---
 
 # Scheduler

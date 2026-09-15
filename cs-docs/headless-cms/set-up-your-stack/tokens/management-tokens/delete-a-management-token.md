@@ -2,6 +2,7 @@
 title: "Delete a Management Token"
 description: "Learn how to delete a management token in Contentstack and revoke its access permanently."
 url: /headless-cms/delete-a-management-token
+uid: bltb2c71ad360ce36a9
 ---
 
 # Delete a Management Token

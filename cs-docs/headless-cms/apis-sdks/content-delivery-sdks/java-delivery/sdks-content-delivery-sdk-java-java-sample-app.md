@@ -2,6 +2,7 @@
 title: "Java Sample App"
 description: "Sample Apps made for Java with Contentstack"
 url: /developers/sdks/content-delivery-sdk/java/java-sample-app
+uid: blt136ff07381e6be3c
 ---
 
 # Java Sample App

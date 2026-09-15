@@ -2,6 +2,7 @@
 title: "Global Fields as Blocks within Modular Blocks"
 description: "Global Fields as Blocks within Modular Blocks"
 url: /headless-cms/global-fields-as-blocks-within-modular-blocks
+uid: blt1f9480630679576a
 ---
 
 # Global Fields as Blocks within Modular Blocks

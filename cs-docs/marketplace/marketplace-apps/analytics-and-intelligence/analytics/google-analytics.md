@@ -2,6 +2,7 @@
 title: "Google Analytics App Installation Guide"
 description: "The Contentstack Marketplace Google Analytics app displays insights about the analytical information such as page views of your Contentstack website URLs."
 url: /marketplace/google-analytics
+uid: blt3790d98186a5f455
 ---
 
 # Google Analytics App Installation Guide

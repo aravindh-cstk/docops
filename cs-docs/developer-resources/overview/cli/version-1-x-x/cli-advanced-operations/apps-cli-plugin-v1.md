@@ -2,6 +2,7 @@
 title: "Apps CLI Plugin | V1.x.x"
 description: "The Contentstack Apps Command-line Interface plugin lets you perform CRUD operations on your Developer Hub apps for your stack."
 url: /headless-cms/apps-cli-plugin/v1
+uid: bltcfd09427012100cd
 ---
 
 # Apps CLI Plugin | V1.x.x

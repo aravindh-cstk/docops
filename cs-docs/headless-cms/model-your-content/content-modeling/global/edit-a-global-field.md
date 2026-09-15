@@ -2,6 +2,7 @@
 title: "Edit a Global Field"
 description: "Learn how to edit a Global field in Contentstack without data loss. Follow best practices to update schema and avoid impacting existing entries."
 url: /headless-cms/edit-a-global-field
+uid: blt61f2dc084dec501c
 ---
 
 # Edit a Global Field

@@ -2,6 +2,7 @@
 title: "YouTube App Installation Guide"
 description: "The Contentstack Marketplace YouTube app fetches videos from your YouTube account into Contentstack entries."
 url: /marketplace/youtube
+uid: blt17320cb4de589b96
 ---
 
 # YouTube App Installation Guide

@@ -2,6 +2,7 @@
 title: "Angular on Launch"
 description: "Explore Angular framework support and features available in Contentstack Launch for building dynamic front-end apps."
 url: /launch/angular-on-launch
+uid: bltbedba9890dcfae86
 ---
 
 # Angular on Launch

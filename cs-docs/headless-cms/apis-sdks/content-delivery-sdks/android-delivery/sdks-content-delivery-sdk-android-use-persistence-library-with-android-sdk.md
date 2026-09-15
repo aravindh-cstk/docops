@@ -2,6 +2,7 @@
 title: "Use Persistence Library With Android SDK"
 description: "Methods for using Persistence Library With Android SDK"
 url: /developers/sdks/content-delivery-sdk/android/use-persistence-library-with-android-sdk
+uid: blt544135192f84f606
 ---
 
 # Use Persistence Library With Android SDK

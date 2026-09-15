@@ -2,6 +2,7 @@
 title: "Real-Time Collaboration in the Entry Editor"
 description: "Learn how Real-Time Collaboration in Contentstack enables multi-user editing with field-level locking, live presence indicators, and conflict prevention."
 url: /headless-cms/real-time-collaboration-in-the-entry-editor
+uid: bltfefef86fb8b434ab
 ---
 
 # Real-Time Collaboration in the Entry Editor

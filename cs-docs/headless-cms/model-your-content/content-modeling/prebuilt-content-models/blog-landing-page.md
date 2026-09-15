@@ -2,6 +2,7 @@
 title: "Blog Landing Page"
 description: "The Blog Landing Page defines the structure, fields, and schema to design the landing page for each blog."
 url: /headless-cms/blog-landing-page
+uid: blt105a144fbc12618b
 ---
 
 # Blog Landing Page

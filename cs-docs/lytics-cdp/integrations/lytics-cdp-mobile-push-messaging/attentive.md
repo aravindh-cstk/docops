@@ -2,6 +2,7 @@
 title: "Attentive"
 description: "Learn how to connect Lytics and Attentive to export Lytics audiences in real time, flagging members with a custom attribute so you can trigger Attentive SMS and email journeys off Lytics audience membership and behavioral data."
 url: /lytics/attentive
+uid: bltfeec8aa9c9d4d66b
 ---
 
 # Attentive

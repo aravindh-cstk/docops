@@ -2,6 +2,7 @@
 title: "Launch Trigger"
 description: "Launch Trigger"
 url: /agent-os/launch-trigger
+uid: bltf664eac8d9207951
 ---
 
 # Launch Trigger

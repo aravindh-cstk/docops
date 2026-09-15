@@ -2,6 +2,7 @@
 title: "Asset Limitations"
 description: "Learn Contentstack asset limitations, including filename restrictions, file size limits, image dimensions, and animated GIF frame caps."
 url: /headless-cms/asset-limitations
+uid: bltd9e6ede9947b91c7
 ---
 
 # Asset Limitations

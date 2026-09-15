@@ -2,6 +2,7 @@
 title: "JSON schema for creating a content type"
 description: "Find JSON Schema of fields explained, with examples for creating a content type via the Contentstack RESTful APIs. Understand different schema parameters here."
 url: /headless-cms/json-schema-for-creating-a-content-type
+uid: blt61ff03132e0af4f8
 ---
 
 # JSON schema for creating a content type

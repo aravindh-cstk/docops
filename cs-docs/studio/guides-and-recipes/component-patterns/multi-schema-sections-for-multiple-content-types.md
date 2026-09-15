@@ -2,6 +2,7 @@
 title: "Multi-Schema Sections for Multiple Content Types"
 description: "Learn how to build a single section that auto-binds to multiple content types using a shared Global Field and Studio's structural matching."
 url: /studio/multi-schema-sections-for-multiple-content-types
+uid: blt77014a389407ec03
 ---
 
 # Multi-Schema Sections for Multiple Content Types

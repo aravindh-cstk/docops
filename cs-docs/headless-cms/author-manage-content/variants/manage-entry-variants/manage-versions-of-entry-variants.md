@@ -2,6 +2,7 @@
 title: "Manage Versions of Entry Variants"
 description: "Track changes, compare versions, and restore previous versions of entry variants in Contentstack. Learn how to manage versions effectively."
 url: /headless-cms/manage-versions-of-entry-variants
+uid: blt67a7537787a7cae8
 ---
 
 # Manage Versions of Entry Variants

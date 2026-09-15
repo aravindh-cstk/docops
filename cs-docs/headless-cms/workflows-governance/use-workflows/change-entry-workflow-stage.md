@@ -2,6 +2,7 @@
 title: "Change Entry Workflow Stage"
 description: "Change Entry Workflow Stage"
 url: /headless-cms/change-entry-workflow-stage
+uid: bltb5c9f0aee6d9dd03
 ---
 
 # Change Entry Workflow Stage

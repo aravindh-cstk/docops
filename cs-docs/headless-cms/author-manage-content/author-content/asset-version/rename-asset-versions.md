@@ -2,6 +2,7 @@
 title: "Rename Asset Versions"
 description: "Learn how to rename asset versions in Contentstack with step-by-step instructions. Organize and manage your content effectively with ease."
 url: /headless-cms/rename-asset-versions
+uid: blt3dc3350fbaa1d977
 ---
 
 # Rename Asset Versions

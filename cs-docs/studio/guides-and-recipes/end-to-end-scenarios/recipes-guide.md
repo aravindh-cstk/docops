@@ -2,6 +2,7 @@
 title: "Recipes Chapter Guide"
 description: "End-to-end walkthroughs: install, register, author, deploy."
 url: /studio/recipes-guide
+uid: blt12eb13f9e8f2d57f
 ---
 
 # Recipes Chapter Guide

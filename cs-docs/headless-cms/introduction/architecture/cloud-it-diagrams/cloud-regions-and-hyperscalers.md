@@ -2,6 +2,7 @@
 title: "Cloud Regions and Hyperscalers"
 description: "Learn how Contentstack uses cloud regions and hyperscalers, how regional data boundaries work, and which services operate globally for performance."
 url: /headless-cms/cloud-regions-and-hyperscalers
+uid: blta1ffe3585e783ca2
 ---
 
 # Cloud Regions and Hyperscalers

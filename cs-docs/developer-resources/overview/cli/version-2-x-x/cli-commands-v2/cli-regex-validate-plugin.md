@@ -2,6 +2,7 @@
 title: "Regex Validate Plugin | V2.x.x"
 description: "Use the Contentstack CLI Regex Validate Plugin | V2 Beta to proactively audit a stack before deploying new content type schemas."
 url: /headless-cms/cli-regex-validate-plugin
+uid: blt50c45d9983b508a7
 ---
 
 # Regex Validate Plugin | V2.x.x

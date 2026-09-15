@@ -2,6 +2,7 @@
 title: "Static Website"
 description: "Learn how to set up a static website using our detailed static website architecture"
 url: /headless-cms/static-website-detailed-architecture
+uid: blt2daa03af9fd54995
 ---
 
 # Static Website

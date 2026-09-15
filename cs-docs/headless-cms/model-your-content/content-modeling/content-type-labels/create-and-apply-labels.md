@@ -2,6 +2,7 @@
 title: "Create and Apply Labels"
 description: "Learn how to create and apply branch-specific labels in Contentstack. Organize content types using nested labels for streamlined management."
 url: /headless-cms/create-and-apply-labels
+uid: blt9cb0d7cadf14c14a
 ---
 
 # Create and Apply Labels

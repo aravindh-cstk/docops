@@ -2,6 +2,7 @@
 title: "Get started with Contentstack DataSync"
 description: "steps to get started with DataSync"
 url: /headless-cms/get-started-with-contentstack-datasync
+uid: blt52a7eb2688aee58e
 ---
 
 # Get started with Contentstack DataSync

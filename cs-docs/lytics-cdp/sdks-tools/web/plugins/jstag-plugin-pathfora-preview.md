@@ -2,6 +2,7 @@
 title: "pathfora.preview Plugin"
 description: "Preview Pathfora widgets before publishing"
 url: /lytics/jstag-plugin-pathfora-preview
+uid: bltd789268dead5a04c
 ---
 
 # pathfora.preview Plugin

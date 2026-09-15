@@ -2,6 +2,7 @@
 title: "Lytics Zero Copy with Cloud Connect"
 description: "As the landscape of data strategies within the Customer Data Platform (CDP) area progresses, cloud warehouses have emerged as a core element of the…"
 url: /lytics/lytics-zero-copy-with-cloud-connect
+uid: blt5bac619feb7b0edf
 ---
 
 # Lytics Zero Copy with Cloud Connect

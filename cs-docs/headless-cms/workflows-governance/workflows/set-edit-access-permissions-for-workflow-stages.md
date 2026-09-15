@@ -2,6 +2,7 @@
 title: "Set Edit Access Permissions for Workflow Stages"
 description: "Ensure that only authorized users can modify content. With Contentstack, you can define which users can edit an entry on any particular stage of the workflow."
 url: /headless-cms/set-edit-access-permissions-for-workflow-stages
+uid: blt5753dcf866c9cac3
 ---
 
 # Set Edit Access Permissions for Workflow Stages

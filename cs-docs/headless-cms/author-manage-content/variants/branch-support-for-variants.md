@@ -2,6 +2,7 @@
 title: "Branch Support for Variants"
 description: "Learn how branch support for Variants works in Contentstack: manage variant groups per branch, isolate entry variants, and merge variant group configuration across branches."
 url: /headless-cms/branch-support-for-variants
+uid: blt32adb06b3a809c11
 ---
 
 # Branch Support for Variants

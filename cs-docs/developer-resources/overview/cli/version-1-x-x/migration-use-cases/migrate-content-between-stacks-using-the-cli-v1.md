@@ -2,6 +2,7 @@
 title: "Migrate Content Between Stacks Using the CLI | V1.x.x"
 description: "Learn how to manually migrate content between Contentstack stacks with step-by-step instructions."
 url: /headless-cms/migrate-content-between-stacks-using-the-cli/v1
+uid: blt8e8d75af4f2678b0
 ---
 
 # Migrate Content Between Stacks Using the CLI | V1.x.x

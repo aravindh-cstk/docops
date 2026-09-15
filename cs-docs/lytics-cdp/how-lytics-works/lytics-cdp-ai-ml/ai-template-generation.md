@@ -2,6 +2,7 @@
 title: "AI Template Generation"
 description: "Generate data transformation templates from example input and output schemas using AI."
 url: /lytics/ai-template-generation
+uid: blt6d1722e871acb35e
 ---
 
 # AI Template Generation

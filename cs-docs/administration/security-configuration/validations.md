@@ -2,6 +2,7 @@
 title: "Validations"
 description: "Content errors can be minimized considerably by setting validations. Let’s go through the types of content validations available in Contentstack!"
 url: /administration/validations
+uid: bltaaa189808573a509
 ---
 
 # Validations

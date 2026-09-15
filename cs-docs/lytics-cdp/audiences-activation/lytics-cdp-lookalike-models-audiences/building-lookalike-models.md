@@ -2,6 +2,7 @@
 title: "Building Lookalike Models"
 description: "The Lookalike Model Builder provides an interface to quickly build custom machine-learning models and predictive Lookalike Audiences based on your data…"
 url: /lytics/building-lookalike-models
+uid: blte310e74c49ae551d
 ---
 
 # Building Lookalike Models

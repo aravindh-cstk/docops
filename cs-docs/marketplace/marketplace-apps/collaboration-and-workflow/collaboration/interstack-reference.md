@@ -2,6 +2,7 @@
 title: "Interstack Reference App Installation Guide"
 description: "Refer and use custom content type fields to reference entries from multiple stacks within your Contentstack stacks."
 url: /marketplace/interstack-reference
+uid: bltd46fd467086adfe1
 ---
 
 # Interstack Reference App Installation Guide

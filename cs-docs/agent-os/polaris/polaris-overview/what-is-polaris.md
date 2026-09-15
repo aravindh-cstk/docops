@@ -2,6 +2,7 @@
 title: "What is Polaris"
 description: "Learn what Polaris is and how Contentstack’s AI co-pilot helps teams automate real CMS tasks with context, governance, and built-in controls."
 url: /agent-os/what-is-polaris
+uid: bltbe216089404ff875
 ---
 
 # What is Polaris

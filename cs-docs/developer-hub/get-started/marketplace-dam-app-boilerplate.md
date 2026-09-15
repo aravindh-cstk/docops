@@ -2,6 +2,7 @@
 title: "Marketplace DAM App Boilerplate"
 description: "Marketplace DAM App Boilerplate provides a template to configure and create your DAM app and use it within Contentstack."
 url: /developer-hub/marketplace-dam-app-boilerplate
+uid: blta75a9080dbbbbd4e
 ---
 
 # Marketplace DAM App Boilerplate

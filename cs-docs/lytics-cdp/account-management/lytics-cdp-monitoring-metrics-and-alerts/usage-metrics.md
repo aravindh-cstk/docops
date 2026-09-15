@@ -2,6 +2,7 @@
 title: "Usage Metrics"
 description: "The Account Usage section shows how many inbound and outbound events Lytics has received for your account. If your account has an inbound event quota, you…"
 url: /lytics/usage-metrics
+uid: bltbc9c3d23b018efdf
 ---
 
 # Usage Metrics

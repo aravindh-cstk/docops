@@ -2,6 +2,7 @@
 title: "Databricks"
 description: "Databricks is a software platform that provides you a way to organize your data for the purpose of analytics and data science."
 url: /lytics/databricks
+uid: blt811dafb68527ce5a
 ---
 
 # Databricks

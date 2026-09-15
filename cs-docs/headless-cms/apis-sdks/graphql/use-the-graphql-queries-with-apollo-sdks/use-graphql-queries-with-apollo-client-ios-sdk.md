@@ -2,6 +2,7 @@
 title: "Use GraphQL Queries with Apollo Client iOS SDK"
 description: "use the Apollo client and Contentstack GraphQL queries to power the content of your iOS SDK apps."
 url: /headless-cms/use-graphql-queries-with-apollo-client-ios-sdk
+uid: blt1814d3cc1fff277a
 ---
 
 # Use GraphQL Queries with Apollo Client iOS SDK

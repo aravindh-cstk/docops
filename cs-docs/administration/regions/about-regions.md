@@ -2,6 +2,7 @@
 title: "About Regions"
 description: "Discover how Contentstack Regions empower developers to create dynamic, personalized digital experiences. Explore comprehensive documentation on Contentstack's Regions feature for efficient content management across multiple locales and platforms."
 url: /administration/about-regions
+uid: bltf0e33b8491888b00
 ---
 
 # About Regions

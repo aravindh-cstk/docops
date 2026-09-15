@@ -2,6 +2,7 @@
 title: "About Marketplace"
 description: "Learn about Contentstack Marketplace, a hub for integrations, apps, and workflows that extend and enhance your headless CMS capabilities."
 url: /marketplace/about-marketplace
+uid: blt98d744bf44090c53
 ---
 
 # About Marketplace

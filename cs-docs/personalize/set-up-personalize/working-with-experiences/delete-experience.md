@@ -2,6 +2,7 @@
 title: "Delete an Experience"
 description: "Learn how to safely delete experiences in your Personalize projects."
 url: /personalize/delete-experience
+uid: blt2e9bb7a1bd48edf4
 ---
 
 # Delete an Experience

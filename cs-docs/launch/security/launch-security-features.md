@@ -2,6 +2,7 @@
 title: "Security Features in Contentstack Launch"
 description: "Contentstack Launch offers layered security, DDoS protection, bot control, and secure app deployment to safeguard your applications by default."
 url: /launch/launch-security-features
+uid: blt7f314960e9678e23
 ---
 
 # Security Features in Contentstack Launch

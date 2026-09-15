@@ -2,6 +2,7 @@
 title: "Working with Anonymous Profiles"
 description: "Learn how Lytics identifies anonymous website visitors through a _uid cookie value, what a User Profile looks like before identity resolution, and how anonymous and known profiles merge once a visitor converts."
 url: /lytics/anonymous-visitors
+uid: blt9be8250f9e090527
 ---
 
 # Working with Anonymous Profiles

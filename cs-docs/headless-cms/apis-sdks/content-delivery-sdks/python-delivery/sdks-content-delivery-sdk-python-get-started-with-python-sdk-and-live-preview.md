@@ -2,6 +2,7 @@
 title: "Get Started with Python SDK and Live Preview"
 description: "Get Started with Python SDK and Live Preview"
 url: /developers/sdks/content-delivery-sdk/python/get-started-with-python-sdk-and-live-preview
+uid: blt06146469cd6f6930
 ---
 
 # Get Started with Python SDK and Live Preview

@@ -2,6 +2,7 @@
 title: "Analytics for Launch"
 description: "Optimize Launch deployments with in-depth analytics on project progress, API usage, and device trends for improved performance and resource efficiency."
 url: /analytics/analytics-for-launch
+uid: blt1b07ffcd95a9dd0e
 ---
 
 # Analytics for Launch

@@ -2,6 +2,7 @@
 title: "Authorizations"
 description: "Channel tool authorizations refer to the permissions granted to various integrations that allow our platform to access and use data from third-party…"
 url: /lytics/keys-authorizations
+uid: blt801d3aad45282836
 ---
 
 # Authorizations

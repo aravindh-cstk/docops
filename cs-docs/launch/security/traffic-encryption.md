@@ -2,6 +2,7 @@
 title: "Traffic Encryption"
 description: "Learn how Contentstack Launch uses HTTPS and TLS to ensure encrypted traffic and protect end-user data across all deployments."
 url: /launch/traffic-encryption
+uid: blt5392cea9886097ea
 ---
 
 # Traffic Encryption

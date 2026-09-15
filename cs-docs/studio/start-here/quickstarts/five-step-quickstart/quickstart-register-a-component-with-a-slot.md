@@ -2,6 +2,7 @@
 title: "Quickstart 2: Register a Component with a Slot"
 description: "Expose one of your React components to Studio's palette. Declare a Slot on it so authors can drop other components inside it."
 url: /studio/quickstart-register-a-component-with-a-slot
+uid: blt305f22335a5d8ce2
 ---
 
 # Quickstart 2: Register a Component with a Slot

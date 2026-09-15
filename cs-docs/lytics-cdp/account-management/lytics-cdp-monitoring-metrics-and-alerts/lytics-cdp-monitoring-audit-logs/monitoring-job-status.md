@@ -2,6 +2,7 @@
 title: "Exporting Audit Logs or Alert Jobs"
 description: "In Lytics, audit logs and system alerts originate from a shared source: Lytics System Events . A System Event is simply a log of an action taken within…"
 url: /lytics/monitoring-job-status
+uid: blt3091cd19133f8392
 ---
 
 # Exporting Audit Logs or Alert Jobs

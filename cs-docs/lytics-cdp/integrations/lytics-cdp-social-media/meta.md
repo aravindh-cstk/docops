@@ -2,6 +2,7 @@
 title: "Meta"
 description: "Meta Ads Manager is a powerful ad management tool that is designed for advertisers of any experience level. Using Meta Ads Manager, you can run ads on…"
 url: /lytics/meta
+uid: blt3afa3c7154e76c46
 ---
 
 # Meta

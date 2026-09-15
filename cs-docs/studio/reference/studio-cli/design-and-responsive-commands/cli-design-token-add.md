@@ -2,6 +2,7 @@
 title: "Add design tokens"
 description: "Fetch design tokens from Figma, or generate them by analyzing your project, and write a register-design-tokens file."
 url: /studio/cli-design-token-add
+uid: blt60ae4024424d1e6b
 ---
 
 # Add design tokens

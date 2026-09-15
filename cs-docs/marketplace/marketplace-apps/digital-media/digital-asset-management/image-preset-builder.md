@@ -2,6 +2,7 @@
 title: "Image Preset Builder App Installation Guide"
 description: "The Contentstack Marketplace Image Preset Builder app allows you to transform and optimize images within the stack."
 url: /marketplace/image-preset-builder
+uid: blt985cf844a0474a96
 ---
 
 # Image Preset Builder App Installation Guide

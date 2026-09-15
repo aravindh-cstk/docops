@@ -2,6 +2,7 @@
 title: "Managing Automations"
 description: "Learn how to create, edit, and delete automations and steps within Contentstack’s Agent OS."
 url: /agent-os/managing-automations
+uid: bltb73c076977fd390a
 ---
 
 # Managing Automations

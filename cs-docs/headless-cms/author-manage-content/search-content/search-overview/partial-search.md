@@ -2,6 +2,7 @@
 title: "Partial Search"
 description: "Enhance search efficiency with our Partial Search feature. Quickly find entries and assets using partial keywords, improving productivity and workflow."
 url: /headless-cms/partial-search
+uid: bltcf26bebc77c0bfb5
 ---
 
 # Partial Search

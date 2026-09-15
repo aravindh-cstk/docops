@@ -2,6 +2,7 @@
 title: "Migrating a Legacy Website to Contentstack (Progressive Headless)"
 description: "Learn how to migrate a legacy website to Contentstack using a progressive headless approach with incremental routing, Contentstack Launch, and safe rollbacks."
 url: /headless-cms/migrating-a-legacy-website-to-contentstack
+uid: blte7af4f2898aed12b
 ---
 
 # Migrating a Legacy Website to Contentstack (Progressive Headless)

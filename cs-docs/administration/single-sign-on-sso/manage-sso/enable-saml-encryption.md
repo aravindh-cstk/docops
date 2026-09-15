@@ -2,6 +2,7 @@
 title: "Enable SAML Encryption"
 description: "Enable SAML encryption for SAML attributes in Contentstack and download the Contentstack public certificate for IdP configuration."
 url: /administration/enable-saml-encryption
+uid: blt3d7947f731c26e8d
 ---
 
 # Enable SAML Encryption

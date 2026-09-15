@@ -2,6 +2,7 @@
 title: "Export a Voice Profile"
 description: "Learn how to export Contentstack Voice Profiles to simplify voice configuration reuse, backups, and environment migrations."
 url: /brand-kit/export-a-voice-profile
+uid: blta0c6ddf7742ac449
 ---
 
 # Export a Voice Profile

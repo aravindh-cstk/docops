@@ -2,6 +2,7 @@
 title: "CMS Connector API - Wordpress"
 description: "Discover how the migration-wordpress Node.js package efficiently migrates WordPress content to Contentstack, ensuring seamless data transformation."
 url: /headless-cms/cms-connector-api-wordpress
+uid: bltf60f20e2360a470d
 ---
 
 # CMS Connector API - Wordpress

@@ -2,6 +2,7 @@
 title: "View Entry Status Details"
 description: "View publish status, release progress, and approval rules in the Entry Status panel. Use filters to quickly find relevant entry details."
 url: /headless-cms/view-entry-status-details
+uid: bltb196296caf43cbba
 ---
 
 # View Entry Status Details

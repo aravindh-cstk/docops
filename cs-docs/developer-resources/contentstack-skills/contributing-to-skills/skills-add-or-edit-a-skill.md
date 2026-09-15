@@ -2,6 +2,7 @@
 title: "Add or Edit a Skill"
 description: "Edit an existing Contentstack Agent Skill or add a new one, then regenerate the Cursor and Codex trees your AI coding tools rely on."
 url: /developers/skills-add-or-edit-a-skill
+uid: blte2a61c8fcfca88c9
 ---
 
 # Add or Edit a Skill

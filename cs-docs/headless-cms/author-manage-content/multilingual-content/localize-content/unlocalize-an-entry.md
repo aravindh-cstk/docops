@@ -2,6 +2,7 @@
 title: "Unlocalize an Entry"
 description: "Learn how to manage content localization in Contentstack by unlocalizing entries, reverting to fallback or master locale content, and using API tools efficiently."
 url: /headless-cms/unlocalize-an-entry
+uid: blte8dba5ce7d1b30f4
 ---
 
 # Unlocalize an Entry

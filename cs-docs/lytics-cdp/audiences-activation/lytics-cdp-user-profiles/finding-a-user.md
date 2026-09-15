@@ -2,6 +2,7 @@
 title: "Finding a User"
 description: "Learn how to search for a specific user profile in Lytics using the Building Profiles search feature, useful for verifying test users, reviewing individual behavior, or handling GDPR profile deletion requests."
 url: /lytics/finding-a-user
+uid: bltb12b606e60ffa2c8
 ---
 
 # Finding a User

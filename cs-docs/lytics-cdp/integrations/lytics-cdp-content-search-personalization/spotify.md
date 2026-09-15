@@ -2,6 +2,7 @@
 title: "Spotify"
 description: "Spotify is an audio streaming platform whose Ads Manager lets advertisers run audio campaigns against Spotify's listener base. Integrating Lytics with…"
 url: /lytics/spotify
+uid: blt5a34e09036de8ace
 ---
 
 # Spotify

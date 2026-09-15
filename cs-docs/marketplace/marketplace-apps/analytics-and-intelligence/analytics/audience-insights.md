@@ -2,6 +2,7 @@
 title: "Audience Insights App Installation Guide"
 description: "Install the Audience Insights app to connect Lytics with Contentstack and uncover real-time audience data to drive smarter, personalized content decisions."
 url: /marketplace/audience-insights
+uid: blt66eb86fdb6ad29b6
 ---
 
 # Audience Insights App Installation Guide

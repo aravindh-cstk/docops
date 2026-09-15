@@ -2,6 +2,7 @@
 title: "Automation Sharing"
 description: "Discover how Contentstack's Automation Sharing feature allows you to effortlessly share and replicate automation workflows across different organizations."
 url: /agent-os/automation-sharing
+uid: blt285052f3200d3697
 ---
 
 # Automation Sharing

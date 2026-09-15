@@ -2,6 +2,7 @@
 title: "Client Side Rendering (CSR) Technical Implementation Architecture"
 description: "Client-Side Rendering (CSR) architecture dynamically delivers personalized web experiences through browser-based rendering."
 url: /personalize/csr-technical-implementation-architecture
+uid: blt687fbb75e6d2b638
 ---
 
 # Client Side Rendering (CSR) Technical Implementation Architecture

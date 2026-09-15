@@ -2,6 +2,7 @@
 title: "AI Credits"
 description: "Monitor AI credit usage, track monthly consumption, and configure excess usage limits for AI-powered services."
 url: /administration/ai-credits
+uid: bltf0c6f95e2c3be181
 ---
 
 # AI Credits

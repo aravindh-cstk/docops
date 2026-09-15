@@ -2,6 +2,7 @@
 title: "Configure Multiple Identity Providers"
 description: "Attach up to five SAML identity providers to a single Contentstack organization, each with its own session policy, role mapping, and login URL."
 url: /administration/configure-multiple-identity-providers
+uid: blt364fcccf387c4a22
 ---
 
 # Configure Multiple Identity Providers

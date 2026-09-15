@@ -2,6 +2,7 @@
 title: "BigCommerce Trigger"
 description: "Use the BigCommerce trigger to invoke BigCommerce related events via Automation Hub."
 url: /agent-os/bigcommerce-trigger
+uid: bltbff483baa7a9bb3d
 ---
 
 # BigCommerce Trigger

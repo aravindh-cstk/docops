@@ -2,6 +2,7 @@
 title: "About .NET Delivery SDK"
 description: "This .NET delivery SDK document provides an overview of the SDK, empowering you to integrate and retrieve content from Contentstack to your .NET applications."
 url: /developers/sdks/content-delivery-sdk/dot-net/about-dot-net-delivery-sdk
+uid: blta336394ab4703306
 ---
 
 # About .NET Delivery SDK

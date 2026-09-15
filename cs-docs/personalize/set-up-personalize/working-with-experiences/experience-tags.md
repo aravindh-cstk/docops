@@ -2,6 +2,7 @@
 title: "Experience Tags"
 description: "Learn how to use Experience Tags in Contentstack Personalize to organize experiences in the UI and filter them at runtime."
 url: /personalize/experience-tags
+uid: blte738bb78932c9971
 ---
 
 # Experience Tags

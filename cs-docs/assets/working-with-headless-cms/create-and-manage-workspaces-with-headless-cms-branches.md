@@ -2,6 +2,7 @@
 title: "Create and Manage Workspaces with Headless CMS Branches"
 description: "Learn how to create branches in Contentstack Headless CMS for isolated development, ensuring changes don’t impact the default branch."
 url: /assets/create-and-manage-workspaces-with-headless-cms-branches
+uid: blt21405574792b4bfa
 ---
 
 # Create and Manage Workspaces with Headless CMS Branches

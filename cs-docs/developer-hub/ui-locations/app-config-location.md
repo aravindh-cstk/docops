@@ -2,6 +2,7 @@
 title: "App Config Location"
 description: "Manage app settings in the App Configuration Location for easy, secure access across all installations."
 url: /developer-hub/app-config-location
+uid: bltd30819d11fa9e470
 ---
 
 # App Config Location

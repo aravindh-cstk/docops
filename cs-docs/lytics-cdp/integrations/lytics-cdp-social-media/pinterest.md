@@ -2,6 +2,7 @@
 title: "Pinterest"
 description: "Pinterest is an image sharing and social media service designed to enable saving and discovery of information. Integrating Lytics with Pinterest enables…"
 url: /lytics/pinterest
+uid: blt3603d867f1a2996f
 ---
 
 # Pinterest

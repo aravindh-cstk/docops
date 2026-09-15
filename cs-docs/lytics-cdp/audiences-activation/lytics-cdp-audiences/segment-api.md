@@ -2,6 +2,7 @@
 title: "Segment API"
 description: "Programmatically manage audiences using the Segment API."
 url: /lytics/segment-api
+uid: bltdbf45b8eeede67c8
 ---
 
 # Segment API

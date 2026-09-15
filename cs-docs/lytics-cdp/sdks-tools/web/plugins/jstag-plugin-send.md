@@ -2,6 +2,7 @@
 title: "send Plugin"
 description: "Send data into Lytics with support for blocking and mock modes"
 url: /lytics/jstag-plugin-send
+uid: blt7b4405efccbeed51
 ---
 
 # send Plugin

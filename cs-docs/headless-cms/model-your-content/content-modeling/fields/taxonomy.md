@@ -2,6 +2,7 @@
 title: "Taxonomy"
 description: "Enhance content organization with the Taxonomy field, aiding navigation and search. Easily categorize entries using defined terms while creating content."
 url: /headless-cms/taxonomy
+uid: blt6572b912ddcbf96e
 ---
 
 # Taxonomy

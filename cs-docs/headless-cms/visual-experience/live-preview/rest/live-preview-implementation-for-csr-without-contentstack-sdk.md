@@ -2,6 +2,7 @@
 title: "Live preview for CSR without Contentstack Delivery SDK"
 description: "Learn how to configure live preview for SSR websites without using Contentstack Delivery SDK."
 url: /headless-cms/live-preview-implementation-for-csr-without-contentstack-sdk
+uid: blt68b30471e7c5b43e
 ---
 
 # Live preview for CSR without Contentstack Delivery SDK

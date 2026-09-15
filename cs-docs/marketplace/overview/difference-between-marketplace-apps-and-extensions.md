@@ -2,6 +2,7 @@
 title: "Difference Between Marketplace Apps and Extensions"
 description: "Difference Between Marketplace Apps and Extensions"
 url: /marketplace/difference-between-marketplace-apps-and-extensions
+uid: bltf835b548d18fd744
 ---
 
 # Difference Between Marketplace Apps and Extensions

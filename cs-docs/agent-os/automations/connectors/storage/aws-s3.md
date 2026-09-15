@@ -2,6 +2,7 @@
 title: "AWS S3"
 description: "Use the AWS S3 connector to store your files in the AWS bucket. You can fetch or delete files from your AWS bucket."
 url: /agent-os/aws-s3
+uid: blt8b85f59a5784ba9f
 ---
 
 # AWS S3

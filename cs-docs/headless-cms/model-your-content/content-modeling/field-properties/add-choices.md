@@ -2,6 +2,7 @@
 title: "Add Choices"
 description: "Add Choices of your fields"
 url: /headless-cms/add-choices
+uid: bltd4f175b900b29d44
 ---
 
 # Add Choices

@@ -2,6 +2,7 @@
 title: "Resolve a Discussion"
 description: "Resolve discussions in Contentstack to mark them complete."
 url: /headless-cms/resolve-a-discussion
+uid: blt613b62245d590641
 ---
 
 # Resolve a Discussion

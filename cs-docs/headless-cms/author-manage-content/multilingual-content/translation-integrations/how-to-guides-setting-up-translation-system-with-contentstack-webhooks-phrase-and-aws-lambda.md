@@ -2,6 +2,7 @@
 title: "Set Up Translation Integrations"
 description: "Discover how to streamline content translation with Phrase, AWS Lambda, and Contentstack. Simplify multilingual content management and boost efficiency."
 url: /developers/how-to-guides/setting-up-translation-system-with-contentstack-webhooks-phrase-and-aws-lambda
+uid: blt5598ff924c5c8d96
 ---
 
 # Set Up Translation Integrations

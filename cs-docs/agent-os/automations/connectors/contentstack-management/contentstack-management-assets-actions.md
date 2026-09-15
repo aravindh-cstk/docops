@@ -2,6 +2,7 @@
 title: "Contentstack Management - Assets Actions"
 description: "Use the Contentstack Management Assets actions to automate asset based operations."
 url: /agent-os/contentstack-management-assets-actions
+uid: bltbe758b84a9a8b304
 ---
 
 # Contentstack Management - Assets Actions

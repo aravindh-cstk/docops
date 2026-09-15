@@ -2,6 +2,7 @@
 title: "Limitations of Management Tokens"
 description: "Understand the limitations and permissions of Management Tokens in Contentstack stacks."
 url: /headless-cms/limitations-of-management-tokens
+uid: blt596cb7401cbb88ce
 ---
 
 # Limitations of Management Tokens

@@ -2,6 +2,7 @@
 title: "Java Delivery SDK Retry Mechanism"
 description: "Configure retries in the Contentstack Java Delivery SDK using RetryOptions, status codes, and backoff strategies to handle timeouts and 429s reliably."
 url: /developers/sdks/content-delivery-sdk/java/java-delivery-retry-mechanism
+uid: blt96c6b07bb806d377
 ---
 
 # Java Delivery SDK Retry Mechanism

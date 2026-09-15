@@ -2,6 +2,7 @@
 title: "Edit an Audience"
 description: "Learn how to edit audiences in Contentstack Personalize to maintain accurate segmentation."
 url: /personalize/edit-audience
+uid: blt19aa88a239079b85
 ---
 
 # Edit an Audience

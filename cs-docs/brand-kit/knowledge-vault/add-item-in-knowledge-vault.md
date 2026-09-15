@@ -2,6 +2,7 @@
 title: "Add Item in Knowledge Vault"
 description: "Learn to store, manage, access content across channels with Contentstack's Knowledge Vault and add text or upload PDFs."
 url: /brand-kit/add-item-in-knowledge-vault
+uid: blt21169d6d7d3d09ec
 ---
 
 # Add Item in Knowledge Vault

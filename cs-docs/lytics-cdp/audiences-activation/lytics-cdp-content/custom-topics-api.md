@@ -2,6 +2,7 @@
 title: "Custom Topics API"
 description: "Create and manage custom content topics programmatically."
 url: /lytics/custom-topics-api
+uid: blte248e40735ecb882
 ---
 
 # Custom Topics API

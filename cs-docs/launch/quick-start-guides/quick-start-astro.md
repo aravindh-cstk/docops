@@ -2,6 +2,7 @@
 title: "Launch Quick Start Guide with Astro"
 description: "Learn how to clone and deploy an Astro Starter project using Contentstack Launch and GitHub by following the instructions in our Quick Start Guide."
 url: /launch/quick-start-astro
+uid: blt84e84337efb47e6d
 ---
 
 # Launch Quick Start Guide with Astro

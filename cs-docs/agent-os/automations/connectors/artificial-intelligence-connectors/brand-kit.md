@@ -2,6 +2,7 @@
 title: "Brand Kit Connector"
 description: "Automate Brand Kit actions seamlessly with the Brand Kit Connector."
 url: /agent-os/brand-kit
+uid: blt470c319f9742b4ae
 ---
 
 # Brand Kit Connector

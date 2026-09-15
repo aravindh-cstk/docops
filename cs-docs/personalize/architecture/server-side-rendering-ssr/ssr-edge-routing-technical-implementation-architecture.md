@@ -2,6 +2,7 @@
 title: "Server Side Rendering (SSR) with Edge Routing Technical Implementation Architecture"
 description: "Learn to implement Personalize in a Server-Side Rendered site with Edge Routing for improved performance, scalability, and real-time personalization."
 url: /personalize/ssr-edge-routing-technical-implementation-architecture
+uid: blt999980e82251e9f9
 ---
 
 # Server Side Rendering (SSR) with Edge Routing Technical Implementation Architecture

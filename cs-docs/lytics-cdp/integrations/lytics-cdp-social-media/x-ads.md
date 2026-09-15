@@ -2,6 +2,7 @@
 title: "X Ads"
 description: "X is a social media platform where users interact with each other using tweets and messages. X Ads platform allows advertisers to share various types of…"
 url: /lytics/x-ads
+uid: blt558b131773fed63b
 ---
 
 # X Ads

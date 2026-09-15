@@ -2,6 +2,7 @@
 title: "Limitations for Timeline"
 description: "Explore the limitations of Timeline, ensuring seamless integration and understanding for optimal content management strategies."
 url: /headless-cms/limitations-for-timeline
+uid: blt68b0859e66a6b510
 ---
 
 # Limitations for Timeline

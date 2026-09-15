@@ -2,6 +2,7 @@
 title: "Calendar App Installation Guide"
 description: "Preview the scheduled events in a calendar within your stack."
 url: /marketplace/calendar
+uid: blt0f9c07bd2cc9c201
 ---
 
 # Calendar App Installation Guide

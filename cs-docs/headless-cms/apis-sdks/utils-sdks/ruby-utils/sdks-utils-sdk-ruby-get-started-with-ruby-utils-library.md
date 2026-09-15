@@ -2,6 +2,7 @@
 title: "Get Started with Ruby Utils Library"
 description: "steps to use the Ruby Utils Library"
 url: /developers/sdks/utils-sdk/ruby/get-started-with-ruby-utils-library
+uid: bltfc5cb6c03cf3c7e7
 ---
 
 # Get Started with Ruby Utils Library

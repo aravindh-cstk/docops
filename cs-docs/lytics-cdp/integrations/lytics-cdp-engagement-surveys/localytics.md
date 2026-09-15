@@ -2,6 +2,7 @@
 title: "Localytics"
 description: "Localytics is a leading mobile engagement platform giving companies the insights and tools they need to improve their mobile app acquisition, engagement…"
 url: /lytics/localytics
+uid: bltce9b7d8276e6688e
 ---
 
 # Localytics

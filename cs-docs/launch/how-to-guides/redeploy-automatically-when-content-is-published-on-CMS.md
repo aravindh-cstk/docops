@@ -2,6 +2,7 @@
 title: "Redeploy Automatically when Content is Published on CMS"
 description: "Learn how to configure and manage automatic redeployments in Contentstack Launch."
 url: /launch/redeploy-automatically-when-content-is-published-on-CMS
+uid: blt4dab782038b876fc
 ---
 
 # Redeploy Automatically when Content is Published on CMS

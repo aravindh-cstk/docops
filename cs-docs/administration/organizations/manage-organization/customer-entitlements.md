@@ -2,6 +2,7 @@
 title: "Customer Entitlements"
 description: "Customer Entitlements in Contentstack allows the owners and Admins to know the user and usage information."
 url: /administration/customer-entitlements
+uid: blt318a5d661ece8441
 ---
 
 # Customer Entitlements

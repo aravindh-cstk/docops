@@ -2,6 +2,7 @@
 title: "Restore a Deleted Term"
 description: "Easily recover deleted terms within 14 days. Restore with or without entry association. Filter and manage deleted terms effortlessly."
 url: /headless-cms/restore-a-deleted-term
+uid: blt9d6922b53e2eade6
 ---
 
 # Restore a Deleted Term

@@ -2,6 +2,7 @@
 title: "Quickstart 3: Build a Simple Section and Expose Props"
 description: "Build a Hero Section bound to a Group field on your content type. Expose one prop so each Template can override it per-instance."
 url: /studio/quickstart-build-a-simple-section
+uid: bltda2828b48c9f71c8
 ---
 
 # Quickstart 3: Build a Simple Section and Expose Props

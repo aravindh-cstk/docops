@@ -2,6 +2,7 @@
 title: "Contentstack Management - Releases Actions"
 description: "Use the Contentstack Management Releases actions to automate releases based operations."
 url: /agent-os/contentstack-management-releases-actions
+uid: blt55a6841d5d37d196
 ---
 
 # Contentstack Management - Releases Actions

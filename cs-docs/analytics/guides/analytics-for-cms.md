@@ -2,6 +2,7 @@
 title: "Analytics for CMS"
 description: "Monitor your CMS performance with our Analytics dashboard. Track usage, manage resources, and optimize efficiency with key metrics and insights."
 url: /analytics/analytics-for-cms
+uid: blt8ef437c0e3e318ec
 ---
 
 # Analytics for CMS

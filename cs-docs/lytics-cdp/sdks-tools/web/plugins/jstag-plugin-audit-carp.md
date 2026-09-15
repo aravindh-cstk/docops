@@ -2,6 +2,7 @@
 title: "audit.carp Plugin"
 description: "Safe, optional error handling for JSTag plugins"
 url: /lytics/jstag-plugin-audit-carp
+uid: blt2b35d24235b4ce84
 ---
 
 # audit.carp Plugin

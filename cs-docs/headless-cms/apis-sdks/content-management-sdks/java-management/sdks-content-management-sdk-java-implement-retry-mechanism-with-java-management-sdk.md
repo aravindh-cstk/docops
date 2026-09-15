@@ -2,6 +2,7 @@
 title: "Implement a Retry Mechanism with Java Management SDK"
 description: "Implement automatic retries with RetryConfig, RetryCondition, and fixed, linear, or exponential backoff in the Java Management SDK for resilient API calls."
 url: /developers/sdks/content-management-sdk/java/implement-retry-mechanism-with-java-management-sdk
+uid: blte963e17c61add1ca
 ---
 
 # Implement a Retry Mechanism with Java Management SDK

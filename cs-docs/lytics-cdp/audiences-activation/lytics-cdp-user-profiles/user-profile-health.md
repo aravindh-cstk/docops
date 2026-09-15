@@ -2,6 +2,7 @@
 title: "Understanding Profile Health"
 description: "Because Lytics user profiles are created by stitching data across sources the stability of a given profile depends on the quality and quantity of data…"
 url: /lytics/user-profile-health
+uid: blt5b833a94e09532f1
 ---
 
 # Understanding Profile Health

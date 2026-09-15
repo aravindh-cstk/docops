@@ -2,6 +2,7 @@
 title: "Delete a Language"
 description: "steps to delete a language in Contentstack"
 url: /headless-cms/delete-a-language
+uid: blt0faeb3a6dc4658ed
 ---
 
 # Delete a Language

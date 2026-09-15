@@ -2,6 +2,7 @@
 title: "Implement Retry Mechanism with Python Management SDK"
 description: "Configure retries in the Contentstack Python Management SDK using max_retries and OAuth interceptors to handle 429s, 5xx errors, and token refresh reliably."
 url: /developers/sdks/content-management-sdk/python/python-management-retry-mechanism
+uid: blt73251bc401320728
 ---
 
 # Implement Retry Mechanism with Python Management SDK

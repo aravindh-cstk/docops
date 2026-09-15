@@ -2,6 +2,7 @@
 title: "Move an Asset Folder"
 description: "Learn how to seamlessly move one asset folder into another within Contentstack to organize your assets efficiently."
 url: /headless-cms/move-a-folder
+uid: blt43d803e9fa8e1190
 ---
 
 # Move an Asset Folder

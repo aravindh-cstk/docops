@@ -2,6 +2,7 @@
 title: "Slot Defaults & Allowed Sections"
 description: "Pre-fill an empty Section Slot with a default section and restrict which sections template authors can drop in, using the slot's Data-tab settings."
 url: /studio/slot-defaults-and-allowed-sections
+uid: blt3155998cec1bcc01
 ---
 
 # Slot Defaults & Allowed Sections

@@ -2,6 +2,7 @@
 title: "Live Preview Onboarding and Troubleshooting Guide"
 description: "Learn how to set up and integrate Live Preview seamlessly. This guide provides step-by-step instructions, troubleshooting solutions, and best practices to ensure real-time content updates function without issues."
 url: /headless-cms/live-preview-onboarding-and-troubleshooting-guide
+uid: blt11e3b2a6a0bbfd55
 ---
 
 # Live Preview Onboarding and Troubleshooting Guide

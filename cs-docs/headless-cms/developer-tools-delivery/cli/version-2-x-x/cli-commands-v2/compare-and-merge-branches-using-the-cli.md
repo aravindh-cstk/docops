@@ -2,6 +2,7 @@
 title: "Compare and Merge Branches Using the CLI | V2.x.x"
 description: "Learn to create, update, delete, compare, and merge branches using the Contentstack Command-line Interface with this step-by-step guide."
 url: /headless-cms/compare-and-merge-branches-using-the-cli
+uid: blt1f5e428e3a8d3734
 ---
 
 # Compare and Merge Branches Using the CLI | V2.x.x

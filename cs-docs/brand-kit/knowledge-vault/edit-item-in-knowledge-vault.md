@@ -2,6 +2,7 @@
 title: "Edit Item in Knowledge Vault"
 description: "Learn how to edit items in your Knowledge Vault to keep your documents and data organized and up-to-date."
 url: /brand-kit/edit-item-in-knowledge-vault
+uid: bltc2920f1e12f61314
 ---
 
 # Edit Item in Knowledge Vault

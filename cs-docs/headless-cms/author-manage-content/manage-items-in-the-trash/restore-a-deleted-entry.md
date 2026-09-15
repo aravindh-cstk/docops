@@ -2,6 +2,7 @@
 title: "Restore a Deleted Entry"
 description: "Restore a Deleted Entry"
 url: /headless-cms/restore-a-deleted-entry
+uid: blt283907c51698651d
 ---
 
 # Restore a Deleted Entry

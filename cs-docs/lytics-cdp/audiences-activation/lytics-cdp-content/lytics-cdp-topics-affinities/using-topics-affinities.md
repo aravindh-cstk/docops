@@ -2,6 +2,7 @@
 title: "Using Topics & Affinities"
 description: "The Affinity Engine enriches user profiles based on behavior, but its true value lies in how you act on that data. In Lytics, Affinity Engine insights can…"
 url: /lytics/using-topics-affinities
+uid: blt6761c683e479a87d
 ---
 
 # Using Topics & Affinities

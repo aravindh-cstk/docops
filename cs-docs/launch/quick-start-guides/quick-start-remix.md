@@ -2,6 +2,7 @@
 title: "Launch Quick Start Guide with Remix"
 description: "Learn how to deploy a Remix project on Launch using GitHub in minutes."
 url: /launch/quick-start-remix
+uid: blt7cb59010bf8c2607
 ---
 
 # Launch Quick Start Guide with Remix

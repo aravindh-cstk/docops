@@ -2,6 +2,7 @@
 title: "Manage Language Permissions"
 description: "Optimize Contentstack roles with language-specific access control. Manage permissions, exceptions, and scenarios for streamlined multilingual entries."
 url: /headless-cms/manage-language-permissions
+uid: blte1826baf2aa4b9a2
 ---
 
 # Manage Language Permissions

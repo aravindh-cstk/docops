@@ -2,6 +2,7 @@
 title: "Prioritize Experiences"
 description: "Learn how to prioritize conflicting experiences step by step to ensure your preferred variant is delivered to users."
 url: /personalize/prioritize-experiences
+uid: blt3d5f363d6c2286c4
 ---
 
 # Prioritize Experiences

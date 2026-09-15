@@ -2,6 +2,7 @@
 title: "Contentstack Accessibility Statement"
 description: "Learn about Contentstack's commitment to accessibility, WCAG 2.2 compliance, and tools to create inclusive digital experiences for all users."
 url: /administration/contentstack-accessibility-statement
+uid: blt5700872639af3fa8
 ---
 
 # Contentstack Accessibility Statement

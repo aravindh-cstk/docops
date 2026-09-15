@@ -2,6 +2,7 @@
 title: "Create a Taxonomy"
 description: "Organize your website effectively using Contentstack taxonomies. Learn to create and manage taxonomies to categorize content seamlessly."
 url: /headless-cms/create-a-taxonomy
+uid: bltf8c2649e296dd957
 ---
 
 # Create a Taxonomy

@@ -2,6 +2,7 @@
 title: "Login Endpoints"
 description: "This guide covers the login endpoints for different Contentstack regions."
 url: /administration/login-endpoints
+uid: bltf0a3c510eb2dc9e4
 ---
 
 # Login Endpoints

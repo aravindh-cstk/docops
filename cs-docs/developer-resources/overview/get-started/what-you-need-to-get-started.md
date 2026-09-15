@@ -2,6 +2,7 @@
 title: "What You Need to Get Started"
 description: "What You Need to Get Started"
 url: /headless-cms/what-you-need-to-get-started
+uid: bltff51dd007a58c103
 ---
 
 # What You Need to Get Started

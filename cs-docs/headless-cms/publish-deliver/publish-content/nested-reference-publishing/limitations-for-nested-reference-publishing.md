@@ -2,6 +2,7 @@
 title: "Limitations for Nested Reference Publishing"
 description: "Discover the limitations and best practices for Nested Reference Publishing"
 url: /headless-cms/limitations-for-nested-reference-publishing
+uid: blt7d3340559e7097bc
 ---
 
 # Limitations for Nested Reference Publishing

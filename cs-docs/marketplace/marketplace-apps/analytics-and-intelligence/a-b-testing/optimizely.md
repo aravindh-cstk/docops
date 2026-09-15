@@ -2,6 +2,7 @@
 title: "Optimizely App Installation Guide"
 description: "The Optimizely app lets you fetch the audiences (JSON files) and variations from the Optimizely dashboard within your Contentstack entries."
 url: /marketplace/optimizely
+uid: blta496c20c726d76d9
 ---
 
 # Optimizely App Installation Guide

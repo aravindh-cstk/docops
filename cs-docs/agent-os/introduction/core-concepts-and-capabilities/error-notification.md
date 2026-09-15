@@ -2,6 +2,7 @@
 title: "Error Notification"
 description: "Learn how to configure Agent OS error notifications for alerts on failed automations via execution logs and email."
 url: /agent-os/error-notification
+uid: blt6c92d0f41de3d0e3
 ---
 
 # Error Notification

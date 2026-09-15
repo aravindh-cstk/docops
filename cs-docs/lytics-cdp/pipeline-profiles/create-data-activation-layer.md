@@ -2,6 +2,7 @@
 title: "Create the Data Activation Layer"
 description: "To get started with Data & Insights you must first activate your Data & Insights configuration. You'll only need to perform this action once as an…"
 url: /lytics/create-data-activation-layer
+uid: blt92289971bb0c0f0e
 ---
 
 # Create the Data Activation Layer

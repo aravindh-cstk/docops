@@ -2,6 +2,7 @@
 title: "Set up SSO with Microsoft Entra ID Native App"
 description: "Learn to set up Single Sign-On in Contentstack with Microsoft Entra ID Native App. Follow our step-by-step guide for seamless integration."
 url: /administration/set-up-sso-with-microsoft-entra-ID-native-app
+uid: blt9849bbd98f9212c3
 ---
 
 # Set up SSO with Microsoft Entra ID Native App

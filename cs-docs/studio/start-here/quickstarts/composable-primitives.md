@@ -2,6 +2,7 @@
 title: "Design a component library that composes, not sprawls"
 description: "The foundational pattern for a Studio component library: atomic and layout primitives that let content authors compose Heroes, Feature grids, Testimonials, and Pricing tiles without drifting from your design system. Shown with shadcn + Tailwind as a worked example. The pattern applies to any design system."
 url: /studio/composable-primitives
+uid: blt2e84e5d4a0143f82
 ---
 
 # Design a component library that composes, not sprawls

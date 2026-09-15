@@ -2,6 +2,7 @@
 title: "Filter Features by Impact Area"
 description: "Use Impact Areas in Platform Discovery to identify Contentstack features aligned with efficiency, productivity, personalization, and scalability goals."
 url: /administration/filter-by-impact-area
+uid: bltb6724faf9ec329a6
 ---
 
 # Filter Features by Impact Area

@@ -2,6 +2,7 @@
 title: "Framework Recipe: Next.js App Router with RSC"
 description: "Zero client JS for structural content, streaming, edge-runtime-friendly. Pick this when you want the minimum possible bundle and are willing to import."
 url: /studio/framework-recipe-nextjs-rsc
+uid: blt1ff1d97d3417f703
 ---
 
 # Framework Recipe: Next.js App Router with RSC

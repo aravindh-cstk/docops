@@ -2,6 +2,7 @@
 title: "Contentstack Resources for Your Frontend Architecture"
 description: "Contentstack provides some powerful tools and resources that you can use to set up an architecture of your choice."
 url: /headless-cms/contentstack-resources-for-your-frontend-architecture
+uid: blt86b0e8c2132d1b9c
 ---
 
 # Contentstack Resources for Your Frontend Architecture

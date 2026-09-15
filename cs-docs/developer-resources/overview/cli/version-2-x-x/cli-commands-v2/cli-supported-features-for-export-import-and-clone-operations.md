@@ -2,6 +2,7 @@
 title: "CLI-Supported Features for Export, Import, and Clone Operations | V2.x.x"
 description: "Explore the CLI-supported features for export, import, and clone operations including Marketplace app handling, module imports, error management, and Personalize project support."
 url: /headless-cms/cli-supported-features-for-export-import-and-clone-operations
+uid: blt5ea38dadb4d99b6c
 ---
 
 # CLI-Supported Features for Export, Import, and Clone Operations | V2.x.x

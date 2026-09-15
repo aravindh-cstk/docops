@@ -2,6 +2,7 @@
 title: "Content Type Plugin | V2.x.x"
 description: "Use the Contentstack CLI Content Type Plugin | V2 Beta to audit schema changes before deploying to production and compare content models across versions or stacks."
 url: /headless-cms/cli-content-type-plugin
+uid: blt8012fa025c919ece
 ---
 
 # Content Type Plugin | V2.x.x

@@ -2,6 +2,7 @@
 title: "Advanced Mapping Functions"
 description: "Lytics supports numerous built-in functions for light data transformation and logic evaluation to allow users to map only data that is relevant to their…"
 url: /lytics/advanced-mapping
+uid: blt3962c3567d9ad976
 ---
 
 # Advanced Mapping Functions

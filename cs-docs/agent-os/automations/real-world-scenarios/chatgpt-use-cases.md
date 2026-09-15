@@ -2,6 +2,7 @@
 title: "ChatGPT Use Cases"
 description: "This guide helps you with two use cases for the ChatGPT Connector to translate texts and generate image URLs."
 url: /agent-os/chatgpt-use-cases
+uid: blt9b96f92e6b10a6b5
 ---
 
 # ChatGPT Use Cases

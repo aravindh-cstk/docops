@@ -2,6 +2,7 @@
 title: "About Attributes"
 description: "Customize your content with Contentstack Personalize using preset and custom attributes for precise audience targeting."
 url: /personalize/about-attributes
+uid: bltf3f03835df7d6cd3
 ---
 
 # About Attributes

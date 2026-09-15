@@ -2,6 +2,7 @@
 title: "Bulk Delete Assets"
 description: "Learn how to delete several assets at once from the assets listing in Contentstack. Deleted assets move to Trash, where you can restore them."
 url: /assets/bulk-delete-assets
+uid: bltd8d1b8d1785c0441
 ---
 
 # Bulk Delete Assets

@@ -2,6 +2,7 @@
 title: "Google Cloud Storage"
 description: "Google Cloud Storage is a secure, scalable, and durable object storage service provided as part of the Google Cloud Platform."
 url: /lytics/google-cloud-storage-overview
+uid: blt1f0ffbcf09919aac
 ---
 
 # Google Cloud Storage

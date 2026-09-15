@@ -2,6 +2,7 @@
 title: "Single Sign-On"
 description: "Single Sign-On (SSO) allows employees to safely and securely access a host of Internet tools with a single username and password. There are four primary…"
 url: /lytics/single-sign-on-overview
+uid: bltc764340a4fdd0f57
 ---
 
 # Single Sign-On

@@ -2,6 +2,7 @@
 title: "Set Up Content Migration Framework (Windows)"
 description: "Streamline your content migration to Contentstack effortlessly with our user-friendly framework. Follow our guide to install and start migrating today."
 url: /headless-cms/set-up-content-migration-framework-windows
+uid: blt0e72685829d0aa11
 ---
 
 # Set Up Content Migration Framework (Windows)

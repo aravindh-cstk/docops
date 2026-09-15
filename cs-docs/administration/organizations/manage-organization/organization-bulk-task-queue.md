@@ -2,6 +2,7 @@
 title: "Organization Bulk Task Queue"
 description: "Efficiently manage bulk operations in Contentstack with the Bulk Task Queue. Track, filter, and oversee tasks seamlessly for optimal content management."
 url: /administration/organization-bulk-task-queue
+uid: bltacba0a23cab5507d
 ---
 
 # Organization Bulk Task Queue

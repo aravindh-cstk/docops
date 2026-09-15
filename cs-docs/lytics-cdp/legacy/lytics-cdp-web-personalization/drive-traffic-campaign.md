@@ -2,6 +2,7 @@
 title: "Drive Traffic Campaign"
 description: "Learn how to set up a Drive Traffic campaign in Lytics to reroute site visitors to a promotional landing page, with options to target specific pages or audience segments for higher conversion rates."
 url: /lytics/drive-traffic-campaign
+uid: bltf48a951588bceb26
 ---
 
 # Drive Traffic Campaign

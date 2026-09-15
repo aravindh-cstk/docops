@@ -2,6 +2,7 @@
 title: "Android"
 description: "The Lytics SDK for Android makes it easy for developers to identify, manage consent, and collect user activity data from their native mobile apps. This…"
 url: /lytics/sdk-for-android
+uid: blt53542fb64177ee10
 ---
 
 # Android

@@ -2,6 +2,7 @@
 title: "Anatomy of Skills"
 description: "Learn the anatomy of a Contentstack Agent Skill, frontmatter, instructions, and references, the structure every SKILL.md follows for reliable AI guidance."
 url: /developers/skills-skill-anatomy
+uid: blt1dcf19eac1d4afd4
 ---
 
 # Anatomy of Skills

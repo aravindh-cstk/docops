@@ -2,6 +2,7 @@
 title: "Manage Versions of Localized Entries"
 description: "each localized entry maintains its version, thus it becomes independent from the master/fallback language."
 url: /headless-cms/manage-versions-of-localized-entries
+uid: blt5797c19e2e7c39fd
 ---
 
 # Manage Versions of Localized Entries

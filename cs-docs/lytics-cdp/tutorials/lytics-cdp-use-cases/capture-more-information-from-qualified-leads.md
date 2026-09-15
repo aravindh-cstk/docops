@@ -2,6 +2,7 @@
 title: "Capture More Information from Qualified Leads"
 description: "Converting a user from unknown to known is a key part of many marketing journeys. You can use Lytics web Experiences to capture user information. While…"
 url: /lytics/capture-more-information-from-qualified-leads
+uid: blta57961b0f11a4031
 ---
 
 # Capture More Information from Qualified Leads

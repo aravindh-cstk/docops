@@ -2,6 +2,7 @@
 title: "Create Compositions via the API"
 description: "If you're new to Studio's API, the four pages in this chapter build on each other:"
 url: /studio/create-compositions-via-the-api
+uid: bltd23ab960645f9195
 ---
 
 # Create Compositions via the API

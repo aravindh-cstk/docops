@@ -2,6 +2,7 @@
 title: "How Live Preview Works with SDK"
 description: "Learn how Contentstack’s Live Preview SDK enables real-time content updates, ensuring seamless previews for CSR & SSR websites before publishing."
 url: /headless-cms/how-live-preview-works-with-sdk
+uid: blt0c7b7c2cf0120edc
 ---
 
 # How Live Preview Works with SDK

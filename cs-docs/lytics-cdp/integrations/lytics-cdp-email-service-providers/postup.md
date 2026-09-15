@@ -2,6 +2,7 @@
 title: "PostUp"
 description: "PostUp is an enterprise email solution that can be leveraged to target audiences through email, browser push, and on-site engagement. Integrating PostUp…"
 url: /lytics/postup
+uid: blt7bb4775fdbe8b953
 ---
 
 # PostUp

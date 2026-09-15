@@ -2,6 +2,7 @@
 title: "Set up SSO with Okta"
 description: "Set up single sign-on in Contentstack with Okta as your SAML 2.0 identity provider, using a custom SAML app, as one of up to five IdP connections."
 url: /administration/set-up-sso-with-okta
+uid: blt1c9f9c3e07e0917a
 ---
 
 # Set up SSO with Okta

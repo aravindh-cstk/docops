@@ -2,6 +2,7 @@
 title: "Edit an Alias"
 description: "Learn how to efficiently edit aliases in Contentstack to manage branch targets and streamline your workflow. Enhance your content strategy today."
 url: /headless-cms/edit-an-alias
+uid: blta2452feb5d715d20
 ---
 
 # Edit an Alias

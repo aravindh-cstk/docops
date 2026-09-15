@@ -2,6 +2,7 @@
 title: "Add a component from Figma"
 description: "Generate a code component from a Figma design and write it into your project, with styling method auto-detected."
 url: /studio/cli-component-add
+uid: blt921dcf0b339a29fa
 ---
 
 # Add a component from Figma

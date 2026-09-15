@@ -2,6 +2,7 @@
 title: "Lookalike Models: Conserve marketing spend on engaged users"
 description: "Determining which users to exclude from a campaign is equally as important as finding the users you want to target. If a user is already engaged with your…"
 url: /lytics/lookalike-models-conserve-marketing-spend-on-engaged-users
+uid: blt58e84c528a4cc9c6
 ---
 
 # Lookalike Models: Conserve marketing spend on engaged users

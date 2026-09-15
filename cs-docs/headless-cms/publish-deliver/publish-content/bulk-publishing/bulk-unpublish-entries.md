@@ -2,6 +2,7 @@
 title: "Bulk Unpublish Entries"
 description: "Learn how to unpublish entries in bulk in Contentstack."
 url: /headless-cms/bulk-unpublish-entries
+uid: blt62e89b460dafbf4f
 ---
 
 # Bulk Unpublish Entries

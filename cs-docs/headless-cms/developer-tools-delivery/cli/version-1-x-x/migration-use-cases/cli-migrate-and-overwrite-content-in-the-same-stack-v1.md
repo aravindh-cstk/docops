@@ -2,6 +2,7 @@
 title: "Migrate and Overwrite Content in the Same Stack | V1.x.x"
 description: "Migrate and overwrite existing content in the same Contentstack stack using the CLI entries module, including assets and dependencies."
 url: /headless-cms/cli-migrate-and-overwrite-content-in-the-same-stack/v1
+uid: blt229455bbe1e19fa9
 ---
 
 # Migrate and Overwrite Content in the Same Stack | V1.x.x

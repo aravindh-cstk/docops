@@ -2,6 +2,7 @@
 title: "Rename Entry Versions"
 description: "Learn how to rename entry versions in Contentstack with step-by-step instructions. Organize and manage your content effectively with ease."
 url: /headless-cms/rename-entry-versions
+uid: blteaa83b69c7bcd420
 ---
 
 # Rename Entry Versions

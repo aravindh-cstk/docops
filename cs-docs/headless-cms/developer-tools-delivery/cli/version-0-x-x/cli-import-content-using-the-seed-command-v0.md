@@ -2,6 +2,7 @@
 title: "Import Content using the Seed Command | V0.x.x"
 description: "The “seed” command in Contentstack CLI allows users to import content to your stack, from GitHub repositories."
 url: /headless-cms/cli-import-content-using-the-seed-command/v0
+uid: blt78f6b7d84156806f
 ---
 
 # Import Content using the Seed Command | V0.x.x

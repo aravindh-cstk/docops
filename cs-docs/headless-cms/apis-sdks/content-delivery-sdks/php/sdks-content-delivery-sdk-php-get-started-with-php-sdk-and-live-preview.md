@@ -2,6 +2,7 @@
 title: "Get Started with PHP SDK and Live Preview"
 description: "Get Started with PHP SDK and Live Preview"
 url: /developers/sdks/content-delivery-sdk/php/get-started-with-php-sdk-and-live-preview
+uid: blt0ae47639001598ea
 ---
 
 # Get Started with PHP SDK and Live Preview

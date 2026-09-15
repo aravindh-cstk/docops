@@ -2,6 +2,7 @@
 title: "Cache Purging Scenarios"
 description: "Learn how Contentstack purges cache under different scenarios."
 url: /headless-cms/cache-purging-scenarios
+uid: bltbfc793bd0d7b2462
 ---
 
 # Cache Purging Scenarios

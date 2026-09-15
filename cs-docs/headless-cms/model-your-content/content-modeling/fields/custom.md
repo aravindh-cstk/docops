@@ -2,6 +2,7 @@
 title: "Custom"
 description: "Enhance your Contentstack with customizable fields. Integrate top apps and manage properties effortlessly for tailored content types."
 url: /headless-cms/custom
+uid: bltf4d88d07883523f5
 ---
 
 # Custom

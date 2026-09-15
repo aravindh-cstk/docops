@@ -2,6 +2,7 @@
 title: "Taxonomy Migration"
 description: "Taxonomy Migration Contentstack CLI utility lets you perform the taxonomy migration operation on a stack."
 url: /headless-cms/cli-taxonomy-migration
+uid: blt2a6acf45012c79f3
 ---
 
 # Taxonomy Migration

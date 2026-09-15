@@ -2,6 +2,7 @@
 title: "TikTok"
 description: "TikTok is a social network platform that allows users to share short-form videos. Integrating Lytics with TikTok enables you to leverage Lytics audiences…"
 url: /lytics/tiktok
+uid: blta372a8def204213e
 ---
 
 # TikTok

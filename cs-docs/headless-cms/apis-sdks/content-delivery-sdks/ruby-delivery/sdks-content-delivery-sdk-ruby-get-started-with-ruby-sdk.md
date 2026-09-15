@@ -2,6 +2,7 @@
 title: "Get Started with Ruby SDK"
 description: "Kickstart your Contentstack app development with our Ruby SDK guide. Discover setup essentials, query basics, and optimize with regional data configuration."
 url: /developers/sdks/content-delivery-sdk/ruby/get-started-with-ruby-sdk
+uid: blta5efb5f11a5e8f40
 ---
 
 # Get Started with Ruby SDK

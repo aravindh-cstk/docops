@@ -2,6 +2,7 @@
 title: "Managing Reports"
 description: "Managing Reports"
 url: /lytics/reports-managing
+uid: blt1c9418198d1a4d66
 ---
 
 # Managing Reports

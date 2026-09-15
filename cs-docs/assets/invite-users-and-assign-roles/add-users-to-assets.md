@@ -2,6 +2,7 @@
 title: "Add Users to Assets"
 description: "Streamline user onboarding and access control in Contentstack Administration with a flexible RBAC model for secure Assets management and space roles."
 url: /assets/add-users-to-assets
+uid: blt6101421ff7d9f28e
 ---
 
 # Add Users to Assets

@@ -2,6 +2,7 @@
 title: "The Data tab in the right panel"
 description: "Learn how the Component Data tab works in Contentstack Studio, including how to bind props, pin entries, and configure per-component data sources."
 url: /studio/the-component-data-tab
+uid: bltab09a5da6852fb81
 ---
 
 # The Data tab in the right panel

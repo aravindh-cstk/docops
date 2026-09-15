@@ -2,6 +2,7 @@
 title: "Set Up Live Preview with GraphQL for CSR"
 description: "Learn how to configure Contentstack's Live Preview with GraphQL for real-time content updates on your Client-side Rendering website."
 url: /headless-cms/set-up-live-preview-with-graphql-for-client-side-rendering
+uid: blt9b8519ccf1e7f9be
 ---
 
 # Set Up Live Preview with GraphQL for CSR

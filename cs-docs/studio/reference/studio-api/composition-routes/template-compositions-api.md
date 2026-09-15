@@ -2,6 +2,7 @@
 title: "Template Compositions in the API"
 description: "A template composition is a full page in Studio, addressable at a URL, one of the two composition types (the other is a section composition)."
 url: /studio/template-compositions-api
+uid: blt28f075c00b139df0
 ---
 
 # Template Compositions in the API

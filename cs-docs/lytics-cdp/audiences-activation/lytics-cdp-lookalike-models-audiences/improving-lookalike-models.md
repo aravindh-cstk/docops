@@ -2,6 +2,7 @@
 title: "Improving Lookalike Models"
 description: "Building effective Lookalike Models can be an iterative process. To help with these iterations, Lytics provides diagnostic messages that identify ways to…"
 url: /lytics/improving-lookalike-models
+uid: blt4444f66320b1c539
 ---
 
 # Improving Lookalike Models

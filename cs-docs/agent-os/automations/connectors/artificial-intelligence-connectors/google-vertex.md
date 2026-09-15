@@ -2,6 +2,7 @@
 title: "Google Vertex"
 description: "Use the Google Vertex connector to generate responses from the Gemini API model based on user prompts."
 url: /agent-os/google-vertex
+uid: bltc45880b0a3b19b10
 ---
 
 # Google Vertex

@@ -2,6 +2,7 @@
 title: "Vimeo App Installation Guide"
 description: "The Contentstack Marketplace Vimeo app fetches digital assets (videos) from your Vimeo account into Contentstack entries."
 url: /marketplace/vimeo
+uid: blt49bc27b5c539ebaa
 ---
 
 # Vimeo App Installation Guide

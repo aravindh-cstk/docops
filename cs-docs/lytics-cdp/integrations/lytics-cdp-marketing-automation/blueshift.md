@@ -2,6 +2,7 @@
 title: "Blueshift"
 description: "Learn how to connect Lytics with Blueshift to export Lytics audiences as user profiles for cross-channel email, SMS, and push campaigns, including authorization setup and export job configuration."
 url: /lytics/blueshift
+uid: blt81ed43f6ebe7cd22
 ---
 
 # Blueshift

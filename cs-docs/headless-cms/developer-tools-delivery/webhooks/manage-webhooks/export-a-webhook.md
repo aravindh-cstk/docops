@@ -2,6 +2,7 @@
 title: "Export a Webhook"
 description: "Easily export webhooks in Contentstack with our step-by-step guide. Ensure seamless integration and safeguard your configurations."
 url: /headless-cms/export-a-webhook
+uid: blt2772c99df4e12b21
 ---
 
 # Export a Webhook

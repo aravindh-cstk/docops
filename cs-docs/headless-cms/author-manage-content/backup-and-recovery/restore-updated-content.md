@@ -2,6 +2,7 @@
 title: "Restore Updated Content"
 description: "Learn to restore lost entry data from entries after content type updates using Contentstack’s Versioning API or by contacting support."
 url: /headless-cms/restore-updated-content
+uid: blt7d029f22a113f8c0
 ---
 
 # Restore Updated Content

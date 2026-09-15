@@ -2,6 +2,7 @@
 title: "Amazon SQS"
 description: "Learn how to export Lytics trigger events to Amazon SQS, including AWS Keys authorization setup, configuring the Export Activity Data job, and the JSON message format produced when a user's segment membership changes."
 url: /lytics/aws-sqs-overview
+uid: bltda9b40db66d4ad2d
 ---
 
 # Amazon SQS

@@ -2,6 +2,7 @@
 title: "Caching Guide for Contentstack Launch"
 description: "Optimize Contentstack Launch caching with CDN, HTTP headers & Automate. Learn revalidation strategies for static/dynamic content. Boost performance & avoid conflicts."
 url: /launch/caching-guide-for-contentstack-launch
+uid: blt2012fcd75e029e92
 ---
 
 # Caching Guide for Contentstack Launch

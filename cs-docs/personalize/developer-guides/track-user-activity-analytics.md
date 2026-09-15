@@ -2,6 +2,7 @@
 title: "Track User Activity for Analytics"
 description: "Track user activity in Contentstack Personalize to measure impressions, conversions, and A/B test performance with analytics."
 url: /personalize/track-user-activity-analytics
+uid: bltc8761c2ad7845e85
 ---
 
 # Track User Activity for Analytics

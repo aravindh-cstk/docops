@@ -2,6 +2,7 @@
 title: "Edit a Custom Attribute"
 description: "Learn how to edit custom attributes in Contentstack Personalize to maintain accurate audience targeting."
 url: /personalize/edit-custom-attribute
+uid: blt56b5b15da683e5ca
 ---
 
 # Edit a Custom Attribute

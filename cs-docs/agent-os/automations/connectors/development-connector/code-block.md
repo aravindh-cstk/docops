@@ -2,6 +2,7 @@
 title: "Code Block"
 description: "The Code Block Connector executes the JavaScript code and returns the expected output."
 url: /agent-os/code-block
+uid: blt3c26056878a4d01c
 ---
 
 # Code Block

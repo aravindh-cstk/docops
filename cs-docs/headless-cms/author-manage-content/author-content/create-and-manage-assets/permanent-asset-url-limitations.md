@@ -2,6 +2,7 @@
 title: "Permanent Asset URL Limitations"
 description: "Understand the limitations of Contentstack permanent asset URLs, including a 255-character slug limit and one-time generation restrictions."
 url: /headless-cms/permanent-asset-url-limitations
+uid: bltcb7b5c79cfb29fa8
 ---
 
 # Permanent Asset URL Limitations

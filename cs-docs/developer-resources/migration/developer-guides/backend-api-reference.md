@@ -2,6 +2,7 @@
 title: "Backend API Reference"
 description: "Explore a detailed backend API guide on configurations, authentication, and project management. Enhance security and maintainability. Download now!"
 url: /headless-cms/backend-api-reference
+uid: bltbb16735daff5c1ee
 ---
 
 # Backend API Reference

@@ -2,6 +2,7 @@
 title: "Sub Automation Trigger"
 description: "Use the Sub Automation trigger to invoke a sub automation action."
 url: /agent-os/sub-automation-trigger
+uid: blte3ef5f20ef60269b
 ---
 
 # Sub Automation Trigger

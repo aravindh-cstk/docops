@@ -2,6 +2,7 @@
 title: "Reply to a Review Comment"
 description: "Learn how to reply to review comments within shared content previews in Contentstack."
 url: /headless-cms/reply-to-a-review-comment
+uid: bltc651f64979126726
 ---
 
 # Reply to a Review Comment

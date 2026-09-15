@@ -2,6 +2,7 @@
 title: "Rename a Language"
 description: "steps to rename a language in Contentstack"
 url: /headless-cms/rename-a-language
+uid: blt8ba0b818bf0846c4
 ---
 
 # Rename a Language

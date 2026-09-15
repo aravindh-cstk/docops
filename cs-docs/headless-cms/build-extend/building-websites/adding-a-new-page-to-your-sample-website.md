@@ -2,6 +2,7 @@
 title: "Adding a New Page to Your Sample Website"
 description: "Integrate a “Menu” page into your website with Contentstack. Follow this guide for content creation, code updates, and deployment to get your page live quickly and efficiently."
 url: /headless-cms/adding-a-new-page-to-your-sample-website
+uid: blt6a1e035d4c9fc4d7
 ---
 
 # Adding a New Page to Your Sample Website

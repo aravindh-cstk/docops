@@ -2,6 +2,7 @@
 title: "Freeform landing template with Pinned Data"
 description: "Build a Freeform landing page template that assembles content from pinned entries and a live pinned query, with no connected content type required."
 url: /studio/freeform-landing-page-template
+uid: bltbcb254d60a231f92
 ---
 
 # Freeform landing template with Pinned Data

@@ -2,6 +2,7 @@
 title: "Add Custom Languages in Assets"
 description: "Learn how to create custom languages for asset localization in Contentstack, enabling regional variants and internal formats for seamless content management."
 url: /assets/add-custom-languages-in-assets
+uid: bltcb9bd6c3f9e84a68
 ---
 
 # Add Custom Languages in Assets

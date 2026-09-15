@@ -2,6 +2,7 @@
 title: "About Content Modeling"
 description: "Master content modeling in Contentstack. Learn how to define, structure, and develop content types for scalable digital experiences."
 url: /headless-cms/about-content-modeling
+uid: bltfc4352fcce29787b
 ---
 
 # About Content Modeling

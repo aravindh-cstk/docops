@@ -2,6 +2,7 @@
 title: "Using Conditional Paths to Customize Automations"
 description: "Using Conditional Paths to Customize Automations"
 url: /agent-os/using-conditional-paths-to-customize-automations
+uid: blt1298e3c41179dcf6
 ---
 
 # Using Conditional Paths to Customize Automations

@@ -2,6 +2,7 @@
 title: "AI Segment Translation"
 description: "Translate SegmentQL and FilterQL expressions into human-readable descriptions."
 url: /lytics/ai-segment-translation
+uid: blt16f04e3e46afb2c4
 ---
 
 # AI Segment Translation

@@ -2,6 +2,7 @@
 title: "Edit a Voice Profile"
 description: "Edit your Voice Profile's name, style, communication style mixer settings, and custom details for on-brand content."
 url: /brand-kit/edit-a-voice-profile
+uid: blt7db0d26111db4b29
 ---
 
 # Edit a Voice Profile

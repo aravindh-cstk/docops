@@ -2,6 +2,7 @@
 title: "About Contentstack Management Actions"
 description: "Use the Contentstack Management connector to automate content types, entries, assets, releases, and publish queue related actions in Contentstack."
 url: /agent-os/about-contentstack-management-actions
+uid: blt0d093729d81cf180
 ---
 
 # About Contentstack Management Actions

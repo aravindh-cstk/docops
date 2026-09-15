@@ -2,6 +2,7 @@
 title: "Netlify Trigger"
 description: "Configure the Netlify trigger to sync workflows with deployment status and form submissions using a Site ID and personal access token."
 url: /agent-os/netlify-trigger
+uid: blt057e94fa262d3979
 ---
 
 # Netlify Trigger

@@ -2,6 +2,7 @@
 title: "Import Content Using the CLI | V1.x.x"
 description: "Import content efficiently with Contentstack’s latest Command-line Interface commands to streamline data onboarding and content setup."
 url: /headless-cms/import-content-using-the-cli/v1
+uid: blt1ee86e6419f390f8
 ---
 
 # Import Content Using the CLI | V1.x.x

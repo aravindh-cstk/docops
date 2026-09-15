@@ -2,6 +2,7 @@
 title: "Framework Recipe: Next.js Pages Router"
 description: "getServerSideProps fetches, document.tsx injects styles and metadata, then the page component renders."
 url: /studio/framework-recipe-nextjs-pages-router
+uid: blte9701b642bc7264b
 ---
 
 # Framework Recipe: Next.js Pages Router

@@ -2,6 +2,7 @@
 title: "Stack Dashboard Location"
 description: "Use the Dashboard Location to create widgets for real-time stack usage, published entries, and daily to-dos."
 url: /developer-hub/dashboard-location
+uid: blt338b5d229936634a
 ---
 
 # Stack Dashboard Location

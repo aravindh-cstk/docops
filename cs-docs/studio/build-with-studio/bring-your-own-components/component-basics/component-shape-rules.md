@@ -2,6 +2,7 @@
 title: "How to shape components for Studio: five rules"
 description: "Five rules for building React components that bind cleanly to Studio: one prop per CT field, no hardcoded children, wrappers use slots, structural name-matching, Sections are the reusable unit."
 url: /studio/component-shape-rules
+uid: blta2acf3335696c6b7
 ---
 
 # How to shape components for Studio: five rules

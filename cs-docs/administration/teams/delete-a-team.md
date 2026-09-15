@@ -2,6 +2,7 @@
 title: "Delete a Team"
 description: "Learn how to delete an existing team in Contentstack."
 url: /administration/delete-a-team
+uid: bltf590b28cd8080534
 ---
 
 # Delete a Team

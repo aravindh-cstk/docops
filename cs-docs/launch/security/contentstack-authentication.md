@@ -2,6 +2,7 @@
 title: "Contentstack Authentication for Environments"
 description: "Learn how to restrict access to your Launch environments to your Contentstack Organization members using the Contentstack Authentication feature in Contentstack Launch."
 url: /launch/contentstack-authentication
+uid: bltbb5fc5e7cf487cdd
 ---
 
 # Contentstack Authentication for Environments

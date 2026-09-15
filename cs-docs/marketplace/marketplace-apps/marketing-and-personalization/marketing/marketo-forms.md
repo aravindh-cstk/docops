@@ -2,6 +2,7 @@
 title: "Marketo Forms App Installation Guide"
 description: "Marketo Forms app lets you display customized forms from the Marketo Forms dashboard within your Contentstack entries."
 url: /marketplace/marketo-forms
+uid: bltd0152641e2767df1
 ---
 
 # Marketo Forms App Installation Guide

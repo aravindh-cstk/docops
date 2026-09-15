@@ -2,6 +2,7 @@
 title: "HubSpot"
 description: "HubSpot is a CRM platform that provides tools for social media marketing, content management, web analytics, landing pages, customer support, and search…"
 url: /lytics/hubspot
+uid: blt9649a4f5fe6ef05a
 ---
 
 # HubSpot

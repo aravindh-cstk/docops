@@ -2,6 +2,7 @@
 title: "Global Fields within Group Fields"
 description: "Learn to use Global Fields within a Group Field in Contentstack to ensure consistency and simplify updates across content types."
 url: /headless-cms/global-fields-within-group-fields
+uid: blt7f649d10a65303c8
 ---
 
 # Global Fields within Group Fields

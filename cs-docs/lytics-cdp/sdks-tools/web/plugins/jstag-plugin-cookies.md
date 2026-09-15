@@ -2,6 +2,7 @@
 title: "cookies Plugin"
 description: "Read, write, and delete cookies from the JSTag"
 url: /lytics/jstag-plugin-cookies
+uid: bltdd600a9c52b69dea
 ---
 
 # cookies Plugin

@@ -2,6 +2,7 @@
 title: "Lytics Limitations"
 description: "Explore Contentstack Lytics limits for events, profiles, and integrations, and learn how to request limit increases."
 url: /lytics/limitations
+uid: bltc445db81111d4dbf
 ---
 
 # Lytics Limitations

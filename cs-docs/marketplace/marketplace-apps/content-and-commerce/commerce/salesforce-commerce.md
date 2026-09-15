@@ -2,6 +2,7 @@
 title: "Salesforce Commerce App Installation Guide"
 description: "Learn how to install and configure the Salesforce Commerce app in Contentstack to sync products, manage categories, and build unified commerce experiences."
 url: /marketplace/salesforce-commerce
+uid: blt932332f47526b774
 ---
 
 # Salesforce Commerce App Installation Guide

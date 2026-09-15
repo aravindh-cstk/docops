@@ -2,6 +2,7 @@
 title: "Deploy a Release"
 description: "Deploy releases in Contentstack to publish or unpublish items in a specific environment. Learn how to schedule releases."
 url: /headless-cms/deploy-a-release
+uid: blt3a73095862647640
 ---
 
 # Deploy a Release

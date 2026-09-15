@@ -2,6 +2,7 @@
 title: "Google Ads"
 description: "Google Ads is an online advertising service that allows businesses to promote their products and services on Google searches and across the web."
 url: /lytics/google-ads-overview
+uid: blt77c484228e5366ba
 ---
 
 # Google Ads

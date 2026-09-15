@@ -2,6 +2,7 @@
 title: "Track and Edit Content in Real-time"
 description: "Track and Edit Content in Real-time"
 url: /headless-cms/track-and-edit-content-in-real-time
+uid: blt74fa6304c83f5c78
 ---
 
 # Track and Edit Content in Real-time

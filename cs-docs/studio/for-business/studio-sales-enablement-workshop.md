@@ -2,6 +2,7 @@
 title: "Studio Sales Enablement Workshop"
 description: "Before the workshop, every attendee runs one setup script that stands up their own stack, seeds it with Red Panda content, and creates a Studio project."
 url: /studio/studio-sales-enablement-workshop
+uid: blt088467a51c324677
 ---
 
 # Studio Sales Enablement Workshop

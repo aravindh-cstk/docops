@@ -2,6 +2,7 @@
 title: "Contentstack CDN Cache Management"
 description: "The CDN ensures that the cache is always fresh through purging old data and caching new data. Read more about Contentstack's CDN Cache Management here."
 url: /headless-cms/contentstack-cdn-cache-management
+uid: bltba54decf052f5498
 ---
 
 # Contentstack CDN Cache Management

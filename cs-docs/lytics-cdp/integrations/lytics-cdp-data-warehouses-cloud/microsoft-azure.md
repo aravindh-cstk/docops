@@ -2,6 +2,7 @@
 title: "Microsoft Azure"
 description: "Microsoft Azure is a Cloud Computing Platform that provides a range of services such as Databases, Mobile, Networking, Security, Storage, Web, Windows…"
 url: /lytics/microsoft-azure
+uid: blt08163bb54cd874fd
 ---
 
 # Microsoft Azure

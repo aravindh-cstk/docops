@@ -2,6 +2,7 @@
 title: "Reopen a Review Comment"
 description: "Learn how to reopen a resolved review comment in shared content previews within Contentstack."
 url: /headless-cms/reopen-a-review-comment
+uid: blt53c16a1e74ea3224
 ---
 
 # Reopen a Review Comment

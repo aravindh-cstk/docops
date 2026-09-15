@@ -2,6 +2,7 @@
 title: "Import IdP Metadata"
 description: "Configure an SSO connection by importing your identity provider's SAML metadata from a URL or an XML file, instead of entering each field manually."
 url: /administration/import-idp-metadata
+uid: blt5a5e126fabcaf0d2
 ---
 
 # Import IdP Metadata

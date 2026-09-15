@@ -2,6 +2,7 @@
 title: "jsonpTransport Plugin"
 description: "Send data using JSONP via a script tag"
 url: /lytics/jstag-plugin-jsonp-transport
+uid: blt6ab0e1a3e88e479b
 ---
 
 # jsonpTransport Plugin

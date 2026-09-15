@@ -2,6 +2,7 @@
 title: "Automate Recipe for Content Type Propagation"
 description: "This solution guide aids customers in replicating content types across different stacks for consistent results."
 url: /headless-cms/automate-recipe-for-content-type-propagation
+uid: bltdad95215438eefa7
 ---
 
 # Automate Recipe for Content Type Propagation

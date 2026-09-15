@@ -2,6 +2,7 @@
 title: "Mandatory"
 description: "Learn how to use the Mandatory property in Contentstack to ensure required fields are completed before publishing entries."
 url: /headless-cms/mandatory
+uid: bltd96b6b5a2b80e70f
 ---
 
 # Mandatory

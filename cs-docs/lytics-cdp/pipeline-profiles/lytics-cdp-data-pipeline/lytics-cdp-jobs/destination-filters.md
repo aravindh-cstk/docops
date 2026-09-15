@@ -2,6 +2,7 @@
 title: "Destination Filters"
 description: "Destination filters are a powerful feature that allows you to exclude specific audiences from workflows, effectively creating suppression lists for your…"
 url: /lytics/destination-filters
+uid: bltc8fd466ef3178c5c
 ---
 
 # Destination Filters

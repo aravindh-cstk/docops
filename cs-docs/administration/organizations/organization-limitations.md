@@ -2,6 +2,7 @@
 title: "Organization Limitations"
 description: "Organization Limitations"
 url: /administration/organization-limitations
+uid: bltaa137e9d17a197b9
 ---
 
 # Organization Limitations

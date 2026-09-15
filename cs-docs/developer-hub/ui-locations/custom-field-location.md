@@ -2,6 +2,7 @@
 title: "Custom Field Location"
 description: "Use the Custom Field location to enhance your content types and integrate with apps like Bynder and Shopify."
 url: /developer-hub/custom-field-location
+uid: blt4aaddb14a82a57b6
 ---
 
 # Custom Field Location

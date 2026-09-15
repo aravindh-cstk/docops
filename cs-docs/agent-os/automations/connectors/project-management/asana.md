@@ -2,6 +2,7 @@
 title: "Asana"
 description: "Use the Asana connector to create, update, and fetch projects, tasks, and users."
 url: /agent-os/asana
+uid: bltf93c14e98e773cb3
 ---
 
 # Asana

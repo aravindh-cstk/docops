@@ -288,18 +288,22 @@ function writeFile(rel: string, content: string, dryRun: boolean): void {
  */
 export function buildArticle(entry: Entry, urlOverride?: string | null): string | null {
   // Delegates to the shared converter in lib/entry-to-markdown.ts, which was
-  // lifted out of this function. `stampUid`/`includeTags` are off so the output
-  // is byte-identical to what this pass has always written: adding two new
-  // frontmatter keys across the whole 1500-file tree is its own change.
+  // lifted out of this function.
+  //
+  // `stampUid` and `includeTags` used to be off here so the output stayed
+  // byte-identical to what this pass had always written, with a note that adding
+  // two frontmatter keys across the tree deserved its own change. This is that
+  // change. They now use the converter's defaults, which are on, so this writer
+  // finally agrees with cms-pull-prod.ts and cms-pull-sandbox.ts. Those two have
+  // always stamped, so the three have been overwriting each other's output.
+  //
+  // uid: is the ownership marker Build 3 needs to tell a CMS-owned file from a
+  // hand-authored one. tags: carries the template-<type> tag Build 2 reads.
   //
   // urlOverride carries the entry's CURRENT url while the body comes from the
   // version published to production, and the two can disagree. See
   // EntryMarkdownOptions.urlOverride for why the live url has to win.
-  return entryToMarkdown(entry as DocsArticleLike, {
-    urlOverride,
-    stampUid: false,
-    includeTags: false,
-  });
+  return entryToMarkdown(entry as DocsArticleLike, { urlOverride });
 }
 
 /**

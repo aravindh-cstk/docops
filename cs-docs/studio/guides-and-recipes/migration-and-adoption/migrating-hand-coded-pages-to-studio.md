@@ -2,6 +2,7 @@
 title: "Migrate hand-coded pages to Studio: one route at a time"
 description: "Step-by-step playbook for incrementally migrating hand-coded Contentstack routes to Studio, one section and template at a time."
 url: /studio/migrating-hand-coded-pages-to-studio
+uid: blt6532020012535c31
 ---
 
 # Migrate hand-coded pages to Studio: one route at a time

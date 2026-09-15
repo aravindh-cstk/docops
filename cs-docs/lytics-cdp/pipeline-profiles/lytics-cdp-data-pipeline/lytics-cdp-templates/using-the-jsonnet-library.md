@@ -2,6 +2,7 @@
 title: "Using the Jsonnet Library"
 description: "For convenience, Jsonnet templates can import Lytics' custom lytemplates.libsonnet library, which contains utilities for common operations on profiles in…"
 url: /lytics/using-the-jsonnet-library
+uid: bltcbda824b0d39b5e5
 ---
 
 # Using the Jsonnet Library

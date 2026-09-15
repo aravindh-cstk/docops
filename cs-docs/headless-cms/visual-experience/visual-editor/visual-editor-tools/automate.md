@@ -2,6 +2,7 @@
 title: "Automate"
 description: "Run predefined automation workflows in Visual Editor to trigger validations, approvals, and custom actions directly from the editing interface."
 url: /headless-cms/automate
+uid: blt6211e6131a195608
 ---
 
 # Automate

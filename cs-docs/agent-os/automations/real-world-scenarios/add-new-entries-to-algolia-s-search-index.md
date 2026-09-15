@@ -2,6 +2,7 @@
 title: "Add New Entries to Algolia’s Search Index"
 description: "Learn how to automatically add entries to Algolia’s Search Index using Contentstack Agent OS with trigger-based indexing workflows."
 url: /agent-os/add-new-entries-to-algolia-s-search-index
+uid: blt9727c537fc739442
 ---
 
 # Add New Entries to Algolia’s Search Index

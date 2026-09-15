@@ -2,6 +2,7 @@
 title: "Using the Sync API with PHP SDK"
 description: "steps to use the Sync API with PHP SDK"
 url: /developers/sdks/content-delivery-sdk/php/using-the-sync-api-with-php-sdk
+uid: bltece25db1f9122b7b
 ---
 
 # Using the Sync API with PHP SDK

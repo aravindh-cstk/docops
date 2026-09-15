@@ -2,6 +2,7 @@
 title: "IdP Role Mapping"
 description: "Assign Contentstack roles to users based on IdP group/role mappings for SSO-enabled organizations."
 url: /administration/idp-role-mapping
+uid: blt4961d842f0001a35
 ---
 
 # IdP Role Mapping

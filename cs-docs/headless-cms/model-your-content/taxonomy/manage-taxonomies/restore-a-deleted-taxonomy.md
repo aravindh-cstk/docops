@@ -2,6 +2,7 @@
 title: "Restore a Deleted Taxonomy"
 description: "Easily recover taxonomies within 14 days from deletion. Restore with associated content types. Apply filters for efficient search."
 url: /headless-cms/restore-a-deleted-taxonomy
+uid: bltc914013f7a144dfe
 ---
 
 # Restore a Deleted Taxonomy

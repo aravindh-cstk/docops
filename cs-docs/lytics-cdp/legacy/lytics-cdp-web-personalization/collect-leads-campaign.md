@@ -2,6 +2,7 @@
 title: "Collect Leads Campaign"
 description: "Learn how the Collect Leads campaign type converts unknown website visitors into known leads with a configurable form, and how to target it to specific pages or audience segments."
 url: /lytics/collect-leads-campaign
+uid: blt644ba5feeb0edf91
 ---
 
 # Collect Leads Campaign

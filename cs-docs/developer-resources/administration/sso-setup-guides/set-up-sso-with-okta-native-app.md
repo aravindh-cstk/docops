@@ -2,6 +2,7 @@
 title: "Set up SSO with Okta Native App"
 description: "Set up single sign-on in Contentstack with Okta as your SAML 2.0 identity provider, using the native Contentstack app from the Okta App Catalog."
 url: /administration/set-up-sso-with-okta-native-app
+uid: blt644ee107119083b0
 ---
 
 # Set up SSO with Okta Native App

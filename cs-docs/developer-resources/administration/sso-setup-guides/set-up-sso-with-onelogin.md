@@ -2,6 +2,7 @@
 title: "Set up SSO with OneLogin"
 description: "Set up single sign-on in Contentstack with OneLogin as your SAML 2.0 identity provider, as one of up to five IdP connections in an organization."
 url: /administration/set-up-sso-with-onelogin
+uid: blta125cf07d352661c
 ---
 
 # Set up SSO with OneLogin

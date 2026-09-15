@@ -2,6 +2,7 @@
 title: "Design-First Quickstart: From Figma to a Rendered Page"
 description: "This Quickstart is the fastest path from a design to a live Studio-rendered page."
 url: /studio/quickstart-design-first
+uid: blt14bffcef551091e9
 ---
 
 # Design-First Quickstart: From Figma to a Rendered Page

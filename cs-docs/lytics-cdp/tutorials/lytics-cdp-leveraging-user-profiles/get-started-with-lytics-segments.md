@@ -2,6 +2,7 @@
 title: "Get Started with Lytics Segments"
 description: "Lets take an in-depth look at Lytics segments. We'll cover how to define a segment with SegmentQL or SegmentAST, as well as the Segment API endpoints to…"
 url: /lytics/get-started-with-lytics-segments
+uid: bltf5060de498a9f0c4
 ---
 
 # Get Started with Lytics Segments

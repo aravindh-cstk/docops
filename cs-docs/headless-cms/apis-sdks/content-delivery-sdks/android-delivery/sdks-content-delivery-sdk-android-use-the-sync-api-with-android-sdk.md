@@ -2,6 +2,7 @@
 title: "Use the Sync API With Android SDK"
 description: "methods for using the Sync API With Android SDK"
 url: /developers/sdks/content-delivery-sdk/android/use-the-sync-api-with-android-sdk
+uid: blt024ca57eca995160
 ---
 
 # Use the Sync API With Android SDK

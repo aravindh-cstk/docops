@@ -2,6 +2,7 @@
 title: "Mobile and Smart Devices System Architecture"
 description: "Architecture diagram for a mobile or a smart device"
 url: /headless-cms/mobile-and-smart-devices-system-architecture
+uid: bltfcc3f1c01e7b3fca
 ---
 
 # Mobile and Smart Devices System Architecture

@@ -2,6 +2,7 @@
 title: "Transfer Stack Ownership"
 description: "Easily transfer stack ownership in Contentstack during team changes with our step-by-step guide. Only current owners can initiate the transfer."
 url: /headless-cms/transfer-stack-ownership
+uid: blt308b76f37d62c62d
 ---
 
 # Transfer Stack Ownership

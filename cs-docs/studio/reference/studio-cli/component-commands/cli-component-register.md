@@ -2,6 +2,7 @@
 title: "Register local components"
 description: "Register local UI components with Studio by scanning a file or directory. The CLI infers each prop schema and writes the registerComponent calls."
 url: /studio/cli-component-register
+uid: blt00e47f256da1bf9c
 ---
 
 # Register local components

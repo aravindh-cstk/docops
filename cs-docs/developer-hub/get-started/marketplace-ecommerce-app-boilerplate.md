@@ -2,6 +2,7 @@
 title: "Marketplace Ecommerce App Boilerplate"
 description: "Marketplace Ecommerce App Boilerplate provides a template to configure and create your ecommerce app and use it within Contentstack."
 url: /developer-hub/marketplace-ecommerce-app-boilerplate
+uid: blta4c19e17f918cbbd
 ---
 
 # Marketplace Ecommerce App Boilerplate

@@ -2,6 +2,7 @@
 title: "About Releases"
 description: "Simplify your content deployment with Contentstack's Releases, enabling seamless publishing of entries and assets across environments efficiently."
 url: /headless-cms/about-releases
+uid: blt861969cb8c3858d7
 ---
 
 # About Releases

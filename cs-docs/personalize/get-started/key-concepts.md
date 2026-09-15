@@ -2,6 +2,7 @@
 title: "Key Concepts"
 description: "Learn the core concepts behind Contentstack Personalize - experiences, variants, audiences, attributes, events, and how they work together for real-time personalization."
 url: /personalize/key-concepts
+uid: blta0a59556182aa043
 ---
 
 # Key Concepts

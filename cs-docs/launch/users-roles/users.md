@@ -2,6 +2,7 @@
 title: "Users"
 description: "Learn about the different users and their roles in Contentstack Launch."
 url: /launch/users
+uid: bltba1dc05d932d65a9
 ---
 
 # Users

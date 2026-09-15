@@ -2,6 +2,7 @@
 title: "Executing an Automation"
 description: "Learn to execute automations in Contentstack's Automate with this step-by-step guide."
 url: /agent-os/executing-an-automation
+uid: blt69cc0eaaf730ddd2
 ---
 
 # Executing an Automation

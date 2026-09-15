@@ -2,6 +2,7 @@
 title: "Studio Glossary for Content Authors"
 description: "Every term you'll hit as a content author, defined without engineering jargon. Bookmark this page. If a Studio doc uses a word that doesn't click, come."
 url: /studio/studio-glossary-for-authors
+uid: bltb44fd7e08ade07b4
 ---
 
 # Studio Glossary for Content Authors

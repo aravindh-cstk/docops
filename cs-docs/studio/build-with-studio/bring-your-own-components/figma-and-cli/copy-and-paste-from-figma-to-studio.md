@@ -2,6 +2,7 @@
 title: "Copy and Paste from Figma to Studio"
 description: "Learn how to paste a Figma frame directly into the Studio canvas and convert Figma nodes into a composition tree without writing any code."
 url: /studio/copy-and-paste-from-figma-to-studio
+uid: blt5f6f454e72859bf9
 ---
 
 # Copy and Paste from Figma to Studio

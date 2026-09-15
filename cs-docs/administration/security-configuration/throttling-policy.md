@@ -2,6 +2,7 @@
 title: "Throttling Policy"
 description: "Throttling Policy"
 url: /administration/throttling-policy
+uid: bltcfd5605d7a520d58
 ---
 
 # Throttling Policy

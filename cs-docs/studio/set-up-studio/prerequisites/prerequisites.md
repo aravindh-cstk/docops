@@ -2,6 +2,7 @@
 title: "Prerequisites"
 description: "What you need before installing Contentstack Studio: stack credentials, tokens, environment settings, and dev environment requirements."
 url: /studio/prerequisites
+uid: bltf15c81ccd0a68e2c
 ---
 
 # Prerequisites

@@ -2,6 +2,7 @@
 title: "Security Configuration"
 description: "Boost organization security with Contentstack's Security Configuration feature. Set up multi-factor authentication and password policies to enforce strong user protection."
 url: /administration/security-configuration
+uid: blt2c421ffc517c576e
 ---
 
 # Security Configuration

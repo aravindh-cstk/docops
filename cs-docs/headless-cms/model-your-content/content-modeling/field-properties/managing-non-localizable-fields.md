@@ -2,6 +2,7 @@
 title: "Managing Non-Localizable Fields"
 description: "Learn how to enable, disable, and manage non-localizable fields in Group (Multiple), Modular Blocks, and Global Fields to ensure consistency across locales."
 url: /headless-cms/managing-non-localizable-fields
+uid: bltf520f774e26ea749
 ---
 
 # Managing Non-Localizable Fields

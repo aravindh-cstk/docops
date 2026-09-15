@@ -2,6 +2,7 @@
 title: "Microsoft Teams"
 description: "Microsoft Teams"
 url: /lytics/microsoft-teams
+uid: blt1aebc4ecd651b3bd
 ---
 
 # Microsoft Teams

@@ -2,6 +2,7 @@
 title: "Provider Configuration Endpoints"
 description: "API endpoints for discovering available resources from connected third-party platforms."
 url: /lytics/provider-configuration-endpoints
+uid: bltdf7befc75f1a2496
 ---
 
 # Provider Configuration Endpoints

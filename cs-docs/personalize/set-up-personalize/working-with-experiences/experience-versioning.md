@@ -2,6 +2,7 @@
 title: "Experience Versioning"
 description: "Learn more about Personalize's experience versioning to create, test and optimize personalized content."
 url: /personalize/experience-versioning
+uid: blt827f9242ef38b9df
 ---
 
 # Experience Versioning

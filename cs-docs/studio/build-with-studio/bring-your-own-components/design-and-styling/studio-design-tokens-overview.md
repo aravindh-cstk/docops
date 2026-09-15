@@ -2,6 +2,7 @@
 title: "Studio Design Tokens Overview"
 description: "Register your design system's colors, spacing, and typography with Studio so the Design panel offers brand values instead of Studio's neutral defaults."
 url: /studio/studio-design-tokens-overview
+uid: blt2785cf54fb6136e5
 ---
 
 # Studio Design Tokens Overview

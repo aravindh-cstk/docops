@@ -2,6 +2,7 @@
 title: "Bulk Publish Non-localizable Field Data"
 description: "Learn how to bulk publish Non-localizable field updates in localized entries from the master-language entry's publishing modal in Contentstack."
 url: /headless-cms/bulk-publish-non-localizable-field-data
+uid: blt49572b78a0b213d3
 ---
 
 # Bulk Publish Non-localizable Field Data

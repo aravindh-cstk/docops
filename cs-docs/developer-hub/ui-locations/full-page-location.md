@@ -2,6 +2,7 @@
 title: "Full Page Location"
 description: "Learn how to easily add the Full Page location for your app via the Developer Hub Console."
 url: /developer-hub/full-page-location
+uid: blte3358a4a8a3f3653
 ---
 
 # Full Page Location

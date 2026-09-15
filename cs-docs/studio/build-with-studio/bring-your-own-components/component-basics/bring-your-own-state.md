@@ -2,6 +2,7 @@
 title: "Bring Your Own State (BYOS)"
 description: "Share state across Studio components with declared state variables, plug in Redux/Zustand or web storage via getState/setState, and let authors wire buttons to your app's functions with action props."
 url: /studio/bring-your-own-state
+uid: blt23bf2b7b5a4bbacc
 ---
 
 # Bring Your Own State (BYOS)

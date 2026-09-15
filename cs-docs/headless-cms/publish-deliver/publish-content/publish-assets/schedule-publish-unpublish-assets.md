@@ -2,6 +2,7 @@
 title: "Schedule Publish/Unpublish Assets"
 description: "Schedule Publish/Unpublish Assets"
 url: /headless-cms/schedule-publish-unpublish-assets
+uid: blt0b7a88e50274a2bd
 ---
 
 # Schedule Publish/Unpublish Assets

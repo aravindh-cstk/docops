@@ -2,6 +2,7 @@
 title: "Drafts"
 description: "Learn how to use the Drafts panel in Visual Editor to review, compare, and revert unsaved content changes before publishing."
 url: /headless-cms/drafts
+uid: blt98f8cc908eb48163
 ---
 
 # Drafts

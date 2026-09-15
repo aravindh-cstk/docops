@@ -2,6 +2,7 @@
 title: "Install the Lytics JStag SDK"
 description: "Learn how to install the Lytics JStag SDK on your front-end, verify the installation, and confirm data is flowing to your Lytics project dashboard."
 url: /lytics/install-lytics-jstag-sdk
+uid: blt74ef1f00168f479d
 ---
 
 # Install the Lytics JStag SDK

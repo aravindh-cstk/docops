@@ -2,6 +2,7 @@
 title: "Block and Inline Properties"
 description: "Learn how to use block and inline properties in Contentstack’s JSON RTE to style, identify, and manipulate content elements with CSS classes and unique IDs."
 url: /headless-cms/block-and-inline-properties
+uid: bltc2b43fa73c67bfcf
 ---
 
 # Block and Inline Properties

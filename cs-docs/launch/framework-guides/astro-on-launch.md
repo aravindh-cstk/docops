@@ -2,6 +2,7 @@
 title: "Astro on Launch"
 description: "Learn how to deploy Astro on Contentstack Launch. Explore SSR, static rendering, ISR, caching, API routes, and environment variable configuration."
 url: /launch/astro-on-launch
+uid: blt9e0d8f28032cac70
 ---
 
 # Astro on Launch

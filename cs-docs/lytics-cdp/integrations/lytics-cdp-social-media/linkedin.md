@@ -2,6 +2,7 @@
 title: "LinkedIn"
 description: "LinkedIn is a professional network platform that allows businesses and marketers to reach their customers. Integrating Lytics with LinkedIn enables you to…"
 url: /lytics/linkedin
+uid: bltee1fbd6274136645
 ---
 
 # LinkedIn

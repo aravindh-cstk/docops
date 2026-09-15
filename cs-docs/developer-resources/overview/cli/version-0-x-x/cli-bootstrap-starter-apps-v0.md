@@ -2,6 +2,7 @@
 title: "Bootstrap Starter Apps | V0.x.x"
 description: "Learn how to Bootstrap Starter Apps using the CLI"
 url: /headless-cms/cli-bootstrap-starter-apps/v0
+uid: bltc569502a4237c38f
 ---
 
 # Bootstrap Starter Apps | V0.x.x

@@ -2,6 +2,7 @@
 title: "Default Segments"
 description: "Categorizing users based on their behaviors and characteristics is pivotal for effective audience targeting and personalization strategies. Lytics…"
 url: /lytics/developer-segments
+uid: blt5841b1728c4c48fc
 ---
 
 # Default Segments

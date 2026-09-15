@@ -2,6 +2,7 @@
 title: "About Swift SDK"
 description: "About Swift SDK"
 url: /developers/sdks/content-delivery-sdk/ios/about-swift-sdk
+uid: blt0503ad5100d7ea1a
 ---
 
 # About Swift SDK

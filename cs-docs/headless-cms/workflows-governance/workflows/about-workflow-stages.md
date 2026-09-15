@@ -2,6 +2,7 @@
 title: "About Workflow Stages"
 description: "Streamline content creation with Contentstack's workflow stages, ensuring efficient management from drafting to final approval for optimized SEO."
 url: /headless-cms/about-workflow-stages
+uid: bltc2a0efbddeacf021
 ---
 
 # About Workflow Stages

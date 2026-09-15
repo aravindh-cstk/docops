@@ -2,6 +2,7 @@
 title: "Getting Started with Contentstack Personalize with A/B Testing: An End-to-End Guide"
 description: "Learn how to get started with Contentstack Personalize using A/B testing in this comprehensive end-to-end guide."
 url: /personalize/get-started-with-personalize-with-ab-test-end-to-end-guide
+uid: blt174d1cc4b54d4f41
 ---
 
 # Getting Started with Contentstack Personalize with A/B Testing: An End-to-End Guide

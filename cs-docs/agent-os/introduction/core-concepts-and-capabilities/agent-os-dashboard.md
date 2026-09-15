@@ -2,6 +2,7 @@
 title: "Agent OS Dashboard"
 description: "Manage and monitor your agents, automations, and executions in one place with the Dashboard for smarter, scalable workflows."
 url: /agent-os/agent-os-dashboard
+uid: blt2a5163f52b0c55a4
 ---
 
 # Agent OS Dashboard

@@ -2,6 +2,7 @@
 title: "ChatGPT"
 description: "Use the ChatGPT connector to generate responses for text and images using the OpenAI platform."
 url: /agent-os/chatgpt
+uid: blt5b212b7d7bcb242d
 ---
 
 # ChatGPT

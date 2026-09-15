@@ -2,6 +2,7 @@
 title: "Add an Environment"
 description: "Learn to add an Environment in Contentstack to manage content delivery and streamline content publishing."
 url: /headless-cms/add-an-environment
+uid: blt93def3b16cf5bf21
 ---
 
 # Add an Environment

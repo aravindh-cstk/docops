@@ -2,6 +2,7 @@
 title: "Studio API: Project Routes"
 description: "Composition routes take a projectUid and nothing else about your stack. That works because the project record carries the rest:"
 url: /studio/studio-api-projects
+uid: blt5dbcd2e2be9b0731
 ---
 
 # Studio API: Project Routes

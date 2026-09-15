@@ -2,6 +2,7 @@
 title: "Back up Existing Content"
 description: "Set up Contentstack Webhooks to back up your content automatically. Ensure data retention and safeguard against accidental deletions."
 url: /headless-cms/back-up-existing-content
+uid: blt5bc67cf9981b3ed1
 ---
 
 # Back up Existing Content

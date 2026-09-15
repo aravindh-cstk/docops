@@ -2,6 +2,7 @@
 title: "Password Protection for Environments"
 description: "Learn how to restrict your Launch environments using the Password Protection feature in Contentstack Launch."
 url: /launch/password-protection
+uid: blt5ecf7eaa59b719fd
 ---
 
 # Password Protection for Environments

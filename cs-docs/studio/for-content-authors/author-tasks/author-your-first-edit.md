@@ -2,6 +2,7 @@
 title: "Make Your First Edit in Studio"
 description: "You're a content author. Your engineering team has already installed Studio, provisioned content types, and built at least one Template with some Sections."
 url: /studio/author-your-first-edit
+uid: bltcd1cbc864e01c595
 ---
 
 # Make Your First Edit in Studio

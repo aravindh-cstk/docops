@@ -2,6 +2,7 @@
 title: "Live Preview Implementation for NextJS SSR App Router"
 description: "Implement Live Preview in NextJS SSR App Router with Contentstack for seamless real-time content updates and previews."
 url: /headless-cms/live-preview-implementation-for-nextjs-ssr-app-router
+uid: blt65aa3411c7ec53b4
 ---
 
 # Live Preview Implementation for NextJS SSR App Router

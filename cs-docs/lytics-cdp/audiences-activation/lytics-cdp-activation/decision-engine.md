@@ -2,6 +2,7 @@
 title: "Decision Engine"
 description: "How Lytics ranks and optimizes experience delivery using Bayesian machine learning."
 url: /lytics/decision-engine
+uid: blt1a2bc16bd1ef9c9e
 ---
 
 # Decision Engine

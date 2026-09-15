@@ -2,6 +2,7 @@
 title: "Personalize Limitations"
 description: "Explore the limitations of Personalize, including customizations via support and API rate limit restrictions."
 url: /personalize/limitations
+uid: blt716f251c29ea041f
 ---
 
 # Personalize Limitations

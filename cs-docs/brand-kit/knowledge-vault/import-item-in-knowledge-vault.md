@@ -2,6 +2,7 @@
 title: "Import Item in Knowledge Vault"
 description: "Learn how to import items into your Knowledge Vault to keep your content structured, current, and consistent across environments, all in one place."
 url: /brand-kit/import-item-in-knowledge-vault
+uid: bltefe485d92c466d86
 ---
 
 # Import Item in Knowledge Vault

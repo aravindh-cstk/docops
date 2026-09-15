@@ -2,6 +2,7 @@
 title: "Add a Preview Environment"
 description: "Preview Environment"
 url: /headless-cms/add-a-preview-environment
+uid: blt04d597269e6f34cb
 ---
 
 # Add a Preview Environment

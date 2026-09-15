@@ -2,6 +2,7 @@
 title: "Campaign Monitor"
 description: "Campaign Monitor is an email marketing platform that allows you to execute email marketing campaigns."
 url: /lytics/campaign-monitor
+uid: blt20fcae70cb4e6c8b
 ---
 
 # Campaign Monitor

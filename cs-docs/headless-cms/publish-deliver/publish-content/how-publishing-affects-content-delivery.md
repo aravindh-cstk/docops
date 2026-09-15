@@ -2,6 +2,7 @@
 title: "How Publishing Affects Content Delivery"
 description: "Understand how publishing states, environments, and locales affect content visibility in Contentstack Delivery APIs and SDKs."
 url: /headless-cms/how-publishing-affects-content-delivery
+uid: blt634d56155ab82ac9
 ---
 
 # How Publishing Affects Content Delivery

@@ -2,6 +2,7 @@
 title: "Delete a Voice Profile"
 description: "Delete a Voice Profile from Brand Kit using our step-by-step guide."
 url: /brand-kit/delete-a-voice-profile
+uid: blt8c2257020007572a
 ---
 
 # Delete a Voice Profile

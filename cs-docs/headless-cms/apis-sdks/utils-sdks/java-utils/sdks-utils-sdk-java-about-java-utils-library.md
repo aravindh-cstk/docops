@@ -2,6 +2,7 @@
 title: "About Java Utils Library"
 description: "The Java Utils library contains all the utilities for the Java SDK."
 url: /developers/sdks/utils-sdk/java/about-java-utils-library
+uid: blt7276f172d5fe32e0
 ---
 
 # About Java Utils Library

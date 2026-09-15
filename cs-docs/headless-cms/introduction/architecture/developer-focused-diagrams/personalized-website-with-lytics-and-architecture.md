@@ -2,6 +2,7 @@
 title: "Personalized Website with Lytics and Personalize"
 description: "Learn to build a personalized website with Contentstack, using Lytics for real-time audiences, Personalize for edge variant decisioning, and Automate for cache invalidation."
 url: /headless-cms/personalized-website-with-lytics-and-architecture
+uid: blt39e181640c64a630
 ---
 
 # Personalized Website with Lytics and Personalize

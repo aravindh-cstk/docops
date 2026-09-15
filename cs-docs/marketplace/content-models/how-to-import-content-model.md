@@ -2,6 +2,7 @@
 title: "How to Import a Content Model"
 description: "Learn how to import content models in Contentstack Marketplace using Automate and reusable JSON templates to streamline content structure setup."
 url: /marketplace/how-to-import-content-model
+uid: blt33d80bb9e4c7141e
 ---
 
 # How to Import a Content Model

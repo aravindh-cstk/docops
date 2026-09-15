@@ -2,6 +2,7 @@
 title: "Client & Server Side Cookies"
 description: "Everything you wanted to know about cookies from client side to server side."
 url: /lytics/client-server-side-cookie-deep-dive
+uid: blt301ee24783ad73fb
 ---
 
 # Client & Server Side Cookies

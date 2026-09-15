@@ -2,6 +2,7 @@
 title: "Smartling"
 description: "Use this connector to add and translate content from your Smartling account."
 url: /agent-os/smartling
+uid: blt4d7ca5decee8439e
 ---
 
 # Smartling

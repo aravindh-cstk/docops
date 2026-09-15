@@ -2,6 +2,7 @@
 title: "About Localization Operator"
 description: "Learn how to use the localization operator in Contentstack's Advanced Search to find entries based on their localization status in specific languages."
 url: /headless-cms/about-localization-operator
+uid: blt8ebdb89dce56d7b3
 ---
 
 # About Localization Operator

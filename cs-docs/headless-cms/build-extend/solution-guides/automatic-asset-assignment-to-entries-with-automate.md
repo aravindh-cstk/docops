@@ -2,6 +2,7 @@
 title: "Automatic Asset Assignment to Entries with Automate"
 description: "This solution guide highlights a specific use case around keeping product data and images within the Contentstack platform."
 url: /headless-cms/automatic-asset-assignment-to-entries-with-automate
+uid: bltff418974f36a59bb
 ---
 
 # Automatic Asset Assignment to Entries with Automate

@@ -2,6 +2,7 @@
 title: "Cancel Scheduled Publishing/Unpublishing for Entries"
 description: "Learn how to cancel scheduled publish or unpublish actions for entries in Contentstack using the Publish Queue, Entry Editor, or API."
 url: /headless-cms/cancel-scheduled-publishing-or-unpublishing-for-entries
+uid: blt95594e6a75b0c626
 ---
 
 # Cancel Scheduled Publishing/Unpublishing for Entries

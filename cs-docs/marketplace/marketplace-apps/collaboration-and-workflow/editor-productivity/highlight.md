@@ -2,6 +2,7 @@
 title: "Highlight App Installation Guide"
 description: "The Marketplace Highlight app lets you highlight the important content within the JSON Rich Text Editor field."
 url: /marketplace/highlight
+uid: blt6f9bcc3e5ff8f002
 ---
 
 # Highlight App Installation Guide

@@ -2,6 +2,7 @@
 title: "AI Configuration : Global AI Settings"
 description: "Manage AI enablement across Contentstack. Use Global AI Settings to centrally enable or disable AI for specific products and control organization-wide usage."
 url: /administration/ai-settings
+uid: blt2c47810bcae9f438
 ---
 
 # AI Configuration : Global AI Settings

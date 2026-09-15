@@ -2,6 +2,7 @@
 title: "Send Newly Transformed Data via Email"
 description: "Use Automations to transform JSON data with modifiers like capitalize and send the result via email using an automation workflow."
 url: /agent-os/send-newly-transformed-data-via-email
+uid: bltaa5cf042012b8410
 ---
 
 # Send Newly Transformed Data via Email

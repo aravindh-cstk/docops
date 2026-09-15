@@ -2,6 +2,7 @@
 title: "Add Languages in Assets"
 description: "Centralize asset localization with Contentstack. Easily add and manage languages for your spaces and workspaces. Improve global consistency."
 url: /assets/add-languages-in-assets
+uid: blt72676dafd0bc603f
 ---
 
 # Add Languages in Assets

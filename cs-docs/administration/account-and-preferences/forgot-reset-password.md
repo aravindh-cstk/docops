@@ -2,6 +2,7 @@
 title: "Forgot (Reset) Password"
 description: "Easily reset your Contentstack password with our step-by-step guide, ensuring quick, secure access to your account. Reset via login page or API."
 url: /administration/forgot-reset-password
+uid: bltc8941fd995938cca
 ---
 
 # Forgot (Reset) Password

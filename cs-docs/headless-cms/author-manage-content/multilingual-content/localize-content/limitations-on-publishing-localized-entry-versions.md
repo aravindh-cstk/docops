@@ -2,6 +2,7 @@
 title: "Limitations on Publishing Localized Entry Versions"
 description: "Limitations on Publishing Localized Entry Versions"
 url: /headless-cms/limitations-on-publishing-localized-entry-versions
+uid: blt9fd73a1e1ddad35d
 ---
 
 # Limitations on Publishing Localized Entry Versions

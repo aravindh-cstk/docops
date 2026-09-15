@@ -2,6 +2,7 @@
 title: "Simple Website with Contentstack Launch"
 description: "Learn to build a simple website with Contentstack Launch, connecting your Git, repository, CMS, and Automate for seamless, serverless deployment and delivery."
 url: /headless-cms/simple-website-with-contentstack-launch
+uid: bltc7163bd2fff20430
 ---
 
 # Simple Website with Contentstack Launch

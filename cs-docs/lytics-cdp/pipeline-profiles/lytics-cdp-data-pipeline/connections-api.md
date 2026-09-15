@@ -2,6 +2,7 @@
 title: "Connections API"
 description: "Manage external database connections for importing and querying data."
 url: /lytics/connections-api
+uid: bltbadf406c0c4a76c4
 ---
 
 # Connections API

@@ -2,6 +2,7 @@
 title: "Studio CLI Chapter Guide"
 description: "The complete Studio CLI reference: install the csdx plugin, connect a project, and run every studio command for components, design tokens, responsive options, and sections."
 url: /studio/cli
+uid: blt598c31f33ff770bb
 ---
 
 # Studio CLI Chapter Guide

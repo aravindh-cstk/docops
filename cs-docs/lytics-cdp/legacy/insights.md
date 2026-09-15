@@ -2,6 +2,7 @@
 title: "Insights"
 description: "Insights"
 url: /lytics/insights
+uid: bltcdbcf9104f198947
 ---
 
 # Insights

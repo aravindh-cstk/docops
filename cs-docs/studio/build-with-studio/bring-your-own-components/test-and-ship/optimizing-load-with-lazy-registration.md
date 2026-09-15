@@ -2,6 +2,7 @@
 title: "Optimizing Load With Lazy Registration"
 description: "Learn how to use lazy registration in Contentstack Studio to defer heavy component code into separate bundles, keeping your initial JS bundle small."
 url: /studio/optimizing-load-with-lazy-registration
+uid: bltc83390036d48e90c
 ---
 
 # Optimizing Load With Lazy Registration

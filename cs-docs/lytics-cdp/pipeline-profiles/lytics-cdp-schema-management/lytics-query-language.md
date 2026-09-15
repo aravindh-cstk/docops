@@ -2,6 +2,7 @@
 title: "Queries & LQL"
 description: "LQL (Lytics Query Language) is a proprietary query language developed by Lytics that allows users to cleanse, filter, and define the relationship between…"
 url: /lytics/lytics-query-language
+uid: blt950f600490c6959c
 ---
 
 # Queries & LQL

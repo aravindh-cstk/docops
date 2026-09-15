@@ -2,6 +2,7 @@
 title: "Build the Studio Page Example"
 description: "Extracted from The Studio page to keep that page focused on the mental model. This is the step-by-step build of the example, three Sections composed into."
 url: /studio/build-the-studio-page-example
+uid: blt7a263a51fa47f744
 ---
 
 # Build the Studio Page Example

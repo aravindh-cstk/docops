@@ -2,6 +2,7 @@
 title: "Removing Stale Data from Targeting with Automate"
 description: "This guide outlines the process of removing retired categories from entries using automation."
 url: /headless-cms/removing-stale-data-from-targeting-with-automate
+uid: blt3d3219b4da500d73
 ---
 
 # Removing Stale Data from Targeting with Automate

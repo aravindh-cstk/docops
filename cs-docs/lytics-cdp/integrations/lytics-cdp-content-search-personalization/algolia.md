@@ -2,6 +2,7 @@
 title: "Algolia"
 description: "Algolia is a search and discovery platform that enables personalized search results and product recommendations. The Algolia Personalization API allows…"
 url: /lytics/algolia
+uid: blt55a82fee35ac1fab
 ---
 
 # Algolia

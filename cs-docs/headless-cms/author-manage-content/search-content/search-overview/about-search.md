@@ -2,6 +2,7 @@
 title: "About Search"
 description: "Effortlessly find entries, assets, and content within your stack using Contentstack's powerful search options for a more efficient content management experience."
 url: /headless-cms/about-search
+uid: bltda721d88566a472c
 ---
 
 # About Search

@@ -2,6 +2,7 @@
 title: "Layered Experiences Use Cases"
 description: "Learn how to create layered experiences in Contentstack Personalize by combining multiple conditions, like location, device, and campaign, for richer personalization."
 url: /personalize/layered-experiences-use-case
+uid: blt2f6cda8e4c261c21
 ---
 
 # Layered Experiences Use Cases

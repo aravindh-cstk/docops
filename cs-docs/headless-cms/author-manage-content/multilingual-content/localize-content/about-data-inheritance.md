@@ -2,6 +2,7 @@
 title: "About Data Inheritance"
 description: "About Data Inheritance"
 url: /headless-cms/about-data-inheritance
+uid: blt3f2f6f17345b6898
 ---
 
 # About Data Inheritance

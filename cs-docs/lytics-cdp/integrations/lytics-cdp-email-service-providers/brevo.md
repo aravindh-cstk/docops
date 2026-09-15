@@ -2,6 +2,7 @@
 title: "Brevo"
 description: "Lytics Customer Data Platform allows you to use real-time customer activity across various channels to trigger Brevo workflows. Instead of a static…"
 url: /lytics/brevo
+uid: blt8ed6fd8ab4798e9f
 ---
 
 # Brevo

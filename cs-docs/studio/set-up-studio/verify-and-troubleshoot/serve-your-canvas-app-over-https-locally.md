@@ -2,6 +2,7 @@
 title: "Serve Your Canvas App over HTTPS Locally"
 description: "The one fix that works in every browser for the \\\"Studio can't reach http://localhost\\\" class of problems (mixed-content, Private Network Access, \\\"SDK Not."
 url: /studio/serve-your-canvas-app-over-https-locally
+uid: blt91bd209852adbded
 ---
 
 # Serve Your Canvas App over HTTPS Locally

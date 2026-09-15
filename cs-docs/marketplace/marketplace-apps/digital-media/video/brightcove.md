@@ -2,6 +2,7 @@
 title: "Brightcove App Installation Guide"
 description: "The Contentstack Marketplace Brightcove app fetches digital assets (videos) from your Brightcove account into Contentstack entries."
 url: /marketplace/brightcove
+uid: blt9544410721694dd6
 ---
 
 # Brightcove App Installation Guide

@@ -2,6 +2,7 @@
 title: "About Preview Sharing"
 description: "Learn how Visual Builder’s Preview Sharing feature enables seamless collaboration by allowing external reviewers to access and provide feedback on draft content without requiring platform access."
 url: /headless-cms/about-preview-sharing
+uid: blt5ef65bce3b683732
 ---
 
 # About Preview Sharing

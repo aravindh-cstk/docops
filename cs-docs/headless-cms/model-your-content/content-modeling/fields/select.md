@@ -2,6 +2,7 @@
 title: "Select"
 description: "Learn how to use the Select field in Contentstack to create predefined options, configure display types, and manage single or multiple selections in content types."
 url: /headless-cms/select
+uid: bltab89ecf9de373770
 ---
 
 # Select

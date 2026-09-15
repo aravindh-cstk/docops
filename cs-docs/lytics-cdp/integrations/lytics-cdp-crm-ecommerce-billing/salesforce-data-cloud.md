@@ -2,6 +2,7 @@
 title: "Salesforce Data Cloud"
 description: "Salesforce Data Cloud (formerly Customer Data Platform / CDP) is Salesforce's customer data platform for unifying data across Salesforce clouds and…"
 url: /lytics/salesforce-data-cloud
+uid: blt82ae42811e9ab98b
 ---
 
 # Salesforce Data Cloud

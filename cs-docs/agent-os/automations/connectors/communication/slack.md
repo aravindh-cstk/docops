@@ -2,6 +2,7 @@
 title: "Slack"
 description: "Slack"
 url: /agent-os/slack
+uid: blt9096f1b9dfacfa17
 ---
 
 # Slack

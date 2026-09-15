@@ -2,6 +2,7 @@
 title: "Setup Next.js Website with Personalize - Vercel"
 description: "Learn how to set up a Next.js website with Personalize integration on Vercel for fast, dynamic user experiences."
 url: /personalize/setup-nextjs-website-with-personalize-vercel
+uid: bltba0e29c976745a7b
 ---
 
 # Setup Next.js Website with Personalize - Vercel

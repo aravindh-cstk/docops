@@ -2,6 +2,7 @@
 title: "Understanding How Publishing Works with Entry Variants"
 description: "Learn how Contentstack's Entry Variants feature enables independent publishing for multiple versions of an entry, allowing you to manage targeted content for different audiences and environments."
 url: /headless-cms/understanding-how-publishing-works-with-entry-variants
+uid: blt68425c2eea23c2c8
 ---
 
 # Understanding How Publishing Works with Entry Variants

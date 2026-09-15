@@ -2,6 +2,7 @@
 title: "Add Entry/Asset to a Release"
 description: "Add entries and assets to a release in Contentstack, streamlining your content release workflow."
 url: /headless-cms/add-entry-asset-to-a-release
+uid: bltff54f6b08a65685c
 ---
 
 # Add Entry/Asset to a Release

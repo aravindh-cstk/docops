@@ -2,6 +2,7 @@
 title: "Allowed file type(s)"
 description: "Learn how to set allowed file types in Contentstack for secure uploads. Discover validations and change management to avoid errors and data loss."
 url: /headless-cms/allowed-file-types
+uid: blt184924a54ecc7780
 ---
 
 # Allowed file type(s)

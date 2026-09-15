@@ -2,6 +2,7 @@
 title: "Audience Naming Conventions"
 description: "Define account-level templates that keep audience names consistent, and optionally require every new audience to use one."
 url: /lytics/audience-naming-conventions
+uid: blt7eb8a9644afc253b
 ---
 
 # Audience Naming Conventions

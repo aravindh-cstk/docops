@@ -2,6 +2,7 @@
 title: "Salesforce Pardot"
 description: "Salesforce Pardot"
 url: /lytics/pardot
+uid: blt47c1ec5fbc0dcdb4
 ---
 
 # Salesforce Pardot

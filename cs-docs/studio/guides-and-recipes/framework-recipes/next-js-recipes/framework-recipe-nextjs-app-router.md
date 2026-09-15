@@ -2,6 +2,7 @@
 title: "Framework Recipe: Next.js App Router"
 description: "The default App Router path. <StudioComponent /> is a client component. Next server-renders its initial output, hydration takes over for interactivity."
 url: /studio/framework-recipe-nextjs-app-router
+uid: bltc8bf48ed2c10bacb
 ---
 
 # Framework Recipe: Next.js App Router

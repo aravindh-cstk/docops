@@ -2,6 +2,7 @@
 title: "Egnyte App Installation Guide"
 description: "Fetch and display your Egnyte assets into Contentstack entries."
 url: /marketplace/egnyte
+uid: blt88563e1e8f13a6d0
 ---
 
 # Egnyte App Installation Guide

@@ -2,6 +2,7 @@
 title: "Integrating Lytics"
 description: "Learn how Lytics CDP connects the Lytics platform to Contentstack."
 url: /lytics/integrating-lytics
+uid: blt9483584597b34fec
 ---
 
 # Integrating Lytics

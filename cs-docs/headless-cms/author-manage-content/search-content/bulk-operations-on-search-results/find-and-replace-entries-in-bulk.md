@@ -2,6 +2,7 @@
 title: "Find and Replace Entries in Bulk"
 description: "Update the same text across many Contentstack entries in one operation. Filter and select the entries, preview every match, then apply the changes in bulk."
 url: /headless-cms/find-and-replace-entries-in-bulk
+uid: blt507b87b655cfe2f5
 ---
 
 # Find and Replace Entries in Bulk

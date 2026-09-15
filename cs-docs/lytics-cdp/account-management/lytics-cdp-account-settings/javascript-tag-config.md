@@ -2,6 +2,7 @@
 title: "JavaScript Tag Config"
 description: "Configuration options for the core JavaScript SDK."
 url: /lytics/javascript-tag-config
+uid: blta8530d724797b755
 ---
 
 # JavaScript Tag Config

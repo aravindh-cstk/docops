@@ -2,6 +2,7 @@
 title: "About JSON Rich Text Editor"
 description: "Learn how Contentstack's JSON Rich Text Editor simplifies content creation with block-style editing, structured JSON output, and user-friendly formatting tools."
 url: /headless-cms/about-json-rich-text-editor
+uid: blt9169240f70b53a01
 ---
 
 # About JSON Rich Text Editor

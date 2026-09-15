@@ -2,6 +2,7 @@
 title: "Cloud Functions"
 description: "Easily create, deploy, and manage cloud functions using Contentstack Launch to streamline your serverless workflows."
 url: /launch/cloud-functions
+uid: bltea3e19f505f6e54a
 ---
 
 # Cloud Functions

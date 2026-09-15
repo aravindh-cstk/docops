@@ -2,6 +2,7 @@
 title: "Create an Agent"
 description: "Learn how to build agents to streamline workflows and automate tasks efficiently."
 url: /agent-os/create-an-agent
+uid: blt4094b0d813919596
 ---
 
 # Create an Agent

@@ -2,6 +2,7 @@
 title: "View Stack Details"
 description: "Learn to access and manage stack details in Contentstack, including settings, API credentials, and last modified timestamps for improved control and audit tracking."
 url: /headless-cms/view-stack-details
+uid: blt19ad99935eabb064
 ---
 
 # View Stack Details

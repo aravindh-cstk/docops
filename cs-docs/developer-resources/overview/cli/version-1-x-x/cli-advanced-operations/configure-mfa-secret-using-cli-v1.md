@@ -2,6 +2,7 @@
 title: "Configure MFA Secret Using CLI | V1.x.x"
 description: "Learn to set or remove your Multi-Factor Authentication (MFA) secret using Contentstack CLI for enhanced security and seamless MFA management."
 url: /headless-cms/configure-mfa-secret-using-cli/v1
+uid: blt1637a00d696b0fe4
 ---
 
 # Configure MFA Secret Using CLI | V1.x.x

@@ -2,6 +2,7 @@
 title: "Mux App Installation Guide"
 description: "Install the Mux app from the Contentstack Marketplace to upload videos, configure playback settings, and manage public or signed assets directly inside Contentstack entries."
 url: /marketplace/mux
+uid: bltc908df4ea2f98ccb
 ---
 
 # Mux App Installation Guide

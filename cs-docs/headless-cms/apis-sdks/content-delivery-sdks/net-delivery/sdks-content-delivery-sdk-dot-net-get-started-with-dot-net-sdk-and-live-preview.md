@@ -2,6 +2,7 @@
 title: "Get Started with .NET SDK and Live Preview"
 description: "Get started with Contentstack .NET SDK for building apps. Learn installation, setup, Live Preview integration, and more. Explore the guide now!"
 url: /developers/sdks/content-delivery-sdk/dot-net/get-started-with-dot-net-sdk-and-live-preview
+uid: blt4eb0b76b49301dde
 ---
 
 # Get Started with .NET SDK and Live Preview

@@ -2,6 +2,7 @@
 title: "Show the active project"
 description: "Show the currently active Studio project and its details."
 url: /studio/cli-project-get
+uid: blt17f7c23c433a3aed
 ---
 
 # Show the active project

@@ -2,6 +2,7 @@
 title: "Troubleshoot Framework Recipes"
 description: "Every failure below is one we've actually hit. Cross-reference the five universal rules. Most SSR failures reduce to violating one of them."
 url: /studio/framework-recipe-troubleshooting
+uid: blt6af73ccaeaa35e51
 ---
 
 # Troubleshoot Framework Recipes

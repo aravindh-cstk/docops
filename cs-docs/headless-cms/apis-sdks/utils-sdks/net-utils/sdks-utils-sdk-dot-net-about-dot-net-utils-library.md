@@ -2,6 +2,7 @@
 title: "About .NET Utils Library"
 description: "The .NET Utils library contains all the utilities for the .NET SDK."
 url: /developers/sdks/utils-sdk/dot-net/about-dot-net-utils-library
+uid: blt517d75c239fa8cdb
 ---
 
 # About .NET Utils Library

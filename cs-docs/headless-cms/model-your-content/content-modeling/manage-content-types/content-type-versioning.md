@@ -2,6 +2,7 @@
 title: "Content Type Versioning"
 description: "Learn how to compare and track changes in Contentstack content type versions."
 url: /headless-cms/content-type-versioning
+uid: blt14f1f3c1a3269d8d
 ---
 
 # Content Type Versioning

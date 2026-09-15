@@ -2,6 +2,7 @@
 title: "Affinities"
 description: "To view your Affinities , select Context Layers under Content in the Lytics navigation bar."
 url: /lytics/affinities-1
+uid: blt382814373732cfd0
 ---
 
 # Affinities

@@ -2,6 +2,7 @@
 title: "Bulk Publish and Unpublish Content | V0.x.x"
 description: "Use the CLI to bulk publish and unpublish entries and assets in Contentstack, streamlining content deployment across environments."
 url: /headless-cms/cli-bulk-publish-and-unpublish-content/v0
+uid: blt7cd9c7438ee7322e
 ---
 
 # Bulk Publish and Unpublish Content | V0.x.x

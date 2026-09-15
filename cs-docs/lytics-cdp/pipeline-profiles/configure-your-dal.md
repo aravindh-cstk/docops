@@ -2,6 +2,7 @@
 title: "Configure Data & Insights"
 description: "Now that you’ve accessed Data & Insights, it’s time to connect the dots between your website, Contentstack, and Personalize . This part of the setup…"
 url: /lytics/configure-your-dal
+uid: blt560ee86d706e56cc
 ---
 
 # Configure Data & Insights

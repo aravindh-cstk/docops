@@ -2,6 +2,7 @@
 title: "Bulk Operations App Installation Guide"
 description: "Save time with the Contentstack's Bulk Operations app. Perform operations on entries, assets, and releases all at once, enhancing your content management."
 url: /marketplace/bulk-operations
+uid: bltfb6f60f24b7f69ba
 ---
 
 # Bulk Operations App Installation Guide

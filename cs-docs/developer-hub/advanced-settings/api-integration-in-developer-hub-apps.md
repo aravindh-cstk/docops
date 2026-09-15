@@ -2,6 +2,7 @@
 title: "API Integration in Developer Hub Apps"
 description: "Learn how to use App SDK in Developer Hub Apps for internal and external API calls with authentication, variables, and advanced settings."
 url: /developer-hub/api-integration-in-developer-hub-apps
+uid: blt10adf54e4806f2ca
 ---
 
 # API Integration in Developer Hub Apps

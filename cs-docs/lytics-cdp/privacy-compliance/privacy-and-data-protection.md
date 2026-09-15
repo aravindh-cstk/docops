@@ -2,6 +2,7 @@
 title: "Privacy and Data Protection"
 description: "Explore how Lytics supports GDPR and CCPA compliance through secure data handling, consent management, and privacy protection tools."
 url: /lytics/privacy-and-data-protection
+uid: blta8413485441becf9
 ---
 
 # Privacy and Data Protection

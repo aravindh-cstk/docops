@@ -2,6 +2,7 @@
 title: "Changing Persistent Storage Connector"
 description: "About Changing Persistent Storage Connector"
 url: /headless-cms/changing-persistent-storage-connector
+uid: blt4475ddd2c1225792
 ---
 
 # Changing Persistent Storage Connector

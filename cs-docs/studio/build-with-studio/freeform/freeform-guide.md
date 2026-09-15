@@ -2,6 +2,7 @@
 title: "Freeform Chapter Guide"
 description: "Opt-in feature for pages not tied to a content type: campaigns, landings, one-offs."
 url: /studio/freeform-guide
+uid: blte77ad2ee44050692
 ---
 
 # Freeform Chapter Guide

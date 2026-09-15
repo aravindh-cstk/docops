@@ -2,6 +2,7 @@
 title: "Create an Audience"
 description: "Learn how to create audiences that adapt to real-time user behavior and context changes for delivering personalized content experiences."
 url: /personalize/create-audience
+uid: blt946e8574fe902d21
 ---
 
 # Create an Audience

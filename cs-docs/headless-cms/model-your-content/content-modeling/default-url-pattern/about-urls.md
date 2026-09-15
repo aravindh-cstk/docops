@@ -2,6 +2,7 @@
 title: "About URLs"
 description: "Learn how to configure URLs in Contentstack using patterns, formatting options, and best practices for consistent, SEO-friendly content delivery."
 url: /headless-cms/about-urls
+uid: blt833b23264a95dff0
 ---
 
 # About URLs

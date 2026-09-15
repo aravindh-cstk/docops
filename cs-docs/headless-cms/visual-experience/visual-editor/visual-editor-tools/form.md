@@ -2,6 +2,7 @@
 title: "Form"
 description: "Edit entries in real time using the Form panel in Visual Editor for a seamless, contextual content editing experience."
 url: /headless-cms/form
+uid: blta49f14db370e9944
 ---
 
 # Form

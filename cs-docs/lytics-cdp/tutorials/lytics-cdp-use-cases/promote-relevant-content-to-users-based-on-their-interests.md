@@ -2,6 +2,7 @@
 title: "Promote Relevant Content to Users based on their Interests"
 description: "Promote Relevant Content to Users based on their Interests"
 url: /lytics/promote-relevant-content-to-users-based-on-their-interests
+uid: blta98c7cf2e273f1b5
 ---
 
 # Promote Relevant Content to Users based on their Interests

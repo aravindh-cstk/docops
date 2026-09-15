@@ -2,6 +2,7 @@
 title: "Webhook Configuration"
 description: "Configure webhook connection limits to manage real-time data flow."
 url: /administration/webhook-configuration
+uid: blt6586e23c0b4c132d
 ---
 
 # Webhook Configuration

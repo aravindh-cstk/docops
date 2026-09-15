@@ -2,6 +2,7 @@
 title: "Setup Next.js Website with Personalize - Launch"
 description: "Set up a Next.js site with Personalize on Launch, using Edge Functions for seamless content delivery and optimization."
 url: /personalize/setup-nextjs-website-with-personalize-launch
+uid: bltbf0b652de91fa5f0
 ---
 
 # Setup Next.js Website with Personalize - Launch

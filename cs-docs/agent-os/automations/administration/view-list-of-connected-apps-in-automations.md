@@ -2,6 +2,7 @@
 title: "View List of Connected Apps in Automations"
 description: "View, edit, reauthorize, or delete connected apps in Automations for seamless integration control."
 url: /agent-os/view-list-of-connected-apps-in-automations
+uid: blt5596aa915a527463
 ---
 
 # View List of Connected Apps in Automations

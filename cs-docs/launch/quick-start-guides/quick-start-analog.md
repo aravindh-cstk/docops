@@ -2,6 +2,7 @@
 title: "Launch Quick Start Guide with Analog"
 description: "Learn how to quickly clone and deploy an Analog Starter project using Contentstack Launch and GitHub. Follow our guide for seamless SSR or CSR deployment."
 url: /launch/quick-start-analog
+uid: bltf85a66f173b3a027
 ---
 
 # Launch Quick Start Guide with Analog

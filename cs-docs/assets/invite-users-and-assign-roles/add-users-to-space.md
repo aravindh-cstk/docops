@@ -2,6 +2,7 @@
 title: "Add Users to Space"
 description: "Learn how to add users to a Contentstack space via Space Settings, assign roles, and manage access efficiently. Perfect for Contentstack admins!"
 url: /assets/add-users-to-space
+uid: blt5bdb7db86c762d95
 ---
 
 # Add Users to Space

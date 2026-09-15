@@ -2,6 +2,7 @@
 title: "Migration to Image Preset Metadata from Native Asset Field Using Automate"
 description: "This guide covers transferring data from native to custom image fields, including bulk metadata creation using the Automation Hub."
 url: /headless-cms/migration-to-image-preset-metadata-from-native-asset-field-using-automate
+uid: bltfdb523663614adfc
 ---
 
 # Migration to Image Preset Metadata from Native Asset Field Using Automate

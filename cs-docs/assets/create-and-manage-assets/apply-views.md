@@ -2,6 +2,7 @@
 title: "Apply Views"
 description: "Optimize your search with Views in Assets. Create, manage, and share saved views for efficient cross-team collaboration and quick access to important data."
 url: /assets/apply-views
+uid: blt7946d2fec4043ae9
 ---
 
 # Apply Views

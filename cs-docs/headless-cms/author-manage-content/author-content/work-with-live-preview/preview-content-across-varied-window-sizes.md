@@ -2,6 +2,7 @@
 title: "Preview Content across Varied Window Sizes"
 description: "Test and validate your content responsiveness across different window sizes using Contentstack’s Live Preview feature."
 url: /headless-cms/preview-content-across-varied-window-sizes
+uid: bltc40cee141bd43cbb
 ---
 
 # Preview Content across Varied Window Sizes

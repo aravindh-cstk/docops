@@ -2,6 +2,7 @@
 title: "Set Up SSO in Contentstack"
 description: "Set up single sign-on in Contentstack with any SAML 2.0 identity provider, using manual entry or metadata import, and manage users, strict mode, and role mapping."
 url: /administration/set-up-sso-in-contentstack
+uid: bltbe764ea41acc6985
 ---
 
 # Set Up SSO in Contentstack

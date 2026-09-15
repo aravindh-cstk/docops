@@ -2,6 +2,7 @@
 title: "New CMS Connector API Guide"
 description: "Explore our comprehensive guide on enhancing the CMS Connector API for seamless integration with new CMS platforms and diverse file types."
 url: /headless-cms/new-cms-connector-api-guide
+uid: blt7dc9b34a9fdedcf2
 ---
 
 # New CMS Connector API Guide

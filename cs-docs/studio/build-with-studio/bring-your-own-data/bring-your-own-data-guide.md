@@ -2,6 +2,7 @@
 title: "Bring Your Own Data Chapter Guide"
 description: "Render a Studio composition against data you already hold, and pass your own data into a slot so the components dropped inside it can bind to it."
 url: /studio/bring-your-own-data-guide
+uid: blta336b3bdfa88165c
 ---
 
 # Bring Your Own Data Chapter Guide

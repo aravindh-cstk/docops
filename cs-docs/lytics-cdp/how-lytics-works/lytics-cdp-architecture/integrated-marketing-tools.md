@@ -2,6 +2,7 @@
 title: "Integration Patterns"
 description: "Integration Patterns"
 url: /lytics/integrated-marketing-tools
+uid: blt615fff2af280a0ef
 ---
 
 # Integration Patterns

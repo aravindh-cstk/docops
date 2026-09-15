@@ -2,6 +2,7 @@
 title: "Profile Stitching Best Practices"
 description: "This guide gives context on Lytics user profiles and helps illustrate the most common ways to combine or stitch profiles based on shared identifiers…"
 url: /lytics/stitching-user-profiles
+uid: blt6189e6f7870c4768
 ---
 
 # Profile Stitching Best Practices

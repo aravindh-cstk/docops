@@ -2,6 +2,7 @@
 title: "Disable Automatic Redeployment"
 description: "Learn how to manage and customize your deployment settings, including disabling automatic redeployment in Contentstack Launch."
 url: /launch/disable-automatic-redeployment
+uid: blt5a470112a73611b0
 ---
 
 # Disable Automatic Redeployment

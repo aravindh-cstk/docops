@@ -2,6 +2,7 @@
 title: "Kickstart Nuxt (SSR)"
 description: "Build a Nuxt SSR app with Contentstack. Use this starter to master the Contentstack Delivery SDK, enable Live Preview, and integrate the Visual Editor."
 url: /headless-cms/nuxt-ssr
+uid: bltee67801230f267a7
 ---
 
 # Kickstart Nuxt (SSR)

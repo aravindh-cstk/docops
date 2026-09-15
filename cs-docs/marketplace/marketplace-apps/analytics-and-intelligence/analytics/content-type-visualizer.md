@@ -2,6 +2,7 @@
 title: "Content Type Visualizer App Installation Guide"
 description: "Content Type Visualizer app provides a visual representation of all content types and their fields within a particular stack."
 url: /marketplace/content-type-visualizer
+uid: blt7bcf699d21f35268
 ---
 
 # Content Type Visualizer App Installation Guide

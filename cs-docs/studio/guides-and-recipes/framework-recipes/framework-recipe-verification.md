@@ -2,6 +2,7 @@
 title: "Verify a Framework Recipe with the curl Test"
 description: "Every framework recipe is only \\\"done\\\" when a plain curl against a Studio route returns three things: composition body content, a Studio-emitted style tag."
 url: /studio/framework-recipe-verification
+uid: blta5d7c6a13a73749e
 ---
 
 # Verify a Framework Recipe with the curl Test

@@ -2,6 +2,7 @@
 title: "Compose a Seasonal Landing Page"
 description: "The 5-minute Quickstart taught you to open an existing Template and change a headline."
 url: /studio/compose-a-seasonal-landing-page
+uid: blt5c26c91365436381
 ---
 
 # Compose a Seasonal Landing Page

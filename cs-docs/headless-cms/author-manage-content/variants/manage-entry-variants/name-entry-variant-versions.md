@@ -2,6 +2,7 @@
 title: "Name Entry Variant Versions"
 description: "Assign, view, and remove version names for variant entries in Contentstack to track key changes across variant versions."
 url: /headless-cms/name-entry-variant-versions
+uid: blt99dafc7d4243628e
 ---
 
 # Name Entry Variant Versions

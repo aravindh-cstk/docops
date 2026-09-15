@@ -2,6 +2,7 @@
 title: "Asset-based Entry Creation"
 description: "This guide assists in establishing an automated workflow for generating a product page upon creating a new asset."
 url: /headless-cms/asset-based-entry-creation
+uid: bltc66dabdc408579af
 ---
 
 # Asset-based Entry Creation

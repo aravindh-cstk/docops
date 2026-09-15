@@ -2,6 +2,7 @@
 title: "Templates"
 description: "Templates are pre-built flow structures that help you get started quickly with proven patterns. When creating a new flow, you can choose from available…"
 url: /lytics/flows-templates
+uid: blt262f54d9092727b1
 ---
 
 # Templates

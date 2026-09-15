@@ -2,6 +2,7 @@
 title: "Navigate and Use the Layers Tab"
 description: "Learn how to use the Layers tab in Contentstack Studio to navigate, rename, and reorder every component in your composition's tree."
 url: /studio/navigate-and-use-the-layers-tab
+uid: blt7fc3842439dfce2a
 ---
 
 # Navigate and Use the Layers Tab

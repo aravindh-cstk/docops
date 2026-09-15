@@ -2,6 +2,7 @@
 title: "Schema Advanced Features"
 description: "Field analytics, relationship visualization, and expression evaluation."
 url: /lytics/schema-advanced
+uid: bltca52061a866ced65
 ---
 
 # Schema Advanced Features

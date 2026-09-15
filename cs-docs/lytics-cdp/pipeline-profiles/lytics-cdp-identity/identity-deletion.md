@@ -2,6 +2,7 @@
 title: "Identity Deletion"
 description: "Delete individual or bulk user profiles for privacy compliance and data management."
 url: /lytics/identity-deletion
+uid: blt1a859fef3dd1c875
 ---
 
 # Identity Deletion

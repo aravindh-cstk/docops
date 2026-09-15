@@ -2,6 +2,7 @@
 title: "Navigating Your Website in Visual Editor"
 description: "Optimize your website effortlessly with Contentstack's Visual Editor. Manage structures, preview changes, and tailor content in real time."
 url: /headless-cms/navigating-your-website-in-visual-editor
+uid: blt8b895319b6dd1c60
 ---
 
 # Navigating Your Website in Visual Editor

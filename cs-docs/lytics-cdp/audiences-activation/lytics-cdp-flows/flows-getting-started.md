@@ -2,6 +2,7 @@
 title: "Getting Started"
 description: "Flows is currently in preview and can be enabled by request. It is scheduled for general availability in all accounts by the end of June, 2025."
 url: /lytics/flows-getting-started
+uid: blt05dd186a4c8c990c
 ---
 
 # Getting Started

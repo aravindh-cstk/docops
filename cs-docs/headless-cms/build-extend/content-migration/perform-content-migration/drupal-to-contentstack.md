@@ -2,6 +2,7 @@
 title: "Drupal to Contentstack - New"
 description: "Effortlessly migrate content from Drupal to Contentstack with our intuitive Migration Tool, featuring a seamless step-by-step workflow."
 url: /headless-cms/drupal-to-contentstack
+uid: bltf97eb0cb368a07ae
 ---
 
 # Drupal to Contentstack - New

@@ -2,6 +2,7 @@
 title: "About Bulk Operations on Search Results"
 description: "About Bulk Operations on Search Results"
 url: /headless-cms/about-bulk-operations-on-search-results
+uid: bltb4200b2fd14f437d
 ---
 
 # About Bulk Operations on Search Results

@@ -2,6 +2,7 @@
 title: "Developer Tools App Installation Guide"
 description: "Boost productivity with Contentstack's Developer Tools. Generate code snippets and simplify content management."
 url: /marketplace/developer-tools
+uid: blt1706c38aea0ccbd6
 ---
 
 # Developer Tools App Installation Guide

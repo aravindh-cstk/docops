@@ -2,6 +2,7 @@
 title: "Get Started with .NET Utils Library"
 description: "steps to use the .NET Utils SDK"
 url: /developers/sdks/utils-sdk/dot-net/get-started-with-dot-net-utils-library
+uid: bltbf634de6f4425157
 ---
 
 # Get Started with .NET Utils Library

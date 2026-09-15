@@ -2,6 +2,7 @@
 title: "Variant aliases: deep dive"
 description: "Learn how to use Contentstack variant aliases in Studio for A/B testing, personalisation, and seasonal content, including cache key strategy and patterns to avoid."
 url: /studio/variant-aliases-deep-dive
+uid: blt70f213710e554dee
 ---
 
 # Variant aliases: deep dive

@@ -2,6 +2,7 @@
 title: "Digizuite App Installation Guide"
 description: "Streamline your asset management with Digizuite (KeyShot DAM) app and organize, manage, and distribute digital assets across channels."
 url: /marketplace/digizuite
+uid: blt0d3c8c4e4cdb3a2a
 ---
 
 # Digizuite App Installation Guide

@@ -2,6 +2,7 @@
 title: "Delete a Brand Kit"
 description: "Delete your Brand Kit and associated Voice profiles within Contentstack by following our step-by-step guide."
 url: /brand-kit/delete-a-brand-kit
+uid: blt441c0f5c2c7efc36
 ---
 
 # Delete a Brand Kit

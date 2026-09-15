@@ -2,6 +2,7 @@
 title: "Get Started With Building a Website"
 description: "Learn to build a website by integrating Contentstack and React. This beginner-friendly guide includes step-by-step instructions, prerequisites, and examples for a seamless setup and deployment."
 url: /headless-cms/get-started-with-building-a-website
+uid: blt1dc3d91482197073
 ---
 
 # Get Started With Building a Website

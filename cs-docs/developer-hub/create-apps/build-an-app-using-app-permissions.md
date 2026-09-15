@@ -2,6 +2,7 @@
 title: "Build an App using App Permissions"
 description: "Learn how to build a secure Contentstack Stack app using App Permissions."
 url: /developer-hub/build-an-app-using-app-permissions
+uid: blt6adc98fc21746e61
 ---
 
 # Build an App using App Permissions

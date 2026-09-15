@@ -2,6 +2,7 @@
 title: "Accessing Profiles Client Side"
 description: "Explains how to use the Lytics JavaScript tag's entity-loaded callback to access a visitor's profile data client-side, with a worked example of pre-populating a website form's fields (make, model, color) based on the user's last search."
 url: /lytics/accessing-data-from-javascript
+uid: bltfa2fb7b9a1aaf07b
 ---
 
 # Accessing Profiles Client Side

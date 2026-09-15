@@ -2,6 +2,7 @@
 title: "JW Player App Installation Guide"
 description: "The Contentstack Marketplace JW Player app fetches digital assets (videos) from your JW Player account into Contentstack entries."
 url: /marketplace/jw-player
+uid: blt3862a26e534d4cc5
 ---
 
 # JW Player App Installation Guide

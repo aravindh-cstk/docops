@@ -2,6 +2,7 @@
 title: "Akeneo App Installation Guide"
 description: "Fetch and display your Akeneo account products and categories into Contentstack entries."
 url: /marketplace/akeneo
+uid: blt1c8867e6f9147a28
 ---
 
 # Akeneo App Installation Guide

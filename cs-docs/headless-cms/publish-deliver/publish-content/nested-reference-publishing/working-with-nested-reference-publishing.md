@@ -2,6 +2,7 @@
 title: "Working with Nested Reference Publishing"
 description: "Master the art of working with Nested Reference Publishing. Unlock the potential of publishing related nested items with ease."
 url: /headless-cms/working-with-nested-reference-publishing
+uid: blt5b40c54395fef934
 ---
 
 # Working with Nested Reference Publishing

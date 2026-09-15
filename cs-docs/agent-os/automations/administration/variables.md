@@ -2,6 +2,7 @@
 title: "Variables"
 description: "Add and uniformly use project variables across all the automation to eliminate redundancy."
 url: /agent-os/variables
+uid: blt9cd48ed2e765aa6a
 ---
 
 # Variables

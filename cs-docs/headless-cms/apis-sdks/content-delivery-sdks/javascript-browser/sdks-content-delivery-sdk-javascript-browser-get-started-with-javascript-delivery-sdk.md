@@ -2,6 +2,7 @@
 title: "Get Started with JavaScript Delivery SDK"
 description: "Getting Started with JavaScript Delivery SDK"
 url: /developers/sdks/content-delivery-sdk/javascript-browser/get-started-with-javascript-delivery-sdk
+uid: bltea31b93f90ad1e70
 ---
 
 # Get Started with JavaScript Delivery SDK

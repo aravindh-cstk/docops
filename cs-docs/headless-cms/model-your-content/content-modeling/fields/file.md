@@ -2,6 +2,7 @@
 title: "File"
 description: "Discover how to utilize the File field in Contentstack entries for uploading diverse assets. Learn about customizable properties and visibility rules."
 url: /headless-cms/file
+uid: blt0d1edb8a75b82b49
 ---
 
 # File

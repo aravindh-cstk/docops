@@ -2,6 +2,7 @@
 title: "Server Side Rendering (SSR) Technical Implementation Architecture"
 description: "Explore how Server Side Rendering enhances dynamic personalization and SEO for businesses without needing edge infrastructure in Contentstack."
 url: /personalize/ssr-technical-implementation-architecture
+uid: blt242ed13ef8119cc9
 ---
 
 # Server Side Rendering (SSR) Technical Implementation Architecture

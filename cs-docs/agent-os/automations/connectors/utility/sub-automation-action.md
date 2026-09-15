@@ -2,6 +2,7 @@
 title: "Sub Automation Action"
 description: "Use this action to fetch the sub automation created in a project."
 url: /agent-os/sub-automation-action
+uid: blt7f75d2c7c1c30782
 ---
 
 # Sub Automation Action

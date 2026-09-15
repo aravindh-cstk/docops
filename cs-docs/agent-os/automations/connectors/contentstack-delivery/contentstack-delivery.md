@@ -2,6 +2,7 @@
 title: "Contentstack Delivery"
 description: "Use the Contentstack Delivery connector to fetch assets and entries."
 url: /agent-os/contentstack-delivery
+uid: blt1cd85e4f71bfcd26
 ---
 
 # Contentstack Delivery

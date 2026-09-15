@@ -2,6 +2,7 @@
 title: "Limitations on Role Creation"
 description: "Limitations on Role Creation"
 url: /headless-cms/limitations-on-role-creation
+uid: blta4755377ecd1d19e
 ---
 
 # Limitations on Role Creation

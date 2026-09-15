@@ -2,6 +2,7 @@
 title: "Fonts App Installation Guide"
 description: "The Marketplace Fonts app lets you customize font options such as font size, font family, and font color in your JSON RTE."
 url: /marketplace/fonts
+uid: blta3bd50d11a9f0761
 ---
 
 # Fonts App Installation Guide

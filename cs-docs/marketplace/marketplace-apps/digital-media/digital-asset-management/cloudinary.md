@@ -2,6 +2,7 @@
 title: "Cloudinary App Installation Guide"
 description: "Use the Contentstack Marketplace Cloudinary app to fetch and manage your media assets effortlessly."
 url: /marketplace/cloudinary
+uid: bltaafa4124570ac7b0
 ---
 
 # Cloudinary App Installation Guide

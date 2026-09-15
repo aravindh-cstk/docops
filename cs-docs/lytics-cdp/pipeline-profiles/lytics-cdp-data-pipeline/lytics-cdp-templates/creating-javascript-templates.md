@@ -2,6 +2,7 @@
 title: "Creating JavaScript Templates"
 description: "JavaScript Templates enable users to define custom JavaScript functions that transform data structures while maintaining code simplicity and readability…"
 url: /lytics/creating-javascript-templates
+uid: blta2a9f58a0ce04c4c
 ---
 
 # Creating JavaScript Templates

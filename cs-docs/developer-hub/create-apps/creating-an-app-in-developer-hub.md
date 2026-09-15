@@ -2,6 +2,7 @@
 title: "Creating an App in Developer Hub"
 description: "Learning how to create an app in Developer Hub"
 url: /developer-hub/creating-an-app-in-developer-hub
+uid: blt728de66bbf0c2878
 ---
 
 # Creating an App in Developer Hub

@@ -2,6 +2,7 @@
 title: "Elastic Path App Installation Guide"
 description: "Fetch the products and hierarchies from your Elastic Path Commerce Cloud account into Contentstack entries."
 url: /marketplace/elastic-path
+uid: blt5c885e68f7dc905d
 ---
 
 # Elastic Path App Installation Guide

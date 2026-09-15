@@ -2,6 +2,7 @@
 title: "Maximum Number of Terms"
 description: "Set limits for user-added terms, streamlining taxonomy management."
 url: /headless-cms/maximum-number-of-terms
+uid: blt7ec83a9fcd04956b
 ---
 
 # Maximum Number of Terms

@@ -2,6 +2,7 @@
 title: "commercetools App Installation Guide"
 description: "Effortlessly enhance your brand with commercetools on Contentstack. Customize your experiences by integrating products and categories seamlessly."
 url: /marketplace/commercetools
+uid: blt118b49d872b0083d
 ---
 
 # commercetools App Installation Guide

@@ -2,6 +2,7 @@
 title: ".NET Utils - Configure Region Endpoints in .NET Utils SDK"
 description: "Configure region endpoints dynamically using the Contentstack .NET Utils SDK. A C# developer guide to dynamic resolution without hardcoding URLs."
 url: /developers/sdks/utils-sdk/dot-net/configure-region-endpoint-integration-in-dotnet-utils-sdk
+uid: blt3c9bbf24f94e2e7c
 ---
 
 # .NET Utils - Configure Region Endpoints in .NET Utils SDK

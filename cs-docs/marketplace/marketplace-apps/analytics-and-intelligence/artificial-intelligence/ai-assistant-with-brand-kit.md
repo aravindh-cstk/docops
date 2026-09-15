@@ -2,6 +2,7 @@
 title: "AI Assistant with Brand Kit"
 description: "Use the AI Assistant with Brand Kit in Contentstack Marketplace to generate content aligned with your brand’s tone, style, and communication guidelines."
 url: /marketplace/ai-assistant-with-brand-kit
+uid: bltc699d6113a2269a6
 ---
 
 # AI Assistant with Brand Kit

@@ -2,6 +2,7 @@
 title: "Contentstack Quickstart"
 description: "The Data Activation Layer (DAL) is your key to unlocking the most engaging, personalized experiences across your digital ecosystem. By connecting your…"
 url: /lytics/contentstack-quickstart
+uid: blt28e45a76348adab1
 ---
 
 # Contentstack Quickstart

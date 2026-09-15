@@ -2,6 +2,7 @@
 title: "Template Examples"
 description: "One of the primary use-cases for templates is for shaping the request payload for outgoing Webhook Exports from Lytics. For example, say you are exporting…"
 url: /lytics/template-examples
+uid: blte08b0b1ae2fc8cb1
 ---
 
 # Template Examples

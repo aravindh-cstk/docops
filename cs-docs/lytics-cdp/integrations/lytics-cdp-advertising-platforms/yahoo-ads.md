@@ -2,6 +2,7 @@
 title: "Yahoo Ads"
 description: "Yahoo Ads"
 url: /lytics/yahoo-ads
+uid: blt10998e9085b8d0bf
 ---
 
 # Yahoo Ads

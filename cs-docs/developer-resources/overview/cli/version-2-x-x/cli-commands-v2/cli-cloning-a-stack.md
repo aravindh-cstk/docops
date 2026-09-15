@@ -2,6 +2,7 @@
 title: "Cloning a Stack | V2.x.x"
 description: "Clone a stack easily with Contentstack Command-line Interface commands using our step-by-step guide to streamline stack duplication."
 url: /headless-cms/cli-cloning-a-stack
+uid: bltb61fca77fed848a6
 ---
 
 # Cloning a Stack | V2.x.x

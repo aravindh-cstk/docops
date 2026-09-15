@@ -2,6 +2,7 @@
 title: "Generate a Management Token"
 description: "Learn how to generate and manage Contentstack's management tokens for secure content access. Configure permissions, expiry, and rate limits efficiently."
 url: /headless-cms/generate-a-management-token
+uid: blt8be5cd27756536e6
 ---
 
 # Generate a Management Token

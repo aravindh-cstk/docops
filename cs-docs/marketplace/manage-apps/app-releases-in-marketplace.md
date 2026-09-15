@@ -2,6 +2,7 @@
 title: "App Releases"
 description: "Track and display app updates with Marketplace App Releases. Learn how  to document each release type for smooth version transitions."
 url: /marketplace/app-releases-in-marketplace
+uid: bltc8c44e469726c678
 ---
 
 # App Releases

@@ -2,6 +2,7 @@
 title: "Deploy Hooks"
 description: "Create, trigger, and manage Deploy Hooks in Contentstack Launch to automate site deployments with custom URLs and Git commit options."
 url: /launch/deploy-hooks
+uid: bltb82f4dc7d6ddcbf5
 ---
 
 # Deploy Hooks

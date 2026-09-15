@@ -2,6 +2,7 @@
 title: "Trados App Installation Guide"
 description: "Learn how to use the Trados app with Contentstack to efficiently translate your Releases content and provide localized versions for diverse audiences."
 url: /marketplace/trados
+uid: blt94413cddbd7e07f2
 ---
 
 # Trados App Installation Guide

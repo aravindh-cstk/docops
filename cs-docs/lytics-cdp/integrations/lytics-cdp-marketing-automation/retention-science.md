@@ -2,6 +2,7 @@
 title: "Retention Science"
 description: "Retention Science is a marketing platform that helps brands personalize customer experiences through email automation, predictive analytics, and more."
 url: /lytics/retention-science
+uid: blt58cbf28e04d2b841
 ---
 
 # Retention Science

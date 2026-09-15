@@ -2,6 +2,7 @@
 title: "Delete an Event"
 description: "Learn how to delete referenced and non-referenced events in your Personalize projects."
 url: /personalize/delete-event
+uid: blt08ff44d8fb679771
 ---
 
 # Delete an Event

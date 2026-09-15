@@ -2,6 +2,7 @@
 title: "Create an Algolia Object using Entry UID"
 description: "Create an Algolia Object using Entry UID"
 url: /agent-os/create-an-algolia-object-using-entry-uid
+uid: bltc6f86201a594058c
 ---
 
 # Create an Algolia Object using Entry UID

@@ -2,6 +2,7 @@
 title: "Access Tokens"
 description: "Learn how to create, view, and delete Lytics API access tokens from the Account > Security settings, including token expiration and role configuration options."
 url: /lytics/access-tokens
+uid: blta8b916d133445e06
 ---
 
 # Access Tokens

@@ -2,6 +2,7 @@
 title: "Basic Search"
 description: "Efficiently search your stack's entries and assets with our basic search. Find exactly what you need quickly with our robust search feature."
 url: /headless-cms/basic-search
+uid: blta97fed453bba9be3
 ---
 
 # Basic Search

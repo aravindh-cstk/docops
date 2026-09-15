@@ -2,6 +2,7 @@
 title: "Set Up your Account"
 description: "Learn how to set up your organization, data center location, migration or import of content, account security, and other attributes while creating a new Contentstack account."
 url: /headless-cms/set-up-your-account
+uid: blta5cb3799fb6b8ffe
 ---
 
 # Set Up your Account

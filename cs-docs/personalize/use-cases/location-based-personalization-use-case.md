@@ -2,6 +2,7 @@
 title: "Location-based Personalization Use Cases"
 description: "Learn how to deliver personalized experiences to users based on their location with Contentstack Personalize."
 url: /personalize/location-based-personalization-use-case
+uid: blt684bc8b22a140e51
 ---
 
 # Location-based Personalization Use Cases

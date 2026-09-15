@@ -2,6 +2,7 @@
 title: "Trash Real-world Scenarios"
 description: "Trash Real-world Scenarios"
 url: /headless-cms/trash-real-world-scenarios
+uid: bltbc764fcfd49e861a
 ---
 
 # Trash Real-world Scenarios

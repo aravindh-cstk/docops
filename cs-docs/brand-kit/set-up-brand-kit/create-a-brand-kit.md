@@ -2,6 +2,7 @@
 title: "Create a Brand Kit"
 description: "Create and set up your Brand Kit with this step-by-step guide."
 url: /brand-kit/create-a-brand-kit
+uid: blt548f26f52d400206
 ---
 
 # Create a Brand Kit

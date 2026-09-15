@@ -2,6 +2,7 @@
 title: "Status"
 description: "Explore the Status panel in Visual Editor for an overview of your main entry, localization, and publish status in Contentstack."
 url: /headless-cms/status
+uid: blt5a47cec4e321c2ee
 ---
 
 # Status

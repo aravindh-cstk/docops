@@ -2,6 +2,7 @@
 title: "Framework Recipe: Gatsby"
 description: "Gatsby's SSR APIs + gatsby-ssr.js for head injection."
 url: /studio/framework-recipe-gatsby
+uid: blt1bbb5a935500775b
 ---
 
 # Framework Recipe: Gatsby

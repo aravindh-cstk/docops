@@ -2,6 +2,7 @@
 title: "Azure DevOps"
 description: "Use the Azure DevOps connector to automate the CI/CD workflow."
 url: /agent-os/azure-devops
+uid: bltd2221b3f1f240728
 ---
 
 # Azure DevOps

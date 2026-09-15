@@ -2,6 +2,7 @@
 title: "Unpublish Entries and Assets in Bulk"
 description: "Bulk unpublish entries/assets using Contentstack search. Streamline workflows with efficient unpublishing options."
 url: /headless-cms/unpublish-entries-and-assets-in-bulk
+uid: blteddbc12a8113eb58
 ---
 
 # Unpublish Entries and Assets in Bulk

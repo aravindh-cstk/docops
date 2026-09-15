@@ -2,6 +2,7 @@
 title: "About Personalize"
 description: "Learn what Contentstack Personalize is and how audience-based rules, experiences, and variants work together to personalize content for users."
 url: /personalize/about-personalize
+uid: blt5488fa116c1446f9
 ---
 
 # About Personalize

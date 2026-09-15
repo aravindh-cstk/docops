@@ -2,6 +2,7 @@
 title: "Get Started with PHP Utils Library"
 description: "steps to use the PHP Utils Library"
 url: /developers/sdks/utils-sdk/php/get-started-with-php-utils-library
+uid: blt81cd30256a4e436e
 ---
 
 # Get Started with PHP Utils Library

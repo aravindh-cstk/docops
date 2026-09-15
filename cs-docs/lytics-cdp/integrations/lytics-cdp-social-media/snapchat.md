@@ -2,6 +2,7 @@
 title: "Snapchat"
 description: "Snapchat is a multimedia messaging app offering person-to-person photo sharing, 24-hour \"Stories,\" and \"Discover\" letting brands show ad-supported…"
 url: /lytics/snapchat
+uid: blt83328ea21ed48f30
 ---
 
 # Snapchat

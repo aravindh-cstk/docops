@@ -2,6 +2,7 @@
 title: "Bulk Move Assets"
 description: "Learn how to move several assets to a different folder at once in Contentstack. Moving an asset also moves its localized and source versions."
 url: /assets/bulk-move-assets
+uid: blt2f5b0edca727e8d4
 ---
 
 # Bulk Move Assets

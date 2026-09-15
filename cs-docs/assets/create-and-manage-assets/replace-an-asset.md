@@ -2,6 +2,7 @@
 title: "Replace an Asset"
 description: "Learn how to seamlessly replace assets in Contentstack, updating files while maintaining continuity and references with easy steps and without reconfiguration."
 url: /assets/replace-an-asset
+uid: blt27d4adcc72845c05
 ---
 
 # Replace an Asset

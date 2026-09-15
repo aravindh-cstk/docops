@@ -2,6 +2,7 @@
 title: "MACH Architecture Diagram"
 description: "Comprehensive MACH System Architecture Diagram"
 url: /headless-cms/mach-architecture-diagram
+uid: blt839129f5d5407058
 ---
 
 # MACH Architecture Diagram

@@ -2,6 +2,7 @@
 title: "Data Store"
 description: "Learn how to use the Data Store connector in Automation Hub to store and retrieve key-value pairs."
 url: /agent-os/data-store
+uid: blt17461559d28ad847
 ---
 
 # Data Store

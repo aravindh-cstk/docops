@@ -2,6 +2,7 @@
 title: "Trigger Deployments on Launch Platform based on Tags/Releases"
 description: "Learn how to configure automatic deployments on the Launch platform whenever you create a new tag or release in your Git repository."
 url: /launch/trigger-deployments-on-launch-based-on-tags-releases
+uid: bltf9d0907d5446606e
 ---
 
 # Trigger Deployments on Launch Platform based on Tags/Releases

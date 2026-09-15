@@ -2,6 +2,7 @@
 title: "Get Started with Live Preview Utils SDK V2.0"
 description: "Simplify real-time content updates with the Live Preview Utils SDK V2.0. Learn how to install, configure, and use its powerful features to enhance your website's interactivity."
 url: /headless-cms/get-started-with-live-preview-utils-sdk
+uid: blta84de9b257f60cbd
 ---
 
 # Get Started with Live Preview Utils SDK V2.0

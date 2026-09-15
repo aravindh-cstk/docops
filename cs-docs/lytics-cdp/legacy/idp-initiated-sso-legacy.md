@@ -2,6 +2,7 @@
 title: "IDP-initiated SSO (legacy)"
 description: "IDP-initiated SSO (legacy)"
 url: /lytics/idp-initiated-sso-legacy
+uid: bltadb81031f8d16f0e
 ---
 
 # IDP-initiated SSO (legacy)

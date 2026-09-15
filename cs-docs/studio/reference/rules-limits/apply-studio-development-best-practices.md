@@ -2,6 +2,7 @@
 title: "Best practices"
 description: "A consolidated reference of patterns that work and patterns to avoid in Contentstack Studio, covering compositions, components, sections, bindings, design, and performance."
 url: /studio/apply-studio-development-best-practices
+uid: blt1f6aede4a478e9f8
 ---
 
 # Best practices

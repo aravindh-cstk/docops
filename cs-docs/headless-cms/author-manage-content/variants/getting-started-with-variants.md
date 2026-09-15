@@ -2,6 +2,7 @@
 title: "Getting Started with Variants"
 description: "Learn how to create, manage, and deliver personalized content using variants in Contentstack. Get started with tailored experiences for your audience."
 url: /headless-cms/getting-started-with-variants
+uid: blt61c892aaab9a84aa
 ---
 
 # Getting Started with Variants

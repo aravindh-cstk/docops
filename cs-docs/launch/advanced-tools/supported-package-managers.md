@@ -2,6 +2,7 @@
 title: "Supported Package Managers"
 description: "Get to know the supported package managers in Contentstack Launch."
 url: /launch/supported-package-managers
+uid: blta44825c75e4f2f2c
 ---
 
 # Supported Package Managers

@@ -2,6 +2,7 @@
 title: "About Views"
 description: "Streamline content management with Contentstack's Views feature. Save, retrieve, and customize views for efficient access to your content."
 url: /headless-cms/about-views
+uid: blte1f0c9914c40025e
 ---
 
 # About Views

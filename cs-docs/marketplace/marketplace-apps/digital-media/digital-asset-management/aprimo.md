@@ -2,6 +2,7 @@
 title: "Aprimo App Installation Guide"
 description: "Integrate Aprimo with Contentstack. Easily fetch & display digital images from your Aprimo account within entries."
 url: /marketplace/aprimo
+uid: blt91abfe72776670fa
 ---
 
 # Aprimo App Installation Guide

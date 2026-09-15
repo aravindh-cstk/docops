@@ -2,6 +2,7 @@
 title: "Getting Started with Studio"
 description: "Welcome to Contentstack Studio. Pick your role and follow the path."
 url: /studio/getting-started-with-studio
+uid: bltcd78eb612e27c371
 ---
 
 # Getting Started with Studio

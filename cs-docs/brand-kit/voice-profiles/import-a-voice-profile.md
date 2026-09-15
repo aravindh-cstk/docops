@@ -2,6 +2,7 @@
 title: "Import a Voice Profile"
 description: "Learn how to easily import a Voice Profile in Contentstack to streamline content creation and maintain consistent brand voice across environments."
 url: /brand-kit/import-a-voice-profile
+uid: blt7d3e556241896a72
 ---
 
 # Import a Voice Profile

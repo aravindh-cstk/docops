@@ -2,6 +2,7 @@
 title: "Restore Old Entry Version"
 description: "Learn how to restore or rollback to a previously saved version of an entry in Contentstack to manage entry versions efficiently."
 url: /headless-cms/restore-old-entry-version
+uid: bltae6bcaf2feccd9e5
 ---
 
 # Restore Old Entry Version

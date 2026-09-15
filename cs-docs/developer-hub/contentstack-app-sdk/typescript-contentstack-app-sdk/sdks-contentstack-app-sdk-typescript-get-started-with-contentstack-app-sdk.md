@@ -2,6 +2,7 @@
 title: "Get Started with Contentstack App SDK"
 description: "Install and initialize the TypeScript-based Contentstack App SDK to access Custom Field context, entry data, and UI location APIs for type-safe in-app extensions."
 url: /developers/sdks/contentstack-app-sdk/typescript/get-started-with-contentstack-app-sdk
+uid: bltfb049e330527db59
 ---
 
 # Get Started with Contentstack App SDK

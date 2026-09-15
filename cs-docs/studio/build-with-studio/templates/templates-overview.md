@@ -2,6 +2,7 @@
 title: "Templates Overview"
 description: "A template is a full page connected to a content type. One template renders every entry of that content type. Write the layout once, publish many pages."
 url: /studio/templates-overview
+uid: bltff547184f08cbd11
 ---
 
 # Templates Overview

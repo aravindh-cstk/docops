@@ -2,6 +2,7 @@
 title: "On-Demand Automation App"
 description: "Learn how to use the On-Demand Automation App to integrate Agent OS within your entry editor."
 url: /agent-os/on-demand-automation-app
+uid: blt37be86620f9e069d
 ---
 
 # On-Demand Automation App

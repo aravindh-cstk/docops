@@ -2,6 +2,7 @@
 title: "Analytics for Assets"
 description: "Gain insights into asset storage, API usage, bandwidth, cache performance, and AI-enabled assets with the Contentstack Assets Analytics dashboard."
 url: /analytics/analytics-for-assets
+uid: blt0c119733d1aa6249
 ---
 
 # Analytics for Assets

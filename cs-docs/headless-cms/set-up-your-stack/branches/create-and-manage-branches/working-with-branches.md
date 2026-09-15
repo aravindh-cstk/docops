@@ -2,6 +2,7 @@
 title: "Working with Branches"
 description: "Explore Contentstack's branching feature to manage content versions like GitHub, creating flexible workflows with multiple stack copies."
 url: /headless-cms/working-with-branches
+uid: blt243f2fb4641d7e9a
 ---
 
 # Working with Branches

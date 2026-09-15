@@ -2,6 +2,7 @@
 title: "Platform Limits"
 description: "The following limits exist to ensure the optimum performance of the Lytics platform and your connected sites, data sources, and applications. The tables…"
 url: /lytics/platform-limits
+uid: blt7729088f53ee3b49
 ---
 
 # Platform Limits

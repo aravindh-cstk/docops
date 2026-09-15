@@ -2,6 +2,7 @@
 title: "About UI Locations"
 description: "Learn how to use UI Locations in Contentstack to customize the interface and integrate custom widgets via the extension SDK."
 url: /developer-hub/about-ui-locations
+uid: bltdd705dd92117b089
 ---
 
 # About UI Locations

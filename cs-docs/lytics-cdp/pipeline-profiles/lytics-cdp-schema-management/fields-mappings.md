@@ -2,6 +2,7 @@
 title: "Fields & Mappings"
 description: "User fields and mappings are essential for materializing user profiles in such a way that provides businesses with a comprehensive view of their…"
 url: /lytics/fields-mappings
+uid: blta18823667efc3639
 ---
 
 # Fields & Mappings

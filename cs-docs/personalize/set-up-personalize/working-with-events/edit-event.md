@@ -2,6 +2,7 @@
 title: "Edit an Event"
 description: "Learn how to edit events within your Personalize projects."
 url: /personalize/edit-event
+uid: blt46e1b3a3d40f1c29
 ---
 
 # Edit an Event

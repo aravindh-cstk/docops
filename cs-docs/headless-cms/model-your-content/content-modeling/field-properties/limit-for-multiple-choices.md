@@ -2,6 +2,7 @@
 title: "Limit for Multiple Choices"
 description: "Limit for Multiple Choices of your fields"
 url: /headless-cms/limit-for-multiple-choices
+uid: bltf5c7d2f57a68d582
 ---
 
 # Limit for Multiple Choices

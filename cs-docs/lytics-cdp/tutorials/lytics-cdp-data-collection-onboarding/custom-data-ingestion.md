@@ -2,6 +2,7 @@
 title: "Working with Custom Data"
 description: "An overview of the formatting requirements for sending custom data to Lytics via batch CSV or JSON over S3, SFTP, or the collection APIs, covering file naming, compression, field and header formatting, timestamps, and JSON structure."
 url: /lytics/custom-data-ingestion
+uid: blt006509e1be2440b7
 ---
 
 # Working with Custom Data

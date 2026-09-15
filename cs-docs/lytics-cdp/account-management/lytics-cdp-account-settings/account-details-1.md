@@ -2,6 +2,7 @@
 title: "Account Details"
 description: "Configuration of account details such as name and primary contact."
 url: /lytics/account-details-1
+uid: bltee57ac8ff20d3d20
 ---
 
 # Account Details

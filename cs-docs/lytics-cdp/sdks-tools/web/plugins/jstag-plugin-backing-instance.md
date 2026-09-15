@@ -2,6 +2,7 @@
 title: "backingInstance Plugin"
 description: "Access the actual JSTag instance behind the singleton facade"
 url: /lytics/jstag-plugin-backing-instance
+uid: bltef37bc163e89995c
 ---
 
 # backingInstance Plugin

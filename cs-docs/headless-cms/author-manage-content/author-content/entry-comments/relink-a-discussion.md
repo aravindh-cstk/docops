@@ -2,6 +2,7 @@
 title: "Relink a Discussion"
 description: "Relink unlinked discussions in Contentstack to a new field."
 url: /headless-cms/relink-a-discussion
+uid: blt010067137bdb9c66
 ---
 
 # Relink a Discussion

@@ -2,6 +2,7 @@
 title: "Viewing, Using & Managing Collections"
 description: "On the Collections page, located in the Content menu, you’ll find a list of the Collections available in your account. By default, Lytics automatically…"
 url: /lytics/viewing-content-collections
+uid: blt7ed2e85253043edd
 ---
 
 # Viewing, Using & Managing Collections

@@ -2,6 +2,7 @@
 title: "Wordpress to Contentstack"
 description: "Migrate content from WordPress to Contentstack seamlessly with the Migration Framework. Follow our step-by-step guide for easy content import, mapping, and data migration."
 url: /headless-cms/wordpress-to-contentstack
+uid: blt584193d297ec2739
 ---
 
 # Wordpress to Contentstack

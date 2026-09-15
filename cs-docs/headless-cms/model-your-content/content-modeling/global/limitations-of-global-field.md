@@ -2,6 +2,7 @@
 title: "Limitations of Global Field"
 description: "Learn about the limitations of using Global fields in Contentstack."
 url: /headless-cms/limitations-of-global-field
+uid: bltd48619e003e8311a
 ---
 
 # Limitations of Global Field

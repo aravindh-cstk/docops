@@ -2,6 +2,7 @@
 title: "Mailchimp"
 description: "Mailchimp is a marketing platform for email campaigns including audience segmentation, content templates, reporting and more."
 url: /lytics/mailchimp
+uid: blta283125afa37b144
 ---
 
 # Mailchimp

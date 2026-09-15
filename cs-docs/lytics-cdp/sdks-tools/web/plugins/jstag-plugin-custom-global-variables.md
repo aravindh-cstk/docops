@@ -2,6 +2,7 @@
 title: "customGlobalVariables Plugin"
 description: "Pull values of global JavaScript variables into the entity payload"
 url: /lytics/jstag-plugin-custom-global-variables
+uid: bltfb46b6f7404115eb
 ---
 
 # customGlobalVariables Plugin

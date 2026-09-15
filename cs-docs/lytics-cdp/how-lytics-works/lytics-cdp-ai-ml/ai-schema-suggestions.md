@@ -2,6 +2,7 @@
 title: "AI Schema Suggestions"
 description: "Use AI to automatically generate field definitions and mappings from your incoming data."
 url: /lytics/ai-schema-suggestions
+uid: bltf589679477fe8f81
 ---
 
 # AI Schema Suggestions

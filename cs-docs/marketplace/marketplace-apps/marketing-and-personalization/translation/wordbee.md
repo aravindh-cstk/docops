@@ -2,6 +2,7 @@
 title: "Wordbee App Installation Guide"
 description: "Translate and provide the localized versions of your Contentstack entries."
 url: /marketplace/wordbee
+uid: bltdbb0cc61a3bb25fc
 ---
 
 # Wordbee App Installation Guide

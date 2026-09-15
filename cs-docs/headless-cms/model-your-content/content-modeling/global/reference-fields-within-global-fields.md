@@ -2,6 +2,7 @@
 title: "Reference Fields within Global Fields"
 description: "Learn to add Reference fields within Global Fields in Contentstack to maintain consistent, reusable content across multiple entries."
 url: /headless-cms/reference-fields-within-global-fields
+uid: blt99d170d85a8ec558
 ---
 
 # Reference Fields within Global Fields

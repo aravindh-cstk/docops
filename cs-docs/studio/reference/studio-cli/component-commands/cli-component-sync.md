@@ -2,6 +2,7 @@
 title: "Sync a component to the Figma plugin"
 description: "Make a code component available in the Figma plugin's mapping dropdown so designers can link layers to it."
 url: /studio/cli-component-sync
+uid: blte097e5a06ba0be50
 ---
 
 # Sync a component to the Figma plugin

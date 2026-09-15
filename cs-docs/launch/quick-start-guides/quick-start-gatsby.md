@@ -2,6 +2,7 @@
 title: "Launch Quick Start Guide with Gatsby"
 description: "Learn how to deploy your first Gatsby Starter Launch project using GitHub."
 url: /launch/quick-start-gatsby
+uid: bltdd7e4b7f8f65c96a
 ---
 
 # Launch Quick Start Guide with Gatsby

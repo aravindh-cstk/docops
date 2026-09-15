@@ -2,6 +2,7 @@
 title: "What Is a Composition"
 description: "Learn what a composition is in Contentstack Studio, the difference between templates and sections, and how compositions render in your app."
 url: /studio/what-is-a-composition
+uid: blt6bac2b1817e78d3b
 ---
 
 # What Is a Composition

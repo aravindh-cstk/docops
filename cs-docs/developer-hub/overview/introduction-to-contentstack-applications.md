@@ -2,6 +2,7 @@
 title: "Introduction to Contentstack Applications"
 description: "Explore Contentstack applications, offering powerful tools to extend and customize your platform."
 url: /developer-hub/introduction-to-contentstack-applications
+uid: blt45b4ac5d78798d4e
 ---
 
 # Introduction to Contentstack Applications

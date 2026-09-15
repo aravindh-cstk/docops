@@ -2,6 +2,7 @@
 title: "Bulk Delete an Entry from Different Locales"
 description: "Bulk Delete an Entry from Different Locales"
 url: /headless-cms/bulk-delete-an-entry-from-different-locales
+uid: blte2406871665a2b23
 ---
 
 # Bulk Delete an Entry from Different Locales

@@ -2,6 +2,7 @@
 title: "Lock a Release"
 description: "Lock Contentstack releases to prevent changes and ensure content integrity during release management."
 url: /headless-cms/lock-a-release
+uid: blt86790c0ec7a61a39
 ---
 
 # Lock a Release

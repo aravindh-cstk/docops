@@ -2,6 +2,7 @@
 title: "Real-Time User Event Tracking with Lytics in Contentstack Launch"
 description: "Integrate Event Tracking using Lytics with Launch to activate Real-Time customer data personalization across your digital environments."
 url: /lytics/event-tracking-in-contentstack-launch
+uid: blt03fe6aba3905d621
 ---
 
 # Real-Time User Event Tracking with Lytics in Contentstack Launch

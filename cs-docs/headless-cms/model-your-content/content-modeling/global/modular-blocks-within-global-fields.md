@@ -2,6 +2,7 @@
 title: "Modular Blocks within Global Fields"
 description: "Learn to use Modular Blocks in Global Fields to create reusable content structures, improving efficiency across content types."
 url: /headless-cms/modular-blocks-within-global-fields
+uid: blt1cbd97d2966155aa
 ---
 
 # Modular Blocks within Global Fields

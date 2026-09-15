@@ -2,6 +2,7 @@
 title: "Default Attributes"
 description: "Lytics offers a wide range of pre-packaged user attributes, including automatically generated and customizable ones. Additionally, Lytics employs…"
 url: /lytics/developer-attributes
+uid: bltd80df8b6f092d36e
 ---
 
 # Default Attributes

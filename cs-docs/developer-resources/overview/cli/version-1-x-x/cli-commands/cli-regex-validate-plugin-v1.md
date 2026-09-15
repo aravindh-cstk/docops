@@ -2,6 +2,7 @@
 title: "Regex Validate Plugin | V1.x.x"
 description: "Use the Contentstack CLI Regex Validate Plugin to scan content types and global fields for regex patterns vulnerable to catastrophic backtracking."
 url: /headless-cms/cli-regex-validate-plugin/v1
+uid: blt33b42b2ce32f4cb4
 ---
 
 # Regex Validate Plugin | V1.x.x

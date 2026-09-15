@@ -2,6 +2,7 @@
 title: "The connected content type"
 description: "Learn how every Studio template connects to one Contentstack content type, how URL patterns are derived, and how the preview entry works during authoring."
 url: /studio/connected-content-type
+uid: blt60e8c8fd9967634c
 ---
 
 # The connected content type

@@ -2,6 +2,7 @@
 title: "Delete an Entry Variant"
 description: "Learn how to delete entry variants in Contentstack to keep your content organized and up-to-date."
 url: /headless-cms/delete-an-entry-variant
+uid: blte1743e00a06c0e8a
 ---
 
 # Delete an Entry Variant

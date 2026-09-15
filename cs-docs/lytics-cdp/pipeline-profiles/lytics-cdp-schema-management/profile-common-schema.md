@@ -2,6 +2,7 @@
 title: "Lytics Profile Schema"
 description: "Lytics profiles enjoy access to both a universal schema , which provides computed, intelligent attributes on every profile in Lytics, as well as a common…"
 url: /lytics/profile-common-schema
+uid: bltacee2be567695b9b
 ---
 
 # Lytics Profile Schema

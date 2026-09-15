@@ -2,6 +2,7 @@
 title: "Update Entry Workflow Details in Bulk"
 description: "Learn how to update entry workflow details in bulk in Contentstack."
 url: /headless-cms/update-entry-workflow-details-in-bulk
+uid: blt304e004947c6057a
 ---
 
 # Update Entry Workflow Details in Bulk

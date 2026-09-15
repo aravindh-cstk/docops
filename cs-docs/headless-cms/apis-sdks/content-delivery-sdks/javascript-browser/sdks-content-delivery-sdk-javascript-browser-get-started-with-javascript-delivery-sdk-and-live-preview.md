@@ -2,6 +2,7 @@
 title: "Get Started with JavaScript Delivery SDK and Live Preview"
 description: "Get started with Contentstack’s JavaScript Delivery SDK for browsers and Live Preview to enable real-time content updates easily."
 url: /developers/sdks/content-delivery-sdk/javascript-browser/get-started-with-javascript-delivery-sdk-and-live-preview
+uid: blt013c80c6219d4fbb
 ---
 
 # Get Started with JavaScript Delivery SDK and Live Preview

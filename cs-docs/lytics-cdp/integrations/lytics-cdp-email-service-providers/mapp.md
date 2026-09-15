@@ -2,6 +2,7 @@
 title: "Mapp"
 description: "Mapp"
 url: /lytics/mapp
+uid: blt21826f4cd6fa5d13
 ---
 
 # Mapp

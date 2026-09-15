@@ -2,6 +2,7 @@
 title: "Update Missing Reference UIDs for Entries, Assets, and Extensions"
 description: "Update the missing reference UIDs of entries, assets, and extensions in your destination stack after the Import operation."
 url: /headless-cms/cli-update-missing-reference-uids
+uid: blt3afca0a8bf912f83
 ---
 
 # Update Missing Reference UIDs for Entries, Assets, and Extensions

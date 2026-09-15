@@ -2,6 +2,7 @@
 title: "Contentstack Management - Entries Actions"
 description: "Use the Contentstack Management Entries action to automate entry based operations."
 url: /agent-os/contentstack-management-entries-actions
+uid: bltcaaad9bdec1139d5
 ---
 
 # Contentstack Management - Entries Actions

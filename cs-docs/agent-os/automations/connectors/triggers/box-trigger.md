@@ -2,6 +2,7 @@
 title: "Box Trigger"
 description: "Use the Box trigger connector to automate the file upload event in your Box cloud drive."
 url: /agent-os/box-trigger
+uid: blt3c2e0ceb1db82edb
 ---
 
 # Box Trigger

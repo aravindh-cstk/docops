@@ -2,6 +2,7 @@
 title: "Build Static Sites Using Static Site Generators"
 description: "Build Static Site Generators"
 url: /developers/sdks/content-delivery-sdk/javascript-browser/build-static-sites-using-static-site-generators
+uid: blteaf32957f0892d0d
 ---
 
 # Build Static Sites Using Static Site Generators

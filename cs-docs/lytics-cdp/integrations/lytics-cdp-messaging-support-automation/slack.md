@@ -2,6 +2,7 @@
 title: "Slack"
 description: "Slack"
 url: /lytics/slack
+uid: blta72e2806d09329e2
 ---
 
 # Slack

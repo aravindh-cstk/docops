@@ -2,6 +2,7 @@
 title: "Managing Steps"
 description: "Flow steps are the building blocks of your user journeys. Each step type serves a specific purpose and offers unique configuration options. This guide…"
 url: /lytics/flows-managing-steps
+uid: blta46185f5cec6ce25
 ---
 
 # Managing Steps

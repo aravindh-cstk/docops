@@ -2,6 +2,7 @@
 title: "Manage a Personalize Project"
 description: "Learn how to manage and navigate a Personalize project, including settings, users, stack connections, and project deletion."
 url: /personalize/manage-personalize-project
+uid: blt6ec205aba61eb12e
 ---
 
 # Manage a Personalize Project

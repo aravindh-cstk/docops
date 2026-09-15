@@ -2,6 +2,7 @@
 title: "Standard Context Layer"
 description: "The Standard Context Layer works by analyzing web-data collected via the Lytics Javascript Tag. Out-of-the box, Lytics ingests and keeps track of all new…"
 url: /lytics/default-interest-engine
+uid: bltac3dab1aea0643bd
 ---
 
 # Standard Context Layer

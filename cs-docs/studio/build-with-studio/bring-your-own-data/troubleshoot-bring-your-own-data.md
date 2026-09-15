@@ -2,6 +2,7 @@
 title: "Troubleshoot Bring Your Own Data"
 description: "Symptom first, then the fix. Covers <StudioComposition />, its spec-only fetcher sdk.fetchComposition, and <Slot data={...}>."
 url: /studio/troubleshoot-bring-your-own-data
+uid: blt748fb4064c378472
 ---
 
 # Troubleshoot Bring Your Own Data

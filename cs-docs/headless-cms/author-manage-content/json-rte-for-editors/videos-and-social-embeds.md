@@ -2,6 +2,7 @@
 title: "Videos and Social Embeds"
 description: "Learn how to embed videos and social media posts in Contentstack’s JSON Rich Text Editor. This guide covers embedding from platforms like YouTube, Vimeo, Instagram, and more."
 url: /headless-cms/videos-and-social-embeds
+uid: blt000cf2ee3e1deb34
 ---
 
 # Videos and Social Embeds

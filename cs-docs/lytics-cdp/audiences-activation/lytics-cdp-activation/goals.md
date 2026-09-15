@@ -2,6 +2,7 @@
 title: "Goals"
 description: "Goals"
 url: /lytics/goals
+uid: bltb05dfb613ce73457
 ---
 
 # Goals

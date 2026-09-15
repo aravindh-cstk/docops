@@ -2,6 +2,7 @@
 title: "Get Started with TypeScript Delivery SDK"
 description: "This guide will help you get started with Contentstack TypeScript Delivery SDK to build apps. Learn more about basic installation, setup, and cache policies on this page."
 url: /developers/sdks/content-delivery-sdk/typescript/get-started-with-typescript-delivery-sdk
+uid: bltaf19ab9dba3065a4
 ---
 
 # Get Started with TypeScript Delivery SDK

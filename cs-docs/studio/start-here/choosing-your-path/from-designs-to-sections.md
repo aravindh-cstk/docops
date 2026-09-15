@@ -2,6 +2,7 @@
 title: "From Designs to Sections"
 description: "Studio has three kinds of things you'll ever build. Once you can name them and know which is which, everything else in the docs makes sense."
 url: /studio/from-designs-to-sections
+uid: bltf2ea64634e667b7f
 ---
 
 # From Designs to Sections

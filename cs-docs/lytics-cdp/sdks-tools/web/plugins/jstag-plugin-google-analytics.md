@@ -2,6 +2,7 @@
 title: "google.analytics Plugin"
 description: "Export dimensions to Google Analytics"
 url: /lytics/jstag-plugin-google-analytics
+uid: bltdcf84a5c8f2a371e
 ---
 
 # google.analytics Plugin

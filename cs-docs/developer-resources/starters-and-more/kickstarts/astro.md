@@ -2,6 +2,7 @@
 title: "Astro"
 description: "Build Astro apps with Contentstack using this SSR starter. It features a preconfigured Delivery SDK, Live Preview, and Visual Editor for seamless CMS development."
 url: /headless-cms/astro
+uid: blta593ee4c7b87ce94
 ---
 
 # Astro

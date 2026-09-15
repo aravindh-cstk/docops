@@ -2,6 +2,7 @@
 title: "About Complex Global Fields"
 description: "Optimize content management with Complex Global fields in Contentstack. Reuse structured fields for consistency, efficiency, and seamless API integration."
 url: /headless-cms/about-complex-global-fields
+uid: blt3868c37365e5a2d1
 ---
 
 # About Complex Global Fields

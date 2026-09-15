@@ -2,6 +2,7 @@
 title: "Get Started with typescript Utils Library"
 description: "A comprehensive guide to the Typescript Utils SDK, including features, installation, and usage."
 url: /developers/sdks/utils-sdk/typescript/get-started-with-typescript-utils-library
+uid: blt13e51ca071982c71
 ---
 
 # Get Started with typescript Utils Library

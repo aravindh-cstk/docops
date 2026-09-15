@@ -96,6 +96,32 @@ const SUMMARY_PATH = path.join(__dirname, "..", ".cms-pull-prod-summary.json");
  */
 const DEFAULT_MAX_DELETIONS = 10;
 
+/**
+ * The delete pass is off, deliberately, and must stay off until Build 3.
+ *
+ * It was dormant rather than disabled for its whole life: it only ever considers
+ * files carrying the `uid` frontmatter marker, and no file carried one, so
+ * `if (!doc.uid) continue` skipped every file on every run. Stamping uid arms it
+ * across roughly 2,000 files at once, and it is not ready for that.
+ *
+ * The reason is what `liveEntryUids` actually means. It is populated only after
+ * an entry is fully evaluated, so it reads "entry I processed this run", not
+ * "entry that is alive". Six routine paths leave a live, published entry out of
+ * it: promotionEcho (the common case, firing for every entry promotion last
+ * wrote that nobody has touched since), notInNav, noContent, unresolved, an
+ * entry missing a title or url, and any thrown error. Every one of their files
+ * would become a deletion candidate.
+ *
+ * The cap would catch the first wave, so the realistic failure is not mass
+ * deletion but a permanent 🛑 every five minutes, followed by someone raising
+ * PROD_SYNC_MAX_DELETIONS to clear it and deleting live documentation.
+ *
+ * Re-enabling belongs with Build 3 and needs `liveEntryUids` populated from the
+ * published list rather than from successful evaluation. Flip this to true only
+ * alongside that change.
+ */
+const DELETE_PASS_ENABLED = false;
+
 interface Config {
   prodApiKey: string;
   prodToken: string;
@@ -358,6 +384,7 @@ async function main(): Promise<void> {
   // has no marker and is never at risk.
   const removals: ChangedFile[] = [];
   for (const doc of docIndex.files) {
+    if (!DELETE_PASS_ENABLED) break;
     if (!doc.uid) continue;
     if (liveEntryUids.has(doc.uid)) continue;
     removals.push({

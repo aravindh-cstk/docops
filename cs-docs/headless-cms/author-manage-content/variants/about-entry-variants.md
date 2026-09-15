@@ -2,6 +2,7 @@
 title: "About Entry Variants"
 description: "Learn how to use entry variants in Contentstack to manage content localization, A/B testing, and personalization efficiently."
 url: /headless-cms/about-entry-variants
+uid: bltddfbaa1990f2de12
 ---
 
 # About Entry Variants

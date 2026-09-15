@@ -2,6 +2,7 @@
 title: "Ace Editor App Installation Guide"
 description: "The Ace Editor app enables you to create and edit code snippets within the Contentstack environment."
 url: /marketplace/ace-editor
+uid: bltd4209273cbbe3132
 ---
 
 # Ace Editor App Installation Guide

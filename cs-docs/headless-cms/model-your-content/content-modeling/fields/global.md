@@ -2,6 +2,7 @@
 title: "Global"
 description: "Learn how to create and use Global fields in Contentstack to reuse field groups across content types and manage metadata."
 url: /headless-cms/global
+uid: blt04f491a252c6ef5b
 ---
 
 # Global

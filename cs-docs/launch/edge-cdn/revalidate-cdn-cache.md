@@ -2,6 +2,7 @@
 title: "Revalidate CDN Cache"
 description: "Learn how to revalidate the cache for the changes made to your content/configuration in an environment in Contentstack Launch."
 url: /launch/revalidate-cdn-cache
+uid: blt4af402931f6f3255
 ---
 
 # Revalidate CDN Cache

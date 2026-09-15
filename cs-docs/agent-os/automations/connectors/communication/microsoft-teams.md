@@ -2,6 +2,7 @@
 title: "Microsoft Teams"
 description: "Integrate Microsoft Teams with Automate to send real-time notifications and updates from your Contentstack workflows."
 url: /agent-os/microsoft-teams
+uid: bltddc8cc0d9e8983f0
 ---
 
 # Microsoft Teams

@@ -2,6 +2,7 @@
 title: "Slot Data"
 description: "A slot prop is a placeholder an author fills by dropping components into it (see Section Slots)."
 url: /studio/slot-data
+uid: blt2ceeceb29c4ce089
 ---
 
 # Slot Data

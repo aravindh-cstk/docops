@@ -2,6 +2,7 @@
 title: "Simple Website Using DataSync"
 description: "A simple website architecture that uses DataSync"
 url: /headless-cms/simple-website-using-datasync
+uid: blta403562052624914
 ---
 
 # Simple Website Using DataSync

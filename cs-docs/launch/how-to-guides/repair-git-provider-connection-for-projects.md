@@ -2,6 +2,7 @@
 title: "Repair Git Provider Connection for Projects"
 description: "Troubleshoot and fix Git provider connection issues in Contentstack Launch. Resolve errors and get your projects back on track."
 url: /launch/repair-git-provider-connection-for-projects
+uid: blte0e95185daf8df72
 ---
 
 # Repair Git Provider Connection for Projects

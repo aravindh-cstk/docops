@@ -2,6 +2,7 @@
 title: "Add a New User"
 description: "steps to add a new user in the stack"
 url: /headless-cms/add-a-new-user
+uid: blt8f01ec013cd719fb
 ---
 
 # Add a New User

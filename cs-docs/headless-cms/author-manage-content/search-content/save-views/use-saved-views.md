@@ -2,6 +2,7 @@
 title: "Access Saved Views"
 description: "Efficiently manage content with saved views in Contentstack. Quickly access custom search settings, streamline workflows, and stay organized."
 url: /headless-cms/use-saved-views
+uid: blt8db19a6aa764a36a
 ---
 
 # Access Saved Views

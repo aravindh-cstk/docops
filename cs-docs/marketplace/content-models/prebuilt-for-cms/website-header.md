@@ -2,6 +2,7 @@
 title: "Website Header"
 description: "The Website Header  Content Model defines the structure, fields, and schema to design the website header of your website."
 url: /marketplace/website-header
+uid: blt9c46db114065c997
 ---
 
 # Website Header

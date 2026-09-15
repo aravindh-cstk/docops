@@ -2,6 +2,7 @@
 title: "Get Started with React Native SDK"
 description: "steps for getting started with React Native SDK"
 url: /developers/sdks/content-delivery-sdk/react-native/get-started-with-react-native-sdk
+uid: blt941b7a0b5b8bf895
 ---
 
 # Get Started with React Native SDK

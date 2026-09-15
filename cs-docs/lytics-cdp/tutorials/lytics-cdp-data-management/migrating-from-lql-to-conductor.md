@@ -2,6 +2,7 @@
 title: "Migrating from Queries to Schema"
 description: "TL;DR: Many things you liked about LQL are still here, and many things you didn't like are out. Migrating your schema management to Lytics' Schema API can…"
 url: /lytics/migrating-from-lql-to-conductor
+uid: blt64c207f5dfb8c527
 ---
 
 # Migrating from Queries to Schema

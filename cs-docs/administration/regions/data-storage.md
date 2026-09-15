@@ -2,6 +2,7 @@
 title: "Data Storage"
 description: "Explore Contentstack's comprehensive documentation on data storage, covering regions, and learn how to efficiently manage your data storage needs for your digital projects. Discover best practices and guidelines for optimizing data storage strategies."
 url: /administration/data-storage
+uid: bltc41cb97eaf67d97c
 ---
 
 # Data Storage

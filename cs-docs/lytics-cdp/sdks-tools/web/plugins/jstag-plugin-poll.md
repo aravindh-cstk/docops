@@ -2,6 +2,7 @@
 title: "poll Plugin"
 description: "Poll until a condition is satisfied or a timeout occurs"
 url: /lytics/jstag-plugin-poll
+uid: blt36821e0f1fe85cae
 ---
 
 # poll Plugin

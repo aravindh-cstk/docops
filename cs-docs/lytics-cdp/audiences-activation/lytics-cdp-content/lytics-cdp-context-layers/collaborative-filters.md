@@ -2,6 +2,7 @@
 title: "Collaborative Filters"
 description: "To successfully utilize Lytics' Standard and Custom Affinity Engines, it is necessary to have a robust set of Topics (or features). However, in some…"
 url: /lytics/collaborative-filters
+uid: blt56d2e14be0573654
 ---
 
 # Collaborative Filters

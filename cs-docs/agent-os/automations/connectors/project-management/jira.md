@@ -2,6 +2,7 @@
 title: "JIRA"
 description: "JIRA"
 url: /agent-os/jira
+uid: bltcde3a33b4d3f51b6
 ---
 
 # JIRA

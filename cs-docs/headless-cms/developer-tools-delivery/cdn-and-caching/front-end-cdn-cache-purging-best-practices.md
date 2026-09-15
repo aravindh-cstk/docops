@@ -2,6 +2,7 @@
 title: "Front-end CDN cache purging best practices"
 description: "Know about the best practices for front-end CDN cache purging"
 url: /headless-cms/front-end-cdn-cache-purging-best-practices
+uid: blt59cfd42f6dae0d5a
 ---
 
 # Front-end CDN cache purging best practices

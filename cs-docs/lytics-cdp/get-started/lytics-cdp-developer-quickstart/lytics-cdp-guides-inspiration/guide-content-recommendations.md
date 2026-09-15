@@ -2,6 +2,7 @@
 title: "Content Recommendations"
 description: "This document details the process of utilizing Lytics' real-time personalization engine to showcase content that resonates with a visitor's interests…"
 url: /lytics/guide-content-recommendations
+uid: blt7c3eba1502af4258
 ---
 
 # Content Recommendations

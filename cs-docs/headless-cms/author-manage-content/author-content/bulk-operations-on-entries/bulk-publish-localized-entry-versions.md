@@ -2,6 +2,7 @@
 title: "Bulk Publish Localized Entry Versions"
 description: "Learn how to publish localized entry versions in bulk in Contentstack."
 url: /headless-cms/bulk-publish-localized-entry-versions
+uid: blt62cc4f54b0458314
 ---
 
 # Bulk Publish Localized Entry Versions

@@ -2,6 +2,7 @@
 title: "Lookalike Models: Convert anonymous users to known users"
 description: "Converting unknown users to known users is a key starting point for many marketing campaigns. Collecting data from your users enables you to personalize…"
 url: /lytics/lookalike-models-convert-anonymous-users-to-known-users
+uid: blt25f6d87ccc5bf6ba
 ---
 
 # Lookalike Models: Convert anonymous users to known users

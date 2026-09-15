@@ -2,6 +2,7 @@
 title: "Get Started"
 description: "Install Contentstack Agent Skills in Claude Code, Cursor, Codex, or Gemini CLI and start writing correct, secure Contentstack code in minutes."
 url: /developers/skills-get-started
+uid: blt2240fe7c8e26e56d
 ---
 
 # Get Started

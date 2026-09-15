@@ -2,6 +2,7 @@
 title: "Mention Users or Roles in a Comment"
 description: "Learn how to tag users or roles in Contentstack comments for instant notifications."
 url: /headless-cms/mention-users-or-roles-in-a-comment
+uid: bltb6959f6b23d5053a
 ---
 
 # Mention Users or Roles in a Comment

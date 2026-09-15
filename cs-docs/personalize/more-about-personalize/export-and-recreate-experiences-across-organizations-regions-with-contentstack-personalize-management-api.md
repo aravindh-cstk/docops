@@ -2,6 +2,7 @@
 title: "Export and Recreate Experiences Across Organizations or Regions with Contentstack Personalize Management API"
 description: "Easily export, duplicate, and manage personalization experiences across environments using Contentstack’s Personalize Management API."
 url: /personalize/export-and-recreate-experiences-across-organizations-regions-with-contentstack-personalize-management-api
+uid: bltc2bb9d06de2a671b
 ---
 
 # Export and Recreate Experiences Across Organizations or Regions with Contentstack Personalize Management API

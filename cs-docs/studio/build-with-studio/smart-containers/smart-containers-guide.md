@@ -2,6 +2,7 @@
 title: "Smart Containers Chapter Guide"
 description: "The three primitives that turn a static layout into a data-driven one: Repeater (render N times), Condition Block (switch designs by item type), Section."
 url: /studio/smart-containers-guide
+uid: blt2fac2ddb93ae9d5b
 ---
 
 # Smart Containers Chapter Guide

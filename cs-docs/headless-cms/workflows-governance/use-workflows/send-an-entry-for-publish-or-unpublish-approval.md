@@ -2,6 +2,7 @@
 title: "Send an Entry for Publish or Unpublish Approval"
 description: "Send an entry for publish or unpublish approval"
 url: /headless-cms/send-an-entry-for-publish-or-unpublish-approval
+uid: blta145a9baaef6708f
 ---
 
 # Send an Entry for Publish or Unpublish Approval

@@ -2,6 +2,7 @@
 title: "Data Models API"
 description: "Create and manage composite data models that combine data from multiple sources."
 url: /lytics/data-models-api
+uid: bltd2f354934a61655c
 ---
 
 # Data Models API

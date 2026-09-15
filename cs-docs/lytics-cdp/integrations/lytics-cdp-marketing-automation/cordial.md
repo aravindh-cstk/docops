@@ -2,6 +2,7 @@
 title: "Cordial"
 description: "Cordial is a real-time platform that helps you connect with your customers by delivering relevant messages across multiple channels."
 url: /lytics/cordial
+uid: blt268fc221168ab64c
 ---
 
 # Cordial

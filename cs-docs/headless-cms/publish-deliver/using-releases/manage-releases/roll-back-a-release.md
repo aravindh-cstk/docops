@@ -2,6 +2,7 @@
 title: "Roll Back a Release"
 description: "Roll back a deployed release in Contentstack to revert its entries and assets to the version published before deployment."
 url: /headless-cms/roll-back-a-release
+uid: blta2d30a8b5f3cff31
 ---
 
 # Roll Back a Release

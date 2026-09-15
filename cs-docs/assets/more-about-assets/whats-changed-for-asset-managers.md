@@ -2,6 +2,7 @@
 title: "What’s Changed for Asset Managers"
 description: "Discover Contentstack Assets: a scalable, independent system for efficient asset management, intelligent discovery, and seamless reuse across brands."
 url: /assets/whats-changed-for-asset-managers
+uid: blt902cccd7ade81476
 ---
 
 # What’s Changed for Asset Managers

@@ -2,6 +2,7 @@
 title: "Drive Email Capture & Engagement with Content"
 description: "Content recommendations are a powerful, direct method for driving engagement of anonymous users with the goal of capturing their email address. Using…"
 url: /lytics/drive-email-capture-engagement-with-content
+uid: blt76b3c06bb8dfe74f
 ---
 
 # Drive Email Capture & Engagement with Content

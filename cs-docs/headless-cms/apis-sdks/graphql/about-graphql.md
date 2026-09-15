@@ -2,6 +2,7 @@
 title: "About GraphQL"
 description: "Discover how GraphQL enhances API calls by letting you customize responses and efficiently fetch specific data with Contentstack's comprehensive guides."
 url: /headless-cms/about-graphql
+uid: bltc023ff75af937fdc
 ---
 
 # About GraphQL

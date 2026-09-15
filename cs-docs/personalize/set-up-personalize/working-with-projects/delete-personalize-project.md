@@ -2,6 +2,7 @@
 title: "Delete a Personalize Project"
 description: "Learn how to delete a project in Personalize and remove all associated experiences and data."
 url: /personalize/delete-personalize-project
+uid: blt577c385797aeb2f4
 ---
 
 # Delete a Personalize Project

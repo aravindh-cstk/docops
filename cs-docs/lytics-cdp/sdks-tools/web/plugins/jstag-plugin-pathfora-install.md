@@ -2,6 +2,7 @@
 title: "pathfora.install Plugin"
 description: "Download and install the Pathfora SDK automatically"
 url: /lytics/jstag-plugin-pathfora-install
+uid: blt6bba85faeab78c81
 ---
 
 # pathfora.install Plugin

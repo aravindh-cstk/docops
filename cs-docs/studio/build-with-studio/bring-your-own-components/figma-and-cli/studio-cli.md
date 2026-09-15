@@ -2,6 +2,7 @@
 title: "Studio CLI"
 description: "Learn how to use the Studio CLI to register components, sync designs from Figma, and import design tokens directly from your terminal."
 url: /studio/studio-cli
+uid: blt670599b17e5b19bd
 ---
 
 # Studio CLI

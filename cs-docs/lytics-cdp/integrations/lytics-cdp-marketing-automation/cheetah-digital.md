@@ -2,6 +2,7 @@
 title: "Cheetah Digital"
 description: "Learn how to connect Lytics with Cheetah Digital to authorize the integration and export Lytics audience membership data in real time to a Cheetah Digital table."
 url: /lytics/cheetah-digital
+uid: bltbda4936ce50e13e2
 ---
 
 # Cheetah Digital

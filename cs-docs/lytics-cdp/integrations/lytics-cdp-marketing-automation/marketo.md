@@ -2,6 +2,7 @@
 title: "Marketo"
 description: "Marketo"
 url: /lytics/marketo
+uid: blt83468156101758e7
 ---
 
 # Marketo

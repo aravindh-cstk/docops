@@ -2,6 +2,7 @@
 title: "Generate a Section"
 description: "Use csdx studio:section:create to turn a component and a content type into a ready-to-edit Studio Section, including wrapper sections and making inner components composable."
 url: /studio/cli-section-create
+uid: blt760d43aa823b8c3e
 ---
 
 # Generate a Section

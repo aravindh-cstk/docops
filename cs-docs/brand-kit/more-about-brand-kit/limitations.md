@@ -2,6 +2,7 @@
 title: "Limitations"
 description: "Explore the limitations of Brand Kit, including customizations via support and API rate limit restrictions."
 url: /brand-kit/limitations
+uid: bltb280613126bbf70c
 ---
 
 # Limitations

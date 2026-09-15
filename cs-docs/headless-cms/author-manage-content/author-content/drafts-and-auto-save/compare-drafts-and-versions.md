@@ -2,6 +2,7 @@
 title: "Compare Drafts and Versions"
 description: "Learn how to compare drafts and saved versions in Contentstack to review changes, prevent conflicts, and maintain a clean version history."
 url: /headless-cms/compare-drafts-and-versions
+uid: blt6447d03d68f4c7ab
 ---
 
 # Compare Drafts and Versions

@@ -2,6 +2,7 @@
 title: "Change Personal Details"
 description: "Update your Contentstack profile easily: Edit your name, company, and profile image. Ensure accurate info for seamless account management."
 url: /administration/change-personal-details
+uid: blt9f3d5e812d8b838f
 ---
 
 # Change Personal Details

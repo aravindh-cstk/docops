@@ -2,6 +2,7 @@
 title: "Creating Templates using Lytics API"
 description: "Templates can be created, tested, and managed using the Lytics Template APIs. Full API documentation can be found here . To create a template, simply…"
 url: /lytics/api-created-templates
+uid: bltf706bf9015b06ea4
 ---
 
 # Creating Templates using Lytics API

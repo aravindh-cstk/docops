@@ -2,6 +2,7 @@
 title: "What are Reports?"
 description: "What are Reports?"
 url: /lytics/reports-introduction
+uid: bltb4fe96036fe73654
 ---
 
 # What are Reports?

@@ -2,6 +2,7 @@
 title: "Compare Entry Versions"
 description: "Easily compare entry versions side-by-side in Contentstack with a color-coded view. Spot changes and compare across languages for accurate content management."
 url: /headless-cms/compare-entry-versions
+uid: blt20a11d404252c352
 ---
 
 # Compare Entry Versions

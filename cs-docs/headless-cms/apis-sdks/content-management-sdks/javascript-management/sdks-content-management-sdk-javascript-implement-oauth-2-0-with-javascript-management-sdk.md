@@ -2,6 +2,7 @@
 title: "Implement OAuth 2.0 with JavaScript Management SDK"
 description: "Securely integrate OAuth 2.0 with Contentstack’s JavaScript Management SDK for seamless token-based authentication in web and CLI apps."
 url: /developers/sdks/content-management-sdk/javascript/implement-oauth-2-0-with-javascript-management-sdk
+uid: blt84d4bcf3739643b7
 ---
 
 # Implement OAuth 2.0 with JavaScript Management SDK

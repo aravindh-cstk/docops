@@ -2,6 +2,7 @@
 title: "Project Structure of Getting Started With Building Your Sample Website"
 description: "Explore the project structure of our Restaurant Menu website, featuring key folders like src, Stack data, and more, each vital for building and styling the app."
 url: /headless-cms/project-structure-of-getting-started-with-building-your-sample-website
+uid: bltcf3099ef576704cd
 ---
 
 # Project Structure of Getting Started With Building Your Sample Website

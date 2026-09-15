@@ -2,6 +2,7 @@
 title: "Asset Sidebar Location"
 description: "Manage and optimize your assets in the Asset Sidebar Location to enhance their functionality for your needs."
 url: /developer-hub/asset-sidebar-location
+uid: blte2f8fc3bd7ffc196
 ---
 
 # Asset Sidebar Location

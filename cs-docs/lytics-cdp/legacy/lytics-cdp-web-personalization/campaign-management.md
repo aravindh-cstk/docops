@@ -2,6 +2,7 @@
 title: "Campaign Management"
 description: "Explains the three states a Lytics marketing campaign can be in — Published (active and live on your site, must be paused to edit), Drafted (saved but not yet live), and Archived (automatically locked once the campaign's end date passes) — and how to move between them."
 url: /lytics/campaign-management
+uid: blt6b79cb0fdf1d8cf2
 ---
 
 # Campaign Management

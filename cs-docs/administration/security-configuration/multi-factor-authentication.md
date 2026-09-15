@@ -2,6 +2,7 @@
 title: "Multi-Factor Authentication"
 description: "Secure your Contentstack account with Multi-Factor Authentication. Enable MFA for enhanced protection and prevent unauthorized access."
 url: /administration/multi-factor-authentication
+uid: blt4f066ce57e550230
 ---
 
 # Multi-Factor Authentication

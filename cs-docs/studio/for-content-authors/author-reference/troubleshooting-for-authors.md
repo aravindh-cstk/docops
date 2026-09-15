@@ -2,6 +2,7 @@
 title: "Troubleshoot Studio as a Content Author"
 description: "Top author-facing symptoms + fixes you can try without escalating to engineering."
 url: /studio/troubleshooting-for-authors
+uid: bltd0c203077fdada8c
 ---
 
 # Troubleshoot Studio as a Content Author

@@ -2,6 +2,7 @@
 title: "About Variants"
 description: "Learn how Variants in Contentstack Personalize let you create and manage alternate content experiences for A/B testing and audience targeting."
 url: /personalize/about-variants
+uid: blt72b034a28001cb64
 ---
 
 # About Variants

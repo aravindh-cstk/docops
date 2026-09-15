@@ -2,6 +2,7 @@
 title: "Contentstack App Lifecycle: A Developer's Guide"
 description: "This guide walks you through the complete app lifecycle for Standard and Machine-to-Machine apps, from setup to deployment."
 url: /developer-hub/contentstack-app-lifecycle-a-developers-guide
+uid: bltcc2c328bf0e4d4e8
 ---
 
 # Contentstack App Lifecycle: A Developer's Guide

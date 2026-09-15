@@ -2,6 +2,7 @@
 title: "Cache Invalidation for the Website Using Automate"
 description: "This guide explains how to invalidate cached content to eliminate the risk of displaying outdated content."
 url: /headless-cms/cache-invalidation-for-the-website-using-automate
+uid: blt4ea561bb92e11010
 ---
 
 # Cache Invalidation for the Website Using Automate

@@ -2,6 +2,7 @@
 title: "Edit an Entry Variant"
 description: "Learn how to edit entry variants in Contentstack to update personalized content for specific user segments and keep your content relevant."
 url: /headless-cms/edit-an-entry-variant
+uid: blt1141378949238057
 ---
 
 # Edit an Entry Variant

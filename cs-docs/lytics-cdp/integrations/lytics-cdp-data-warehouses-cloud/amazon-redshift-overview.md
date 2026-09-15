@@ -2,6 +2,7 @@
 title: "Amazon Redshift"
 description: "Learn how to connect Lytics to Amazon Redshift to import user records from a Redshift table or export Lytics audiences to a Redshift table for use with your existing analytics tools."
 url: /lytics/amazon-redshift-overview
+uid: blta09b5db839d9cc98
 ---
 
 # Amazon Redshift

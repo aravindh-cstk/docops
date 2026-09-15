@@ -2,6 +2,7 @@
 title: "Name Asset Versions"
 description: "Assign custom names to asset versions in Contentstack for better organization, easy identification, and improved collaboration in your content workflows."
 url: /headless-cms/name-asset-versions
+uid: blte534b0ff5b446cc3
 ---
 
 # Name Asset Versions

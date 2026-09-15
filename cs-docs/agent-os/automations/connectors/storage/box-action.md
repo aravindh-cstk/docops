@@ -2,6 +2,7 @@
 title: "Box Action"
 description: "Use the Box action connector to fetch a file download URL for your Box cloud drive assets."
 url: /agent-os/box-action
+uid: bltec692fd97f161077
 ---
 
 # Box Action

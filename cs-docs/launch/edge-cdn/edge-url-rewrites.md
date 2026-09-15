@@ -2,6 +2,7 @@
 title: "Edge URL Rewrites"
 description: "Learn how to create and set CDN edge URL rewrite rules for your projects in Contentstack Launch."
 url: /launch/edge-url-rewrites
+uid: blt54541d4dbcda9411
 ---
 
 # Edge URL Rewrites

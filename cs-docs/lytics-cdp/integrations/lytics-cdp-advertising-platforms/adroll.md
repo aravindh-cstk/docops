@@ -2,6 +2,7 @@
 title: "AdRoll"
 description: "Connect Lytics and AdRoll to sync audience segments in real-time, so your AdRoll ad campaigns can target visitors based on their Lytics audience membership."
 url: /lytics/adroll
+uid: bltfca21075f97fb110
 ---
 
 # AdRoll

@@ -2,6 +2,7 @@
 title: "Streams API"
 description: "Query event stream metadata, statistics, fields, and sample events."
 url: /lytics/streams-api
+uid: blt4c6ad7bfc95ff6c8
 ---
 
 # Streams API

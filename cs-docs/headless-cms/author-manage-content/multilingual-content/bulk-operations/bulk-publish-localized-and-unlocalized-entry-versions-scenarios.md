@@ -2,6 +2,7 @@
 title: "Bulk Publish Localized and Unlocalized Entry Versions Scenarios"
 description: "Bulk Publish Localized and Unlocalized Entry Versions Scenarios"
 url: /headless-cms/bulk-publish-localized-and-unlocalized-entry-versions-scenarios
+uid: blt9a4957ab941b4691
 ---
 
 # Bulk Publish Localized and Unlocalized Entry Versions Scenarios

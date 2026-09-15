@@ -2,6 +2,7 @@
 title: "Translate Data using Smartling"
 description: "Translate Data using Smartling"
 url: /agent-os/translate-data-using-smartling
+uid: bltbbc56d31c61cdd7b
 ---
 
 # Translate Data using Smartling

@@ -2,6 +2,7 @@
 title: "About PHP SDK"
 description: "Create PHP-based applications and use the PHP SDK to fetch and deliver content from Contentstack. The PHP SDK uses the Content Delivery APIs"
 url: /developers/sdks/content-delivery-sdk/php/about-php-sdk
+uid: blt6d492f4b29f4592d
 ---
 
 # About PHP SDK

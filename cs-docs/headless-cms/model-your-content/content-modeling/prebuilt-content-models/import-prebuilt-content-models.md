@@ -2,6 +2,7 @@
 title: "Import Prebuilt Content Models"
 description: "Effortlessly import and customize Content Models in Contentstack. Explore templates, extensions, and schema editing for efficient content management."
 url: /headless-cms/import-prebuilt-content-models
+uid: blt43fda7b37368b436
 ---
 
 # Import Prebuilt Content Models

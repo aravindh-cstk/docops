@@ -2,6 +2,7 @@
 title: "Chrome Extension"
 description: "The Contentstack Data & Insights Dev Tools Chrome extension is a comprehensive tool designed to simplify validation, debugging, and exploration of Lytics'…"
 url: /lytics/chrome-extension
+uid: bltced081908d9cd9d0
 ---
 
 # Chrome Extension

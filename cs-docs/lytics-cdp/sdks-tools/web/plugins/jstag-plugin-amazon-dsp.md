@@ -2,6 +2,7 @@
 title: "amazon.dsp Plugin"
 description: "Send the Lytics Seer ID to Amazon DSP for ID synchronization"
 url: /lytics/jstag-plugin-amazon-dsp
+uid: blt2897985f82d4040e
 ---
 
 # amazon.dsp Plugin

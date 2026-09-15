@@ -2,6 +2,7 @@
 title: "Export an Entry"
 description: "Learn how to export entries in Contentstack for backups, content migration, or reuse."
 url: /headless-cms/export-an-entry
+uid: blte9d10ff91f9d36c3
 ---
 
 # Export an Entry

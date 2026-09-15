@@ -2,6 +2,7 @@
 title: "Create an A/B Test Experience"
 description: "Create A/B Test experiences in Personalize to deliver personalized content that boosts engagement and conversions."
 url: /personalize/create-ab-test-experience
+uid: blt452d2cc607e39e57
 ---
 
 # Create an A/B Test Experience

@@ -2,6 +2,7 @@
 title: "Build your first Studio page"
 description: "The canonical 30-minute tutorial that stitches together the five-step quickstart chain, from installing the SDKs to rendering a live URL from a Template."
 url: /studio/build-your-first-studio-page
+uid: blt2f50772c94862156
 ---
 
 # Build your first Studio page

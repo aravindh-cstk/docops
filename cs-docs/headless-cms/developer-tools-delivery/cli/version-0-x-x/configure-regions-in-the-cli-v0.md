@@ -2,6 +2,7 @@
 title: "Configure Regions in the CLI | V0.x.x"
 description: "Optimize your Contentstack CLI setup with region configuration."
 url: /headless-cms/configure-regions-in-the-cli/v0
+uid: bltb2a9262996cb0033
 ---
 
 # Configure Regions in the CLI | V0.x.x

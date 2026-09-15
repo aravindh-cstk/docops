@@ -2,6 +2,7 @@
 title: "Organization Stacks"
 description: "Learn how to manage and delete stacks in Contentstack. Discover detailed steps for organization administrators and stack owners."
 url: /administration/organization-stacks
+uid: bltd6831aed4d5b6d2a
 ---
 
 # Organization Stacks

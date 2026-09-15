@@ -2,6 +2,7 @@
 title: "Salesforce"
 description: "Salesforce is a Customer Relationship Management (CRM) platform that is designed to help you sell, service, analyze, and connect with your customers."
 url: /lytics/salesforce
+uid: blt7b1a3eee145fdb9e
 ---
 
 # Salesforce

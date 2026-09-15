@@ -2,6 +2,7 @@
 title: "Java Utils SDK Variant Utility"
 description: "Extract variant metadata and aliases from Contentstack CDA entry JSON with the Java Utils SDK. Generate data-csvariants for frontend personalization."
 url: /developers/sdks/utils-sdk/java/java-utils-sdk-variant-utility
+uid: blt6f92c94894eb1b22
 ---
 
 # Java Utils SDK Variant Utility

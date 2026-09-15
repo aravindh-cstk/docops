@@ -2,6 +2,7 @@
 title: "Algolia App Installation Guide"
 description: "Learn how to install and configure the Algolia app in Contentstack. Set up environments, manage syncs, and view search analytics in the Full Page UI location."
 url: /marketplace/algolia
+uid: bltcc9021c9a64567b9
 ---
 
 # Algolia App Installation Guide

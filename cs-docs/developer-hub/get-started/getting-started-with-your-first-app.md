@@ -2,6 +2,7 @@
 title: "Getting Started with your First App"
 description: "Use this guide to build a simple app in Developer Hub."
 url: /developer-hub/getting-started-with-your-first-app
+uid: blt283653acda04b2af
 ---
 
 # Getting Started with your First App

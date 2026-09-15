@@ -2,6 +2,7 @@
 title: "Install Live Preview"
 description: "Configure the Delivery SDK with a live_preview block and initialize ContentstackLivePreview to enable real-time draft content fetching in your app."
 url: /studio/install-live-preview
+uid: blt59be24f9181ee75f
 ---
 
 # Install Live Preview

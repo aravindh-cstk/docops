@@ -2,6 +2,7 @@
 title: "Cloud Connect Troubleshooting and FAQs"
 description: "A sync refers to the process of running SQL queries configured on Data Models against data warehouses and then updating Lytics profiles with any changes…"
 url: /lytics/cloud-connect-troubleshooting-and-faqs
+uid: bltd5696ee8ef77f2f1
 ---
 
 # Cloud Connect Troubleshooting and FAQs

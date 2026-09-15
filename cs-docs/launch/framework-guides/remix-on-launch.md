@@ -2,6 +2,7 @@
 title: "Remix on Launch"
 description: "Learn how to host and deploy a project using the Remix framework in Contentstack Launch."
 url: /launch/remix-on-launch
+uid: blt941996536e781e16
 ---
 
 # Remix on Launch

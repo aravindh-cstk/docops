@@ -2,6 +2,7 @@
 title: "Entry Default Workflow Stage"
 description: "Entry Default Workflow Stage"
 url: /headless-cms/entry-default-workflow-stage
+uid: blt933f9e3749b948c1
 ---
 
 # Entry Default Workflow Stage

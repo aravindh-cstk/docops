@@ -2,6 +2,7 @@
 title: "About Trash"
 description: "Learn how to manage and restore deleted content in Contentstack using the Trash feature. Edit and bulk-restore items within a 14-day retention window."
 url: /headless-cms/about-trash
+uid: bltce281dffab54b6c4
 ---
 
 # About Trash

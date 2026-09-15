@@ -2,6 +2,7 @@
 title: "Simple Banner Swap A/B Testing Use Cases"
 description: "Discover how to A/B test banner variants using Contentstack Personalize to boost engagement and optimize website personalization."
 url: /personalize/a-b-testing-banners-use-case
+uid: bltc910b81aaf71177b
 ---
 
 # Simple Banner Swap A/B Testing Use Cases

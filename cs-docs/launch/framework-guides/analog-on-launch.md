@@ -2,6 +2,7 @@
 title: "Analog on Launch"
 description: "Learn how to deploy Analog.js applications on Contentstack Launch. Optimize performance with SSR, ISR, and API routes using this Analog meta-framework guide."
 url: /launch/analog-on-launch
+uid: blt5ca53aaa38f8c355
 ---
 
 # Analog on Launch

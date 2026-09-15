@@ -2,6 +2,7 @@
 title: "Star Ratings App Installation Guide"
 description: "The Marketplace Star Ratings app lets you set the star rating from one to five in Contentstack entries."
 url: /marketplace/star-ratings
+uid: blt91e7bebdcb7752d8
 ---
 
 # Star Ratings App Installation Guide

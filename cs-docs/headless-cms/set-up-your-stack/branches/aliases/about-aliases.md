@@ -2,6 +2,7 @@
 title: "About Aliases"
 description: "Enhance your Contentstack with branch aliasing for seamless app code integration and management. Easily switch branches and maintain content flow."
 url: /headless-cms/about-aliases
+uid: blt004b116fce174943
 ---
 
 # About Aliases

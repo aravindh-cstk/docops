@@ -2,6 +2,7 @@
 title: "Website Homepage"
 description: "The Website Homepage Content Model defines the structure, fields, and schema to design the homepage of your website."
 url: /marketplace/website-homepage
+uid: bltbb0d40a8d0c8fbee
 ---
 
 # Website Homepage

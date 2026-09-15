@@ -2,6 +2,7 @@
 title: "Workflow Board App Installation Guide"
 description: "Preview and manage the Workflow stages within your stack."
 url: /marketplace/workflow-board
+uid: blt8919954dbad947df
 ---
 
 # Workflow Board App Installation Guide

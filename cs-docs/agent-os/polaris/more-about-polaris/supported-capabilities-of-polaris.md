@@ -2,6 +2,7 @@
 title: "Supported Capabilities of Polaris"
 description: "Understand Polaris limitations in Contentstack, including supported content types, permission controls, context-based actions, and metadata-only operations."
 url: /agent-os/supported-capabilities-of-polaris
+uid: blt742163c6bb530b8d
 ---
 
 # Supported Capabilities of Polaris

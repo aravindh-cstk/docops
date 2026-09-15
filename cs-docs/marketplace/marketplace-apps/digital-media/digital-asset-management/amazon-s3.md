@@ -2,6 +2,7 @@
 title: "Amazon S3 App Installation Guide"
 description: "Learn how to use the Amazon S3 app in Contentstack to securely upload, manage, and deliver digital assets from your S3 account using scalable cloud storage."
 url: /marketplace/amazon-s3
+uid: blt371b704de98739d4
 ---
 
 # Amazon S3 App Installation Guide

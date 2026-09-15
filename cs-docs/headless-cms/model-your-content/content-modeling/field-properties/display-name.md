@@ -2,6 +2,7 @@
 title: "Display Name"
 description: "Learn how to customize fields in Contentstack for efficient content structuring, ensuring organized entry pages with tailored field displays."
 url: /headless-cms/display-name
+uid: blt834592406dd005cd
 ---
 
 # Display Name

@@ -2,6 +2,7 @@
 title: "Stream Routing API"
 description: "Route Rules provide the ability to redirect data from one stream to another, or to ignore subsets of a stream altogether."
 url: /lytics/stream-routing-api
+uid: blt77748122e69951bc
 ---
 
 # Stream Routing API

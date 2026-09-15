@@ -2,6 +2,7 @@
 title: "Delete an Environment"
 description: "Learn to delete an Environment in Contentstack via UI or API request."
 url: /headless-cms/delete-an-environment
+uid: blt80f56c3d8f248b40
 ---
 
 # Delete an Environment

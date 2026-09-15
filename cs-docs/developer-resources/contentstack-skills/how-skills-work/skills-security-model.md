@@ -2,6 +2,7 @@
 title: "Security Model"
 description: "See how Contentstack Agent Skills protect management tokens and secrets, gating destructive actions behind confirmation for safe AI-assisted development."
 url: /developers/skills-security-model
+uid: blte3ed709b375d4b6a
 ---
 
 # Security Model

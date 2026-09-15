@@ -2,6 +2,7 @@
 title: "Set Up Content Migration Framework (macOS)"
 description: "Easily migrate content to Contentstack with our seamless framework. Follow our guide to install prerequisites and start your migration effortlessly."
 url: /headless-cms/set-up-content-migration-framework-macos
+uid: blt24dee4d78a708e7e
 ---
 
 # Set Up Content Migration Framework (macOS)

@@ -2,6 +2,7 @@
 title: "Leverage Lookalike Models and Predictive Audiences"
 description: "When you need to reach new users that look like your best customers, create Predictive Audiences powered by Lytics Lookalike Models . Campaigns run with…"
 url: /lytics/leverage-lookalike-models-and-predictive-audiences
+uid: blt30c55285a1016262
 ---
 
 # Leverage Lookalike Models and Predictive Audiences

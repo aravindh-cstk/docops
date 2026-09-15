@@ -2,6 +2,7 @@
 title: "Setting Up Taxonomy-based Permissions for Regional Content Management"
 description: "Learn how to manage granular permissions in Contentstack using taxonomy-based roles, allowing access control for taxonomies and terms within your entries."
 url: /headless-cms/setting-up-taxonomy-based-permissions-for-regional-content-management
+uid: bltdfcc79157552be59
 ---
 
 # Setting Up Taxonomy-based Permissions for Regional Content Management

@@ -2,6 +2,7 @@
 title: "Create a Job and Authorization for Lytics"
 description: "Set up a job and authorization in Contentstack's Lytics to enable secure data syncing and personalized content delivery across digital platforms."
 url: /lytics/create-job-and-authorization-for-lytics
+uid: blt349232fb04a58d26
 ---
 
 # Create a Job and Authorization for Lytics

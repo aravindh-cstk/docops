@@ -2,6 +2,7 @@
 title: "Get Started with PHP SDK"
 description: "steps for getting started with PHP SDK"
 url: /developers/sdks/content-delivery-sdk/php/get-started-with-php-sdk
+uid: blte7880717e67c574a
 ---
 
 # Get Started with PHP SDK

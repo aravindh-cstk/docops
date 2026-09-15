@@ -2,6 +2,7 @@
 title: "About Branches"
 description: "Explore Contentstack's Branches feature to efficiently manage multiple content versions, enabling seamless content development and testing."
 url: /headless-cms/about-branches
+uid: blt150d3b932c9b2065
 ---
 
 # About Branches

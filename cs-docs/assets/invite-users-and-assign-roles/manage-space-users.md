@@ -2,6 +2,7 @@
 title: "Manage Space Users"
 description: "Learn how to efficiently manage user roles in Contentstack by editing or removing access in specific spaces, ensuring seamless user management."
 url: /assets/manage-space-users
+uid: blt9b2fc9529eeb6e37
 ---
 
 # Manage Space Users

@@ -2,6 +2,7 @@
 title: "Manage Spaces and Workspaces in Assets Hub"
 description: "Discover how to manage and link workspaces in Contentstack's Assets Hub. Learn to link, change, or unlink workspaces effectively."
 url: /assets/manage-spaces-and-workspaces-in-assets-hub
+uid: bltcb076de8e1e9456e
 ---
 
 # Manage Spaces and Workspaces in Assets Hub

@@ -2,6 +2,7 @@
 title: "About Workflow Tasks"
 description: "Manage your Contentstack workflow tasks efficiently. Access pending tasks, approvals, and insights for seamless content management."
 url: /headless-cms/about-workflow-tasks
+uid: bltff3ce4c421a3c562
 ---
 
 # About Workflow Tasks

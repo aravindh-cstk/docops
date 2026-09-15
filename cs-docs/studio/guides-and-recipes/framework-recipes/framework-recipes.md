@@ -2,6 +2,7 @@
 title: "Framework Recipes for SSR Integration"
 description: "Studio's SDK renders compositions server-side across every mainstream React host: Node/Express/Fastify, Next.js (App Router client-component SSR, App."
 url: /studio/framework-recipes
+uid: bltdb739952bb99a7b1
 ---
 
 # Framework Recipes for SSR Integration

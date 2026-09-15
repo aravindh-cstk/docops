@@ -2,6 +2,7 @@
 title: "App Releases"
 description: "Track changes and streamline your app management with Contentstack's App Releases in the Developer Hub."
 url: /developer-hub/app-releases
+uid: blte4073a7e3f2b2eac
 ---
 
 # App Releases

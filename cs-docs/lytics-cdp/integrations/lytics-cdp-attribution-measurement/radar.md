@@ -2,6 +2,7 @@
 title: "Radar"
 description: "Radar"
 url: /lytics/radar
+uid: bltc847f68928aa8ce8
 ---
 
 # Radar

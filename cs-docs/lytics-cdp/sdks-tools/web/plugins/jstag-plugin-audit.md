@@ -2,6 +2,7 @@
 title: "audit Plugin"
 description: "Log everything the tag does or filter by topic"
 url: /lytics/jstag-plugin-audit
+uid: bltd31074c080cbde38
 ---
 
 # audit Plugin

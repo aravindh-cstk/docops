@@ -2,6 +2,7 @@
 title: "Create a Webhook"
 description: "Create webhooks to send real-time data to third-party applications or services whenever a specific event occurs. Follow this step-by-step guide to get started."
 url: /headless-cms/create-a-webhook
+uid: bltd4e0e3728080c013
 ---
 
 # Create a Webhook

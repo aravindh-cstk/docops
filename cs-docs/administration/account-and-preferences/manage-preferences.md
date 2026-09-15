@@ -2,6 +2,7 @@
 title: "Manage Preferences"
 description: "Configure your timezone and language preferences to control how timestamps and content appear across Contentstack."
 url: /administration/manage-preferences
+uid: bltd1a491dd396ce43e
 ---
 
 # Manage Preferences

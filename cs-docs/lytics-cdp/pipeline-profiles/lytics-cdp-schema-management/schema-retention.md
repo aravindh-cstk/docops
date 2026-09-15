@@ -2,6 +2,7 @@
 title: "Schema Retention"
 description: "Configure data retention policies for profile fields."
 url: /lytics/schema-retention
+uid: blt7829a65104d56781
 ---
 
 # Schema Retention

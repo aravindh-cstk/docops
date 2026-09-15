@@ -2,6 +2,7 @@
 title: "Get Started with Java Delivery SDK"
 description: "This guide will help you get started with Contentstack Java SDK to build apps. Get clear steps on SDK installation & setup, initialization, and basic queries."
 url: /developers/sdks/content-delivery-sdk/java/get-started-with-java-delivery-sdk
+uid: blt14007f6e3a9333fb
 ---
 
 # Get Started with Java Delivery SDK

@@ -2,6 +2,7 @@
 title: "Get Started with Python SDK"
 description: "Work with Python SDK to create apps"
 url: /developers/sdks/content-delivery-sdk/python/get-started-with-python-sdk
+uid: blt173fdd3cb1ca1fb1
 ---
 
 # Get Started with Python SDK

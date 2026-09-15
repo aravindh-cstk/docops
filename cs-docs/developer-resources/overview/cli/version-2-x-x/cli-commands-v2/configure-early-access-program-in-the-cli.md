@@ -2,6 +2,7 @@
 title: "Configure Early Access in the CLI | V2.x.x"
 description: "Learn how to configure and use the Early Access header in Contentstack Command-line Interface with this clear, step-by-step setup guide."
 url: /headless-cms/configure-early-access-program-in-the-cli
+uid: blt275d7d8eb02308f3
 ---
 
 # Configure Early Access in the CLI | V2.x.x

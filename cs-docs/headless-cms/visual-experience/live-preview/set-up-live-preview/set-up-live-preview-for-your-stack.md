@@ -2,6 +2,7 @@
 title: "Set Up Live Preview for Your Stack"
 description: "Learn how to configure environments, enable Live Preview, and ensure accurate previews for seamless content management."
 url: /headless-cms/set-up-live-preview-for-your-stack
+uid: blt2de20aa2744cc273
 ---
 
 # Set Up Live Preview for Your Stack

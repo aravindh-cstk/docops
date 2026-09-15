@@ -2,6 +2,7 @@
 title: "Frontify App Installation Guide"
 description: "Frontify is an asset management platform that helps you manage your digital assets at one place and customize the access within your team"
 url: /marketplace/frontify
+uid: blt1ec51fed273556b5
 ---
 
 # Frontify App Installation Guide

@@ -2,6 +2,7 @@
 title: "Get Started with Workflows"
 description: "steps to start using workflows"
 url: /headless-cms/get-started-with-workflows
+uid: bltc2f7989ff035af36
 ---
 
 # Get Started with Workflows

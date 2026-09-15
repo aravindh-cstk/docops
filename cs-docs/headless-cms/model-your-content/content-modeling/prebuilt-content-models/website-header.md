@@ -2,6 +2,7 @@
 title: "Website Header"
 description: "The Website Header content model defines the structure and fields to design the header of your website."
 url: /headless-cms/website-header
+uid: blt0a47e25956467861
 ---
 
 # Website Header

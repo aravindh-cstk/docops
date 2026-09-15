@@ -2,6 +2,7 @@
 title: "Image Dimension Validation"
 description: "Image Dimension Validation of your fields"
 url: /headless-cms/image-dimension-validation
+uid: blt5cd7f4704c913132
 ---
 
 # Image Dimension Validation

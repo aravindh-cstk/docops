@@ -2,6 +2,7 @@
 title: "Restore a Deleted Global Field"
 description: "Restore a Deleted Global Field"
 url: /headless-cms/restore-a-deleted-global-field
+uid: blt285a9d57cf6ec196
 ---
 
 # Restore a Deleted Global Field

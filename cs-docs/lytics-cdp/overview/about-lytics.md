@@ -2,6 +2,7 @@
 title: "About Lytics"
 description: "Understand what the Lytics App is, how it relates to the Lytics platform, and how it fits into the Contentstack product suite."
 url: /lytics/about-lytics
+uid: blt0ae5d996feb902d1
 ---
 
 # About Lytics

@@ -2,6 +2,7 @@
 title: "Bynder App Installation Guide"
 description: "Learn to fetch and display Bynder assets in Contentstack with multi-configuration support, seamless login bypass, and advanced asset usage tracking features."
 url: /marketplace/bynder
+uid: bltbe84a04b2b8329ee
 ---
 
 # Bynder App Installation Guide

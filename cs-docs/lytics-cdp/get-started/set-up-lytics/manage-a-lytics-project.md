@@ -2,6 +2,7 @@
 title: "Manage a Lytics Project"
 description: "Learn how to edit project settings, manage connections to CMS stacks, Launch, and Personalize projects, invite collaborators, and delete a Lytics project in Contentstack."
 url: /lytics/manage-a-lytics-project
+uid: blt5edad935602bca67
 ---
 
 # Manage a Lytics Project

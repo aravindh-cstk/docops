@@ -2,6 +2,7 @@
 title: "Contentstack Home and Top Navigation"
 description: "Discover Contentstack’s intuitive dashboard & navigation. Access tools, resources, and updates effortlessly to enhance your digital experience."
 url: /headless-cms/navigating-contentstack
+uid: blt0ba9cc3a166a422e
 ---
 
 # Contentstack Home and Top Navigation

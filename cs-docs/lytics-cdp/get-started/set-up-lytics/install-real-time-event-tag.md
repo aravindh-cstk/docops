@@ -2,6 +2,7 @@
 title: "Install Real-Time Events Tag"
 description: "Learn how to install the Real-Time Events Tag using Google Tag Manager or Web SDK to track behavioral data and enable real-time user profile updates."
 url: /lytics/install-real-time-event-tag
+uid: blt452b470706c0d502
 ---
 
 # Install Real-Time Events Tag

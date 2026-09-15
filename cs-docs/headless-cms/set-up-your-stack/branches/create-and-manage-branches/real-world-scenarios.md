@@ -2,6 +2,7 @@
 title: "Branches Real-world Scenarios"
 description: "Discover how Contentstack's branches facilitate seamless development workflows, enabling efficient content management and CI/CD integration."
 url: /headless-cms/real-world-scenarios
+uid: blt24c3a429b34aeeda
 ---
 
 # Branches Real-world Scenarios

@@ -2,6 +2,7 @@
 title: "Create Asset Types"
 description: "Create and manage asset types in Contentstack to simplify file identification with custom names and enriched metadata. Ensure consistency and enhance searchability."
 url: /assets/create-asset-types
+uid: bltd9aa594c3653739c
 ---
 
 # Create Asset Types

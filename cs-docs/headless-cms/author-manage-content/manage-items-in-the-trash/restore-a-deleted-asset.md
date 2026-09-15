@@ -2,6 +2,7 @@
 title: "Restore a Deleted Asset"
 description: "Restore a Deleted Asset"
 url: /headless-cms/restore-a-deleted-asset
+uid: blte9f4214b0ef9338d
 ---
 
 # Restore a Deleted Asset

@@ -2,6 +2,7 @@
 title: "Unlocalize an Asset"
 description: "Learn how to unlocalize assets in Contentstack, reverting them back to default language settings and discarding localized metadata easily."
 url: /assets/unlocalize-an-asset
+uid: blt7711d80b7f4b7017
 ---
 
 # Unlocalize an Asset

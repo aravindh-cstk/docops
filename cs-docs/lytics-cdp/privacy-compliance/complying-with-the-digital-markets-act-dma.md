@@ -2,6 +2,7 @@
 title: "Complying with the Digital Markets Act (DMA)"
 description: "Starting in early 2024, Lytics has updated connections with certain providers to help you comply with the Digital Markets Act's EU user consent policies."
 url: /lytics/complying-with-the-digital-markets-act-dma
+uid: bltaccc6f7dc71567db
 ---
 
 # Complying with the Digital Markets Act (DMA)

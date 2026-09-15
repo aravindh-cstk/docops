@@ -2,6 +2,7 @@
 title: "Managing your Apps"
 description: "Learn how to manage your apps in Contentstack's Developer Hub with step-by-step instructions."
 url: /developer-hub/managing-your-apps
+uid: bltc728979830ff0ba9
 ---
 
 # Managing your Apps

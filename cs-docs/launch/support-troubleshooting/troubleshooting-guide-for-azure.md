@@ -2,6 +2,7 @@
 title: "Troubleshooting Guide for Azure"
 description: "Troubleshoot Azure App Service timeout errors with keep-alive agents and IPv4 DNS settings for stable Contentstack SDK outbound connections under load."
 url: /launch/troubleshooting-guide-for-azure
+uid: bltc33951be7889d3f4
 ---
 
 # Troubleshooting Guide for Azure

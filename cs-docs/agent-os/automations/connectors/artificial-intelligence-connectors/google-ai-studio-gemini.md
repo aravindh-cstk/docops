@@ -2,6 +2,7 @@
 title: "Google AI Studio (Gemini)"
 description: "Use the Google AI Studio (Gemini) connector to generate responses for text and images using the Google AI Studio (Gemini) AI models."
 url: /agent-os/google-ai-studio-gemini
+uid: blt2043cad33f415a84
 ---
 
 # Google AI Studio (Gemini)

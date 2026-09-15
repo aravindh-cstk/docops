@@ -2,6 +2,7 @@
 title: "Copy an Entry"
 description: "Learn how to copy entries in Contentstack to reuse content efficiently. Duplicate current locale or all localized entries with auto-updated unique fields."
 url: /headless-cms/copy-an-entry
+uid: bltc2ee1c246903fe7e
 ---
 
 # Copy an Entry

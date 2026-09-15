@@ -2,6 +2,7 @@
 title: "Sitecore"
 description: "Sitecore"
 url: /lytics/sitecore
+uid: blta515dfd3609a208c
 ---
 
 # Sitecore

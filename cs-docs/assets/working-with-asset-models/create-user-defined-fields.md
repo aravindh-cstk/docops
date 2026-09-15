@@ -2,6 +2,7 @@
 title: "Create User-Defined Fields"
 description: "Efficiently manage asset metadata in Contentstack by creating custom fields. Enhance asset searchability and categorization with user-defined attributes."
 url: /assets/create-user-defined-fields
+uid: blt78ad8b8167b8090a
 ---
 
 # Create User-Defined Fields

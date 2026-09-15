@@ -2,6 +2,7 @@
 title: "Restore Deleted Content"
 description: "Restore deleted stacks, entries, assets, or content types by contacting Contentstack Support. Provide stack details, UID, and deletion time."
 url: /headless-cms/restore-deleted-content
+uid: bltdab8df034de6d43b
 ---
 
 # Restore Deleted Content

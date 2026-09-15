@@ -2,6 +2,7 @@
 title: "Analytics for Polaris"
 description: "Gain insights into agent activity, token consumption, tool execution, and user-level usage with the Contentstack Polaris Analytics dashboard."
 url: /analytics/analytics-for-polaris
+uid: blt242c2d1278baab04
 ---
 
 # Analytics for Polaris

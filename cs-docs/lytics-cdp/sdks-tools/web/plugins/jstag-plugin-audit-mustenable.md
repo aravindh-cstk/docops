@@ -2,6 +2,7 @@
 title: "audit.mustEnable Plugin"
 description: "Plugin API for opting into the pattern of plugins that must be explicitly enabled"
 url: /lytics/jstag-plugin-audit-mustenable
+uid: bltc3f69f48c97e2891
 ---
 
 # audit.mustEnable Plugin

@@ -2,6 +2,7 @@
 title: "Clone an Automation"
 description: "Clone an Automation"
 url: /agent-os/clone-an-automation
+uid: blt850fd1b26c6534f8
 ---
 
 # Clone an Automation

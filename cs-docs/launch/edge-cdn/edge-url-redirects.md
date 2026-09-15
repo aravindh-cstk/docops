@@ -2,6 +2,7 @@
 title: "Edge URL Redirects"
 description: "Learn how to create edge URL redirects for your projects in Contentstack Launch."
 url: /launch/edge-url-redirects
+uid: bltfad65de37d220d02
 ---
 
 # Edge URL Redirects

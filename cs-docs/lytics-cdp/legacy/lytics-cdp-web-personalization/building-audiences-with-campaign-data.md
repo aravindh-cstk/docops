@@ -2,6 +2,7 @@
 title: "Building Audiences with Campaign Data"
 description: "Learn how to build audiences directly from campaign performance data in Lytics, using the quick-audience buttons on a campaign report to segment reached or converted users by variation and chain campaigns into user journeys."
 url: /lytics/building-audiences-with-campaign-data
+uid: bltdb21554875a27efa
 ---
 
 # Building Audiences with Campaign Data

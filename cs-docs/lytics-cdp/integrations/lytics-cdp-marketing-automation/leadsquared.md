@@ -2,6 +2,7 @@
 title: "Leadsquared"
 description: "LeadSquared helps businesses design, organize and analyze their daily marketing activities in one place."
 url: /lytics/leadsquared
+uid: blt93d9171468e3a102
 ---
 
 # Leadsquared

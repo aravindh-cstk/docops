@@ -2,6 +2,7 @@
 title: "Lytics File Service"
 description: "Lytics File Service allows you to import or export data from sources that Lytics does not have a built-in integration with. Data can imported in either a…"
 url: /lytics/lytics-file-service
+uid: blt76ce301a98aca87a
 ---
 
 # Lytics File Service

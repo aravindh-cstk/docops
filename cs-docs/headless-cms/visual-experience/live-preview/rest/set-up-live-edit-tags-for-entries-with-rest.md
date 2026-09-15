@@ -2,6 +2,7 @@
 title: "Set up Live Edit Tags for Entries with REST"
 description: "Set up live edit tags for entries using REST API in Contentstack to enable real-time preview and seamless content updates."
 url: /headless-cms/set-up-live-edit-tags-for-entries-with-rest
+uid: blt2dca7cb81d41c9ca
 ---
 
 # Set up Live Edit Tags for Entries with REST

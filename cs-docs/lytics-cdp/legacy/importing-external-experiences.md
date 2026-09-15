@@ -2,6 +2,7 @@
 title: "Importing External Experiences"
 description: "Importing External Experiences"
 url: /lytics/importing-external-experiences
+uid: blt76dbb113a3a23e54
 ---
 
 # Importing External Experiences

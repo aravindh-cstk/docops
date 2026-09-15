@@ -2,6 +2,7 @@
 title: "Shopify App Installation Guide"
 description: "Shopify App Installation Guide"
 url: /marketplace/shopify
+uid: bltc5da65e68bc86a81
 ---
 
 # Shopify App Installation Guide

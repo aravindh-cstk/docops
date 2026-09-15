@@ -2,6 +2,7 @@
 title: "StudioComponent Rendering Reference"
 description: "Complete reference for all props accepted by StudioComponent, including specOptions, data, SDK init config, and fetcher query options."
 url: /studio/composition-rendering-reference
+uid: blt4221315e1dbf01fa
 ---
 
 # StudioComponent Rendering Reference

@@ -2,6 +2,7 @@
 title: "About Webhooks"
 description: "Discover how to use Contentstack webhooks to sync third-party apps, automate tasks, and improve workflow efficiency with our comprehensive guide."
 url: /headless-cms/about-webhooks
+uid: blt0fc070b1728f1555
 ---
 
 # About Webhooks

@@ -2,6 +2,7 @@
 title: "Color Picker App Installation Guide"
 description: "The Marketplace Color Picker app lets you choose the color of your choice from the color picker tool in Contentstack entries."
 url: /marketplace/color-picker
+uid: blta8f3b11944be0f15
 ---
 
 # Color Picker App Installation Guide

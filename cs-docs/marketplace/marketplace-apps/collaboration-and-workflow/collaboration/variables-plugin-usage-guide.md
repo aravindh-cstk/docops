@@ -2,6 +2,7 @@
 title: "Variables Plugin Usage Guide"
 description: "Variables Plugin Usage Guide"
 url: /marketplace/variables-plugin-usage-guide
+uid: bltac542daf25efd4e0
 ---
 
 # Variables Plugin Usage Guide

@@ -2,6 +2,7 @@
 title: "Polaris Use Cases"
 description: "Explore common Polaris use cases in Contentstack, including schema generation, entry creation with Brand Kit, translation at scale, personalization, and campaign scheduling."
 url: /agent-os/polaris-use-cases
+uid: blt798acea854186b2f
 ---
 
 # Polaris Use Cases

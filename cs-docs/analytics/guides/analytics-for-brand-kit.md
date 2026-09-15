@@ -2,6 +2,7 @@
 title: "Analytics for Brand Kit"
 description: "Track Brand Kit usage with Contentstack's Analytics dashboard. Monitor Brand Kits, Voice Profiles, AI requests, and more."
 url: /analytics/analytics-for-brand-kit
+uid: bltc1b5faa9c548a9f2
 ---
 
 # Analytics for Brand Kit

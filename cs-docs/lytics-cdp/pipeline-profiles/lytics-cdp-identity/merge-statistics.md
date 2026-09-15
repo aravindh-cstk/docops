@@ -2,6 +2,7 @@
 title: "Merge Statistics"
 description: "Merge Statistics"
 url: /lytics/merge-statistics
+uid: blt1307bc036c7e081c
 ---
 
 # Merge Statistics

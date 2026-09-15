@@ -2,6 +2,7 @@
 title: "Set Up Timeline without Contentstack SDK"
 description: "Set up Contentstack’s Timeline feature without SDK. Enable preview of scheduled updates on your site. Detailed guide for CSR and SSR configurations included."
 url: /headless-cms/set-up-timeline-without-contentstack-sdk
+uid: blt77f063fa2a748025
 ---
 
 # Set Up Timeline without Contentstack SDK

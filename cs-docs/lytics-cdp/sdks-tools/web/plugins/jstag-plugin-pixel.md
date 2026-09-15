@@ -2,6 +2,7 @@
 title: "pixel Plugin"
 description: "Send data using an img element"
 url: /lytics/jstag-plugin-pixel
+uid: blt91226f984dfd1732
 ---
 
 # pixel Plugin

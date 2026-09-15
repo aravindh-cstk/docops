@@ -2,6 +2,7 @@
 title: "Shared Views"
 description: "Learn how to share saved views in Contentstack to enhance collaboration. Assign view or edit permissions for users or roles seamlessly."
 url: /headless-cms/shared-views
+uid: blt1d86470382e041b7
 ---
 
 # Shared Views

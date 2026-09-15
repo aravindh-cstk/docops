@@ -2,6 +2,7 @@
 title: "Real-world marketing site: four scenarios end-to-end"
 description: "A grounded walkthrough of how a marketing team builds blog, product, case study, and campaign landing pages in Studio using connected and freeform templates."
 url: /studio/marketing-site-walkthrough-with-four-end-to-end-scenarios
+uid: blt47322b82989e28fe
 ---
 
 # Real-world marketing site: four scenarios end-to-end

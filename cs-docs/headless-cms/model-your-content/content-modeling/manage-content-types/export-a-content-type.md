@@ -2,6 +2,7 @@
 title: "Export a Content Type"
 description: "Export Contentstack content type schemas as JSON to back up, share, or reuse models across stacks."
 url: /headless-cms/export-a-content-type
+uid: blta577eae3aff2020b
 ---
 
 # Export a Content Type

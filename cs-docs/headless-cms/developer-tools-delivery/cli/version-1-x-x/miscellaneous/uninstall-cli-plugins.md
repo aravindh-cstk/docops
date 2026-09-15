@@ -2,6 +2,7 @@
 title: "Uninstall CLI Plugins"
 description: "Steps to uninstall a CLI plugin"
 url: /headless-cms/uninstall-cli-plugins
+uid: blt553b89ec322a6199
 ---
 
 # Uninstall CLI Plugins

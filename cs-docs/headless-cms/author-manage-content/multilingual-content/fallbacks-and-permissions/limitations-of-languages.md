@@ -2,6 +2,7 @@
 title: "Limitations of Languages"
 description: "Limitations of Languages"
 url: /headless-cms/limitations-of-languages
+uid: blt12537bed97c8e434
 ---
 
 # Limitations of Languages

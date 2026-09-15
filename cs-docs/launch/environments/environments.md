@@ -2,6 +2,7 @@
 title: "Environments"
 description: "Learn how to create, manage, and deploy environments for your web projects effectively in Contentstack Launch."
 url: /launch/environments
+uid: bltbeb6e367e46ce0d5
 ---
 
 # Environments

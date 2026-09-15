@@ -2,6 +2,7 @@
 title: "Metrics"
 description: "Understanding how your flows are performing is crucial for optimization and success. This guide covers all available metrics, monitoring capabilities, and…"
 url: /lytics/flows-metrics
+uid: blt2510cfb31a68b0a5
 ---
 
 # Metrics

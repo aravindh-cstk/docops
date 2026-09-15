@@ -2,6 +2,7 @@
 title: "Card Grid with Slots"
 description: "Build a reusable card grid pattern in Contentstack Studio using section slots, repeaters, and auto-binding to render CMS-driven card lists on any template."
 url: /studio/card-grid-with-slots
+uid: blt73e86e335f700636
 ---
 
 # Card Grid with Slots

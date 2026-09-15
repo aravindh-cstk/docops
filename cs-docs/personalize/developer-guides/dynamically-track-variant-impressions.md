@@ -2,6 +2,7 @@
 title: "Dynamically Track Variant Impressions Based On Entry Variant Shown"
 description: "Learn how to dynamically track variant impressions using the triggerImpression() method in Personalize, based on active variants returned by the CDA."
 url: /personalize/dynamically-track-variant-impressions
+uid: bltd0d0ab9c37356cfe
 ---
 
 # Dynamically Track Variant Impressions Based On Entry Variant Shown

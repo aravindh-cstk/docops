@@ -2,6 +2,7 @@
 title: "Documents"
 description: "Lytics considers every piece of content as a \"document\", and calls the collection of every document a \"corpus\". Lytics automatically processes every web…"
 url: /lytics/documents
+uid: blt4808eb73597e0291
 ---
 
 # Documents

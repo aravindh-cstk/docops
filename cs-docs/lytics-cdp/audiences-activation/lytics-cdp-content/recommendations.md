@@ -2,6 +2,7 @@
 title: "Recommendations"
 description: "Content Recommendations are a powerful tool that can be used to increase user engagement by presenting users with relevant content that resonates with…"
 url: /lytics/recommendations
+uid: bltcbdb4d9994bbd57b
 ---
 
 # Recommendations

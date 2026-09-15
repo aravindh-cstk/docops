@@ -2,6 +2,7 @@
 title: "Use SSL Pinning with iOS SDK"
 description: "steps for using SSL Pinning with iOS SDK"
 url: /developers/sdks/content-delivery-sdk/ios/use-ssl-pinning-with-ios-sdk
+uid: blt6b6f978af634f1ef
 ---
 
 # Use SSL Pinning with iOS SDK

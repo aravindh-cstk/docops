@@ -2,6 +2,7 @@
 title: "Adobe"
 description: "This guide offers an overview of options for leveraging Lytics standard integration capabilities to connect with Adobe’s ads products."
 url: /lytics/adobe
+uid: blte16002f86ff1f600
 ---
 
 # Adobe

@@ -2,6 +2,7 @@
 title: "Slot Props Reference"
 description: "Source-grounded reference for the <Slot> component. It maps to a real export in composable-studio-sdk."
 url: /studio/slot-props-reference
+uid: bltf18b5c397a07b0d1
 ---
 
 # Slot Props Reference

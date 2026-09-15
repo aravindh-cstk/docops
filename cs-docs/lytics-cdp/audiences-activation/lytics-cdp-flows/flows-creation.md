@@ -2,6 +2,7 @@
 title: "Creating a Flow"
 description: "This guide walks you through creating a complete flow from start to finish, focusing on the creation workflow and essential concepts."
 url: /lytics/flows-creation
+uid: blt4e3cb802b4822a22
 ---
 
 # Creating a Flow

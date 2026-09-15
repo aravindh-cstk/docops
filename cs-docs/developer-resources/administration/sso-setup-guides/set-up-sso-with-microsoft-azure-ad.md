@@ -2,6 +2,7 @@
 title: "Set up SSO with Microsofts Azure AD"
 description: "Set up single sign-on in Contentstack with Microsoft Azure Active Directory as your SAML 2.0 identity provider, as one of up to five IdP connections."
 url: /administration/set-up-sso-with-microsoft-azure-ad
+uid: blt8522074247713d95
 ---
 
 # Set up SSO with Microsofts Azure AD

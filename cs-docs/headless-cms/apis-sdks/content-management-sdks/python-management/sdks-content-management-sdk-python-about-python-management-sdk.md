@@ -2,6 +2,7 @@
 title: "About Python Management SDK"
 description: "This documentation on Python Management SDK provides insights into leveraging the SDK to manage and manipulate content within your Python applications efficiently."
 url: /developers/sdks/content-management-sdk/python/about-python-management-sdk
+uid: blt1fb67d03df573dce
 ---
 
 # About Python Management SDK

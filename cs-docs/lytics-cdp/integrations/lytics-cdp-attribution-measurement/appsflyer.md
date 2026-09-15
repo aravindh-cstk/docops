@@ -2,6 +2,7 @@
 title: "AppsFlyer"
 description: "Explains how to connect Lytics to AppsFlyer, authorize the integration with an AppsFlyer Dev Key, and configure a Conversion Events Export job that sends Lytics audience membership as AppsFlyer S2S in-app conversion events, including device identifier and field mappings."
 url: /lytics/appsflyer
+uid: blt4c64fc17dab850d6
 ---
 
 # AppsFlyer

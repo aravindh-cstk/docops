@@ -2,6 +2,7 @@
 title: "Smart Containers Overview"
 description: "Smart Containers are the three primitives that turn a static layout into a data-driven one."
 url: /studio/smart-containers-overview
+uid: blt578101e1717c9e3a
 ---
 
 # Smart Containers Overview

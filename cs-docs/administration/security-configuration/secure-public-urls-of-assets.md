@@ -2,6 +2,7 @@
 title: "Secure Public URLs of Assets"
 description: "Secure your Contentstack assets with URL protection, ensuring safe, authenticated access to prevent unauthorized content retrieval. Enable today for added security."
 url: /administration/secure-public-urls-of-assets
+uid: blt36478587a5c2ca7d
 ---
 
 # Secure Public URLs of Assets

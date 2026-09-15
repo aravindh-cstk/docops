@@ -2,6 +2,7 @@
 title: "Delete an Audience"
 description: "Learn how to delete referenced and non-referenced audience in your Personalize projects."
 url: /personalize/delete-audience
+uid: blt23df5d2b9d2cabcb
 ---
 
 # Delete an Audience

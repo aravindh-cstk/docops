@@ -2,6 +2,7 @@
 title: "About Studio"
 description: "Design pages visually with Studio using drag and drop UI, templates, and real-time data; no coding is required."
 url: /studio/about-studio
+uid: blt4806ea3dedd962f6
 ---
 
 # About Studio

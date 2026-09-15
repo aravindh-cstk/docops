@@ -2,6 +2,7 @@
 title: "Set up SSO with PingIdentity"
 description: "Set up single sign-on in Contentstack with PingIdentity as your SAML 2.0 identity provider, as one of up to five IdP connections in an organization."
 url: /administration/set-up-sso-with-pingidentity
+uid: bltce6d5c0aecc9ed33
 ---
 
 # Set up SSO with PingIdentity

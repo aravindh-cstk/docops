@@ -2,6 +2,7 @@
 title: "Difference Between Agents and Automations"
 description: "Discover the key differences between agents and automations in Agent OS for building intelligent, scalable workflows in Contentstack."
 url: /agent-os/difference-between-agents-and-automations
+uid: blt204e0f6d946d7300
 ---
 
 # Difference Between Agents and Automations

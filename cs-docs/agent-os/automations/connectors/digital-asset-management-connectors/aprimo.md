@@ -2,6 +2,7 @@
 title: "Aprimo"
 description: "Use this connector to update and retrieve asset details stored in Aprimo."
 url: /agent-os/aprimo
+uid: blt06a86dae07bc93cb
 ---
 
 # Aprimo

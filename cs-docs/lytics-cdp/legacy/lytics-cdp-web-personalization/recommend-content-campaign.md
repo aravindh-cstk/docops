@@ -2,6 +2,7 @@
 title: "Recommend Content Campaign"
 description: "Recommend Content Campaign"
 url: /lytics/recommend-content-campaign
+uid: bltefb7d5acc2ba8c2f
 ---
 
 # Recommend Content Campaign

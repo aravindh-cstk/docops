@@ -2,6 +2,7 @@
 title: "Monitor Stack Activities in Audit Log"
 description: "Track and review all stack activities in Contentstack's Audit Log. Filter logs by users, actions, modules, and dates for detailed tracking."
 url: /headless-cms/monitor-stack-activities-in-audit-log
+uid: blt25f94985898fd108
 ---
 
 # Monitor Stack Activities in Audit Log

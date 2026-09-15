@@ -2,6 +2,7 @@
 title: "Setup Chapter Guide"
 description: "Install + configure Studio + Live Preview + Delivery SDK in your app, then create + wire your Studio project."
 url: /studio/setup-chapter-guide
+uid: bltbfd806e68ad97328
 ---
 
 # Setup Chapter Guide

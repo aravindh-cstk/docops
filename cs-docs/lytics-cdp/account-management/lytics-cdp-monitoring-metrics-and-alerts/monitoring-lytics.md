@@ -2,6 +2,7 @@
 title: "Monitoring Metrics"
 description: "Lytics provides a variety of valuable metrics that downstream monitoring tools, such as Google Stackdriver or New Relic, can consume. Using…"
 url: /lytics/monitoring-lytics
+uid: bltb7bcc48b5f5edea0
 ---
 
 # Monitoring Metrics

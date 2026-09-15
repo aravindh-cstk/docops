@@ -2,6 +2,7 @@
 title: "Understanding Non-localizable Exceptions for Content Managers"
 description: "Learn how non-localizable fields behave in Contentstack, including updates, instance management, and exceptions in Group (Multiple), Modular Blocks, and Global Fields."
 url: /headless-cms/understanding-non-localizable-exceptions-for-content-managers
+uid: bltab4bd6c0a8c03a1c
 ---
 
 # Understanding Non-localizable Exceptions for Content Managers

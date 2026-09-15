@@ -2,6 +2,7 @@
 title: "Composition Building Blocks"
 description: "Every entry in the catalog below is a node you drop into a composition's ui tree."
 url: /studio/composition-building-blocks
+uid: blt4de42571e51405e8
 ---
 
 # Composition Building Blocks

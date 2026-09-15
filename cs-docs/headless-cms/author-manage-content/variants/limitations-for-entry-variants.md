@@ -2,6 +2,7 @@
 title: "Limitations for Entry Variants"
 description: "Learn about the limitations of using Entry Variants in Contentstack."
 url: /headless-cms/limitations-for-entry-variants
+uid: blt6a08e8c4c02249c2
 ---
 
 # Limitations for Entry Variants

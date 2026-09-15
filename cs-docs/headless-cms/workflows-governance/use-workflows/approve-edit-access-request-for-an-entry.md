@@ -2,6 +2,7 @@
 title: "Approve Edit Access Request for an Entry"
 description: "Approve edit access request for an entry"
 url: /headless-cms/approve-edit-access-request-for-an-entry
+uid: blt91826386e26329cd
 ---
 
 # Approve Edit Access Request for an Entry

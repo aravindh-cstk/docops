@@ -2,6 +2,7 @@
 title: "Job-Based Publish/Unpublish Webhooks"
 description: "Discover how job-based webhooks summarize bulk publish/unpublish tasks, reducing notifications with key job outcomes for efficient post-processing."
 url: /headless-cms/job-based-publish-unpublish-webhooks
+uid: blte5697f0bbab8e85a
 ---
 
 # Job-Based Publish/Unpublish Webhooks

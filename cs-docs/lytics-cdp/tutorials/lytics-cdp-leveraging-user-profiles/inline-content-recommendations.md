@@ -2,6 +2,7 @@
 title: "Inline Content Recommendations"
 description: "Inline Content Recommendations"
 url: /lytics/inline-content-recommendations
+uid: blt35279cd38c1dc8f7
 ---
 
 # Inline Content Recommendations

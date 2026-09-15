@@ -2,6 +2,7 @@
 title: "Edit a Delivery Token"
 description: "Learn to edit delivery tokens in Contentstack: update name, alias, branch, and more to match evolving project needs."
 url: /headless-cms/edit-a-delivery-token
+uid: blt73dea919dfdd81a7
 ---
 
 # Edit a Delivery Token

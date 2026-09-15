@@ -2,6 +2,7 @@
 title: "Add Workflows and Stages"
 description: "Learn how to create workflows and add stages in Contentstack to manage and control your content approval process."
 url: /headless-cms/add-workflows-and-stages
+uid: blt38041a58f3cdf5f8
 ---
 
 # Add Workflows and Stages

@@ -2,6 +2,7 @@
 title: "Revoke Edit Access for an Entry"
 description: "Revoke edit access for an entry"
 url: /headless-cms/revoke-edit-access-for-an-entry
+uid: blt0e6a3904df1d8bee
 ---
 
 # Revoke Edit Access for an Entry

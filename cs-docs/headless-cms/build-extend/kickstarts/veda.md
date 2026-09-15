@@ -2,6 +2,7 @@
 title: "Veda"
 description: "Build a Next.js App Router catalog and marketing site with Contentstack using the Delivery SDK, Live Preview, and Visual Editor with the Kickstart Veda starter."
 url: /headless-cms/veda
+uid: blt2592733086b935ee
 ---
 
 # Veda

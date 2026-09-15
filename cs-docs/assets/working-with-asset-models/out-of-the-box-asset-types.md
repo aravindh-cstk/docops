@@ -2,6 +2,7 @@
 title: "Out-of-the-Box Asset Types"
 description: "Explore Contentstack's Asset Types Catalog offering seamless integration with MIME types and file extensions for diverse digital formats."
 url: /assets/out-of-the-box-asset-types
+uid: bltf9a382fcb3fcc27b
 ---
 
 # Out-of-the-Box Asset Types

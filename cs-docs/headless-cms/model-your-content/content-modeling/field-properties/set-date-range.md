@@ -2,6 +2,7 @@
 title: "Set date range"
 description: "Set date range of your fields"
 url: /headless-cms/set-date-range
+uid: bltebaa0d08e09b868a
 ---
 
 # Set date range

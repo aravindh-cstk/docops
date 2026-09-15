@@ -2,6 +2,7 @@
 title: "Use Persistence Library With iOS SDK"
 description: "steps for using Persistence Library With iOS SDK"
 url: /developers/sdks/content-delivery-sdk/ios/use-persistence-library-with-ios-sdk
+uid: bltbb7eea751d1550fa
 ---
 
 # Use Persistence Library With iOS SDK

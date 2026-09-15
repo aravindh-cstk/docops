@@ -2,6 +2,7 @@
 title: "Create Personalized Content"
 description: "Create personalized content in Contentstack using Variants to target audience segments effectively."
 url: /personalize/create-personalized-content
+uid: blt43c2f001b884904b
 ---
 
 # Create Personalized Content

@@ -2,6 +2,7 @@
 title: "Set Up Timeline for your Website"
 description: "Learn how to set up Contentstack's Timeline feature for your website to easily visualize and manage scheduled updates on your website."
 url: /headless-cms/set-up-timeline-for-your-website
+uid: blt0a6c0b080c7a172a
 ---
 
 # Set Up Timeline for your Website

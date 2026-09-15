@@ -2,6 +2,7 @@
 title: "Events"
 description: "Subscribe to and receive events from JSTag plugins using the Observer pattern"
 url: /lytics/jstag-events
+uid: blt8923a96ad000bf66
 ---
 
 # Events

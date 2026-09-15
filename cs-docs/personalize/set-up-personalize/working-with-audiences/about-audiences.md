@@ -2,6 +2,7 @@
 title: "About Audiences"
 description: "Discover how Contentstack Personalize uses Audiences to target content, boost engagement, and increase conversions."
 url: /personalize/about-audiences
+uid: bltfd073c26f3523a24
 ---
 
 # About Audiences

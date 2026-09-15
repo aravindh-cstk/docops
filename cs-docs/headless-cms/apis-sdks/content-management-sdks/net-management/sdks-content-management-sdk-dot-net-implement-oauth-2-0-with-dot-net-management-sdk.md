@@ -2,6 +2,7 @@
 title: "Implement OAuth 2.0 with .NET Management SDK"
 description: "Build secure .NET apps with Contentstack CMA using OAuth 2.0. Simplify authentication with PKCE, token refresh, session/cookie storage, and role-based access."
 url: /developers/sdks/content-management-sdk/dot-net/implement-oauth-2-0-with-dot-net-management-sdk
+uid: blt69bfc96a7c48f961
 ---
 
 # Implement OAuth 2.0 with .NET Management SDK

@@ -2,6 +2,7 @@
 title: "Manage Variant Groups"
 description: "Learn how to view and manage variant groups in Contentstack, allowing you to create and target personalized content to your users."
 url: /headless-cms/manage-variant-groups
+uid: blt577fc91979a18964
 ---
 
 # Manage Variant Groups

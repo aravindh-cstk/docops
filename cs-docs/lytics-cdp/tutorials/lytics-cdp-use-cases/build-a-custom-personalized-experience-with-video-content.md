@@ -2,6 +2,7 @@
 title: "Build a Custom Personalized Experience With Video Content"
 description: "Walks through building a Lytics Pathfora widget modal that embeds video content, including the onLoad callback JavaScript needed to insert and style a video element, so you can serve personalized video experiences to a targeted Lytics audience."
 url: /lytics/build-a-custom-personalized-experience-with-video-content
+uid: blt8f9e8ec16b7290ae
 ---
 
 # Build a Custom Personalized Experience With Video Content

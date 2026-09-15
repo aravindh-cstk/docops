@@ -2,6 +2,7 @@
 title: "RTE Location"
 description: "Extend your JSON Rich Text Editor with the RTE Location by adding custom plugins and third-party integrations."
 url: /developer-hub/rte-location
+uid: blt3a0724ff93cd834a
 ---
 
 # RTE Location

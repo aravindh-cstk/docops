@@ -2,6 +2,7 @@
 title: "Leave a Stack"
 description: "Learn how to leave a stack on Contentstack, manage your stack roles, and transfer ownership or delete for seamless collaboration."
 url: /headless-cms/leave-a-stack
+uid: bltbd1296b10ce8b611
 ---
 
 # Leave a Stack

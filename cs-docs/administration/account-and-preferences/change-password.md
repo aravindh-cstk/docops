@@ -2,6 +2,7 @@
 title: "Change Password"
 description: "Secure your Contentstack account by regularly updating passwords. Learn to reset it via profile or API. Enable MFA for added protection."
 url: /administration/change-password
+uid: blt2c09f41d9181b8a2
 ---
 
 # Change Password

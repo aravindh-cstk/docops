@@ -2,6 +2,7 @@
 title: "Get Started with Dart Utils Library"
 description: "steps to use the Dart Utils Library"
 url: /developers/sdks/utils-sdk/dart/get-started-with-dart-utils-library
+uid: blt9a21808108cf99c3
 ---
 
 # Get Started with Dart Utils Library

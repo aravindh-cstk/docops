@@ -2,6 +2,7 @@
 title: "Share a Preview"
 description: "Seamlessly collaborate with Contentstack’s Share Preview feature in Visual Editor. Share real-time previews, gather feedback, and refine content across devices for a faster, error-free review process."
 url: /headless-cms/share-a-preview
+uid: bltcd0fa61af59f7796
 ---
 
 # Share a Preview

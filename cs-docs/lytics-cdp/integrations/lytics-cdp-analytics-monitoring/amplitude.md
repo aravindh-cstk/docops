@@ -2,6 +2,7 @@
 title: "Amplitude"
 description: "Amplitude is a product analytics service that tracks user events and builds rich cross-sectional and longitudinal profiles. It primarily sources users and…"
 url: /lytics/amplitude
+uid: blt5c4141df66974bfe
 ---
 
 # Amplitude

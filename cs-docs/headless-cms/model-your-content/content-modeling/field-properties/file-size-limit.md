@@ -2,6 +2,7 @@
 title: "File size limit"
 description: "Set size limits on files with Contentstack. Options for the File size limit (MB) property are Minimum and Maximum. Read more on field properties here."
 url: /headless-cms/file-size-limit
+uid: bltc46e9b4c07bb8b0a
 ---
 
 # File size limit

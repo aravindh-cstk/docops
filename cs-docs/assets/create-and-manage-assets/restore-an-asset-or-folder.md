@@ -2,6 +2,7 @@
 title: "Restore an Asset or Folder"
 description: "Learn how to restore a deleted asset or folder from Trash in Contentstack, including how parent folders affect restoration."
 url: /assets/restore-an-asset-or-folder
+uid: blt844d509568c686ec
 ---
 
 # Restore an Asset or Folder

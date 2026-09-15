@@ -2,6 +2,7 @@
 title: "Edit a Management Token"
 description: "Learn how to edit a management token in Contentstack, including permissions, expiry, and rate limit settings."
 url: /headless-cms/edit-a-management-token
+uid: blt03d3b43dfa34f9b2
 ---
 
 # Edit a Management Token

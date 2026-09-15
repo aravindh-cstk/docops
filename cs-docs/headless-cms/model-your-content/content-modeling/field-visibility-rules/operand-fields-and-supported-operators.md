@@ -2,6 +2,7 @@
 title: "Operand Fields and Supported Operators"
 description: "Learn about supported operators for different fields in Contentstack, including text, number, boolean, date, and reference fields."
 url: /headless-cms/operand-fields-and-supported-operators
+uid: blt44987c4d8868b4c1
 ---
 
 # Operand Fields and Supported Operators

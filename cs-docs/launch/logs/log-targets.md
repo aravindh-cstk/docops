@@ -2,6 +2,7 @@
 title: "Log Targets"
 description: "Learn how to create Log Targets in Contentstack Launch to forward your server and traffic logs to specific endpoints."
 url: /launch/log-targets
+uid: blte61a91b94c4dffed
 ---
 
 # Log Targets

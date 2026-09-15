@@ -2,6 +2,7 @@
 title: "About Customer Data Platform Integration"
 description: "Leverage Customer Data Platform with Contentstack to manage personalization campaigns and enhance user experiences effectively."
 url: /personalize/about-cdp-integration
+uid: bltacdbc4aef9cae861
 ---
 
 # About Customer Data Platform Integration

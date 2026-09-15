@@ -2,6 +2,7 @@
 title: "Add a Publish Rule"
 description: "Define publish rules to control entry publishing and approvals in Contentstack workflows."
 url: /headless-cms/add-a-publish-rule
+uid: bltbd0bc17081280927
 ---
 
 # Add a Publish Rule

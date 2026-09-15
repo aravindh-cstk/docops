@@ -2,6 +2,7 @@
 title: "Taxonomy-based Content Filtering on Entry List Page"
 description: "Effortlessly filter and access categorized entries with Contentstack's taxonomy feature. Customize your entry list view for streamlined content management."
 url: /headless-cms/taxonomy-based-content-filtering-on-entry-list-page
+uid: blt67a45c319c831384
 ---
 
 # Taxonomy-based Content Filtering on Entry List Page

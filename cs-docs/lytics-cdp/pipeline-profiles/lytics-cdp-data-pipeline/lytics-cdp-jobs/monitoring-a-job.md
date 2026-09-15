@@ -2,6 +2,7 @@
 title: "Monitoring a Job"
 description: "Once you have one or more jobs running, they will be accessible from the list view, as pictured below. This view provides quick access to essential…"
 url: /lytics/monitoring-a-job
+uid: blt06fb69a660eeec1e
 ---
 
 # Monitoring a Job

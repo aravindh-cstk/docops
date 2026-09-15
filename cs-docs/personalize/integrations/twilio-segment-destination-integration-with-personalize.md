@@ -2,6 +2,7 @@
 title: "Twilio Segment Destination Integration with Personalize"
 description: "Learn how to integrate Contentstack Personalize with Twilio Segment to set up destinations for personalized experiences."
 url: /personalize/twilio-segment-destination-integration-with-personalize
+uid: bltca82751bb314bbc8
 ---
 
 # Twilio Segment Destination Integration with Personalize

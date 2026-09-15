@@ -2,6 +2,7 @@
 title: "Per-page overrides without forking the section"
 description: "Learn how to expose section props in Contentstack Studio to deliver per-page content overrides across multiple landing pages without forking a section."
 url: /studio/per-page-component-overrides-without-forking
+uid: blt52719ecdd84b2454
 ---
 
 # Per-page overrides without forking the section

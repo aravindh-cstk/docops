@@ -2,6 +2,7 @@
 title: "Assigning Taxonomy Terms Based on Locale"
 description: "This guide explains how to assign taxonomy terms according to locale, which in turn influences the application of other business rules for term assignment."
 url: /headless-cms/assigning-taxonomy-terms-based-on-locale
+uid: blt831ad0dab2d5ced7
 ---
 
 # Assigning Taxonomy Terms Based on Locale

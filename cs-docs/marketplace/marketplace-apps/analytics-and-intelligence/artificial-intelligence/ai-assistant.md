@@ -2,6 +2,7 @@
 title: "AI Assistant App Installation Guide"
 description: "The Contentstack Marketplace AI Assistant app lets you transform and regenerate content for the Contentstack entry fields."
 url: /marketplace/ai-assistant
+uid: blt13e92f2cae7f811e
 ---
 
 # AI Assistant App Installation Guide

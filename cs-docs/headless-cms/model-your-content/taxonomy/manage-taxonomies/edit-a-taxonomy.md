@@ -2,6 +2,7 @@
 title: "Edit a Taxonomy"
 description: "Discover the steps to efficiently edit a Contentstack taxonomy."
 url: /headless-cms/edit-a-taxonomy
+uid: blt6ef8bc4890e5b6e5
 ---
 
 # Edit a Taxonomy

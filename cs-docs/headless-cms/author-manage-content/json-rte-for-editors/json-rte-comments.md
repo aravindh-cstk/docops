@@ -2,6 +2,7 @@
 title: "JSON RTE Comments"
 description: "Learn how to add, manage, and resolve JSON RTE comments in Contentstack to streamline collaboration during content creation and review."
 url: /headless-cms/json-rte-comments
+uid: bltefd378e67e2cebf1
 ---
 
 # JSON RTE Comments

@@ -2,6 +2,7 @@
 title: "Project Sharing"
 description: "Learn how to share projects in Agent OS, manage access permissions, and collaborate effectively on automation workflows."
 url: /agent-os/project-sharing
+uid: blt8b6b0ba4b370efdc
 ---
 
 # Project Sharing

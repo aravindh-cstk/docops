@@ -2,6 +2,7 @@
 title: "Quickstart in 5 mins"
 description: "Fetch live content from Contentstack in under a minute. Pick the CLI fast path or follow the full walkthrough."
 url: /headless-cms/quickstart-in-5-mins
+uid: blta5ad49be7d84d393
 ---
 
 # Quickstart in 5 mins

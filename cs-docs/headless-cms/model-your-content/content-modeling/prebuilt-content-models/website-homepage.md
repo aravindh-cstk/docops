@@ -2,6 +2,7 @@
 title: "Website Homepage"
 description: "The Website Homepage Content Model includes fields and structures designed to capture the key information about the homepage of your website."
 url: /headless-cms/website-homepage
+uid: blt0803813d7f1a44bd
 ---
 
 # Website Homepage

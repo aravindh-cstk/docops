@@ -2,6 +2,7 @@
 title: "Limitations on Asset Folders"
 description: "Learn about the limitations of asset folders in Contentstack to better organize your assets."
 url: /headless-cms/limitations-on-asset-folders
+uid: blt4ee86e5bc79f6704
 ---
 
 # Limitations on Asset Folders

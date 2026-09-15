@@ -2,6 +2,7 @@
 title: "Lists"
 description: "Learn how to use ordered and unordered lists in Contentstack’s JSON RTE to structure your content effectively."
 url: /headless-cms/lists
+uid: blt0200ebbd0d49c76c
 ---
 
 # Lists

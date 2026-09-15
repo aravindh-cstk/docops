@@ -2,6 +2,7 @@
 title: "Bulk Add to Release"
 description: "Learn how to efficiently bulk add entries to a release in Contentstack, simplifying your release management with just a few clicks."
 url: /headless-cms/bulk-add-to-release
+uid: blt720f80731cdfb3a3
 ---
 
 # Bulk Add to Release

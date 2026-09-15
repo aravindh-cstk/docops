@@ -2,6 +2,7 @@
 title: "About Fields"
 description: "Learn about setting up fields in Contentstack to structure your content effectively. Customize field types and properties for optimized content management."
 url: /headless-cms/about-fields
+uid: blt6890c90f0f9b0f85
 ---
 
 # About Fields

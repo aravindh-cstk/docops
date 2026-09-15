@@ -2,6 +2,7 @@
 title: "Experience Analytics"
 description: "Understand how users interact with your personalized content using Experience Analytics."
 url: /personalize/experience-analytics
+uid: blt93566f29d501f357
 ---
 
 # Experience Analytics

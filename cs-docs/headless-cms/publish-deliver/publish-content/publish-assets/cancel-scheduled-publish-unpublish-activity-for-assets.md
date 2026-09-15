@@ -2,6 +2,7 @@
 title: "Cancel Scheduled Publish/Unpublish Activity for Assets"
 description: "Cancel Scheduled Publish/Unpublish Activity for Assets"
 url: /headless-cms/cancel-scheduled-publish-unpublish-activity-for-assets
+uid: blt01801308c4993153
 ---
 
 # Cancel Scheduled Publish/Unpublish Activity for Assets

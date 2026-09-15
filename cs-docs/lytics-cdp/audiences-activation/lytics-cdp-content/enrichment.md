@@ -2,6 +2,7 @@
 title: "Enrichment"
 description: "To better understand how users are engaging with content, Lytics first needs to understand that content itself. One way Lytics does this is by analyzing…"
 url: /lytics/enrichment
+uid: blt8b3373d8e7bdc59d
 ---
 
 # Enrichment

@@ -2,6 +2,7 @@
 title: "Add the Global Field to Content Types"
 description: "Learn how to add a Global field to content types in Contentstack, modify its properties, and understand its impact on field count."
 url: /headless-cms/add-the-global-field-to-content-types
+uid: blt4d82628b3e5d93d7
 ---
 
 # Add the Global Field to Content Types

@@ -2,6 +2,7 @@
 title: "Bulk Operations in CLI | V1.x.x"
 description: "Run bulk publish and bulk unpublish operations with the Contentstack CLI for entries and assets across environments and locales at scale with built-in retries."
 url: /headless-cms/bulk-operations-in-cli/v1
+uid: blt2a4723e44d15237a
 ---
 
 # Bulk Operations in CLI | V1.x.x

@@ -2,6 +2,7 @@
 title: "Display Type"
 description: "Display Type of your fields"
 url: /headless-cms/display-type
+uid: blta451eaa0722c6f0e
 ---
 
 # Display Type

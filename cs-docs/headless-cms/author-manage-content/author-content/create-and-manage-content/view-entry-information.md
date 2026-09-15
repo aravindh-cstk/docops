@@ -2,6 +2,7 @@
 title: "View Entry Information"
 description: "Access metadata and localization details for an entry using the Entry Information panel in Contentstack."
 url: /headless-cms/view-entry-information
+uid: blt3b043cd482b8963a
 ---
 
 # View Entry Information

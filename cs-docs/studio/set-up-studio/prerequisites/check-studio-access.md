@@ -2,6 +2,7 @@
 title: "Check That Studio Is Enabled for Your Organization"
 description: "Before you install SDKs, register components, or open any of the walkthroughs, verify Studio is actually turned on for your Contentstack organisation."
 url: /studio/check-studio-access
+uid: bltb61d9c58872429b4
 ---
 
 # Check That Studio Is Enabled for Your Organization

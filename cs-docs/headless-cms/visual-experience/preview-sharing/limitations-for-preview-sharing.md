@@ -2,6 +2,7 @@
 title: "Limitations for Preview Sharing"
 description: "Learn about the limitations of the Preview Sharing feature in Contentstack."
 url: /headless-cms/limitations-for-preview-sharing
+uid: bltad5a50b1378adbc1
 ---
 
 # Limitations for Preview Sharing

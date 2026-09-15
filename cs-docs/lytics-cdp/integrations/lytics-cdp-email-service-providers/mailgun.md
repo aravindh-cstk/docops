@@ -2,6 +2,7 @@
 title: "Mailgun"
 description: "If you are new to creating authorizations in Lytics, see the Authorizations documentation for more information."
 url: /lytics/mailgun
+uid: blt8435819f53b21ae3
 ---
 
 # Mailgun

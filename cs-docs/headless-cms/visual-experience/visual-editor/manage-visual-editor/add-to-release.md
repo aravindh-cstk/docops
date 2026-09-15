@@ -2,6 +2,7 @@
 title: "Add to Release in Visual Editor"
 description: "Learn how to add entries to a release directly from Visual Editor to streamline publishing workflows."
 url: /headless-cms/add-to-release
+uid: blt3632440292e24b82
 ---
 
 # Add to Release in Visual Editor

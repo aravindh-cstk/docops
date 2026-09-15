@@ -2,6 +2,7 @@
 title: "SendGrid"
 description: "SendGrid"
 url: /lytics/sendgrid
+uid: blt1d07e0035ef690da
 ---
 
 # SendGrid

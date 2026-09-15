@@ -2,6 +2,7 @@
 title: "Dashboard Report"
 description: "Learn how Lytics automatically generates a customizable Dashboard Report with Size, Dataflow, Composition, and Overlap components, and how to edit it from the Report page."
 url: /lytics/dashboard-report
+uid: bltfad2b44fb7eec9f9
 ---
 
 # Dashboard Report

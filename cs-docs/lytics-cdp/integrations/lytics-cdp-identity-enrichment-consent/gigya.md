@@ -2,6 +2,7 @@
 title: "GIGYA"
 description: "GIGYA was purchased by SAP and is now SAP Customer Data Cloud."
 url: /lytics/gigya
+uid: blt60992c3cc0a6b7da
 ---
 
 # GIGYA

@@ -2,6 +2,7 @@
 title: "Migrate Content from HTML RTE to JSON RTE | V0.x.x"
 description: "Learn how to Migrate Content from HTML RTE to JSON RTE"
 url: /headless-cms/cli-migrate-content-from-html-rte-to-json-rte/v0
+uid: bltcddcfb50d44a61db
 ---
 
 # Migrate Content from HTML RTE to JSON RTE | V0.x.x

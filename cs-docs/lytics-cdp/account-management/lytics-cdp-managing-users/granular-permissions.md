@@ -2,6 +2,7 @@
 title: "Predefined Roles and Granular Permissions"
 description: "When you assign roles to a user from the Manage Users interface, two tabs are available:"
 url: /lytics/granular-permissions
+uid: bltc35372a7fbcc7ee8
 ---
 
 # Predefined Roles and Granular Permissions

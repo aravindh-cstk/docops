@@ -2,6 +2,7 @@
 title: "Blog Listing Page"
 description: "The Blog Listing Page Content Model defines the structure, fields, and schema to design the blog listing of your website."
 url: /marketplace/blog-listing-page
+uid: bltaff46eaa67f738a7
 ---
 
 # Blog Listing Page

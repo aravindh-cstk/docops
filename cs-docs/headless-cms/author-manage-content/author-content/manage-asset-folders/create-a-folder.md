@@ -2,6 +2,7 @@
 title: "Create an Asset Folder"
 description: "Learn how to organize and manage assets in Contentstack with ease. Discover step-by-step instructions to create and structure asset folders efficiently."
 url: /headless-cms/create-a-folder
+uid: blt0854f28aa9c7f9fa
 ---
 
 # Create an Asset Folder

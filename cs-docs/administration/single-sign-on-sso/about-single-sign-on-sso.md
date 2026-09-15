@@ -2,6 +2,7 @@
 title: "About Single Sign-On (SSO)"
 description: "Learn how Single Sign-On (SSO) works in Contentstack, including SAML 2.0 support, multiple identity providers, metadata exchange, and role mapping."
 url: /administration/about-single-sign-on-sso
+uid: blt1f49b932dcba41e6
 ---
 
 # About Single Sign-On (SSO)

@@ -2,6 +2,7 @@
 title: "Oracle Marketing Cloud: Eloqua"
 description: "Oracle Marketing Cloud: Eloqua is a business-to-business (B2B) marketing automation tool that supports lead scoring and email marketing campaigns."
 url: /lytics/oracle-marketing-cloud-eloqua
+uid: blt2347993424b454f7
 ---
 
 # Oracle Marketing Cloud: Eloqua

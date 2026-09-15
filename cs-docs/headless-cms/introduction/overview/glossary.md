@@ -2,6 +2,7 @@
 title: "Glossary"
 description: "Explore Contentstack CMS: Learn about content modeling, workflows, and personalized experiences for seamless content management and delivery."
 url: /headless-cms/glossary
+uid: blt12b01cbf8be6f05a
 ---
 
 # Glossary

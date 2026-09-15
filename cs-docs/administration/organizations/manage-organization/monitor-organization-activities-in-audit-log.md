@@ -2,6 +2,7 @@
 title: "Monitor Organization Activities in Audit Log"
 description: "Track and monitor organization-wide activities with Audit Log. Easily view event details and apply filters for comprehensive insight."
 url: /administration/monitor-organization-activities-in-audit-log
+uid: bltb5ccbeb42bed1e29
 ---
 
 # Monitor Organization Activities in Audit Log

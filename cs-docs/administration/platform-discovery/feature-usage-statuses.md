@@ -2,6 +2,7 @@
 title: "Understand Feature Usage Statuses"
 description: "Learn how Platform Discovery determines Active, No Recent Activity, and Requires Plan Upgrade statuses for Contentstack features."
 url: /administration/feature-usage-statuses
+uid: bltfb8c39a0832d4111
 ---
 
 # Understand Feature Usage Statuses

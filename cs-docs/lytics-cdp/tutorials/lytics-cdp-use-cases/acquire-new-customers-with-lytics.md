@@ -2,6 +2,7 @@
 title: "Acquire New Customers with Lytics"
 description: "A step-by-step Lytics playbook for acquiring new customers, covering suppression audiences, lookalike modeling, data-science-based remarketing, email collection, and targeted offers."
 url: /lytics/acquire-new-customers-with-lytics
+uid: blt1afebb4916a66d4b
 ---
 
 # Acquire New Customers with Lytics

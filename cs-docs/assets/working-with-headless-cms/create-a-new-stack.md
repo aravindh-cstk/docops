@@ -2,6 +2,7 @@
 title: "Create a New Stack With Assets"
 description: "Discover how to create and manage stacks in Contentstack, a centralized system for organizing and publishing content across channels efficiently."
 url: /assets/create-a-new-stack
+uid: blte6d61ed00ae3de6b
 ---
 
 # Create a New Stack With Assets

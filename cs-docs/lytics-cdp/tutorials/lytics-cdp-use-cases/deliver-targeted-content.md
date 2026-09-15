@@ -2,6 +2,7 @@
 title: "Deliver Targeted Content"
 description: "Learn how to use Lytics' content affinity engine to build a content-affinity audience, create content collections, and set up a Recommend Content experience that surfaces personalized content to each visitor."
 url: /lytics/deliver-targeted-content
+uid: blt6aeed3afae33c981
 ---
 
 # Deliver Targeted Content

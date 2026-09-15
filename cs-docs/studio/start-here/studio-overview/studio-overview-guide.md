@@ -2,6 +2,7 @@
 title: "Studio Overview Chapter Guide"
 description: "What Studio is, when to use what, and how to pick the right onboarding path."
 url: /studio/studio-overview-guide
+uid: blt1633cf744607f2e8
 ---
 
 # Studio Overview Chapter Guide

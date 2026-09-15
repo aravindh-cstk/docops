@@ -2,6 +2,7 @@
 title: "Constructor App Installation Guide"
 description: "The Contentstack Marketplace Constructor app fetches product collections from your Constructor account into Contentstack entries."
 url: /marketplace/constructor-io
+uid: blt8ce1656e8ceaad59
 ---
 
 # Constructor App Installation Guide

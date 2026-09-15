@@ -2,6 +2,7 @@
 title: "Design props: breakpoint-aware CSS props"
 description: "Mark a component prop as a design prop so authors can set a different CSS value per breakpoint in Studio's Settings tab, delivered to your component as a generated class."
 url: /studio/design-props
+uid: bltff2d35820af364df
 ---
 
 # Design props: breakpoint-aware CSS props

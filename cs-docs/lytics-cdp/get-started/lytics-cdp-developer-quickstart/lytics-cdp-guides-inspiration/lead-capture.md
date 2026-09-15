@@ -2,6 +2,7 @@
 title: "Lead Capture"
 description: "This document outlines how to leverage Lytics' real-time personalization engine to identify visitors who lack the strong identifiers necessary to link…"
 url: /lytics/lead-capture
+uid: blt3d08ea547a93768d
 ---
 
 # Lead Capture

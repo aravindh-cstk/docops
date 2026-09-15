@@ -2,6 +2,7 @@
 title: "Use GraphQL Queries with Apollo Client Android SDK"
 description: "use the Apollo client and Contentstack GraphQL queries to power the content of your Android SDK apps."
 url: /headless-cms/use-graphql-queries-with-apollo-client-android-sdk
+uid: blt6648924c59faff23
 ---
 
 # Use GraphQL Queries with Apollo Client Android SDK

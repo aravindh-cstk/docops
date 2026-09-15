@@ -2,6 +2,7 @@
 title: "Single Line Textbox"
 description: "Discover how to use the Single Line Textbox in Contentstack. Explore customizable properties and enhance your content management workflows."
 url: /headless-cms/single-line-textbox
+uid: blt03d60953733b2b62
 ---
 
 # Single Line Textbox

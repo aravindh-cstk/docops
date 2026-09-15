@@ -2,6 +2,7 @@
 title: "Code Blocks"
 description: "Learn how to manage, format, and highlight code blocks with Contentstack's JSON Rich Text Editor. Improve readability and structure technical content effortlessly."
 url: /headless-cms/code-blocks
+uid: blt69f25a9916145afb
 ---
 
 # Code Blocks

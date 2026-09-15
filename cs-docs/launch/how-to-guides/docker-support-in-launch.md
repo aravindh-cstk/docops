@@ -2,6 +2,7 @@
 title: "Can I run a Docker container on Launch?"
 description: "This document helps you understand about Docker containers and why Launch does not support them."
 url: /launch/docker-support-in-launch
+uid: bltce0a3c750bcc66bc
 ---
 
 # Can I run a Docker container on Launch?

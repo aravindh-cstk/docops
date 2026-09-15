@@ -2,6 +2,7 @@
 title: "Composition Concepts"
 description: "Learn what a composition is in Contentstack Studio, the difference between templates and sections, and how compositions render in your app."
 url: /studio/composition-concepts
+uid: blt7c60815ca3b85bf5
 ---
 
 # Composition Concepts

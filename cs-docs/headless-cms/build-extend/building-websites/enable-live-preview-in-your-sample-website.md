@@ -2,6 +2,7 @@
 title: "Enable Live Preview in Your Sample Website"
 description: "Learn how to set up Live Preview in your website with Contentstack. See your website changes in real-time before publishing."
 url: /headless-cms/enable-live-preview-in-your-sample-website
+uid: bltd3166ce94f5e4ec8
 ---
 
 # Enable Live Preview in Your Sample Website

@@ -2,6 +2,7 @@
 title: "LQL & Data Import Basics"
 description: "Let's take an in-depth look at Lytics Query Language (LQL) and custom data imports. We'll cover a basic overview of LQL itself, how data identities are…"
 url: /lytics/lql-data-import-basics
+uid: bltc49683038e05a774
 ---
 
 # LQL & Data Import Basics

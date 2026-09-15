@@ -2,6 +2,7 @@
 title: "Dotdigital"
 description: "Dotdigital provides multichannel marketing and automation solutions including managed campaigns, email design and build, and other related services."
 url: /lytics/dotdigital
+uid: blt0feedb4ff7e57dbe
 ---
 
 # Dotdigital

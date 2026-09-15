@@ -2,6 +2,7 @@
 title: "Info Panel App Installation Guide"
 description: "The Marketplace Info Panel app lets you hold the essential information within the JSON Rich Text Editor field."
 url: /marketplace/info-panel
+uid: blt09bafbaa66697bbf
 ---
 
 # Info Panel App Installation Guide

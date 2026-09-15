@@ -2,6 +2,7 @@
 title: "Swift Utils SDK Variant Utility"
 description: "Learn to use the Contentstack Swift Utils SDK Variant Utility to extract variant metadata and generate data-csvariants JSON attributes for your Swift apps."
 url: /developers/sdks/utils-sdk/swift/swift-utils-sdk-variant-utility
+uid: bltbf5d4ecec6fa8913
 ---
 
 # Swift Utils SDK Variant Utility

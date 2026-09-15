@@ -2,6 +2,7 @@
 title: "Playground Canvas: try Studio without setting up an app"
 description: "Learn how Playground Canvas lets you author compositions in Studio without configuring a canvas app, Canvas URL, or SDK installation."
 url: /studio/try-studio-in-the-playground-canvas-without-an-app
+uid: blt8d97cb3948d3e922
 ---
 
 # Playground Canvas: try Studio without setting up an app

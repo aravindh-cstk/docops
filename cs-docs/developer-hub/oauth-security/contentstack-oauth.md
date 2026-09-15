@@ -2,6 +2,7 @@
 title: "Contentstack OAuth"
 description: "Implement secure OAuth 2.0 authentication with Contentstack for controlled API access and seamless integration."
 url: /developer-hub/contentstack-oauth
+uid: blt3979a36afdcf08f9
 ---
 
 # Contentstack OAuth

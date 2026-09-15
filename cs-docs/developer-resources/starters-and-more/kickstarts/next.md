@@ -2,6 +2,7 @@
 title: "Next.js"
 description: "Learn how to set up and run a Next.js project integrated with Contentstack. Ideal for developers new to these technologies. Get started today!"
 url: /headless-cms/next
+uid: blt11483155f99c0107
 ---
 
 # Next.js

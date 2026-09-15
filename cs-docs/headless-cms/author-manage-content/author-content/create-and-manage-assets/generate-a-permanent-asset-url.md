@@ -2,6 +2,7 @@
 title: "Generate a Permanent Asset URL"
 description: "Learn how to generate permanent asset URLs in Contentstack for stable references, even after asset updates or replacements."
 url: /headless-cms/generate-a-permanent-asset-url
+uid: bltb2033e19972bb0cf
 ---
 
 # Generate a Permanent Asset URL

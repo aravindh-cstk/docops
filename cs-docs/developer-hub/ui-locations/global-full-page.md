@@ -2,6 +2,7 @@
 title: "Global Full Page Location"
 description: "Build full-page apps across stacks with Global UI Location in Contentstack. Ideal for dashboards, workflows, and integrated organization-level tools."
 url: /developer-hub/global-full-page
+uid: blt715c4c4c28ae4d20
 ---
 
 # Global Full Page Location

@@ -2,6 +2,7 @@
 title: "Key Concepts"
 description: "Understand the core building blocks of the Lytics in Contentstack: projects, connections, collaborators, roles, JStag, and the dashboard and how they work together."
 url: /lytics/key-concepts
+uid: blte26953a06c9cadcc
 ---
 
 # Key Concepts

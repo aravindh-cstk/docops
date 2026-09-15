@@ -2,6 +2,7 @@
 title: "Set the active project"
 description: "Set the active Studio project the CLI writes to, interactively or by project ID."
 url: /studio/cli-project-set
+uid: blte886b6b92151b19f
 ---
 
 # Set the active project

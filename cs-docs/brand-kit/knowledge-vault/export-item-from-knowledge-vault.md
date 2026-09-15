@@ -2,6 +2,7 @@
 title: "Export Item from Knowledge Vault"
 description: "Learn how to export items from your Knowledge Vault to back up your data, reuse configurations, and maintain consistency across environments."
 url: /brand-kit/export-item-from-knowledge-vault
+uid: bltc8414c15a98eb214
 ---
 
 # Export Item from Knowledge Vault

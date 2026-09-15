@@ -2,6 +2,7 @@
 title: "Backup Entries or Assets to AWS S3"
 description: "Backup Entries or Assets to AWS S3"
 url: /agent-os/backup-entries-or-assets-to-aws-s3
+uid: blta986458b6270d48a
 ---
 
 # Backup Entries or Assets to AWS S3

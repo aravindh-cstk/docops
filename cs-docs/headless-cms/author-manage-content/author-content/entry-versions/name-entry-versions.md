@@ -2,6 +2,7 @@
 title: "Name Entry Versions"
 description: "Learn how to assign custom names to entry versions in Contentstack for easier identification."
 url: /headless-cms/name-entry-versions
+uid: blt79a05f0fc14b0a82
 ---
 
 # Name Entry Versions

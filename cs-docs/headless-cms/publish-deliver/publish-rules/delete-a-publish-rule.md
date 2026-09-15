@@ -2,6 +2,7 @@
 title: "Delete a Publish Rule"
 description: "Learn to delete Contentstack publish rules to maintain content governance by editing approval conditions, workflows, and policy settings."
 url: /headless-cms/delete-a-publish-rule
+uid: blt11fcacc8608ea643
 ---
 
 # Delete a Publish Rule

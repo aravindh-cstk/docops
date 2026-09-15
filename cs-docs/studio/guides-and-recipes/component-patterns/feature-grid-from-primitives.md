@@ -2,6 +2,7 @@
 title: "Compose a Feature Grid from primitives"
 description: "Build a three-column feature grid (icon, heading, description per card) from the same 10 registered primitives, with authors binding to a Reference-multi field on the CT."
 url: /studio/feature-grid-from-primitives
+uid: blt7efbbf3260fd1109
 ---
 
 # Compose a Feature Grid from primitives

@@ -2,6 +2,7 @@
 title: "How Repeat Paths Work?"
 description: "Discover how Repeat Path in Agent OS helps you loop through data to automate repetitive tasks and streamline bulk operations efficiently."
 url: /agent-os/how-repeat-paths-work
+uid: blt90e7f55613bd8a54
 ---
 
 # How Repeat Paths Work?

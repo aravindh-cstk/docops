@@ -2,6 +2,7 @@
 title: "HTML-based Rich Text Editor"
 description: "The Rich Text Editor (RTE) allows you to edit and format content entered in the field without using HTML tags (however, you can use HTML tags, if needed)."
 url: /headless-cms/rich-text-editor
+uid: blt2d6bf6e5e60ed54f
 ---
 
 # HTML-based Rich Text Editor

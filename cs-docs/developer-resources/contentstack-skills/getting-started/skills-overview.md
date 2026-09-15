@@ -2,6 +2,7 @@
 title: "Overview"
 description: "Equip AI coding tools like Cursor, Claude Code, Codex, and Gemini with Contentstack Agent Skills to write precise, secure CMS and Delivery SDK code instantly."
 url: /developers/skills-overview
+uid: blta0d59fcf39ab2ce5
 ---
 
 # Overview

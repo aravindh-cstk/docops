@@ -2,6 +2,7 @@
 title: "Get Started with JavaScript Personalize Edge SDK"
 description: "Get started with the Contentstack Personalize Edge SDK to deliver personalized experiences, trigger events, and track user actions effortlessly."
 url: /developers/sdks/personalize-edge-sdk/javascript/get-started-with-javascript-personalize-edge-sdk
+uid: bltc3151f0f89f2e3ed
 ---
 
 # Get Started with JavaScript Personalize Edge SDK

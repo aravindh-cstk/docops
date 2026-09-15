@@ -2,6 +2,7 @@
 title: "Limitations for Drafts and Auto Save"
 description: "Explore Contentstack's Drafts & Auto Save features: connectivity, collaboration, and versioning limits for seamless content management."
 url: /headless-cms/limitations-for-drafts-and-auto-save
+uid: blt67210ac0c43249c5
 ---
 
 # Limitations for Drafts and Auto Save

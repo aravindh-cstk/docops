@@ -2,6 +2,7 @@
 title: "Bulk User Deletion"
 description: "Delete large lists of user profiles for GDPR and CCPA compliance using the bulk identity deletion endpoint."
 url: /lytics/bulk-user-deletion
+uid: blt49f418253231b5a6
 ---
 
 # Bulk User Deletion

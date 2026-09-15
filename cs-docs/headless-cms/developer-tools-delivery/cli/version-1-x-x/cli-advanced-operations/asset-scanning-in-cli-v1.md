@@ -2,6 +2,7 @@
 title: "Asset Scanning in CLI | V1.x.x"
 description: "Learn how asset scanning gates publishing in the Contentstack CLI for cm:assets:publish and cm:stacks:import, including prerequisites, troubleshooting, and known limitations."
 url: /headless-cms/asset-scanning-in-cli/v1
+uid: blt6ee109a7b3725e1c
 ---
 
 # Asset Scanning in CLI | V1.x.x

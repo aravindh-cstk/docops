@@ -2,6 +2,7 @@
 title: "Create a Folder"
 description: "Organize your assets efficiently in Contentstack with custom folders. Learn how to create and manage folders for better asset management and searchability."
 url: /assets/create-a-folder
+uid: blt7f7bb3d8c8f69798
 ---
 
 # Create a Folder

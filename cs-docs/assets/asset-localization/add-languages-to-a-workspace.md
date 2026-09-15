@@ -2,6 +2,7 @@
 title: "Add Languages to a Workspace"
 description: "Discover how to manage language settings in Contentstack, enabling targeted asset localization across workspaces for efficient, clutter-free campaigns."
 url: /assets/add-languages-to-a-workspace
+uid: blt6428e0ea28863fe8
 ---
 
 # Add Languages to a Workspace

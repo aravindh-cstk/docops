@@ -2,6 +2,7 @@
 title: "SDK Installation and Setup for Live Preview (Laravel v5.4 or later)"
 description: "SDK Installation and Setup for Live Preview (Laravel v5.4 or later)"
 url: /developers/sdks/content-delivery-sdk/php/sdk-installation-and-setup-for-live-preview-laravel-v5.4-or-later
+uid: blt042f44bbd273904d
 ---
 
 # SDK Installation and Setup for Live Preview (Laravel v5.4 or later)

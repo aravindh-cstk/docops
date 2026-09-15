@@ -2,6 +2,7 @@
 title: "Get Started with JavaScript Marketplace SDK"
 description: "This guide will help you get started with Contentstack JavaScrip Marketplace SDK to build apps."
 url: /developers/sdks/marketplace-sdk/javascript/get-started-with-javascript-marketplace-sdk
+uid: blt8d597f2c5cb8520c
 ---
 
 # Get Started with JavaScript Marketplace SDK

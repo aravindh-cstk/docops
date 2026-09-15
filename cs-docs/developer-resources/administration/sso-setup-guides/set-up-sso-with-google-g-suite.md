@@ -2,6 +2,7 @@
 title: "Set up SSO with Google G-Suite"
 description: "Set up single sign-on in Contentstack with Google Workspace (G Suite) as your SAML 2.0 identity provider, as one of up to five IdP connections."
 url: /administration/set-up-sso-with-google-g-suite
+uid: blta3bc572c53199fd6
 ---
 
 # Set up SSO with Google G-Suite

@@ -2,6 +2,7 @@
 title: "Goals API"
 description: "Programmatically manage goals and track conversion progress."
 url: /lytics/goals-api
+uid: blt145a30ce21d0d148
 ---
 
 # Goals API

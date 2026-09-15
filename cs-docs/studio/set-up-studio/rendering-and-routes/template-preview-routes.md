@@ -2,6 +2,7 @@
 title: "Wire template preview routes"
 description: "Learn how to wire a single catch-all route in your framework so Studio-composed URLs render correctly, with SSR and CSR patterns for Next.js, Remix, and more."
 url: /studio/template-preview-routes
+uid: bltb4aa3cb8a64df0bb
 ---
 
 # Wire template preview routes

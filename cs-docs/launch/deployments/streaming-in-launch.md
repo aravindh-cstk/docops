@@ -2,6 +2,7 @@
 title: "Streaming in Launch"
 description: "Enable streaming in Contentstack Launch for real-time, incremental response delivery via SSR, Cloud Functions, or Edge Functions."
 url: /launch/streaming-in-launch
+uid: bltdefc81a2a32759b2
 ---
 
 # Streaming in Launch

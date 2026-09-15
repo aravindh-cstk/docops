@@ -2,6 +2,7 @@
 title: "Engage Qualified Users with Targeted Ads"
 description: "Learn how to build Lytics audiences—like Anonymous Deeply Engaged, Known High LTV, and Known Leads—and activate them in Facebook and Google Ads to retarget qualified anonymous and known users."
 url: /lytics/engage-qualified-users-with-targeted-ads
+uid: bltf41971ef516bb299
 ---
 
 # Engage Qualified Users with Targeted Ads

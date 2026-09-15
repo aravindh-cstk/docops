@@ -2,6 +2,7 @@
 title: "Studio API: Composition Routes"
 description: "The curl examples below use $CSAUTH for whichever credential header you hold, authorization: Bearer <accesstoken> for an OAuth client, or authtoken."
 url: /studio/studio-api-compositions
+uid: blt27a60b5f6a8e737c
 ---
 
 # Studio API: Composition Routes

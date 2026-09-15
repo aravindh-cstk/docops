@@ -2,6 +2,7 @@
 title: "Migrate .NET Management SDK from Newtonsoft.Json to System.Text.Json"
 description: "Upgrade your Contentstack Management .NET SDK seamlessly from v0.x to v1.0.0-beta.1+ with this comprehensive guide on switching to System.Text.Json."
 url: /developers/sdks/content-management-sdk/dot-net/migrate-dotnet-management-sdk-from-newtonsoft.json-to-system.text.json
+uid: bltc2079141c575b9fa
 ---
 
 # Migrate .NET Management SDK from Newtonsoft.Json to System.Text.Json

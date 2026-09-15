@@ -2,6 +2,7 @@
 title: "Uninstalling an App"
 description: "Uninstalling an App"
 url: /marketplace/uninstalling-an-app
+uid: blt8a523a22c1e6ac03
 ---
 
 # Uninstalling an App

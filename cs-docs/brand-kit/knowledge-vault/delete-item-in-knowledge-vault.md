@@ -2,6 +2,7 @@
 title: "Delete Item in Knowledge Vault"
 description: "Learn how to delete items in the Knowledge Vault effectively and manage your data with ease and precision."
 url: /brand-kit/delete-item-in-knowledge-vault
+uid: blt41f2839d64fa88c5
 ---
 
 # Delete Item in Knowledge Vault

@@ -23,7 +23,7 @@ import { htmlToMarkdown } from "./html-to-md.js";
 import { parseTitle } from "./lib/entry-content.js";
 // Shared with the Prod → GitHub pull and nav-apply. Previously a local copy
 // here, which is how the Prod pull came to be missing the tag filter entirely.
-import { AUTOMATION_TAG_PREFIXES } from "./lib/entry-to-markdown.js";
+import { authoredTags, yamlQuoted, yamlScalar } from "./lib/entry-to-markdown.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -223,14 +223,6 @@ function generateFrontmatter(stackType: string, entry: any): string {
   // the CMS. Strip it back off here — apidocs titles were never prefixed.
   const title =
     stackType === "csdocs" && entry.title ? parseTitle(entry.title as string).heading : entry.title;
-  if (title) lines.push(`title: "${title}"`);
-  if (entry.url) lines.push(`url: ${entry.url}`);
-
-  // Stamps this file as CMS-owned so the delete pass below (and doc-index's
-  // uidIndex) can tell it apart from a hand-authored file that just happens to
-  // share a url — never written before, so pre-existing synced files won't
-  // carry this until the sync next touches them.
-  if (stackType === "csdocs" && entry.uid) lines.push(`uid: ${entry.uid}`);
 
   // docs_article's SEO description lives at entry.seo.description, not a
   // top-level entry.description (same field this pipeline already reads in
@@ -239,15 +231,32 @@ function generateFrontmatter(stackType: string, entry: any): string {
     stackType === "csdocs"
       ? (entry.seo as { description?: string } | undefined)?.description
       : entry.description;
-  if (description) lines.push(`description: ${description}`);
 
-  if (stackType === "csdocs" && Array.isArray(entry.tags)) {
-    const authoredTags = (entry.tags as unknown[]).filter(
-      (t): t is string =>
-        typeof t === "string" && !AUTOMATION_TAG_PREFIXES.some((prefix) => t.startsWith(prefix)),
-    );
-    if (authoredTags.length > 0) {
-      lines.push(`tags: [${authoredTags.map((t) => JSON.stringify(t)).join(", ")}]`);
+  // Values go through the shared YAML helpers rather than bare interpolation.
+  // `description: ${description}` was unquoted outright, which is the same
+  // defect that stopped the Prod to GitHub sync for a week: a CMS description
+  // routinely carries a colon or a pre-escaped quote, and either one produces
+  // frontmatter that gray-matter cannot parse.
+  //
+  // Key order matches entry-to-markdown.ts for csdocs (title, description, url,
+  // uid, tags). This file is a third writer over the same csdocs files, and
+  // three emitters that disagree on order or quoting rewrite each other's output
+  // on every run.
+  if (title) lines.push(`title: ${yamlQuoted(String(title))}`);
+  if (description) lines.push(`description: ${yamlQuoted(String(description))}`);
+  if (entry.url) lines.push(`url: ${yamlScalar(String(entry.url))}`);
+
+  // Stamps this file as CMS-owned so the delete pass (and doc-index's uidIndex)
+  // can tell it apart from a hand-authored file that just happens to share a url.
+  if (stackType === "csdocs" && entry.uid) lines.push(`uid: ${yamlScalar(String(entry.uid))}`);
+
+  if (stackType === "csdocs") {
+    // Shared authoredTags(), not a local copy. The local one filtered only by
+    // prefix, so the exact tag "nav-toplevel" leaked into files, and it did not
+    // sort, so reordering tags in the CMS read as an edit.
+    const tags = authoredTags(entry.tags).slice().sort();
+    if (tags.length > 0) {
+      lines.push(`tags: [${tags.map((t) => JSON.stringify(t)).join(", ")}]`);
     }
   }
 

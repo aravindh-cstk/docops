@@ -2,6 +2,7 @@
 title: "legacyLiosetupCallback Plugin"
 description: "Legacy callback support for the liosetup global variable pattern"
 url: /lytics/jstag-plugin-legacy-liosetup-callback
+uid: bltd9c083dd4f866bdb
 ---
 
 # legacyLiosetupCallback Plugin

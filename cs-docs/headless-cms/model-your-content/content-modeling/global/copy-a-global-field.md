@@ -2,6 +2,7 @@
 title: "Copy a Global Field"
 description: "Learn how to copy a Global field in Contentstack to reuse existing field structures with minimal modifications."
 url: /headless-cms/copy-a-global-field
+uid: blte748ddc9c9400dd9
 ---
 
 # Copy a Global Field

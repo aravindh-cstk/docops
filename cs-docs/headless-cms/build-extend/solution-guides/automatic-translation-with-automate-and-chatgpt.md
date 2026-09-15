@@ -2,6 +2,7 @@
 title: "Automatic Translation with Automate and ChatGPT"
 description: "This guide helps businesses create a more agile, automated, and accurate translation solution to achieve a competitive edge."
 url: /headless-cms/automatic-translation-with-automate-and-chatgpt
+uid: blt5b9df638bae05a92
 ---
 
 # Automatic Translation with Automate and ChatGPT

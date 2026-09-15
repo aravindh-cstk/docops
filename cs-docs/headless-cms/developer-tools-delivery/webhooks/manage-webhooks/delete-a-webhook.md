@@ -2,6 +2,7 @@
 title: "Delete a Webhook"
 description: "Quickly delete a webhook to stop automated triggers for user-defined events in your application or service."
 url: /headless-cms/delete-a-webhook
+uid: blt9d22674d6544157d
 ---
 
 # Delete a Webhook

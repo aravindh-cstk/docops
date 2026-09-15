@@ -2,6 +2,7 @@
 title: "Create an Event"
 description: "Learn how to create an event to capture and monitor every interaction made by a visitor for your A/B Test experiences."
 url: /personalize/create-event
+uid: blt146573782662e8f4
 ---
 
 # Create an Event

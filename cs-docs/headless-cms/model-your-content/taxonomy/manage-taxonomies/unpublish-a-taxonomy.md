@@ -2,6 +2,7 @@
 title: "Unpublish a Taxonomy"
 description: "Unpublish a taxonomy to remove its complete term hierarchy from selected environments, locales, and branches using the UI or APIs."
 url: /headless-cms/unpublish-a-taxonomy
+uid: blta37b0f8cf43431b8
 ---
 
 # Unpublish a Taxonomy

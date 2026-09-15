@@ -2,6 +2,7 @@
 title: "Acoustic"
 description: "Acoustic (previously known as Silverpop) is a marketing platform that enables email, SMS, and mobile campaigns, among other marketing analytics and…"
 url: /lytics/acoustic
+uid: blt92ccffe4a9a04fee
 ---
 
 # Acoustic

@@ -2,6 +2,7 @@
 title: "Add Visual Markups"
 description: "Transform static images into interactive experiences with Visual Markup. Highlight, add info, or create shoppable images in Contentstack Assets."
 url: /assets/add-visual-markups
+uid: blt3c78b5a914518dfd
 ---
 
 # Add Visual Markups

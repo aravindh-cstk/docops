@@ -2,6 +2,7 @@
 title: "Edit a Stack"
 description: "Learn to edit a stack. Update the stack details for efficient content management."
 url: /headless-cms/edit-a-stack
+uid: bltcf2ffbdff482d648
 ---
 
 # Edit a Stack

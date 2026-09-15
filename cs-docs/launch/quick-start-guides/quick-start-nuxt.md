@@ -2,6 +2,7 @@
 title: "Launch Quick Start Guide with Nuxt"
 description: "Learn to deploy your first Nuxt Launch project using GitHub."
 url: /launch/quick-start-nuxt
+uid: blt3337d54a9f0d455e
 ---
 
 # Launch Quick Start Guide with Nuxt

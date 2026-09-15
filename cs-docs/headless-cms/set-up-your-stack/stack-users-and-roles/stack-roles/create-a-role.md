@@ -2,6 +2,7 @@
 title: "Create a Role"
 description: "Learn how to create custom roles in Contentstack to manage user access, permissions, publishing environments, and languages."
 url: /headless-cms/create-a-role
+uid: bltf33e2c40427c1b78
 ---
 
 # Create a Role

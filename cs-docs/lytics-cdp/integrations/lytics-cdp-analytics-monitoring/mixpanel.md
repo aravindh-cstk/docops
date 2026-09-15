@@ -2,6 +2,7 @@
 title: "Mixpanel"
 description: "Mixpanel"
 url: /lytics/mixpanel
+uid: blt88bad42411eff703
 ---
 
 # Mixpanel

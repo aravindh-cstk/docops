@@ -2,6 +2,7 @@
 title: "Contentstack Management - Variants Actions"
 description: "Use the Contentstack Management Variants actions to automate variants based operations."
 url: /agent-os/contentstack-management-variants-actions
+uid: blt630511a75f5b5127
 ---
 
 # Contentstack Management - Variants Actions

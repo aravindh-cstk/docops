@@ -2,6 +2,7 @@
 title: "Criteo"
 description: "Criteo is the global commerce media company that enables marketers and media owners to drive better commerce outcomes. Its industry leading Commerce Media…"
 url: /lytics/criteo
+uid: blta566dc5acbe7f742
 ---
 
 # Criteo

@@ -2,6 +2,7 @@
 title: "Add a Custom Attribute to an Audience"
 description: "Learn how to add custom attributes to an audience in Contentstack Personalize for improved content targeting."
 url: /personalize/add-custom-attribute-to-audience
+uid: blt995e4e075c6927b2
 ---
 
 # Add a Custom Attribute to an Audience

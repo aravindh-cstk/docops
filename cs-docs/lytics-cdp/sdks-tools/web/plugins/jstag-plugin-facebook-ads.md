@@ -2,6 +2,7 @@
 title: "facebook.ads Plugin"
 description: "Export Lytics audiences to Facebook Ads"
 url: /lytics/jstag-plugin-facebook-ads
+uid: blta1e7397fe20a8e49
 ---
 
 # facebook.ads Plugin

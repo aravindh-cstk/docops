@@ -2,6 +2,7 @@
 title: "Classification"
 description: "The Classification page offers insight into how your content is being scraped, indexed, and categorized by the Lytics Content Affinity Engine. You can…"
 url: /lytics/classification
+uid: bltc8e730f1833691ea
 ---
 
 # Classification

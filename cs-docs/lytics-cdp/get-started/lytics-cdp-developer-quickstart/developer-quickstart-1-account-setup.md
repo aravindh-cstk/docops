@@ -2,6 +2,7 @@
 title: "1. Account Setup"
 description: "1. Account Setup"
 url: /lytics/developer-quickstart-1-account-setup
+uid: blt170ccd7dd251d629
 ---
 
 # 1. Account Setup

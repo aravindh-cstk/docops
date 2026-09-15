@@ -2,6 +2,7 @@
 title: "Work with Sections as a Content Author"
 description: "A Section is a reusable piece of a page: a Hero, a Card Grid, a Related-Posts list."
 url: /studio/working-with-sections-as-an-author
+uid: blt8a937c552d7b99f6
 ---
 
 # Work with Sections as a Content Author

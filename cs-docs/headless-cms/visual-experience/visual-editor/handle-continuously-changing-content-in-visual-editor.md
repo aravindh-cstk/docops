@@ -2,6 +2,7 @@
 title: "{Headless CMS | Visual Editor} - Handle Continuously Changing Content in Visual Editor"
 description: "Pause self-updating content such as animations, carousels, and polled feeds while a field is selected in Visual Editor, using the isVisualEditorEditing() check from the Live Preview Utils SDK."
 url: /headless-cms/handle-continuously-changing-content-in-visual-editor
+uid: blt20bb1cb0e3ffd789
 ---
 
 # {Headless CMS | Visual Editor} - Handle Continuously Changing Content in Visual Editor

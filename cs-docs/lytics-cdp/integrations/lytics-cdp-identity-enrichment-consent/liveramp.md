@@ -2,6 +2,7 @@
 title: "LiveRamp"
 description: "LiveRamp is an identity resolution platform that provides data onboarding and connectivity services. It connects campaign exposure data, offline purchase…"
 url: /lytics/liveramp
+uid: blt058c8fd2ac3f5bcb
 ---
 
 # LiveRamp

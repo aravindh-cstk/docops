@@ -2,6 +2,7 @@
 title: "Change Workflow Details of Entries in Bulk"
 description: "Update workflow stages in bulk for multiple entries in Contentstack using search, filters, and views."
 url: /headless-cms/change-workflow-details-of-entries-in-bulk
+uid: blt7949105a0f343140
 ---
 
 # Change Workflow Details of Entries in Bulk

@@ -2,6 +2,7 @@
 title: "Delete Entries and Assets in Bulk"
 description: "Bulk delete entries/assets using Contentstack's search with filters and views. Streamline content management efficiently."
 url: /headless-cms/delete-entries-and-assets-in-bulk
+uid: blted576b3dad2c41ae
 ---
 
 # Delete Entries and Assets in Bulk

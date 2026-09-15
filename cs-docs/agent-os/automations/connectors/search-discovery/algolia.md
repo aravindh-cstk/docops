@@ -2,6 +2,7 @@
 title: "Algolia"
 description: "Use this connector to perform CRUD operation in the Algolia account."
 url: /agent-os/algolia
+uid: bltca25707635509622
 ---
 
 # Algolia

@@ -2,6 +2,7 @@
 title: "Evaluating Lookalike Models"
 description: "The Lookalike Model summary view is divided into four distinct tabs, each offering valuable insights about your model:"
 url: /lytics/evaluating-lookalike-models
+uid: blt5b35783fa26a44d1
 ---
 
 # Evaluating Lookalike Models

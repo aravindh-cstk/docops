@@ -2,6 +2,7 @@
 title: "Generate Components from Figma"
 description: "Learn how to use the Studio Figma Plugin and Studio CLI to turn Figma frames into committed React components registered on the Studio canvas."
 url: /studio/generate-components-from-figma
+uid: blt2cb493e134f087a3
 ---
 
 # Generate Components from Figma

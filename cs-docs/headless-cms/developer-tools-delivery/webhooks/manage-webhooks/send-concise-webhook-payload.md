@@ -2,6 +2,7 @@
 title: "Send Concise Webhook Payload"
 description: "While creating or updating a webhook, Contentstack allows you to send a concise JSON payload to the specified URL whenever the selected event occurs."
 url: /headless-cms/send-concise-webhook-payload
+uid: blt7754f7dcc4029612
 ---
 
 # Send Concise Webhook Payload

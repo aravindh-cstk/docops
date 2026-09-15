@@ -2,6 +2,7 @@
 title: "Section Data Reference"
 description: "Reference for Studio's Section Data control — which targets can root a placed section, how structural matching runs, what the picker shows, and how a root resolves at render time."
 url: /studio/section-data-reference
+uid: blt2767630b4dfbe729
 ---
 
 # Section Data Reference

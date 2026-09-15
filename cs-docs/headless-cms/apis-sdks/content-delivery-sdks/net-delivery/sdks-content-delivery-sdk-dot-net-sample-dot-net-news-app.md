@@ -2,6 +2,7 @@
 title: "Sample .NET News App"
 description: "Simple Steps to work on a .NET app"
 url: /developers/sdks/content-delivery-sdk/dot-net/sample-dot-net-news-app
+uid: blte8c652ef44e4f1ef
 ---
 
 # Sample .NET News App

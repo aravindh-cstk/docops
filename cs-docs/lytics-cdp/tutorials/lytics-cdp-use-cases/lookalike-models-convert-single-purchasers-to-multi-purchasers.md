@@ -2,6 +2,7 @@
 title: "Lookalike Models: Convert single purchasers to multi-purchasers"
 description: "Once you’ve acquired customers, a good way to increase sales and revenue without increasing advertising cost significantly is to target customers that are…"
 url: /lytics/lookalike-models-convert-single-purchasers-to-multi-purchasers
+uid: blt8f1fe7e7ee3625ae
 ---
 
 # Lookalike Models: Convert single purchasers to multi-purchasers

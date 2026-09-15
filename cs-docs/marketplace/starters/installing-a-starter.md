@@ -2,6 +2,7 @@
 title: "Importing a Starter"
 description: "Learn how to import Contentstack Starters with predefined content, data, and configurations. Step-by-step guide for Owners & Admins to quickly set up new stacks."
 url: /marketplace/installing-a-starter
+uid: blt4f2fbf067df120ce
 ---
 
 # Importing a Starter

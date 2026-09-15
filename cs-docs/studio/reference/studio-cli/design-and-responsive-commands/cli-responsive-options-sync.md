@@ -2,6 +2,7 @@
 title: "Sync responsive breakpoints"
 description: "Sync the responsive breakpoints defined in your registerBreakpoints function to the Studio project."
 url: /studio/cli-responsive-options-sync
+uid: blta1da34b60e7d73cd
 ---
 
 # Sync responsive breakpoints

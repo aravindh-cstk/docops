@@ -2,6 +2,7 @@
 title: "Bring Your Own Data Overview"
 description: "Most compositions render against Contentstack content, a template connected to a content type, entries resolved by the SDK."
 url: /studio/bring-your-own-data
+uid: blt052a65d6838f57bc
 ---
 
 # Bring Your Own Data Overview

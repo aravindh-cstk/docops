@@ -2,6 +2,7 @@
 title: "Cloudinary Trigger"
 description: "Learn how to use the Cloudinary trigger to streamline asset workflows, from uploads to metadata updates, within your Contentstack environment."
 url: /agent-os/cloudinary-trigger
+uid: bltf6a59baa9f721960
 ---
 
 # Cloudinary Trigger

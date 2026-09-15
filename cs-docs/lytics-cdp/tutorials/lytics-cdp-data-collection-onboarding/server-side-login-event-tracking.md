@@ -2,6 +2,7 @@
 title: "Server-side login Event Tracking"
 description: "Capturing authenticated login details for profile stitching"
 url: /lytics/server-side-login-event-tracking
+uid: blta38f0f2c0eccbe31
 ---
 
 # Server-side login Event Tracking

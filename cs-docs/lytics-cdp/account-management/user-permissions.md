@@ -2,6 +2,7 @@
 title: "Lytics User Permissions"
 description: "Understand how access to Lytics projects is governed by Contentstack organization membership and project-level roles, and see a full breakdown of who can do what."
 url: /lytics/user-permissions
+uid: blte4b1d980eaa2ee06
 ---
 
 # Lytics User Permissions

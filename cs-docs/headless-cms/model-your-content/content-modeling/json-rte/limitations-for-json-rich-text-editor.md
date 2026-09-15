@@ -2,6 +2,7 @@
 title: "Limitations for JSON Rich Text Editor"
 description: "Limitations for JSON RTE"
 url: /headless-cms/limitations-for-json-rich-text-editor
+uid: blt7dd0f82c797e8336
 ---
 
 # Limitations for JSON Rich Text Editor

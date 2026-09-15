@@ -2,6 +2,7 @@
 title: "Basic Formatting"
 description: "Learn how to use basic text styles and formatting options within Contentstack’s JSON RTE to create clear, structured, and engaging content."
 url: /headless-cms/basic-formatting
+uid: blt3f787614c37a4a95
 ---
 
 # Basic Formatting

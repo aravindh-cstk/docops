@@ -2,6 +2,7 @@
 title: "App Hosting"
 description: "Effortlessly fetch or create new projects in Launch for deployment, and even customize your app URL for integration with third-party web hosting providers."
 url: /developer-hub/app-hosting
+uid: blt3a56055f6d89b583
 ---
 
 # App Hosting

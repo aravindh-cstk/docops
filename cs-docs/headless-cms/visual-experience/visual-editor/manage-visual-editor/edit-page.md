@@ -2,6 +2,7 @@
 title: "Edit Page"
 description: "Learn how to edit web pages in Contentstack’s Visual Editor using real-time previews, inline field modifiers, and drag-and-drop tools—no coding required."
 url: /headless-cms/edit-page
+uid: blt377a4f68bbacab06
 ---
 
 # Edit Page

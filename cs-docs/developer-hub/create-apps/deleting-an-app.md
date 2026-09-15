@@ -2,6 +2,7 @@
 title: "Deleting an App"
 description: "Deleting an App"
 url: /developer-hub/deleting-an-app
+uid: blt11eebf9acfc8b195
 ---
 
 # Deleting an App

@@ -2,6 +2,7 @@
 title: "Types of Apps"
 description: "Explore Contentstack apps to customize your CMS effortlessly, connect third-party services, and optimize user experience at stack or organization level."
 url: /developer-hub/types-of-apps
+uid: bltfcc4cd3332e63690
 ---
 
 # Types of Apps

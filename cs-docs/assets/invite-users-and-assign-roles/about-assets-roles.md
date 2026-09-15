@@ -2,6 +2,7 @@
 title: "About Assets Roles"
 description: "Discover how Contentstack Assets utilizes role-based access control (RBAC) for secure, scalable, and flexible asset management across spaces."
 url: /assets/about-assets-roles
+uid: blt893a4402b508fd44
 ---
 
 # About Assets Roles

@@ -2,6 +2,7 @@
 title: "Managing Webhooks in an App"
 description: "Managing Webhooks in an App"
 url: /developer-hub/managing-webhooks-in-an-app
+uid: blt20b8c19eddf1aded
 ---
 
 # Managing Webhooks in an App

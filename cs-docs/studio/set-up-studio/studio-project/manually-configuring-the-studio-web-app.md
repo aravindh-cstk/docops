@@ -2,6 +2,7 @@
 title: "Layer 2 runbook: the human-only Studio web steps"
 description: "A step-by-step runbook for the manual Studio web app configuration steps: creating a project, linking a stack, setting up environments, building sections and templates, and publishing compositions."
 url: /studio/manually-configuring-the-studio-web-app
+uid: blt3b3e64115e2a1a4b
 ---
 
 # Layer 2 runbook: the human-only Studio web steps

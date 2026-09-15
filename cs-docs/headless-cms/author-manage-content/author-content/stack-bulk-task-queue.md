@@ -2,6 +2,7 @@
 title: "Stack Bulk Task Queue"
 description: "Manage and track bulk operations in your Contentstack release with the Bulk Task Queue. Access task details, statuses, and filters for efficient processing."
 url: /headless-cms/stack-bulk-task-queue
+uid: blt21edab79d9be7e65
 ---
 
 # Stack Bulk Task Queue

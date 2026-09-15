@@ -2,6 +2,7 @@
 title: "Feature Activity Definitions"
 description: "Review the activity criteria used by Platform Discovery to determine feature usage statuses across Contentstack capabilities."
 url: /administration/feature-activity-definitions
+uid: blt3b479f996acb87e4
 ---
 
 # Feature Activity Definitions

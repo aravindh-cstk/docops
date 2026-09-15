@@ -2,6 +2,7 @@
 title: "Detect the Studio Canvas to Gate Third-Party Scripts"
 description: "The Studio canvas iframes your real site, which means every third-party script your site loads also runs inside the canvas."
 url: /studio/detect-the-studio-canvas
+uid: blt286b9e32005e3c93
 ---
 
 # Detect the Studio Canvas to Gate Third-Party Scripts

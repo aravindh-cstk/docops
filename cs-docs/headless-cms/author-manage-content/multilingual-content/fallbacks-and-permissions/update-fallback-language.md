@@ -2,6 +2,7 @@
 title: "Update Fallback Language"
 description: "steps to update the fallback language"
 url: /headless-cms/update-fallback-language
+uid: bltebc66210c74c86c7
 ---
 
 # Update Fallback Language

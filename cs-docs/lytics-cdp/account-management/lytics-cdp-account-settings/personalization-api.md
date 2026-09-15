@@ -2,6 +2,7 @@
 title: "Personalization API"
 description: "Configuration options for the Lytics personalization API and related features."
 url: /lytics/personalization-api
+uid: bltafd27b2765eeb363
 ---
 
 # Personalization API

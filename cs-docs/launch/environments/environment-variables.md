@@ -2,6 +2,7 @@
 title: "Environment Variables"
 description: "Learn how to set, use, and manage environment variables for your web projects effectively in Contentstack Launch."
 url: /launch/environment-variables
+uid: blt5aa4708b9b920b21
 ---
 
 # Environment Variables

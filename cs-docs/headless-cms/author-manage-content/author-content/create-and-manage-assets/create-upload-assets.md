@@ -2,6 +2,7 @@
 title: "Create/Upload Assets"
 description: "Learn how to create, upload, and manage assets in Contentstack. Organize files, view asset details, and streamline content workflows."
 url: /headless-cms/create-upload-assets
+uid: blt76db1a6a38aaffbb
 ---
 
 # Create/Upload Assets

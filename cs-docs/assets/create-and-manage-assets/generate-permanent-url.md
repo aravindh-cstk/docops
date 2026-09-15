@@ -2,6 +2,7 @@
 title: "Generate Permanent URL"
 description: "Discover how Contentstack's permanent URLs ensure stable asset references, even after updates. Learn to generate consistent links effortlessly."
 url: /assets/generate-permanent-url
+uid: blt20d5a9a64d26522c
 ---
 
 # Generate Permanent URL

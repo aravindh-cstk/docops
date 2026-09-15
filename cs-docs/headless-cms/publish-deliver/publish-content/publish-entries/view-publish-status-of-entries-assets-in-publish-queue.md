@@ -2,6 +2,7 @@
 title: "View Publish Status of Entries/Assets in Publish Queue"
 description: "View and track the publishing and deployment status of entries and assets in the Publish Queue."
 url: /headless-cms/view-publish-status-of-entries-assets-in-publish-queue
+uid: blte18497431b654680
 ---
 
 # View Publish Status of Entries/Assets in Publish Queue

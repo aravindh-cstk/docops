@@ -2,6 +2,7 @@
 title: "Accessing Accounts"
 description: "Learn how to view and edit your Lytics account details such as account name, domain, and primary contact email, and how to switch between multiple accounts you have access to using the account switcher."
 url: /lytics/account-details
+uid: blt05e7450c94f7fc5d
 ---
 
 # Accessing Accounts

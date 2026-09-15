@@ -2,6 +2,7 @@
 title: "StudioComposition Props Reference"
 description: "Source-grounded reference for <StudioComposition /> and its companion fetcher sdk.fetchComposition."
 url: /studio/studio-composition-props-reference
+uid: blt7035851c971332f6
 ---
 
 # StudioComposition Props Reference

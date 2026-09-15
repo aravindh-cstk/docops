@@ -2,6 +2,7 @@
 title: "Edit a Term"
 description: "Efficiently edit terms in Contentstack with our step-by-step guide."
 url: /headless-cms/edit-a-term
+uid: blt1d4ea1423997c4f9
 ---
 
 # Edit a Term

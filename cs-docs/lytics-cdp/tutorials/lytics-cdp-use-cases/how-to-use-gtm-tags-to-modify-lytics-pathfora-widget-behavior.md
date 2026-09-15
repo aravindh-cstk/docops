@@ -2,6 +2,7 @@
 title: "How to Use GTM Tags to Modify Lytics Pathfora Widget Behavior"
 description: "How to Use GTM Tags to Modify Lytics Pathfora Widget Behavior"
 url: /lytics/how-to-use-gtm-tags-to-modify-lytics-pathfora-widget-behavior
+uid: blt2e1e496262c88a6e
 ---
 
 # How to Use GTM Tags to Modify Lytics Pathfora Widget Behavior

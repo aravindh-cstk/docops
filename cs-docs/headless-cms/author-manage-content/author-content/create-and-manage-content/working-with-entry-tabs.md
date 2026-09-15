@@ -2,6 +2,7 @@
 title: "Working with Entry Tabs"
 description: "Organize and manage entry fields efficiently using tabs in Contentstack’s entry editor."
 url: /headless-cms/working-with-entry-tabs
+uid: bltf4b50a68d88c6e9e
 ---
 
 # Working with Entry Tabs

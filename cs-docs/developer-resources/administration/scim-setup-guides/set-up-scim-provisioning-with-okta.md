@@ -2,6 +2,7 @@
 title: "Set Up SCIM Provisioning with Okta"
 description: "Set Up SCIM Provisioning with Okta that allows you to use Okta to provision or deprovision users automatically with Contentstack."
 url: /administration/set-up-scim-provisioning-with-okta
+uid: blt40aafdc36a3b01fa
 ---
 
 # Set Up SCIM Provisioning with Okta

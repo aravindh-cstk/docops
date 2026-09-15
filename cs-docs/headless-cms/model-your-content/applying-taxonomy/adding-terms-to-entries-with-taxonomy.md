@@ -2,6 +2,7 @@
 title: "Adding Terms to Entries with Taxonomy"
 description: "Categorize entries easily using taxonomy in Contentstack. Follow these steps to add terms  and streamline classification."
 url: /headless-cms/adding-terms-to-entries-with-taxonomy
+uid: blt3a5b879471a57038
 ---
 
 # Adding Terms to Entries with Taxonomy

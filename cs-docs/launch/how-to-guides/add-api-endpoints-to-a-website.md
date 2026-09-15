@@ -2,6 +2,7 @@
 title: "Add API Endpoints to a Website in Launch"
 description: "Learn how to create, test, and manage custom API endpoints in Contentstack Launch."
 url: /launch/add-api-endpoints-to-a-website
+uid: blta52d654583ca00dc
 ---
 
 # Add API Endpoints to a Website in Launch

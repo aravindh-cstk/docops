@@ -2,6 +2,7 @@
 title: "JSON Editor App Installation Guide"
 description: "The JSON Editor app enables to view, edit, and format input data in JSON. You can also save the data as an object or a string composition."
 url: /marketplace/json-editor
+uid: blt194aef2a900841dc
 ---
 
 # JSON Editor App Installation Guide

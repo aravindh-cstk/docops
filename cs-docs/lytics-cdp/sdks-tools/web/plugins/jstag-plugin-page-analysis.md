@@ -2,6 +2,7 @@
 title: "pageAnalysis Plugin"
 description: "Automatically collect and send page analysis data into Lytics"
 url: /lytics/jstag-plugin-page-analysis
+uid: blt7934fcbf1da240bd
 ---
 
 # pageAnalysis Plugin

@@ -2,6 +2,7 @@
 title: "Audiences"
 description: "Learn how to use Visual Editor's Audiences to tailor content for specific audiences and deliver a personalized experience to each user segment."
 url: /headless-cms/audiences
+uid: blt05bf794a568796b6
 ---
 
 # Audiences

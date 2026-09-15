@@ -2,6 +2,7 @@
 title: "Bring Your Own Components Chapter Guide"
 description: "Register your existing React components so Studio uses them as the visual building blocks for authors."
 url: /studio/bring-your-own-components-guide
+uid: blt8f517ff0ce9be4bc
 ---
 
 # Bring Your Own Components Chapter Guide

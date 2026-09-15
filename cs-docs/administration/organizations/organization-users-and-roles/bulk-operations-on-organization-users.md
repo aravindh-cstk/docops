@@ -2,6 +2,7 @@
 title: "Bulk Operations on Organization Users"
 description: "Efficiently manage organization users with bulk operations. Remove, update stack access, or change roles in one step."
 url: /administration/bulk-operations-on-organization-users
+uid: blt865f1d6c67252135
 ---
 
 # Bulk Operations on Organization Users

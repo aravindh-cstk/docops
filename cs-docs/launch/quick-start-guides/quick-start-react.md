@@ -2,6 +2,7 @@
 title: "Launch Quick Start Guide with React"
 description: "Learn to deploy your first React Starter Launch project using GitHub."
 url: /launch/quick-start-react
+uid: blt740e4e7cdcfa8b29
 ---
 
 # Launch Quick Start Guide with React

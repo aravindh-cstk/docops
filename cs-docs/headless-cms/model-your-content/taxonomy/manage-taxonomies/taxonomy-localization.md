@@ -2,6 +2,7 @@
 title: "Taxonomy Localization"
 description: "Learn how to localize taxonomies across branches and locales with centralized control and fallback support in Contentstack."
 url: /headless-cms/taxonomy-localization
+uid: bltc49c96e24616db92
 ---
 
 # Taxonomy Localization

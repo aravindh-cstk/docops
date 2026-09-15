@@ -2,6 +2,7 @@
 title: "Bind a Section to CMS Data"
 description: "A Section renders content from a CMS entry. This page is the single canonical explanation of how that happens: the two pieces that make it work, a linked."
 url: /studio/bind-a-section-to-cms-data
+uid: bltacbc81e28f533fcb
 ---
 
 # Bind a Section to CMS Data

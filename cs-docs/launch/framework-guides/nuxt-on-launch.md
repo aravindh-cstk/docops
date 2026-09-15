@@ -2,6 +2,7 @@
 title: "Nuxt on Launch"
 description: "Learn more about hosting a project using the \"Nuxt\" framework option in Contentstack Launch."
 url: /launch/nuxt-on-launch
+uid: blt9b57d87f63d3f8d8
 ---
 
 # Nuxt on Launch

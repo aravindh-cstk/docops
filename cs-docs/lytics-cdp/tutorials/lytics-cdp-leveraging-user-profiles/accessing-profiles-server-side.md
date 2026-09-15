@@ -2,6 +2,7 @@
 title: "Accessing Profiles Server Side"
 description: "Learn how to look up a visitor's Lytics profile from server-side code by reading the seerid/_uid cookie and calling the personalization API, then surfacing the returned profile fields in your page template or as a JavaScript object."
 url: /lytics/accessing-profiles-server-side
+uid: blt603fe00cfffcaa7c
 ---
 
 # Accessing Profiles Server Side

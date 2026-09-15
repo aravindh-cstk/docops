@@ -2,6 +2,7 @@
 title: "Profile Controls"
 description: "Configuration options for the profile and/or schema related features."
 url: /lytics/profile-schema
+uid: blt8e426bb2772b60a7
 ---
 
 # Profile Controls

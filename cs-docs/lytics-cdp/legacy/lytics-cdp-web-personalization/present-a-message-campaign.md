@@ -2,6 +2,7 @@
 title: "Present a Message Campaign"
 description: "Present a Message Campaign"
 url: /lytics/present-a-message-campaign
+uid: blta6de3ad476d2ae87
 ---
 
 # Present a Message Campaign

@@ -2,6 +2,7 @@
 title: "Lytics Monitoring"
 description: "Lytics Monitoring allows you to configure email alerts for your data pipeline."
 url: /lytics/lytics-monitoring
+uid: blt5b32e3552cef5daf
 ---
 
 # Lytics Monitoring

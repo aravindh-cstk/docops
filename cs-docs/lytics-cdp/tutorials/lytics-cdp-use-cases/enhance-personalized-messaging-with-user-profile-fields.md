@@ -2,6 +2,7 @@
 title: "Enhance Personalized Messaging with User Profile Fields"
 description: "Enhance Personalized Messaging with User Profile Fields"
 url: /lytics/enhance-personalized-messaging-with-user-profile-fields
+uid: blt5825c2c70458411e
 ---
 
 # Enhance Personalized Messaging with User Profile Fields

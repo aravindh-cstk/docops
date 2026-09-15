@@ -2,6 +2,7 @@
 title: "About Brand Kit"
 description: "Centralize your brand identity with a Brand Kit, ensuring consistent, authentic, and on-brand content."
 url: /brand-kit/about-brand-kit
+uid: blt779855294d5eeb7d
 ---
 
 # About Brand Kit

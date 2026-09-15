@@ -2,6 +2,7 @@
 title: "Understand Default URL Pattern"
 description: "Learn how default URL patterns work in Contentstack and how to generate consistent, structured URLs for your content types."
 url: /headless-cms/understand-default-url-pattern
+uid: blt6335677b828cf52a
 ---
 
 # Understand Default URL Pattern

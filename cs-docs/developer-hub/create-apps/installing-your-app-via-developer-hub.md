@@ -2,6 +2,7 @@
 title: "Installing your App via Developer Hub"
 description: "Installing Your App via Developer Hub"
 url: /developer-hub/installing-your-app-via-developer-hub
+uid: blt9293d3f018591111
 ---
 
 # Installing your App via Developer Hub

@@ -2,6 +2,7 @@
 title: "emitter Plugin"
 description: "Interface for broadcasting messages that can be received by other plugins"
 url: /lytics/jstag-plugin-emitter
+uid: bltdb6b916de159cc19
 ---
 
 # emitter Plugin

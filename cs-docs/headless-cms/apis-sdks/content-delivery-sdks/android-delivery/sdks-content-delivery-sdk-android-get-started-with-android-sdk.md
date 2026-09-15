@@ -2,6 +2,7 @@
 title: "Get Started with Android SDK"
 description: "Getting Started with Android SDK"
 url: /developers/sdks/content-delivery-sdk/android/get-started-with-android-sdk
+uid: blt3e26b21e03fcbf1d
 ---
 
 # Get Started with Android SDK

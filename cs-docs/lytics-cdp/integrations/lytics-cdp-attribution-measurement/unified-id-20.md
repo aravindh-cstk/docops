@@ -2,6 +2,7 @@
 title: "Unified ID 2.0"
 description: "Unified ID 2.0 is an identifier created using user's PII like email. The new Unified ID2.0 will provide advertisers/publishers a new privacy-conscious…"
 url: /lytics/unified-id-20
+uid: blt0516e050a3056968
 ---
 
 # Unified ID 2.0

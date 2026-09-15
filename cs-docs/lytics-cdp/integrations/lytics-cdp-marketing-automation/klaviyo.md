@@ -2,6 +2,7 @@
 title: "Klaviyo"
 description: "Klaviyo is an email marketing platform created for online businesses — featuring powerful email and SMS marketing automation."
 url: /lytics/klaviyo
+uid: blt5dde1d6fc66a9200
 ---
 
 # Klaviyo

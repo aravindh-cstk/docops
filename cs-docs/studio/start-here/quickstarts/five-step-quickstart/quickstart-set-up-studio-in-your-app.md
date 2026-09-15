@@ -2,6 +2,7 @@
 title: "Quickstart 1: Set Up Studio in Your App"
 description: "Install the SDKs, bootstrap Studio, add a preview route. At the end of this Quickstart you'll have an empty Studio canvas rendering at a route in your app."
 url: /studio/quickstart-set-up-studio-in-your-app
+uid: blt820f58033d8a8f69
 ---
 
 # Quickstart 1: Set Up Studio in Your App

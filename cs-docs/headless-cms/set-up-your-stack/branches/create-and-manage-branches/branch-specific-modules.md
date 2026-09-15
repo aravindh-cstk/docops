@@ -2,6 +2,7 @@
 title: "Branch-specific Modules"
 description: "This comprehensive documentation provides insights into leveraging branch-specific modules to create and manage custom functionality specific to individual branches."
 url: /headless-cms/branch-specific-modules
+uid: blta5d54d05e1f0948c
 ---
 
 # Branch-specific Modules

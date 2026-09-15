@@ -2,6 +2,7 @@
 title: "On-site Personalization"
 description: "Pathfora JS is a lightweight SDK for displaying personalized modules on your website. Lytics web campaign\\ tools serve as an interface for the Pathfora…"
 url: /lytics/personalization-pathfora
+uid: blt47dad9d5aa3085ff
 ---
 
 # On-site Personalization

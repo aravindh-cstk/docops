@@ -2,6 +2,7 @@
 title: "React Native"
 description: "The Lytics SDK for React Native makes it easy for developers to identify, manage consent, and collect user activity data from their native mobile apps…"
 url: /lytics/react-native-sdk
+uid: blt9cde15591bf6b2ce
 ---
 
 # React Native

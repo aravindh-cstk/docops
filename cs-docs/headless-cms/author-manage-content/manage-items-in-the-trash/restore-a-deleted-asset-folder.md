@@ -2,6 +2,7 @@
 title: "Restore a Deleted Asset Folder"
 description: "Restore a Deleted Asset Folder"
 url: /headless-cms/restore-a-deleted-asset-folder
+uid: bltecfa904201f7cd4a
 ---
 
 # Restore a Deleted Asset Folder

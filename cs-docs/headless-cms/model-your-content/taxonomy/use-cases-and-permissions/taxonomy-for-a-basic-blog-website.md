@@ -2,6 +2,7 @@
 title: "Taxonomy for a Basic Blog Website"
 description: "Organize your blog website with taxonomy in Contentstack. Follow this step-by-step guide to streamline content management."
 url: /headless-cms/taxonomy-for-a-basic-blog-website
+uid: bltbd68bc0b53da0d8e
 ---
 
 # Taxonomy for a Basic Blog Website

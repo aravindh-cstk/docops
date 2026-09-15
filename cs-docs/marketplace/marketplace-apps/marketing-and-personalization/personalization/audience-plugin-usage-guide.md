@@ -2,6 +2,7 @@
 title: "Audience Variable App Installation Guide"
 description: "The Contentstack Marketplace Audience Variable app lets you customize the target viewers of your Contentstack entry fields content."
 url: /marketplace/audience-plugin-usage-guide
+uid: blt034af0d5b05d01bd
 ---
 
 # Audience Variable App Installation Guide

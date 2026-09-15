@@ -2,6 +2,7 @@
 title: "Edit a Team"
 description: "Learn how to edit an existing team in Contentstack."
 url: /administration/edit-a-team
+uid: bltdda0754029699e84
 ---
 
 # Edit a Team

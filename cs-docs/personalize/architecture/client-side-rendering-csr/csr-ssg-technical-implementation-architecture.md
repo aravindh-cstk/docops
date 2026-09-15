@@ -2,6 +2,7 @@
 title: "Client Side Rendering (CSR) with Static Site Generation (SSG) Technical Implementation Architecture"
 description: "Optimize performance and personalize user experiences with Client-Side Rendering and Static Site Generation architecture."
 url: /personalize/csr-ssg-technical-implementation-architecture
+uid: bltd4f798b7c48c6843
 ---
 
 # Client Side Rendering (CSR) with Static Site Generation (SSG) Technical Implementation Architecture

@@ -2,6 +2,7 @@
 title: "Create Custom Space Roles"
 description: "Create and manage custom space roles in Contentstack for granular control over asset access, enhancing security and team autonomy."
 url: /assets/create-custom-space-roles
+uid: blt6d410ddd4a0608e5
 ---
 
 # Create Custom Space Roles

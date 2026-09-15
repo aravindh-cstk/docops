@@ -2,6 +2,7 @@
 title: "Configure CLI Logging Preferences | V1.x.x"
 description: "Set and retrieve logging preferences in Contentstack CLI, including log level and file path configuration."
 url: /headless-cms/configure-cli-logging-preferences/v1
+uid: blta33efb37c73c3bdf
 ---
 
 # Configure CLI Logging Preferences | V1.x.x

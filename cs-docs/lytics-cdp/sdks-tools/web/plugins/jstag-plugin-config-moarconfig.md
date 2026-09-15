@@ -2,6 +2,7 @@
 title: "config.moarConfig Plugin"
 description: "An advanced feature for supplying additional account-level configuration"
 url: /lytics/jstag-plugin-config-moarconfig
+uid: bltcf340a2b6c99800e
 ---
 
 # config.moarConfig Plugin

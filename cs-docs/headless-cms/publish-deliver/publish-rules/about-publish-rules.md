@@ -2,6 +2,7 @@
 title: "About Publish Rules"
 description: "Learn how to define and manage publish rules in Contentstack to control when and how content is released, ensuring compliance, accuracy, and review accountability."
 url: /headless-cms/about-publish-rules
+uid: bltfba8c1e52287dfd4
 ---
 
 # About Publish Rules

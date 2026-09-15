@@ -2,6 +2,7 @@
 title: "Migrate the Contentstack Utils .NET SDK from Newtonsoft.Json to System.Text.Json"
 description: "Utilize the Contentstack .NET Utils SDK Variant Utility to extract variant aliases and generate data-csvariants attributes using GetVariantAliases."
 url: /developers/sdks/utils-sdk/dot-net/migrate-dotnet-utils-sdk-from-newtonsoft.json-to-system.text.json
+uid: blt9eda2d149b6ce8d1
 ---
 
 # Migrate the Contentstack Utils .NET SDK from Newtonsoft.Json to System.Text.Json

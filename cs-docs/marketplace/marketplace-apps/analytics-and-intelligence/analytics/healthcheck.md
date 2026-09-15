@@ -2,6 +2,7 @@
 title: "Healthcheck App Installation Guide"
 description: "Examine the health of your stacks and access health metrics, personalized insights, and proactive health tips."
 url: /marketplace/healthcheck
+uid: bltacbeceeb9773db27
 ---
 
 # Healthcheck App Installation Guide

@@ -2,6 +2,7 @@
 title: "Advanced Topics Chapter Guide"
 description: "This chapter is the post-foundation material. Once you have Studio installed, components registered, sections + templates authored, and at least one route."
 url: /studio/advanced-topics-guide
+uid: blt356fc9a8791c4550
 ---
 
 # Advanced Topics Chapter Guide

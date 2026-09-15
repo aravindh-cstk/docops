@@ -2,6 +2,7 @@
 title: "App Submission and Approval Guide"
 description: "Learn how to submit and publish your app to the Contentstack Marketplace, including review process, approval criteria, and deployment steps."
 url: /marketplace/app-submission-and-approval-guide
+uid: blt98f3d5f74b99808f
 ---
 
 # App Submission and Approval Guide

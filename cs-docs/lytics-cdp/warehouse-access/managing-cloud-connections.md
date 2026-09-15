@@ -2,6 +2,7 @@
 title: "Connecting Warehouses"
 description: "Cloud Connect tabs are found under Data Pipeline > Cloud Connect . Connections configure the access to your data warehouses, and Data Models configure the…"
 url: /lytics/managing-cloud-connections
+uid: blt7d766889a92434aa
 ---
 
 # Connecting Warehouses

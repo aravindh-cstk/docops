@@ -2,6 +2,7 @@
 title: "Restore a Deleted Content Type"
 description: "Restore a Deleted Content Type"
 url: /headless-cms/restore-a-deleted-content-type
+uid: blt0d8739910f48506c
 ---
 
 # Restore a Deleted Content Type

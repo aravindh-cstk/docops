@@ -2,6 +2,7 @@
 title: "Automating Generation of Cross-Stack Content Types with Custom Fields"
 description: "Streamline Contentstack content synchronization with a CLI tool to automate extensions and app UID updates seamlessly across stacks."
 url: /headless-cms/automating-generation-of-cross-stack-content-types-with-custom-fields
+uid: blt5d35d96d58972a7b
 ---
 
 # Automating Generation of Cross-Stack Content Types with Custom Fields

@@ -2,6 +2,7 @@
 title: "View Entry Collaborators"
 description: "Learn how to view active collaborators in an entry and identify which fields are currently being edited in Contentstack."
 url: /headless-cms/view-entry-collaborators
+uid: blt9a41ea4e20443662
 ---
 
 # View Entry Collaborators

@@ -2,6 +2,7 @@
 title: "Upload Assets"
 description: "Easily manage and upload diverse media assets in Contentstack. Keep content organized and accessible with drag-and-drop and filtering features."
 url: /assets/upload-assets
+uid: blt3cfbd7b4d5c288e1
 ---
 
 # Upload Assets

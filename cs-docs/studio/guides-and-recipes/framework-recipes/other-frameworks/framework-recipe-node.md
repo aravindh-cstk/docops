@@ -2,6 +2,7 @@
 title: "Framework Recipe: Plain Node with Express or Fastify"
 description: "The simplest SSR host: one request, one server render, one HTML response. This is the reference recipe every other host adapts."
 url: /studio/framework-recipe-node
+uid: bltd22950f2c717fdb8
 ---
 
 # Framework Recipe: Plain Node with Express or Fastify

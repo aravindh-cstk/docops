@@ -2,6 +2,7 @@
 title: "Get Started with Timeline Preview in the .NET SDK"
 description: "Enhance your .NET app with Contentstack's Timeline Preview for debugging, campaign validation, and content preview before launch."
 url: /developers/sdks/content-delivery-sdk/dot-net/get-started-with-timeline-preview-and-dot-net-sdk
+uid: bltfd899703b7ebc3d4
 ---
 
 # Get Started with Timeline Preview in the .NET SDK

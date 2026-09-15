@@ -2,6 +2,7 @@
 title: "Components of an Agent"
 description: "Discover the core components of a Contentstack agent in Agent OS: triggers, instructions, and tools for building intelligent automation."
 url: /agent-os/components-of-an-agent
+uid: blt133ec6326cf476e1
 ---
 
 # Components of an Agent

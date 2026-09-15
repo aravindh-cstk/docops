@@ -2,6 +2,7 @@
 title: "Useful Plugins"
 description: "Useful Plugins"
 url: /headless-cms/cli-useful-plugins
+uid: bltb4d51965b514f7c6
 ---
 
 # Useful Plugins

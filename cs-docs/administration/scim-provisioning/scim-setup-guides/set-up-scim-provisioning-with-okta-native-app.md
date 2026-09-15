@@ -2,6 +2,7 @@
 title: "Set Up SCIM Provisioning with Okta Native App"
 description: "Set up SCIM provisioning seamlessly with Okta Native App. Enable automatic user provisioning in Contentstack via Okta. Follow our guide now!"
 url: /administration/set-up-scim-provisioning-with-okta-native-app
+uid: blt38f647a9f6fa828e
 ---
 
 # Set Up SCIM Provisioning with Okta Native App

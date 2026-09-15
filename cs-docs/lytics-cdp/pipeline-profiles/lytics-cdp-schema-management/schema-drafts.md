@@ -2,6 +2,7 @@
 title: "Schema Drafts"
 description: "Schema Drafts"
 url: /lytics/schema-drafts
+uid: blt90d45af22e3eac43
 ---
 
 # Schema Drafts

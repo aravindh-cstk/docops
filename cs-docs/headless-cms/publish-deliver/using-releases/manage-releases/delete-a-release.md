@@ -2,6 +2,7 @@
 title: "Delete a Release"
 description: "Learn how to delete releases in Contentstack, including rollback releases, effectively managing your content with step-by-step guidance and API support."
 url: /headless-cms/delete-a-release
+uid: blt04e74a4eb8d41eaa
 ---
 
 # Delete a Release

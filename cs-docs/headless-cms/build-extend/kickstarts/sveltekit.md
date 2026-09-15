@@ -2,6 +2,7 @@
 title: "SvelteKit"
 description: "Build a SvelteKit SSR app with Contentstack using the Delivery SDK, Live Preview, and Visual Editor with the official kickstart starter."
 url: /headless-cms/sveltekit
+uid: blt52abe9429486e434
 ---
 
 # SvelteKit

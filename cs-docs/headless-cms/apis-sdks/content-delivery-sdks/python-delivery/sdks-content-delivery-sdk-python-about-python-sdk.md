@@ -2,6 +2,7 @@
 title: "About Python SDK"
 description: "Use Contentstack to power content for your Python projects"
 url: /developers/sdks/content-delivery-sdk/python/about-python-sdk
+uid: bltd2187d49ab70259e
 ---
 
 # About Python SDK

@@ -2,6 +2,7 @@
 title: "Airtable"
 description: "Airtable"
 url: /agent-os/airtable
+uid: bltc6ce4ffc3f65877d
 ---
 
 # Airtable

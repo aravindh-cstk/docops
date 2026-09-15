@@ -2,6 +2,7 @@
 title: "Setup Production and Non-Production Environment"
 description: "Learn how to setup your production and non-production environments in Contentstack Launch."
 url: /launch/setup-production-and-non-production-environment
+uid: blt89d219a15b251ae6
 ---
 
 # Setup Production and Non-Production Environment

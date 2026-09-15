@@ -2,6 +2,7 @@
 title: "Studio API: Errors and Validation"
 description: "Every service-level error uses one shape:"
 url: /studio/studio-api-errors-and-validation
+uid: blt644fe8414f71ed9d
 ---
 
 # Studio API: Errors and Validation

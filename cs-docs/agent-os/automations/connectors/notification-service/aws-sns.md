@@ -2,6 +2,7 @@
 title: "AWS SNS"
 description: "AWS SNS"
 url: /agent-os/aws-sns
+uid: blt7d6d0ccd862ca4f3
 ---
 
 # AWS SNS

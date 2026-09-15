@@ -2,6 +2,7 @@
 title: "Data Models & Queries"
 description: "A Data Model is used by Cloud Connect to link or \"connect\" a user's external data warehouse to Lytics profiles. Each Data Model represents a set of…"
 url: /lytics/creating-cloud-connect-audiences
+uid: blt4a961edce830ba35
 ---
 
 # Data Models & Queries

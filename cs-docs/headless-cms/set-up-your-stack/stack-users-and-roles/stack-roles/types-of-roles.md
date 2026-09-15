@@ -2,6 +2,7 @@
 title: "Types of Roles"
 description: "Discover Contentstack's five user roles—Owner, Admin, Developer, Content Manager, and Custom Role. Learn detailed permissions for optimal content management."
 url: /headless-cms/types-of-roles
+uid: blt625bf3efbd68b58c
 ---
 
 # Types of Roles

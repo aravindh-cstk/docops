@@ -2,6 +2,7 @@
 title: "Create a Project Using GitHub"
 description: "Set up a Contentstack Launch project using GitHub in Contentstack for seamless deployment and version control in minutes."
 url: /launch/import-project-using-github
+uid: blt32b1b11e67aee6a2
 ---
 
 # Create a Project Using GitHub

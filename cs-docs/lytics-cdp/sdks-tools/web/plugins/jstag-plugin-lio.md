@@ -2,6 +2,7 @@
 title: "lio Plugin"
 description: "A framework for authoring JSTag integrations with pull and push patterns"
 url: /lytics/jstag-plugin-lio
+uid: blt82708080e7cf75a6
 ---
 
 # lio Plugin

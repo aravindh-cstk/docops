@@ -2,6 +2,7 @@
 title: "Blocking AI Crawlers"
 description: "Prevent AI content scraping using robots.txt and real-time blocking with Contentstack Launch Edge Functions. Learn best practices and deploy securely."
 url: /launch/blocking-ai-crawlers
+uid: blt96a891cd3e9aa3d9
 ---
 
 # Blocking AI Crawlers

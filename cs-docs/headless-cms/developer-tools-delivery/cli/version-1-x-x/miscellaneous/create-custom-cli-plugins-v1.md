@@ -2,6 +2,7 @@
 title: "Create Custom CLI Plugins for Contentstack | V1.x.x"
 description: "Learn how to build, test, and publish custom CLI plugins for Contentstack using oclif. Covers setup, development workflow, and best practices."
 url: /headless-cms/create-custom-cli-plugins/v1
+uid: blt4f27fd89adf6b6c1
 ---
 
 # Create Custom CLI Plugins for Contentstack | V1.x.x

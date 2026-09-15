@@ -2,6 +2,7 @@
 title: "Publish a Taxonomy"
 description: "Publish a taxonomy and its complete term hierarchy to specific environments, locales, and branches using UI or APIs."
 url: /headless-cms/publish-a-taxonomy
+uid: blt509ecb6aa7017e44
 ---
 
 # Publish a Taxonomy

@@ -2,6 +2,7 @@
 title: "Contentful to Contentstack"
 description: "Effortlessly migrate content to Contentstack with our intuitive framework. Enjoy seamless data transfer from legacy CMS to your stack. Start today!"
 url: /headless-cms/contentful-to-contentstack
+uid: blt82f6f3f330376fa9
 ---
 
 # Contentful to Contentstack

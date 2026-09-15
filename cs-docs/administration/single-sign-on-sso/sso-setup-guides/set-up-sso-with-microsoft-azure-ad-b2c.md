@@ -2,6 +2,7 @@
 title: "Set up SSO with Microsoft Azure AD B2C"
 description: "Set up single sign-on in Contentstack with Microsoft Azure AD B2C as your SAML 2.0 identity provider, as one of up to five IdP connections."
 url: /administration/set-up-sso-with-microsoft-azure-ad-b2c
+uid: bltf4fa05d160a09c37
 ---
 
 # Set up SSO with Microsoft Azure AD B2C

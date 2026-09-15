@@ -2,6 +2,7 @@
 title: "Word Count App Installation Guide"
 description: "The Marketplace Word Count app lets you track the number of words in your JSON RTE content."
 url: /marketplace/word-count
+uid: bltf4e2478e94b8786d
 ---
 
 # Word Count App Installation Guide

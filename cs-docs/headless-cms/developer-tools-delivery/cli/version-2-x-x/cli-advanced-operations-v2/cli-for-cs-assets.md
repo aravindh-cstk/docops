@@ -2,6 +2,7 @@
 title: "CLI for CS Assets | V2.x.x"
 description: "CLI for CS Assets | V2.x.x"
 url: /headless-cms/cli-for-cs-assets
+uid: blt642ce07c5edd5f56
 ---
 
 # CLI for CS Assets | V2.x.x

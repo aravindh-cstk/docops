@@ -2,6 +2,7 @@
 title: "Limitations for Taxonomy"
 description: "Understand the current limitations and behaviors of the taxonomy feature in Contentstack."
 url: /headless-cms/limitations-for-taxonomy
+uid: blte7f0673a9d9e56ec
 ---
 
 # Limitations for Taxonomy

@@ -2,6 +2,7 @@
 title: "Form.io App Installation Guide"
 description: "Form.io app lets you display customized forms from the Form.io dashboard within your Contentstack entries."
 url: /marketplace/form-io
+uid: blt56a15d9fa4d971a9
 ---
 
 # Form.io App Installation Guide

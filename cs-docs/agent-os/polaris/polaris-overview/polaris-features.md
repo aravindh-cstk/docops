@@ -2,6 +2,7 @@
 title: "Polaris Features"
 description: "Explore Polaris feature, including context-aware intelligence, real CMS actions, preview-first updates, and enterprise-grade governance."
 url: /agent-os/polaris-features
+uid: blt53284de9902a74e2
 ---
 
 # Polaris Features

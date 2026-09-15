@@ -2,6 +2,7 @@
 title: "Content Curation"
 description: "Content curation on Lytics involves scanning your website and other content to ingest topics and build content affinities. Properly setting up the…"
 url: /lytics/content-curation
+uid: blt2abf0cdf51fa31ea
 ---
 
 # Content Curation

@@ -2,6 +2,7 @@
 title: "Insider"
 description: "This integration facilitates the enrichment of Lytics user profiles with valuable information, including identifiers, activity data, and more from Insider."
 url: /lytics/insider
+uid: bltf3403ec4f0976b33
 ---
 
 # Insider

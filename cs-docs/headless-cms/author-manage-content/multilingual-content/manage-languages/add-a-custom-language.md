@@ -2,6 +2,7 @@
 title: "Add a Custom Language"
 description: "Learn to add custom languages to your Contentstack setup, enabling multilingual entries and branch-specific availability effortlessly."
 url: /headless-cms/add-a-custom-language
+uid: blteb5a762895d5bd1c
 ---
 
 # Add a Custom Language

@@ -2,6 +2,7 @@
 title: ".NET Utils SDK Variant Utility"
 description: "Utilize the Contentstack .NET Utils SDK Variant Utility to extract variant aliases and generate data-csvariants attributes using GetVariantAliases."
 url: /developers/sdks/utils-sdk/dot-net/dotnet-utils-sdk-variant-utility
+uid: blt62a59393c3639a28
 ---
 
 # .NET Utils SDK Variant Utility

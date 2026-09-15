@@ -2,6 +2,7 @@
 title: "Partner Types"
 description: "Our partners are trusted collaborators who work directly with our customers to ensure successful implementation and ongoing success. They work directly…"
 url: /lytics/partner-types
+uid: blt60585767356d67f7
 ---
 
 # Partner Types

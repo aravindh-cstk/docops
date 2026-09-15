@@ -2,6 +2,7 @@
 title: "Search Assets"
 description: "Easily find assets using Basic, Advanced, or Quick Search in Assets. Tailor your search for precise results with minimal effort."
 url: /assets/search-assets
+uid: bltd85e6b856afe0302
 ---
 
 # Search Assets

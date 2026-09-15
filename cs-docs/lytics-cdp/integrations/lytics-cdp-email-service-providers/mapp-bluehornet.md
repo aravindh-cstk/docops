@@ -2,6 +2,7 @@
 title: "Mapp: BlueHornet"
 description: "Mapp: BlueHornet"
 url: /lytics/mapp-bluehornet
+uid: blt5d9a2a178b9b21bc
 ---
 
 # Mapp: BlueHornet

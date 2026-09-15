@@ -2,6 +2,7 @@
 title: "Iterable"
 description: "Iterable is an integrated, cross-channel platform that supports email, mobile, and web touch points."
 url: /lytics/iterable
+uid: bltc241bacd67e96540
 ---
 
 # Iterable

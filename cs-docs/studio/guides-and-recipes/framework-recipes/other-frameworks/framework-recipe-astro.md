@@ -2,6 +2,7 @@
 title: "Framework Recipe: Astro with React Islands"
 description: "Frontmatter fetches. The island wrapper renders Studio inside an Astro page."
 url: /studio/framework-recipe-astro
+uid: blt4959a673b9031f9f
 ---
 
 # Framework Recipe: Astro with React Islands

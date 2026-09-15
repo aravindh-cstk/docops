@@ -2,6 +2,7 @@
 title: "Handling Next.js RSC Issues on Launch"
 description: "Resolve Next.js React Server Component issues in the Launch CDN using Edge Functions to prevent cached RSC payloads and ensure correct HTML rendering."
 url: /launch/handling-nextjs-rsc-issues-on-launch
+uid: blt50604db3f05e2577
 ---
 
 # Handling Next.js RSC Issues on Launch

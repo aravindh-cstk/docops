@@ -2,6 +2,7 @@
 title: "The StudioComposition Component"
 description: "<StudioComposition /> renders a composition (a full page, or a section as the root) against data you already hold, passed in as a context prop."
 url: /studio/studio-composition-component
+uid: bltc2c7457430d115ad
 ---
 
 # The StudioComposition Component

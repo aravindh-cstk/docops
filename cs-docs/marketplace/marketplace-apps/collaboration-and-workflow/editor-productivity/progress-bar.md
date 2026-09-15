@@ -2,6 +2,7 @@
 title: "Progress Bar App Installation Guide"
 description: "The Marketplace Progress Bar app lets you slide (left or right) and set the progress bar in Contentstack entries."
 url: /marketplace/progress-bar
+uid: blt75a0e1996dea907c
 ---
 
 # Progress Bar App Installation Guide

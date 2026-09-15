@@ -2,6 +2,7 @@
 title: "Create a Voice Profile"
 description: "Create distinct Voice Profiles for your brand by adding tone and styles with our Contentstack Brand Kit."
 url: /brand-kit/create-a-voice-profile
+uid: bltf89ae66fbee5b40a
 ---
 
 # Create a Voice Profile

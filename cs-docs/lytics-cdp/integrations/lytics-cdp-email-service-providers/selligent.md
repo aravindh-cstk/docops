@@ -2,6 +2,7 @@
 title: "Selligent"
 description: "Selligent"
 url: /lytics/selligent
+uid: bltc7d18f01aad40130
 ---
 
 # Selligent

@@ -2,6 +2,7 @@
 title: "Limitations of Webhooks"
 description: "Limitations of Webhooks"
 url: /headless-cms/limitations-of-webhooks
+uid: blt9b02b9ae8458fa81
 ---
 
 # Limitations of Webhooks

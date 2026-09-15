@@ -2,6 +2,7 @@
 title: "Term Localization"
 description: "Learn how to localize taxonomy terms across branches and locales with centralized control and fallback support in Contentstack."
 url: /headless-cms/term-localization
+uid: blt8313bf6e2cc12046
 ---
 
 # Term Localization

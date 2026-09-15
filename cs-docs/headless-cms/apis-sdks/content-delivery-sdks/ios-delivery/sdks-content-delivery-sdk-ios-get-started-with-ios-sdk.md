@@ -2,6 +2,7 @@
 title: "Get Started with iOS SDK"
 description: "This guide will help you get started with Contentstack iOS SDK to build apps. Learn more about basic installation, setup, and cache policies on this page."
 url: /developers/sdks/content-delivery-sdk/ios/get-started-with-ios-sdk
+uid: blt3cd72f74f4ac3833
 ---
 
 # Get Started with iOS SDK

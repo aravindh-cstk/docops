@@ -2,6 +2,7 @@
 title: "Get Started with Comparing and Merging Branches"
 description: "Optimize your website's structure effortlessly with Contentstack's Branches feature, compare, and merge for seamless updates and improved performance."
 url: /headless-cms/get-started-with-comparing-and-merging-branches
+uid: blt033bd03f06c42bd9
 ---
 
 # Get Started with Comparing and Merging Branches

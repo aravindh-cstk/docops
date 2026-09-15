@@ -2,6 +2,7 @@
 title: "How Live Preview Works"
 description: "Learn how Contentstack’s Live Preview enables real-time content updates using CSR and SSR. Explore its setup, SDK integration, and caching considerations."
 url: /headless-cms/how-live-preview-works
+uid: blt44c52d0f5ec55ff9
 ---
 
 # How Live Preview Works

@@ -2,6 +2,7 @@
 title: "Implement OAuth 2.0 with Java Management SDK"
 description: "Build secure Java apps with Contentstack CMA using OAuth 2.0. Simplify authentication with PKCE, token refresh, token storage options, and role-based access."
 url: /developers/sdks/content-management-sdk/java/implement-oauth-2-0-with-java-management-sdk
+uid: blt3f87a241f888ce6e
 ---
 
 # Implement OAuth 2.0 with Java Management SDK

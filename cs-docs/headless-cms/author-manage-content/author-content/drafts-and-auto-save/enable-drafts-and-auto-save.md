@@ -2,6 +2,7 @@
 title: "Enable or Disable Drafts and Auto Save"
 description: "Learn how administrators enable or disable Drafts and Auto Save for entries in Contentstack using Stack Settings."
 url: /headless-cms/enable-drafts-and-auto-save
+uid: blt43e07f55165ae84f
 ---
 
 # Enable or Disable Drafts and Auto Save

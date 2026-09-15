@@ -2,6 +2,7 @@
 title: "Open Live Preview in a New Tab"
 description: "Enable “Open in New Tab” in Contentstack Live Preview for seamless, iframe-free site editing and better tool compatibility."
 url: /headless-cms/open-live-preview-in-a-new-tab
+uid: blt2ff311b8a7a2b58a
 ---
 
 # Open Live Preview in a New Tab

@@ -2,6 +2,7 @@
 title: "Sections Chapter Guide"
 description: "Reusable blocks with linked schemas (a declaration of the data shape a section expects, think of it as the section's contract with any template that."
 url: /studio/sections-guide
+uid: bltc88c9a261d3b07f1
 ---
 
 # Sections Chapter Guide

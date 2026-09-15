@@ -2,6 +2,7 @@
 title: "Get Started with Automations"
 description: "Manage and monitor your agents, automations, and executions in one place with the Dashboard for smarter, scalable workflows."
 url: /agent-os/get-started-with-automations
+uid: blt783072e30e7f078c
 ---
 
 # Get Started with Automations

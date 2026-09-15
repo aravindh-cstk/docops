@@ -2,6 +2,7 @@
 title: "How Contentstack Works"
 description: "Managing content in Contentstack Headless CMS is easy and does not involve any coding. It’s a simple 3-step process—visit this page for a complete breakdown."
 url: /headless-cms/how-contentstack-works
+uid: blt0447f882e9a37ab5
 ---
 
 # How Contentstack Works

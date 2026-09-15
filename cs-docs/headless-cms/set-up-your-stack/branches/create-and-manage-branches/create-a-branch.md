@@ -2,6 +2,7 @@
 title: "Create a Branch"
 description: "Learn how to create branches in Contentstack, inheriting content types and managing environments for seamless development and content management."
 url: /headless-cms/create-a-branch
+uid: blt4b73f4baa3850961
 ---
 
 # Create a Branch

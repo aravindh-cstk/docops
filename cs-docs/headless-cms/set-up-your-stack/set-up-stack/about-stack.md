@@ -2,6 +2,7 @@
 title: "About Stacks"
 description: "Manage content and assets effortlessly with Contentstack stacks, enabling seamless collaboration, workflows, and automation."
 url: /headless-cms/about-stack
+uid: blt9874543ba6740341
 ---
 
 # About Stacks

@@ -2,6 +2,7 @@
 title: "Google Ad Manager (DFP)"
 description: "Google Ad Manager (also known as DoubleClick for Publishers or DFP), allows you to generate revenue on your website by displaying ads inline with your…"
 url: /lytics/google-ad-manager-dfp
+uid: bltda909a025f30a93d
 ---
 
 # Google Ad Manager (DFP)

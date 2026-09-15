@@ -2,6 +2,7 @@
 title: "Guide to Convert Contentstack Extensions to Marketplace Apps"
 description: "Guide to Convert Contentstack Extensions to Marketplace Apps"
 url: /developer-hub/guide-to-convert-contentstack-extensions-to-marketplace-apps
+uid: bltf77c4a4b3f46d321
 ---
 
 # Guide to Convert Contentstack Extensions to Marketplace Apps

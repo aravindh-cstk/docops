@@ -2,6 +2,7 @@
 title: "Content Modeling Best Practices"
 description: "Optimize your content modeling in Contentstack with best practices for fields, references, modular blocks, and reusable structures."
 url: /headless-cms/content-modeling-best-practices
+uid: blt987a94d846e585d9
 ---
 
 # Content Modeling Best Practices

@@ -2,6 +2,7 @@
 title: "Planning & Troubleshooting"
 description: "Planning & Troubleshooting"
 url: /lytics/schema-audit
+uid: blt2229fd88b85eface
 ---
 
 # Planning & Troubleshooting

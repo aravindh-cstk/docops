@@ -2,6 +2,7 @@
 title: "Content Modularization in Email with Lytics Audiences"
 description: "Learn how to modularize an email template using Lytics audience membership so a single Campaign Monitor email can show different content, images, and calls-to-action to different audience segments."
 url: /lytics/content-modularization-in-email-with-lytics-audiences
+uid: blt90c16fec5cc0bbed
 ---
 
 # Content Modularization in Email with Lytics Audiences

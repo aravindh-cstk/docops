@@ -2,6 +2,7 @@
 title: "BigCommerce"
 description: "BigCommerce is an ecommerce platform that allows for online store creation, hosting, marketing, and security for small and medium-sized businesses."
 url: /lytics/bigcommerce
+uid: blt25d917ccb0417ef8
 ---
 
 # BigCommerce

@@ -2,6 +2,7 @@
 title: "Salesforce Commerce Cloud"
 description: "Use this connector to fetch product details stored in your Salesforce Commerce Cloud platform."
 url: /agent-os/salesforce-commerce-cloud
+uid: blt59282fedcbd5b634
 ---
 
 # Salesforce Commerce Cloud

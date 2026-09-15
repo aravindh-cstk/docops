@@ -2,6 +2,7 @@
 title: "SendGrid"
 description: "SendGrid"
 url: /agent-os/sendgrid
+uid: blte3aedb33c9af02f2
 ---
 
 # SendGrid

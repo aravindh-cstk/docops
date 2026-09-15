@@ -2,6 +2,7 @@
 title: "Allow images only"
 description: "Allow images only of your fields"
 url: /headless-cms/allow-images-only
+uid: bltab752032b9e4c5b4
 ---
 
 # Allow images only

@@ -2,6 +2,7 @@
 title: "Get Started with DataSync MongoDB SDK"
 description: "Learn how to set up, configure, and query MongoDB efficiently with Contentstack DataSync MongoDB SDK."
 url: /developers/sdks/datasync-sdk-mongodb/typescript/get-started-with-datasync-mongodb-sdk
+uid: blt0a7d759f5f496b70
 ---
 
 # Get Started with DataSync MongoDB SDK

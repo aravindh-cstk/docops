@@ -2,6 +2,7 @@
 title: "Edge Functions"
 description: "Learn about using Edge Functions in Contentstack Launch."
 url: /launch/edge-functions
+uid: blt460abcb9b9b6d2fe
 ---
 
 # Edge Functions

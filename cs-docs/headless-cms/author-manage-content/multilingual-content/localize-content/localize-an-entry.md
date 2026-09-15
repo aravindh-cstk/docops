@@ -2,6 +2,7 @@
 title: "Localize an Entry"
 description: "Learn how to localize entries in Contentstack to manage multilingual content effectively. Follow these steps to adapt your content for various languages."
 url: /headless-cms/localize-an-entry
+uid: blt26458e9ca11fa2a2
 ---
 
 # Localize an Entry

@@ -2,6 +2,7 @@
 title: "Sitecore to Contentstack"
 description: "Effortlessly migrate content from legacy CMS to Contentstack with our intuitive framework. Streamline the process with easy steps and video guidance."
 url: /headless-cms/sitecore-to-contentstack
+uid: blt6d3432421f9c6556
 ---
 
 # Sitecore to Contentstack

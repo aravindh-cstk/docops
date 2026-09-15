@@ -2,6 +2,7 @@
 title: "Use Sync API With JavaScript Delivery SDK"
 description: "methods for using the Sync API With JavaScript Delivery SDK"
 url: /developers/sdks/content-delivery-sdk/javascript-browser/use-sync-api-with-javascript-delivery-sdk
+uid: bltcc9be38d15192746
 ---
 
 # Use Sync API With JavaScript Delivery SDK

@@ -2,6 +2,7 @@
 title: "Delete a Stack"
 description: "Learn to delete a stack in Contentstack. Back up your data to ensure security before proceeding."
 url: /headless-cms/delete-a-stack
+uid: blt1a74c3b1572f1a74
 ---
 
 # Delete a Stack

@@ -2,6 +2,7 @@
 title: "Auth0 (Enterprise SSO)"
 description: "Configure enterprise Single Sign-On for Lytics using Auth0 and SAML 2.0."
 url: /lytics/auth0
+uid: blt6f58e5d49ca4b80e
 ---
 
 # Auth0 (Enterprise SSO)

@@ -2,6 +2,7 @@
 title: "Migrate from Contentstack CLI V1 to V2 | V2.x.x"
 description: "Upgrade the Contentstack CLI from V1 to V2 with a flag-by-flag mapping, export and import format changes, a pre-upgrade checklist, and fixes for silent failures."
 url: /headless-cms/cli-v1-to-v2-migration-guide
+uid: blt05c442f72f396864
 ---
 
 # Migrate from Contentstack CLI V1 to V2 | V2.x.x

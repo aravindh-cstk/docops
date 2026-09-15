@@ -2,6 +2,7 @@
 title: "Versium"
 description: "Versium is a data technology company that offers an industry leading identity resolution and insights engine to help B2B and B2C marketers improve their…"
 url: /lytics/versium
+uid: bltf82392b77d154a58
 ---
 
 # Versium

@@ -2,6 +2,7 @@
 title: "Component Palette Conventions"
 description: "Once a customer's registered a dozen or more components, the Studio palette's \\\"Registered Components\\\" accordion is a scroll wall."
 url: /studio/component-palette-conventions
+uid: blta17032204ad966f8
 ---
 
 # Component Palette Conventions

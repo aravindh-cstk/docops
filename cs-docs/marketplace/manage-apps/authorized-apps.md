@@ -2,6 +2,7 @@
 title: "Authorized Apps"
 description: "Authorized Apps"
 url: /marketplace/authorized-apps
+uid: blt253aeb06b41cc8fd
 ---
 
 # Authorized Apps

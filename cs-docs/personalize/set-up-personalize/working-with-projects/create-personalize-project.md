@@ -2,6 +2,7 @@
 title: "Create a Personalize Project"
 description: "Learn how to create a project in Personalize and link your CMS stack to unlock the power of tailored content."
 url: /personalize/create-personalize-project
+uid: blt239047cd4ba6c11e
 ---
 
 # Create a Personalize Project

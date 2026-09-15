@@ -2,6 +2,7 @@
 title: "Component schema: prop types"
 description: "Reference for every prop type available in Contentstack Studio component schemas, including type-specific options, validation, CSLP tags and the $ props that make bound values editable, and wrap vs studioAttributes patterns."
 url: /studio/component-schema-prop-types
+uid: bltf4dac865d04bc8a1
 ---
 
 # Component schema: prop types

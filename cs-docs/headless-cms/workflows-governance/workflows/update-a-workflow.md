@@ -2,6 +2,7 @@
 title: "Update a Workflow"
 description: "Learn how to update an existing workflow in Contentstack to modify its configuration as your content processes evolve."
 url: /headless-cms/update-a-workflow
+uid: blt9a1ec2827b2eae5e
 ---
 
 # Update a Workflow

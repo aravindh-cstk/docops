@@ -2,6 +2,7 @@
 title: "Responsys"
 description: "Responsys, also known as Oracle Responsys, is a platform to manage interactions with your customers across email, mobile, social, display, and the web."
 url: /lytics/responsys
+uid: bltc7f49efbac4875df
 ---
 
 # Responsys

@@ -2,6 +2,7 @@
 title: "Create a Segmented Experience"
 description: "Learn how to create segmented experiences to deliver personalized content to specific audiences."
 url: /personalize/create-segmented-experience
+uid: blt0ccb411b6b030699
 ---
 
 # Create a Segmented Experience

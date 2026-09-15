@@ -2,6 +2,7 @@
 title: "Studio provisioning API reference"
 description: "The host map across regions for every service Studio provisioning touches, the non-prod host pattern, and the /v1/projects request shape that registers a Studio project."
 url: /studio/studio-provisioning-api
+uid: blt9920e8480195bd5b
 ---
 
 # Studio provisioning API reference

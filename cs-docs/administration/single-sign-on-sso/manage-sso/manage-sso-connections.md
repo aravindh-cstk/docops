@@ -2,6 +2,7 @@
 title: "Manage SSO Connections"
 description: "Use the quick-action menu on each SSO connection to edit it, copy its SSO URL, disable it, mark it as primary, or delete it."
 url: /administration/manage-sso-connections
+uid: bltd2af418173db0883
 ---
 
 # Manage SSO Connections

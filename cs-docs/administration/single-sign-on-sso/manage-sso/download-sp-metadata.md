@@ -2,6 +2,7 @@
 title: "Download Contentstack (SP) Metadata"
 description: "Download Contentstack's service provider SAML metadata as an XML file and share it with your IdP team to configure single sign-on."
 url: /administration/download-sp-metadata
+uid: blt119b7ca7a2e138b1
 ---
 
 # Download Contentstack (SP) Metadata

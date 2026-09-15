@@ -2,6 +2,7 @@
 title: "Get Started with Swift SDK"
 description: "Get Started with Swift SDK"
 url: /developers/sdks/content-delivery-sdk/ios/get-started-with-swift-sdk
+uid: blt0009c21753e293cd
 ---
 
 # Get Started with Swift SDK

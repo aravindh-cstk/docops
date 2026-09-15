@@ -2,6 +2,7 @@
 title: "Request to Add a New Language to Contentstack"
 description: "Learn how you can request Contentstack to get a new language added for your stack"
 url: /headless-cms/request-to-add-a-new-language-to-contentstack
+uid: blt40e2d8f33b94cadc
 ---
 
 # Request to Add a New Language to Contentstack

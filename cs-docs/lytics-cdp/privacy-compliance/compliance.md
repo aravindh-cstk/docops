@@ -2,6 +2,7 @@
 title: "Compliance"
 description: "GDPR requires the right of access and data portability. You can use the Lytics platform to download a JSON file of a customer's profile. You can also use…"
 url: /lytics/compliance
+uid: bltd1d29e24df0500b4
 ---
 
 # Compliance

@@ -2,6 +2,7 @@
 title: "Export and Import an Automation"
 description: "Streamline deployment with Import and Export to migrate automation workflows as JSON files, ensuring consistent configurations across projects and environments."
 url: /agent-os/export-and-import-an-automation
+uid: bltde85ac8ec85f643c
 ---
 
 # Export and Import an Automation

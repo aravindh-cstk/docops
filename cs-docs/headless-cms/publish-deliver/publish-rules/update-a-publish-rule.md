@@ -2,6 +2,7 @@
 title: "Update a Publish Rule"
 description: "Learn how to modify a publish rule in Contentstack to update its parameters or conditions for accurate content governance."
 url: /headless-cms/update-a-publish-rule
+uid: blta24f720d894897cf
 ---
 
 # Update a Publish Rule

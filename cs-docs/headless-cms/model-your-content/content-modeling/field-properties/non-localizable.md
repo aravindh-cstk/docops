@@ -2,6 +2,7 @@
 title: "Non-localizable"
 description: "Learn how Non-localizable fields in Contentstack allow data to be edited only in the master language, auto-updating localized entries."
 url: /headless-cms/non-localizable
+uid: bltcb9c05c883bfaf20
 ---
 
 # Non-localizable

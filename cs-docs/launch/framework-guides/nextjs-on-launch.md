@@ -2,6 +2,7 @@
 title: "Next.js on Launch"
 description: "Learn how to configure, build, troubleshoot and deploy your Next.js site in Contentstack Launch."
 url: /launch/nextjs-on-launch
+uid: blt93393b4b6e136e8e
 ---
 
 # Next.js on Launch

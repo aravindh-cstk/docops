@@ -2,6 +2,7 @@
 title: "About Stack Dashboards"
 description: "Details about the Dashboard of the stack."
 url: /headless-cms/about-stack-dashboard
+uid: bltc03738363969eea0
 ---
 
 # About Stack Dashboards

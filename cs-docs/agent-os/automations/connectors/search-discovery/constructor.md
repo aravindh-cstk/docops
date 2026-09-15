@@ -2,6 +2,7 @@
 title: "Constructor"
 description: "Constructor"
 url: /agent-os/constructor
+uid: bltad5ac748f17004d5
 ---
 
 # Constructor

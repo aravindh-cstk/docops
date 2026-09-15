@@ -2,6 +2,7 @@
 title: "Get Started with Java Utils Library"
 description: "steps to work with Java Utils Library"
 url: /developers/sdks/utils-sdk/java/get-started-with-java-utils-library
+uid: bltc5d08d26fe1bc385
 ---
 
 # Get Started with Java Utils Library

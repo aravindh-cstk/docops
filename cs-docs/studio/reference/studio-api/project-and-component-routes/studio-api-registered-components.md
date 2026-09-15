@@ -2,6 +2,7 @@
 title: "Studio API: Registered Components"
 description: "Three different things are easy to confuse. Only the third one is what this endpoint returns."
 url: /studio/studio-api-registered-components
+uid: blt8ef5b97727663eb7
 ---
 
 # Studio API: Registered Components

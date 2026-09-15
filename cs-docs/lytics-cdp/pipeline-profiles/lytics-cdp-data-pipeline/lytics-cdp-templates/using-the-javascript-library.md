@@ -2,6 +2,7 @@
 title: "Using the JavaScript Library"
 description: "JavaScript templates ( type: \"js1\" ) automatically have access to a library of helpers for common operations on profiles, segment events, and job/auth…"
 url: /lytics/using-the-javascript-library
+uid: blt97d81b23cfc7f543
 ---
 
 # Using the JavaScript Library

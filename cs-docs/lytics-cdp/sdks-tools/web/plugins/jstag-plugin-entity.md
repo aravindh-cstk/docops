@@ -2,6 +2,7 @@
 title: "entity Plugin"
 description: "Interact with the current user's Lytics entity"
 url: /lytics/jstag-plugin-entity
+uid: blt008271c7a665f1d0
 ---
 
 # entity Plugin

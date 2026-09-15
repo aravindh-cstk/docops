@@ -2,6 +2,7 @@
 title: "Migrate from JavaScript to TypeScript"
 description: "Comprehensive migration guide: Shift from JavaScript to TypeScript Delivery SDK - effortless transition and version 4 compatibility."
 url: /developers/sdks/content-delivery-sdk/typescript/migrate-from-javascript-to-typescript
+uid: blt03860923bcc279a4
 ---
 
 # Migrate from JavaScript to TypeScript

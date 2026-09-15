@@ -2,6 +2,7 @@
 title: "Set Up Content Migration Framework (Docker)"
 description: "Easily migrate content to Contentstack with our intuitive migration framework. Follow our guide to install it using Docker on Windows and macOS."
 url: /headless-cms/set-up-content-migration-framework-docker
+uid: blt8baeebed2faa5a27
 ---
 
 # Set Up Content Migration Framework (Docker)

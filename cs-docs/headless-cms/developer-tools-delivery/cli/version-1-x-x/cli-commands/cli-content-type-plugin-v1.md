@@ -2,6 +2,7 @@
 title: "Content Type Plugin | V1.x.x"
 description: "Use the Contentstack CLI Content Type Plugin to audit logs, compare schema diffs across stacks, and visualize your content model with SVG/DOT diagrams."
 url: /headless-cms/cli-content-type-plugin/v1
+uid: bltb2268be653f55338
 ---
 
 # Content Type Plugin | V1.x.x

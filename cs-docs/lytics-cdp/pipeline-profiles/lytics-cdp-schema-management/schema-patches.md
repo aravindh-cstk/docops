@@ -2,6 +2,7 @@
 title: "Schema Patches"
 description: "Stage, review, and publish batches of schema changes — fields, mappings, and identity key ranks — together."
 url: /lytics/schema-patches
+uid: blt4fca6dd205bbc897
 ---
 
 # Schema Patches

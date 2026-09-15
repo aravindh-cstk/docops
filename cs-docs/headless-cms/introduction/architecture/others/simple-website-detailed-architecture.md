@@ -2,6 +2,7 @@
 title: "Simple Website"
 description: "An extended diagram of how to set up a simple website layered architecture."
 url: /headless-cms/simple-website-detailed-architecture
+uid: blta3c398d19dd0aea7
 ---
 
 # Simple Website

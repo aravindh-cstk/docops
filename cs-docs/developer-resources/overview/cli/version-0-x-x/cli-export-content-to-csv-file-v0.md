@@ -2,6 +2,7 @@
 title: "Export Content to .CSV File | V0.x.x"
 description: "Export Content to .CSV File using CLI"
 url: /headless-cms/cli-export-content-to-csv-file/v0
+uid: blt0a21fe8af5279f9d
 ---
 
 # Export Content to .CSV File | V0.x.x

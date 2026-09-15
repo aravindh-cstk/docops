@@ -2,6 +2,7 @@
 title: "Studio API Overview"
 description: "There are now two documented paths to the exact same result (a composition entry in your stack)."
 url: /studio/studio-api
+uid: blt2449bf8b094b1282
 ---
 
 # Studio API Overview

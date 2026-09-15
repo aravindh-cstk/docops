@@ -2,6 +2,7 @@
 title: "JSON RTE Plugin for Contentstack App SDK"
 description: "Learn to build JSON RTE plugins using the Contentstack App SDK: access nodes, marks, paths, and editor events to customize rich text and improve plugin flexibility."
 url: /developers/sdks/contentstack-app-sdk/typescript/json-rte-plugin-for-contentstack-app-sdk
+uid: bltc66522ecb250ba41
 ---
 
 # JSON RTE Plugin for Contentstack App SDK

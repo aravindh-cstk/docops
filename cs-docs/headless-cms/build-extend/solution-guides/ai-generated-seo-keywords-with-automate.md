@@ -2,6 +2,7 @@
 title: "AI-Generated SEO Keywords with Automate"
 description: "Automate keyword identification with AI, enabling editors to review before publishing."
 url: /headless-cms/ai-generated-seo-keywords-with-automate
+uid: blt65b6e921ca3c7d4b
 ---
 
 # AI-Generated SEO Keywords with Automate

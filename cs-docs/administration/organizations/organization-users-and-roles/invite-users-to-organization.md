@@ -2,6 +2,7 @@
 title: "Invite Users to Organization"
 description: "Streamline collaboration in Contentstack by inviting users to your organization. Learn how to manage roles and access with our step-by-step guide."
 url: /administration/invite-users-to-organization
+uid: blt57f98abc02126578
 ---
 
 # Invite Users to Organization

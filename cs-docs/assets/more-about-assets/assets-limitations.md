@@ -2,6 +2,7 @@
 title: "Assets Limitations"
 description: "Discover the limitations and constraints of Contentstack Assets, including file size, naming, localization, roles, permissions, and malware scanning."
 url: /assets/assets-limitations
+uid: bltd4a65c46d4ef1929
 ---
 
 # Assets Limitations

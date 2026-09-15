@@ -2,6 +2,7 @@
 title: "Creating a Job"
 description: "New data import Jobs are added by first navigating to Data Pipeline > Jobs in the main navigation."
 url: /lytics/creating-a-job
+uid: bltdf5763b4f55b078c
 ---
 
 # Creating a Job

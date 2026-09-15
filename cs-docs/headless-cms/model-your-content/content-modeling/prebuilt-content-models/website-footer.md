@@ -2,6 +2,7 @@
 title: "Website Footer"
 description: "The Website Footer content model includes fields and structures designed to capture the essential information about the footer of your website."
 url: /headless-cms/website-footer
+uid: blt1e442a06af2dd80b
 ---
 
 # Website Footer

@@ -2,6 +2,7 @@
 title: "Framework Recipe: Remix and React Router 7"
 description: "loader() fetches, entry.server.tsx injects styles, and meta() handles metadata."
 url: /studio/framework-recipe-remix
+uid: blt1d2e2ba3707168ac
 ---
 
 # Framework Recipe: Remix and React Router 7

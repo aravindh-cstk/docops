@@ -2,6 +2,7 @@
 title: "About Stack Users"
 description: "Discover how Contentstack's ECM system classifies users with various permissions to enhance collaboration and streamline content management."
 url: /headless-cms/about-stack-users
+uid: bltf3499d227a4d03c9
 ---
 
 # About Stack Users

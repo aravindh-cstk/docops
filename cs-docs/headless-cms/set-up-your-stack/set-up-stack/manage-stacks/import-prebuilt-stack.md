@@ -2,6 +2,7 @@
 title: "Import Prebuilt Stack"
 description: "Quickly import a prebuilt stack from the Marketplace App to streamline content setup and deployment."
 url: /headless-cms/import-prebuilt-stack
+uid: blt6de1c994420edb45
 ---
 
 # Import Prebuilt Stack

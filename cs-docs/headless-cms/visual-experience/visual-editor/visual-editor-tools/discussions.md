@@ -2,6 +2,7 @@
 title: "Discussions"
 description: "Collaborate effortlessly with Visual Editor's Discussions panel. Add, view, and resolve feedback directly on fields to streamline content reviews."
 url: /headless-cms/discussions
+uid: blt49d92fec37341b16
 ---
 
 # Discussions

@@ -2,6 +2,7 @@
 title: "How SSO works with Contentstack"
 description: "Understand how single sign-on authentication works in Contentstack, including the IdP sign-in flow, multiple identity providers, per-connection login URLs, and role mapping."
 url: /administration/how-sso-works-with-contentstack
+uid: bltb81614d35dc5e246
 ---
 
 # How SSO works with Contentstack

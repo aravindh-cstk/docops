@@ -2,6 +2,7 @@
 title: "Compose Pricing tiles from primitives"
 description: "Build a three-tier pricing section with feature lists and per-tier CTAs, composed from the same 10 registered primitives, bound to a Reference-multi of pricing tiers."
 url: /studio/pricing-tiles-from-primitives
+uid: blt0de592ad8766310d
 ---
 
 # Compose Pricing tiles from primitives

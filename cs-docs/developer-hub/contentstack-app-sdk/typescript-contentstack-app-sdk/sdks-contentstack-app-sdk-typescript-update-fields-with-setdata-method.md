@@ -2,6 +2,7 @@
 title: "Update Fields With the setData Method"
 description: "Learn to use the Contentstack App SDK's setData method to update your field values automatically. Understand TypeScript field UIDs for custom editors and marketplace apps."
 url: /developers/sdks/contentstack-app-sdk/typescript/update-fields-with-setdata-method
+uid: blt22f570f5fbdbf40d
 ---
 
 # Update Fields With the setData Method

@@ -2,6 +2,7 @@
 title: "Audience Groups"
 description: "Learn how to create, edit, delete, and bulk-manage Audience Groups in Lytics, plus how to use prebuilt groups and filter audiences by group in the Audience Builder."
 url: /lytics/audience-groups
+uid: blt48d52fb0910888fd
 ---
 
 # Audience Groups

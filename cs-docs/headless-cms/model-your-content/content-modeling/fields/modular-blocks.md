@@ -2,6 +2,7 @@
 title: "Modular Blocks"
 description: "Learn how to use Modular Blocks in Contentstack to build dynamic, flexible content structures without needing developer changes."
 url: /headless-cms/modular-blocks
+uid: bltafd590a3e2af7024
 ---
 
 # Modular Blocks

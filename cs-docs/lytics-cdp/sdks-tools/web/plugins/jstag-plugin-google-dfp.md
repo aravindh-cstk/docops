@@ -2,6 +2,7 @@
 title: "google.dfp Plugin"
 description: "Export Lytics audiences to Google DFP"
 url: /lytics/jstag-plugin-google-dfp
+uid: bltcc8c5b9c0364c1fc
 ---
 
 # google.dfp Plugin

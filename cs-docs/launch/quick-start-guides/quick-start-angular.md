@@ -2,6 +2,7 @@
 title: "Launch Quick Start Guide with Angular"
 description: "Learn to deploy your first Angular Starter Launch project using GitHub."
 url: /launch/quick-start-angular
+uid: blt7095eb3b7971958f
 ---
 
 # Launch Quick Start Guide with Angular

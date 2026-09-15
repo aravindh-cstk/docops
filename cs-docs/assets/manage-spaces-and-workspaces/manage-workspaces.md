@@ -2,6 +2,7 @@
 title: "Manage Workspaces"
 description: "Optimize your Contentstack Asset operations with workspace management. Organize, fork, and customize languages for efficient asset control."
 url: /assets/manage-workspaces
+uid: bltefa4905cda4faec0
 ---
 
 # Manage Workspaces

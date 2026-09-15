@@ -2,6 +2,7 @@
 title: "Reply to a Comment"
 description: "Learn how to address feedback and continue discussions using the Reply to Comments feature in Contentstack."
 url: /headless-cms/reply-to-a-comment
+uid: blt82d9f42aa2a52b72
 ---
 
 # Reply to a Comment

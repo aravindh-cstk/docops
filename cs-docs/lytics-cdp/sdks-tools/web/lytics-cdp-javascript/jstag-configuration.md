@@ -2,6 +2,7 @@
 title: "Configuration"
 description: "Configure the Lytics JSTag using a monolithic configuration object"
 url: /lytics/jstag-configuration
+uid: blt041089839d82fb4c
 ---
 
 # Configuration

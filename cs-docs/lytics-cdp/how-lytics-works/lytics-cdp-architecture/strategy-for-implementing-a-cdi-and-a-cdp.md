@@ -2,6 +2,7 @@
 title: "CDI and CDP Implementation Strategy"
 description: "This guide streamlines the integration of Customer Data Infrastructure (CDI) and Customer Data Platform (CDP) into your marketing technology framework…"
 url: /lytics/strategy-for-implementing-a-cdi-and-a-cdp
+uid: blte4382765c8928105
 ---
 
 # CDI and CDP Implementation Strategy

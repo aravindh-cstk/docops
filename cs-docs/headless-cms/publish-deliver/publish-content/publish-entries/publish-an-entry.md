@@ -2,6 +2,7 @@
 title: "Publish an Entry"
 description: "Learn how to efficiently publish and manage entries in Contentstack, ensuring accurate content delivery across multiple environments and locales."
 url: /headless-cms/publish-an-entry
+uid: blt36d8e7817f5e65de
 ---
 
 # Publish an Entry

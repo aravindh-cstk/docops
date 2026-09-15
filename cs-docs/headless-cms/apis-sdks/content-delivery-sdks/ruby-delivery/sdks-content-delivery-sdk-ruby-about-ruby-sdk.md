@@ -2,6 +2,7 @@
 title: "About Ruby SDK"
 description: "Create Ruby-/RoR- based applications and use the Ruby SDK to fetch and deliver content from Contentstack. The SDK uses Content Delivery APIs."
 url: /developers/sdks/content-delivery-sdk/ruby/about-ruby-sdk
+uid: blt0f7c54a0ebbde922
 ---
 
 # About Ruby SDK

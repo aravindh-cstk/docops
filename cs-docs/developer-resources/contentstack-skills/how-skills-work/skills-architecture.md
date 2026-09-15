@@ -2,6 +2,7 @@
 title: "Architecture"
 description: "See how Contentstack Agent Skills are authored once in SKILL.md and built into Cursor, Codex, and Gemini formats with CI-enforced consistency."
 url: /developers/skills-architecture
+uid: blt8d5e99dc0900fa83
 ---
 
 # Architecture

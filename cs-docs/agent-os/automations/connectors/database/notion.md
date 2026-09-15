@@ -2,6 +2,7 @@
 title: "Notion"
 description: "Connect Notion with your favorite apps. Automate tasks, streamline workflows, and boost productivity seamlessly."
 url: /agent-os/notion
+uid: blt95e9ed77f76fb37e
 ---
 
 # Notion

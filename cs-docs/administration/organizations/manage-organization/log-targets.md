@@ -2,6 +2,7 @@
 title: "Log Targets"
 description: "Export Contentstack system-generated audit, publish, and webhook logs to AWS S3, Azure Blob Storage, or Google Cloud Storage for monitoring and auditing."
 url: /administration/log-targets
+uid: bltee2cb26ac26f8e98
 ---
 
 # Log Targets

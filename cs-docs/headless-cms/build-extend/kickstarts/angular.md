@@ -2,6 +2,7 @@
 title: "Angular"
 description: "Learn how to quickly build an Angular app with Contentstack using the Kickstart template, including SDK setup, Live Preview, Visual Builder, and stack configuration."
 url: /headless-cms/angular
+uid: bltf2b6df17c6fa777a
 ---
 
 # Angular

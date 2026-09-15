@@ -2,6 +2,7 @@
 title: "Google PubSub"
 description: "Use the Google PubSub connector to publish data to topics in Google PubSub."
 url: /agent-os/google-pubsub
+uid: blt1c90652fe0845b26
 ---
 
 # Google PubSub

@@ -2,6 +2,7 @@
 title: "Create Custom Roles"
 description: "Learn how to create custom roles in Contentstack to align permissions with team duties, ensuring compliance and effective access management."
 url: /administration/create-custom-roles
+uid: blt5e51b3293e5c3442
 ---
 
 # Create Custom Roles

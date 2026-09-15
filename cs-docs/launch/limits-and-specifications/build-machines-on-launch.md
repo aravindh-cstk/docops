@@ -2,6 +2,7 @@
 title: "Build Machines on Launch"
 description: "Compare Launch Build Machine tiers (L1–L5), default plans, build hours, limits, and execution rules to optimize performance and resource usage."
 url: /launch/build-machines-on-launch
+uid: blte1dc6f5a83500827
 ---
 
 # Build Machines on Launch
