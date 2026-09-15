@@ -802,7 +802,7 @@ Facilitator delivers on screen. Attendees don't touch keyboards yet.
     Individual skills — the building blocks:
 
       Component file (code) ─┐
-                              ├─→ register-component skill ─�� Palette entry
+                              ├─→ register-component skill ─→ Palette entry
       Skill prompt ──────────┘
 
       Palette entry ─→ build-section skill ─→ Section in Studio
