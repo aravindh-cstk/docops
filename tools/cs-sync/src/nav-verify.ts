@@ -65,7 +65,14 @@ function ownsOneFile(leaf: NavLeaf): boolean {
   // "faqs" is a container that expands to a directory of files, counted
   // separately. "stub" is a nav position linking outside this repo and owns no
   // file at all since link stubs were removed.
-  return leaf.kind !== "faqs" && leaf.kind !== "stub";
+  if (leaf.kind === "faqs" || leaf.kind === "stub") return false;
+
+  // The repo holds what Production serves, so an entry no environment publishes
+  // owns no file. 301 nav positions point at such entries as of 2026-09-15,
+  // and the reconcile wrote files for all of them because nothing read this
+  // flag. Those nav positions are themselves live 404s on the docs site, which
+  // is a separate problem: see the Build 1 open decisions.
+  return leaf.prodPublished;
 }
 
 function expectedPathFor(leaf: NavLeaf): string | null {

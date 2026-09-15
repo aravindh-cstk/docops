@@ -440,6 +440,8 @@ interface Stats {
   deleted: number;
   skippedNoContent: number;
   emptyFaqAnswers: number;
+  /** Nav leaves whose entry no environment publishes, so they own no file. */
+  unpublished: number;
 }
 
 /**
@@ -460,6 +462,9 @@ function allExpectedPaths(tree: NavTree): Set<string> {
     // This set vetoes move sources, and a stub path left in it would block a real
     // article from moving into the path a deleted stub just freed.
     if (leaf.kind === "stub") continue;
+    // Same reason for a leaf whose entry no environment publishes: it owns no
+    // file, so it must not reserve a path.
+    if (!leaf.prodPublished) continue;
     const dir = leaf.chain.join("/");
     const name = articleFileName(leaf.url);
     if (name) out.add(`${DOCS_ROOT}/${dir}/${name}`);
@@ -475,7 +480,7 @@ async function applyProduct(
   globalExpected: Set<string>,
   dryRun: boolean,
 ): Promise<Stats> {
-  const stats: Stats = { written: 0, moved: 0, faqFiles: 0, deleted: 0, skippedNoContent: 0, emptyFaqAnswers: 0 };
+  const stats: Stats = { written: 0, moved: 0, faqFiles: 0, deleted: 0, skippedNoContent: 0, emptyFaqAnswers: 0, unpublished: 0 };
   const leaves = tree.leaves.filter((l) => l.chain[0] === slug);
   if (leaves.length === 0) {
     console.log(`  no leaves for "${slug}"`);
@@ -568,6 +573,16 @@ async function applyProduct(
     // Leaving it out of `keep` is what makes Pass 2 delete the 89 that exist.
     // The nav positions themselves are unaffected; they live in the CMS.
     if (leaf.kind === "stub") continue;
+
+    // The repo holds what Production serves. Writing a file for an entry no
+    // environment publishes is what put 301 unpublished pages into cs-docs on
+    // the 2026-09-14 reconcile: the crawl records this flag and nothing read it.
+    // Skipping here also leaves the path out of `keep`, so Pass 2 removes any
+    // such file an earlier run already wrote.
+    if (!leaf.prodPublished) {
+      stats.unpublished++;
+      continue;
+    }
 
     const dir = leaf.chain.join("/");
     let rel: string;
@@ -682,7 +697,7 @@ async function applyOrphans(
   globalExpected: Set<string>,
   dryRun: boolean,
 ): Promise<Stats> {
-  const stats: Stats = { written: 0, moved: 0, faqFiles: 0, deleted: 0, skippedNoContent: 0, emptyFaqAnswers: 0 };
+  const stats: Stats = { written: 0, moved: 0, faqFiles: 0, deleted: 0, skippedNoContent: 0, emptyFaqAnswers: 0, unpublished: 0 };
   const articles = store.get("docs_article")!;
   const rows: string[][] = [["Doc name", "UID", "Full URL"]];
 
@@ -740,7 +755,7 @@ const STALE_ROOT_FILES = [
 const STALE_ASSET_DIRS = ["assets/screenshots", "assets/svg"];
 
 function applyCleanup(tree: NavTree, dryRun: boolean): Stats {
-  const stats: Stats = { written: 0, moved: 0, faqFiles: 0, deleted: 0, skippedNoContent: 0, emptyFaqAnswers: 0 };
+  const stats: Stats = { written: 0, moved: 0, faqFiles: 0, deleted: 0, skippedNoContent: 0, emptyFaqAnswers: 0, unpublished: 0 };
   const productSlugs = new Set(tree.products.map((p) => p.slug));
 
   // Scope everything this pass would remove before removing anything. This is
@@ -855,7 +870,7 @@ async function main() {
   const globalExpected = allExpectedPaths(tree);
 
   const label = dryRun ? "[dry-run] " : "";
-  const totals: Stats = { written: 0, moved: 0, faqFiles: 0, deleted: 0, skippedNoContent: 0, emptyFaqAnswers: 0 };
+  const totals: Stats = { written: 0, moved: 0, faqFiles: 0, deleted: 0, skippedNoContent: 0, emptyFaqAnswers: 0, unpublished: 0 };
   const add = (s: Stats) => {
     totals.written += s.written;
     totals.moved += s.moved;
@@ -863,6 +878,7 @@ async function main() {
     totals.deleted += s.deleted;
     totals.skippedNoContent += s.skippedNoContent;
     totals.emptyFaqAnswers += s.emptyFaqAnswers;
+    totals.unpublished += s.unpublished;
   };
 
   // Orphans are lifted out of the stale folders before anything deletes them.
@@ -899,7 +915,8 @@ async function main() {
       const s = await applyProduct(tree, slug, store, urlIndex, globalExpected, dryRun);
       console.log(
         `  written ${s.written}  moved ${s.moved}  faqFiles ${s.faqFiles}  deleted ${s.deleted}` +
-          (s.skippedNoContent ? `  noContent ${s.skippedNoContent}` : ""),
+          (s.skippedNoContent ? `  noContent ${s.skippedNoContent}` : "") +
+          (s.unpublished ? `  unpublished ${s.unpublished}` : ""),
       );
       add(s);
     }
@@ -916,6 +933,7 @@ async function main() {
 
   console.log(`\n${label}TOTAL  written ${totals.written}  moved ${totals.moved}  faqFiles ${totals.faqFiles}  deleted ${totals.deleted}`);
   if (totals.skippedNoContent) console.log(`  entries with no article_section content: ${totals.skippedNoContent}`);
+  if (totals.unpublished) console.log(`  nav leaves skipped because no environment publishes their entry: ${totals.unpublished}`);
   if (dryRun) console.log("\nNothing was modified.");
 }
 
