@@ -2,6 +2,7 @@
 title: "Get Started with Android SDK"
 description: "Getting Started with Android SDK"
 url: /developers/sdks/content-delivery-sdk/android/get-started-with-android-sdk
+uid: blt3e26b21e03fcbf1d
 ---
 
 # Get Started with Android SDK
@@ -211,5 +212,5 @@ csQuery.find(new QueryResultsCallBack() {
 -   [Android Playground App using Sync API](https://github.com/contentstack/contentstack-android-sync-playground)
 -   [Android Sample App using Sync API and Persistence Library](https://github.com/contentstack/contentstack-android-persistence-example)
 -   [Android SDK API Reference](/docs/developers/sdks/content-delivery-sdk/android/reference/)
--   [Android SDK Change Log](/docs/developers/sdks/content-delivery-sdk/android/android-sdk-changelog/)
+-   [Android SDK Change Log](/docs/changelog?filter=sdks)
 -   [View and Download Android SDK repository on GitHub](https://github.com/contentstack/contentstack-android)
