@@ -67,11 +67,13 @@ function ownsOneFile(leaf: NavLeaf): boolean {
   // file at all since link stubs were removed.
   if (leaf.kind === "faqs" || leaf.kind === "stub") return false;
 
-  // The repo holds what Production serves, so an entry no environment publishes
-  // owns no file. 301 nav positions point at such entries as of 2026-09-15,
-  // and the reconcile wrote files for all of them because nothing read this
-  // flag. Those nav positions are themselves live 404s on the docs site, which
-  // is a separate problem: see the Build 1 open decisions.
+  // The repo holds what Production serves, so an entry not published to
+  // Production owns no file. Most of these ARE published, to staging and
+  // development, which is exactly why only the Production environment counts.
+  // 301 nav positions pointed at such entries as of 2026-09-15 and the
+  // reconcile wrote files for all of them, because the crawl records this flag
+  // and nothing read it. Those nav positions are live 404s on the docs site,
+  // which is a separate problem: see the Build 1 open decisions.
   return leaf.prodPublished;
 }
 

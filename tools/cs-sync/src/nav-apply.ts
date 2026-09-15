@@ -440,7 +440,7 @@ interface Stats {
   deleted: number;
   skippedNoContent: number;
   emptyFaqAnswers: number;
-  /** Nav leaves whose entry no environment publishes, so they own no file. */
+  /** Nav leaves whose entry Production does not publish, so they own no file. */
   unpublished: number;
 }
 
@@ -462,8 +462,8 @@ function allExpectedPaths(tree: NavTree): Set<string> {
     // This set vetoes move sources, and a stub path left in it would block a real
     // article from moving into the path a deleted stub just freed.
     if (leaf.kind === "stub") continue;
-    // Same reason for a leaf whose entry no environment publishes: it owns no
-    // file, so it must not reserve a path.
+    // Same reason for a leaf whose entry is not published to Production: it
+    // owns no file, so it must not reserve a path.
     if (!leaf.prodPublished) continue;
     const dir = leaf.chain.join("/");
     const name = articleFileName(leaf.url);
@@ -574,9 +574,11 @@ async function applyProduct(
     // The nav positions themselves are unaffected; they live in the CMS.
     if (leaf.kind === "stub") continue;
 
-    // The repo holds what Production serves. Writing a file for an entry no
-    // environment publishes is what put 301 unpublished pages into cs-docs on
+    // The repo holds what Production serves. Writing a file for an entry that
+    // Production does not publish is what put 301 such pages into cs-docs on
     // the 2026-09-14 reconcile: the crawl records this flag and nothing read it.
+    // Staging and development do not count, which is the point: most of those
+    // 301 are published there.
     // Skipping here also leaves the path out of `keep`, so Pass 2 removes any
     // such file an earlier run already wrote.
     if (!leaf.prodPublished) {
@@ -933,7 +935,7 @@ async function main() {
 
   console.log(`\n${label}TOTAL  written ${totals.written}  moved ${totals.moved}  faqFiles ${totals.faqFiles}  deleted ${totals.deleted}`);
   if (totals.skippedNoContent) console.log(`  entries with no article_section content: ${totals.skippedNoContent}`);
-  if (totals.unpublished) console.log(`  nav leaves skipped because no environment publishes their entry: ${totals.unpublished}`);
+  if (totals.unpublished) console.log(`  nav leaves skipped because Production does not publish their entry: ${totals.unpublished}`);
   if (dryRun) console.log("\nNothing was modified.");
 }
 

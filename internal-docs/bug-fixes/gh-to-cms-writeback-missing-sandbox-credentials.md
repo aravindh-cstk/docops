@@ -73,6 +73,6 @@ check on every `cs-docs` push.
 
 Fixing the credentials alone does not turn the workflow green. `cs-docs/lytics-cdp/audiences-activation/lytics-cdp-lookalike-models-audiences/getting-started-1.md`
 fails with `createEntry failed (422): title is not unique`. That file is one of `301` files the nav
-reconcile added for entries that no environment publishes. The list sits at
+reconcile added for entries Production does not publish. The list sits at
 `tools/cs-sync/nav-audit/unpublished-nav-leaves.csv`, and removing those files is a separate
 decision.
