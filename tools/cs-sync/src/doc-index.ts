@@ -24,8 +24,8 @@ export interface DocFile {
 export interface DocIndex {
   files: DocFile[];
   urlIndex: Map<string, DocFile[]>; // canonicalUrl -> files (array to expose collisions)
-  uidIndex: Map<string, DocFile>; // uid -> file (stub files only)
-  collisions: Map<string, DocFile[]>; // canonicalUrl -> files, only where >1
+  uidIndex: Map<string, DocFile[]>; // entry uid -> files (>1 when the nav cross-lists the page)
+  collisions: Map<string, DocFile[]>; // url or uid -> files, only where >1
 }
 
 /**
@@ -88,7 +88,7 @@ export function buildDocIndex(repoRoot: string, docsRoot: string): DocIndex {
 
   const files: DocFile[] = [];
   const urlIndex = new Map<string, DocFile[]>();
-  const uidIndex = new Map<string, DocFile>();
+  const uidIndex = new Map<string, DocFile[]>();
 
   for (const p of paths) {
     const doc = parseDocFile(p, repoRoot);
@@ -98,11 +98,25 @@ export function buildDocIndex(repoRoot: string, docsRoot: string): DocIndex {
       arr.push(doc);
       urlIndex.set(doc.canonicalUrl, arr);
     }
-    if (doc.uid && !uidIndex.has(doc.uid)) uidIndex.set(doc.uid, doc);
+    // Array-valued for the same reason urlIndex is. This used to be
+    // `if (!uidIndex.has(uid)) set(uid, doc)`, silently keeping whichever file
+    // sorted first and discarding the rest. That was harmless only because no
+    // file carried `uid:`. It stops being harmless the moment they do: 147
+    // entries are deliberately cross-listed across 333 files, so first-wins
+    // would drop 186 of them from the index with nothing reported.
+    if (doc.uid) {
+      const arr = uidIndex.get(doc.uid) ?? [];
+      arr.push(doc);
+      uidIndex.set(doc.uid, arr);
+    }
   }
 
+  // Collisions cover both keys. A uid mapping to several files is normal for a
+  // cross-listed page and is not an error, but callers that assume one file per
+  // entry need to be able to see it rather than be handed an arbitrary one.
   const collisions = new Map<string, DocFile[]>();
   for (const [k, arr] of urlIndex) if (arr.length > 1) collisions.set(k, arr);
+  for (const [k, arr] of uidIndex) if (arr.length > 1) collisions.set(k, arr);
 
   return { files, urlIndex, uidIndex, collisions };
 }
@@ -113,8 +127,13 @@ export type ResolveOutcome =
   | { status: "unmatched" };
 
 /**
- * Resolve one CMS entry (by uid then canonical url) to a single doc file.
- * A url that maps to more than one file is reported ambiguous, never guessed.
+ * Resolve one CMS entry (by uid then canonical url) to the files that hold it.
+ *
+ * Either key can legitimately match more than one file, because a page the nav
+ * lists at two positions is mirrored as two files sharing both a url and an
+ * entry uid. That case returns `ambiguous` with every candidate, never a guess:
+ * callers that write content must update all of them or the copies drift, which
+ * is what lint.ts's checkDuplicateUrls rejects as "Diverged copies".
  */
 export function resolveEntry(
   index: DocIndex,
@@ -122,7 +141,11 @@ export function resolveEntry(
 ): ResolveOutcome {
   if (entry.uid) {
     const byUid = index.uidIndex.get(entry.uid);
-    if (byUid) return { status: "matched-uid", file: byUid };
+    // Mirrors the url branch below. Returning only the first match here would
+    // make the `ambiguous` path unreachable for any stamped entry, and silently
+    // reduce the mirror-writing loop in cms-pull-prod.ts to a single file.
+    if (byUid && byUid.length === 1) return { status: "matched-uid", file: byUid[0]! };
+    if (byUid && byUid.length > 1) return { status: "ambiguous", candidates: byUid };
   }
   const canon = canonicalizeUrl(entry.url);
   if (canon) {

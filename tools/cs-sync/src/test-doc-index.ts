@@ -89,6 +89,48 @@ test("d3", "index maps url/uid, exposes collisions, resolves entries", () => {
   return "index/collision/resolve verified";
 });
 
+test("d4", "a uid shared by two mirrored files resolves to both, not one", () => {
+  // The case that has no coverage and the one that matters most once uid
+  // stamping is on. A page the nav lists at two positions is mirrored as two
+  // files carrying the same entry uid AND the same url. uidIndex is consulted
+  // before urlIndex, so if it kept only the first match the `ambiguous` path
+  // would be unreachable and cms-pull-prod would update one copy and leave its
+  // twin stale, which lint.ts rejects as "Diverged copies".
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), "docidx-mirror-"));
+  const docs = path.join(root, "cs-docs");
+  fs.mkdirSync(path.join(docs, "headless-cms"), { recursive: true });
+  fs.mkdirSync(path.join(docs, "developer-resources"), { recursive: true });
+
+  const frontmatter = `---\ntitle: "CLI"\ndescription: "d"\nuid: bltd697fa2bc1e38b53\nurl: /headless-cms/cli\n---\n\nbody\n`;
+  fs.writeFileSync(path.join(docs, "headless-cms", "cli.md"), frontmatter);
+  fs.writeFileSync(path.join(docs, "developer-resources", "cli.md"), frontmatter);
+
+  const idx = buildDocIndex(root, "cs-docs");
+
+  const indexed = idx.uidIndex.get("bltd697fa2bc1e38b53");
+  ok(indexed?.length === 2, `uid should index both files, got ${indexed?.length ?? 0}`);
+  ok(idx.collisions.has("bltd697fa2bc1e38b53"), "uid collision not surfaced");
+
+  const byUid = resolveEntry(idx, { uid: "bltd697fa2bc1e38b53", url: "/headless-cms/cli" });
+  ok(byUid.status === "ambiguous", `mirrored uid resolve -> ${byUid.status}, expected ambiguous`);
+  ok(
+    byUid.status === "ambiguous" && byUid.candidates.length === 2,
+    "both mirrors must be offered to the caller",
+  );
+
+  // A uid held by exactly one file still resolves directly.
+  fs.writeFileSync(
+    path.join(docs, "headless-cms", "solo.md"),
+    `---\ntitle: "s"\ndescription: "d"\nuid: blt0000solo\nurl: /headless-cms/solo\n---\n\nbody\n`,
+  );
+  const idx2 = buildDocIndex(root, "cs-docs");
+  const solo = resolveEntry(idx2, { uid: "blt0000solo", url: "/headless-cms/solo" });
+  ok(solo.status === "matched-uid", `single-file uid -> ${solo.status}`);
+
+  fs.rmSync(root, { recursive: true, force: true });
+  return "mirrored uid returns both candidates";
+});
+
 const passed = results.filter((r) => r.status === "PASS").length;
 const failed = results.filter((r) => r.status === "FAIL").length;
 console.log(`\n${results.length} tests | ${passed} passed | ${failed} failed`);
