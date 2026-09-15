@@ -92,7 +92,7 @@ In this tutorial, we will first go through the steps involved in configuring Con
     dotnet tool install --global contentstack.model.generator
     ```
 
-    Go to your project’s root folder and run the following command:
+    Go to your project���s root folder and run the following command:
 
     ```
     contentstack.model.generator -a <API_KEY> -A <AUTHTOKEN>
