@@ -209,7 +209,7 @@ For routes that don't change often, fetch at build time.
 // pages/products/[sku].tsx — Next.js Pages Router with getStaticProps
 import { studioSdk, StudioComponent } from "@contentstack/studio-react";
 
-// Same three ids as above — see the note under Pattern 2.
+// Same three ids as above ��� see the note under Pattern 2.
 const NOT_FOUND_IDS = new Set([
   "COMPOSITION_NOT_FOUND",
   "COMPOSITION_NOT_FOUND_BY_URL",
