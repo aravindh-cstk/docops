@@ -192,7 +192,7 @@ If a Global Field isn't the right tool for this specific case, at minimum:
 
 ```
 Component (React source)   →   Section (built once in Studio)   →   Template (assembly)
-──────────────────────────     ──────────────────────────────      ────────────────────
+─────────────────────────���     ──────────────────────────────      ────────────────────
 CardList + Card               "Card Grid Section"                  Any Template
 registered via                composed in Studio,                  drops that Section
 registerComponent()           linked to a Global Field             into position
