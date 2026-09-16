@@ -17,4 +17,10 @@ For example, if you want to publish all entries with the content type "Blog," se
 
 To update the same text across many entries at once, use **Find and Replace**. After you narrow your results, select the entries and run a find-and-replace operation to replace or remove a text string in bulk. For more information, refer to the [Find and Replace Entries in Bulk](/docs/headless-cms/find-and-replace-entries-in-bulk) documentation.
 
+## Act on the Full Result Set with Select All Records
+
+The checkboxes select results one page at a time. When your search returns more entries than you want to work through page by page, use [Select All Records](/docs/headless-cms/select-all-records-for-bulk-operations) to run **Publish**, **Unpublish**, **Delete**, or **Add to Release** on every entry that matches your search and filters, up to **10,000 entries** per action.
+
+**Note:** Select All Records applies to entries only. Assets in your search results are not included, and **Change Workflow Details** does not support it.
+
 **Additional Resource:** To learn how to perform bulk operations using the [Content Management API (CMA)](/docs/developers/apis/content-management-api), refer to the [Bulk Operations](/docs/developers/apis/content-management-api/bulk-operations) section.

@@ -27,6 +27,8 @@ The queue provides the following details about each task:
     -   **Open Release**: Navigate directly to the release associated with the bulk action.
     -   **View Details**: A comprehensive list of all entries impacted by this bulk operation, including their entry name, version, language, and content type.
 
+**Note:** A bulk action started with [Select All Records](/docs/headless-cms/select-all-records-for-bulk-operations) appears as a single task, the same as any other bulk action. Because Contentstack resolves the entries when the job runs, **View Details** is the accurate record of which entries the action affected.
+
 ## Task Status
 
 The Task Status represents the status of the bulk operation. The following are the list of statuses for a bulk task.
@@ -39,6 +41,8 @@ The Task Status represents the status of the bulk operation. The following are t
 -   **Completed**: The bulk action has been fully processed.
 
 **Note:** A bulk find-and-replace operation appears as two jobs, **Bulk Find** and **Bulk Replace**. Open a job to review its entries under **All Entries**, **Successful Entries**, and **Failed Entries**, and select **Retry** on any failed entry. A completed job stays available in the queue for 30 days. For the full procedure, refer to [Find and Replace Entries in Bulk](/docs/headless-cms/find-and-replace-entries-in-bulk).
+
+**Additional Resource:** To run a bulk action on every entry in the list rather than a per-page selection, refer to [Select All Records](/docs/headless-cms/select-all-records-for-bulk-operations) for Bulk Operations on Entries.
 
 ## Filter Bulk Task Queue
 

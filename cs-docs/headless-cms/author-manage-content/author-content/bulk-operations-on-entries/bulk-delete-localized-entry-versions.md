@@ -29,3 +29,7 @@ To bulk delete localized and unlocalized entries, log in to your [Contentstack a
 -   Deleting a master language entry moves it and all its localized versions to the [Trash](/docs/headless-cms/about-trash). These can be restored within **14 days**. After that, they will be permanently deleted.
 -   Localized entry versions can only be deleted through the “Delete” modal of the master language entry. They cannot be deleted directly from the “Delete” modal of the localized entries themselves.
 -   When deleting entries in bulk from the entry list page, you cannot delete the corresponding localized versions of the selected entries.
+
+## Deleting Entries in Bulk from the Entries List
+
+Deleting entries from the entries list, whether you select them page by page or with [Select All Records](/docs/headless-cms/select-all-records-for-bulk-operations), does not remove their localized versions. This applies regardless of the language the list is filtered to. To remove localized versions, use the **Delete** modal of the master language entry as described above.

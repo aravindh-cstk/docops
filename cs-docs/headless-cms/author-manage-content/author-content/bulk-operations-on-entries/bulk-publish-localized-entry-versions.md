@@ -39,4 +39,8 @@ To bulk publish localized and unlocalized entries, log in to your [Contentstack 
 **Note**:
 
 -   It is recommended to always publish an entry along with its references. If you publish an entry without its references, the referenced items will not appear in the published entry.
--   You can publish up to **10 localized entry versions** across **10 environments** at a time. This limit can be adjusted based on your plan. For more details, please contact our [support](mailto:support@contentstack.com) team.
+-   You can publish up to **10 localized entry versions** across **10 environments** at a time. This limit can be adjusted based on your plan. For more details, contact our [support](mailto:support@contentstack.com) team.
+
+## Publish Localized Versions Across Many Entries
+
+The procedure above publishes the localized versions of one entry. To publish localized versions across many entries at once, work from the entries list instead: filter the list to the language you want using [Get Localized Entries](/docs/headless-cms/get-localized-entries), then use [Select All Records](/docs/headless-cms/select-all-records-for-bulk-operations) to publish every entry in the filtered list, up to **10,000 entries** per action.

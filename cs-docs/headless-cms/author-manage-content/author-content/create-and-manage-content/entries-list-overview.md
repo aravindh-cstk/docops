@@ -37,6 +37,15 @@ The Entries list displays content in a tabular format, providing key details at 
 -   **Taxonomies:** Linked taxonomies.
 -   **Tags:** Associated tags.
 
+### Selecting Entries for Bulk Actions
+
+Use the checkboxes to select entries and act on several of them at once. When you select at least one entry, a floating bar appears at the top of the page with **Show Selected** and the bulk actions: **Add to Release**, **Delete**, **Publish**, and **Unpublish**. Actions that do not fit are available under the vertical ellipsis.
+
+-   **Select entries on a page**: Select individual checkboxes, or select the checkbox in the table header to select every entry on the current page.
+-   **Select all records**: When the list holds more entries than one page shows, selecting the header checkbox displays a banner above the table that offers to select every entry in the list, not just the entries on the page. Click **Select all {number} entries** to extend the selection. If you have applied filters or a search, the selection covers everything matching them. Refer to [Select All Records](/docs/headless-cms/select-all-records-for-bulk-operations) for Bulk Operations on Entries.
+-   **Review the selection**: Click **Show Selected** in the floating bar to see every entry currently selected.
+-   **Clear the selection**: Click **Clear selection** in the banner. Changing your filters, your search text, or the page also resets the selection.
+
 ### Actions on Entries
 
 The **Actions** column provides quick access to key entry operations, enabling efficient management of individual entries. **Click the vertical ellipsis** next to any entry to access a dropdown menu with the following actions:
