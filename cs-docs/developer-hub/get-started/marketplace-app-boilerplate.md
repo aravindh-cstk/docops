@@ -134,7 +134,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   ├── App/
 │   │   │   └── App.tsx
 │   │   ├── AppConfiguration/
-│   │   │   ├── AppConfiguration.module.css
+���   │   │   ├── AppConfiguration.module.css
 │   │   │   └── AppConfiguration.tsx
 │   │   ├── AssetSidebarWidget/
 │   │   │   ├── AssetSidebar.css
