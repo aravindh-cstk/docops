@@ -177,7 +177,7 @@ Within the Entry Editor page, enter/select the following content against the res
     -   **Description**: Enter “At PlateStack, we’ve got great food and a better experience.”
     -   **Timings**: Enter “Tue - Sun ( 16:00 - 22:00 )”
     -   **Holiday**: Enter “Closed on Monday”
-    -   **Copyright**: Enter “Copyright © PlateStack 2024. All rights reserved.”
+    -   **Copyright**: Enter ���Copyright © PlateStack 2024. All rights reserved.”
 
 After entering the data, publish the entry to the **development** environment as we did in **step 3** of the [Create Entries for the “Header” Content Type](#create-entries-for-the-header-content-type) section.
 
