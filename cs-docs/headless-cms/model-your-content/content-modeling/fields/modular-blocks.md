@@ -115,7 +115,7 @@ To create a menu using modular blocks, log in to your [Contentstack account](htt
 
 Now that we are done creating our content types, let's create entries in them and see modular blocks in action.
 
-1.  Navigate to “Entries” and create a new entry in the **Landing Page** content type.
+1.  Navigate to ���Entries” and create a new entry in the **Landing Page** content type.
 2.  Create two entries namely, **Frontpage** and **About**.
 3.  In the **Menu** content type, create an entry with:
     1.  **Landing Page Reference** title as **Home** and reference **Frontpage**.
