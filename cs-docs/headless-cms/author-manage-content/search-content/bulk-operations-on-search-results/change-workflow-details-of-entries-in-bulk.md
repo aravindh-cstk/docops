@@ -30,6 +30,6 @@ To change the workflow details of multiple entries from your search results, log
 
 ## Limitations for Updating Workflow Details in Bulk
 
--   [Select All Records](/docs/headless-cms/select-all-records-for-bulk-operations) does not support workflow updates. Select the entries you want to update page by page.
+-   [select all records](/docs/headless-cms/select-all-records-for-bulk-operations) does not support workflow updates. Select the entries you want to update page by page.
 -   You can change the workflow stage of up to **10** **entries** at a time, provided they belong to the same workflow and are at the same workflow stage.
 -   You can move these entries to a common workflow stage. For example, you can move entries currently in the "Ready for Review" stage to the "Complete" stage.

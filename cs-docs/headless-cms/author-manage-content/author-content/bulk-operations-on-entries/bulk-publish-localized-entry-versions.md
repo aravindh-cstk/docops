@@ -43,4 +43,4 @@ To bulk publish localized and unlocalized entries, log in to your [Contentstack 
 
 ## Publish Localized Versions Across Many Entries
 
-The procedure above publishes the localized versions of one entry. To publish localized versions across many entries at once, work from the entries list instead: filter the list to the language you want using [Get Localized Entries](/docs/headless-cms/get-localized-entries), then use [Select All Records](/docs/headless-cms/select-all-records-for-bulk-operations) to publish every entry in the filtered list, up to **10,000 entries** per action.
+The procedure above publishes the localized versions of one entry. To publish localized versions across many entries at once, work from the entries list instead: filter the list to the language you want using [Get Localized Entries](/docs/headless-cms/get-localized-entries), then use [select all records](/docs/headless-cms/select-all-records-for-bulk-operations) to publish every entry in the filtered list, up to **10,000 entries** per action.

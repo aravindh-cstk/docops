@@ -19,8 +19,8 @@ To update the same text across many entries at once, use **Find and Replace**. A
 
 ## Act on the Full Result Set with Select All Records
 
-The checkboxes select results one page at a time. When your search returns more entries than you want to work through page by page, use [Select All Records](/docs/headless-cms/select-all-records-for-bulk-operations) to run **Publish**, **Unpublish**, **Delete**, or **Add to Release** on every entry that matches your search and filters, up to **10,000 entries** per action.
+The checkboxes select results one page at a time. When your search returns more entries than you want to work through page by page, use [select all records](/docs/headless-cms/select-all-records-for-bulk-operations) to run **Publish**, **Unpublish**, **Delete**, or **Add to Release** on every entry that matches your search and filters, up to **10,000 entries** per action.
 
-**Note:** Select All Records applies to entries only. Assets in your search results are not included, and **Change Workflow Details** does not support it.
+**Note:** Select all records applies to entries only. Assets in your search results are not included, and **Change Workflow Details** does not support it.
 
 **Additional Resource:** To learn how to perform bulk operations using the [Content Management API (CMA)](/docs/developers/apis/content-management-api), refer to the [Bulk Operations](/docs/developers/apis/content-management-api/bulk-operations) section.

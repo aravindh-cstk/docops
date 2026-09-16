@@ -32,4 +32,4 @@ To bulk delete localized and unlocalized entries, log in to your [Contentstack a
 
 ## Deleting Entries in Bulk from the Entries List
 
-Deleting entries from the entries list, whether you select them page by page or with [Select All Records](/docs/headless-cms/select-all-records-for-bulk-operations), does not remove their localized versions. This applies regardless of the language the list is filtered to. To remove localized versions, use the **Delete** modal of the master language entry as described above.
+Deleting entries from the entries list, whether you select them page by page or with [select all records](/docs/headless-cms/select-all-records-for-bulk-operations), does not remove their localized versions. This applies regardless of the language the list is filtered to. To remove localized versions, use the **Delete** modal of the master language entry as described above.
