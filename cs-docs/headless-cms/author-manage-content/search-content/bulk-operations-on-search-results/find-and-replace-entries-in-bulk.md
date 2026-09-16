@@ -40,7 +40,7 @@ Choose one of three match types when you search. Each controls how strictly the 
 | --- | --- | --- |
 | Contains | The search term wherever it appears within a field, including inside a longer word. | Matches “cyber,” “cybersecurity,” and “cyberattack.” |
 | Matches | Whole words identical to the search term, ignoring case. | Matches “cyber” and “Cyber,” but not “cybersecurity.” |
-| Exactly matches | Whole words identical to the search term, including case. | Matches “cyber” only, not “Cyber” or “cybersecurity.” |
+| Exactly matches | Whole words identical to the search term, including case. | Matches “cyber” only, not “Cyber” or “cybersecurity.��� |
 
 **Note:** A whole word is text bounded by spaces or punctuation. With **Matches**, searching “log” finds “log” and “Log” but not “login” or “catalog.”
 
