@@ -41,10 +41,18 @@ To change your subscription, log in to your [Contentstack account](https://www.c
 
 4.  Do one of the following:
 
--   **First payment**: on the payment page, enter your card and billing details, and then confirm the payment.
+-   **First payment**: the payment page opens with your email address already filled in. Enter your card number, expiry date, and security code, the cardholder name, and your country and postal code, and then click **Subscribe**.
 -   **Card already on file**: review **Review Your Order**, select the checkbox to authorize the charge, and click **Confirm Payment**. To change your selection, click **Go Back**.
 
 Contentstack applies the new subscription immediately and returns you to your subscription. Your invoice arrives by email.
+
+### What the Payment Page Shows
+
+-   The subscription you are moving to, with the amount due today and the amount you pay each month from your next billing date. The amount due today covers only the days remaining in the current period.
+-   Separate lines for the usage-based parts of your subscription, such as AI credits, bandwidth, and API requests. These are listed as varying because they are charged on what you use, not up front.
+-   **Tax**, which stays uncalculated until you enter your address, and is then added to the total.
+
+**Note:** The payment page is hosted by Stripe. Your card details go directly to the payment provider, and Contentstack does not see or store your card number.
 
 ### What Review Your Order Shows
 

@@ -63,7 +63,7 @@ Your limits depend on your subscription and on any add-ons you have bought, so t
 
 ## How Your Billing Period Works
 
-Paid subscriptions are billed monthly. Your subscription renews automatically on the same day each month until you cancel it, and the Subscription page shows that date as **Next Billing Date**.
+Paid subscriptions are billed monthly. Your subscription renews automatically on your billing date each month until you cancel it. The Subscription page shows that date as **Next Billing Date**, and the payment page shows it before you confirm your first payment.
 
 Two things are charged at different times:
 
