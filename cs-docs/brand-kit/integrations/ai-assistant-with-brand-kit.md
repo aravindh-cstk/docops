@@ -63,7 +63,7 @@ Follow this step-by-step guide to install the AI Assistant app within your stack
 
                 1.  **Managed by Contentstack**: Select the **Managed by Contentstack** option to configure the app using Contentstack-powered API keys.![4-b-AI-Assistant-Configuration-Platform-Managed-By-Contentstack](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltdab8b40dccf57e4e/672cd7abe71e4925f7f0e831/4-b-AI-Assistant-Configuration-Platform-Managed-By-Contentstack.png)
                 2.  **Custom Credentials**: You can configure the app using third-party API credentials, such as OpenAI, Azure OpenAI Service, AWS Bedrock, and Google Vertex AI. Select the **Provider Name** and enter the required credentials to configure the app.![4-c-AI-Assistant-Configuration-Platform-Custom-Credentials](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt45377e500bd60863/672cd7ab4f4fa3eb1fb79a9b/4-c-AI-Assistant-Configuration-Platform-Custom-Credentials.png)
-            2.  **Brand Kit Enabled**: When enabling Brand Kit, the app will use Brand Kit’s API settings to manage the API credentials. This override aligns the AI Assistant’s output with your brand’s guidelines for tone, style, and voice, ensuring a consistent branded experience.
+            2.  **Brand Kit Enabled**: When enabling Brand Kit, the app will use Brand Kit���s API settings to manage the API credentials. This override aligns the AI Assistant’s output with your brand’s guidelines for tone, style, and voice, ensuring a consistent branded experience.
 
                 Click the **Enable On-Brand Generative AI** toggle button, a pop-up appears. Then click **Proceed** to override the existing API Keys.
 
