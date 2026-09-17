@@ -1,18 +1,21 @@
 ---
 title: "Key Concepts"
-description: "Understand key Contentstack Personalize concepts like audiences, experiences, attributes, events, and A/B testing."
+description: "Learn the core concepts behind Contentstack Personalize - experiences, variants, audiences, attributes, events, and how they work together for real-time personalization."
 url: /personalize/key-concepts
+uid: blta0a59556182aa043
 ---
 
 # Key Concepts
 
 ## Key Concepts
 
+# Key Concepts
+
 This guide introduces the core concepts used in Personalize. It provides definitions and context to help you understand how experiences, audiences, variants, attributes, and events work together to deliver personalization.
 
 ## Experiences
 
-An [Experience](/docs/personalize/about-experiences) is the top-level configuration where you define variants, target them to audiences, and set traffic distribution rules for A/B testing. Each experience represents a personalization setup applied to your digital property.
+An [Experience](https://www.contentstack.com/docs/personalize/about-experiences) is the top-level configuration where you define variants, target them with rules, and set traffic distribution rules for A/B testing. Each experience represents a personalization setup applied to your digital property.
 
 Experiences help you deliver content to specific audience segments through conditions you define. They support audience segmentation, experimentation, and targeted delivery.
 
@@ -25,36 +28,34 @@ Personalize supports two types of experiences:
 
 ### Segmented Experiences
 
-[Segmented Experiences](/docs/personalize/create-segmented-experience) enable you to deliver precisely targeted, personalized content to specific audience groups. By dynamically showcasing tailored content variations based on demographics, referral sources, behaviors, and other key attributes, you can:
+[Segmented Experiences](https://www.contentstack.com/docs/personalize/create-segmented-experience) enable you to deliver precisely targeted, personalized content to specific audience groups. By dynamically showcasing tailored content variations based on demographics, referral sources, behaviors, and other key attributes, you can:
 
 -   Drive higher engagement
 -   Increase conversions
 -   Improve overall customer satisfaction
 
-**Example:**
-
-A "New Visitors" segment might see a welcome banner. 
-
+**Example:**  
+A "New Visitors" segment might see a welcome banner.  
 A "Returning Customers" segment is shown a loyalty offer.
 
 #### Variant Prioritization
 
 **Variant Prioritization** resolves conflicts when a user satisfies conditions for multiple variants. It ensures the most relevant variant takes precedence by defining a hierarchy.
 
-For an experience, only one variant is deemed active at a time. If match conditions for multiple variants are met, the first variant in the prioritized order for which the conditions are met will be considered as active.
+For an experience, only one variant is deemed active at a time. If match conditions for multiple variants are met, the first variant in the prioritised order for which the conditions are met will be considered as active.
 
 **Example:** Imagine an experience targeting a hero banner.
 
 -   **Variant A** targets "All Visitors from the UK."
 -   **Variant B** targets "VIP Customers" (a more specific, high-value segment).
 
-A visitor who is both a VIP and located in the UK qualifies for both variants. By prioritizing “VIP Customers” above “UK Visitors,” the user sees the VIP version.
+A visitor who is both a VIP and located in the UK qualifies for both variants. By prioritizing "VIP Customers" above "UK Visitors," the user sees the VIP version.
 
-**Additional Resource:** For more information, refer to [Create a Segmented Experience](/docs/personalize/create-segmented-experience#steps-for-execution).
+**Additional Resource:** For more information, refer to [Create a Segmented Experience](https://www.contentstack.com/docs/personalize/create-segmented-experience#steps-for-execution).
 
 ### A/B Test Experiences
 
-[An A/B test experience](/docs/personalize/create-ab-test-experience) is a controlled experiment that allows you to present two or more content variants of a webpage or app to different user groups simultaneously, helping you evaluate which version performs best.
+[An A/B test experience](https://www.contentstack.com/docs/personalize/create-ab-test-experience) is a controlled experiment that allows you to present two or more content variants of a webpage or app to different user groups simultaneously, helping you evaluate which version performs best.
 
 In Contentstack Personalize, A/B Testing enables data-driven decision-making and helps you optimize content strategy by testing and comparing multiple content variations.
 
@@ -74,11 +75,13 @@ In an A/B test, you can control how traffic is split among different variants. Y
 
 **Custom Split:** This is useful for "soft launching" a new design. You can show a radically new homepage design (20% variant) to a small subset of your traffic to gather data and feedback without risking a negative impact on the majority of your users (80% control).
 
-**Multi-Armed Bandit:** Multi-Armed Bandit is an adaptive traffic optimization strategy available for A/B Test experiences in Contentstack Personalize.
+### Multi-Armed Bandit
+
+Multi-Armed Bandit is an adaptive traffic optimization strategy available for **A/B Test experiences** in Contentstack Personalize.
 
 Unlike traditional A/B testing, where traffic distribution remains fixed for the duration of the test, Multi-Armed Bandit dynamically adjusts how traffic is allocated across variants based on real-time conversion performance.
 
-**With Multi-Armed Bandit:**
+With Multi-Armed Bandit:
 
 -   All variants start with an equal share of traffic.
 -   Traffic is redistributed automatically over time to favor better-performing variants.
@@ -88,7 +91,7 @@ This approach allows you to optimize for conversions while the experiment is run
 
 **Note:** Multi-Armed Bandit **does not** change how A/B tests end or how winners are determined. Test duration and winner declaration follow the same rules as standard A/B Test experiences.
 
-**Additional Resource:** For more information, refer to [Create an A/B Test Experience.](/docs/personalize/create-ab-test-experience)
+**Additional Resource:** For more information, refer to [Create an A/B Test Experience](https://www.contentstack.com/docs/personalize/create-ab-test-experience#steps-for-execution).
 
 #### Impressions
 
@@ -98,7 +101,9 @@ Each time a user encounters personalized content, it can be recorded as a single
 
 Tracking impressions helps you determine how effectively your personalized content is reaching its audience.
 
-**Example:** If two different sale banners are shown to users in different locations, impressions reveal how often each banner is viewed, helping you measure visibility and engagement.
+**Example:**
+
+If two different sale banners are shown to users in different locations, impressions reveal how often each banner is viewed, helping you measure visibility and engagement.
 
 #### Conversions and Metrics
 
@@ -108,20 +113,48 @@ These events serve as **metrics** to evaluate variant performance. When a visito
 
 In A/B Test experiences, conversions help identify which variant performs better, with a higher number of conversions.
 
-**Example:** Testing two “Buy Now” buttons can show which design generates more clicks.
+**Example:**
+
+Testing two "Buy Now" buttons can show which design generates more clicks.
+
+### Targeting
+
+Targeting determines who sees a given variant. You define it directly on the experience as a set of rules, evaluated for each visitor in real time, with no separate audience resource required.
+
+A rule evaluates a single condition about a visitor, such as their country, device, a query parameter, a custom attribute you've defined, or their membership in a Lytics audience or [Lytics flow state](https://www.contentstack.com/docs/personalize/key-concepts#lytics-flow-states). Combine rules with AND/OR logic to express exactly who qualifies.
+
+Where targeting lives depends on the experience type:
+
+-   **Segmented experiences**: each variant carries its own targeting. The first matching variant, by [priority order](https://www.contentstack.com/docs/personalize/key-concepts#variant-prioritization), is served.
+-   **A/B test experiences**: targeting acts as an eligibility gate. Visitors who match it enter the test; everyone else is excluded.
+
+A targeting rule can reference:
+
+-   **Attributes**: preset attributes such as country, region, city, device type, operating system, referrer, and query parameters, plus any custom attribute you've defined.
+-   **Audiences**: an existing [Lytics audience](https://docs.lytics.com/docs/audiences) or [Personalize audience (legacy)](https://www.contentstack.com/docs/personalize/about-audiences#personalize-audiences-legacy), when you want to reuse a definition you already have.
+-   **Lytics flow states**: where a visitor is in a Lytics flow.
+
+**Example:** a variant can target "visitors in the US on a mobile device" directly, with no audience to create first.
+
+See [Targeting](https://www.contentstack.com/docs/personalize/targeting) for the full set of signals, operators, and ways to combine rules.
+
+Projects that already have Personalize audiences (legacy) can still reference one from within a rule. New projects, and projects that never created an audience, don't have Personalize audiences (legacy) available and use targeting exclusively. Contact Contentstack Support if you need legacy audience access.
+
+#### Lytics Flow States
+
+A Lytics flow state describes where a visitor is in a Lytics flow, such as an onboarding sequence or an abandoned-cart journey.
 
 ### Resolving conflicts when multiple Experiences target the same content
 
 When multiple experiences are active on a page, layering and prioritization of experiences ensure optimal personalization for your users as it helps reflect the whole visitor context on the content.
 
 1.  **Scenario 1:** Multiple experiences target different contents on the page.
-    
-    Personalize and the CMS automatically layer these experiences, optimizing each section based on the respective active variant.
-    
-2.  **Scenario 2:** Multiple experiences target the same content on the page.
-    
-    Personalize uses the experience [prioritization](/docs/personalize/prioritize-experiences) order defined by you, so the variant from the higher-priority experience is displayed. You can adjust the order of experiences in Personalize to control which content is shown when multiple experiences are active.
-    
+
+Personalize and the CMS automatically layer these experiences, optimizing each section based on the respective active variant.
+
+1.  **Scenario 2:** Multiple experiences target the same content on the page.
+
+Personalize uses the experience [prioritization](https://www.contentstack.com/docs/personalize/prioritize-experiences) order defined by you, so the variant from the higher-priority experience is displayed. You can adjust the order of experiences in Personalize to control which content is shown when multiple experiences are active.
 
 ### Experience Tags
 
@@ -129,18 +162,18 @@ You can attach **tags** to any experience to organize it in the management UI an
 
 When you pass tags to the Personalize Edge SDK or Edge API, only experiences matching those tags are fetched and evaluated for the current request. This makes tags particularly useful for scoping delivery to a specific environment, site section, or region without maintaining separate Personalize projects.
 
-For details on naming conventions, use cases, API and SDK usage, and limits, see [Experience Tags](/docs/personalize/experience-tags).
+For details on naming conventions, use cases, API and SDK usage, and limits, see [Experience Tags](https://www.contentstack.com/docs/personalize/experience-tags).
 
 ## Audiences
 
-[Audiences](/docs/personalize/about-audiences) are groups of users who share attributes, behaviors, or contextual characteristics. They determine who qualifies to see particular variants.
+[Audiences](https://www.contentstack.com/docs/personalize/about-audiences) are groups of users who share attributes, behaviors, or contextual characteristics. They determine who qualifies to see particular variants.
 
 Personalize supports two audience types:
 
--   **Personalize audiences**
 -   **Lytics audiences**
+-   **Personalize audiences (legacy)**
 
-Audiences help you deliver relevant content and tailor personalization based on user context.
+Audiences help you deliver relevant content and tailor personalization based on user context. Previously, you'd create a Personalize audience (legacy) as a separate resource, then link it to an experience. With targeting, you build rules directly on the variant or eligibility gate instead. You can still reference an existing Lytics audience or Personalize audience (legacy) from inside a rule if you want to reuse it, but it's no longer a required first step.
 
 ### Why well-defined Audiences are Important
 
@@ -148,40 +181,39 @@ Audiences help deliver relevant content to users who share similar attributes or
 
 **Roles of Audiences in Personalize**
 
-Audiences are needed in Personalize in order to target Experience Variants to segments of your visitors, in order to:
+Audiences are needed in Personalize in order to target Experience Variants to segments of your visitors, in order to
 
 1.  **Increase Engagement:** Grab your user's attention with content that resonates, keeping them hooked and coming back for more.
 2.  **Boost Conversions:** Guide users toward the actions you want them to take, whether it's making a purchase, signing up, or exploring further.
 3.  **Build Loyalty:** Create experiences that feel tailor-made, fostering loyalty and turning casual visitors into raving fans.
 
-### Personalize Audiences and Lytics Audiences
+### Lytics Audiences and Personalize Audiences (Legacy)
 
-### Lytics Audiences
+#### Lytics Audiences
 
 Lytics audiences are created using unified customer data from multiple systems. They allow you to target users based on their full behavioral history and lifecycle stage.
 
-**Lytics Support:**
+**What does a Lytics audience offer?**
 
-**1\. Unified customer profiles:** Consolidate CRM, email, mobile, and web data into a single profile. This creates a single, rich profile for each user, allowing you to personalize website content based on their entire relationship with your brand, not just their current web session.
+1.  **Unified customer profiles:** Consolidate CRM, email, mobile, and web data into a single profile. This creates a single, rich profile for each user, allowing you to personalize website content based on their entire relationship with your brand, not just their current web session.
+2.  **Advanced segmentation:** Build audiences based on behavioral patterns, affinities, or predictive indicators. You can create dynamic segments like "frequent buyers," "users at risk of churn," or "users likely to convert," allowing you to target users with incredible relevancy.
+3.  **Lifecycle targeting:** Deliver personalization aligned with user stages such as acquisition, engagement, or retention. This allows you to move beyond one-off promotions and guide users through a cohesive journey with your brand.
+4.  **Audience analytics:** Lytics audiences are not ephemeral (unlike Personalize audiences (legacy), which are only used to determine active variants in real time); they're processed and maintained for you to view, analyze, and use to make informed decisions.
 
-**2\. Advanced segmentation:** Build audiences based on behavioral patterns, affinities, or predictive indicators. You can create dynamic segments like "frequent buyers," "users at risk of churn," or "users likely to convert," allowing you to target users with incredible relevancy.
+#### Personalize Audiences (Legacy)
 
-**3\. Lifecycle targeting:** Deliver personalization aligned with user stages such as acquisition, engagement, or retention. This allows you to move beyond one-off promotions and guide users through a cohesive journey with your brand.
+Personalize audiences (legacy) are evaluated at the edge and are designed for first-page personalization, where speed and contextual accuracy matter most. Their evaluated memberships are ephemeral and not stored by Personalize. Thus, no analytics is available for Personalize audiences (legacy).
 
-**4\. Audience analytics:** Lytics audiences are not ephemeral (unlike Personalize Audiences, which are only used to determine active variants in real-time). They are processed and maintained for you to view, analyze and use to make informed decisions.
+**What does a Personalize audience (legacy) offer?**
 
-### Personalize Audiences
-
-Personalize audiences are evaluated at the edge and are designed for first-page personalization, where speed and contextual accuracy matter most. Their evaluated memberships are ephemeral and not stored by Personalize. Thus, no analytics is available for Personalize Audiences.
-
-**Personalize Audiences Support:**
+For new targeting, define rules directly on the experience with [Targeting](https://www.contentstack.com/docs/personalize/targeting) instead of creating an audience first. You can still reference an existing Personalize audience (legacy) from within a rule if you already have one.
 
 1.  **Contextual attributes:** Contextual attributes are pieces of information that are available directly from the user's browser in their very first request to your website. Because this data doesn't need to be looked up in a separate database, Personalize can act on it with zero latency at the edge. This makes it the perfect tool for making a strong first impression.
-2.  **Custom Attributes:** Use custom attributes defined in Personalize to tailor content on first page render. This could be useful when you don’t want to wait until syncing of the attributes are done at the edge, but rather reflect that user context on the page immediately.
+2.  **Custom Attributes:** Use custom attributes defined in Personalize to tailor content on first page render. This could be useful when you don't want to wait until syncing of the attributes are done at the edge, but rather reflect that user context on the page immediately.
 
 ## Attributes
 
-[**Attributes**](/docs/personalize/about-attributes) are key-value pairs that define the characteristics, behaviors, or preferences of users interacting with your website or application. They form the foundation for building audience segments that enable targeted content delivery and personalized experiences.
+[**Attributes**](https://www.contentstack.com/docs/personalize/about-attributes) are key-value pairs that define the characteristics, behaviors, or preferences of users interacting with your website or application. They form the foundation for building audience segments that enable targeted content delivery and personalized experiences.
 
 Attributes can be applied across various use cases, including:
 
@@ -193,7 +225,7 @@ By combining **preset** (contextual) and **custom attributes** (defined by the u
 
 ## Events
 
-[**Events**](/docs/personalize/about-events) allow you to capture and track every interaction a user has with your website or application. In **Contentstack Personalize**, events play a vital role in evaluating the performance of your **A/B tests**.
+[**Events**](https://www.contentstack.com/docs/personalize/about-events) allow you to capture and track every interaction a user has with your website or application. In **Contentstack Personalize**, events play a vital role in evaluating the performance of your **A/B tests**.
 
 By recording key user actions, such as clicks, form submissions, or video plays, as events, you can accurately assess which content variant delivers better results.
 
@@ -206,7 +238,7 @@ These metrics together provide a clear picture of how users engage with your per
 
 ## CMS Entry Variants
 
-In **Contentstack CMS**, [**Variants**](/docs/personalize/about-variants) are alternative versions of content created to engage specific audience segments. Each experience you build within a Personalize project appears in the CMS as a **Variant Group** named after that experience, allowing you to create and manage individual **entry variants** directly from the Entry Editor.
+In **Contentstack CMS**, [**Variants**](https://www.contentstack.com/docs/personalize/about-variants) are alternative versions of content created to engage specific audience segments. Each experience you build within a Personalize project appears in the CMS as a **Variant Group** named after that experience, allowing you to create and manage individual **entry variants** directly from the Entry Editor.
 
 Variant Groups and Variants are automatically created and synced for you based on the Experiences and Variants you define in Personalize, given that the Personalize Project is connected with the specific CMS Stack. Once created, you can create entry variants by making changes to the content you want to be personalized. The entry editor will display content from the base entry by default. You can enter or edit content in the fields as per the variant you want the content to be personalized for.
 
@@ -215,6 +247,6 @@ Variant Groups and Variants are automatically created and synced for you based o
 -   **Deliver dynamic content based on personalized experiences:** Serve real-time, tailored content to visitors based on their demographics, behaviors, and preferences.
 -   **Enhance marketing performance:** Experiment with different content versions to identify the most impactful ones and boost campaign results.
 -   **Run A/B tests and optimize content:** Compare multiple versions side by side, use performance data to determine the most effective variant, and continuously refine your personalization approach.
--   **Iterate and evolve:** Monitor content variants’ performance regularly and apply data-driven insights to improve the content for better user engagement and outcomes.
+-   **Iterate and evolve:** Monitor content variants' performance regularly and apply data-driven insights to improve the content for better user engagement and outcomes.
 
 By connecting user attributes, unified and real-time audiences, experience rules, and measurable events, these concepts create a complete and adaptable personalization model. This foundation helps you deliver more relevant content today while continuously refining your strategies as user behavior evolves.

@@ -86,11 +86,93 @@ To configure redirection for an apex domain, choose from the following options w
     -   **301**: Moved Permanently
     -   **302**: Found
 
+## Choosing an SSL Certificate for Your Domain
+
+By default, Launch automatically issues and manages an SSL certificate for every custom domain. If your organization requires a certificate from your own Certificate Authority (CA), you can upload one instead.
+
+This choice appears in the **Add Domain** (and **Edit Domain**) modal, under **SSL Certificate**:
+
+1.  Choose one of:
+
+-   **Automatic (recommended)**: Launch issues and renew the certificate for you. Continue to Domain Ownership Verification, below.
+-   **Custom certificate**: supply your own certificate, private key, and (if needed) intermediate certificates.
+
+1.  If you select **Custom certificate**, three fields appear:
+
+Each field also accepts a click on **Upload file** to select a .pem, .crt, .cer, .key, or .txt file, its contents loaded into the field, where you can still review or edit them before submitting.
+
+### What these look like
+
+Every field expects standard PEM format — a block starting with a \-----BEGIN...----- line and ending with a matching \-----END...----- line. The example below is illustrative only (a throwaway test certificate, shortened for readability) — your real files will be longer and provided by your CA, but the shape is the same:
+
+**Certificate (PEM)**, for a domain named abc.example.com:
+
+```
+-----BEGIN CERTIFICATE-----
+MIIBwDCCAWagAwIBAgIUDxcdOJ92uYUKPE4ZCD3S5W50KecwCgYIKoZIzj0EAwIw
+JjEkMCIGA1UEAwwbTGF1bmNoIFRlc3QgSW50ZXJtZWRpYXRlIENBMCAXDTI2MDgz
+...
+YmMuZXhhbXBsZS5jb20wHQYDVR0OBBYEFFicWDerfGxx3rTD4EpX31H0ZFe2MB8G
+-----END CERTIFICATE-----
+```
+
+**Private Key (PEM)**: the key generated together with that certificate's request:
+
+```
+-----BEGIN EC PRIVATE KEY-----
+MHcCAQEEIOUGGqduUUtzQMWKq7SQ1e5fG2pqrxath69mOyZ7xRTvoAoGCCqGSM49
+AwEHoUQDQgAEH2HRPPdRQDujYjU9nWfHiHqd0TL3AirHdeMGyAifPnDNt4Aninw5
+2jnogi9JFXcKGEbcLxsz/9QAzJu+0KzPhw==
+-----END EC PRIVATE KEY-----
+```
+
+**Intermediate certificates (PEM)**: the CA's own chain certificate, not specific to your domain:
+
+```
+-----BEGIN CERTIFICATE-----
+MIIBsjCCAVmgAwIBAgIUdP8jXAc7ZtHacIOmZKPrStujmMcwCgYIKoZIzj0EAwIw
+JjEkMCIGA1UEAwwbTGF1bmNoIFRlc3QgSW50ZXJtZWRpYXRlIENBMCAXDTI2MDgz
+...
+XG/6hqxSfKU2D8W1GFdvDEYb8b4CICsxFF0MhQB2qeoYr82PkKLStBAYE0Lx10pN
+-----END CERTIFICATE-----
+```
+
+**Note:** If your certificate authority already gave you the full chain, your certificate and its intermediates concatenated into one file, you can paste that whole file into **Certificate** and leave **Intermediate certificates** empty; Launch reads the chain from whichever field you use.
+
+![image (5).png](https://images.contentstack.io/spaces/am51d76353d996c1fe/assets/am3d7595bbcae54073/8e843bf44f15404f39eb9b34/image__5_.png?locale=en-us)![image (6).png](https://images.contentstack.io/spaces/am51d76353d996c1fe/assets/ama9ded99c2f63e9f3/c58343ed4c1212a48f365de1/image__6_.png?locale=en-us)
+
+**Note:** Launch checks the certificate before saving it, that it's correctly formatted, that the private key matches it, that the chain is complete and in order, and that it isn't expired. If a check fails, an error notification names the specific reason.
+
+To switch a domain back to Launch-managed certificates later, edit the domain, choose **Automatic (recommended)**, and save.
+
+### What each error means
+
+| **Message you may see** | **What to do** |
+| --- | --- |
+| The certificate is missing its intermediate certificates. Add the CA certificate chain so browsers can verify your domain. | Paste your CA's intermediate certificate(s) into the Intermediate certificates field. |
+| The certificate chain is out of order. List the domain certificate first, followed by each issuing certificate. | Reorder so your certificate comes first, then each certificate that issued it. |
+| The private key does not match the certificate. Check that both files belong to the same certificate. | Confirm you're pasting the key generated for this exact certificate. |
+| The certificate could not be read. Make sure it is PEM formatted and was copied in full. (or the equivalent message for the private key) | Re-copy the full file, including the -----BEGIN and -----END lines. |
+| This certificate has already expired. Upload a current certificate from your certificate authority. | Get a renewed certificate from your CA and upload it. |
+| This certificate is not valid yet. Check its start date, or upload the currently active certificate. | Confirm you're uploading the certificate meant for right now, not one issued for a future date. |
+| This certificate was not issued for this domain. Upload a certificate that covers it, either by name or with a matching wildcard. | Upload the certificate issued specifically for this domain (or a matching wildcard). |
+
+**Note:** Renaming a domain that uses a custom certificate re-issues its SSL configuration, so you'll need to supply a certificate covering the new name before saving or switch the domain to Automatic first.
+
+### Staying on top of renewal
+
+Launch does not renew a custom certificate for you. When you add or update one, you will get a notification confirming it and stating its expiry date, and two more reminders as it approaches expiry, at 30 days and again at 14 days before it expires (Cloudflare's fixed thresholds; not adjustable), so you have time to renew with your CA and re-upload. A domain using a custom certificate is also marked in the domains list, so you can tell at a glance which ones you're responsible for renewing.
+
 ## Domain Ownership Verification and Automatic SSL Provisioning
 
 Domain validation confirms your ownership or control of a domain. This helps prevent unauthorized use and ensures secure traffic routing through your platform. Contentstack Launch uses **TXT record validation** to verify domain ownership and DCV records to provision SSL certificates. This method is secure, easy to set up, and widely supported.
 
 Use these methods **before adding A or CNAME records and routing traffic to Launch**, especially for **existing live sites migrating to Launch**.
+
+| SSL Mode | Hostname CNAME Record | Certificate Validation Record (DCV) |
+| --- | --- | --- |
+| Automatic | Required | Required (for Let's Encrypt / ACME) |
+| Custom Certificate | Required | Not Required |
 
 After successfully creating an apex or subdomain, you must validate both the hostname and the associated SSL certificate. To do so, perform the following steps:
 
@@ -143,6 +225,8 @@ After both the domain and certificate statuses are active, add an **A record** o
 
 
 **Note:** If your DNS is managed through a Cloudflare zone, an additional Orange-to-Orange (O2O) setup is required. The detailed steps for this configuration are outlined in the [Contentstack Go-Live Guide](/docs/launch/go-live-guide), which can be referred for the implementation guidance.
+
+A domain using a custom certificate also shows a document icon next to its status. Hovering it displays: Custom certificate - renewal is manual, you'll need to re-upload it before it expires.
 
 ## Delete a Custom Domain
 
