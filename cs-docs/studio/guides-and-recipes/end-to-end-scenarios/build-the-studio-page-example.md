@@ -25,7 +25,7 @@ Section: blog_post_hero   (Simple — root is a component)
     bindings:
       headline    ← blog_post.hero_group.headline
       subhead     ← blog_post.hero_group.subhead
-      cover_image ← blog_post.hero_group.image
+      cover_image ��� blog_post.hero_group.image
     cta slot → <PrimaryButton>
                  label ← blog_post.hero_group.cta.label
                  href  ← blog_post.hero_group.cta.href
