@@ -9,7 +9,7 @@ uid: bltc1dbe1bae9d38687
 
 ## Change Your Subscription or Add-Ons
 
-When you need more of something, you have two ways to get it. Move to a higher subscription option to raise everything at once, or buy an add-on to raise one limit while staying on your current subscription.
+When you need less, you can move to a lower subscription option, which takes effect at your next billing date. When you need more of something, you have two ways to get it. Move to a higher subscription option to raise everything at once, or buy an add-on to raise one limit while staying on your current subscription.
 
 Which one you need depends on the resource. Metered resources such as API requests, bandwidth, and AI credits are governed by your subscription and by extra usage. Fixed resources such as users, stacks, and entries are raised with add-ons.
 
@@ -63,6 +63,34 @@ Contentstack applies the new subscription immediately and returns you to your su
 
 **Note:** The amount on **Review Your Order** is an estimate calculated at the moment the page loads, from the days remaining in your billing period. That figure keeps changing as the period elapses, so the amount charged can differ slightly if you wait before confirming. To be charged the amount you see, confirm the payment promptly. For the exact figure, check the invoice.
 
+## Move to a Lower Subscription Option
+
+Downgrading is available on paid subscription options. It is scheduled rather than immediate: you keep your current subscription and its limits until the end of the billing period you have already paid for, and the lower option starts at your next billing date. Nothing is charged for the change.
+
+1.  Click your avatar in the top-right corner, and then click **Manage Subscription**.
+2.  On the subscription card, click the vertical ellipsis (⋮), and then click **Downgrade**.
+3.  In **Downgrade Plan**, use the selector at the top of the dialog box to choose the subscription option you want to move to.
+4.  Review the comparison table. It lists each resource with the limit on your current subscription, the limit on the option you have chosen, and your own usage.
+5.  Click **Continue to Downgrade**, and then select the option you are moving to.
+6.  Select the reason you are downgrading, and then click **Continue**. To stop here, click **Keep My Plan**.
+7.  Read **What happens next**, and then click the button confirming the option you are moving to.
+8.  Review the summary on **Review Your Order**, and then click **Confirm Downgrade**. To change your selection, click **Go Back**.
+
+Contentstack confirms with **Downgrade Scheduled**. You stay on your current subscription until your next billing date, when the lower option takes effect.
+
+### If Your Usage Exceeds the Lower Limits
+
+You can only move to an option your current usage fits within. If any resource is over that option's limit, the dialog box says so, lists the resources concerned, and shows the figure you need to get each one down to. **Continue to Downgrade** is not offered until your usage fits.
+
+Reduce the resources listed, then start again. If you are not sure what to remove, use **Contact Support** in the dialog box. When everything fits, the dialog box confirms that you are eligible to downgrade.
+
+### What Happens to Extra Usage and Add-Ons
+
+-   **Extra usage** settings stay active and are billed on what you actually use.
+-   **Add-ons** stay on your subscription until the downgrade takes effect at your next billing date, and are then removed automatically.
+
+**Note:** The downgrade dialog box also offers **Cancel & Delete Subscription**. That is a different action: it closes the account rather than moving it to a smaller subscription. Refer to the [Cancel Your Subscription](/docs/administration/cancel-your-subscription) documentation.
+
 ## Buy or Change Add-Ons
 
 Add-ons raise an individual limit without changing your subscription. You can add users, stacks, content types, entries, assets, locales, and custom roles.
@@ -90,11 +118,5 @@ Subscription changes and add-ons both take effect immediately and are prorated. 
 ## What Happens to Your Content
 
 Changing your subscription or your add-ons does not affect your existing content, users, or API keys. Your stacks, entries, assets, and tokens are unchanged. Only your limits and available features change.
-
-## Moving to a Lower Subscription Option
-
-Moving from one paid subscription option to a lower one is not available in the product. To reduce cost, remove add-ons you no longer need, or contact the [support](mailto:support@contentstack.com) team.
-
-## Next Steps
 
 **Additional Resource:** To monitor what you are consuming against your new limits, refer to the [Track and Extend Your Subscription Usage](/docs/administration/track-and-extend-your-subscription-usage) documentation.

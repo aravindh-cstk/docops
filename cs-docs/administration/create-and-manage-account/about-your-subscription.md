@@ -22,18 +22,18 @@ Your subscription belongs to the organization, not to an individual user. Everyo
 
 ## Open the Subscription Page
 
-To open your subscription, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the steps below:
-
-1.  Click your avatar in the top-right corner, and then click **Manage Subscription**. Contentstack opens the **Subscription** page in your account settings.
+To open your subscription, log in to your [Contentstack account](https://www.contentstack.com/login) and click your avatar in the top-right corner, and then click **Manage Subscription**. Contentstack opens the **Subscription** page in your account settings.
 
 ## What the Subscription Page Shows
 
 The page has up to four sections, depending on your subscription.
 
--   **Subscription** — your current subscription, its status, and the date of your next payment. Use **Upgrade** to move to a higher subscription option, and the vertical ellipsis (⋮) to reach billing and cancellation options.
--   **Add-ons** — appears on subscription options that support them. Use **Manage Add-Ons** to raise an individual limit, such as the number of users or stacks.
--   **Usage Overview** — every resource your subscription includes, with how much you have used and how much remains. Metered resources also show the controls for allowing usage beyond your allowance.
--   **Billing Information** — the details that appear on your invoices. **Manage Billing** opens the billing portal.
+-   **Subscription**: Your current subscription, its status, and the date of your next payment. Use **Upgrade** to move to a higher subscription option. On a paid subscription, the vertical ellipsis (⋮) adds **Manage Billing**, **Downgrade**, and **Cancel & Delete Account**.
+-   **Add-ons**: Appears on subscription options that support them. Use **Manage Add-Ons** to raise an individual limit, such as the number of users or stacks.
+-   **Usage Overview**: Every resource your subscription includes, with how much you have used and how much remains. Metered resources also show the controls for allowing usage beyond your allowance.
+-   **Billing Information**: The details that appear on your invoices. **Manage Billing** opens the billing portal.
+
+**Note:** On Free, the subscription card offers **Upgrade** only. Downgrading, managing billing, and cancelling appear once you move to a paid subscription option, so a Free organization cannot be closed from the Subscription page. To close one, contact the [support](mailto:support@contentstack.com) team.
 
 ## Subscription Options
 
@@ -56,8 +56,8 @@ Every subscription option sets an allowance for each resource. Contentstack trac
 
 Your limits depend on your subscription and on any add-ons you have bought, so the Subscription page is the accurate source for your organization:
 
--   **Metered resources** — the **Usage Overview** section shows each resource, how much you have used, how much remains, and any extra usage alongside your allowance.
--   **Fixed resources** — the same section shows what your subscription includes and the quantity any add-on has contributed.
+-   **Metered resources**: The **Usage Overview** section shows each resource, how much you have used, how much remains, and any extra usage alongside your allowance.
+-   **Fixed resources**: The same section shows what your subscription includes and the quantity any add-on has contributed.
 
 **Additional Resource:** For a detailed view of AI credit consumption by product and by day, refer to the [Analytics for AI Credits](/docs/analytics/analytics-for-ai-credits) documentation.
 
@@ -87,9 +87,5 @@ When a scheduled payment fails, your subscription status changes to **Overdue** 
 To clear an **Overdue** status, update your payment method in the billing portal.
 
 **Note:** Contentstack does not display a prompt inside the product when a payment fails. Watch for the email from the payment provider, and check the **Subscription** page if you suspect a charge has not gone through.
-
-\[R1 — add one sentence stating the point at which access is downgraded or cut off if the retries never succeed. Dean Haddock has asked this in the thread and it is unanswered. A reader in an Overdue state needs to know how long they have.\]
-
-## Next Steps
 
 **Additional Resource:** To move to a higher subscription option or buy add-ons, refer to the [Change Your Subscription or Add-Ons](/docs/administration/change-your-subscription-or-add-ons) documentation.
