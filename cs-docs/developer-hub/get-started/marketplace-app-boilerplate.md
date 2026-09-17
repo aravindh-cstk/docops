@@ -115,7 +115,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   │   ├── AppConfigurationExtensionProvider.tsx
 │   │   │   ├── CustomFieldExtensionProvider.tsx
 │   │   │   ├── EntrySidebarExtensionProvider.tsx
-│   │   │   └── MarketplaceAppProvider.tsx
+│   │   │   └��─ MarketplaceAppProvider.tsx
 │   │   ├── types/
 │   │   │   └── types.ts
 │   │   └── utils/
@@ -134,7 +134,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   ├── App/
 │   │   │   └── App.tsx
 │   │   ├── AppConfiguration/
-���   │   │   ├── AppConfiguration.module.css
+│   │   │   ├── AppConfiguration.module.css
 │   │   │   └── AppConfiguration.tsx
 │   │   ├── AssetSidebarWidget/
 │   │   │   ├── AssetSidebar.css
