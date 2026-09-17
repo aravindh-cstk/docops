@@ -15,7 +15,7 @@ Contentstack allows you to generate a **management token** that provides secure 
 
 To generate a management token, log in to your [Contentstack account](https://www.contentstack.com/login/), go to your [stack](/docs/headless-cms/about-stack), and perform the following steps:
 
-1.  Click the “Settings” icon.
+1.  Click the “Settings��� icon.
 2.  Select **Tokens** from the list.
 3.  Navigate to the **Management Tokens** tab and click **\+ Management Token**.
 4.  Provide a relevant **Name** and **Description** for the token.
