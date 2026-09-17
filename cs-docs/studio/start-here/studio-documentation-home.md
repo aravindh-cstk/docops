@@ -66,7 +66,7 @@ Studio installs alongside two companion products you'll wire at the same time:
 -   **Live Preview SDK**: pipes content changes from Contentstack into your running site.
 -   **Visual Editor**: a separate product that provides inline click-to-edit on any page emitting data-cslp tags. Studio itself has no inline-edit surface (all value edits happen in the right panel), but Studio emits data-cslp tags, so VE-installed apps get inline editing on Studio-rendered pages.
 
-Setup for all three: [Setup chapter](/docs/studio/setup-chapter-guide).
+Setup for all three: [Setup chapter](/docs/studio/setup-overview).
 
 ---
 
@@ -143,20 +143,20 @@ Start here: **[Bring Your Own Data (chapter overview)](/docs/studio/bring-your-o
 | --- | --- |
 | **[Getting Started](/docs/studio/getting-started-with-studio)** | Role chooser + 5 numbered developer Quickstarts (Setup, Registering + Slots, Simple Section, List Section, Template) + a 5-min Author Quickstart. **Start here.** |
 | **[Video walkthroughs](/docs/studio/studio-video-walkthroughs)** | The same six guides, recorded against a real stack: one video for authors, five for developers. ~34 minutes total. |
-| **[Overview](/docs/studio/studio-overview-guide)** | What Studio is, when to use Templates vs Sections |
-| **[Setup](/docs/studio/setup-chapter-guide)** | Stack prerequisites, App-side install, Studio project configuration |
+| **[Overview](/docs/studio/contentstack-studio-overview)** | What Studio is, when to use Templates vs Sections |
+| **[Setup](/docs/studio/setup-overview)** | Stack prerequisites, App-side install, Studio project configuration |
 | **[Bring your own components](/docs/studio/bring-your-own-components-guide)** | Register custom components, design tokens, from Figma to code |
-| **[Bring your own data](/docs/studio/bring-your-own-data-guide)** | Render a composition against data you hold (<StudioComposition />), pass data into a slot (<Slot>) |
-| **[Composition](/docs/studio/composition-concepts)** | Composition concept, Canvas URL, CMS binding, Design Panel, Layers, Save vs Deploy |
+| **[Bring your own data](/docs/studio/bring-your-own-data)** | Render a composition against data you hold (<StudioComposition />), pass data into a slot (<Slot>) |
+| **[Composition](/docs/studio/what-is-a-composition)** | Composition concept, Canvas URL, CMS binding, Design Panel, Layers, Save vs Deploy |
 | **[Templates](/docs/studio/templates-guide)** | Pages connected to a content type |
 | **[Sections](/docs/studio/sections-guide)** | Reusable blocks, linked schema, auto-binding, slots, exposed props, repeaters, condition blocks |
 | **[Smart Containers](/docs/studio/smart-containers-guide)** | The three primitives that make sections data-driven: Repeater, Condition Block, Section Slot, plus Modular Block + Reference rendering patterns. |
-| **[Recipes](/docs/studio/recipes-guide)** | Worked scenarios, including the [zero-to-first-page walkthrough](/docs/studio/quickstart-set-up-studio-in-your-app), the [hand-coded migration playbook](/docs/studio/migrating-hand-coded-pages-to-studio), and the [add-Studio-to-Visual-Editor recipe](/docs/studio/add-studio-to-a-visual-editor-app) (additive: VE users do not migrate) |
-| **[Advanced topics](/docs/studio/advanced-topics-guide)** | Production playbooks: performance, multi-locale at scale, variant aliases, SSR streaming, editorial workflow, testing strategies, deployment edges |
+| **[Recipes](/docs/studio/enterprise-setup-from-install-to-first-authored-page)** | Worked scenarios, including the [zero-to-first-page walkthrough](/docs/studio/quickstart-set-up-studio-in-your-app), the [hand-coded migration playbook](/docs/studio/migrating-hand-coded-pages-to-studio), and the [add-Studio-to-Visual-Editor recipe](/docs/studio/add-studio-to-a-visual-editor-app) (additive: VE users do not migrate) |
+| **[Advanced topics](/docs/studio/performance-and-bundle-size-optimization)** | Production playbooks: performance, multi-locale at scale, variant aliases, SSR streaming, editorial workflow, testing strategies, deployment edges |
 | **[Framework recipes](/docs/studio/framework-recipes)** | Per-host SSR integration: Node (CI-tested), Next.js App Router (main + RSC entries, both CI-tested), Pages Router, Remix, Astro, Gatsby. Same three-call contract everywhere. Includes troubleshooting + curl-based verification. |
 | **[Studio CLI](/docs/studio/cli)** | The csdx studio command set: project setup, register components, Figma sync, design tokens, responsive options, generate Sections from a component + content type |
 | **[Reference](/docs/studio/reference-guide)** | URL variables, matching rules, feature flags, best practices |
-| **[Freeform](/docs/studio/freeform-guide)** | Optional feature: see chapter for details |
+| **[Freeform](/docs/studio/freeform-overview)** | Optional feature: see chapter for details |
 
 ---
 

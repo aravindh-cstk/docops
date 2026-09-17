@@ -103,5 +103,5 @@ This is the inverse of the page-builder cost curve. A page builder is cheap to s
 
 ## Next steps
 
--   **For developers in the room:** [technical overview](/docs/studio/contentstack-studio-overview), [setup walkthrough](/docs/studio/setup-chapter-guide)
+-   **For developers in the room:** [technical overview](/docs/studio/contentstack-studio-overview), [setup walkthrough](/docs/studio/setup-overview)
 -   **For evaluation:** [Zero to first page (30-minute build)](/docs/studio/quickstart-set-up-studio-in-your-app)

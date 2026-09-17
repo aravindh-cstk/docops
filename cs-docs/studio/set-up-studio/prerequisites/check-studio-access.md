@@ -34,7 +34,7 @@ When you open a Studio composition, the app switches into a **three-panel layout
 | --- | --- | --- |
 | **Left panel** | Two tabs: **Components** (the palette of registered React components you can drag onto the canvas) + **[Layers](/docs/studio/navigate-and-use-the-layers-tab)** (the tree of everything currently placed) | Studio, driven by your registerComponent(...) calls in your app |
 | **Center: the canvas iframe** | **Your real running app, loaded inside an iframe.** For a Section, Studio iframes <Canvas URL>/canvas and expects <StudioCanvas /> mounted there. For a Template, Studio iframes the template's URL pattern (e.g. /blog/welcome-to-studio) and expects <StudioComponent /> on the catch-all route. Same React, same components, same CSS, same SDK, served by **your** app, not by Studio | Your app running at the Canvas URL (dev: http://localhost:3006, prod: your deployed origin) |
-| **Right panel** | Tabs for the currently selected element: **Properties** (prop values + binding chips), **Design** (spacing, colours, layout tokens, see [design tokens](/docs/studio/configure-design-tokens-in-studio)), **Settings** (composition-level metadata). A **Data** tab appears **only when [Freeform](/docs/studio/freeform-guide) is enabled** on the project (Pin Entry / Pin Query). The screenshot above shows the project with Freeform off, so the Data tab is absent. Until you select something on the canvas the right panel shows a "No element currently selected" placeholder. | Studio, but the values it edits flow **into** the iframe via postMessage and re-render your components in place |
+| **Right panel** | Tabs for the currently selected element: **Properties** (prop values + binding chips), **Design** (spacing, colours, layout tokens, see [design tokens](/docs/studio/studio-design-tokens-overview)), **Settings** (composition-level metadata). A **Data** tab appears **only when [Freeform](/docs/studio/freeform-overview) is enabled** on the project (Pin Entry / Pin Query). The screenshot above shows the project with Freeform off, so the Data tab is absent. Until you select something on the canvas the right panel shows a "No element currently selected" placeholder. | Studio, but the values it edits flow **into** the iframe via postMessage and re-render your components in place |
 
 > ### The one insight worth internalising on day one
 > 
@@ -46,7 +46,7 @@ When you open a Studio composition, the app switches into a **three-panel layout
 > -   When Studio's canvas won't load, the fix is almost always in your app: dev server not running, wrong Canvas URL, missing <StudioCanvas /> / <StudioComponent /> mount, studioSdk.init() not called at boot. **One exception**: if Studio shows "SDK Not Initialized" or your browser refuses the iframe with a mixed-content / "connection blocked" / "private network" error, that's the **browser** refusing to embed your http://localhost iframe inside Studio's https:// page. Every major browser (Chrome, Brave, Edge, Safari, Firefox) blocks this by default with different error copy. One fix (local HTTPS via mkcert) works everywhere. See [Troubleshoot: Studio can't reach your localhost canvas](/docs/studio/troubleshoot-common-studio-issues#studio-cant-reach-your-canvas).
 > -   Studio doesn't need content delivery network (CDN) access to your compiled JS. The iframe loads your app directly, including live-reloaded dev builds during authoring.
 
-Setup ([Setup](/docs/studio/setup-chapter-guide)) is where you wire the two mount points the iframe needs: the [section preview route](/docs/studio/section-preview-route) (<StudioCanvas />) and the [template preview route](/docs/studio/template-preview-routes) (<StudioComponent />).
+Setup ([Setup](/docs/studio/setup-overview)) is where you wire the two mount points the iframe needs: the [section preview route](/docs/studio/section-preview-route) (<StudioCanvas />) and the [template preview route](/docs/studio/template-preview-routes) (<StudioComponent />).
 
 ## Why we surface this up front
 
@@ -62,7 +62,7 @@ The Studio SDKs install fine without access, studioSdk.init() runs, the canvas r
 
 Come back to whichever page sent you here:
 
--   [Setup](/docs/studio/setup-chapter-guide): install SDKs, wire routes, verify.
+-   [Setup](/docs/studio/setup-overview): install SDKs, wire routes, verify.
 -   [Two ways to start](/docs/studio/choosing-your-studio-setup-path): pick the Enterprise or Quickstart setup path.
 -   [Enterprise day one](/docs/studio/enterprise-setup-from-install-to-first-authored-page): the 30-minute BYOC recipe.
 -   [Zero to first page](/docs/studio/quickstart-set-up-studio-in-your-app): the complete walkthrough from nothing to a rendered page.

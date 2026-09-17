@@ -75,5 +75,5 @@ Both lead to the same destination: a Studio-powered app that composes your compo
 ## Next
 
 -   **[Two ways to start](/docs/studio/choosing-your-studio-setup-path)**: pick your setup path
--   **[Set up Studio](/docs/studio/setup-chapter-guide)**: the install + configure walk-through
+-   **[Set up Studio](/docs/studio/setup-overview)**: the install + configure walk-through
 -   **[Register your components](/docs/studio/bring-your-own-components-guide)**: the first step after install

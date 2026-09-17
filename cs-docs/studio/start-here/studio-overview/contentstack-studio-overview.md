@@ -120,7 +120,7 @@ Six things the rest of the stack doesn't do. Each builds on the previous.
 
 **AI tools + Studio stack, they don't compete.** AI makes engineers faster at writing components. Studio lets the rest of the org compose with those components without an engineer in the loop. The dream stack is both.
 
-For a full positioning breakdown against page builders / headless-CMS-alone / AI-alone alternatives, see [Studio for sales, marketing, and platform buyers](/docs/studio/studio-for-sales-marketing-and-platform-buyers).
+For a full positioning breakdown against page builders / headless-CMS-alone / AI-alone alternatives, see [Studio for sales, marketing, and platform buyers](/docs/studio/studio-business-value).
 
 ## The 30-second technical picture
 
@@ -129,7 +129,7 @@ Studio ships as a React SDK with two components you add to your app:
 -   **<StudioCanvas />**: goes on one route (the canvas route). The in-browser authoring surface where authors preview sections in isolation against real entries. Used only inside Studio's iframe.
 -   **<StudioComponent specOptions={specOptions} />**: goes on your app's catch-all route (default: ONE route, app/\[\[...slug\]\]/page.tsx for Next.js, <Route path="\*"> for React Router, handles every URL). The specOptions object is the return value of useCompositionData({ url }) (CSR) or csStudio.fetchCompositionData({ url, searchQuery }) (SSR). Studio's CDA query inside those calls resolves which Template (if any) matches each URL. No per-Template route registration needed.
 
-A typical Studio-powered app ships **both**. See the [Setup chapter](/docs/studio/setup-chapter-guide).
+A typical Studio-powered app ships **both**. See the [Setup chapter](/docs/studio/setup-overview).
 
 ## Next
 
@@ -137,4 +137,4 @@ A typical Studio-powered app ships **both**. See the [Setup chapter](/docs/studi
 -   **[The composability ladder](/docs/studio/the-composability-ladder)**: Studio's whole architecture in one idea: slot props climbing four rungs (Component, Section, Section-in-Slot, Template)
 -   **[When to use Templates vs Sections](/docs/studio/choosing-between-templates-and-sections)**: quick decision tree
 -   **[Two ways to start](/docs/studio/choosing-your-studio-setup-path)**: pick your setup path
--   **[Set up Studio in your app](/docs/studio/setup-chapter-guide)**: install the SDKs, configure your stack, create a project
+-   **[Set up Studio in your app](/docs/studio/setup-overview)**: install the SDKs, configure your stack, create a project

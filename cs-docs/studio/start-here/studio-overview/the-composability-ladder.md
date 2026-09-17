@@ -132,7 +132,7 @@ If that reads as one continuous idea (four rungs of the same fill mechanism + an
 
 ## Next
 
--   **[Set up Studio](/docs/studio/setup-chapter-guide)**: install the SDKs (rung 0)
+-   **[Set up Studio](/docs/studio/setup-overview)**: install the SDKs (rung 0)
 -   **[Register your components](/docs/studio/bring-your-own-components-guide)**: rung 1
 -   **[Sections](/docs/studio/build-and-use-sections)**: rungs 2 + 3
 -   **[Templates](/docs/studio/templates-overview)**: rung 4

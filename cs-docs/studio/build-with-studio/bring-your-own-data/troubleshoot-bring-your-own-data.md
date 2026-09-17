@@ -122,7 +122,7 @@ context doesn't match the field names the composition's bindings were authored a
 
 Design tokens travel on the resolved spec's config, so a composition that renders but looks unthemed usually means tokens were never registered in this app.
 
-**Fix:** register them, see [Design tokens](/docs/studio/configure-design-tokens-in-studio).
+**Fix:** register them, see [Design tokens](/docs/studio/studio-design-tokens-overview).
 
 ## Data-shape and framework problems
 
