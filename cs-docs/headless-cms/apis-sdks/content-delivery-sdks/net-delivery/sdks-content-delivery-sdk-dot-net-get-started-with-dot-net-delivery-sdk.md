@@ -21,7 +21,7 @@ Contentstack offers seven regions **AWS North America**, **AWS Europe**, **AWS A
 
 To use SDKs for the Europe, Austraila, Azure NA, or Azure EU region, you will have to make certain changes in the configuration of the SDK, as detailed below, and the rest of the instructions remain the same.
 
-Open the terminal and install the Contentstack module via “Package Manager” command as follows:
+Open the terminal and install the Contentstack module via ���Package Manager” command as follows:
 
 ```
 PM> Install-Package contentstack.csharp
