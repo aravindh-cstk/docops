@@ -2,6 +2,7 @@
 title: "Troubleshooting Launch Response Error Codes"
 description: "Learn how to troubleshoot Contentstack Launch error codes from the CDN Edge and Origin with detailed explanations of causes and resolutions."
 url: /launch/troubleshooting-launch-response-error-codes
+uid: blt9d16d2ad85aecf18
 ---
 
 # Troubleshooting Launch Response Error Codes
@@ -195,6 +196,7 @@ This error occurs when the origin application fails to process the request withi
 
 **Resolution:**
 
+-   **Request a higher timeout:** The application's execution timeout can be increased to up to **13 minutes**, compared with the default of **30 seconds**. However, the application must begin streaming a response within **98 seconds** of receiving the request to keep the connection alive beyond that point, a fully buffered response needs to complete within that same **98-second** window. Contact your Contentstack representative to discuss your needs. This takes effect starting with your next deployment, it is not applied retroactively to deployments that are already running.
 -   **Optimize performance:** Audit long-running tasks and optimize your code to reduce processing time.
 -   **Investigate errors:** Check the **Launch Server Logs** or your **Log Targets** for specific application errors that may prevent a response from being generated.
 -   **Check dependencies:** Verify the health and latency of all downstream services your application relies on.

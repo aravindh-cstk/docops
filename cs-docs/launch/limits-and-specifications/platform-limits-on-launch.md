@@ -2,6 +2,7 @@
 title: "Platform Limits on Launch"
 description: "Understand Contentstack Launch platform limits to build scalable digital experiences and ensure optimal performance during deployment and delivery."
 url: /launch/platform-limits-on-launch
+uid: blte9f262405f89e828
 ---
 
 # Platform Limits on Launch
@@ -58,3 +59,11 @@ Origin delivery rate limits cap the number of these origin-bound requests per se
 | **Enterprise** | 1200 RPS |
 
 **Note:** Enterprise customers can request higher origin delivery rate limits based on workload requirements and traffic patterns. Contact your Contentstack representative to discuss your needs.
+
+## Request Timeout Limits on Launch
+
+Launch's Cloud Function and SSR execution timeout controls how long a request is allowed to run before it's terminated. This applies to both streaming and buffered responses.
+
+By default, the request timeout is **30 seconds** for every organization. This can be configured up to a maximum of **13 minutes (780 seconds)**. Your application must begin sending a response within **98 seconds** of receiving the request to keep the connection alive beyond that point. Once it starts, the response can continue for up to the configured ceiling. Contact your Contentstack representative to discuss your needs.
+
+**Note:** A provisioned timeout takes effect starting with your organization's next deployment, it does not apply retroactively to deployments that are already running.
