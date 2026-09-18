@@ -38,7 +38,7 @@ Let’s look at each of them in detail.
 
 ### Authtoken
 
-An [Authtoken](/docs/headless-cms/types-of-tokens#authentication-tokens-authtokens) is a user-specific, read-write token used to make authorized Content Management API requests. You can retrieve an Authtoken by logging in to Contentstack using the “Log in to your account” request.
+An [Authtoken](/docs/headless-cms/types-of-tokens#authentication-tokens-authtokens) is a user-specific, read-write token used to make authorized Content Management API requests. You can retrieve an Authtoken by logging in to Contentstack using the ��Log in to your account” request.
 
 ```
 contentstackClient = contentstack.client({ authtoken: 'AUTHTOKEN' });
