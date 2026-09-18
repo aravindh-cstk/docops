@@ -76,7 +76,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   ├── customfield.svg
 │   │   ├── Entry-Sidebar-Logo.svg
 │   │   ├── Field_Modifier.svg
-│   │   ├���─ Field-Modifier-Icon.svg
+│   │   ├── Field-Modifier-Icon.svg
 │   │   ├── Full-Page-Logo.svg
 │   │   ├── fullscreen.svg
 │   │   ├── fullScreenGraphics.svg
@@ -87,7 +87,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   ├── lock.svg
 │   │   └── sidebarwidget.svg
 │   │
-│   ├── common/
+│   ├���─ common/
 │   │   ├── contexts/
 │   │   │   ├── appConfigurationExtensionContext.ts
 │   │   │   ├── customFieldExtensionContext.ts
