@@ -1,7 +1,7 @@
 ---
 title: "About Your Subscription"
 description: "Learn what the Subscription page shows, how subscription limits and billing periods work, and who can manage your organization's subscription."
-url: /administration/about-your-subscription
+url: /billing-and-subscriptions/about-your-subscription
 uid: bltfa373510f45c5f18
 ---
 
@@ -88,4 +88,4 @@ To clear an **Overdue** status, update your payment method in the billing portal
 
 **Note:** Contentstack does not display a prompt inside the product when a payment fails. Watch for the email from the payment provider, and check the **Subscription** page if you suspect a charge has not gone through.
 
-**Additional Resource:** To move to a higher subscription option or buy add-ons, refer to the [Change Your Subscription or Add-Ons](/docs/administration/change-your-subscription-or-add-ons) documentation.
+**Additional Resource:** To move to a higher subscription option or buy add-ons, refer to the [Change Your Subscription or Add-Ons](/docs/billing-and-subscriptions/change-your-subscription-or-add-ons) documentation.

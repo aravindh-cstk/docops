@@ -1,7 +1,7 @@
 ---
 title: "Change Your Subscription or Add-Ons"
 description: "Move to a higher Contentstack subscription option, or buy add-ons to raise an individual limit, and review the prorated charge before you confirm."
-url: /administration/change-your-subscription-or-add-ons
+url: /billing-and-subscriptions/change-your-subscription-or-add-ons
 uid: bltc1dbe1bae9d38687
 ---
 
@@ -17,7 +17,7 @@ Which one you need depends on the resource. Metered resources such as API reques
 
 -   **Change your subscription** when you need more of several things at once, or when you need a feature your current subscription does not include, such as custom roles or custom workflows.
 -   **Buy an add-on** when you need more of one thing and the rest of your subscription suits you. Adding two users costs less than moving to a higher subscription option for the sake of two users.
--   **Allow extra usage** when the resource is metered and your need is occasional rather than permanent. Refer to the [Track and Extend Your Subscription Usage](/docs/administration/track-and-extend-your-subscription-usage) documentation.
+-   **Allow extra usage** when the resource is metered and your need is occasional rather than permanent. Refer to the [Track and Extend Your Subscription Usage](/docs/billing-and-subscriptions/track-and-extend-your-subscription-usage) documentation.
 
 To compare subscription options and see current pricing, go to the [pricing page](https://www.contentstack.com/pricing).
 
@@ -89,7 +89,7 @@ Reduce the resources listed, then start again. If you are not sure what to remov
 -   **Extra usage** settings stay active and are billed on what you actually use.
 -   **Add-ons** stay on your subscription until the downgrade takes effect at your next billing date, and are then removed automatically.
 
-**Note:** The downgrade dialog box also offers **Cancel & Delete Subscription**. That is a different action: it closes the account rather than moving it to a smaller subscription. Refer to the [Cancel Your Subscription](/docs/administration/cancel-your-subscription) documentation.
+**Note:** The downgrade dialog box also offers **Cancel & Delete Subscription**. That is a different action: it closes the account rather than moving it to a smaller subscription. Refer to the [Cancel Your Subscription](/docs/billing-and-subscriptions/cancel-your-subscription) documentation.
 
 ## Buy or Change Add-Ons
 
@@ -119,4 +119,4 @@ Subscription changes and add-ons both take effect immediately and are prorated. 
 
 Changing your subscription or your add-ons does not affect your existing content, users, or API keys. Your stacks, entries, assets, and tokens are unchanged. Only your limits and available features change.
 
-**Additional Resource:** To monitor what you are consuming against your new limits, refer to the [Track and Extend Your Subscription Usage](/docs/administration/track-and-extend-your-subscription-usage) documentation.
+**Additional Resource:** To monitor what you are consuming against your new limits, refer to the [Track and Extend Your Subscription Usage](/docs/billing-and-subscriptions/track-and-extend-your-subscription-usage) documentation.

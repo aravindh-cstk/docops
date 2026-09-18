@@ -1,7 +1,7 @@
 ---
 title: "Cancel Your Subscription"
 description: "Cancel your Contentstack subscription, understand what happens to your organization and content, and export your data first."
-url: /administration/cancel-your-subscription
+url: /billing-and-subscriptions/cancel-your-subscription
 uid: bltfe04dce37098362a
 ---
 
@@ -26,7 +26,7 @@ Read this article in full before you cancel. Cancellation deletes content on a f
 **Warning:** Export anything you want to keep before the end of your current billing period. Once that period ends, Contentstack deactivates your organization and you cannot sign in to retrieve content.
 
 1.  Export your entries, assets, and content types. Refer to the [Contentstack CLI](/docs/headless-cms/install-the-cli) documentation for exporting a stack.
-2.  Download any invoices your finance team needs, from the billing portal. Refer to the [Manage Your Billing Details](/docs/administration/manage-your-billing-details) documentation.
+2.  Download any invoices your finance team needs, from the billing portal. Refer to the [Manage Your Billing Details](/docs/billing-and-subscriptions/manage-your-billing-details) documentation.
 3.  Record any API keys, delivery tokens, or management tokens your applications depend on, so you know what stops working.
 
 ## Cancel Your Subscription
@@ -41,7 +41,7 @@ To cancel, log in to your [Contentstack account](https://www.contentstack.com/lo
 4.  Select the reason you are cancelling, and then click **Continue**. To stop here, click **Keep My Plan**.
 5.  Read **What happens next**, type DELETE in the confirmation field, and then click **Cancel & Delete Account**.
 
-**Tip:** If your aim is a smaller bill rather than leaving, downgrading keeps your organization, your content, and your access. Refer to the [Change Your Subscription or Add-Ons](/docs/administration/change-your-subscription-or-add-ons) documentation.
+**Tip:** If your aim is a smaller bill rather than leaving, downgrading keeps your organization, your content, and your access. Refer to the [Change Your Subscription or Add-Ons](/docs/billing-and-subscriptions/change-your-subscription-or-add-ons) documentation.
 
 ## What Happens After You Cancel
 
@@ -63,6 +63,6 @@ Restoring requires taking out a subscription again. It is not a way to read or e
 
 ## Alternatives to Cancelling
 
--   To pay less while keeping your organization and its content, move to a lower subscription option. Your usage has to fit within the limits of the option you choose. Refer to the [Change Your Subscription or Add-Ons](/docs/administration/change-your-subscription-or-add-ons) documentation.
--   To reduce cost without changing your subscription, remove add-ons you no longer need. Refer to the [Change Your Subscription or Add-Ons](/docs/administration/change-your-subscription-or-add-ons) documentation.
--   To stop paying for usage above your allowance, turn off extra usage. Refer to the [Track and Extend Your Subscription Usage](/docs/administration/track-and-extend-your-subscription-usage) documentation.
+-   To pay less while keeping your organization and its content, move to a lower subscription option. Your usage has to fit within the limits of the option you choose. Refer to the [Change Your Subscription or Add-Ons](/docs/billing-and-subscriptions/change-your-subscription-or-add-ons) documentation.
+-   To reduce cost without changing your subscription, remove add-ons you no longer need. Refer to the [Change Your Subscription or Add-Ons](/docs/billing-and-subscriptions/change-your-subscription-or-add-ons) documentation.
+-   To stop paying for usage above your allowance, turn off extra usage. Refer to the [Track and Extend Your Subscription Usage](/docs/billing-and-subscriptions/track-and-extend-your-subscription-usage) documentation.
