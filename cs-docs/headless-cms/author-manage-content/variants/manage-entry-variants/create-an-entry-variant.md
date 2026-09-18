@@ -9,7 +9,7 @@ uid: blt2384ff607178bade
 
 ## Create an Entry Variant
 
-**Note:** The Entry Variants feature is currently available as part of an Early Access Program and may not be available to all users. For more information, you can reach out to our [support](mailto:support@contentstack.com) team.
+**Note:** The Entry Variants feature is enabled per organization and may not be available on all plans. To have it enabled for your organization, contact the [support](mailto:support@contentstack.com) team.
 
 Contentstack allows you to create entry variants to deliver personalized content to specific user groups. This feature helps you target different audience segments with customized content.
 
