@@ -9,7 +9,7 @@ uid: blt48f12a694cad09af
 
 ## Publish an Entry Variant
 
-**Note:** The Entry Variants feature is currently available as part of an Early Access Program and may not be available to all users. For more information, you can reach out to our [support](mailto:support@contentstack.com) team.
+**Note:** The Entry Variants feature is enabled per organization and may not be available on all plans. To have it enabled for your organization, contact the [support](mailto:support@contentstack.com) team.
 
 Publishing entry variants in Contentstack allows you to deliver personalized content tailored to specific user segments.
 

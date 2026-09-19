@@ -923,7 +923,7 @@ data = [{name: "Alice", age: 25}, {name: "Bob", age: 30}]
 
 This results in the names being joined with commas, except after the last name.
 
-Here’s a screenshot that shows the input:
+Here���s a screenshot that shows the input:
 
 ![Each_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt71480c524a274289/66cc1ff95a70e52ce826520a/Each_Input.png)
 
