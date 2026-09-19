@@ -95,7 +95,7 @@ Regions define where your data is hosted. Contentstack currently supports six re
 
 ## Workflows
 
-Workflows allow you to define the steps content must go through (e.g., Draft → Review → Approved) before publication. Supports conditional approvals and user assignments. Learn more about [Workflows](/docs/headless-cms/about-workflows).
+Workflows allow you to define the steps content must go through (e.g., Draft ��� Review → Approved) before publication. Supports conditional approvals and user assignments. Learn more about [Workflows](/docs/headless-cms/about-workflows).
 
 ### Webhooks
 
