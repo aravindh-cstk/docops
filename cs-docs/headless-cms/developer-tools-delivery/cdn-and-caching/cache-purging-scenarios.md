@@ -49,7 +49,7 @@ The CDN stores cached copies of all these articles, the author bios, the home pa
 
 ## Edit and Publish the Home Page
 
-Suppose if the content manager edits the company description in the “Home Page” content type. Once done, the author publishes the “English (United States)” version of the content to all the three available locales and on the “Production” environment.
+Suppose if the content manager edits the company description in the “Home Page” content type. Once done, the author publishes the “English (United States)” version of the content to all the three available locales and on the ���Production” environment.
 
 The following cached data will be purged:
 
