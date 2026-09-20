@@ -53,7 +53,7 @@ import Contentstack from "@contentstack/delivery-sdk";
 import ContentstackLivePreview from "@contentstack/live-preview-utils";
 import { studioSdk } from "@contentstack/studio-react";
 
-export const stack = Contentstack.stack({ /* … */ });
+export const stack = Contentstack.stack({ /* �� */ });
 
 ContentstackLivePreview.init({ /* … */ });
 
