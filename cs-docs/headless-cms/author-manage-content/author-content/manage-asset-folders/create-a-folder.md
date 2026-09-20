@@ -13,7 +13,7 @@ Organizing your assets into folders ensures they are structured and easy to mana
 
 To create an asset folder, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 
-1.  Go to your [stack](/docs/headless-cms/about-stack), and click the “Assets” icon in the left navigation panel.
+1.  Go to your [stack](/docs/headless-cms/about-stack), and click the ���Assets” icon in the left navigation panel.
 2.  Click the **Create new asset folder** icon at the top-right corner of the page. ![Assets_CreateFolder_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt237bc4c5cf977eb3/674551db48603b0423499bd5/Assets_CreateFolder_Icon.png)
 3.  In the **Create Asset Folder** modal, enter a name for your folder (e.g., Project) and click **Create**. ![Assets_CreateFolder_Modal.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4303e4ab28be8625/674551dbc63c3828632edda6/Assets_CreateFolder_Modal.png)
 
