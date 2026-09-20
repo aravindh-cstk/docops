@@ -803,7 +803,7 @@ Facilitator delivers on screen. Attendees don't touch keyboards yet.
 
       Component file (code) ─┐
                               ├─→ register-component skill ─→ Palette entry
-      Skill prompt ──────────┘
+      Skill prompt ───────���──┘
 
       Palette entry ─→ build-section skill ─→ Section in Studio
 
