@@ -57,7 +57,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   └── utils/
 │       └── helper.ts
 │
-├── public/
+├��─ public/
 │   ├── default-app-icon.svg
 │   ├── favicon.ico
 │   ├── logo192.png
@@ -87,7 +87,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   ├── lock.svg
 │   │   └── sidebarwidget.svg
 │   │
-│   ├���─ common/
+│   ├── common/
 │   │   ├── contexts/
 │   │   │   ├── appConfigurationExtensionContext.ts
 │   │   │   ├── customFieldExtensionContext.ts
