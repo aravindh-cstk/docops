@@ -19,7 +19,7 @@ If an unlocalized entry that is part of the release has been localized later, yo
 
 To update the release items to their latest versions, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow these steps:
 
-1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Releases” icon. Or, press “alt + R” for Windows and “option + R” for Mac.
+1.  Go to your [stack](/docs/headless-cms/about-stack) and click the ���Releases” icon. Or, press “alt + R” for Windows and “option + R” for Mac.
 2.  Hover over the release you want to unlock in the left panel.
 3.  Click the “Update All Release Items” icon from the popup. Alternatively, click the horizontal ellipsis in the top right corner and click **Update All Release Items**.
 4.  In the **Update All Release Items** modal, click **Update** to update the assets and entries of the release to the latest.![Update-Items-of-a-Release-to-Lat.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt728755e6680113ab/67ee7c1f4cd6a30def7a4b3a/Update-Items-of-a-Release-to-Lat.gif)
