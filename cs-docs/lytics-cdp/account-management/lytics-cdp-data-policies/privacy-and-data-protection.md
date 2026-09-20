@@ -43,7 +43,7 @@ Lytics customers are responsible for obtaining consent for collecting and transf
 For sites not using Google Tag Manager, customer consent on the web can be managed in several ways. Consent triggers can be listened to by adding a snippet of custom JavaScript to your site. Another alternative is to use a cookie-consent solution, many of which exist. GitHub has documented a [free solution](https://github.com/osano/cookieconsent), including demos. The Lytics JS Tag can be configured to consume triggers from any of these solutions to manage consent for your customers.
 
 -   **Recording Proof of Consent:** Schema fields may be established for the purpose of storing customer consent.
--   **Privacy Policy Notice:** When you use a Lytics modal to collect user information, you should include a link to your organization’s privacy policy regarding the treatment of the PII collected. A link can be added to any modal created using the Experience Editor.
+-   **Privacy Policy Notice:** When you use a Lytics modal to collect user information, you should include a link to your organization��s privacy policy regarding the treatment of the PII collected. A link can be added to any modal created using the Experience Editor.
 -   **Age Gating:** If you have collected accurate age data, you can build audiences that target or exclude certain ages.
 
 ## Responding to Consumer Requests
