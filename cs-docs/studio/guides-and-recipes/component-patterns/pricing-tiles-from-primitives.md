@@ -57,7 +57,7 @@ Section (spacing: spacious, background: none, contentAlign: center)
     │   ├── Heading (text: "Simple, transparent pricing", level: h2)
     │   └── Description (text: "Pick the tier that fits your team.", emphasis: muted)
     └── Grid (columns: 3, spacing: normal)                                ← Repeater over `pricing_tiers`
-        └── Card (variant: <default | outline>, padding: loose)           ← per-tier iteration
+        └��─ Card (variant: <default | outline>, padding: loose)           ← per-tier iteration
             ├── header:
             │   └── Stack (spacing: tight, alignment: left)
             │       ├── Description (text: <tier_tagline>, emphasis: muted | default)
