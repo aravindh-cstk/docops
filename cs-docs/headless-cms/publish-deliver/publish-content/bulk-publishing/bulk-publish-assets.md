@@ -13,7 +13,7 @@ Publishing multiple assets simultaneously streamlines your workflow, saving time
 
 To publish multiple assets at once, log in to your [Contentstack account,](https://www.contentstack.com/login/) and perform the following steps:
 
-1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Assets” icon. You can also use the shortcut key “A” (for both Windows and Mac OS users).
+1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Assets�� icon. You can also use the shortcut key “A” (for both Windows and Mac OS users).
 2.  Use the checkboxes to select the assets you want to publish.
 3.  After selecting the assets, click the **Publish** option in the floating panel that appears. ![Publish_Asset_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf3bc899d7a85c4ed/676550b436f5cc2c8cdaf492/Publish_Asset_Icon.png)
 4.  In the **Publish** **Assets** modal:
