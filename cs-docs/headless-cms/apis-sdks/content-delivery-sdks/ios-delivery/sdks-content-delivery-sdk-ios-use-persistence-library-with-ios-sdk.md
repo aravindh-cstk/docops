@@ -15,7 +15,7 @@ Contentstack’s Realm Persistence Library for iOS SDK helps you save the app da
 
 This Persistent Library contains methods that are required to map data fields of your content types and Realm for data storage.
 
-Let’s look at how to use this library for your Contentstack-powered iOS apps.
+Let��s look at how to use this library for your Contentstack-powered iOS apps.
 
 **Note:** If you have just started with iOS SDK and Contenstack, we recommend reading more about [Realm](https://www.mongodb.com/docs/atlas/device-sdks/deprecation/) and [Contentstack docs](#) before proceeding with the following steps.
 
