@@ -130,7 +130,7 @@ Activate the automation by clicking the **Activate Automation** toggle button.
 Once the automation is activated, you can check all the active automations in the On-Demand Automation App. To do so, follow the steps below:
 
 1.  Navigate to the On-Demand Automation App in the entries page.
-2.  You will see a list of all the active automations. Click the “Execute icon” to execute the automation.  
+2.  You will see a list of all the active automations. Click the “Execute icon��� to execute the automation.  
     ![Automation_Visible_in_Asset_Sidebar.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd8622fb88e1e1eb7/6694cc69d0c0ef2480c54a30/Automation_Visible_in_Asset_Sidebar.png)
 3.  Once the automation is executed successfully, you can check the receiver’s email address for the email sent via Agent OS.  
     ![Email.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt35789911df3ce82c/664b0086dda14b614edffa19/Email.png)
