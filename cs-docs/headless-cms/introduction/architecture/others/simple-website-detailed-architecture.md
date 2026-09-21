@@ -41,7 +41,7 @@ Setting up a headless architecture enables you to adopt a microservices approach
     -   It is connected with Contentstack (as a custom field extension) so that it can be added easily to the entries for form filling.
     -   When Marketo Form is connected with Contentstack as a custom field, you can easily select a form (from different available form options) and add it to your entries. When the page loads on the frontend, the form also loads through and embedded code.
 -   You can use Google Analytics to get analytics of your website usage.
-    -   While you can fetch data directly from Google Analytics, it can also be connected with Contentstack as an extension (as a custom widget or dashboard widget). Using it as an extension allows you to show user behavior of each entry within the entry page, or show overall analytics on Contentstack’s stack dashboard.
+    -   While you can fetch data directly from Google Analytics, it can also be connected with Contentstack as an extension (as a custom widget or dashboard widget). Using it as an extension allows you to show user behavior of each entry within the entry page, or show overall analytics on Contentstack��s stack dashboard.
 -   For smooth code deployment you can use GitHub as a third-party microservice.  
     -   You can set up a developer workflow to ensure code changes in Contentstack are reflected correctly in GitHub through CI/CD (Continuous Integration/Continuous Deployment). This allows for smooth code deployments on GitHub when code changes are made in Contentstack.
 
