@@ -28,6 +28,8 @@ To manage your billing details, log in to your [Contentstack account](https://ww
 
 The billing portal opens in a new tab. You are signed in already, so you do not enter separate credentials.
 
+**Note:** The **Billing Information** section appears on paid subscription options only. On Free there is nothing to bill, so the section and **Manage Billing** are not shown.
+
 ## What You Can Do in the Billing Portal
 
 -   Add a payment method, and set which one Contentstack charges by default.

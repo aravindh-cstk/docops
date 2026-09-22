@@ -36,9 +36,9 @@ Cancellation runs through three dialog boxes. You can stop at any of them, and n
 To cancel, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the steps below:
 
 1.  Click your avatar in the top-right corner, and then click **Manage Subscription**. Contentstack opens the **Subscription** page in your account settings.
-2.  On the subscription card, click the vertical ellipsis (⋮), and then click **Cancel & Delete Account**.
-3.  In **Before You Go**, Contentstack shows the lower subscription options you could move to instead. To keep your organization on a smaller subscription, click **Downgrade Instead**. To continue cancelling, click **Cancel & Delete Account**.
-4.  Select the reason you are cancelling, and then click **Continue**. To stop here, click **Keep My Plan**.
+2.  On the subscription card, click the vertical ellipsis (⋮), and then click **Cancel & Delete Account**. The ellipsis appears on paid subscription options only.
+3.  In **Before You Go**, Contentstack shows the lower subscription options you could move to instead. To keep your organization on a smaller subscription, click **Downgrade Instead**. To continue canceling, click **Cancel & Delete Account**.
+4.  Select the reason you are canceling, and then click **Continue**. To stop here, click **Keep My Plan**.
 5.  Read **What happens next**, type DELETE in the confirmation field, and then click **Cancel & Delete Account**.
 
 **Tip:** If your aim is a smaller bill rather than leaving, downgrading keeps your organization, your content, and your access. Refer to the [Change Your Subscription or Add-Ons](/docs/billing-and-subscriptions/change-your-subscription-or-add-ons) documentation.
@@ -61,7 +61,7 @@ Resubscribing during the 90-day retention window restores full access to your or
 
 Restoring requires taking out a subscription again. It is not a way to read or export your content in the meantime, so still export anything you need before your billing period ends. If you cannot resubscribe, contact the [support](mailto:support@contentstack.com) team while the organization is still within the 90 days. Once the 90 days elapse, the organization and its content cannot be recovered by anyone.
 
-## Alternatives to Cancelling
+## Alternatives to Canceling
 
 -   To pay less while keeping your organization and its content, move to a lower subscription option. Your usage has to fit within the limits of the option you choose. Refer to the [Change Your Subscription or Add-Ons](/docs/billing-and-subscriptions/change-your-subscription-or-add-ons) documentation.
 -   To reduce cost without changing your subscription, remove add-ons you no longer need. Refer to the [Change Your Subscription or Add-Ons](/docs/billing-and-subscriptions/change-your-subscription-or-add-ons) documentation.

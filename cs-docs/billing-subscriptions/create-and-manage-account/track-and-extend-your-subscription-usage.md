@@ -42,6 +42,8 @@ Each resource shows your consumption against your allowance, a progress bar, and
 
 Extra usage is turned off by default. When it is off and you reach an allowance, requests against that resource stop until the next billing period.
 
+**Note:** Extra usage is available on paid subscription options. On Free, the **Enable Extra Usage** toggle and the **Set Extra Usage** option do not appear, and reaching an allowance stops that resource until the next billing period. To allow extra usage, move to a paid subscription option.
+
 1.  In the **Usage Overview** section, turn on the **Enable Extra Usage** toggle.
 2.  Read the confirmation, and then click **Enable**.
 

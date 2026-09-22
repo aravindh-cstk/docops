@@ -68,7 +68,7 @@ Contentstack applies the new subscription immediately and returns you to your su
 Downgrading is available on paid subscription options. It is scheduled rather than immediate: you keep your current subscription and its limits until the end of the billing period you have already paid for, and the lower option starts at your next billing date. Nothing is charged for the change.
 
 1.  Click your avatar in the top-right corner, and then click **Manage Subscription**.
-2.  On the subscription card, click the vertical ellipsis (⋮), and then click **Downgrade**.
+2.  On the subscription card, click the vertical ellipsis (⋮), and then click **Downgrade**. The ellipsis appears on paid subscription options only, so it is not available on Free.
 3.  In **Downgrade Plan**, use the selector at the top of the dialog box to choose the subscription option you want to move to.
 4.  Review the comparison table. It lists each resource with the limit on your current subscription, the limit on the option you have chosen, and your own usage.
 5.  Click **Continue to Downgrade**, and then select the option you are moving to.

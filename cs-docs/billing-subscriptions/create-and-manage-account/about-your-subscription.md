@@ -33,7 +33,7 @@ The page has up to four sections, depending on your subscription.
 -   **Usage Overview**: Every resource your subscription includes, with how much you have used and how much remains. Metered resources also show the controls for allowing usage beyond your allowance.
 -   **Billing Information**: The details that appear on your invoices. **Manage Billing** opens the billing portal.
 
-**Note:** On Free, the subscription card offers **Upgrade** only. Downgrading, managing billing, and cancelling appear once you move to a paid subscription option, so a Free organization cannot be closed from the Subscription page. To close one, contact the [support](mailto:support@contentstack.com) team.
+**Note:** On Free, the subscription card offers **Upgrade** only. Downgrading, managing billing, and canceling appear once you move to a paid subscription option, so a Free organization cannot be closed from the Subscription page. To close one, contact the [support](mailto:support@contentstack.com) team.
 
 ## Subscription Options
 
@@ -78,7 +78,7 @@ When you move to a higher subscription option partway through a period, Contents
 | --- | --- |
 | **Active** | Your subscription is current, and it renews on the next billing date. |
 | **Overdue** | A payment has failed. Your subscription remains in place while the payment provider retries the charge. Update your payment method to clear the status. |
-| **Cancelled** | You have cancelled. Your subscription runs to the end of the current billing period, and the organization is deactivated after that. |
+| **Canceled** | You have canceled. Your subscription runs to the end of the current billing period, and the organization is deactivated after that. |
 
 ## If a Payment Fails
 
