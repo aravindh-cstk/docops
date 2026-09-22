@@ -83,7 +83,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   ├── GearSix.svg
 │   │   ├── help_icon.svg
 │   │   ├── Icon.svg
-│   │   ├── JsonView.svg
+│   │   ���── JsonView.svg
 │   │   ├── lock.svg
 │   │   └── sidebarwidget.svg
 │   │
@@ -542,7 +542,7 @@ To use your application, you need to upload it to Contentstack. To do so, follow
 
 22.  [Venus Component Library](https://venus-storybook.contentstack.com/) is Contentstack’s official React-based UI library that offers a collection of pre-built, reusable components designed to ensure consistency and accessibility across **Marketplace** apps and **Developer** **Hub** tools.
 
-23.  The library includes ready-to-use components such as buttons, modals, inputs, dropdowns, tables, and form controls, all built in alignment with Contentstack���s design system and accessibility guidelines.
+23.  The library includes ready-to-use components such as buttons, modals, inputs, dropdowns, tables, and form controls, all built in alignment with Contentstack’s design system and accessibility guidelines.
 
 24.  [Venus](/docs/headless-cms/venus-component-library) components can be seamlessly integrated into any React project, regardless of the build tool, including Vite, Webpack, or other modern bundlers.
 
