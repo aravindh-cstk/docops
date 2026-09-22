@@ -17,7 +17,7 @@ These languages are either country-specific languages, area-specific languages,
 
 ## Country-specific Languages
 
-Country-specific languages are languages that are used in a country. A country can have multiple languages, and a language can be used in multiple countries. Hence, we support various combinations of countries and languages. Examples of country-specific languages include “English - United States,” “English - United Kingdom, ” “French - Canada,” “Spanish - Spain,” and “Spanish - Peru.”
+Country-specific languages are languages that are used in a country. A country can have multiple languages, and a language can be used in multiple countries. Hence, we support various combinations of countries and languages. Examples of country-specific languages include “English - United States,” “English - United Kingdom, ” “French - Canada,” “Spanish - Spain,” and ���Spanish - Peru.”
 
 ## Area-Specific Languages
 
