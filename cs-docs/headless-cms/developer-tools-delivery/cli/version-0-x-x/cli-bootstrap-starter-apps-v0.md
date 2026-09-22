@@ -159,7 +159,7 @@ You can easily run this starter app on your local machine by following the steps
     npm start
     ```
 
-    That’s it!  
+    That���s it!  
     You can now view the website at **http://localhost:3000**.  
     Here's how your website's **Home** page will look after running on your localhost. ![Dashboard.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt09f74db8c2a8c8dc/638712a175befa109d301774/Dashboard.jpg)
 2.  ### **Deploy the Website**
