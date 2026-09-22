@@ -27,7 +27,7 @@ Here is the structure of a “News” Content Type that has a “title,” “de
 
 ## Examples
 
-1.  If you want to create a simple blog page on your site, you will define a “Blog” content type that has “title,” “date,” “body,” and “author” fields.
+1.  If you want to create a simple blog page on your site, you will define a “Blog” content type that has “title,” “date,” “body,” and “author�� fields.
 2.  If you want to create the homepage of your site, you will define a “Homepage” content type that has “header,” “footer,” “banner-image,” “title,” and “body” fields.
 
 ## Customizing a Content Type
