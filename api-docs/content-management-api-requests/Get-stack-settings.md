@@ -16,6 +16,8 @@ last_updated: 2023-03-11
 
 The Get stack settings call retrieves the configuration settings of an existing stack.
 
+**Note**: The disable_fallback_publish field appears in the response only after it has been saved for the stack.
+
 ## Headers
 
 - **api_key** (required)
@@ -28,6 +30,7 @@ The Get stack settings call retrieves the configuration settings of an existing 
 ```json
 {
     "stack_settings": {
+        "disable_fallback_publish": true,
         "rte": {
             "cs_only_breakline": true
         },
