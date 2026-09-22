@@ -84,7 +84,7 @@ Let's check the process of setting up SCIM in Contentstack.
             -   For Azure EU region, **use https://azure-eu-app.contentstack.com**
             -   For GCP North America region, use **https://gcp-na-app.contentstack.com**
             -   For GCP Europe region, use **https://gcp-eu-app.contentstack.com**
-        -   **Organization UID**: Enter the UID of your Contentstack organization. To get the UID, log in to your Contentstack account, navigate to **Administration** through the App Switcher, and open the **Org Info** page, where you’ll see the **Organization UID** as shown below:![SCIM_Organization_UID.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am64f8e4a6fc239951/e10067226a142e07a4bcc2ff/SCIM_Organization_UID.png?locale=en-us)
+        -   **Organization UID**: Enter the UID of your Contentstack organization. To get the UID, log in to your Contentstack account, navigate to **Administration** through the App Switcher, and open the **Org Info** page, where you��ll see the **Organization UID** as shown below:![SCIM_Organization_UID.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am64f8e4a6fc239951/e10067226a142e07a4bcc2ff/SCIM_Organization_UID.png?locale=en-us)
 
         Finally, your **Application details** section will look similar to the image below:![Application_details.jpg](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt8084cf1a67f7fac2/63962d4abd8730261b83e8e9/Application_details.jpg)
     7.  Click on **Save** on the top-right corner.
