@@ -21,15 +21,15 @@ Use a Single Line Textbox instead when the value is unique to each asset, such a
 
 ## Choose a Display Type
 
-Select fields come in three display types. Choose the one that matches how you want users to enter the value.
+**Select** is the field type. Once you choose it, pick a **Display Type**, which controls how the choices are presented and how many a user can pick.
 
--   **Select**: A dropdown. Supports both single and multiple selection.
--   **Radio**: Radio buttons, always single selection.
--   **Checkbox**: Checkboxes, always multiple selection.
+-   **Dropdown**: A dropdown list. Supports both single and multiple selection.
+-   **Radio Button**: The choices are shown as radio buttons, and one can be selected.
+-   **Checkboxes**: The choices are shown as checkboxes, and several can be selected.
 
-The display type controls presentation and selection behavior together. A Radio field cannot accept more than one value, and a Checkbox field always accepts more than one.
+The display type controls presentation and selection behavior together. A field set to **Radio Button** cannot accept more than one value, and one set to **Checkboxes** always accepts more than one.
 
-**Note:** You cannot change the display type after you save the field. To switch from Radio to Checkbox, create a new field.
+**Note:** You cannot change the display type after you save the field. To switch from **Radio Button** to **Checkboxes**, create a new field.
 
 ## Configure the Field
 
@@ -38,15 +38,15 @@ To add a Select field, sign in to your [Contentstack account](https://www.conten
 1.  Navigate to **Assets** through the App Switcher and select the **Fields** tab.
 2.  Click **\+ New Field**.
 3.  In the **General** section, enter a **Name**, confirm the **UID**, and add an optional **Description**.
-4.  In the **Fields** section, open the **Field Type** dropdown and select **Select**, **Radio**, or **Checkbox**.
-5.  In the **Selection Settings** panel on the right, configure the options described below.
+4.  In the **Fields** section, open the **Field Type** dropdown and choose **Select**.
+5.  In the **Selection Settings** panel on the right, choose a **Display Type** and configure the options described below.
 6.  Click **Save Field**.
 
 ### Selection Mode
 
-Available for the **Select** display type only. Choose **Single** to let users pick one value, or **Multiple** to let them pick several.
+Available for the **Dropdown** display type only. Choose **Single** to let users pick one value, or **Multiple** to let them pick several.
 
-Radio fields are always single selection and Checkbox fields are always multiple selection, so the setting does not appear for those display types.
+**Radio Button** is always single selection and **Checkboxes** is always multiple selection, so the setting does not appear for those display types.
 
 ### Data Type
 
@@ -59,11 +59,11 @@ Choose **Text** or **Number** to control what a choice value may contain. A Numb
 Choose how each entry in your list is defined.
 
 -   **Value Only** (default): Each choice is a single value. Users see that value, assets store it, and the API returns it.
--   **Key-Value**: Each choice has a key and a value. The key is the label users see in the asset details form. The value is what the asset stores, what the API returns, and what appears in the filter panel.
+-   **Value-Key Pair**: Each choice has a key and a value. The key is the label users see in the asset details form. The value is what the asset stores, what the API returns, and what appears in the filter panel.
 
-Use Key-Value when the stored value needs to stay machine-friendly while users see something readable. A choice with the key High Resolution and the value high\_res shows **High Resolution** in the form, stores high\_res on the asset, and returns high\_res from the API.
+Use Value-Key Pair when the stored value needs to stay machine-friendly while users see something readable. A choice with the key High Resolution and the value high\_res shows **High Resolution** in the form, stores high\_res on the asset, and returns high\_res from the API.
 
-**Warning:** Switching between Value Only and Key-Value clears every choice you have already added. Set the format before you build the list.
+**Warning:** Switching between Value Only and Value-Key Pair clears every choice you have already added. Set the format before you build the list.
 
 **Note:** You cannot change the choice format after you save the field.
 
@@ -71,9 +71,9 @@ Use Key-Value when the stored value needs to stay machine-friendly while users s
 
 You can add choices one at a time or in bulk.
 
-To add them one at a time, click **Add Choices** and enter the value. In Key-Value format, enter the key and the value separately. Each key and each value must be unique within the field.
+To add them one at a time, open **Add Choices** and select **Add Choice**, then enter the value. In the Value-Key Pair format, enter the key and the value separately. Each key and each value must be unique within the field.
 
-To add several at once, open the **Add Choices** dropdown and select the bulk option. Paste your list into the text area, choose the delimiter that separates the entries, and click **Add Choices**.
+To add several at once, open **Add Choices** and select **Bulk Add Choices**. Paste your list into the text area, choose the delimiter that separates the entries, and click **Add Choices**.
 
 Nine delimiters are available: new line (the default), comma, pipe, semicolon, double colon, hyphen, slash, backslash, and tilde. Duplicate entries are skipped, and the count of skipped entries appears below the text area.
 
@@ -101,9 +101,9 @@ This means you can correct a list without a migration, and without silently chan
 
 ## Enter Values on an Asset
 
-On the asset details panel, a Select field renders as a dropdown, radio buttons, or checkboxes, according to its display type.
+On the asset details panel, a Select field renders as a dropdown list, radio buttons, or checkboxes, according to its display type.
 
-Radio and Checkbox fields show the first five choices inline. When a field has more, a **View All** link opens the full list in a popover with **Apply**, **Cancel**, and **Reset** actions. Apply commits your selection, Cancel discards it, and Reset clears the field.
+The **Radio Button** and **Checkboxes** display types show the first five choices inline. When a field has more, a **View All** link opens the full list in a popover with **Apply**, **Cancel**, and **Reset** actions. Apply commits your selection, Cancel discards it, and Reset clears the field.
 
 In a multiple-selection dropdown, each chosen value appears as a chip. Click the close icon on a chip to clear that value.
 
@@ -114,12 +114,12 @@ Add a Select field to the filter panel through **Manage Filters**, the same way 
 Three operators are available:
 
 -   **Contains**: Matches assets holding any of the values you select. Selecting several values widens the result set rather than narrowing it.
--   **Is Empty**: Matches assets where the field holds no value.
--   **Is Not Empty**: Matches assets where the field holds any value.
+-   **Is empty**: Matches assets where the field holds no value.
+-   **Is not empty**: Matches assets where the field holds any value.
 
 Applied filters appear as pills above the listing. Removing the last value in a group removes the filter.
 
-The filter panel lists choice values, not keys. A field in Key-Value format therefore shows high\_res in the filter and **High Resolution** in the asset form, which is expected.
+The filter panel lists choice values, not keys. A field using Value-Key Pair therefore shows high\_res in the filter and **High Resolution** in the asset form, which is expected.
 
 **Note:** Choices that you remove from the field disappear from the filter panel the next time the page loads. Filters saved in a URL that reference a removed choice are ignored.
 
@@ -171,7 +171,7 @@ Four settings are fixed once you save the field for the first time. Confirm them
 
 **What happens to assets when I delete the field?** Deleting a field removes it from every asset type and asset it is associated with. The values are not recoverable, so confirm the field is unused first.
 
-**Why does my filter show a different label from the asset form?** The field uses Key-Value format. The form shows the key and the filter shows the value. Both refer to the same choice.
+**Why does my filter show a different label from the asset form?** The field uses the Value-Key Pair choice format. The form shows the key and the filter shows the value. Both refer to the same choice.
 
 **Can two choices share a value?** No. Each key and each value must be unique within the field.
 

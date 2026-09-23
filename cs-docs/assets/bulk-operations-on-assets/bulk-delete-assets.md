@@ -41,7 +41,7 @@ Clearing out duplicates is a common reason to delete in bulk, and selecting them
 1.  On the assets listing page, open the **More Actions** menu.
 2.  Select **Duplicate Management**.
 3.  Click a set to see every copy it holds.
-4.  Open the **More Actions** menu on the copy you want to keep and select **Keep This, Delete the Rest**. To choose the copies yourself instead, select them and click **Delete Duplicates**.
+4.  Open the **More Actions** menu on the copy you want to keep and select **Keep This, Delete the Rest**. To choose the copies yourself instead, select them and click **Delete N Duplicates**.
 
 Deletions made here follow the same path as any other bulk delete. The assets move to trash, the same selection limit applies, and you can restore them within the retention window.
 
