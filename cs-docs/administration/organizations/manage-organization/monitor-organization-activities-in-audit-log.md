@@ -33,7 +33,7 @@ To view the Audit Log, log in to your [Contentstack account](https://www.content
 
 1.  Select the Organization from the dropdown on the header and click the “Org Admin” icon in the left navigation panel.
 
-    Or, you can simply click the ���Org Admin” cog beside the Organization that you intend to open.
+    Or, you can simply click the “Org Admin” cog beside the Organization that you intend to open.
 
 2.  Click the **Audit Log** tab on the left panel.
 
@@ -58,7 +58,7 @@ By default, the Audit Log displays information in reverse chronological order i.
 
 In columns where applicable, simply click the “Filter” icon next to the column title and apply the necessary filters.
 
-The date filter enables quick access to audit log information from the last 30 days, last 7 days, the previous day, or the current day. Additionally, the ”Custom Range” option permits setting a specific date range within the last 30 days.
+The date filter enables quick access to audit log information from the last 30 days, last 7 days, the previous day, or the current day. Additionally, the ���Custom Range” option permits setting a specific date range within the last 30 days.
 
 **Note:** You can retrieve audit log information only for 30 days prior to the current day (for an organization).
 
