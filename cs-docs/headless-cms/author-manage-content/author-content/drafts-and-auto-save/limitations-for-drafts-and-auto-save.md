@@ -9,7 +9,7 @@ uid: blt67210ac0c43249c5
 
 ## Limitations for Drafts and Auto Save
 
-**Note:** Drafts and Auto Save is currently part of an Early Access Program and may not be available to all users. Contact the Contentstack [support](mailto:support@contentstack.com) team for more information.
+**Note:** Drafts and Auto Save is being rolled out for General Availability (GA) in phases, with broader availability planned as support expands to the Visual Editor.
 
 ## Connectivity Limitations
 

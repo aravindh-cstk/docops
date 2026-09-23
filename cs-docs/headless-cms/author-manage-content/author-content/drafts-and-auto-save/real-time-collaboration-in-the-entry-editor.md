@@ -9,7 +9,7 @@ uid: bltfefef86fb8b434ab
 
 ## Real-Time Collaboration in the Entry Editor
 
-**Note:** Drafts and Auto Save is currently part of an Early Access Program and may not be available to all users. Contact the Contentstack [support](mailto:support@contentstack.com) team for more information.
+**Note:** Drafts and Auto Save is being rolled out for General Availability (GA) in phases, with broader availability planned as support expands to the Visual Editor.
 
 Real-Time Collaboration allows multiple users to work on the same entry at the same time without overwriting each other’s changes.
 
