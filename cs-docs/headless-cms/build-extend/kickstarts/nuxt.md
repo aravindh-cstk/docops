@@ -46,7 +46,7 @@ After you clone the repo and install dependencies, your project should resemble 
 
 ```
 #kickstart-nuxt
-- 📁 composables/
+- ��� composables/
   - 📄 useGetPage.ts
 - 📁 plugins/
   - 📄 contentstack.ts
