@@ -9,6 +9,8 @@ uid: blted2fc43b862b8187
 
 ## Create Your Contentstack Account
 
+**Note:** These instructions are for anyone who created their Contentstack account through the [sign-up page](https://www.contentstack.com/sign-up), on Free, Build, or Growth plans. The **Manage Subscription** section is only visible to the organization owner. If your organization is on an Enterprise tier, reach out to our [support](mailto:support@contentstack.com) team to make any changes.
+
 You can create a Contentstack account and start building on your own. Contentstack creates your organization and starts you on Free, which has no expiration and does not require a credit card.
 
 Account creation takes about two minutes. You need access to the email address you register with, because Contentstack sends a verification code to it.

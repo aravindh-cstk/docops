@@ -9,6 +9,8 @@ uid: bltfa373510f45c5f18
 
 ## About Your Subscription
 
+**Note:** These instructions are for anyone who created their Contentstack account through the [sign-up page](https://www.contentstack.com/sign-up), on Free, Build, or Growth plans. The **Manage Subscription** section is only visible to the organization owner. If your organization is on an Enterprise tier, reach out to our [support](mailto:support@contentstack.com) team to make any changes.
+
 Your subscription determines which Contentstack features your organization can use and how much of each resource it gets. The Subscription page is where you see your current subscription, check your usage, change subscription options, buy add-ons, and manage billing.
 
 Your subscription belongs to the organization, not to an individual user. Everyone in the organization works within the same subscription and shares the same allowances.

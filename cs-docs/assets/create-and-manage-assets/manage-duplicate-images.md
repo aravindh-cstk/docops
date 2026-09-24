@@ -9,9 +9,11 @@ uid: blt90b2c15e021dbd4b
 
 ## Manage Duplicate Images
 
-Duplicate Management finds images that are byte-for-byte identical and groups them into sets, so you can review the copies and decide which to keep. Detection runs automatically as assets are uploaded, replaced, deleted, or restored.
+Duplicate Management finds images that are byte-for-byte identical and groups them into sets, so you can review the copies and decide which to keep. Detection runs on its own in the background, triggered whenever an asset is uploaded, replaced, deleted, or restored.
 
 The same logo or product shot tends to arrive several times, uploaded by different people across different campaigns. Every copy consumes storage, and a search returns all of them without telling you they are the same file. Duplicate Management surfaces those sets in one place and lets you clean them up without hunting through the asset listing.
+
+**Note:** Duplicates are not flagged while you upload. An upload that matches an existing image completes as usual, and the two appear as separate assets in the listing. They are grouped for you in the Duplicate Management view, which is where you review and clean them up.
 
 **Note:** Duplicate Management is not enabled for every organization yet. If the option does not appear in your workspace, contact [Contentstack Support](https://www.contentstack.com/support/).
 
@@ -112,6 +114,8 @@ Disabling stops duplicate scanning in that workspace and hides Duplicate Managem
 ## Common Questions
 
 **Does uploading a duplicate get blocked?** No. Detection runs in the background after the upload completes, and the upload experience is unchanged.
+
+**I uploaded the same image twice and nothing happened. Why?** That is expected. Duplicates are not flagged during upload or marked in the asset listing. Open **More Actions** on the listing page and select **Duplicate Management** to see the two copies grouped into a set.
 
 **Which copy is the original?** None of them. All copies in a set are equal, and you choose which one to keep.
 

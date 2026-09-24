@@ -9,6 +9,8 @@ uid: blte1bddca54b0302db
 
 ## Track and Extend Your Subscription Usage
 
+**Note:** These instructions are for anyone who created their Contentstack account through the [sign-up page](https://www.contentstack.com/sign-up), on Free, Build, or Growth plans. The **Manage Subscription** section is only visible to the organization owner. If your organization is on an Enterprise tier, reach out to our [support](mailto:support@contentstack.com) team to make any changes.
+
 The **Usage Overview** section of your subscription lists every resource your subscription includes, with how much you have used and how much remains. Three of them are measured over each billing period and reset when it ends: AI credits, API requests, and bandwidth. This article covers those three, because they are the ones you can extend by paying for what you use. For the rest, which are a standing ceiling raised with an add-on, refer to the [About Your Subscription](/docs/billing-and-subscriptions/about-your-subscription) documentation.
 
 By default, these resources stop when you reach your allowance. On a paid subscription, you can allow usage beyond it and pay for what you use, so a traffic spike does not take your site offline.

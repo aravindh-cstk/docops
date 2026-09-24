@@ -9,6 +9,8 @@ uid: bltafeb74300a71d994
 
 ## Manage Your Billing Details
 
+**Note:** These instructions are for anyone who created their Contentstack account through the [sign-up page](https://www.contentstack.com/sign-up), on Free, Build, or Growth plans. The **Manage Subscription** section is only visible to the organization owner. If your organization is on an Enterprise tier, reach out to our [support](mailto:support@contentstack.com) team to make any changes.
+
 Your billing details are the payment method Contentstack charges and the name and address that appear on your invoices. You manage them in a billing portal hosted by Stripe, Contentstack's payment provider.
 
 Contentstack does not store your card number. Keeping card data with the payment provider is what allows Contentstack to take payments without holding your card details.

@@ -9,6 +9,8 @@ uid: bltfe04dce37098362a
 
 ## Cancel Your Subscription
 
+**Note:** These instructions are for anyone who created their Contentstack account through the [sign-up page](https://www.contentstack.com/sign-up), on Free, Build, or Growth plans. The **Manage Subscription** section is only visible to the organization owner. If your organization is on an Enterprise tier, reach out to our [support](mailto:support@contentstack.com) team to make any changes.
+
 You can cancel your subscription yourself, without contacting support. Cancellation stops future payments and, at the end of your current billing period, removes your access to the organization.
 
 Read this article in full before you cancel. Cancellation deletes content on a fixed schedule, and that part cannot be undone.

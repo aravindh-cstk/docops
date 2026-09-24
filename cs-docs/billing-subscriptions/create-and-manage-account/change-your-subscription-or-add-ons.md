@@ -9,6 +9,8 @@ uid: bltc1dbe1bae9d38687
 
 ## Change Your Subscription or Add-Ons
 
+**Note:** These instructions are for anyone who created their Contentstack account through the [sign-up page](https://www.contentstack.com/sign-up), on Free, Build, or Growth plans. The **Manage Subscription** section is only visible to the organization owner. If your organization is on an Enterprise tier, reach out to our [support](mailto:support@contentstack.com) team to make any changes.
+
 When you need less, you can move to a lower subscription option, which takes effect at your next billing date. When you need more of something, you have two ways to get it. Move to a higher subscription option to raise everything at once, or buy an add-on to raise one limit while staying on your current subscription.
 
 Which one you need depends on the resource. Metered resources such as API requests, bandwidth, and AI credits are governed by your subscription and by extra usage. Fixed resources such as users, stacks, and entries are raised with add-ons.
