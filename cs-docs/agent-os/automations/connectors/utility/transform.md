@@ -1563,7 +1563,7 @@ Here’s a screenshot that shows the output:
 
 Use this function to convert the input text into upper case.
 
-**Example:** \[\[upperCase “hello world”\]\].
+**Example:** \[\[upperCase ���hello world”\]\].
 
 In the above example:
 
@@ -1768,7 +1768,7 @@ In the above example:
 
 -   **join** is the helper function
 -   **myarray** is the array of strings
--   **“-��** is the character to join all the items of the array
+-   **“-”** is the character to join all the items of the array
 
 Here’s a screenshot that shows the input:
 
