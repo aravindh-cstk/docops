@@ -47,17 +47,17 @@ To compare what each subscription option includes and see current pricing, go to
 
 ## How Subscription Limits Work
 
-Every subscription option sets an allowance for each resource. Contentstack tracks two kinds of limit, and the difference determines how you get more.
+Every subscription option sets an allowance for each resource, and the **Usage Overview** section on your Subscription page lists all of them together. What differs between them is how the limit behaves and how you get more.
 
--   **Metered resources** reset at the start of each billing period. API requests, bandwidth, and AI credits are metered. On a paid subscription, you can allow usage beyond the allowance and pay for what you use.
--   **Fixed resources** are a standing ceiling rather than a monthly total. Users, stacks, content types, entries, assets, locales, and custom roles are fixed. When you reach the ceiling, you cannot create more until you raise it with an add-on or a subscription change.
+-   **Metered resources** reset at the start of each billing period. API requests, bandwidth, and AI credits are metered. On a paid subscription you can allow usage beyond the allowance and pay for what you use, which **Usage Overview** lists against each one as **Extra Usage**.
+-   **Fixed resources** are a standing ceiling rather than a monthly total. Stacks, users, locales, content types, entries, assets, custom roles, and branches are fixed. When you reach the ceiling, you cannot create more until you raise it with an add-on or a subscription change, which **Usage Overview** lists against each one as **Add-on**.
 
 ### Find Your Own Limits
 
 Your limits depend on your subscription and on any add-ons you have bought, so the Subscription page is the accurate source for your organization:
 
--   **Metered resources**: The **Usage Overview** section shows each resource, how much you have used, how much remains, and any extra usage alongside your allowance.
--   **Fixed resources**: The same section shows what your subscription includes and the quantity any add-on has contributed.
+-   **Metered resources**: **Usage Overview** shows how much you have used, how much remains, and any **Extra Usage** alongside your allowance.
+-   **Fixed resources**: The same section shows what your subscription includes and the quantity any **Add-on** has contributed.
 
 **Additional Resource:** For a detailed view of AI credit consumption by product and by day, refer to the [Analytics for AI Credits](/docs/analytics/analytics-for-ai-credits) documentation.
 

@@ -58,7 +58,7 @@ After Contentstack verifies your email address and you finish setting up your pa
 When your account is ready, you have:
 
 -   An **organization**, which is the top-level container for everything you build. You are the organization Owner.
--   The option to create your first **stack**, which holds your content types, entries, and assets.
+-   The option to create your first **stack**, which holds your content types, entries, and assets. Contentstack opens a welcome page rather than a stack, so to create one go to **Headless CMS**. Refer to the [Create a New Stack](/docs/headless-cms/create-a-new-stack) documentation.
 -   A **Free** subscription, with no expiration date.
 
 **Additional Resource:** To understand how organizations, stacks, and users relate to each other, refer to the [About Organizations](/docs/administration/about-organizations) documentation.

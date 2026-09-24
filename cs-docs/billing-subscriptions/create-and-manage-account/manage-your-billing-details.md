@@ -34,7 +34,7 @@ The billing portal opens in a new tab. You are signed in already, so you do not 
 
 -   Add a payment method, and set which one Contentstack charges by default.
 -   Remove a payment method you no longer use.
--   Update the billing name, address, and tax details printed on your invoices.
+-   Update the billing name and address printed on your invoices.
 -   View your invoice history, and download any invoice as a PDF.
 
 Changes take effect immediately. Your next payment uses the default payment method at the time of the charge.

@@ -41,8 +41,8 @@ To change your subscription, log in to your [Contentstack account](https://www.c
 
 4.  Do one of the following:
 
--   **First payment**: the payment page opens with your email address already filled in. Enter your card number, expiry date, and security code, the cardholder name, and your country and postal code, and then click **Subscribe**.
--   **Card already on file**: review **Review Your Order**, select the checkbox to authorize the charge, and click **Confirm Payment**. To change your selection, click **Go Back**.
+-   **First payment**: The payment page opens with your email address already filled in. Enter your card number, expiry date, and security code, the cardholder name, and your country and postal code, and then click **Subscribe**.
+-   **Card already on file**: Check the summary on **Review Your Order**, select the checkbox to authorize the charge, and click **Confirm Payment**. To change your selection, click **Go Back**.
 
 Contentstack applies the new subscription immediately and returns you to your subscription. Your invoice arrives by email.
 
@@ -65,18 +65,15 @@ Contentstack applies the new subscription immediately and returns you to your su
 
 ## Move to a Lower Subscription Option
 
-Downgrading is available on paid subscription options. It is scheduled rather than immediate: you keep your current subscription and its limits until the end of the billing period you have already paid for, and the lower option starts at your next billing date. Nothing is charged for the change.
+Downgrading is available on paid subscription options. It is scheduled rather than immediate. You keep your current subscription and its limits until the end of the billing period you have already paid for, and the lower option starts at your next billing date. Nothing is charged for the change.
 
 1.  Click your avatar in the top-right corner, and then click **Manage Subscription**.
 2.  On the subscription card, click the vertical ellipsis (⋮), and then click **Downgrade**. The ellipsis appears on paid subscription options only, so it is not available on Free.
-3.  In **Downgrade Plan**, use the selector at the top of the dialog box to choose the subscription option you want to move to.
-4.  Review the comparison table. It lists each resource with the limit on your current subscription, the limit on the option you have chosen, and your own usage.
-5.  Click **Continue to Downgrade**, and then select the option you are moving to.
-6.  Select the reason you are downgrading, and then click **Continue**. To stop here, click **Keep My Plan**.
-7.  Read **What happens next**, and then click the button confirming the option you are moving to.
-8.  Review the summary on **Review Your Order**, and then click **Confirm Downgrade**. To change your selection, click **Go Back**.
+3.  Choose the subscription option you want to move to. Contentstack shows the **Plans and Pricing** page and a comparison listing each resource with the limit on your current subscription, the limit on the option you have chosen, and your own usage.
+4.  Click **Continue to Downgrade**. If Contentstack asks why you are downgrading, select a reason and click **Continue**; to stop at this point, click **Keep My Plan**.
+5.  Review the summary on **Review Your Order**, and then click **Confirm Downgrade**. To change your selection, click **Go Back**.
 
-Contentstack confirms with **Downgrade Scheduled**. You stay on your current subscription until your next billing date, when the lower option takes effect.
+Contentstack confirms with **Downgrade Scheduled** and offers **Go To Manage Subscriptions** to return to your subscription. You stay on your current subscription until your next billing date, when the lower option takes effect.
 
 ### If Your Usage Exceeds the Lower Limits
 
@@ -102,7 +99,7 @@ Add-ons raise an individual limit without changing your subscription. You can ad
 
 Each card shows what one unit of that add-on gives you, how many units you currently use this month, and the change you are about to make with its monthly cost.
 
-3.  Click **Proceed to Payment**.
+3.  Click **Proceed to payment**.
 4.  Review the amount, and then confirm the payment.
 
 Contentstack applies the new limits and returns you to your subscription.

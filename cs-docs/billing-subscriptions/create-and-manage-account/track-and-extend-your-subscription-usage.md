@@ -9,7 +9,7 @@ uid: blte1bddca54b0302db
 
 ## Track and Extend Your Subscription Usage
 
-Three resources on your subscription are measured over each billing period: AI credits, API requests, and bandwidth. The **Usage Overview** section of your subscription shows how much of each you have used and how much remains.
+The **Usage Overview** section of your subscription lists every resource your subscription includes, with how much you have used and how much remains. Three of them are measured over each billing period and reset when it ends: AI credits, API requests, and bandwidth. This article covers those three, because they are the ones you can extend by paying for what you use. For the rest, which are a standing ceiling raised with an add-on, refer to the [About Your Subscription](/docs/billing-and-subscriptions/about-your-subscription) documentation.
 
 By default, these resources stop when you reach your allowance. On a paid subscription, you can allow usage beyond it and pay for what you use, so a traffic spike does not take your site offline.
 
@@ -17,8 +17,8 @@ By default, these resources stop when you reach your allowance. On a paid subscr
 
 | Resource | What it measures |
 | --- | --- |
-| **AI Credit** | Each use of an AI-powered feature, including writing assistance, Brand Kit generation, and Agent OS automations |
-| **API Request** | Each call to the content delivery API or the content management API, whether your application fetches, updates, or previews content |
+| **AI Credits** | Each use of an AI-powered feature, including writing assistance, Brand Kit generation, and Agent OS automations |
+| **API Requests** | Each call to the content delivery API or the content management API, whether your application fetches, updates, or previews content |
 | **Bandwidth** | The volume of data served to your users when Contentstack delivers content through its content delivery network |
 
 All three reset at the start of each billing period.
@@ -56,14 +56,14 @@ Extra usage now applies to all three resources. The toggle changes to **Disable 
 Set a cap so your bill cannot grow without limit. Configure each resource separately.
 
 1.  Next to the resource you want to cap, click **Set Extra Usage**.
-2.  Drag the slider, or enter a figure in the field, to set the maximum extra amount you are prepared to buy for the period. The dialog box shows the highest amount you can buy on your current subscription, and an **Estimated Cost** for the amount you have selected. Use that estimate rather than calculating the cost yourself, because it reflects your subscription and current rates.
+2.  Enter the maximum extra amount you are prepared to buy for the period. The dialog box shows an **Estimated Cost** for the amount you have entered. Use that estimate rather than calculating the cost yourself, because it reflects your subscription and current rates.
 3.  Click **Configure**.
 
 Contentstack applies the cap immediately. When usage of that resource reaches the cap, requests against it stop for the rest of the billing period.
 
 **Tip:** Set the cap slightly above your busiest month to date. That way a genuine spike is absorbed, and a runaway integration is still contained.
 
-**Note:** On some subscription options, the amount of extra usage you can buy is capped per resource. The dialog box shows your maximum. To go beyond it, move to a higher subscription option.
+**Note:** On some subscription options, the amount of extra usage you can buy is capped per resource. To go beyond it, move to a higher subscription option.
 
 ## Turn Off Extra Usage
 
