@@ -776,7 +776,7 @@ The “Options” schema looks as follows:
 
 The “Field Rules” schema allows you to set [field visibility rules](/docs/headless-cms/about-field-visibility-rules) for your content type. You can hide or display specific fields (target fields) on the entry page based on the values specified in other fields (operand fields) of the entry.
 
-The “Field Rules” schema looks as follows:
+The ���Field Rules” schema looks as follows:
 
 ```
 "field_rules": [
