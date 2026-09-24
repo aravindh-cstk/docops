@@ -19,6 +19,6 @@ You can even sort or hide widgets on your dashboard as per your requirements.
 
 **Note:** Any sorting/hiding task you perform on the dashboard will be visible to you only.
 
-To access the dashboard (press “D”), you simply need to log in to your [Contentstack account](https://www.contentstack.com/login).
+To access the dashboard (press ��D”), you simply need to log in to your [Contentstack account](https://www.contentstack.com/login).
 
 You can browse through the following topics, mentioned in the “More Articles” section, to know about default dashboard widgets and how you can customize your dashboard view.
