@@ -139,7 +139,7 @@ export async function loader({ request, params }: LoaderFunctionArgs) {
     if (NOT_FOUND_IDS.has(error?.id)) {
       throw new Response("Not Found", { status: 404 });
     }
-    throw error; // real failure — let it surface as a 500
+    throw error; // real failure �� let it surface as a 500
   }
 }
 
