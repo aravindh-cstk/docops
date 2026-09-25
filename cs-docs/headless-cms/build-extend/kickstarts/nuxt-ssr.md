@@ -235,7 +235,7 @@ Once verification passes, review the core project files to understand how this b
 kickstart-nuxt-ssr/
 ├── app/
 │   ├── app.vue
-│   ├── composables/
+���   ���── composables/
 │   │   └── useGetPage.ts
 │   └── plugins/
 │       └── contentstack.ts
