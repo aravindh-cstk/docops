@@ -90,7 +90,7 @@ Contentstack Authentication provides stronger access control than Password Prote
 
 -   **Identity-based access:** Every visitor signs in with their own Contentstack account. There is no shared password to pass around, screenshot, or leak in chats.
 -   **Traceable access:** Because every visitor authenticates with their own identity, you can tell who accessed the environment. Password Protection cannot distinguish between users of a shared credential. Audit records for users who access the environment through Contentstack Authentication are available in the Audit Logs under Organization Admin.
--   **Automatic scoping to your Organization:** Only members of your Contentstack Organization can be granted access — users from other Contentstack Organizations cannot sign in, even if they know the URL.
+-   **Automatic scoping to your Organization:** Only members of your Contentstack Organization can be granted access �� users from other Contentstack Organizations cannot sign in, even if they know the URL.
 
 ## Using Contentstack Authentication Together with Password Protection
 
