@@ -83,7 +83,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   ├── GearSix.svg
 │   │   ├── help_icon.svg
 │   │   ├── Icon.svg
-│   │   ���── JsonView.svg
+│   │   ├── JsonView.svg
 │   │   ├── lock.svg
 │   │   └── sidebarwidget.svg
 │   │
@@ -154,7 +154,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   │   └── FieldModifier.tsx
 │   │   ├── FullPage/
 │   │   │   ├── FullPage.css
-│   │   │   └── FullPage.tsx
+│   │   │   └��─ FullPage.tsx
 │   │   ├── GlobalFullPage/
 │   │   │   ├── GlobalFullPage.css
 │   │   │   └── GlobalFullPage.tsx
