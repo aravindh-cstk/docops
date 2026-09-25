@@ -448,7 +448,7 @@ Endpoint.getContentstackEndpoint(region, service)
           │
           ▼
   In-memory cache present?
-          ├── Yes ──► Return URL
+          ���─��� Yes ──► Return URL
           └── No
                 │
                 ▼
@@ -457,7 +457,7 @@ Endpoint.getContentstackEndpoint(region, service)
                 └── Failure
                       │
                       ▼
-                Use bundled regions.json from JAR ──�� Cache in memory ──► Return URL
+                Use bundled regions.json from JAR ──► Cache in memory ──► Return URL
 ```
 
 The live download has these characteristics:
