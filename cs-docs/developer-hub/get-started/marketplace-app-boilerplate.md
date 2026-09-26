@@ -94,7 +94,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   │   ├── entrySidebarExtensionContext.ts
 │   │   │   └── marketplaceContext.ts
 │   │   ├── hooks/
-│   │   │   ├── useAppConfig.test.tsx
+│   │   │   ���── useAppConfig.test.tsx
 │   │   │   ├── useAppConfig.ts
 │   │   │   ├── useAppLocation.ts
 │   │   │   ├── useAppSdk.test.tsx
@@ -136,7 +136,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   ├── AppConfiguration/
 │   │   │   ├── AppConfiguration.module.css
 │   │   │   └── AppConfiguration.tsx
-│   │   ��── AssetSidebarWidget/
+│   │   ├── AssetSidebarWidget/
 │   │   │   ├── AssetSidebar.css
 │   │   │   └── AssetSidebar.tsx
 │   │   ├── ContentTypeSidebar/
