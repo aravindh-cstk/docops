@@ -21,7 +21,7 @@ This action lets you create a new asset in Contentstack.
 2.  On the **Create an Asset** Configure Action page, enter the details given below:
     1.  Click **\+ Add New Account** button to connect your Contentstack account as shown in the [Connect your Contentstack Account](/docs/agent-os/about-contentstack-management-actions)step.
     2.  Select a **Stack** from the **Lookup** list and enter a **Title** for the asset.
-    3.  Specify a **File Name** for the asset, such as ‘NewAsset.png’ or ‘NewAsset.jpeg.’  
+    3.  Specify a **File Name** for the asset, such as ‘NewAsset.png’ or ‘NewAsset.jpeg.��  
         ![Select_Fields_Create_Asset.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9faeedf8be64ea05/682b0e400cda2652c0fc2a93/Select_Fields_Create_Asset.png)
     4.  Enter the **Input URL** of the image you want to create and specify a suitable **Description** for the asset.  
         ![Select_Field2_Create.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6356760ed385e683/682b0e404d67fa72d0589152/Select_Field2_Create.png)
