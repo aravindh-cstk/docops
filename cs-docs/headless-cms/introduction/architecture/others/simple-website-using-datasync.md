@@ -65,7 +65,7 @@ Your website’s infrastructure stays within this layer. This layer holds your w
 Let’s have an overview of these components:
 
 -   You need to set up an auto-scaling group that auto-scales on demand. This group usually contains your frontend app cluster, load balancer, and firewall. 
--   The load balancers distribute your website’s traffic to the frontend servers. 
+-   The load balancers distribute your website��s traffic to the frontend servers. 
 -   The network filtering through firewalls allows only legitimate requests to enter your infrastructure. 
 -   You can set up multiple instances of your frontend app (aka frontend app cluster), with each one containing the frontend server and your website code.
 -   Frontend servers provide all functionalities and services to ensure all connected microservices and Contentstack have the expected infrastructure to operate smoothly.
