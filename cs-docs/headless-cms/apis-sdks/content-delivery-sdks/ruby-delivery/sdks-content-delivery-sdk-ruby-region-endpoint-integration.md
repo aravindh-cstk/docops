@@ -60,7 +60,7 @@ Pass a region: option to Contentstack::Client.new. Endpoint resolution is automa
 If you omit the region: option, Contentstack::Client.new defaults to Contentstack::Region::US. If you pass a region string or constant the SDK does not recognize, Contentstack::Client.new raises Contentstack::Error with the message Unknown region '<region>'. Supported regions: .... See [Unknown region](#unknown-region) in Troubleshooting for how to resolve it.
 
 ```
-# US region (default — no region option needed)
+# US region (default �� no region option needed)
 stack = Contentstack::Client.new('<API_KEY>', '<DELIVERY_TOKEN>', '<ENVIRONMENT>')
 
 # EU region
