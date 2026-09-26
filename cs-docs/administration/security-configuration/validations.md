@@ -37,7 +37,7 @@ You can set this validation rule to the “Single Line Textbox,” “Multi Line
 
 Marking a field as [Unique](/docs/headless-cms/unique) prevents the duplication of entered content across entries in a content type. Every time a [user](/docs/headless-cms/about-stack-users) enters an already entered value into a unique field, the validator will prompt the user to change the duplicate value.
 
-You can set this validation rule to the “Single Line Textbox,” “Multi Line Textbox,” “Rich Text Editor,” “Markdown,” “Number,” “Date,” “File,” “Link,” and “Reference” fields.
+You can set this validation rule to the “Single Line Textbox,” “Multi Line Textbox,�� “Rich Text Editor,” “Markdown,” “Number,” “Date,” “File,” “Link,” and “Reference” fields.
 
 ### Number of Characters
 

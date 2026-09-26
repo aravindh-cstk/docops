@@ -315,7 +315,7 @@ Use transformations to clean and standardize values.
         { 
           "type": "regex", 
           "config": { 
-            "pattern": "[èéêë]", 
+            "pattern": "[è��êë]", 
             "replace": "e" 
           } 
         },

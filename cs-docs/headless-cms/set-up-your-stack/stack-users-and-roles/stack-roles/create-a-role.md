@@ -111,7 +111,7 @@ Asset permissions are divided into the following categories:
     For example:
 
     -   Allow a role to **Read** the “Blogs” folder.
-    -   Allow a role to **Read** and **Publish/Unpublish** the “Homepage” folder.
+    -   Allow a role to **Read** and **Publish/Unpublish** the “Homepage��� folder.
 
 ## Permissions on Languages
 

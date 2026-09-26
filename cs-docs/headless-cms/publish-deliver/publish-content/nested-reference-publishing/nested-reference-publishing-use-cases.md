@@ -95,6 +95,6 @@ To ensure C is included, you must republish B with references so that the system
 
 ### Workflow Stage Incomplete
 
-When the workflow stage of entry(ies) has not reached “Done” for a certain environment(s).
+When the workflow stage of entry(ies) has not reached “Done��� for a certain environment(s).
 
 **Additional Resource:** Learn more about [cases when reference publishing could fail](/docs/headless-cms/streamline-your-publishing-process-with-nested-reference-publishing/#cases-when-reference-publishing-could-fail).

@@ -1563,7 +1563,7 @@ Here’s a screenshot that shows the output:
 
 Use this function to convert the input text into upper case.
 
-**Example:** \[\[upperCase “hello world”\]\].
+**Example:** \[\[upperCase ���hello world”\]\].
 
 In the above example:
 

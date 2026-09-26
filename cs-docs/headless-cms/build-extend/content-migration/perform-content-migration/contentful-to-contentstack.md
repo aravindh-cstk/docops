@@ -119,7 +119,7 @@ Select a content type from the dropdown to map fields accordingly. Adjust mappin
 Use the following advanced options to efficiently manage your mappings:
 
 -   **Search for Specific Fields**: Use the search bar in the mapping interface to locate specific field names.
--   **Reset to system mapping**: Click the ‘Reset to system mapping’ icon to revert any changes done to the default mappings.
+-   **Reset to system mapping**: Click the ���Reset to system mapping’ icon to revert any changes done to the default mappings.
 -   **Select content type from destination stack**: Override the default behavior of creating new content types.
 -   **Fetch content types from destination stack**: If updates are made in the stack during migration, click the icon to fetch changes.
 

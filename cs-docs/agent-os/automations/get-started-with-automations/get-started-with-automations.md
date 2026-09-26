@@ -106,7 +106,7 @@ First, perform the following steps to create an Automation:
             query:  
             name:"john"
 
-            Here’s what you see  
+            Here���s what you see  
 
             ![Save_and_Exit-trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2c1446aedacd91de/659a7e68be5d266ae365ab5b/Save_and_Exit-trigger.png)
         4.  The **Apply Trigger Conditions** section lets you filter the data displayed in the output. For example, if you want your trigger to proceed further with the configured actions, under the condition that the name parameter (the one you passed in the above step) is “scott” in the output result, click **\+ Add Trigger Condition** and pass the following filter condition:  

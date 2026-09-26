@@ -13,7 +13,7 @@ To publish entries and assets found in your search results in bulk, log in to yo
 
 1.  Navigate to your [stack](https://www.contentstack.com/docs/headless-cms/about-stack) and select the “[Entries](https://www.contentstack.com/docs/headless-cms/about-entries)” or “[Assets](https://www.contentstack.com/docs/headless-cms/about-assets)” module.
 2.  Search for the entries and assets you want to publish. You can use [Basic Search](/docs/headless-cms/basic-search), [Advanced Search](/docs/headless-cms/advanced-search), [Filters](/docs/headless-cms/use-filters), and [Views](/docs/headless-cms/about-views) to refine your search results.
-3.  From the search results, select the entries or assets you want to publish. Click the **Publish** button on the floating bar at the top.
+3.  From the search results, select the entries or assets you want to publish. To publish every entry matching your search instead of a per-page selection, use [select all records](/docs/headless-cms/select-all-records-for-bulk-operations). Click the **Publish** button on the floating bar at the top.
 
     **Note:** On smaller screens, click the vertical ellipsis to access the Publish option.
 
@@ -35,4 +35,5 @@ To publish entries and assets found in your search results in bulk, log in to yo
 The limitations for publishing entries and assets in bulk are as follows:
 
 -   You can publish **10** **entries/assets** in **10** **languages** and **10** **environments** at a time.
+-   With [select all records](/docs/headless-cms/select-all-records-for-bulk-operations), a single action publishes up to **10,000 entries** matching your search. Assets are not included.
 -   The bulk-action date cannot extend beyond **12 months** when scheduling the bulk operation.
