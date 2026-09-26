@@ -118,7 +118,7 @@ Now let us understand how to migrate content from one stack to another using the
     -   Example 3:
 
         ```
-        csdx cm:migration -a my_token_alias -k bxxxxxxx --config  numberOfEntries:100 contentTypeUID:blog -n “path/to/update/first/100/entries/of/given/contenttype/script/file”
+        csdx cm:migration -a my_token_alias -k bxxxxxxx --config  numberOfEntries:100 contentTypeUID:blog -n “path/to/update/first/100/entries/of/given/contenttype/script/file���
         ```
         In the next section, let’s understand how to create the migration files and use various methods to perform operations in your stack.
 
