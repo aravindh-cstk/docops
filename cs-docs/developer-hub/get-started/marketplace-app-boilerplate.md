@@ -136,7 +136,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   ├── AppConfiguration/
 │   │   │   ├── AppConfiguration.module.css
 │   │   │   └── AppConfiguration.tsx
-│   │   ├── AssetSidebarWidget/
+│   │   ��── AssetSidebarWidget/
 │   │   │   ├── AssetSidebar.css
 │   │   │   └── AssetSidebar.tsx
 │   │   ├── ContentTypeSidebar/
@@ -154,7 +154,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   │   └── FieldModifier.tsx
 │   │   ├── FullPage/
 │   │   │   ├── FullPage.css
-│   │   │   └��─ FullPage.tsx
+│   │   │   └── FullPage.tsx
 │   │   ├── GlobalFullPage/
 │   │   │   ├── GlobalFullPage.css
 │   │   │   └── GlobalFullPage.tsx
