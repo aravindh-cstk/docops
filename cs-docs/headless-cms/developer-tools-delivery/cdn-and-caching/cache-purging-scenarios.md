@@ -54,8 +54,8 @@ Suppose if the content manager edits the company description in the “Home Page
 The following cached data will be purged:
 
 -   “English (United States)” version of the “Home Page” entry on “Production” environment
--   “French (France)” version of the “Home Page” entry on “Production” environment
--   ��German (Germany)” version of the “Home Page” entry on “Production” environment  
+-   “French (France)” version of the “Home Page” entry on ��Production” environment
+-   “German (Germany)” version of the “Home Page” entry on “Production” environment  
     ![Purging_3.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltc1a7fe99c9fc93cf/62eb763d569002760975405a/Purging_3.png)
 
 **Note:** We do not purge cached assets and download URLs when an entry is published or unpublished.
