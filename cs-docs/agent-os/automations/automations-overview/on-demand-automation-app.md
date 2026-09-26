@@ -130,7 +130,7 @@ Activate the automation by clicking the **Activate Automation** toggle button.
 Once the automation is activated, you can check all the active automations in the On-Demand Automation App. To do so, follow the steps below:
 
 1.  Navigate to the On-Demand Automation App in the entries page.
-2.  You will see a list of all the active automations. Click the “Execute icon��� to execute the automation.  
+2.  You will see a list of all the active automations. Click the “Execute icon” to execute the automation.  
     ![Automation_Visible_in_Asset_Sidebar.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd8622fb88e1e1eb7/6694cc69d0c0ef2480c54a30/Automation_Visible_in_Asset_Sidebar.png)
 3.  Once the automation is executed successfully, you can check the receiver’s email address for the email sent via Agent OS.  
     ![Email.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt35789911df3ce82c/664b0086dda14b614edffa19/Email.png)
@@ -508,7 +508,7 @@ Activate the automation by clicking the **Activate Automation** toggle button.
 Once the automation is activated, you can check all the active automations in the On-Demand Automation App. To do so, follow the steps below:
 
 1.  Navigate to the On-Demand Automation App in the Assets page.
-2.  You will see a list of all the active automations. Click the “Execute icon” to execute the automation.  
+2.  You will see a list of all the active automations. Click the “Execute icon�� to execute the automation.  
     ![Execut_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt85edcb3f9d95f1b0/67e26efc914c247ae84978a9/Execut_Icon.png)
 3.  Log into your AWS S3 account and see the list of files in the bucket. In the AWS account’s bucket, you can see the created file.  
     ![AWS-Image.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt03586e2d5b45348e/66866c0f5a7e763dd51cd170/AWS-Image.png)
