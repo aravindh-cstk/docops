@@ -137,7 +137,7 @@ Once published, the mapping between Personalize Experiences and Entry Variants d
 
 **Additional Resource:** For more information, refer to [Create an Entry Variant.](/docs/headless-cms/create-an-entry-variant)
 
-### Dev – Set up Personalize Edge SDK (Retrieve active variants and Track impressions)
+### Dev ��� Set up Personalize Edge SDK (Retrieve active variants and Track impressions)
 
 1.  **Install SDK**
     -   Add the Personalize SDK via npm/yarn/pnpm to your site’s codebase. For frontend code, you can also use [Google Tag Manager](/docs/personalize/google-tag-manager-integration-with-personalize) or a preferred tag manager for easier impression and event tracking.
