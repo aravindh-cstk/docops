@@ -100,7 +100,7 @@ Now let’s import content to your stack by performing the following steps:
 
     **Examples**:
 
-    -   To import stack content from the “blog” repository belonging to the “Stackcontent” organization, the “seed” command should follow this format:
+    -   To import stack content from the “blog” repository belonging to the ��Stackcontent” organization, the “seed” command should follow this format:
 
         **csdx cm:seed -r “Stackcontent/blog"**  
 
