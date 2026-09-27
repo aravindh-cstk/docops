@@ -76,7 +76,7 @@ Defaults are templates, not content. Use phrasing that signals "replace me":
 defaultValue: "Your headline here"
 defaultValue: "Short description of this section"
 
-// Bad — looks like real content
+// Bad �� looks like real content
 defaultValue: "Buy our amazing product today!"
 ```
 
