@@ -273,7 +273,7 @@ kickstart-angular/
 │   │   ├── environment.production.ts
 │   │   └── environment.ts
 │   ├── global_styles.css
-│   ├── index.html
+│   ���── index.html
 │   ├── main.ts
 │   └── vite-env.d.ts
 ├── .env.example

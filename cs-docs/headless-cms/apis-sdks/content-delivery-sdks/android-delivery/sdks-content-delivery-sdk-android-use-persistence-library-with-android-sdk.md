@@ -13,7 +13,7 @@ Contentstack’s Realm Persistence Library for [Android SDK](/docs/developers/sd
 
 This Persistent Library contains methods that are required to map data fields of your [content types](/docs/headless-cms/about-content-types) and Realm for data storage.
 
-Let’s look at how to use this library for your Contentstack-powered Android apps.
+Let��s look at how to use this library for your Contentstack-powered Android apps.
 
 **Note:** If you have just started with Android SDK and Contenstack, we recommend reading more about [Realm](https://www.mongodb.com/docs/atlas/device-sdks/deprecation/) and [Contentstack docs](https://www.contentstack.com/docs/) before proceeding with the following steps.
 
