@@ -11,7 +11,7 @@ uid: bltabfded0cfcc2fe9f
 
 Your website's "Frequently Asked Questions" (FAQs) page includes a dynamic hero banner, a well-structured section with cards, and so on. The FAQs Content Model is specifically designed to capture and organize critical information about your website's Frequently Asked Questions (FAQs) area, ensuring you have all the relevant details at your fingertips.
 
-Let’s understand how this model will assist you create your company’s “Frequently Asked Questions (FAQs)” page.
+Let’s understand how this model will assist you create your company’s ��Frequently Asked Questions (FAQs)” page.
 
 1.  ## Analyzing Requirements for the FAQs Page
 
@@ -28,7 +28,7 @@ Let’s understand how this model will assist you create your company’s “Fre
     Let's identify the fields that build up your FAQs Page content type that you see in the above step.![Identifying_the_Content_Model_for_the_Frequently_Asked_Questions_(FAQs)_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb56b3d42489f83c5/65360bda5a382f4bb4a25a48/Identifying_the_Content_Model_for_the_Frequently_Asked_Questions_(FAQs)_Page.png)
 3.  ## Developing Content Type
 
-    The “FAQs” content model contains the following set of fields. Let��s look in detail at what content types and fields were used to create the model.
+    The “FAQs” content model contains the following set of fields. Let’s look in detail at what content types and fields were used to create the model.
 
     **FAQs** Content Type:
 
