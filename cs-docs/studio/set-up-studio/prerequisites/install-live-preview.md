@@ -44,7 +44,7 @@ export const stack = Contentstack.stack({
 ContentstackLivePreview.init({
   enable:   true,
   stackSdk: stack.config as IStackSdk,   // CSR: the preview hash is written onto this stack so the Delivery SDK fetches drafts from the preview service
-  ssr: false,                            // CSR app — in SSR you omit stackSdk and forward the hash via searchQuery (see below)
+  ssr: false,                            // CSR app ��� in SSR you omit stackSdk and forward the hash via searchQuery (see below)
   stackDetails: {
     apiKey:      process.env.NEXT_PUBLIC_CONTENTSTACK_API_KEY!,
     environment: process.env.NEXT_PUBLIC_CONTENTSTACK_ENVIRONMENT!,
