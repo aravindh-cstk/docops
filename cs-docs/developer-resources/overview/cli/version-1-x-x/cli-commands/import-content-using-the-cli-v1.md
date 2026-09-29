@@ -579,7 +579,7 @@ csdx cm:stacks:import -a production --data-dir ./export
 
 ```
 LOCALES:
-   ├─ Master Locale        |████████████████████████████████████████| 100% | 1/1 | ✓ Complete (1/1)
+   ├─ Master Locale        |██████████████████████████████���█████████| 100% | 1/1 | ✓ Complete (1/1)
    ├─ Locales Create       |████████████████████████████████████████| 100% | 1/1 | ✓ Complete (0/1)
    ├─ Locales Update       |████████████████████████████████████████| 100% | 1/1 | ✓ Complete (1/1)
 
