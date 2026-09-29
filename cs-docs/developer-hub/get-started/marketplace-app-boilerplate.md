@@ -118,7 +118,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   │   └── MarketplaceAppProvider.tsx
 │   │   ├── types/
 │   │   │   └── types.ts
-│   │   └─�� utils/
+│   │   └── utils/
 │   │       └── functions.ts
 │   │
 │   ├── components/
@@ -179,7 +179,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   ├── react-app-env.d.ts
 │   └── setupTests.ts
 │
-├── CODEOWNERS
+├���─ CODEOWNERS
 ├── global-setup.ts
 ├── global-teardown.ts
 ├── index.html
