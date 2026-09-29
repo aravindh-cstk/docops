@@ -65,7 +65,7 @@ Your website’s infrastructure stays within this layer. This layer holds your w
 Let’s have an overview of these components:
 
 -   You need to set up an auto-scaling group that auto-scales on demand. This group usually contains your frontend app cluster, load balancer, and firewall. 
--   The load balancers distribute your website��s traffic to the frontend servers. 
+-   The load balancers distribute your website’s traffic to the frontend servers. 
 -   The network filtering through firewalls allows only legitimate requests to enter your infrastructure. 
 -   You can set up multiple instances of your frontend app (aka frontend app cluster), with each one containing the frontend server and your website code.
 -   Frontend servers provide all functionalities and services to ensure all connected microservices and Contentstack have the expected infrastructure to operate smoothly.
@@ -84,7 +84,7 @@ CDN (Content Delivery Network) Layer
 
 -   A CDN is responsible for serving user requests through caches. You can use a CDN service, such as Fastly, to deliver content quickly to your clients.
 -   All user requests first hit the CDN. If it has the cache of the requested content, it delivers it to the client. Else, it asks the app to provide updated content. 
--   It also reduces the server’s load as the content gets delivered through cache instead of fetching content from your app every time.
+-   It also reduces the server���s load as the content gets delivered through cache instead of fetching content from your app every time.
 -   You can set up load balancers to filter out unwanted requests and manage network traffic and reverse proxy (for masking) between the CDN and the headless infrastructure.
 
 ## Next Steps
