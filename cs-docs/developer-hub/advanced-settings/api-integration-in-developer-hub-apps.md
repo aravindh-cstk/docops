@@ -264,7 +264,7 @@ async function makeApiCallWithRetry(url, options, maxRetries = 3) {
 1.  **Enable verbose logging** during development
 2.  **Test API calls** in isolation before integrating into your app
 3.  **Verify your Advanced Settings** configuration in Developer Hub
-4.  Use the browser’s **network** tab to inspect request and response details
+4.  Use the browser���s **network** tab to inspect request and response details
 5.  Wrap API calls in **try-catch** blocks with detailed error logging for better traceability
 
 ### Getting Help
