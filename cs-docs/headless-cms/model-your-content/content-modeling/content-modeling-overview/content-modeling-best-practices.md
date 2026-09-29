@@ -75,7 +75,7 @@ Using Modular Blocks enables content managers to customize page layouts without 
 
 **Additional Resource:** Refer to the [Modular Blocks – Real World Scenarios](/docs/headless-cms/modular-blocks#modular-blocks-real-world-scenarios) guide for practical examples.
 
-## Use “Global” Fields for Reusable Fields
+## Use ��Global” Fields for Reusable Fields
 
 [Global](/docs/headless-cms/about-global-field) fields allow you to create a set of fields once and reuse them across multiple content types. This is ideal for fields that need to appear consistently across different content types.
 
