@@ -98,7 +98,7 @@ Because the results are **collected**, a single POST tells you every structural 
 -   **On 422 composition\_invalid, read every key in errors**: they're all there. Don't fix one and resubmit blind.
 -   **Treat 422 stack\_not\_found as an auth problem**, not a missing resource.
 -   **On 409 at create**, pick a different composable\_uid (or omit it to let the service backfill a unique one).
--   **On 409 composition\_referenced at delete**, call [GET …/{uid}/references](/docs/studio/studio-api-compositions#6-list-references) to see who depends on it before deciding whether to ?force=true.
+-   **On 409 composition\_referenced at delete**, call [GET ���/{uid}/references](/docs/studio/studio-api-compositions#6-list-references) to see who depends on it before deciding whether to ?force=true.
 -   **Retry 502** (transient gateway). A preserved 401/403 is not retryable. Fix the credential/permission.
 
 See also: [Endpoint reference](/docs/studio/studio-api-endpoint-reference), [Compositions](/docs/studio/studio-api-compositions), [Projects](/docs/studio/studio-api-projects), [Chapter overview](/docs/studio/studio-api), [Building Blocks](/docs/studio/composition-building-blocks).
