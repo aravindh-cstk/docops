@@ -35,7 +35,7 @@ Launch supports redirection to any valid URL—not just to www subdomains.
 
 ### Subdomain Routing
 
-Subdomains are prefixes added to an apex domain to organize and structure a website—for example, www.example.com is a common subdomain used to serve website traffic.
+Subdomains are prefixes added to an apex domain to organize and structure a website, for example, www.example.com is a common subdomain used to serve website traffic.
 
 Launch allows you to assign custom subdomains to your environments, with each subdomain mapped to a specific environment. You can also configure multiple subdomains as needed.
 
@@ -78,9 +78,9 @@ Currently, Launch supports the following two TLS versions:
 
 ### Custom Certificates
 
-Launch allows you to use your own certificates instead of the default Universal Certificates. Adding a custom certificate requires a **manual request** to the Launch support team, along with the necessary certificate and private key files. However, **we recommend** leveraging Universal Certificates, as they eliminate the need for manual effort and ongoing maintenance.
+Launch allows you to use your own certificates instead of the default Universal Certificates. You can upload your own certificate directly from the Add/Edit Domain modal set SSL Certificate to Custom and provide your certificate, private key, and any intermediates (paste or upload as .pem, .crt, .cer, .key, or .txt). In case of issues, contact Contentstack [support](mailto:support@contentstack.com).
 
-### Pre-Provisioning Certificates Before Go-Live
+### Pre-provisioning Certificates Before Go-live
 
 Pre-Provisioned Certificates are TLS certificates generated and set up in advance to ensure a seamless transition between hosting platforms. When switching hosting providers, TLS certificates are reissued. If not handled beforehand, this process can cause delays, security warnings, or even downtime.
 
@@ -88,16 +88,18 @@ Pre-Provisioned Certificates are TLS certificates generated and set up in advanc
 
 To ensure a seamless cutover:
 
--   **Create a custom domain** in Launch.
--   **Generate the TXT records** required for domain validation directly through the Launch UI. For detailed steps, see [Adding apex domains with redirects](/docs/launch/custom-domain#adding-apex-domains-with-redirects).
--   **Add the TXT records** to your DNS settings to verify domain ownership.
--   Once the certificate is issued and marked active, **update your DNS records** to point to Launch’s CDN.
+1.  Create a custom domain in **Launch**.
+2.  Launch generates two separate DNS records you must add before the certificate can issue:
+    1.  A **TXT** record proves domain ownership (hostname validation).
+    2.  A **CNAME** record for certificate (DCV) validation  copy the exact Name and Value shown in the Launch UI (commonly on a host like \_acme-challenge.<domain>, but always use what the UI gives you rather than assuming the host). This is a different record from the TXT and is not optional for Automatic SSL  without it, the certificate stays stuck in Pending indefinitely.
+3.  Add both records to your DNS settings. See [Domain Ownership Verification](/docs/launch/custom-domain#domain-ownership-verification-and-automatic-ssl-provisioning) for the exact record shapes for each.
+4.  Once both records show as verified/Active in the Launch UI, add the routing record (**CNAME** for subdomains, **A record** for apex) to cut over traffic.
 
 This approach ensures your certificate is active and validated before user traffic is directed to Launch, preventing disruptions and maintaining a secure user experience.
 
 ## Proxying Traffic to Launch
 
-Using an external proxy—such as a CDN or Application Delivery Controller (ADC)—in front of Launch’s built-in CDN is **not recommended**. While it may seem beneficial, it often introduces unnecessary overhead and can negatively impact performance.
+Using an external proxy, such as a CDN or Application Delivery Controller (ADC), in front of Launch’s built-in CDN is **not recommended**. While it may seem beneficial, it often introduces unnecessary overhead and can negatively impact performance.
 
 Launch already includes robust features such as DNS management, caching, DDoS protection, and a Web Application Firewall (WAF). Adding another proxy or CDN layer typically results in redundancy without meaningful gain.
 
@@ -105,7 +107,7 @@ Launch already includes robust features such as DNS management, caching, DDoS pr
 
 -   **Redundant CDN and Increased Latency:** Launch handles DNS, caching, and security natively. Layering another CDN can slow down content delivery rather than improve it.
 -   **Cache Management and Manual Configuration:** Launch automatically purges cache on deployment. External CDNs often require manual cache purging and additional configuration, increasing maintenance complexity.
--   **Security Limitations:** If traffic is routed through a proxy, Launch’s built-in DDoS protection and firewall rules are bypassed—shifting the security responsibility entirely to the external service.
+-   **Security Limitations:** If traffic is routed through a proxy, Launch’s built-in DDoS protection and firewall rules are bypassed, shifting the security responsibility entirely to the external service.
 
 **We do not recommend** using a proxy, but **if you choose to use a proxy**, proceed only if you're comfortable with the tradeoffs in performance, security, and maintenance. If you decide to implement a proxy, ensure the following:
 
@@ -131,9 +133,9 @@ Since Launch uses Cloudflare as its CDN, a specific configuration is required to
 -   **Request O2O Enablement**  
     Contact your Cloudflare account team and request that **Orange-to-Orange routing** be enabled. This step is necessary to allow traffic to flow properly between the two Cloudflare zones—your domain and Launch’s infrastructure.
 
-## Go-Live Checklist
+## Go-live Checklist
 
-The Go-Live Checklist helps ensure your web application is fully prepared for a smooth, secure, and reliable go-live on **Contentstack Launch**. Review each area below to avoid common pitfalls and ensure a successful transition to production.
+The Go-live Checklist helps ensure your web application is fully prepared for a smooth, secure, and reliable go-live on **Contentstack Launch**. Review each area below to avoid common pitfalls and ensure a successful transition to production.
 
 ### Test Lower Environments
 
