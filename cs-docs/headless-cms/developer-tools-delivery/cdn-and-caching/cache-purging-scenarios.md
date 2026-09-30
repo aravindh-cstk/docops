@@ -54,7 +54,7 @@ Suppose if the content manager edits the company description in the “Home Page
 The following cached data will be purged:
 
 -   “English (United States)” version of the “Home Page” entry on “Production” environment
--   “French (France)” version of the “Home Page” entry on ��Production” environment
+-   “French (France)” version of the “Home Page” entry on “Production” environment
 -   “German (Germany)” version of the “Home Page” entry on “Production” environment  
     ![Purging_3.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/bltc1a7fe99c9fc93cf/62eb763d569002760975405a/Purging_3.png)
 
@@ -62,7 +62,7 @@ The following cached data will be purged:
 
 ## Edit and Publish the Company Logo
 
-Suppose if the content manager replaces the existing company logo in the “Home Page” content type with the latest version. Once done, the content manager publishes the “English (United States)” version of the company logo to all the three available locales and on the “Staging” and “Production” environments.
+Suppose if the content manager replaces the existing company logo in the “Home Page” content type with the latest version. Once done, the content manager publishes the “English (United States)” version of the company logo to all the three available locales and on the “Staging” and “Production��� environments.
 
 The following cached data will be purged:
 
