@@ -74,7 +74,7 @@ You can also open the entry and **edit** data before you restore it. When you cl
 
 ## When an asset from the “Kitchen Appliance Images” Folder is deleted
 
-If you delete an asset from the “Kitchen Appliance Images” folder, then that asset will be moved to the Trash. The asset will be removed from all the entries of the “Appliances” content type that it is a part of.
+If you delete an asset from the “Kitchen Appliance Images” folder, then that asset will be moved to the Trash. The asset will be removed from all the entries of the ���Appliances” content type that it is a part of.
 
 To restore the asset, you can go to **Trash** > **Assets** and click on **Restore** to the right hand side of the asset. Once restored, the asset returns back to the content type just as it was before you had deleted it.
 
