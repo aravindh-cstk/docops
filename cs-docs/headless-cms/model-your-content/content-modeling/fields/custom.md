@@ -13,7 +13,7 @@ The **Custom** field enables you to add and use customizable fields in the conte
 
 **Additional Resource:** To learn what Extensions are and how they work, refer to the [Extensions](/docs/developer-hub/custom-field-location) guide.
 
-This field possesses certain [properties](/docs/headless-cms/about-field-properties) that you can change at any time per your needs. The properties that you can modify are “Select Extension,” “[Display Name](/docs/headless-cms/display-name)”, “[Unique ID](/docs/headless-cms/unique-id)”, “[Instruction Value](/docs/headless-cms/instruction-value)”, “[Help Text](/docs/headless-cms/help-text)”, “[Config Parameter](/docs/headless-cms/config-parameter-for-custom-fields-only),” “[Mandatory](/docs/headless-cms/mandatory),” and “[Non-localizable](/docs/headless-cms/non-localizable).”
+This field possesses certain [properties](/docs/headless-cms/about-field-properties) that you can change at any time per your needs. The properties that you can modify are “Select Extension,” ���[Display Name](/docs/headless-cms/display-name)”, “[Unique ID](/docs/headless-cms/unique-id)”, “[Instruction Value](/docs/headless-cms/instruction-value)”, “[Help Text](/docs/headless-cms/help-text)”, “[Config Parameter](/docs/headless-cms/config-parameter-for-custom-fields-only),” “[Mandatory](/docs/headless-cms/mandatory),” and “[Non-localizable](/docs/headless-cms/non-localizable).”
 
 After you [add or create a custom field](/docs/developer-hub/custom-field-location) extension in the stack, you can [use it in content types](/docs/developer-hub/custom-field-location).
 
