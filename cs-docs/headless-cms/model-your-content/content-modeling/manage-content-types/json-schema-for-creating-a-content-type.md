@@ -613,7 +613,7 @@ The schema of the **Global** field is given as follows:
 }
 ```
 
-The parameters in the JSON body above are explained in the “[Field Parameters](/docs/headless-cms/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
+The parameters in the JSON body above are explained in the ���[Field Parameters](/docs/headless-cms/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
 
 The details of the fields that have to be added in the Global field are mentioned in the schema parameters.
 
@@ -776,7 +776,7 @@ The “Options” schema looks as follows:
 
 The “Field Rules” schema allows you to set [field visibility rules](/docs/headless-cms/about-field-visibility-rules) for your content type. You can hide or display specific fields (target fields) on the entry page based on the values specified in other fields (operand fields) of the entry.
 
-The ���Field Rules” schema looks as follows:
+The “Field Rules” schema looks as follows:
 
 ```
 "field_rules": [
