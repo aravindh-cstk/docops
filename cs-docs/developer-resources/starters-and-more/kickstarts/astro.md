@@ -269,13 +269,13 @@ kickstart-astro/
 ├── astro.config.mjs
 ├── package.json
 ├── package-lock.json
-├─�� tsconfig.json
+├── tsconfig.json
 ├── LICENSE
 ├── README.md
 ├── SECURITY.md
 ├── .github/          # CI and repository metadata
 ├── .vscode/          # Optional editor recommendations
-└── .talismanrc       # Security scanning config
+���─��� .talismanrc       # Security scanning config
 ```
 
 ### Build and configuration
