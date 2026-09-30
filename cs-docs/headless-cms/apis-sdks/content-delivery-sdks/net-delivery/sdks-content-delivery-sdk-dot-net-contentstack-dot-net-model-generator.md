@@ -20,7 +20,7 @@ Use the Contentstack .NET Model Generator to create C# model classes from conten
 To install Contentstack model generator, run following command:
 
 ```
-dotnet tool install —-global contentstack.model.generator
+dotnet tool install ��-global contentstack.model.generator
 ```
 
 ## Usage
