@@ -803,7 +803,7 @@ Facilitator delivers on screen. Attendees don't touch keyboards yet.
 
       Component file (code) ─┐
                               ├─→ register-component skill ─→ Palette entry
-      Skill prompt ───────���──┘
+      Skill prompt ──────────┘
 
       Palette entry ─→ build-section skill ─→ Section in Studio
 
@@ -826,7 +826,7 @@ Facilitator delivers on screen. Attendees don't touch keyboards yet.
 
     Then, in any of the above paths:
 
-      Template ─→ open in Canvas → tweak → Save + Deploy → live URL
+      Template ���→ open in Canvas → tweak → Save + Deploy → live URL
     ```
 
     Blocks B to D exercise the individual skills. Block E exercises the orchestrator that chains them from a design.
