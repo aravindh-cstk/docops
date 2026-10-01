@@ -110,7 +110,7 @@ Contentstack Personalize makes A/B testing banners simple and effective:
 ### Personalize - Define Conversion Event
 
 1.  Navigate to Personalize → Events.
-2.  Click **\+ New Event** to create your conversion event “banner\_click”.
+2.  Click **\+ New Event** to create your conversion event “banner\_click��.
 3.  Go back to your A/B Test Experience and add the newly created event as the Primary Metric in the configuration.
 
 ### CMS - Link Content Types
