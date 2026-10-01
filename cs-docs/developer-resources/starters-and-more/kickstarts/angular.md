@@ -277,7 +277,7 @@ kickstart-angular/
 │   ├── main.ts
 │   └── vite-env.d.ts
 ├── .env.example
-├── angular.json
+├─��� angular.json
 ├── generate-env.js
 ├── package.json
 └── types.ts
@@ -357,7 +357,7 @@ Use the links below to view the current source on GitHub.
 -   **.env.example not renamed to .env**  
     The project reads configuration from .env. If you do not rename (or copy) .env.example to .env and add your credentials, the environment generation script has no values to use, and the SDK configuration fails.
 -   **Wrong Live Preview URL**  
-    Angular runs on http://localhost:4200/ by default. Configuring http://localhost:3000/ in your stack���s token or Live Preview settings breaks Live Preview and Visual Builder, even if the rest of the app loads.
+    Angular runs on http://localhost:4200/ by default. Configuring http://localhost:3000/ in your stack’s token or Live Preview settings breaks Live Preview and Visual Builder, even if the rest of the app loads.
 -   **The environment generation script has not run**  
     Use npm run start, not ng serve directly. The prestart script runs generate-env.js and generates the Angular environment files from .env. Running ng serve skips this step, and the app uses a stale or empty configuration.
 -   **Live Preview is not enabled in Stack Settings**  
