@@ -13,7 +13,7 @@ Contentstack allows you to enable and disable a [workflow](/docs/headless-cms/ab
 
 To enable or disable a workflow, log in to your [Contentstack account](https://app.contentstack.com/#!/login), and perform the following steps:
 
-1.  Go to your [stack](/docs/headless-cms/about-stack) and click on the “Settings” icon (press “S”).
+1.  Go to your [stack](/docs/headless-cms/about-stack) and click on the “Settings�� icon (press “S”).
 2.  Click on **Workflows** (press “**alt + F**” for Windows OS, and “option + **F**” for Mac OS).
 3.  Hover over the workflow you want to enable/disable, and click on the “Power” icon to enable or disable the workflow ![Enable_a_workflow_1_highlighted.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt1f3b670bf49a7602/60c0bee0971f487708eb2477/Enable_a_workflow_1_highlighted.png)
 4.  Alternatively, to enable or disable the workflow via the workflow page, you need to check or uncheck the **Enable Workflow** checkbox, respectively.  
