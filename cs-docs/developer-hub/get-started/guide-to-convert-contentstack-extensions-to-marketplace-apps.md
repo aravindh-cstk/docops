@@ -50,7 +50,7 @@ Let’s look at the steps in detail.
     Log in to your [Contentstack account](https://app.contentstack.com/#!/login) and perform the following steps to remove your extension:
 
     1.  Click the “Stacks” icon and select the stack where you’ve created your extension.
-    2.  Click “Settings” and select “Extensions”. You’ll get a list of all the extensions that you’ve created.
+    2.  Click “Settings” and select ��Extensions”. You’ll get a list of all the extensions that you’ve created.
     3.  Hover over the extension that you want to convert into an app and click the “Delete” icon.
     4.  Click “Delete” again to confirm your action.
 2.  ## Develop your Marketplace App
