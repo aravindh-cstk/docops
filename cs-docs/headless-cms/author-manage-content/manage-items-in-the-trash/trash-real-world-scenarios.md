@@ -20,7 +20,7 @@ Consider a scenario where an ecommerce company maintains details for multiple ap
 -   Kitchen Appliances
 -   Electronics
 
-Now, suppose if the “Appliances” content type comprises the following appliances (entries):
+Now, suppose if the ��Appliances” content type comprises the following appliances (entries):
 
 -   Apple iMac Laptop (Electronics)
 -   Aquasure Water Purifier (Kitchen Appliance)

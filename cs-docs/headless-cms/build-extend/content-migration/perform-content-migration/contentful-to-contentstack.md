@@ -123,7 +123,7 @@ Use the following advanced options to efficiently manage your mappings:
 -   **Select content type from destination stack**: Override the default behavior of creating new content types.
 -   **Fetch content types from destination stack**: If updates are made in the stack during migration, click the icon to fetch changes.
 
-    **Note:** If the user has created a new stack in [Step 5](/docs/headless-cms/contentful-to-contentstack#step-5-configure-destination-stack), they will not see the ‘Fetch content types from destination stack’ icon and the ‘Select Content Type from Destination Stack’ dropdown. However, if an existing stack was selected, the icons will be available.
+    **Note:** If the user has created a new stack in [Step 5](/docs/headless-cms/contentful-to-contentstack#step-5-configure-destination-stack), they will not see the ‘Fetch content types from destination stack’ icon and the ‘Select Content Type from Destination Stack��� dropdown. However, if an existing stack was selected, the icons will be available.
 
 -   **Advanced properties**: Click the ‘Advanced properties’ icon next to each field to adjust field specific properties.
 

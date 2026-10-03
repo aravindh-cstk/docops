@@ -9,7 +9,7 @@ uid: blt61c892aaab9a84aa
 
 ## Getting Started with Variants
 
-**Note:** The Entry Variants feature is available as part of the Personalize license and may not be accessible to all users. For more information, contact the [support](mailto:support@contentstack.com) team.
+**Note:** The Entry Variants feature is enabled per organization and may not be available on all plans. To have it enabled for your organization, contact the [support](mailto:support@contentstack.com) team.
 
 Variants allow you to deliver personalized content by creating multiple variations of an entry. These variations help tailor content for specific audiences based on attributes such as location, device type, or user preferences.
 
@@ -116,7 +116,7 @@ Understand how variants affect group fields, modular blocks, and sorting.
 Key considerations when working with variants:
 
 1.  **Field Limitations:** The Taxonomy field does not support variants.
-2.  **Branch Limitations:** Variants are supported only in the main branch.
+2.  **Branch Support:** Variant groups and variants are shared across all branches, while linked content types and entry variants are branch-specific. For details, refer to [Branch Support for Variants](/docs/headless-cms/branch-support-for-variants).
 3.  **Publishing with References:** When publishing entry variants, references are published up to **5 levels**.
 4.  **Delete Limitations:** Deleted entry variants cannot be restored from Trash.
 

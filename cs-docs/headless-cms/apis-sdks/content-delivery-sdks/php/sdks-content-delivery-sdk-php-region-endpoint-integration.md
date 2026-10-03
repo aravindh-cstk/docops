@@ -72,7 +72,7 @@ $host = Endpoint::getContentstackEndpoint(
     'contentDelivery',
     true
 );
-// → "eu-cdn.contentstack.com" (for region 'eu')
+// �� "eu-cdn.contentstack.com" (for region 'eu')
 
 $stack = Contentstack::Stack(
     '<API_KEY>',

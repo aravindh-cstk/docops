@@ -29,7 +29,7 @@ Each item is listed into separate tabs within the Trash view, allowing you to lo
 
 To access the Trash, login to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 
-1.  Navigate to your [stack](/docs/headless-cms/about-stack) and click the “Settings” icon, or press the shortcut key “S” (on both Windows and macOS).
+1.  Navigate to your [stack](/docs/headless-cms/about-stack) and click the ���Settings” icon, or press the shortcut key “S” (on both Windows and macOS).
 2.  Select **Trash** in the **Settings** panel or press the shortcut key “Alt + T” on Windows and “Option + T” on macOS.
 
     ![Navigating to the Trash Page](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt256109b2740a6060/687514b43db20004741d6850/1._Trash_Navigation.png)

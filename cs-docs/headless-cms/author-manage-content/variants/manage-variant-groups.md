@@ -9,7 +9,7 @@ uid: blt577fc91979a18964
 
 ## Manage Variant Groups
 
-**Note:** The Entry Variants feature is available as part of the Personalize license and may not be accessible to all users. For more information, contact the [support](mailto:support@contentstack.com) team.
+**Note:** The Entry Variants feature is enabled per organization and may not be available on all plans. To have it enabled for your organization, contact the [support](mailto:support@contentstack.com) team.
 
 The **Variants** page in Contentstack allows you to view all variant groups and the variants associated with them. Variant groups may originate from a linked **Personalize** project or be created independently within the CMS UI to support content modeling workflows.
 

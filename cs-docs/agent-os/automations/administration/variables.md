@@ -103,7 +103,7 @@ Let’s look at the setup in detail.
     7.  Click the **Save and Exit** button.
 4.  ## Test the Automation
 
-    Now, let’s see how you can test out your Automation. To do so, perform the steps given below:
+    Now, let��s see how you can test out your Automation. To do so, perform the steps given below:
 
     1.  Toggle the **Activate Automation** button to activate the automation.
     2.  Hit the trigger URL to see the response generated.

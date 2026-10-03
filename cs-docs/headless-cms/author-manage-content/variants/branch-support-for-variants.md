@@ -11,7 +11,7 @@ uid: blt32adb06b3a809c11
 
 Branch support for Variants lets you manage [variant groups](/docs/headless-cms/manage-variant-groups) and [entry variants](/docs/headless-cms/about-entry-variants) on any branch, not only the main branch. You can link [content types](/docs/headless-cms/about-content-types) and author entry variants in an isolated branch, keep those changes separate from other branches, and merge variant group configuration into another branch when ready. This is useful when you onboard to [Personalize](/docs/personalize/about-personalize) for the first time or run an A/B test and want to test personalization without affecting production content.
 
-**Note:** The Entry Variants feature is available as part of the Personalize license and may not be accessible to all users. For more information, contact the [support](mailto:support@contentstack.com) team.
+**Note:** The Entry Variants feature is enabled per organization and may not be available on all plans. To have it enabled for your organization, contact the [support](mailto:support@contentstack.com) team.
 
 ## Global and Branch-Specific Configuration
 

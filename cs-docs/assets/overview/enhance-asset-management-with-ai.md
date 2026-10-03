@@ -83,3 +83,5 @@ Benefits:
 -   Enables richer visual experiences
 
 Contentstack Assets combines AI with powerful asset management capabilities, enabling teams to work smarter, scale faster, and deliver richer digital experiences with confidence.
+
+**Additional Resource:** A space can also add tags and alt text to assets automatically as they are uploaded. Refer to [Auto-Populate AI Metadata at Upload](/docs/assets/auto-populate-ai-metadata).

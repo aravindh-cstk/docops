@@ -9,7 +9,7 @@ uid: blt9a1ec2827b2eae5e
 
 ## Update a Workflow
 
-You can update an existing workflow in Contentstack to modify its configuration as your content processes evolve. Update workflow details such as the name, description, associated branches, content types, or stage-level rules to match your team’s publishing and review needs.
+You can update an existing workflow in Contentstack to modify its configuration as your content processes evolve. Update workflow details such as the name, description, associated branches, content types, or stage-level rules to match your team���s publishing and review needs.
 
 **Note:** By default, the [Owner](/docs/headless-cms/types-of-roles#owner), [Admin](/docs/headless-cms/types-of-roles#admin), and [Developer](/docs/headless-cms/types-of-roles#developer) roles can update workflows in a stack.
 
