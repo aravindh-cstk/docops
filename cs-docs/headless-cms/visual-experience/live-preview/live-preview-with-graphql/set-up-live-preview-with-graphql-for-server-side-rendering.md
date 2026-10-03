@@ -212,7 +212,7 @@ Follow these steps to configure Live Preview with GraphQL for your SSR website:
 
 4.  ## Live Edit Tags for Entries (recommended)
 
-    Live Edit tags allow editors to directly jump from the Live Preview pane to the corresponding content fields in the entry editor. Clicking the **Edit** button next to a content block automatically opens the relevant field. If the field refers to another entry, you’ll be redirected to that entry’s editor page.
+    Live Edit tags allow editors to directly jump from the Live Preview pane to the corresponding content fields in the entry editor. Clicking the **Edit** button next to a content block automatically opens the relevant field. If the field refers to another entry, you��ll be redirected to that entry’s editor page.
 
     1.  **Process entry for live editing**
 
