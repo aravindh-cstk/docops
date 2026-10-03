@@ -63,7 +63,7 @@ The following table shows what each access level can do across common Lytics CDP
 | View project dashboard | ✅ | ✅ | ✅ |
 | Edit project name, description, domain | ✅ | ✅ | Depends on role |
 | Add or remove a connection (CMS stack, Launch, Personalize) | ✅ | ✅ | Depends on role |
-| Invite collaborators | ✅ | ✅ | Depends on role |
+| Invite collaborators | ✅ | ��� | Depends on role |
 | Change a collaborator's role | ✅ | ✅ | Depends on role |
 | Remove a collaborator | ✅ | ✅ | Depends on role |
 | Delete the project | ✅ | ✅ | ❌ |
