@@ -816,7 +816,7 @@ Facilitator delivers on screen. Attendees don't touch keyboards yet.
                             ▼
                     decompose-design skill
                             │
-         ┌──────────────────┼──────────────────┐
+         ┌──────────���─���─────┼──────────────────┐
          ▼                  ▼                  ▼
       build-section    build-section    build-connected-template
          (per Section identified)         (assembles the Template)
@@ -826,7 +826,7 @@ Facilitator delivers on screen. Attendees don't touch keyboards yet.
 
     Then, in any of the above paths:
 
-      Template ���→ open in Canvas → tweak → Save + Deploy → live URL
+      Template ─→ open in Canvas → tweak → Save + Deploy → live URL
     ```
 
     Blocks B to D exercise the individual skills. Block E exercises the orchestrator that chains them from a design.
