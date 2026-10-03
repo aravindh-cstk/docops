@@ -220,7 +220,7 @@ import { readFileSync } from "node:fs";
 import express from "express";
 
 const app = express();
-// … your routes …
+// �� your routes …
 
 createServer(
   {
