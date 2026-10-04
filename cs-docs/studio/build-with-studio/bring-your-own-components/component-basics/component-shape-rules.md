@@ -59,7 +59,7 @@ So a Group with one real field bound to an any\-typed prop silently becomes the 
 ### The anti-pattern (what developers try first)
 
 ```
-// ❌ Card is hardcoded inside CardList's render.
+// ��� Card is hardcoded inside CardList's render.
 function CardList({ cards }) {
   return (
     <div className="grid">
@@ -192,7 +192,7 @@ If a Global Field isn't the right tool for this specific case, at minimum:
 
 ```
 Component (React source)   →   Section (built once in Studio)   →   Template (assembly)
-────────────────────���─────     ──────────────────────────────      ────────────────────
+──────────────────────────     ──────────────────────────────      ────────────────────
 CardList + Card               "Card Grid Section"                  Any Template
 registered via                composed in Studio,                  drops that Section
 registerComponent()           linked to a Global Field             into position
