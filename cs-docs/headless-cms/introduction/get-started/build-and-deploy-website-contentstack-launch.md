@@ -293,7 +293,7 @@ CONTENTSTACK_CDN_HOST="cdn.contentstack.io"
 CONTENTSTACK_CONTENT_TYPE_UID="homepage"
 CONTENTSTACK_ENTRY_UID="<ENTRY_UID>"
 
-# Optional — add only if your stack requires an explicit locale:
+# Optional �� add only if your stack requires an explicit locale:
 # CONTENTSTACK_LOCALE="en-us"
 ```
 

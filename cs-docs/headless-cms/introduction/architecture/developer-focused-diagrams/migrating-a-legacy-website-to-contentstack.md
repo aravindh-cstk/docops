@@ -379,7 +379,7 @@ Organizations planning to standardize on Launch as their primary edge platform m
 | Vendor footprint | CDN + Launch | Launch |
 | Existing WAF and bot protection | Preserved | Recreated in Launch |
 | Additional caching | Migrated routes only | Unmigrated routes |
-| Recommended approach | ✓ Yes | Use when replacing the existing CDN |
+| Recommended approach | ��� Yes | Use when replacing the existing CDN |
 
 ## Adding Personalize and Lytics
 
