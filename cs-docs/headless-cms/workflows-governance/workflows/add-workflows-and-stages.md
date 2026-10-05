@@ -100,7 +100,7 @@ Superusers have elevated privileges within a workflow.
 1.  Click the **Superusers** dropdown and select one or more users to grant superuser permissions.
 2.  They can move entries between any stages and edit or delete entries without restrictions.
 3.  You can add multiple users, but not roles.
-4.  Organization and stack owners are superusers by default.
+4.  Stack owners are superusers by default. The organization owner role alone does not make a user a superuser. Organization owners need the stack Owner role or must be added as superusers.
 5.  Superuser permissions apply only to entries within the associated content types.
 6.  Only admins, owners, or developers can edit workflow settings.
 

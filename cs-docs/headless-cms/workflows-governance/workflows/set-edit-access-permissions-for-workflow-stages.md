@@ -28,4 +28,4 @@ To set edit access permissions on an entry that has been moved to a particular W
 
 6.  Once you have made the changes, click on **Done** and then **Save** the workflow changes.
 
-**Note:** Workflow [superusers](/docs/headless-cms/add-workflows-and-stages#add-workflow-superusers), [organization owners](/docs/administration/about-administration-roles#organization-owner), and stack [owners](/docs/headless-cms/types-of-roles#owner)/[admins](/docs/headless-cms/types-of-roles#admin) can edit or delete the entry in any workflow stage, irrespective of the stage access rules set for that stage.
+**Note:** Workflow [superusers](/docs/headless-cms/add-workflows-and-stages#assign-superusers) and stack [owners](/docs/headless-cms/types-of-roles#owner)/[admins](/docs/headless-cms/types-of-roles#admin) can edit or delete the entry in any workflow stage, irrespective of the stage access rules set for that stage. The [organization owner](/docs/administration/about-administration-roles#organization-owner) role alone does not grant this access. Stage access rules still apply unless the organization owner also holds one of these stack-level roles.
