@@ -101,7 +101,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   │   ├── useAppSdk.tsx
 │   │   │   ├── useCustomField.test.tsx
 │   │   │   ├── useCustomField.tsx
-│   │   │   ├── useEntry.tsx
+│   ���   │   ├── useEntry.tsx
 │   │   │   ├── useFrame.ts
 │   │   │   ├── useHostUrl.ts
 │   │   │   ├── useInstallationData.tsx
@@ -179,7 +179,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   ├── react-app-env.d.ts
 │   └── setupTests.ts
 │
-├���─ CODEOWNERS
+├── CODEOWNERS
 ├── global-setup.ts
 ├── global-teardown.ts
 ├── index.html
