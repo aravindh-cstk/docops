@@ -2,6 +2,7 @@
 title: "Build Image"
 description: "Learn about Build Image used in Contentstack Launch."
 url: /launch/build-image
+uid: blt02da36083349b482
 ---
 
 # Build Image
@@ -15,3 +16,5 @@ Launch uses the linux/amd64 node:<version>-bullseye-slim base image during deplo
 ## Pre-installed Packages
 
 Launch provides a pre-configured build environment with essential tools and packages like [build-essential](https://packages.ubuntu.com/focal/build-essential) and [Python3](https://www.python.org).
+
+**Note:** The Node.js base images used by Launch are updated to the latest minor and patch releases once a month, during the first week. To pick up the updated image and its security fixes, redeploy your project after each monthly update.

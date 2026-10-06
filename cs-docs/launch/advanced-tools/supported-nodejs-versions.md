@@ -2,6 +2,7 @@
 title: "Supported Node.js Versions"
 description: "Get to know the supported Node.js versions in Contentstack Launch."
 url: /launch/supported-nodejs-versions
+uid: blt1eeb4a64373b2a09
 ---
 
 # Supported Node.js Versions
@@ -18,7 +19,8 @@ The following are the available [Node.js](https://nodejs.org/en/download/) versi
 
 **Note**:
 
--   Only major long-term support (LTS) versions are supported. Contentstack Launch will automatically update to the latest minor versions and security patches.
+-   Launch updates each supported Node.js version to its latest minor and patch release once a month, during the first week. Existing projects get the update only when they are redeployed, so redeploy your projects after each monthly update to pick up the latest security fixes.
+-   Only major long-term support (LTS) versions are supported. Launch updates these versions to the latest minor and patch releases monthly, and projects pick them up on their next deployment.
 -   If your site uses an unsupported Node.js version, update it before redeploying. Launch does not upgrade Node.js automatically for existing deployments if the "engines" field is missing in package.json. This safeguard is intentional to prevent unexpected issues from incompatible Node.js libraries. Redeployments will fail until a supported version (for example, Node.js 22 or 24) is explicitly specified in package.json.
 
 ## Setting the Node.js Version in the package.json File
