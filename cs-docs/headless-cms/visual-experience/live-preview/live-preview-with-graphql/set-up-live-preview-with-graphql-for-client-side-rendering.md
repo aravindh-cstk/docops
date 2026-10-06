@@ -26,7 +26,7 @@ Follow these steps to configure Live Preview with GraphQL for your CSR website:
 
     1.  ### Generate a Preview Token
 
-        Create a preview token by navigating to **Settings** > **Tokens** > **Delivery Tokens** (press “Alt + O” for Windows or ��Option + O” for Mac).
+        Create a preview token by navigating to **Settings** > **Tokens** > **Delivery Tokens** (press “Alt + O” for Windows or “Option + O” for Mac).
 
         **Note:** It is recommended to use a preview token for Live Preview instead of a previously utilized, read-only management token.
 
@@ -99,7 +99,7 @@ Follow these steps to configure Live Preview with GraphQL for your CSR website:
 
     3.  ### Update the GraphQL URL and Headers
 
-        To enable Live Preview in the preview panel, update the GraphQL API’s hostname dynamically based on the presence of a hash.
+        To enable Live Preview in the preview panel, update the GraphQL API���s hostname dynamically based on the presence of a hash.
 
         **Example:** Basic configuration for GraphQL requests
 

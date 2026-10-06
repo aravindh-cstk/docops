@@ -56,7 +56,7 @@ Let’s look at the steps in detail.
 
     To create a webhook, perform the steps given below:
 
-    1.  Click on the “Settings” 'icon on the left navigation panel and select **Webhooks**. A list of all previously created environments for the stack will be displayed.
+    1.  Click on the “Settings��� 'icon on the left navigation panel and select **Webhooks**. A list of all previously created environments for the stack will be displayed.
     2.  Click on the **\+ New Webhook** link at the top-right side of the page.
     3.  Add the required details in all the fields. In Step 2. B. 2 given below, you will learn how to generate the URL for the **URL to notify** field. As of now, you can put a placeholder and proceed with the remaining steps. However, make sure you replace the placeholder URL with the actual URL once you create one in the next step.
     4.  Add the parameters in the **When** section as given below.  
@@ -64,7 +64,7 @@ Let’s look at the steps in detail.
         -   **Any**: ‘Any’ (no change)
         -   **Select Module:** ‘Entry’
         -   **Select Content Type (Optional)**: Select a content type only if needed, else leave it blank
-        -   **Select Action**: ‘Created���
+        -   **Select Action**: ‘Created’
 
         Click on the ‘**+**’ (plus) icon to add another condition, and enter the following details:
 
