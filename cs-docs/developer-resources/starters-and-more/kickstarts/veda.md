@@ -349,7 +349,7 @@ kickstart-veda/
 ├── public/
 ├── .env.example
 ├── next.config.mjs
-├── package.json
+├���─ package.json
 ├── postcss.config.mjs
 ├── tsconfig.json
 ├── updateLaunchConfig.mjs
