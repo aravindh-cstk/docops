@@ -53,7 +53,7 @@ You can set [this validation rule](/docs/headless-cms/allow-images-only) to the 
 
 You can set the [Allowed file type(s)](/docs/headless-cms/allowed-file-types) validation rule to specify the file types that users can upload. Setting this option will validate every file that the user will upload.
 
-Once you set the permitted file types for a field, users will not upload any other file types apart from the ones mentioned in this validation rule. Let’s say if you set the values as ��pdf, png, md”, the user will only be able to upload files PDF documents, PNG graphic images, and Markdown files.
+Once you set the permitted file types for a field, users will not upload any other file types apart from the ones mentioned in this validation rule. Let’s say if you set the values as “pdf, png, md”, the user will only be able to upload files PDF documents, PNG graphic images, and Markdown files.
 
 You can set this validation rule to the File field.
 
@@ -96,7 +96,7 @@ Validation rules can be defined by specifying custom validation regular expressi
     ```
 
 
-**Note:** The above code will check if the entered value is in one of the “dd/mm/yyyy”, “dd-mm-yyyy”, or “dd.mm.yyyy” formats. It will also validate leap years.  
+**Note:** The above code will check if the entered value is in one of the “dd/mm/yyyy”, “dd-mm-yyyy”, or ���dd.mm.yyyy” formats. It will also validate leap years.  
 Learn more about [regular expressions](https://www.regular-expressions.info/).
 
 ## Custom Error Message
