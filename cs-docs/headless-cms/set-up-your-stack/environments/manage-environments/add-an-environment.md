@@ -15,7 +15,7 @@ An [Environment](/docs/headless-cms/about-environments) is a content delivery de
 
 To add an Environment, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 
-1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Settings” icon in the left navigation panel or use the shortcut key “S” (for Windows and Mac OS users).
+1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Settings�� icon in the left navigation panel or use the shortcut key “S” (for Windows and Mac OS users).
 2.  Navigate to **Environments** or use the “alt + E” shortcut key for Windows and “option + E” for Mac OS.
 3.  Click on **\+ New Environment.**
 
