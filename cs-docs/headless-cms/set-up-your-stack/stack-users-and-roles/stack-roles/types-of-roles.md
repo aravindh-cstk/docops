@@ -17,7 +17,7 @@ Let’s understand these roles in detail.
 
 Each stack can have only one Owner. [Creating a stack](/docs/headless-cms/create-a-new-stack) in Contentstack makes you the Owner of the stack. The Owner has the following rights:
 
--   Complete rights to the content and settings of a stack in addition to the combined rights of an "Admin", “Developer” and a “Content Manager.”
+-   Complete rights to the content and settings of a stack in addition to the combined rights of an "Admin", “Developer��� and a “Content Manager.”
 -   Right to delete a stack
 -   Can create delivery and management tokens
 -   Transfer the ownership of the stack to another user.
