@@ -17,7 +17,7 @@ These languages are either country-specific languages, area-specific languages,
 
 ## Country-specific Languages
 
-Country-specific languages are languages that are used in a country. A country can have multiple languages, and a language can be used in multiple countries. Hence, we support various combinations of countries and languages. Examples of country-specific languages include “English - United States,” “English - United Kingdom, ” “French - Canada,” “Spanish - Spain,” and ���Spanish - Peru.”
+Country-specific languages are languages that are used in a country. A country can have multiple languages, and a language can be used in multiple countries. Hence, we support various combinations of countries and languages. Examples of country-specific languages include “English - United States,” “English - United Kingdom, ” “French - Canada,” “Spanish - Spain,” and “Spanish - Peru.”
 
 ## Area-Specific Languages
 
@@ -25,7 +25,7 @@ Area-specific languages are languages that are used in geographically supranatio
 
 With area-specific languages, you can create content that caters to a specific continent or a group of politically or economically influential countries (for example, all Latin American regions). An area code consists of a language code (for example, en) and a 3-digit number (for example, 419) that identifies a specific region.
 
-Examples of area-specific languages include “English - Central America,” “English - Western Europe, ” “French - Northern Europe,” “Spanish - Latin America,” and “Spanish - South America.”
+Examples of area-specific languages include “English - Central America,” “English - Western Europe, �� “French - Northern Europe,” “Spanish - Latin America,” and “Spanish - South America.”
 
 ## Generic Languages
 
