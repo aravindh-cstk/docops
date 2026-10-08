@@ -110,7 +110,7 @@ Asset permissions are divided into the following categories:
 
     For example:
 
-    -   Allow a role to **Read** the ��Blogs” folder.
+    -   Allow a role to **Read** the “Blogs” folder.
     -   Allow a role to **Read** and **Publish/Unpublish** the “Homepage” folder.
 
 ## Permissions on Languages
@@ -166,7 +166,7 @@ Entry exceptions are divided into the following categories:
 
     Use this option to restrict actions on selected entries.
 
-    For example, allow a role to read all entries but restrict updates to the “AI” entry from the “Marketing Blogs” content type.
+    For example, allow a role to read all entries but restrict updates to the ��AI” entry from the “Marketing Blogs” content type.
 
 -   **Specific Fields**
 
