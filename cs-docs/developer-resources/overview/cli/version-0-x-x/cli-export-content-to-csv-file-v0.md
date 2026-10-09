@@ -44,7 +44,7 @@ You can export content into a .csv file by performing the following two steps:
     **Additional Resource:** To learn more about the login command, refer to the [Login command section](/docs/headless-cms/cli-authentication/v0#login).
 
     ![login.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt73f5044ed2d4b1ff/6047bb9608636f3d7749c6a6/login.png)
-2.  ## Use the ‘cm:export-to-csv’ command
+2.  ## Use the ���cm:export-to-csv’ command
 
     Now that you are logged in to Contentstack, let’s export content from the source stack in a CSV file by running the following command in your terminal:
 
