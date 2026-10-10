@@ -41,7 +41,7 @@ Env-var prefix depends on your framework:
 | Framework | Prefix |
 | --- | --- |
 | Next.js | NEXT\_PUBLIC\_… |
-| Vite / React | VITE\_… (read via import.meta.env.VITE\_…) |
+| Vite / React | VITE\_… (read via import.meta.env.VITE\_��) |
 | Remix | process.env.… |
 | CRA | REACT\_APP\_… |
 
