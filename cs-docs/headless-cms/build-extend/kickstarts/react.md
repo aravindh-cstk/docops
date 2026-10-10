@@ -309,7 +309,7 @@ The sections below map the runtime flow to the repository layout, build tooling,
 ```
 kickstart-react/
 ├── index.html
-├── src/
+���── src/
 │   ├── App.tsx
 │   ├── main.tsx
 │   ├── index.css
