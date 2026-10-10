@@ -292,11 +292,11 @@ Use the following section to map those flows to files in the repository.
 ```
 kickstart-sveltekit/
 ├── src/
-�� ├── app.css
+│ ├── app.css
 │ ├── app.d.ts
 │ ├── app.html
 │ ├── lib/
-│ │ ├── index.ts
+│ │ ���── index.ts
 │ │ └── types.ts
 │ └── routes/
 │ ├── +layout.svelte
