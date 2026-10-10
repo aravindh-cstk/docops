@@ -288,7 +288,7 @@ blog_post
 │   ├── subhead           (single line)
 │   └── cta               (Group)
 │       ├── label         (single line)
-│       └── href          (URL)
+│       └���─ href          (URL)
 ├── body_sections         (Modular Block — allowed block-types: text_block, image_block)
 │   ├── text_block  → { body: rich text, align: choice }
 │   └── image_block → { image: file, caption: single line }
