@@ -78,7 +78,7 @@ Action 2: Select the **Create an Issue** action:
     3.  Click **Create API token**.  
         ![Jira-API-Dashboard.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt43f0cea33a8ef66a/63dd0138f4b2e369e5c73021/Jira-API-Dashboard.png)
     4.  Provide a **Label** for the token and click **Create**.
-    5.  **Copy** this token and save it somewhere as you won’t be available to view it once you close the modal.  
+    5.  **Copy** this token and save it somewhere as you won��t be available to view it once you close the modal.  
 
         **Note:** For more information on API Tokens, refer to the How to create API Tokens in JIRA document.
 
