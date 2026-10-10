@@ -18,7 +18,7 @@ Let’s dive deep into how this model will help you create your company’s “P
     The Product Listing Page content model includes three main sections:
 
     -   The “Product Listing Page” hero banner
-    -   The “Products List” section cards
+    -   The ���Products List” section cards
     -   The “Related Products” list
 
     Here’s how your Product Listing Page will look like on your website:
@@ -31,7 +31,7 @@ Let’s dive deep into how this model will help you create your company’s “P
     ![Identifying_Content_Model_for_the_Product_Listing_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5c3c3db2b868d5e6/65360c112c35818546b39907/Identifying_Content_Model_for_the_Product_Listing_Page.png)
 3.  ## Developing Content Type
 
-    The ��Product Listing Page” content model contains the following set of fields. Let’s look in detail at what content types and fields were used to create the model.
+    The “Product Listing Page” content model contains the following set of fields. Let’s look in detail at what content types and fields were used to create the model.
 
     **Product Listing Page** Content Type:
 
