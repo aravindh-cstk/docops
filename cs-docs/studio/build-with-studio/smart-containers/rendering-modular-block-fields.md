@@ -54,7 +54,7 @@ Bindings inside each branch:
 | hero | Hero | headline → repeater.headline, image → repeater.image, ctaLabel → repeater.cta\_label |
 | feature\_grid | FeatureGrid | heading → repeater.heading, items → repeater.features (a nested list) |
 | quote | Quote | text → repeater.text, attribution → repeater.attribution |
-| cta | CTA | label → repeater.label, url → repeater.url, variant → repeater.style |
+| cta | CTA | label → repeater.label, url ��� repeater.url, variant → repeater.style |
 
 Given an entry whose body\_blocks is \[hero, quote, feature\_grid, quote, cta\], the canvas (with Preview Mode on the Repeater) renders exactly that: Hero, Quote, FeatureGrid, Quote, CTA, in that order.
 
