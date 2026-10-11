@@ -259,7 +259,7 @@ Let's follow this step-by-step guide to install and configure the Wordbee app wi
 
     To install the app in your stack, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow the steps below:
 
-    1.  Navigate to the “App Switcher” icon in the top-right corner and click **Marketplace**.![Contentstack-App-Switcher-Marketplace](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt47c618781b542b64/68ee96ad6bfd93c9913fee8a/Contentstack-App-Switcher-Marketplace.png)
+    1.  Navigate to the “App Switcher��� icon in the top-right corner and click **Marketplace**.![Contentstack-App-Switcher-Marketplace](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt47c618781b542b64/68ee96ad6bfd93c9913fee8a/Contentstack-App-Switcher-Marketplace.png)
     2.  Click **Apps** from the left panel.
     3.  Within the Marketplace, you can see all available apps. Hover over the **Wordbee** app and click **Install**.![5-Wordbee-App](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt295654d31c596798/68acc4f7b3421a7779096ef0/5-Wordbee-App.png)
     4.  In the pop-up window, select the stack where you want to install the Wordbee app, scroll down, accept the **Terms of Service**, and click the **Authorize & Install** button.![6-Wordbee-App-Install](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt40185bcc525382b9/666814beabe4398438d17c3f/6-Wordbee-App-Install.png)

@@ -17,7 +17,7 @@ As an organization grows, assigning and maintaining roles for each user across s
 
 -   **Bulk role assignment**: Assign roles to a group of users in a single action instead of configuring each user individually.
 -   **Consistent permissions**: Every member of a team shares the same set of roles, which keeps access predictable and easier to audit.
--   **Organization, product, and project-level roles**: Assign organization-level Administration roles and product roles across the CMS, Assets, and AgentOS, along with project-level roles for individual stacks, spaces, or AgentOS projects.
+-   **Organization, product, and project-level roles**: Assign organization-level Administration roles and product roles across the CMS and Assets, along with project-level roles for individual stacks or spaces.
 -   **Additive role inheritance**: A user who belongs to more than one team inherits the combined roles of all those teams.
 -   **Centralized governance**: Teams are managed under Administration, so access stays under organization-level control.
 
@@ -39,7 +39,7 @@ You access **Teams** under **Administration** through the "App Switcher". Teams 
 ![Teams option in Contentstack Administration](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/blt4dfdc86f847dc591/0d09b3f545bd2512639a48ac/Admins-teams.png?locale=en-us)
 
 -   **Who can manage teams**: The organization Owner and Admin can create, edit, and delete teams. The Security Manager role can view teams but cannot manage them.
--   **Role assignment**: Each team must have at least one Administration role. You can also assign product roles per product and project-level roles per stack, space, or AgentOS project.
+-   **Role assignment**: Each team must have at least one Administration role. You can also assign product roles per product and project-level roles per stack or space.
 -   **Role inheritance**: A user who belongs to multiple teams inherits the roles from all of them. If two teams assign different roles for the same project, the user holds both.
 -   **Stack ownership precedence**: If a user is the owner of a stack, the owner permission takes precedence over any stack-level role assigned through a team.
 -   **Reflected in Users and Roles**: Roles assigned through a team also appear under the [Users and Roles](/docs/administration/about-administration-roles) module.

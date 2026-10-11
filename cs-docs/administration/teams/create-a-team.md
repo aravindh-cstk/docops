@@ -9,7 +9,7 @@ uid: blt27b6e088bfdbdc9e
 
 ## Create a Team
 
-A team lets you assign organization-level Administration roles and product roles across the CMS, Assets, and AgentOS to a group of users at once. Use teams to manage permissions consistently across your organization without assigning roles to each user individually.
+A team lets you assign organization-level Administration roles and product roles across the CMS and Assets to a group of users at once. Use teams to manage permissions consistently across your organization without assigning roles to each user individually.
 
 ### Prerequisites
 
@@ -55,14 +55,7 @@ To create a team, log in to your [Contentstack account](https://www.contentstack
         4.  In the **Roles Per Spaces** section, you can assign different roles per space.
 
         5.  After setting up the Assets roles, click **Save**.
-    3.  #### AgentOS Roles
-
-        1.  Under the **AgentOS** section, click **\+ Manage Roles**.
-
-        2.  Select the AgentOS projects and choose the roles (**AgentOS Admin**, **AgentOS Member**) for each.
-
-        3.  After setting up the AgentOS roles, click **Save**.
-    4.  #### Administration Roles
+    3.  #### Administration Roles
 
         1.  Under the **Administration** section, click **\+ Manage Roles**.
 

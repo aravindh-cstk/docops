@@ -394,7 +394,7 @@ get_contentstack_endpoint(region, service, omit_https)
         ├── Yes ──► return endpoints hash (optionally strip https)
         │
         └── No  ──► look up service key
-                        ├── Not found ──► raise ArgumentError
+                        ├��─ Not found ──► raise ArgumentError
                         └── Found ──► return URL (optionally strip https)
 ```
 

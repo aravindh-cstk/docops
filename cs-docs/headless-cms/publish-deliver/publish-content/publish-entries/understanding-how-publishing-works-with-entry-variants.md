@@ -9,7 +9,7 @@ uid: blt68425c2eea23c2c8
 
 ## Understanding How Publishing Works with Entry Variants
 
-**Note:** The Entry Variants feature is currently available as part of an Early Access Program and may not be available to all users. For more information, you can reach out to our [support](mailto:support@contentstack.com) team.
+**Note:** The Entry Variants feature is enabled per organization and may not be available on all plans. To have it enabled for your organization, contact the [support](mailto:support@contentstack.com) team.
 
 The Entry Variants feature allows you to create multiple versions of a single entry, each tailored for specific audiences, campaigns, or contexts. This document outlines how publishing interacts with entry variants, ensuring you deliver the right content to the right [audience](/docs/personalize/about-audiences).
 

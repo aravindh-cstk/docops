@@ -20,7 +20,7 @@ Let’s dive deep into how the “Blog Landing Page” content model will help y
     1.  The “Blog” hero banner
     2.  The “Blog Content” section including the release date and the Author name
     3.  The “Related Post” section displaying the Other Blog References
-    4.  The “Social Sharing” section with links to most-used social media apps
+    4.  The “Social Sharing�� section with links to most-used social media apps
 
     Here’s how your “Blog Landing Page" will look like on your website  
 

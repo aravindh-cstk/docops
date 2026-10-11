@@ -133,7 +133,7 @@ $url = Endpoint::getContentstackEndpoint('us', 'contentDelivery');
 $url = Endpoint::getContentstackEndpoint('azure_na', 'contentDelivery');
 // → "https://azure-na-cdn.contentstack.com"
 
-// Case-insensitive — 'EU' resolves to 'eu'
+// Case-insensitive �� 'EU' resolves to 'eu'
 $url = Endpoint::getContentstackEndpoint('EU', 'contentDelivery');
 // → "https://eu-cdn.contentstack.com"
 ```

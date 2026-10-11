@@ -62,7 +62,7 @@ The following cached data will be purged:
 
 ## Edit and Publish the Company Logo
 
-Suppose if the content manager replaces the existing company logo in the “Home Page” content type with the latest version. Once done, the content manager publishes the “English (United States)” version of the company logo to all the three available locales and on the “Staging” and “Production” environments.
+Suppose if the content manager replaces the existing company logo in the “Home Page” content type with the latest version. Once done, the content manager publishes the “English (United States)” version of the company logo to all the three available locales and on the “Staging” and “Production��� environments.
 
 The following cached data will be purged:
 

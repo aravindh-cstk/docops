@@ -27,7 +27,7 @@ If you are using Contentstack Ruby SDK, then “contentstack/utils” is already
 
 ## Usage
 
-Let’s learn how you can use Utils SDK to render embedded items.
+Let��s learn how you can use Utils SDK to render embedded items.
 
 ### Create Render Option:
 

@@ -25,7 +25,7 @@ Let’s dive deep into how this model will help you create your company’s Webs
     -   The “Testimonials” section
     -   The “Website footer” at the bottom
 
-    The Website Homepage Content Model makes use of six additional content types - “**Author**”, “**Blog Landing Page**”, “**Contact Us**”, “**Hero Banner**”, “**Homepage**”, “**Our Team**” and six global fields - **SEO**, **Social Share**, **Section With HTML Code**, **Section With Cards**, **Section**, **Section With Buckets**.
+    The Website Homepage Content Model makes use of six additional content types - “**Author**”, “**Blog Landing Page**”, “**Contact Us**��, “**Hero Banner**”, “**Homepage**”, “**Our Team**” and six global fields - **SEO**, **Social Share**, **Section With HTML Code**, **Section With Cards**, **Section**, **Section With Buckets**.
 
     Here’s how your homepage will look like on your website:  
 

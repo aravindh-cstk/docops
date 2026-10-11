@@ -55,7 +55,7 @@ Group fields can organize related fields into survey or questionnaire sections. 
 
 For example, to create a Mental Health Survey form, log in to your [Contentstack account](https://www.contentstack.com/login/), and perform the following steps:
 
-1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Content Models” icon.
+1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Content Models�� icon.
 2.  Insert a **Group** field and name it **Mental Health Survey**.
 3.  Configure additional properties. To allow multiple surveys, enable the **Multiple** option under **Advanced**.
 4.  Add the following fields inside the Group field:
