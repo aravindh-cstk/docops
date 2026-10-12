@@ -82,7 +82,7 @@ return $this;
 
 ## Add Custom Middleware
 
-A middleware means that any HTTP request for that route must pass through it, making it useful for determining whether a user has the required permissions or meets a set of criteria, etc. ”A middleware means that any HTTP request for that route must pass through it, making it useful for checking if a user has permissions or meets a criteria etc”.
+A middleware means that any HTTP request for that route must pass through it, making it useful for determining whether a user has the required permissions or meets a set of criteria, etc. ���A middleware means that any HTTP request for that route must pass through it, making it useful for checking if a user has permissions or meets a criteria etc”.
 
 
 
