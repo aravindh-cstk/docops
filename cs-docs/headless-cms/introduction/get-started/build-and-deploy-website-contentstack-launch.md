@@ -198,7 +198,7 @@ Before moving to the next step, confirm you have all of the following values:
 | Value | Where to Find It |
 | --- | --- |
 | Stack API Key | Settings → Stack |
-| Delivery Token | Settings → Tokens → Delivery Tokens |
+| Delivery Token | Settings → Tokens �� Delivery Tokens |
 | Environment name | Settings → Environments (copy exactly) |
 | Content Type UID | Content Models → open the content type |
 | Entry UID | Content → open the entry → entry details sidebar |
@@ -293,7 +293,7 @@ CONTENTSTACK_CDN_HOST="cdn.contentstack.io"
 CONTENTSTACK_CONTENT_TYPE_UID="homepage"
 CONTENTSTACK_ENTRY_UID="<ENTRY_UID>"
 
-# Optional �� add only if your stack requires an explicit locale:
+# Optional — add only if your stack requires an explicit locale:
 # CONTENTSTACK_LOCALE="en-us"
 ```
 
