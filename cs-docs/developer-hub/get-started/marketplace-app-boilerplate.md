@@ -101,7 +101,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   │   ├── useAppSdk.tsx
 │   │   │   ├── useCustomField.test.tsx
 │   │   │   ├── useCustomField.tsx
-│   ���   │   ├── useEntry.tsx
+│   │   │   ├── useEntry.tsx
 │   │   │   ├── useFrame.ts
 │   │   │   ├── useHostUrl.ts
 │   │   │   ├── useInstallationData.tsx
@@ -190,7 +190,7 @@ MARKETPLACE-APP-BOILERPLATE/
 ├── playwright.config.ts
 ├── README.md
 ├── SECURITY.md
-├── tsconfig.json
+���── tsconfig.json
 ├── tsconfig.node.json
 └── vite.config.ts
 ```
