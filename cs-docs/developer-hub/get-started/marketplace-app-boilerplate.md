@@ -150,7 +150,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   │   ├── StackDashboard.css
 │   │   │   └── StackDashboard.tsx
 │   │   ├── FieldModifier/
-│   │   │   ├── FieldModifier.module.css
+│   │   │   ├─�� FieldModifier.module.css
 │   │   │   └── FieldModifier.tsx
 │   │   ├── FullPage/
 │   │   │   ├── FullPage.css
@@ -190,7 +190,7 @@ MARKETPLACE-APP-BOILERPLATE/
 ├── playwright.config.ts
 ├── README.md
 ├── SECURITY.md
-���── tsconfig.json
+├── tsconfig.json
 ├── tsconfig.node.json
 └── vite.config.ts
 ```
