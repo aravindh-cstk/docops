@@ -70,7 +70,7 @@ To delete an existing referenced custom attribute, log in to your [Contentstack 
     -   Click the audience name, or
     -   Click the vertical ellipses under **Actions** and select **Edit**.![Open an audience from the Audiences tab](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta7e3ee405ecc3bb2/68c10c6707b4fa0e0538cd0c/Audience-attribute-delete.png)
 
-    **Note:** To delete custom attributes from a referenced audience, ensure that the experience associated with that audience is in ‘Draft’ status.
+    **Note:** To delete custom attributes from a referenced audience, ensure that the experience associated with that audience is in ���Draft’ status.
 
 5.  In the **Audience** page, scroll to the **Rules** section and then click the **Delete** icon next to the preferred custom attribute from the list.![Delete icon next to a custom attribute in the Rules section](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdtBi_SNyrZXK4ezg1oc90NVzfvVdyaoBb_b2r48hht_AysKVLTD7Ep9s1R--TziPKl2MbHTv0fhJ1fsoqyckBHRsjTCFNgNBMBTTIh2ctnB8G30jKB4ZlZLIycXjc3c3gFYZedUtSqd7egAlU5D0HhgiI?key=hKIHfQblcnnfErhXCzHF4w)
 6.  Once you have done that, click the **Save** button.
