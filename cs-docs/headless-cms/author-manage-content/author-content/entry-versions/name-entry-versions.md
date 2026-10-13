@@ -19,7 +19,7 @@ To name an entry version, log in to your [Contentstack account](https://www.cont
 
 1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Entries” icon.
 2.  Navigate to the entry you want to modify.
-3.  Click the version icon in the top-right corner of the entry editor, or use the “Versions” icon in the right sidebar to open the **Version History** panel.
+3.  Click the version icon in the top-right corner of the entry editor, or use the “Versions��� icon in the right sidebar to open the **Version History** panel.
 4.  Locate the version you want to name. Hover over it and click the “Rename” icon.
 5.  Enter a custom name and confirm your changes by pressing “Enter” on your keyboard.
 
