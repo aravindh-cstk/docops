@@ -9,8 +9,6 @@ uid: blta0a59556182aa043
 
 ## Key Concepts
 
-# Key Concepts
-
 This guide introduces the core concepts used in Personalize. It provides definitions and context to help you understand how experiences, audiences, variants, attributes, and events work together to deliver personalization.
 
 ## Experiences
@@ -119,7 +117,7 @@ Testing two "Buy Now" buttons can show which design generates more clicks.
 
 ### Targeting
 
-Targeting determines who sees a given variant. You define it directly on the experience as a set of rules, evaluated for each visitor in real time, with no separate audience resource required.
+Targeting determines who sees a given variant. You define it directly on the experience as a set of rules, evaluated for each visitor in real time, with no separate audience resource required (in Personalize).
 
 A rule evaluates a single condition about a visitor, such as their country, device, a query parameter, a custom attribute you've defined, or their membership in a Lytics audience or [Lytics flow state](https://www.contentstack.com/docs/personalize/key-concepts#lytics-flow-states). Combine rules with AND/OR logic to express exactly who qualifies.
 
@@ -132,7 +130,7 @@ A targeting rule can reference:
 
 -   **Attributes**: preset attributes such as country, region, city, device type, operating system, referrer, and query parameters, plus any custom attribute you've defined.
 -   **Audiences**: an existing [Lytics audience](https://docs.lytics.com/docs/audiences) or [Personalize audience (legacy)](https://www.contentstack.com/docs/personalize/about-audiences#personalize-audiences-legacy), when you want to reuse a definition you already have.
--   **Lytics flow states**: where a visitor is in a Lytics flow.
+-   **Lytics flow personalization keys**: where a visitor is in a Lytics flow.
 
 **Example:** a variant can target "visitors in the US on a mobile device" directly, with no audience to create first.
 
@@ -140,7 +138,7 @@ See [Targeting](https://www.contentstack.com/docs/personalize/targeting) for the
 
 Projects that already have Personalize audiences (legacy) can still reference one from within a rule. New projects, and projects that never created an audience, don't have Personalize audiences (legacy) available and use targeting exclusively. Contact Contentstack Support if you need legacy audience access.
 
-#### Lytics Flow States
+#### Lytics Flow Personalization Keys
 
 A Lytics flow state describes where a visitor is in a Lytics flow, such as an onboarding sequence or an abandoned-cart journey.
 
@@ -206,7 +204,7 @@ Personalize audiences (legacy) are evaluated at the edge and are designed for fi
 
 **What does a Personalize audience (legacy) offer?**
 
-For new targeting, define rules directly on the experience with [Targeting](https://www.contentstack.com/docs/personalize/targeting) instead of creating an audience first. You can still reference an existing Personalize audience (legacy) from within a rule if you already have one.
+For new targeting, define rules directly on the experience with [Targeting](https://www.contentstack.com/docs/personalize/targeting) instead of creating an audience first. You can still reference an existing Personalize audience (legacy) from within a rule if you already have one. Existing projects that use Personalize Audiences will continue to work as they do today. To support backward compatibility, you can still create and edit Legacy Audiences in these projects. New projects, however, will not support Legacy Audiences.
 
 1.  **Contextual attributes:** Contextual attributes are pieces of information that are available directly from the user's browser in their very first request to your website. Because this data doesn't need to be looked up in a separate database, Personalize can act on it with zero latency at the edge. This makes it the perfect tool for making a strong first impression.
 2.  **Custom Attributes:** Use custom attributes defined in Personalize to tailor content on first page render. This could be useful when you don't want to wait until syncing of the attributes are done at the edge, but rather reflect that user context on the page immediately.

@@ -23,7 +23,7 @@ An [Experience](https://www.contentstack.com/docs/personalize/about-experiences)
 
 ## Personalize Audiences (Legacy)
 
-An [Audience](https://www.contentstack.com/docs/personalize/about-audiences) is a group of users, defined using a rule builder in Personalize. For most new targeting, define rules directly on the experience with [Targeting](https://www.contentstack.com/docs/personalize/targeting) instead. You can still reference an existing audience from within a rule, or use it the legacy way if your project already has one.
+An [Audience](https://www.contentstack.com/docs/personalize/about-audiences) is a group of users, defined using a rule builder in Personalize. For most new targeting, define rules directly on the experience with [Targeting](https://www.contentstack.com/docs/personalize/targeting) instead. You can still reference an existing audience from within a rule, or use it the legacy way if your project already has one. However, we recommend switching to Lytics audiences, the new way to target users. Lytics audiences let you view and inspect audiences, their attributes, and their membership.
 
 ## Variants
 
@@ -39,7 +39,7 @@ Here the mapping is as follows:
 
 cs\_personalize: The prefix denoting that Personalize created the variant.
 
-a: Experience Short UID
+a: Experience Short UID
 
 0: The activated Variant Short UID
 
