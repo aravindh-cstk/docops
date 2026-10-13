@@ -20,7 +20,7 @@ The **Compare** feature provides a way to compare two branches: a Base branch an
 When comparing two branches, you can see:
 
 -   All the differences between the branches’ content types and global fields
--   All the differences between the branches’ content types only
+-   All the differences between the branches��� content types only
 -   All the differences between the branches’ global fields only
 -   All the differences between a specific content type in both branches
 -   All the differences between a specific global field in both branches

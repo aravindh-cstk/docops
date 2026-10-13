@@ -29,7 +29,7 @@ Section
    └─ Condition Block  (matches on block.type)
       ├─ when "hero"     → <Hero> bound to iteration.headline
       ├─ when "quote"    → <Quote> bound to iteration.quote_text
-      └─ when "cta"      → <CTA> bound to iteration.button_label
+      └�� when "cta"      → <CTA> bound to iteration.button_label
 ```
 
 Section Slots are orthogonal: they punch a hole into a Section that the template composer later fills, with more components, or even with more Smart Containers.
