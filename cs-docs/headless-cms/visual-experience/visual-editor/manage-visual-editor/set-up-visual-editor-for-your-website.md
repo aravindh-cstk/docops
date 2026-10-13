@@ -9,7 +9,7 @@ uid: blt68b05bc98ffcac0a
 
 ## Set Up Visual Editor for Your Website
 
-Contentstack’s Visual Editor transforms the content management experience, enabling content managers to edit and preview website content in real time. Unlike the standard Live Preview feature, which only allows previews within entries, the Visual Editor offers advanced capabilities��letting you modify the website’s structure and design from the same interface. This feature provides an intuitive and interactive environment for updating content, ensuring greater control over the final published result.
+Contentstack’s Visual Editor transforms the content management experience, enabling content managers to edit and preview website content in real time. Unlike the standard Live Preview feature, which only allows previews within entries, the Visual Editor offers advanced capabilities—letting you modify the website’s structure and design from the same interface. This feature provides an intuitive and interactive environment for updating content, ensuring greater control over the final published result.
 
 This guide outlines the steps to set up and configure Visual Editor for your website. Follow these instructions to enable Live Preview, upgrade SDKs, and set up the Visual Editor for an optimized editing experience.
 
