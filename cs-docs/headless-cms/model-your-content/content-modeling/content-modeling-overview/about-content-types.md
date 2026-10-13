@@ -17,7 +17,7 @@ In essence, creating a content type is like creating a mold or cast that lets yo
 
 ![Content type structure.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt6db93fd5a8ec9eed/5d6516862e65bf281a911f15/Content_type_structure.png)
 
-Here is the structure of a “News” Content Type that has a “title,” “description,” “asset,” and “date” fields. Once this content type is ready, you can [create an entry](/docs/headless-cms/create-an-entry) for it.
+Here is the structure of a ���News” Content Type that has a “title,” “description,” “asset,” and “date” fields. Once this content type is ready, you can [create an entry](/docs/headless-cms/create-an-entry) for it.
 
 ## Terminologies
 
@@ -27,7 +27,7 @@ Here is the structure of a “News” Content Type that has a “title,” “de
 
 ## Examples
 
-1.  If you want to create a simple blog page on your site, you will define a “Blog” content type that has “title,” ���date,” “body,” and “author” fields.
+1.  If you want to create a simple blog page on your site, you will define a “Blog” content type that has “title,” “date,” “body,” and “author” fields.
 2.  If you want to create the homepage of your site, you will define a “Homepage” content type that has “header,” “footer,” “banner-image,” “title,” and “body” fields.
 
 ## Customizing a Content Type
