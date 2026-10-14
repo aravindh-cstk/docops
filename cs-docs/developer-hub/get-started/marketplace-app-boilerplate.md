@@ -91,7 +91,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   ├── contexts/
 │   │   │   ├── appConfigurationExtensionContext.ts
 │   │   │   ├── customFieldExtensionContext.ts
-│   │   │   ├── entrySidebarExtensionContext.ts
+���   │   │   ├── entrySidebarExtensionContext.ts
 │   │   │   └── marketplaceContext.ts
 │   │   ├── hooks/
 │   │   │   ├── useAppConfig.test.tsx
@@ -150,7 +150,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   │   ├── StackDashboard.css
 │   │   │   └── StackDashboard.tsx
 │   │   ├── FieldModifier/
-│   │   │   ├─�� FieldModifier.module.css
+│   │   │   ├── FieldModifier.module.css
 │   │   │   └── FieldModifier.tsx
 │   │   ├── FullPage/
 │   │   │   ├── FullPage.css
