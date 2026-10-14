@@ -280,7 +280,7 @@ src/
 └── content/
     ├── post1.md
     ├── post2.md
-    └── ...
+    └��─ ...
 ```
 
 Files in this folder are treated as **content sources** rather than page routes, giving you the flexibility to load and display them anywhere in your app.
