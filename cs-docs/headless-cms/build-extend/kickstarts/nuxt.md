@@ -46,13 +46,13 @@ After you clone the repo and install dependencies, your project should resemble 
 
 ```
 #kickstart-nuxt
-- ��� composables/
+- 📁 composables/
   - 📄 useGetPage.ts
 - 📁 plugins/
   - 📄 contentstack.ts
 - 📁 public/
   - 📄 favicon.ico
-  - 📄 robots.txt
+  - ���� robots.txt
 - 📁 server/
   - 📄 tsconfig.json
 - 📄 .env.example
