@@ -816,7 +816,7 @@ Facilitator delivers on screen. Attendees don't touch keyboards yet.
                             ▼
                     decompose-design skill
                             │
-         ┌──────────���─���─────┼──────────────────┐
+         ┌──────────────────┼────────────────��─��
          ▼                  ▼                  ▼
       build-section    build-section    build-connected-template
          (per Section identified)         (assembles the Template)
