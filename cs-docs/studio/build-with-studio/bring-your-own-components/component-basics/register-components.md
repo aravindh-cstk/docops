@@ -61,7 +61,7 @@ What each field does:
 | sections | string | string\[\] |  | Which left-panel category this appears under. Defaults to "Registered Components". |
 | wrap | boolean | string |  | If true, Studio wraps the component in a <div> for selection / edit handles. If a string, wraps in that tag. **Default: false**, you opt in if your component doesn't render a single editable root. |
 | props | object |  | The prop schema. See [Component schema](/docs/studio/component-schema-prop-types) for every prop type. |
-| styles | object |  | Design Panel groups. See [Design tokens](/docs/studio/configure-design-tokens-in-studio). |
+| styles | object |  | Design Panel groups. See [Design tokens](/docs/studio/studio-design-tokens-overview). |
 | hideFromContentCreators | boolean |  | Hides from authors but keeps in dev mode. |
 | hideFromComponentList | boolean |  | Hides from the palette entirely. |
 | metadata | object |  | Free-form storage for custom flows. |
@@ -343,7 +343,7 @@ If they don't appear, see [Troubleshoot: "Registered components don't appear in 
 ## Speed It Up with an LLM
 
 ```
-npx @contentstack/studio-skills install
+curl -fsSL https://studio-documentation.contentstackapps.com/install.sh | sh
 ```
 
 Then: "register my Button component as a Studio component". The LLM inspects your component, infers a prop schema (or asks if it can't), and writes the registry entry.
