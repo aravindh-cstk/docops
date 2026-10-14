@@ -9,8 +9,6 @@ uid: blt8313bf6e2cc12046
 
 ## Term Localization
 
-**Note:** Taxonomy Localization is a plan-based feature. Contact our [support](mailto:support@contentstack.com) team to enable it for your organization. This feature is **currently available for CMA use only**. Publishing localized taxonomy names and terms to CDA is coming soon. You can begin preparing your localized structures now, but localized values will not appear in published content until publishing support is released.
-
 Term Localization allows you to localize individual taxonomy terms for each locale without duplicating or restructuring the taxonomy. Each localized term shares the same UID as its master term, ensuring consistent tagging, filtering, and search behavior across locales.
 
 **Note:** You can [localize the taxonomy](/docs/headless-cms/taxonomy-localization) name to provide language-specific labels for the taxonomy itself. To localize the terms within that taxonomy, edit **individual terms** from the same **Taxonomy Details** page.
@@ -21,7 +19,7 @@ Localizing taxonomy terms offers the following advantages:
 
 -   **Multilingual tagging**: Apply consistent term names across multiple locales.
 -   **Centralized management**: View and manage all term translations in a unified table per taxonomy.
--   **Fallback resolution**: Display translated or fallback values automatically, based on locale.
+-   **Fallback resolution**: Return fallback values for terms that are not localized, when a delivery request sends include\_fallback=true.
 -   **Data integrity**: Localized terms inherit the master term's UID.
 -   **Reduced overhead**: Localized terms are not counted as separate entities.
 -   **Branch awareness**: Fallback behavior respects the branch-specific hierarchy.
@@ -73,6 +71,20 @@ To unlocalize a term, log in to your [Contentstack account](https://www.contents
 
 Term Localization empowers teams to support multilingual content without duplicating taxonomy structures. Whether serving global markets or managing multiple branches, this feature ensures flexibility and centralized control without sacrificing consistency.
 
+## Deliver Localized Terms
+
+After you [publish the taxonomy](/docs/headless-cms/publish-a-taxonomy) to an environment and its locales, the localized terms are available through the Content Delivery API (CDA) and the Delivery SDKs.
+
+To fetch terms in a specific locale, pass the locale query parameter on the CDA request. For example:
+
+```
+GET https://cdn.contentstack.io/v3/taxonomies/{taxonomy_uid}/terms?environment={environment}&locale=fr-fr
+```
+
+By default, the response includes only the terms localized in the requested locale. To also return the terms that are not localized in that locale, add include\_fallback=true. Those terms are then resolved through the locale fallback hierarchy of the branch, and each term's locale field shows the locale it was returned from.
+
 ## API Reference
 
 To localize or unlocalize terms via API, refer to the [Localize a Term](/docs/developers/apis/content-management-api/taxonomy#localize-a-term) and [Unlocalize a Term](/docs/developers/apis/content-management-api/taxonomy#unlocalize-a-term) API requests.
+
+To fetch localized terms, refer to the [Get All Terms](/docs/developers/apis/content-delivery-api/taxonomy#get-all-terms), [Get a Single Term](/docs/developers/apis/content-delivery-api/taxonomy#get-a-single-term), and [Get a Single Term in All Locales](/docs/developers/apis/content-delivery-api/taxonomy#get-a-single-term-in-all-locales) CDA requests.
