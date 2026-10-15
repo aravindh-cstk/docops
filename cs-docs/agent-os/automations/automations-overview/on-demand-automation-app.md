@@ -121,7 +121,7 @@ To configure an action step follow the steps below:
 7.  Click **Test Action** to test if the email sending was a success or not.  
 
 8.  The email is queued and sent to the receiver’s email address. Click **Save and Exit**.  
-    ![Save_Exit_Actin.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2cdd949469706f4e/664b008fb2e852313c451c9a/Save_Exit_Actin.png)
+    ![Save_Exit_Actin.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am7481f9792df63fb8/8799241e33c23f7fc2c129c6/Save_Exit_Mailgun_Action_Redacted.png)
 
 Activate the automation by clicking the **Activate Automation** toggle button.
 
@@ -465,7 +465,7 @@ Configuring a trigger can be broken into the following steps:
 6.  Click the **Test Trigger** button to test the configured trigger.  
 
 7.  Click the **Save and Exit** button.  
-    ![Save_Exit_Asset_Sidebar.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbdb8eddcaedebeb4/66838642b11324a6473a45bf/Save_Exit_Asset_Sidebar.png)
+    ![Save_Exit_Asset_Sidebar.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am44be1b75688ff74a/d6b5159a770ba9645a918644/Save_Exit_Asset_Sidebar_Redacted.png)
 
 **Note:** After successfully configuring a trigger, if you re-configure any other trigger, you will be prompted to revert to the previously configured trigger. You can revert back to the last trigger configurations by clicking the **Revert Changes** button.
 
@@ -499,7 +499,7 @@ To configure an action step follow the steps below:
 8.  Click **Test Action** to test if the email sending was a success or not.  
 
 9.  The email is queued and sent to the receiver’s email address. Click **Save and Exit**.  
-    ![Save_Exit_Create.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8b1c5656f21775a7/6683898a8887dcf65bd95ea8/Save_Exit_Create.png)
+    ![Save_Exit_Create.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am4365413f1bec619b/b55967d29bccea0cf68ace78/Save_Exit_S3_Create_Redacted.png)
 
 Activate the automation by clicking the **Activate Automation** toggle button.
 
