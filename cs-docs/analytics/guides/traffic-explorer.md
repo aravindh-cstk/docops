@@ -13,6 +13,8 @@ Traffic Explorer in Contentstack Analytics provides a granular, near real-time v
 
 Use Traffic Explorer to trace a specific request, confirm what a client actually sent, and investigate error spikes without raising a support ticket.
 
+**Note:** Traffic Explorer is currently available in the AWS North America and AWS Europe [regions](/docs/administration/about-regions) only, and is not enabled by default for every organization. If you do not see it in Analytics, contact [support](mailto:support@contentstack.com) to have it enabled for your organization.
+
 ## Prerequisites
 
 -   [Contentstack account](https://www.contentstack.com/login/)
@@ -42,8 +44,6 @@ To open the Traffic Explorer dashboard, sign in to your [Contentstack account](h
 
 1.  Open the **App Switcher** and select **Analytics**.
 2.  By default, the **CMS** analytics dashboard appears. Click **Traffic Explorer** to switch dashboards.
-
-**Note:** Traffic Explorer is not enabled by default for every organization. If you do not see it in Analytics, contact [support](mailto:support@contentstack.com) to have it enabled for your organization.
 
 ## What Traffic Explorer Records
 
