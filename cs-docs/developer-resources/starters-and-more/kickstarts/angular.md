@@ -274,12 +274,12 @@ kickstart-angular/
 │   │   └── environment.ts
 │   ├── global_styles.css
 │   ├── index.html
-│   ��── main.ts
+│   ├── main.ts
 │   └── vite-env.d.ts
 ├── .env.example
 ├── angular.json
 ├── generate-env.js
-├── package.json
+���── package.json
 └── types.ts
 ```
 
