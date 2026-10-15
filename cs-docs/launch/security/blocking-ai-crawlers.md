@@ -39,7 +39,7 @@ Launch provides two ways to help you control access by AI crawlers:
 
 The robots.txt file provides crawl instructions for compliant bots. You can use it to disallow specific User-Agent strings from accessing certain parts of your site.
 
-Here’s a sample robots.txt to block common AI crawlers:
+Here���s a sample robots.txt to block common AI crawlers:
 
 ```
 User-agent: GPTBot
