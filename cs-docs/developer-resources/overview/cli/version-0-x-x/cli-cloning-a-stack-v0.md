@@ -71,5 +71,5 @@ You can clone a stack by performing the following two steps:
 ## Points to Remember
 
 -   To import the exported content into an existing destination stack, make sure you have permission to create or update the content of the destination stack.
--   In case you want to create a new stack for storing the cloned content, make sure you have “[owner](/docs/administration/about-administration-roles#organization-owner)” or “[admin](/docs/administration/about-administration-roles#organization-admin)” rights in that organization.
+-   In case you want to create a new stack for storing the cloned content, make sure you have “[owner](/docs/administration/about-administration-roles#organization-owner)” or ���[admin](/docs/administration/about-administration-roles#organization-admin)” rights in that organization.
 -   While importing workflows from one stack to another, admins and workflow stage users are not included. Therefore, admins and stage users of your workflows will not be migrated to the new stack.
