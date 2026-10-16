@@ -91,7 +91,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   ├── contexts/
 │   │   │   ├── appConfigurationExtensionContext.ts
 │   │   │   ├── customFieldExtensionContext.ts
-���   │   │   ├── entrySidebarExtensionContext.ts
+│   │   │   ├── entrySidebarExtensionContext.ts
 │   │   │   └── marketplaceContext.ts
 │   │   ├── hooks/
 │   │   │   ├── useAppConfig.test.tsx
@@ -169,7 +169,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   └── index.tsx
 │   │
 │   ├── test-utils/
-│   │   └── test-utils.tsx
+��   │   └── test-utils.tsx
 │   │
 │   ├── cssModules.d.ts
 │   ├── custom.d.ts
