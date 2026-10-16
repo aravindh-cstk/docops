@@ -27,7 +27,7 @@ Tags are added in the **Overview** tab when creating or editing an experience. F
 
 ## Naming Conventions
 
-Tags are case-insensitive and stored in lowercase. Each tag can contain letters (a–z, A–Z), digits (0–9), hyphens (-), underscores (\_), and colons (:).
+Tags are case-insensitive and stored in lowercase. Each tag can contain letters (a��z, A–Z), digits (0–9), hyphens (-), underscores (\_), and colons (:).
 
 The colon (:) is particularly useful for creating a namespace:value convention that keeps tags readable and consistent across large projects:
 
