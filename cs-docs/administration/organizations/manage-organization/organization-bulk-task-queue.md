@@ -35,7 +35,7 @@ This section acts as a queuing system for each organization, which processes com
 
 To access the bulk task queue for your organization, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 
-1.  Select the Organization from the dropdown on the header, and click on the “Org Admin” icon on the left navigation panel.
+1.  Select the Organization from the dropdown on the header, and click on the ��Org Admin” icon on the left navigation panel.
 2.  Click on the **Bulk Task Queue** tab to access the section.![Bulk Task Queue tab in Org Admin settings](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9d6681c77abb3cd6/66aa2111c10344e38d068467/Organization_Bulk_Task_Queue_1.png)
 
 You will be able to see two tabs: **Ongoing** (for tasks in queue) and **Completed** (for completed tasks).
