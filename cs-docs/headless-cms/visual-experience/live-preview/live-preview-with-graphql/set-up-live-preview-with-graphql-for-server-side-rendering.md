@@ -142,7 +142,7 @@ Follow these steps to configure Live Preview with GraphQL for your SSR website:
         };
         ```
 
-        This example sets up the GraphQL endpoint and defines getHeaders() to supply the required headers. The gqlRequest() function fetches data from Contentstack’s GraphQL API.
+        This example sets up the GraphQL endpoint and defines getHeaders() to supply the required headers. The gqlRequest() function fetches data from Contentstack��s GraphQL API.
 
         **Example:** Conditional configuration for Live Preview
 
@@ -212,7 +212,7 @@ Follow these steps to configure Live Preview with GraphQL for your SSR website:
 
 4.  ## Live Edit Tags for Entries (recommended)
 
-    Live Edit tags allow editors to directly jump from the Live Preview pane to the corresponding content fields in the entry editor. Clicking the **Edit** button next to a content block automatically opens the relevant field. If the field refers to another entry, you��ll be redirected to that entry’s editor page.
+    Live Edit tags allow editors to directly jump from the Live Preview pane to the corresponding content fields in the entry editor. Clicking the **Edit** button next to a content block automatically opens the relevant field. If the field refers to another entry, you’ll be redirected to that entry’s editor page.
 
     1.  **Process entry for live editing**
 
