@@ -43,6 +43,17 @@ Follow the steps to install the On-Demand Automation App in Contentstack.
 
 You can view the On-Demand Automation app on the **Entry** and **Asset** editor page in the Entry Sidebar and the Asset Sidebar Rail UI Locations.
 
+## About the On-demand Automation Project
+
+On-demand automations live in a dedicated Agent OS project named **On-demand Automation**. Only this project offers the **Entry Sidebar** and **Asset Sidebar** triggers of the **On-Demand Automation App** connector, and the On-Demand Automation app lists only the active automations in this project.
+
+-   **Creation:** Agent OS creates the project automatically the first time someone in your organization opens the On-Demand Automation app in the Entry Sidebar or Asset Sidebar. It isn’t created when you install the app.
+-   **Scope:** Each organization has one On-demand Automation project, shared by all its stacks.
+-   **Renaming:** You can rename the project. It keeps working, because Agent OS identifies it by its type, not its name.
+-   **Cloning:** When you clone an on-demand automation, keep **On-demand Automation** selected in **Select Project**. A copy in any other project doesn’t appear in the Entry Sidebar or Asset Sidebar.
+
+**Note:** A project you create yourself with the same name isn’t an on-demand project. If the **Entry Sidebar** and **Asset Sidebar** triggers aren’t listed when you configure a trigger, you’re in a different project.
+
 ## Entry Editor Page
 
 To view the On-Demand Automation app in the Entry Editor page, follow the steps below:
@@ -64,7 +75,7 @@ To view the On-Demand Automation app in the Entry Editor page, follow the steps 
 To start executing the automation via the On-Demand Automation App, you first need to create an automation. To do so, follow the steps below:
 
 1.  From the left navigation panel, click **Agent OS**.
-2.  On the Automations project page, click the **On-demand Automation** project.
+2.  On the Automations project page, click the **On-demand Automation** project (or the name it was renamed to). The **Entry Sidebar** and **Asset Sidebar** triggers are available only in this project.
 3.  On the Automations page, click **\+ New Automation**.
 4.  Provide an **Automation Name** and an optional **Description**. Click **Create**.
 5.  After entering the basic details of the automation in the above step, the next set of actions can be broadly classified into the following two main steps:
@@ -79,13 +90,13 @@ To start executing the automation via the On-Demand Automation App, you first ne
 Configuring a trigger can be broken into the following steps:
 
 1.  From the left navigation panel, click **Configure Trigger**.
-2.  Within the **Configure Trigger** step, click the **On-Demand Automation** trigger.
+2.  Within the **Configure Trigger** step, click the **On-Demand Automation App** connector.
 3.  Under the **Choose Trigger** section, select the **Entry Sidebar** trigger.  
     ![Select_Actions.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt576fcfb7d87de84e/6683864282ce1d020a3151aa/Select_Actions.png)
 4.  On the **Entry Sidebar Configure Trigger** page, enter the details given below:
     1.  Select a **Stack** and **Branch** from the **Lookup** list.
 
-        **Note:** You **cannot** configure a [Response](/docs/agent-os/response) connector with the On-Demand Agent OS trigger.
+        **Note:** You **cannot** configure a [Response](/docs/agent-os/response) connector with the Entry Sidebar or Asset Sidebar trigger.
 
     2.  Optionally, enable the **Show Optional Fields** toggle button to display the **Select** **Content** **Type** and **Input** **Options** fields.
         1.  Click the **\+ Input Options** button to view an Additional Information modal in the Entry Sidebar.
@@ -101,7 +112,7 @@ Configuring a trigger can be broken into the following steps:
 
 **Note:** After successfully configuring a trigger, if you re-configure any other trigger, you will be prompted to revert to the previously configured trigger. You can revert back to the last trigger configurations by clicking the **Revert Changes** button.
 
-This completes the configuration of your **On-Demand Agent OS** trigger.
+This completes the configuration of your **Entry Sidebar** trigger.
 
 #### Configure Action Step
 
@@ -121,7 +132,7 @@ To configure an action step follow the steps below:
 7.  Click **Test Action** to test if the email sending was a success or not.  
 
 8.  The email is queued and sent to the receiver’s email address. Click **Save and Exit**.  
-    ![Save_Exit_Actin.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2cdd949469706f4e/664b008fb2e852313c451c9a/Save_Exit_Actin.png)
+    ![Save_Exit_Actin.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am7481f9792df63fb8/8799241e33c23f7fc2c129c6/Save_Exit_Mailgun_Action_Redacted.png)
 
 Activate the automation by clicking the **Activate Automation** toggle button.
 
@@ -139,34 +150,34 @@ Once the automation is activated, you can check all the active automations in th
 
 Let’s see a use case to understand how the users can view and interact with the Additional Information modal.
 
-In this use case, we will cover a scenario where, if a user adds the Input Options in the Entry Sidebar, the ChatGPT Connector processes the request and provides a prompt. The On-Demand Agent OS Connector displays the response in the Results modal.
+In this use case, we will cover a scenario where, if a user adds the Input Options in the Entry Sidebar, the ChatGPT Connector processes the request and provides a prompt. The On-Demand Automation App connector displays the response in the Results modal.
 
 Let's break this scenario to see what must be the trigger event and the consequent action required to execute the Automation:
 
-1.  **Set up the On-Demand Agent OS “Entry Sidebar” Trigger Event:** This trigger event is activated whenever a user runs the automation via the On-Demand Automation App in the Entry Sidebar.
+1.  **Set up the On-Demand Automation App “Entry Sidebar” Trigger Event:** This trigger event is activated whenever a user runs the automation via the On-Demand Automation App in the Entry Sidebar.
 2.  **Set up the ChatGPT “Chat” Action:** Once the above event triggers the automation, the Chat action will provide a response based on the request.
-3.  **Set up the On-Demand Agent OS “Summary Overlay” Action:** Once the above action is executed, the Summary Overlay action displays the response in the Results modal in the Entry Sidebar.
+3.  **Set up the On-Demand Automation App “Summary Overlay” Action:** Once the above action is executed, the Summary Overlay action displays the response in the Results modal in the Entry Sidebar.
 
 The steps to set up the Automation are as follows:
 
-1.  [Set up the On-Demand Agent OS Trigger](#set-up-the-on-demand-agent-os-trigger)
+1.  [Set up the On-Demand Automation App Trigger](#set-up-the-on-demand-automation-app-trigger)
 2.  [Set up the ChatGPT Connector](#set-up-the-chatgpt-connector)
-3.  [Set up the On-Demand Agent OS Connector](#set-up-the-on-demand-agent-os-connector)
+3.  [Set up the On-Demand Automation App Connector](#set-up-the-on-demand-automation-app-connector)
 4.  [Execute the Automation via On-Demand Automation App](#execute-the-automation-via-on-demand-automation-app)
 
 Let’s look at the setup in detail.
 
-### Set up the On-Demand Agent OS Trigger
+### Set up the On-Demand Automation App Trigger
 
 1.  From the left navigation panel, click **Configure** Trigger.
-2.  Within the **Configure** **Trigger** step, click the **On-Demand Agent OS** trigger.  
+2.  Within the **Configure** **Trigger** step, click the **On-Demand Automation App** connector.  
     ![On-Demand_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8f42b93e90a40c16/675fdb09e720114e8602f9ed/On-Demand_Trigger.png)
 3.  Under the **Choose Trigger** section, select the **Entry** **Sidebar** trigger.  
     ![Select_Actions.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt576fcfb7d87de84e/6683864282ce1d020a3151aa/Select_Actions.png)
 4.  On the **Entry Sidebar Configure Trigger** page, enter the details given below:
     1.  Select a **Stack** and **Branch** from the **Lookup** list.
 
-        **Note:** You cannot configure a [Response](/docs/agent-os/response) connector with the On-Demand Agent OS trigger.
+        **Note:** You cannot configure a [Response](/docs/agent-os/response) connector with the Entry Sidebar or Asset Sidebar trigger.
 
         ![Select_Trigger_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt927aa8ca49db7332/675fdacc1cd21e548cc25d96/Select_Trigger_Fields.png)
     2.  Optionally, enable the **Show Optional Fields** toggle button to display the **Select** **Content** **Type** and **Input** **Options** fields.
@@ -209,10 +220,10 @@ Let’s look at the setup in detail.
 7.  Click the **Save and Exit** button.  
     ![Save_Exit_Chat.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt1d2b134736d0aff1/675fdacc21e066b2b8411519/Save_Exit_Chat.png)
 
-### Set up the On-Demand Agent OS Connector
+### Set up the On-Demand Automation App Connector
 
 1.  From the left navigation panel, click **Configure** **Action** **Step**.
-2.  Within the **Configure** **Action** **Step**, click the **On-Demand Agent OS** Connector.
+2.  Within the **Configure** **Action** **Step**, click the **On-Demand Automation App** connector.
 3.  Under the **Choose an Action** tab, select the **Summary** **Overlay** action.  
     ![Summary_Overlay_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb399ef5a7bc36e67/6794bd5139726f01ebf85333/Summary_Overlay_Action.png)
 4.  In the **Response** **Body** field, enter the content to be displayed in the Results modal. Fetch the response from the Chat action, i.e., _2.message.0.message.content_ as shown below:  
@@ -250,18 +261,18 @@ When an automation involves multiple action steps but only a limited set of valu
 
 Here’s a use case demonstrating how users can update an entry in real time by pausing the automation for confirmation.
 
-In this scenario, when a user triggers an automation via the **Agent OS**app in the **Entry Sidebar**, the entry **title** and **body** will be updated automatically: but only after the user confirms the execution.
+In this scenario, when a user triggers an automation via the **On-Demand Automation** app in the **Entry Sidebar**, the entry **title** and **body** will be updated automatically: but only after the user confirms the execution.
 
 Let's break this scenario to identify the trigger event and the necessary actions required to execute the automation.
 
-1.  **Set up the On-Demand Agent OS “Entry Sidebar” Trigger Event:** This trigger event is activated whenever a user runs the automation via the On-Demand Automation app in the Entry Sidebar.
-2.  **Set up the On-Demand Agent OS “Pause On-Demand” Action:** Once the above action is executed, the Pause On-Demand action lets you preserve the values from the previous step and execute the automation.
-3.  **Set up the On-Demand Agent OS “Update an Entry” Action:** Once the above action is executed, the Update an Entry action displays the updated entry title and body.
+1.  **Set up the On-Demand Automation App “Entry Sidebar” Trigger Event:** This trigger event is activated whenever a user runs the automation via the On-Demand Automation app in the Entry Sidebar.
+2.  **Set up the On-Demand Automation App “Pause On-Demand” Action:** Once the above action is executed, the Pause On-Demand action lets you preserve the values from the previous step and execute the automation.
+3.  **Set up the On-Demand Automation App “Update an Entry” Action:** Once the above action is executed, the Update an Entry action displays the updated entry title and body.
 
 The steps to set up the automation are as follows:
 
 1.  [Set up the Entry Sidebar Trigger](#set-up-the-entry-sidebar-trigger)
-2.  [Set up the Pause On-Demand Action Connector](#set-up-the-pause-on-demand-action-connector)
+2.  [Set up the On-Demand Automation App Pause On-Demand Action](#set-up-the-on-demand-automation-app-pause-on-demand-action)
 3.  [Set up the Update an Entry Action](#set-up-the-update-an-entry-action)
 4.  [Execute the Automation via On-Demand Automation App](#execute-the-automation-via-on-demand-automation-app)
 
@@ -270,13 +281,13 @@ Let’s look at the setup in detail.
 ### Set up the Entry Sidebar Trigger
 
 1.  From the left navigation panel, click **Configure** **Trigger**.
-2.  Within the **Configure** **Trigger** step, click the **On-Demand Agent OS** trigger.  
+2.  Within the **Configure** **Trigger** step, click the **On-Demand Automation App** connector.  
     ![On-Demand_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8f42b93e90a40c16/675fdb09e720114e8602f9ed/On-Demand_Trigger.png)
 3.  Under the **Choose Trigger** section, select the **Entry** **Sidebar** trigger.
 4.  On the **Entry Sidebar Configure Trigger** page, enter the details given below:
     1.  Select a **Stack** and **Branch** from the **Lookup** list.
 
-        **Note:** You cannot configure a [Response](/docs/agent-os/response) connector with the On-Demand Agent OS trigger.
+        **Note:** You cannot configure a [Response](/docs/agent-os/response) connector with the Entry Sidebar or Asset Sidebar trigger.
 
         ![Select_Fields_Entry_Sidebat.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt814cedd00ef30b0a/67e26ab929f30c0055f8e51a/Select_Fields_Entry_Sidebat.png)
     2.  Optionally, enable the **Show Optional Fields** toggle button to display the **Select** **Content** **Type** and **Input** **Options** fields.
@@ -290,10 +301,10 @@ Let’s look at the setup in detail.
 7.  Click the **Save and Exit** button.  
     ![Save_and_Exit_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4745168d2f5783fd/67e26ab9362ee360e855cfe5/Save_and_Exit_Trigger.png)
 
-### Set up the Pause On-Demand Action Connector
+### Set up the On-Demand Automation App Pause On-Demand Action
 
 1.  From the left navigation panel, click **Configure Action Step**.
-2.  Within the **Configure Action Step**, click the **On-Demand Agent OS** Connector.
+2.  Within the **Configure Action Step**, click the **On-Demand Automation App** connector.
 3.  Under the **Choose an Action** tab, select the **Pause On-Demand** action.
 4.  In the **Preserve Previous Step Properties** field, select the values you want to retain from the previous step. Click the **\+ Add Preserve Previous Step Properties** button, then enter the **Property Name** and **Property Value**.  
 
@@ -350,27 +361,27 @@ Here is a use case to understand how the users can update an entry in real-time 
 
 Let's break this scenario to identify the trigger event and the necessary actions required to execute the automation.
 
-1.  **Set up the On-Demand Agent OS “Entry Sidebar” Trigger Event:** This trigger event is activated whenever a user runs the automation via the On-Demand Automation app in the Entry Sidebar.
-2.  **Set up the On-Demand Agent OS “User Draft Update” Action:** Once the above action is executed, the User Draft Update action dynamically displays the updated entry title.
+1.  **Set up the On-Demand Automation App “Entry Sidebar” Trigger Event:** This trigger event is activated whenever a user runs the automation via the On-Demand Automation app in the Entry Sidebar.
+2.  **Set up the On-Demand Automation App “User Draft Update” Action:** Once the above action is executed, the User Draft Update action dynamically displays the updated entry title.
 
 The steps to set up the Automation are as follows:
 
-1.  [Set up the On-Demand Agent OS Entry Sidebar Trigger](#set-up-the-on-demand-agent-os-entry-sidebar-trigger)
-2.  [Set up the On-Demand Agent OS User Draft Update Action](#set-up-the-on-demand-agent-os-user-draft-update-action)
-3.  [Execute the Automation via On-Demand Automation App in Entry Sidebar](#execute-the-automation-via-agent-os-app-in-entry-sidebar)
+1.  [Set up the On-Demand Automation App Entry Sidebar Trigger](#set-up-the-on-demand-automation-app-entry-sidebar-trigger)
+2.  [Set up the On-Demand Automation App User Draft Update Action](#set-up-the-on-demand-automation-app-user-draft-update-action)
+3.  [Execute the Automation via On-Demand Automation App in Entry Sidebar](#execute-the-automation-via-on-demand-automation-app-in-entry-sidebar)
 
 Let’s look at the setup in detail.
 
-### Set up the On-Demand Agent OS Entry Sidebar Trigger
+### Set up the On-Demand Automation App Entry Sidebar Trigger
 
 1.  From the left navigation panel, click **Configure** Trigger.
-2.  Within the **Configure** **Trigger** step, click the **On-Demand Agent OS** trigger.  
+2.  Within the **Configure** **Trigger** step, click the **On-Demand Automation App** connector.  
     ![On-Demand_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8f42b93e90a40c16/675fdb09e720114e8602f9ed/On-Demand_Trigger.png)
 3.  Under the **Choose Trigger** section, select the **Entry** **Sidebar** trigger.
 4.  On the **Entry Sidebar Configure Trigger** page, enter the details given below:
     1.  Select a **Stack** and **Branch** from the **Lookup** list.
 
-        **Note:** You cannot configure a [Response](/docs/agent-os/response) connector with the On-Demand Automate trigger.
+        **Note:** You cannot configure a [Response](/docs/agent-os/response) connector with the Entry Sidebar or Asset Sidebar trigger.
 
         ![Select_Trigger_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt927aa8ca49db7332/675fdacc1cd21e548cc25d96/Select_Trigger_Fields.png)
     2.  Optionally, enable the **Show Optional Fields** toggle button to display the **Select** **Content** **Type** and **Input** **Options** fields.
@@ -384,10 +395,10 @@ Let’s look at the setup in detail.
 7.  Click the **Save and Exit** button.  
     ![Save_Exit_Button.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blta92b96382b38bd90/6794bd512108d8bc947fd032/Save_Exit_Button.png)
 
-### Set up the On-Demand Agent OS User Draft Update Action
+### Set up the On-Demand Automation App User Draft Update Action
 
 1.  From the left navigation panel, click **Configure** **Action** **Step**.
-2.  Within the **Configure** **Action** **Step**, click the **On-Demand Agent OS** Connector.
+2.  Within the **Configure** **Action** **Step**, click the **On-Demand Automation App** connector.
 3.  Under the **Choose an Action** tab, select the **User Draft Update** action.  
     ![User_Draft_Update_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt425951dd7c9f6f57/6794bd59b3cc47859c90da02/User_Draft_Update_Action.png)
 4.  Select a **Stack** and a **Content** Type from the **Lookup** list.
@@ -432,7 +443,7 @@ To view the On-Demand Automation App in the Asset Editor page, follow the steps 
 To start executing the automation via the On-Demand Automation App, you first need to create an automation. To do so, follow the steps below:
 
 1.  From the left navigation panel, click **Agent OS**.
-2.  On the Automations project page, click the **On-demand Automation** project.
+2.  On the Automations project page, click the **On-demand Automation** project (or the name it was renamed to). The **Entry Sidebar** and **Asset Sidebar** triggers are available only in this project.
 3.  On the Automations page, click **\+ New Automation**.
 4.  Provide an **Automation Name** and an optional **Description**. Click **Create**.
 5.  After entering the basic details of the automation in the above step, the next set of actions can be broadly classified into the following two main steps:
@@ -447,13 +458,13 @@ To start executing the automation via the On-Demand Automation App, you first ne
 Configuring a trigger can be broken into the following steps:
 
 1.  From the left navigation panel, click **Configure Trigger**.
-2.  Within the **Configure Trigger** step, click the **On-Demand Agent OS** trigger.
+2.  Within the **Configure Trigger** step, click the **On-Demand Automation App** connector.
 3.  Under the **Choose Trigger** section, select the **Asset Sidebar** trigger.  
     ![Asset_Sidebar_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt59956035f8c992e9/668386420b1faa286adc03f6/Asset_Sidebar_Action.png)
 4.  On the **Asset Sidebar Configure Trigger** page, enter the details given below:
     1.  Select a **Stack** and **Branch** from the **Lookup** list.
 
-        **Note:** You **cannot** configure a [Response](/docs/agent-os/response) connector with the On-Demand Agent OS trigger.
+        **Note:** You **cannot** configure a [Response](/docs/agent-os/response) connector with the Entry Sidebar or Asset Sidebar trigger.
 
         ![Select_Fields_Asset_Trigger.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt45ce36c4b58e913d/66838652b1132466c53a45c3/Select_Fields_Asset_Trigger.png)
     2.  Optionally, enable the **Show Optional Fields** toggle button to display the **Select Asset Type** field.
@@ -465,7 +476,7 @@ Configuring a trigger can be broken into the following steps:
 6.  Click the **Test Trigger** button to test the configured trigger.  
 
 7.  Click the **Save and Exit** button.  
-    ![Save_Exit_Asset_Sidebar.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltbdb8eddcaedebeb4/66838642b11324a6473a45bf/Save_Exit_Asset_Sidebar.png)
+    ![Save_Exit_Asset_Sidebar.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am44be1b75688ff74a/d6b5159a770ba9645a918644/Save_Exit_Asset_Sidebar_Redacted.png)
 
 **Note:** After successfully configuring a trigger, if you re-configure any other trigger, you will be prompted to revert to the previously configured trigger. You can revert back to the last trigger configurations by clicking the **Revert Changes** button.
 
@@ -499,7 +510,7 @@ To configure an action step follow the steps below:
 8.  Click **Test Action** to test if the email sending was a success or not.  
 
 9.  The email is queued and sent to the receiver’s email address. Click **Save and Exit**.  
-    ![Save_Exit_Create.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt8b1c5656f21775a7/6683898a8887dcf65bd95ea8/Save_Exit_Create.png)
+    ![Save_Exit_Create.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am4365413f1bec619b/b55967d29bccea0cf68ace78/Save_Exit_S3_Create_Redacted.png)
 
 Activate the automation by clicking the **Activate Automation** toggle button.
 
@@ -512,3 +523,16 @@ Once the automation is activated, you can check all the active automations in th
     ![Execut_Icon.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt85edcb3f9d95f1b0/67e26efc914c247ae84978a9/Execut_Icon.png)
 3.  Log into your AWS S3 account and see the list of files in the bucket. In the AWS account’s bucket, you can see the created file.  
     ![AWS-Image.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt03586e2d5b45348e/66866c0f5a7e763dd51cd170/AWS-Image.png)
+
+## Troubleshooting
+
+### An Automation Doesn’t Appear in the Entry or Asset Sidebar
+
+Check the following:
+
+-   The automation is in your organization’s On-demand Automation project. Automations in other projects don’t appear, including copies cloned into another project.
+-   The automation is active.
+-   The trigger’s **Stack** and **Branch** match the entry or asset you have open.
+-   If you selected a content type in the **Entry Sidebar** trigger, or an asset type in the **Asset Sidebar** trigger, the entry or asset is of that type.
+
+Connected Apps in the project settings don’t affect which automations appear.
