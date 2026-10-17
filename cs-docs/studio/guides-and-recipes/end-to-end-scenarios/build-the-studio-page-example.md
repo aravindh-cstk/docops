@@ -25,7 +25,7 @@ Section: blog_post_hero   (Simple — root is a component)
     bindings:
       headline    ← blog_post.hero_group.headline
       subhead     ← blog_post.hero_group.subhead
-      cover_image ��� blog_post.hero_group.image
+      cover_image ← blog_post.hero_group.image
     cta slot → <PrimaryButton>
                  label ← blog_post.hero_group.cta.label
                  href  ← blog_post.hero_group.cta.href
@@ -93,7 +93,7 @@ The List Section now looks like:
 Section: blog_post_body_sections   (List — root is a Repeater)
   Repeater(body_sections)
     ├ CB(text_block)              → <TextBlock>
-    ├ CB(image_block)             → <ImageBlock>
+    ��� CB(image_block)             → <ImageBlock>
     └ CB(related_resources_block) → Section Slot: related_resources_render   (empty — Template fills)
 ```
 
