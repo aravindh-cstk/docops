@@ -90,7 +90,7 @@ Click on **Publish** and select the **development** environment for all respecti
 
     You will need to add multiple instances for this field with the values mentioned below.
 
-    **Note:** If an entry field is designated as “Multiple,” you will see the Add “+” icon located beside the existing instance.
+    **Note:** If an entry field is designated as “Multiple,��� you will see the Add “+” icon located beside the existing instance.
 
     Here are the instances you need to add:
 

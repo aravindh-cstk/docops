@@ -448,7 +448,7 @@ Endpoint.getContentstackEndpoint(region, service)
           │
           ▼
   In-memory cache present?
-          ├── Yes ──► Return URL
+          ���─��� Yes ──► Return URL
           └── No
                 │
                 ▼

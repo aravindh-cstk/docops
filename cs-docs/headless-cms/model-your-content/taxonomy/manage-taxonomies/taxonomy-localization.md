@@ -9,8 +9,6 @@ uid: bltc49c96e24616db92
 
 ## Taxonomy Localization
 
-**Note:** Taxonomy Localization is a plan-based feature. Contact our [support](mailto:support@contentstack.com) team to enable it for your organization. This feature is **currently available for CMA use only**. Publishing localized taxonomy names and terms to CDA is coming soon. You can begin preparing your localized structures now, but localized values will not appear in published content until publishing support is released.
-
 Taxonomy Localization lets teams translate taxonomy names for different locales while keeping them connected through a unified default taxonomy reference. This feature supports multilingual content organization by enabling each market or language to display taxonomy terms in their local language, without duplicating the taxonomy hierarchy.
 
 **Note:** You can localize the **taxonomy name** to provide language-specific labels for the taxonomy itself. To [localize the terms](/docs/headless-cms/term-localization) within that taxonomy, edit **individual terms** from the same **Taxonomy Details** page.
@@ -73,6 +71,20 @@ To unlocalize a taxonomy, log in to your [Contentstack account](https://www.cont
 
 Taxonomy Localization empowers teams to manage multilingual content efficiently by centralizing taxonomy structures while supporting localized labels. Whether you're serving global markets or managing content across branches, this feature ensures flexibility without compromising consistency.
 
+## Deliver Localized Taxonomies
+
+After you [publish the taxonomy](/docs/headless-cms/publish-a-taxonomy) to an environment and its locales, the localized taxonomy names and terms are available through the Content Delivery API (CDA) and the Delivery SDKs.
+
+To fetch a taxonomy or its terms in a specific locale, pass the locale query parameter on the CDA request. For example:
+
+```
+GET https://cdn.contentstack.io/v3/taxonomies/{taxonomy_uid}/terms?environment={environment}&locale=fr-fr
+```
+
+By default, the response includes only the taxonomy names and terms localized in the requested locale. To also return the values that are not localized in that locale, add include\_fallback=true. The values are then resolved through the locale fallback hierarchy of the branch, and each item's locale field shows the locale it was returned from.
+
 ## API Reference
 
 To localize or unlocalize taxonomies via API, refer to the [Localize a Taxonomy](/docs/developers/apis/content-management-api/taxonomy#localize-a-taxonomy) and [Unlocalize a Taxonomy](/docs/developers/apis/content-management-api/taxonomy#unlocalize-a-taxonomy) API requests.
+
+To fetch localized taxonomies and terms, refer to the [Get a Single Taxonomy](/docs/developers/apis/content-delivery-api/taxonomy#get-a-single-taxonomy), [Get All Terms](/docs/developers/apis/content-delivery-api/taxonomy#get-all-terms), and [Get a Single Term](/docs/developers/apis/content-delivery-api/taxonomy#get-a-single-term) CDA requests.

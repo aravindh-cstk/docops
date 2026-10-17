@@ -106,7 +106,7 @@ You're done. Studio is wired. Hand the canvas URL to your authors and they can s
 ## Optional: LLM-Assisted Verification
 
 ```
-npx @contentstack/studio-skills install
+curl -fsSL https://studio-documentation.contentstackapps.com/install.sh | sh
 ```
 
 Then: "verify my Studio setup". The LLM runs the same checks, prints a layered report, and offers to fix what failed.

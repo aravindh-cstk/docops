@@ -125,7 +125,7 @@ If the iframe is blank or you see "Canvas URL is not configured" / "Environment 
 ## Optional: LLM-Assisted Setup
 
 ```
-npx @contentstack/studio-skills install
+curl -fsSL https://studio-documentation.contentstackapps.com/install.sh | sh
 ```
 
 Then: "set up the section preview route". The LLM creates the route file **and** sets Canvas URL in Studio in one step.

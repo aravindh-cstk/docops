@@ -66,3 +66,14 @@ Suppose you run an e-commerce site that allows customers to download 3D models o
 4.  Save the asset type.
 
 Now, whenever a .3mf file is uploaded, Assets applies this asset type automatically and displays the mandatory fields for completion.
+
+## What Happens to Existing Assets
+
+Creating or deleting an asset type runs as a background job, because assets are reclassified as part of it.
+
+-   **Creating** a custom asset type takes in every asset whose file type matches it and that is not yet assigned to a type. Assets that already belong to another asset type are not moved.
+-   **Deleting** an asset type returns its assets to unassigned. The assets themselves are not deleted.
+
+Both are accepted immediately and tracked in the Bulk Task Queue.
+
+**Additional Resource:** Refer to [Assets Bulk Task Queue](/docs/assets/assets-bulk-task-queue).

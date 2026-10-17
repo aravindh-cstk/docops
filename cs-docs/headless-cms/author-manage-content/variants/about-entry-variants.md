@@ -9,7 +9,7 @@ uid: bltddfbaa1990f2de12
 
 ## About Entry Variants
 
-**Note:** The Entry Variants feature is currently available as part of an Early Access Program and may not be available to all users. For more information, you can reach out to our [support](mailto:support@contentstack.com) team.
+**Note:** The Entry Variants feature is enabled per organization and may not be available on all plans. To have it enabled for your organization, contact the [support](mailto:support@contentstack.com) team.
 
 Contentstack's Entry Variants feature empowers you to seamlessly create and manage variations of your [entries](/docs/headless-cms/about-entries), catering to diverse [audiences](/docs/personalize/about-audiences), [segmented experiences](/docs/personalize/create-segmented-experience), and [A/B test experiences](/docs/personalize/create-ab-test-experience).
 

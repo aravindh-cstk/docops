@@ -22,6 +22,6 @@ This page lists the limitations and constraints that apply to Teams in Contentst
 
 -   You must have the [Owner or Admin](/docs/administration/about-administration-roles) roles to create, edit, or delete a team. The Security Manager role can view teams but cannot manage them.
 -   Each team must have at least one Administration role assigned.
--   Project-level custom roles, such as custom stack, space, or AgentOS project roles, must be created from the respective project or its per-product settings page before they can be assigned to a team.
+-   Project-level custom roles, such as custom stack or space roles, must be created from the respective project or its per-product settings page before they can be assigned to a team.
 -   A user who belongs to multiple teams inherits the combined roles of all those teams. Team membership can add access but cannot remove access granted elsewhere.
 -   If a user is the owner of a stack, the owner permission takes precedence over any stack-level role assigned through a team.

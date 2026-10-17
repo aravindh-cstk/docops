@@ -85,6 +85,23 @@ Only languages enabled in a workspace are available for asset localization withi
 -   Assets support localization only for languages enabled in the active workspace.
 -   Changes to workspace languages apply only to that workspace and do not affect other workspaces or spaces.
 
+## Enable or Disable Duplicate Management
+
+Duplicate Management groups identical images in a workspace so you can review and remove the extra copies. It is enabled by default in every workspace, including newly created ones.
+
+To change the setting for a workspace:
+
+1.  Open **Space Settings** and select the **Workspaces** section.
+2.  Open the **More Actions** menu for the workspace.
+3.  Select **Duplicate Management**, then choose **Enable** or **Disable**.
+4.  Confirm the change in the dialog.
+
+Disabling stops duplicate scanning in that workspace and hides Duplicate Management from the asset listing page. Sets that were already detected are kept, so re-enabling brings them back.
+
+**Note:** Changing this setting requires permission to edit space settings.
+
+**Additional Resource:** For how to review and clean up duplicate sets, refer to [Manage Duplicate Images](/docs/assets/manage-duplicate-images).
+
 ## Delete a Workspace
 
 To delete a workspace, perform the following steps:

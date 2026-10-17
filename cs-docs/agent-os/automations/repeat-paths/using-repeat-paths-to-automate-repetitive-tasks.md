@@ -20,7 +20,7 @@ Configure the Contentstack action and select the Create an Entry action inside t
 Let's break this scenario to see what must be the trigger event and the consequent action required to execute the Automation:
 
 -   **Set up the “HTTP'' Trigger Event:** This trigger event is activated whenever a user makes a HTTP GET/POST request to the configured URL. In this case, the data is collected from Postman to the HTTP trigger.
--   **Set up the Contentstack “Repeat Path”:** Once the above event triggers the automation, it checks for the configuration provided within the repeat path.
+-   **Set up the Contentstack “Repeat Path��:** Once the above event triggers the automation, it checks for the configuration provided within the repeat path.
 -   **Set up the Contentstack “Create an Entry” action:** When the Repeat Path configurations are set, the create an entry action will create different entries in Contentstack.
 
     **Note:** Once you configure any action inside the Repeat Path, it will execute the action step repeatedly until the condition is met.

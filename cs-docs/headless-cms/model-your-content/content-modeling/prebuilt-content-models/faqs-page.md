@@ -11,7 +11,7 @@ uid: bltabfded0cfcc2fe9f
 
 Your website's "Frequently Asked Questions" (FAQs) page includes a dynamic hero banner, a well-structured section with cards, and so on. The FAQs Content Model is specifically designed to capture and organize critical information about your website's Frequently Asked Questions (FAQs) area, ensuring you have all the relevant details at your fingertips.
 
-Let’s understand how this model will assist you create your company’s “Frequently Asked Questions (FAQs)” page.
+Let’s understand how this model will assist you create your company’s ��Frequently Asked Questions (FAQs)” page.
 
 1.  ## Analyzing Requirements for the FAQs Page
 

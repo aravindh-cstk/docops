@@ -13,7 +13,7 @@ Once an entry has been saved in a different language, it becomes independent of 
 
 **Note:** The [Content Manager](/docs/headless-cms/types-of-roles#content-manager) can view or create content in multiple languages only if the languages are added to the stack by the [Admin](/docs/headless-cms/types-of-roles#admin)/[Developer](/docs/headless-cms/types-of-roles#developer).
 
-You can view information about the localization status of an entry through the ‘Edit Entry’ page of an entry. To do so, click the ‘Entry Information’ tab on the right-hand side panel of the ‘Edit Entry’ page of your entry. Under the ‘Localization Status’ section, you will find a list of all the languages that are part of your stack.
+You can view information about the localization status of an entry through the ‘Edit Entry’ page of an entry. To do so, click the ‘Entry Information’ tab on the right-hand side panel of the ‘Edit Entry’ page of your entry. Under the ���Localization Status’ section, you will find a list of all the languages that are part of your stack.
 
 The languages are separated under three sections: ‘Master’, ‘Localized’, and ‘Unlocalized’. Each language is linked to the latest version of the entry in the specific language.   
 

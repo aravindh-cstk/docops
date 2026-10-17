@@ -29,7 +29,7 @@ Now, suppose if the “Appliances” content type comprises the following applia
 
 Each appliance (entry) is equipped with high-quality assets to clearly denote their structural elements. All of these images are stored inside the “Appliance Images” folder. The kitchen appliances are placed within the “Kitchen Appliance Images” subfolder, while the electronics images are placed within the “Electronics Images” subfolder.
 
-In addition, the “Appliances” content type refers to the “Dealer Address” Global field. This field provides the address of the local company that supplies a specific appliance.
+In addition, the “Appliances” content type refers to the ���Dealer Address” Global field. This field provides the address of the local company that supplies a specific appliance.
 
 ## When the “Appliances” content type is deleted
 

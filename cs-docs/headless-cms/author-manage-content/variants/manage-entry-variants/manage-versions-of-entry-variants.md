@@ -9,7 +9,7 @@ uid: blt67a7537787a7cae8
 
 ## Manage Versions of Entry Variants
 
-**Note:** The Entry Variants feature is currently available as part of an Early Access Program and may not be available to all users. For more information, you can reach out to our [support](mailto:support@contentstack.com) team.
+**Note:** The Entry Variants feature is enabled per organization and may not be available on all plans. To have it enabled for your organization, contact the [support](mailto:support@contentstack.com) team.
 
 Managing versions of entry variants allows you to keep track of changes made over time, restore previous versions, and maintain a clear history of content updates.
 

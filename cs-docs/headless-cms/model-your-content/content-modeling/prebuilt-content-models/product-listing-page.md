@@ -18,7 +18,7 @@ Let’s dive deep into how this model will help you create your company’s “P
     The Product Listing Page content model includes three main sections:
 
     -   The “Product Listing Page” hero banner
-    -   The “Products List” section cards
+    -   The ���Products List” section cards
     -   The “Related Products” list
 
     Here’s how your Product Listing Page will look like on your website:

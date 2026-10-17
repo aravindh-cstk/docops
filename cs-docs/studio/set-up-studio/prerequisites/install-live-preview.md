@@ -111,10 +111,10 @@ If nothing changes, see [Troubleshoot](/docs/studio/troubleshoot-common-studio-i
 
 ## Optional: Install with the CLI Skill
 
-The studio-skills CLI installs and configures Live Preview automatically using an LLM-driven skill:
+The Studio LLM skills install and configure Live Preview automatically using an LLM-driven skill:
 
 ```
-npx @contentstack/studio-skills install
+curl -fsSL https://studio-documentation.contentstackapps.com/install.sh | sh
 ```
 
 Then: "install Live Preview in this project". The skill detects your framework, adds the live\_preview block to your Delivery SDK init, and wires onEntryChange to your render layer.

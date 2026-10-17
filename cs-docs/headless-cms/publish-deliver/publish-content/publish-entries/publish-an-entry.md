@@ -67,7 +67,7 @@ This workflow allows you to review, filter, and validate referenced entries and 
     -   Users with [Owner](/docs/headless-cms/types-of-roles#owner) or [Admin](/docs/headless-cms/types-of-roles#admin) roles
     -   The user who initiated the validation job
 
-1.  In the **Publish Review** modal, click the “Filter” icon, then click the “Reference Selection” dropdown and choose one of the following options:
+1.  In the **Publish Review** modal, click the “Filter” icon, then click the “Reference Selection��� dropdown and choose one of the following options:
     -   **Select specific references:** Select custom references to publish along with the parent entry.
     -   **Selects only first-level references:** Include only direct references linked to the parent entry.
     -   **Select all references:** Include all the references of the entry.

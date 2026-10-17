@@ -35,10 +35,21 @@ To create user-defined fields within Assets, log in to your [Contentstack accoun
     -   **Default Value**: Set a suggested value that appears by default.
     -   **Is Mandatory?**: Require this field during asset creation or editing.
     -   **Multiple Instances**: Allow users to enter more than one value (for supported types).
+    -   **Selection Settings**: For a Select field, choose the display type (dropdown, radio buttons, or checkboxes) and define the choice list, the selection mode, the data type, and the choice format. Refer to [Configure Select Fields](/docs/assets/configure-select-fields) for the full set of options.
     -   **Number of Characters**: Define the minimum and maximum character length. Use the stepper to adjust. Set to 0 for no limit.
     -   **Validation (Regex)**: Define a regular expression to enforce a specific input format.
     -   **Validation Error Message**: Provide a clear message that appears when the value does not meet the validation (regex) pattern. Example: “Enter a 4-digit year, e.g., 2026.”
 6.  Click **Save Field**.
+
+## Remove a Field
+
+Removing a field from an asset type, removing one from inside a group field, or deleting a field outright runs as a background job, because the values have to be cleared from every asset using it. The change is accepted immediately and a notification links you to the Bulk Task Queue, where you can follow it.
+
+Adding a field is unaffected and takes effect as soon as you save.
+
+**Note:** Adding a field with a default value does not write that default onto assets that already exist. They resolve it when read. Changing the default on a field that is already attached applies only to assets created afterwards.
+
+**Additional Resource:** Refer to [Assets Bulk Task Queue](/docs/assets/assets-bulk-task-queue).
 
 Your new field is created and is available for reuse across asset types and field groups within Assets. You can edit field properties (except UID) or delete the field if it is not in use.
 
@@ -48,6 +59,7 @@ Your new field is created and is available for reuse across asset types and fiel
 -   Keep UIDs short and consistent, e.g., campaign\_name, model\_release\_date.
 -   Set fields to mandatory for critical governance data, such as rights and expiration dates.
 -   Use Group field types to organize metadata logically, e.g., resolution, color\_profile, and dpi under “Image Properties”.
+-   Use a Select field wherever the value comes from a known set, such as region or license type. Free-text values drift and stop filtering together.
 
 ## Use Case: Fields for 3D Models
 
