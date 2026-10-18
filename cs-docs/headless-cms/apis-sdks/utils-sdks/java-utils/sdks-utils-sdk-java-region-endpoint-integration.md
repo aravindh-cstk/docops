@@ -187,7 +187,7 @@ query.find(new QueryResultsCallBack() {
 Change one string to switch regions. Everything else stays the same:
 
 ```
-// NA       → cdn.contentstack.io
+// NA       ��� cdn.contentstack.io
 String host = Endpoint.getContentstackEndpoint("na",       "contentDelivery", true);
 
 // EU       → eu-cdn.contentstack.com
@@ -448,7 +448,7 @@ Endpoint.getContentstackEndpoint(region, service)
           │
           ▼
   In-memory cache present?
-          ���─��� Yes ──► Return URL
+          ├── Yes ──► Return URL
           └── No
                 │
                 ▼

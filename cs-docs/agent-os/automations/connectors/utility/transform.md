@@ -1742,7 +1742,7 @@ Here’s a screenshot that shows the output:
 
 Use this function to split the text into an array.
 
-**Example:** \[\[split “data-input��� , ���-”\]\].
+**Example:** \[\[split “data-input” , “-”\]\].
 
 In the above example:
 
@@ -1957,7 +1957,7 @@ Here’s a screenshot that shows the output:
 
 Use this function to remove whitespace characters from the beginning and end of the string. This includes tab, space, null byte, new line, and carriage return.
 
-**Example:** \[\[trim “ Hello World ”\]\].
+**Example:** \[\[trim ��� Hello World ”\]\].
 
 In the above example:
 
