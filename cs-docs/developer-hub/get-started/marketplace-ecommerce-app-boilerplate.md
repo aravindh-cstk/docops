@@ -168,7 +168,7 @@ marketplace-ecomm-boilerplate-app
     |-- package.json
     |-- tsconfig.json
     |-- update-app-info.json
-└─ .gitignore
+└��� .gitignore
 └─ LICENSE
 └─ README.md
 └─ SECURITY.md
