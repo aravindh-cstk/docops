@@ -33,7 +33,7 @@ Templates render at **real URLs** on your site: visitors land on /blog/ai-101, /
 If specific paths must NOT go through Studio (/api/\*, /admin/\*, custom static pages), register those routes ahead of the catch-all (or in framework-natural locations that take precedence, e.g. app/api/... in Next.js wins over app/\[\[...slug\]\]/page.tsx automatically).
 
 ```
-// React Router example — opt-outs before the catch-all
+// React Router example �� opt-outs before the catch-all
 <Routes>
   <Route path="/canvas" element={<CanvasRoute />} />          {/* existing — section authoring */}
   <Route path="/api/*"  element={<NotFoundOrApiHandler />} />  {/* opt-out */}
