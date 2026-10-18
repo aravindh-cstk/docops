@@ -597,7 +597,7 @@ You can also pass the data configured from the previous step and replace the con
     Use this modifier to escape HTML characters.  
     **Example:** escape('<data input>')
 
-    Here���s a screenshot that shows the input:
+    Here’s a screenshot that shows the input:
 
     ![Escape_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5cf44161a33011d3/66c5f9e4ab1b6905e93cb635/Escape_Input.png)
 
@@ -1509,7 +1509,7 @@ In the above example:
 -   **italic** is the helper function
 -   **Hello World i**s the string which you want to return in italic format
 
-Here’s a screenshot that shows the input:
+Here���s a screenshot that shows the input:
 
 ![Italic_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt357aa19517062d21/66c6f47c4b8e1477f4bc8e18/Italic_Input.png)
 
