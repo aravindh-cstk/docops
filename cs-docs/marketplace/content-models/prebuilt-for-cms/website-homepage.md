@@ -81,6 +81,6 @@ The Website Homepage Content Model contains six [Content Types](/docs/headless-c
 
 **Additional Resource:** You can import the prebuilt Content Models via the Marketplace (refer to [How to Import a Content Model](/docs/marketplace/how-to-import-content-model)) or via the CMS (refer to [Import Prebuilt Content Models to your Stack](/docs/headless-cms/import-prebuilt-content-models)). Refer the [Website Homepage Content Modeling](/docs/headless-cms/website-homepage/) documentation to understand how to model the "Website Homepage".
 
-Here’s how your Website Homepage will look after you publish the entry:
+Here���s how your Website Homepage will look after you publish the entry:
 
 ![Content_Models_Website_Homepage.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd2149fac3626c203/65014e6c539fa125784aec50/Content_Models_Website_Homepage.gif)
