@@ -27,7 +27,7 @@ Follow these steps to configure Live Preview for your NextJS CSR App router:
 
     1.  ### Generate a Preview Token
 
-        Create a preview token by navigating to **Settings** \> **Tokens** \> **Delivery Tokens** (press “alt + O” for Windows or “option key + O” for Mac)**.**
+        Create a preview token by navigating to **Settings** \> **Tokens** \> **Delivery Tokens** (press “alt + O” for Windows or “option key + O��� for Mac)**.**
 
         **Note:** It is recommended to use a preview token for Live Preview instead of a previously utilized, read-only management token.
 

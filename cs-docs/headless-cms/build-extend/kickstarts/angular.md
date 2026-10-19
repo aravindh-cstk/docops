@@ -264,7 +264,7 @@ kickstart-angular/
 │   ├── app/
 │   │   ├── app.component.ts
 │   │   ├── components/
-│   │   │   └── home/
+│   ���   ���   └── home/
 │   │   │       ├── home.component.html
 │   │   │       └── home.component.ts
 │   │   └── services/
@@ -279,7 +279,7 @@ kickstart-angular/
 ├── .env.example
 ├── angular.json
 ├── generate-env.js
-���── package.json
+├── package.json
 └── types.ts
 ```
 
