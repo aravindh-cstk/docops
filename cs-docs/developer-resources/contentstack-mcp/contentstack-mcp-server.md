@@ -201,7 +201,7 @@ See [Build your own MCP Stack-aware enrichment](https://developers.contentstack.
 
 ### Where to find your credentials
 
--   **Stack API Key:** Contentstack Dashboard → Settings → API Credentials
+-   **Stack API Key:** Contentstack Dashboard → Settings �� API Credentials
 -   **Delivery Token:** Contentstack Dashboard → Settings → Tokens → Delivery Tokens → create one for your target environment
 -   **Management Token:** Contentstack Dashboard → Settings → Tokens → Management Tokens → create one (only if authenticating CMA without OAuth)
 -   **Brand Kit ID:** BrandKit Dashboard → your brand kit's settings page
