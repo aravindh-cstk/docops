@@ -44,7 +44,7 @@ In this tutorial, we will first go through the steps involved in configuring Con
 
     Add a few dummy entries for news articles for the ‘News’ content type. Save and publish these entries. Learn how to [create](/docs/headless-cms/create-an-entry) and [publish](/docs/headless-cms/publish-an-entry) entries.
 
-    With this step, you have created sample data for your website. Now, it’s time to use and configure the presentation layer.
+    With this step, you have created sample data for your website. Now, it��s time to use and configure the presentation layer.
 
 5.  ## SDK Installation and Setup
 
@@ -92,7 +92,7 @@ In this tutorial, we will first go through the steps involved in configuring Con
     dotnet tool install --global contentstack.model.generator
     ```
 
-    Go to your project���s root folder and run the following command:
+    Go to your project’s root folder and run the following command:
 
     ```
     contentstack.model.generator -a <API_KEY> -A <AUTHTOKEN>
