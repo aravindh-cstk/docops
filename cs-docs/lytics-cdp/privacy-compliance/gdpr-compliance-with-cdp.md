@@ -56,7 +56,7 @@ This document will answer questions about collecting consent, as well as how to 
 13.  **In what format is the customer profile data provided?**  
      The customer profile data from Lytics will be downloaded as a JavaScript Object Notation (JSON) file. JSON is a common, machine-readable file format that complies with the GDPR Right to Portability.
 14.  **Right to Erasure (‘right to be forgotten’)**  
-     The GDPR also grants the Data Subject the right to erasure of personal data without undue delay. Lytics, as a Data Processor, fully supports your organization’s ability to comply with this regulation.
+     The GDPR also grants the Data Subject the right to erasure of personal data without undue delay. Lytics, as a Data Processor, fully supports your organization��s ability to comply with this regulation.
 15.  **How long is customer profile data stored in Lytics?**  
      Customer Profile data is stored in Lytics for as long as the data is required for decision-making and the event schema is valid. Every customer event for that profile is saved against the customer profile so that Lytics can rebuild the profile from historical data if the schema changes. During this rebuild, if there is a major change to the schema, any data that does not fit the new schema will be deleted.
 16.  **How do we delete customer profile data from Lytics?**  
