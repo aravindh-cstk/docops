@@ -10,7 +10,8 @@ uid: bltfecc063276da0931
 ## Limitations of Bulk Operations on Entries
 
 -   You can publish or unpublish up to **100 entries** in **10 languages** across **10 environments** at a time.
--   You can export up to **10,000 entries** at a time.
+-   You can export up to **10,000 entries** in a single export. If you start more exports than can run at the same time, the extra exports wait in the queue until they can run.
+-   You can import one file of up to **50 MB** at a time, and run one import at a time.
 -   You can select and delete up to **100 entries** at a time.
 -   You can publish up to **10 localized entry versions** across **10 environments** at a time.
 -   When scheduling bulk publishing/unpublishing, the date cannot exceed **12 months** from the current date.
