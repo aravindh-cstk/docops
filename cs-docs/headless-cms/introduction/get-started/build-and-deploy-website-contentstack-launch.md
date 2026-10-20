@@ -197,8 +197,8 @@ Before moving to the next step, confirm you have all of the following values:
 
 | Value | Where to Find It |
 | --- | --- |
-| Stack API Key | Settings → Stack |
-| Delivery Token | Settings → Tokens �� Delivery Tokens |
+| Stack API Key | Settings �� Stack |
+| Delivery Token | Settings → Tokens → Delivery Tokens |
 | Environment name | Settings → Environments (copy exactly) |
 | Content Type UID | Content Models → open the content type |
 | Entry UID | Content → open the entry → entry details sidebar |

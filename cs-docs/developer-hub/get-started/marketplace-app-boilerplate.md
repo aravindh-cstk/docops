@@ -169,7 +169,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   └── index.tsx
 │   │
 │   ├── test-utils/
-��   │   └── test-utils.tsx
+│   │   └── test-utils.tsx
 │   │
 │   ├── cssModules.d.ts
 │   ├── custom.d.ts
@@ -181,7 +181,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │
 ├── CODEOWNERS
 ├── global-setup.ts
-├── global-teardown.ts
+├─�� global-teardown.ts
 ├── index.html
 ├── LICENSE
 ├── manifest.json
