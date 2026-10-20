@@ -37,7 +37,7 @@ Supported Attributes for App Manifest:
 
 ## App Manifest Example
 
-Let’s look at an example of an App Manifest.
+Let��s look at an example of an App Manifest.
 
 ```
 {
@@ -379,7 +379,7 @@ At runtime, when a call is made to the source path, Contentstack rewrites the re
 }
 ```
 
-/users/123/profile ��� https://api.myapp.com/v1/accounts/123/profile
+/users/123/profile → https://api.myapp.com/v1/accounts/123/profile
 
 **Product details**
 
