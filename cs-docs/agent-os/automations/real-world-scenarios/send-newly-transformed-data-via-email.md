@@ -54,11 +54,11 @@ Let’s look at the setup in detail.
         ![Transform_Connector.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9ac52cb0981409b0/699d4eb42664c800089242f8/Transform_Connector.png)
     4.  Select the **Transform** action.  
         ![Select_Transform_Action.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt71aaa489a99ff4bb/699d4eb4f70ac4000881ee8a/Select_Transform_Action.png)
-    5.  Click **Add Input**, and enter a variable name for the **Input Name** (say, ��name”) and an **Input Value** for the variable (say, “john” in lowercase letters) (see screenshot in next step).
+    5.  Click **Add Input**, and enter a variable name for the **Input Name** (say, “name”) and an **Input Value** for the variable (say, “john” in lowercase letters) (see screenshot in next step).
 
         **Note:** You can even pass the value directly into the **Transformation** box.
 
-    6.  Let’s enter the JSON code that uses the “capitalize()” modifier in the Transformation box. Use the following code:{“result” : “{capitalize(name)}” }
+    6.  Let’s enter the JSON code that uses the “capitalize()��� modifier in the Transformation box. Use the following code:{“result” : “{capitalize(name)}” }
 
         **Note:** You can use the data received from the trigger instead of manually adding the values.
 
