@@ -14,7 +14,7 @@ The Audit Log page helps teams review content updates, user actions, and system 
 To access the audit logs, log in to your [Contentstack account](https://www.contentstack.com/login/) and perform the following steps:
 
 1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Settings” icon or use the shortcut key “S” (for both Windows OS and Mac OS users).
-2.  Click the **Audit Log** tab or use the shortcut key “alt + A” for Windows OS users, and “option + A” for Mac OS users.
+2.  Click the **Audit Log** tab or use the shortcut key “alt + A�� for Windows OS users, and “option + A” for Mac OS users.
 
 The **Audit Log** page provides the following details of the events that occurred within the stack:
 
