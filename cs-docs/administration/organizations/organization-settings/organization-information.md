@@ -20,7 +20,7 @@ Depending on your role, this page displays different levels of information:
 
 To access the Org Info (Security Dashboard) page, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 
-1.  Navigate to **Administration** through “App Switcher”.
+1.  Navigate to **Administration** through ���App Switcher”.
 2.  By default, the **Org Info** tab is selected.
 
 ## Basic Organization Info
