@@ -92,7 +92,7 @@ To create a new A/B Test experience in the new project, perform the following st
     3.  Enter **Control** and **Bold headline** in the Variant name fields.![Configuration tab with equally split distribution and two variants](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt3c49ed87690ed689/6752dbb72eab9c5b01c86bcb/9_-_Getting_Started_with_Contentstack_Personalize_with_A_B_Testing.png)
 6.  Click the **Save Draft** button to save the A/B Test experience.
 
-You’ve now created an A/B test experience that you can use to test different content variants.
+You���ve now created an A/B test experience that you can use to test different content variants.
 
 **Additional Resource:** For detailed information, please refer to the [Create an A/B Test Experience](/docs/personalize/create-ab-test-experience/) documentation.
 
