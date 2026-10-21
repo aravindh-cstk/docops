@@ -111,7 +111,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   ├── locales/
 │   │   │   └── en-us/
 │   │   │       └── index.ts
-│   │   ├── providers/
+│   │   ├─�� providers/
 │   │   │   ├── AppConfigurationExtensionProvider.tsx
 │   │   │   ├── CustomFieldExtensionProvider.tsx
 │   │   │   ├── EntrySidebarExtensionProvider.tsx
@@ -181,7 +181,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │
 ├── CODEOWNERS
 ├── global-setup.ts
-├─�� global-teardown.ts
+├── global-teardown.ts
 ├── index.html
 ├── LICENSE
 ├── manifest.json
