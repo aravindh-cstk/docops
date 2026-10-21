@@ -43,7 +43,7 @@ This step-by-step guide explains how to install and configure commercetools in y
 
     To install the app in Contentstack, log in to your [Contentstack account](https://www.contentstack.com/login/) and follow the steps below:
 
-    1.  Navigate to the “App Switcher” icon in the top-right corner and click **Marketplace**.![Contentstack-App-Switcher-Marketplace](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt47c618781b542b64/68ee96ad6bfd93c9913fee8a/Contentstack-App-Switcher-Marketplace.png)
+    1.  Navigate to the “App Switcher�� icon in the top-right corner and click **Marketplace**.![Contentstack-App-Switcher-Marketplace](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt47c618781b542b64/68ee96ad6bfd93c9913fee8a/Contentstack-App-Switcher-Marketplace.png)
     2.  Click **Apps** from the left panel.
     3.  Within the Marketplace, you can see all available apps. Hover over the **commercetools** app and click **Install**.  
         ![Marketplcae_app_switcher_Commercetools.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am1f580bc1d5057701/47b041e116a3501ec847c82a/Marketplcae_app_switcher_Commercetools.png?locale=en-us)
@@ -178,7 +178,7 @@ This step-by-step guide explains how to install and configure commercetools in y
     9.  After adding the custom fields for the app, click **Save** or **Save and Close** to save your changes.
     10.  To use the commercetools app, create an entry for this content type. In the left navigation panel, navigate to the Entries page, click **\+ New Entry** to create a new entry for the above content type, and then click **Proceed**.
 
-         You can see the commercetools app��s custom fields on your entry page as shown below:
+         You can see the commercetools app’s custom fields on your entry page as shown below:
 
          ![17-commercetools-Sample-Entry](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb2a2436f7ac041c4/66c47ebd4735072280095e5f/17-commercetools-Sample-Entry.png)
     11.  Click the **\+ Add Product(s)** button to choose the product(s).![18-commercetools-Add-Product-In-Entry](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt9d0edaa2ad1813d5/66c47ebdf8d31f5f2fb688f4/18-commercetools-Add-Product-In-Entry.png)
