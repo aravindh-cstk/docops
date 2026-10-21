@@ -177,7 +177,7 @@ Within the Entry Editor page, enter/select the following content against the res
     -   **Description**: Enter “At PlateStack, we’ve got great food and a better experience.”
     -   **Timings**: Enter “Tue - Sun ( 16:00 - 22:00 )”
     -   **Holiday**: Enter “Closed on Monday”
-    -   **Copyright**: Enter ���Copyright © PlateStack 2024. All rights reserved.”
+    -   **Copyright**: Enter “Copyright © PlateStack 2024. All rights reserved.”
 
 After entering the data, publish the entry to the **development** environment as we did in **step 3** of the [Create Entries for the “Header” Content Type](#create-entries-for-the-header-content-type) section.
 
@@ -198,7 +198,7 @@ Within the Entry Editor page, enter the following content against the respective
         -   **Banner**: Perform the same set of steps followed to upload the Logo in Step 3 of the [Create Entries for the “Header” Content Type](#create-entries-for-the-header-content-type) section. Here, you need to upload the Assets/Page - Home/Banner.jpeg file.![18. Select the Banner file.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt4a8d1714eac320da/66a34c675c5264c4d22707bf/18._Select_the_Banner_file.png)
         -   **Heading**: Enter “Journey into flavor”
         -   **Description**: Enter “Indulge in a gastronomic journey where every dish is a culinary masterpiece, crafted with ultra precision.”
-        -   **Primary CTA**: Enter “/menu”
+        -   **Primary CTA**: Enter ���/menu”
 
 After entering this data, publish the entry to the **development** environment as we did in **step 3** of the [Create Entries for the “Header” Content Type](#create-entries-for-the-header-content-type) section.
 
