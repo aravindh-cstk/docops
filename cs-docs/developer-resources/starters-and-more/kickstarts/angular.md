@@ -264,11 +264,11 @@ kickstart-angular/
 │   ├── app/
 │   │   ├── app.component.ts
 │   │   ├── components/
-│   ���   ���   └── home/
+│   │   │   └── home/
 │   │   │       ├── home.component.html
 │   │   │       └── home.component.ts
 │   │   └── services/
-│   │       └── contentstack.service.ts
+│   │       ��─�� contentstack.service.ts
 │   ├── environments/
 │   │   ├── environment.production.ts
 │   │   └── environment.ts
