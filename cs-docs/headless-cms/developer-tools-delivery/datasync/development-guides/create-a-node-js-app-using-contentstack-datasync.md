@@ -119,7 +119,7 @@ So, download the boilerplate code, configure it as required, and get started wit
               const contentTypeUID = 'about';
             ```
 
-        2.  **Create an** **“about.html” template in the “views” folder**  
+        2.  **Create an** **“about.html” template in the ���views” folder**  
             Go to the views folder, create an about.html file, and paste the following code in the file:
 
             ```
