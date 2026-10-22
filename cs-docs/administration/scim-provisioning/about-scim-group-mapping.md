@@ -15,7 +15,7 @@ The **SCIM Group Mapping** functionality allows you to assign roles to a group o
 
 To set roles for a group, navigate to **Administration** through the App Switcher and open the **SCIM** settings. Then, from the groups you have created via your IdP, select a group and assign its roles. You can assign organization-level Administration and product roles, along with project-level roles for individual stacks, spaces, or AgentOS projects.
 
-For example, if you assign the **Content Manager** role to a “Content Manager group” for every stack in the organization, all the users belonging to this group have the **Content Manager** role for those stacks.
+For example, if you assign the **Content Manager** role to a ��Content Manager group” for every stack in the organization, all the users belonging to this group have the **Content Manager** role for those stacks.
 
 **Note:** It is recommended to disable SSO role-mapping when SCIM is enabled, because SCIM groups perform the role assignments in advance.
 
