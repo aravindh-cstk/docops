@@ -383,7 +383,7 @@ registerComponent(CtaButton, {
 | Calling registerComponentStateVariable inside the component body | It runs after render, so the declaration never lands and the key stays invisible to authors | Call it at **module scope**, beside the component |
 | A key typo: cart:Count vs cart:count | Two silently separate values. One component updates, the other never moves, and nothing warns | Export key constants and import them |
 | Unprefixed key names (count, filter) | The registry is flat, so the same bare name collides across features | Namespace every key by feature |
-| count + 1 on the first render | The value is undefined until the declared default resolves | Guard the read (count ?? 0) and prefer setCount(prev => …) |
+| count + 1 on the first render | The value is undefined until the declared default resolves | Guard the read (count ?? 0) and prefer setCount(prev => ���) |
 | Gating on the package version to check availability | Published 1.7.0 and the monorepo's 1.7.0 differ in contents | Grep dist for the exported symbol, see the availability note at the top |
 | require("@contentstack/studio-react/package.json") | The exports map doesn't expose it, so it throws ERR\_PACKAGE\_PATH\_NOT\_EXPORTED | Use npm ls @contentstack/studio-react --depth=0 |
 
