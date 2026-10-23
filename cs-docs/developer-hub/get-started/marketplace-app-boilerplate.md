@@ -111,7 +111,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   ├── locales/
 │   │   │   └── en-us/
 │   │   │       └── index.ts
-│   │   ├─�� providers/
+│   │   ├── providers/
 │   │   │   ├── AppConfigurationExtensionProvider.tsx
 │   │   │   ├── CustomFieldExtensionProvider.tsx
 │   │   │   ├── EntrySidebarExtensionProvider.tsx
@@ -119,7 +119,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   ├── types/
 │   │   │   └── types.ts
 │   │   └── utils/
-│   │       └── functions.ts
+│   │       └─��� functions.ts
 │   │
 │   ├── components/
 │   │   ├── ConfigModal/
