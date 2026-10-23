@@ -90,7 +90,7 @@ Click on **Publish** and select the **development** environment for all respecti
 
     You will need to add multiple instances for this field with the values mentioned below.
 
-    **Note:** If an entry field is designated as “Multiple,��� you will see the Add “+” icon located beside the existing instance.
+    **Note:** If an entry field is designated as “Multiple,” you will see the Add “+” icon located beside the existing instance.
 
     Here are the instances you need to add:
 
@@ -191,7 +191,7 @@ Finally save the file using _command_ + _S_ keys
 
 ### Building Menu Page Component
 
-You need a component to render when you go to the Menu page. Let’s build it.
+You need a component to render when you go to the Menu page. Let���s build it.
 
 1.  Go to the src/components/menu/Menu.tsx file. This file contains the component that renders the Menu page.
 2.  Please follow “COMMENT” and uncomment all the commented lines.
