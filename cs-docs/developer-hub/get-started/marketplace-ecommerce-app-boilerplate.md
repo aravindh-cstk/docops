@@ -168,7 +168,7 @@ marketplace-ecomm-boilerplate-app
     |-- package.json
     |-- tsconfig.json
     |-- update-app-info.json
-└��� .gitignore
+└─ .gitignore
 └─ LICENSE
 └─ README.md
 └─ SECURITY.md
@@ -377,7 +377,7 @@ To use your application, you need to upload it to Contentstack. To do so, perfor
      ![Configuration_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt20c455f6d08a62b6/64fa02dd7db54e3536c18f03/Configuration_Page.png)
 12.  On the **Configuration** page, enter the values for **Sample Ecommerce App Client ID** and **Sample Ecommerce App Client Secret**. 
 
-     Let’s understand the configuration fields:
+     Let��s understand the configuration fields:
 
      1.  **Sample Ecommerce App Client ID**  
          You can enter the Client ID fetched from the third-party ecommerce website and save the data. You can also use any other app configuration as per your ecommerce website.
