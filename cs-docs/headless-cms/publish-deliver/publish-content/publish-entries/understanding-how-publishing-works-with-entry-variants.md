@@ -33,6 +33,12 @@ Entry variants can be published in any of the available languages within your st
 
 **Note:** An entry variant can only be created for a language if the base entry is already localized for that specific language. The localized base entry serves as the foundation for the entry variants in that language.
 
+An entry variant exists in a language only after you save it in that language. Until then, when you open the entry variant in that language, the entry editor shows a draft of the entry variant based on the localized base entry, and the **Publish** button is not available. When you fetch the entry variant in that language, the Content Delivery API returns the base entry's content for that language.
+
+Save the entry variant in each language you want to publish it in. If you publish the base entry with an entry variant selected, the entry variant fails to publish in any selected language where it has not been saved.
+
+In the **Publish Entry Variant** modal, **(L)** next to a language means the base entry is localized in that language. The modal does not show which languages the entry variant has been saved in.
+
 ### Reference Field Considerations
 
 When a base entry or an entry variant is referenced in another entry (via a reference field), and you send that entry for publishing, then as per the configurations for Nested Reference Publishing (NRP) for your organization, all nested references up to depth level 5 will be published.

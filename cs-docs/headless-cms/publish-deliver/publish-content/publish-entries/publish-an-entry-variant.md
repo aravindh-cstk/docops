@@ -13,26 +13,33 @@ uid: blt48f12a694cad09af
 
 Publishing entry variants in Contentstack allows you to deliver personalized content tailored to specific user segments.
 
-To publish an entry variant, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the steps given below:
+To publish an entry variant, log in to your [Contentstack account](/login) and perform the steps given below:
 
 1.  Navigate to the desired [stack](/docs/headless-cms/about-stack), click the **Entries** icon in the left navigation panel, and select an existing entry variant, indicated by the variants icon on the entries list page.
+
 2.  Click the **Publish** button within the entry editor.
+
 3.  In the **Publish Entry Variant** modal that appears, under **Select Environment(s)** and **Select Language(s)**, select the environment(s) and the locale(s) to which you want to publish the entry.
-4.  Under **Publish**, you have two sub-options – **Now** (to publish immediately) and **Later** (to publish at a later date/time that you provide).
+
+    **Note:** In the **Select Language(s)** list, **(L)** next to a locale means the base entry is localized in that locale. It does not mean the entry variant has been saved in that locale, and the modal does not show which locales the entry variant has been saved in. An entry variant can be published in a locale only after you save it in that locale. For more information, refer to [Language-Specific Publishing](/docs/headless-cms/understanding-how-publishing-works-with-entry-variants#language-specific-publishing).
+
+4.  Under **Publish**, you have two sub-options: **Now** (to publish immediately) and **Later** (to publish at a later date/time that you provide).
 
     When you select “Later”, a group of options appear asking you to select the **Date** and **Time** of publishing, and the **Time-Zone**.
 
 5.  Confirm your settings by clicking the **Send** button.
-6.  If you have nested references within your entry variant, the The **Publish Reference(s)** modal showing all the nested references for the entry will open up.
+
+6.  If you have nested references within your entry variant, the **Publish Reference(s)** modal showing all the nested references for the entry will open up.
+
 7.  Click **Send With References** to send the entry along with all its nested references for publishing.![1-Publish-Entry-Variant.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltced2aa68dd077a81/66fa9202762d3a12215a9d60/1-Publish-Entry-Variant.gif)
 
-    **Note:**
+    **Note**
 
     -   If no previous or current version of the base entry is published in the selected environment(s) and language(s), the base entry will be published by default.
     -   If a content type or global field is updated after an entry was created (for example, a new required field is added), Contentstack validates the entry against the latest configuration when you publish. If any required field is empty, the entry cannot be published until you complete it.
 
 
-Alternatively, when publishing the base entry, you can **Select Variant(s)** from the dropdown in the **Publish Entry** modal. Choose from the available entry variants to publish them alongside the base entry.
+Alternatively, when publishing the base entry, you can **Select Variant(s)** from the dropdown in the **Publish Entry** modal. Choose from the available entry variants to publish them alongside the base entry. If a selected entry variant has not been saved in one of the selected locales, it fails to publish in that locale. Save the entry variant in each locale before you publish it.
 
 ![2-Publish-Base-Entry-with-Entry.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt81fccaa9f02d8360/66fa9202a18b1f913c01451b/2-Publish-Base-Entry-with-Entry.gif)
 
