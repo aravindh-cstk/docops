@@ -494,7 +494,7 @@ csdx launch:rollback
 
 **Launch (Redeploy an Existing Project)**
 
--   To redeploy using the project’s directory path, use \--data-dir:
+-   To redeploy using the project��s directory path, use \--data-dir:
 
     ```
     csdx launch --data-dir <project-directory-path>
