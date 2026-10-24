@@ -29,7 +29,7 @@ Now, suppose if the “Appliances” content type comprises the following applia
 
 Each appliance (entry) is equipped with high-quality assets to clearly denote their structural elements. All of these images are stored inside the “Appliance Images” folder. The kitchen appliances are placed within the “Kitchen Appliance Images” subfolder, while the electronics images are placed within the “Electronics Images” subfolder.
 
-In addition, the “Appliances” content type refers to the ���Dealer Address” Global field. This field provides the address of the local company that supplies a specific appliance.
+In addition, the “Appliances” content type refers to the “Dealer Address” Global field. This field provides the address of the local company that supplies a specific appliance.
 
 ## When the “Appliances” content type is deleted
 
@@ -94,7 +94,7 @@ Once restored, the asset folder returns back to the content type along with all 
 
 ## When the “Appliance Images” asset folder is deleted
 
-If you delete the “Appliance Images” asset folder, then that folder will be moved to the Trash along with all the assets and subfolders that were part of it. The underlying assets will be removed from all the entries of the “Appliances” content type that they were a part of.
+If you delete the “Appliance Images” asset folder, then that folder will be moved to the Trash along with all the assets and subfolders that were part of it. The underlying assets will be removed from all the entries of the “Appliances�� content type that they were a part of.
 
 To restore the asset folder, you can go to **Trash** > **Assets** and click on **Restore** to the right hand side of the asset folder. You can choose whether you want to restore the asset folder along with its assets and subfolders or not.
 
