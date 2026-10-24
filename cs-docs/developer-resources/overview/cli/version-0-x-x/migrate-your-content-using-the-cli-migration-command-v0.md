@@ -9,7 +9,7 @@ uid: bltce91c490961bf924
 
 ## Migrate your Content using the CLI Migration Command
 
-The “Migration” plugin in Contentstack CLI allows developers to automate the content migration process using a custom migration script.
+The ��Migration” plugin in Contentstack CLI allows developers to automate the content migration process using a custom migration script.
 
 This guide explains how to migrate your content using the CLI migration plugin. We have provided sample migration scripts that developers can use to get started, or you can write your custom scripts.
 
@@ -118,7 +118,7 @@ Now let us understand how to migrate content from one stack to another using the
     -   Example 3:
 
         ```
-        csdx cm:migration -a my_token_alias -k bxxxxxxx --config  numberOfEntries:100 contentTypeUID:blog -n “path/to/update/first/100/entries/of/given/contenttype/script/file���
+        csdx cm:migration -a my_token_alias -k bxxxxxxx --config  numberOfEntries:100 contentTypeUID:blog -n “path/to/update/first/100/entries/of/given/contenttype/script/file”
         ```
         In the next section, let’s understand how to create the migration files and use various methods to perform operations in your stack.
 
