@@ -37,7 +37,7 @@ Follow these steps to navigate to the variant group in the CMS and begin creatin
 
     ![Contentstack CMS Sync Status with Variant Group link](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc480bdf855c91178/6930fe5f41f0926cd859185e/image3.png)
 
-7.  This opens up the linked Variant Group’s page in the stack settings.
+7.  This opens up the linked Variant Group���s page in the stack settings.
 
 ### From the CMS Stack
 
