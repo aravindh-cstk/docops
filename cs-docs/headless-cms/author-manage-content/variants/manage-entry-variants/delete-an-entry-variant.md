@@ -9,7 +9,7 @@ uid: blte1743e00a06c0e8a
 
 ## Delete an Entry Variant
 
-**Note:** The Entry Variants feature is currently available as part of an Early Access Program and may not be available to all users. For more information, you can reach out to our [support](mailto:support@contentstack.com) team.
+**Note:** The Entry Variants feature is enabled per organization and may not be available on all plans. To have it enabled for your organization, contact the [support](mailto:support@contentstack.com) team.
 
 Deleting an entry variant in Contentstack allows you to remove specific personalized versions of your content that are no longer needed.
 

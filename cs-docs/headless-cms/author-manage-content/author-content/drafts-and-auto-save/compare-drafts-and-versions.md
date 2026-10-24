@@ -9,7 +9,7 @@ uid: blt6447d03d68f4c7ab
 
 ## Compare Drafts and Versions
 
-**Note:** Drafts and Auto Save is currently part of an Early Access Program and may not be available to all users. Contact the Contentstack [support](mailto:support@contentstack.com) team for more information.
+**Note:** Drafts and Auto Save is being rolled out for General Availability (GA) in phases, with broader availability planned as support expands to the Visual Editor.
 
 Drafts and Auto Save automatically stores changes while you edit an entry. Over time, an entry may include:
 

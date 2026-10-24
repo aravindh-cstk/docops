@@ -9,7 +9,7 @@ uid: blt43e07f55165ae84f
 
 ## Enable or Disable Drafts and Auto Save
 
-**Note:** Drafts and Auto Save is currently part of an Early Access Program and may not be available to all users. Contact the Contentstack [support](mailto:support@contentstack.com) team for more information.
+**Note:** Drafts and Auto Save is being rolled out for General Availability (GA) in phases, with broader availability planned as support expands to the Visual Editor.
 
 Stack Administrators can control whether **Drafts and Auto Save** is available for entries in a stack.
 

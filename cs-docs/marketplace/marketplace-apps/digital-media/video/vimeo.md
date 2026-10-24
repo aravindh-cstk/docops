@@ -52,7 +52,7 @@ Let's follow this step-by-step guide to install and configure the Vimeo app with
     Follow the steps given below to install the application in Contentstack.
 
     1.  Log in to your [Contentstack account](https://www.contentstack.com/login/).
-    2.  Navigate to the “App Switcher” icon in the top-right corner and click **Marketplace**.![Contentstack-App-Switcher-Marketplace](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt47c618781b542b64/68ee96ad6bfd93c9913fee8a/Contentstack-App-Switcher-Marketplace.png)
+    2.  Navigate to the ��App Switcher” icon in the top-right corner and click **Marketplace**.![Contentstack-App-Switcher-Marketplace](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt47c618781b542b64/68ee96ad6bfd93c9913fee8a/Contentstack-App-Switcher-Marketplace.png)
     3.  Click **Apps** from the left panel.
     4.  Within the Marketplace, you can see all the available apps. Hover over the **Vimeo** app and click **Install**.  
         ![Vimeo_app_Install.png](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/amcf9b1fa3c172c61f/1cf91fefd2604a6a242641dc/Vimeo_app_Install.png?locale=en-us)  

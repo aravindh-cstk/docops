@@ -25,7 +25,7 @@ Integrating the Global field within the Group field ensures all associated field
 
 To add a Global field within a Group field, log in to your [Contentstack account](https://www.contentstack.com/login) and follow these steps:
 
-1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Content Models” icon in the left navigation panel or press “C”.
+1.  Go to your [stack](/docs/headless-cms/about-stack) and click the ���Content Models” icon in the left navigation panel or press “C”.
 2.  On the **Content Models** page, select **Global Fields** and click **\+ New Global Field**.
 3.  Enter a **Name** (e.g., SEO Metadata) and optional **Description**, then click **Proceed**.
 

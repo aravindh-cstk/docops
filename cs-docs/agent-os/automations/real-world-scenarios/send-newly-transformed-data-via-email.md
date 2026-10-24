@@ -58,7 +58,7 @@ Let’s look at the setup in detail.
 
         **Note:** You can even pass the value directly into the **Transformation** box.
 
-    6.  Let’s enter the JSON code that uses the “capitalize()” modifier in the Transformation box. Use the following code:{“result” : “{capitalize(name)}” }
+    6.  Let’s enter the JSON code that uses the “capitalize()��� modifier in the Transformation box. Use the following code:{“result” : “{capitalize(name)}” }
 
         **Note:** You can use the data received from the trigger instead of manually adding the values.
 

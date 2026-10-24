@@ -47,4 +47,6 @@ The entries list now displays only those entries explicitly localized in the sel
 
 **Note:** The language filter setting is saved automatically and remains active until changed.
 
+**Additional Resource:** After you filter the list to a language, use [select all records](/docs/headless-cms/select-all-records-for-bulk-operations) to publish, unpublish, delete, or add to a release every entry in the filtered list, up to **10,000 entries** per action.
+
 **Additional Resource:** You can further refine your entry list by using [**Advanced Settings**](/docs/headless-cms/localization-operator-real-world-scenarios#case-2-search-for-entries-that-are-localized-only-in-chinese-china) in the Filters panel. This allows for more granular control over how localized content is displayed.

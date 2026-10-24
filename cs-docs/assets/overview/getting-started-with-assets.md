@@ -209,7 +209,7 @@ Assets helps Amazemart solve these needs by providing:
 
         Amazemart can configure useful combinations of columns and filters as **views**, such as:
 
-        -   “Active Shoe Campaign Assets”
+        -   “Active Shoe Campaign Assets���
         -   “Rights Expiring in Next 30 Days”
         -   “Unlocalized French Assets”
 

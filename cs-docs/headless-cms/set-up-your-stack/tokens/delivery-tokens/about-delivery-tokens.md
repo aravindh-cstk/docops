@@ -15,7 +15,7 @@ Delivery Tokens are **read-only** credentials used with a stack's API key to **r
 
 -   A Delivery Token can be associated with all [branches](/docs/headless-cms/about-branches) or restricted to a specific branch. Similarly, it can be assigned to all [aliases](/docs/headless-cms/about-aliases) or a single alias, enabling you to fetch content from the respective branches.
 -   Contentstack does not create Delivery Tokens automatically. You need to manually [create a Delivery Token](/docs/headless-cms/create-a-delivery-token) for each environment.
--   Each Delivery Token is tied to a single environment, so separate tokens must be created for each environment in a stack. This enhances content security by ensuring only authorized users can access the appropriate environment. For example, testers can access only the “staging” environment, while content managers access only the “production” environment.
+-   Each Delivery Token is tied to a single environment, so separate tokens must be created for each environment in a stack. This enhances content security by ensuring only authorized users can access the appropriate environment. For example, testers can access only the “staging” environment, while content managers access only the “production�� environment.
 -   Delivery Tokens are used **only for published content** and do not grant access to unpublished or draft content.
 
 **Note:** The number of Delivery Tokens you can create depends on your plan. You can contact Contentstack [support](mailto:support@contentstack.com) to increase the limit.

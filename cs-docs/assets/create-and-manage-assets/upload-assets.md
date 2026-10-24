@@ -24,3 +24,5 @@ To upload assets, log in to your [Contentstack account](https://www.contentstack
 **Note:** You cannot drag and drop folders. Instead, [create a folder](/docs/assets/create-a-folder) and upload files into it.
 
 Uploaded assets appear in the assets listing. You can apply filters, sort, or organize them into folders.
+
+**Additional Resource:** A space can also add tags and alt text to assets automatically as they are uploaded. Refer to [Auto-Populate AI Metadata at Upload](/docs/assets/auto-populate-ai-metadata).

@@ -9,7 +9,7 @@ uid: blt68425c2eea23c2c8
 
 ## Understanding How Publishing Works with Entry Variants
 
-**Note:** The Entry Variants feature is currently available as part of an Early Access Program and may not be available to all users. For more information, you can reach out to our [support](mailto:support@contentstack.com) team.
+**Note:** The Entry Variants feature is enabled per organization and may not be available on all plans. To have it enabled for your organization, contact the [support](mailto:support@contentstack.com) team.
 
 The Entry Variants feature allows you to create multiple versions of a single entry, each tailored for specific audiences, campaigns, or contexts. This document outlines how publishing interacts with entry variants, ensuring you deliver the right content to the right [audience](/docs/personalize/about-audiences).
 
@@ -32,6 +32,12 @@ This enables safe testing and review before pushing content live.
 Entry variants can be published in any of the available languages within your stack.
 
 **Note:** An entry variant can only be created for a language if the base entry is already localized for that specific language. The localized base entry serves as the foundation for the entry variants in that language.
+
+An entry variant exists in a language only after you save it in that language. Until then, when you open the entry variant in that language, the entry editor shows a draft of the entry variant based on the localized base entry, and the **Publish** button is not available. When you fetch the entry variant in that language, the Content Delivery API returns the base entry's content for that language.
+
+Save the entry variant in each language you want to publish it in. If you publish the base entry with an entry variant selected, the entry variant fails to publish in any selected language where it has not been saved.
+
+In the **Publish Entry Variant** modal, **(L)** next to a language means the base entry is localized in that language. The modal does not show which languages the entry variant has been saved in.
 
 ### Reference Field Considerations
 

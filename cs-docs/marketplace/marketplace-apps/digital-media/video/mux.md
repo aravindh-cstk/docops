@@ -190,7 +190,7 @@ Follow this step-by-step guide to install and configure Mux within your stack.
         6.  To view the assets in the list view, select **List** from the drop-down menu.![Mux-Custom-Field-View-Options](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltfa92758c89e6d81e/69c8523019faf7c6708d7773/Mux-Custom-Field-View-Options.png)
         7.  The assets you insert get referenced within your entry in the list view.![Mux-Custom-Field-View-Option-List](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt725a9873cf55519f/69c85231dc2ce49875a575bf/Mux-Custom-Field-View-Option-List.png)
         8.  Click the **Save** button to save your entry.
-        9.  You can drag and rearrange videos by clicking the “Reorder” icon on the selected video.
+        9.  You can drag and rearrange videos by clicking the ��Reorder” icon on the selected video.
         10.  Also, you can view the videos in Mux by clicking the “Open In Mux” icon on the selected video. ![Mux-Custom-Field-Reorder-Video-And-Open-In-Mux-Icons](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt2ea2bdd13d6d3861/69c84dcfa41ecbf3d6b8ea90/Mux-Custom-Field-Reorder-Video-And-Open-In-Mux-Icons.png)
 
         ### Edit Video Settings

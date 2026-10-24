@@ -1509,7 +1509,7 @@ In the above example:
 -   **italic** is the helper function
 -   **Hello World i**s the string which you want to return in italic format
 
-Here’s a screenshot that shows the input:
+Here���s a screenshot that shows the input:
 
 ![Italic_Input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt357aa19517062d21/66c6f47c4b8e1477f4bc8e18/Italic_Input.png)
 

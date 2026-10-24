@@ -30,7 +30,7 @@ The webhook payload, however, brings only the UIDs of the first-level references
 
 ## Map content (entry) UIDs with their respective URLs
 
-Since the webhook payload brings the UIDs of the first-level references (and not the URLs), you will need to map all entries and assets with their respective URLs. Now, whenever the webhook payload sends the referenced content’s UIDs, your code can identify the URLs, and purge the cache immediately.
+Since the webhook payload brings the UIDs of the first-level references (and not the URLs), you will need to map all entries and assets with their respective URLs. Now, whenever the webhook payload sends the referenced content���s UIDs, your code can identify the URLs, and purge the cache immediately.
 
 ## Maintain hierarchy of parent and child content
 

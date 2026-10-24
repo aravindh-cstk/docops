@@ -11,6 +11,8 @@ uid: bltc10a22b5333b2c0b
 
 Importing an entry in Contentstack allows you to add content by uploading a JSON file. This feature simplifies content migration, updates existing entries, or creates new entries efficiently.
 
+To update or create many entries at once from a single file, refer to [Bulk Import Entries](/docs/headless-cms/bulk-import-entries).
+
 To import an entry, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 
 1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Entries” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).

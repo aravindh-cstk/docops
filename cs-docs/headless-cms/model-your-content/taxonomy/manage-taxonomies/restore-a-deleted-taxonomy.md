@@ -15,14 +15,17 @@ When restoring a deleted taxonomy, you can also opt to restore it along with its
 
 **Note:** While viewing details of a deleted taxonomy from the Trash, you can't modify its schema; it's in a read-only mode.
 
-To restore a deleted taxonomy from the Trash, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
+To restore a deleted taxonomy from the Trash, log in to your [Contentstack account](/login), and perform the following steps:
 
-1.  Go to your [stack](https://www.contentstack.com/docs/headless-cms/about-stack) where you want to restore a deleted taxonomy, navigate to the “Settings” icon (or press “S”), and select **Trash** (or press “alt + T” for Windows OS, and “option + T” for Mac OS).
+1.  Go to your [stack](/docs/headless-cms/about-stack) where you want to restore a deleted taxonomy, navigate to the “Settings” icon (or press “S”), and select **Trash** (or press “alt + T” for Windows OS, and “option + T” for Mac OS).
+
 2.  Click on the **Taxonomies** tab, locate the taxonomy you want to restore, and click on the vertical ellipsis in the **Actions** column.
+
 3.  You can also view a taxonomy’s details by clicking **View Details**.
+
 4.  Click **Restore**. In the modal that appears, choose between **Restore with Content Type Association** or **Restore without Content Type Association** based on your requirements.![Restore Deleted Taxonomy.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc83dc68c6e1c6b7f/6929c96564580958292a1678/Restore_Deleted_Taxonomy.gif)
 
-    **Note:** Restoring with Content Type Association will reintegrate the taxonomy with the content types it was linked to before deletion, reconnecting its terms to the entries where they were previously referenced. This action will increase the entry version since the terms are added back to the entry.
+    **Note:** Restoring with Content Type Association will reintegrate the taxonomy with the content types it was linked to before deletion, reconnecting its terms to the entries where they were previously referenced. This action will increase the entry version since the terms are added back to the entry. The new entry version is not published, so Content Delivery API queries that filter by this taxonomy do not return these entries until you republish them, and their variants, if any. If you choose **Restore without Content Type Association**, the terms are not added back to entries. To make those entries available to taxonomy queries again, add the taxonomy back to the content type, add the terms to the entries, and then publish them.
 
 
 ## Filter Deleted Taxonomies

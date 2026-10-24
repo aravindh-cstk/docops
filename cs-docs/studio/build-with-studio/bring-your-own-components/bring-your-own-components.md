@@ -48,8 +48,8 @@ You declare a **schema** (prop names, types, defaults, validation, help text). S
 | [Component schema](/docs/studio/component-schema-prop-types) | The schema shape: every field, every prop type |
 | [Default data](/docs/studio/set-component-default-data) | What renders when an author drops a component before binding anything |
 | [Optimizing load](/docs/studio/optimizing-load-with-lazy-registration) | Lazy registration, Suspense, bundle impact |
-| [Design tokens](/docs/studio/configure-design-tokens-in-studio) | Map your design system's tokens so Studio's controls match brand |
-| [Studio CLI](/docs/studio/studio-cli) | csdx plugin for scripted component registration, Figma sync, token import |
+| [Design tokens](/docs/studio/studio-design-tokens-overview) | Map your design system's tokens so Studio's controls match brand |
+| [Studio CLI](/docs/studio/cli) | csdx plugin for scripted component registration, Figma sync, token import |
 | [Figma to Studio (copy/paste)](/docs/studio/copy-and-paste-from-figma-to-studio) | The author flow: paste a Figma frame into the canvas |
 | [Figma to Studio (generate)](/docs/studio/generate-components-from-figma) | The CLI that runs as an agent: generate React components from Figma into your project |
 | [Testing your components](/docs/studio/testing-your-components) | Preview in isolation, validate prop changes |
@@ -83,7 +83,7 @@ Import that file once at app boot (alongside @/lib/contentstack) and **Button** 
 
 registerComponent must run **before** the canvas iframe loads, otherwise Studio doesn't see your components in the palette. The safest place is a shared module imported at app boot. See [Troubleshoot, "Registered components don't appear"](/docs/studio/troubleshoot-common-studio-issues#registered-components-dont-appear-in-studios-palette) if they're missing.
 
-**Tip:** Run npx @contentstack/studio-skills install, then ask: "register my Button component as a Studio component". The LLM reads your component file, infers the prop shape, and writes the registry entry for you.
+**Tip:** Run curl -fsSL https://studio-documentation.contentstackapps.com/install.sh | sh, then ask: "register my Button component as a Studio component". The LLM reads your component file, infers the prop shape, and writes the registry entry for you.
 
 ## Next
 
