@@ -15,7 +15,7 @@ Unpublishing an [entry](/docs/headless-cms/about-entries/) in Contentstack allow
 
 To unpublish an entry, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 
-1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Entries” icon. You can also use the shortcut key E (for both Windows and Mac users) to access the entries.
+1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Entries�� icon. You can also use the shortcut key E (for both Windows and Mac users) to access the entries.
 2.  Locate the entry you want to unpublish.
 3.  Open the entry to be unpublished and click the **Unpublish** icon at the bottom-right corner.
 4.  In the **Unpublish Entry** modal, select the desired environments under **Select Environment(s)** and the appropriate locales under **Select Language(s)** from which the entry will be unpublished.
