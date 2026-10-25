@@ -78,7 +78,7 @@ Section (spacing: spacious)
 └── SplitRow (ratio: 50-50, verticalAlign: center)
     ├── leftSlot:
     │   └── Stack (spacing: normal, alignment: left)
-    │       ├── Heading (text: "…", level: h1)
+    ���       ├── Heading (text: "…", level: h1)
     │       ├── Description (text: "…")
     │       └── Button (label: "Talk to sales", variant: default, size: lg)
     └── rightSlot:
