@@ -96,9 +96,9 @@ If you already have a landing\_hero section ([built in the overrides recipe](/do
 2.  Inside:
 
     -   **Heading**, bind text to Pinned Entry → Spring 2026 → headline
-    -   **Text**, bind to Pinned Entry → Spring 2026 → subhead
+    -   **Text**, bind to Pinned Entry → Spring 2026 �� subhead
     -   **Image**, bind src to Pinned Entry → Spring 2026 → hero\_image
-    -   **Button**, bind href to Pinned Entry �� Spring 2026 → primary\_cta
+    -   **Button**, bind href to Pinned Entry → Spring 2026 → primary\_cta
 
 Studio's data picker shows pinned entries alongside template and other data sources.
 
