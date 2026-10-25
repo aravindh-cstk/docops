@@ -13,7 +13,7 @@ You can update workflow details such as stage, assignee, due date, and comments 
 
 To bulk update the workflow details for multiple entries, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 
-1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Entries” icon in the left navigation panel. You can also use the shortcut key “E” (for both Windows and Mac OS users).
+1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Entries” icon in the left navigation panel. You can also use the shortcut key “E��� (for both Windows and Mac OS users).
 2.  Use the checkboxes to select the entries where you want to update the workflow stage.
 3.  Click the **Change Workflow Details** option in the floating panel that appears. ![Bulk_Entry_WF_Details_Change_WF.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0740fcd6cfabf193/677cb94066c78767ddba10fb/Bulk_Entry_WF_Details_Change_WF.png)
 
