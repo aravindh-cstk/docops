@@ -374,14 +374,14 @@ get_contentstack_endpoint(region, service, omit_https)
         │
         ▼
   load_regions()
-  ┌─────┴──────────────────────────────────────┐
+  ┌─────┴───��──────────────────────────────────┐
   │  In-memory cache present?  ──Yes──► return  │
   │          │ No                               │
   │          ▼                                  │
   │  regions.json on disk?  ──No──► download    │
   │          │ Yes                              │
   │          ▼                                  │
-  │  Parse JSON ──► cache ─���► return            │
+  │  Parse JSON ──► cache ──► return            │
   └─────────────────────────────────────────────┘
         │
         ▼
