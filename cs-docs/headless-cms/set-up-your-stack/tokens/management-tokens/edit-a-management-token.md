@@ -13,7 +13,7 @@ In Contentstack, you can update the management token details after it is generat
 
 To edit an existing management token, log in to your [Contentstack account](https://www.contentstack.com/login/), go to your [stack](/docs/headless-cms/about-stack), and perform the following steps:
 
-1.  Click the “Settings” icon.
+1.  Click the ��Settings” icon.
 2.  Select **Tokens** from the list.
 3.  Navigate to the **Management Tokens** tab and click a management token you want to edit.
 4.  Update the necessary fields such as name, description, selected branches or aliases (scope), stack-level permissions (read/write), expiration date, or manage rate limits.
