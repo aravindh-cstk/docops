@@ -119,7 +119,7 @@ MARKETPLACE-APP-BOILERPLATE/
 │   │   ├── types/
 │   │   │   └── types.ts
 │   │   └── utils/
-│   │       └─��� functions.ts
+│   │       └── functions.ts
 │   │
 │   ├── components/
 │   │   ├── ConfigModal/
@@ -184,7 +184,7 @@ MARKETPLACE-APP-BOILERPLATE/
 ├── global-teardown.ts
 ├── index.html
 ├── LICENSE
-├── manifest.json
+��── manifest.json
 ├── package.json
 ├── package-lock.json
 ├── playwright.config.ts
