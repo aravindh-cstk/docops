@@ -119,6 +119,10 @@ Type **@** in the composer. Polaris lists your on-demand agents, and **Browse Ag
 
 Send a normal message describing what you want, for example, "translate the homepage entry into German and tell the content team." Polaris decides whether the request is the agent's job and runs the agent if it is; otherwise, Polaris answers it and the agent stays available for later.
 
+To give the agent a file to work from, click **+** in the composer, select **Attach Files**, and choose one or more files before you send. You can attach images and documents, such as Markdown, JSON, PDF, or Word files. The agent works from the attached content and can upload attached images as assets.
+
+![A Polaris conversation with an attached Markdown file and image sent to an on-demand agent, and the agent waiting for confirmation to create an asset from the image](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/amc7399b8d96519910/072b1173dde217136f393597/ondemand-attached-files.png)
+
 ### Fill in the Setup Card
 
 Before the agent runs, a **Set up** card can appear in the conversation, with up to two steps:
@@ -159,6 +163,7 @@ Every run happens in a Polaris conversation, so these behaviors apply whether yo
 
 -   **It asks rather than guesses.** If your request can be read in more than one way, such as which stack or which entry, the agent asks you before it plans.
 -   **It asks before it changes anything.** Operations that change data, such as create, update, publish, delete, or post, can be held for your approval; operations that only read are never held. The **Confirmation mode** selector in the composer decides: **Manually Approve** holds each operation for your approval, and **Auto** runs operations without asking. You can switch mode mid-run.
+-   **It works from your attachments.** Files you attach are inputs for this run. When the agent uploads an attached image, the asset is created under your identity, like any other change the run makes for you.
 -   **It writes readable results.** Links to entries, assets, and other items are labeled with the item's title rather than its internal UID.
 
 ## Identity and Attribution
