@@ -209,7 +209,7 @@ For routes that don't change often, fetch at build time.
 // pages/products/[sku].tsx — Next.js Pages Router with getStaticProps
 import { studioSdk, StudioComponent } from "@contentstack/studio-react";
 
-// Same three ids as above ��� see the note under Pattern 2.
+// Same three ids as above — see the note under Pattern 2.
 const NOT_FOUND_IDS = new Set([
   "COMPOSITION_NOT_FOUND",
   "COMPOSITION_NOT_FOUND_BY_URL",
@@ -228,7 +228,7 @@ export async function getStaticProps({ params }) {
       revalidate: 60,           // ISR — re-fetch every 60s
     };
   } catch (error) {
-    // fetchCompositionData rejects if the URL doesn't resolve — but only these
+    // fetchCompositionData rejects if the URL doesn't resolve �� but only these
     // ids mean "no page here"; anything else is a real failure.
     if (NOT_FOUND_IDS.has(error?.id)) return { notFound: true };
     throw error;
