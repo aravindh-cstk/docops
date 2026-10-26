@@ -18,7 +18,7 @@ The workflow has **two complementary tools**:
 
 Different from [copy/paste](/docs/studio/copy-and-paste-from-figma-to-studio), which produces a one-off composition tree from a single Figma frame. Generate produces reusable components you'll keep using forever.
 
-> **Beta.** The Studio Figma Plugin is currently in **limited Beta**. Some screen labels and UI states may shift between releases, so if a screenshot below doesn't match what you see, trust the labels in your live plugin and let the docs team know.
+> **Note.** Screen labels and UI states in the Studio Figma Plugin can change between releases, so if a screenshot below doesn't match what you see, trust the labels in your live plugin and let the docs team know.
 
 ## When This Is the Right Move
 
@@ -122,7 +122,7 @@ csdx studio:component:sync --component-path=./components/HeroBanner.tsx
 | --- | --- | --- |
 | --component-path=<path-to-file> | Required | The full path to a single component file |
 
-For the full set of available flags across all CLI commands, see the [Studio CLI reference](/docs/studio/studio-cli).
+For the full set of available flags across all CLI commands, see the [Studio CLI reference](/docs/studio/cli).
 
 Once executed, the CLI registers and maps the specified component internally. It then appears in the Figma plugin's mapping dropdown, where designers can link Figma layers to it during Auto Map.
 
@@ -326,7 +326,7 @@ Text rects should match the actual content's width and height. No extra whitespa
 | Prompts shape layout only. No click handlers, modals, animations | Add behavior in the generated React component manually |
 | Can't mix responsive and fixed-size layouts in the same Generate Design call | Run Generate Design twice, once per mode |
 | Auto Map needs synced components | Run csdx studio:component:sync first. Re-sync whenever the component library changes |
-| The plugin is in **limited Beta** | Screen labels and UI states may shift between releases |
+| Plugin screen labels and UI states can change between releases | Trust the labels in your live plugin over the screenshots |
 | The plugin reads only. It never modifies the Figma file | Design changes flow Figma to code, not the other way |
 
 ## After Generation: Checklist
@@ -352,4 +352,4 @@ If you don't have a Figma file, or your team doesn't use Figma:
 -   [Optimizing load](/docs/studio/optimizing-load-with-lazy-registration): when to lazy-register generated components
 -   [Registering components](/docs/studio/register-components): the registry API the CLI calls
 -   [Component schema](/docs/studio/component-schema-prop-types): the prop types the plugin and CLI emit
--   [Import design tokens](/docs/studio/configure-design-tokens-in-studio): the design-token side of the same flow
+-   [Import design tokens](/docs/studio/studio-design-tokens-overview): the design-token side of the same flow

@@ -9,8 +9,6 @@ uid: blt4806ea3dedd962f6
 
 ## About Studio
 
-**Note:** Studio is currently available in limited Beta. To request access and participate in the feedback program, contact our [support](mailto:support@contentstack.com) team.
-
 Studio is a web experience builder designed for enterprise use. It enables developers, marketers, and designers to collaboratively build digital experiences, such as landing pages, campaign microsites, or content-driven apps, using pre-configured components, headless CMS content, and responsive design systems.
 
 With its intuitive visual interface, teams can drag and drop components to build structured layouts. Developers can layer in business logic and integrations where needed, enabling business users to create pages and layouts within defined guardrails, without compromising code quality.
