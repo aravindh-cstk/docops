@@ -2,6 +2,7 @@
 title: "Get Started with NodeJS Delivery SDK"
 description: "Steps for getting started with NodeJS SDK"
 url: /developers/sdks/content-delivery-sdk/nodejs/get-started-with-nodejs-delivery-sdk
+uid: blt39ac11fda5fbf2d8
 ---
 
 # Get Started with NodeJS Delivery SDK
@@ -122,7 +123,7 @@ Currently, the NodeJS SDK does not yet support querying Global Field schemas ([A
 
 ## More Resources
 
--   [Sample website using Nuxt.js](/docs/headless-cms/nuxt)
--   [Sample website using Next.js](/docs/headless-cms/next)
+-   [Nuxt Kickstart](/docs/headless-cms/nuxt)
+-   [Next.js Kickstart](/docs/headless-cms/next)
 -   [API Reference](/docs/developers/sdks/content-delivery-sdk/javascript-browser/reference/)
--   [Node.js (JavaScript) SDK Changelog](/docs/developers/sdks/content-delivery-sdk/javascript-browser/javascript-sdk-changelog)
+-   [Node.js (JavaScript) SDK Changelog](/docs/changelog?filter=sdks)

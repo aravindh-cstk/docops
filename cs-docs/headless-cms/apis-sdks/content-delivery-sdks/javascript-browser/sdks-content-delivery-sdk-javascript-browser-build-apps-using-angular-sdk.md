@@ -11,4 +11,4 @@ uid: bltc560ba6ddd2b06a0
 
 Contentstack provides [JavaScript SDK](https://github.com/contentstack/contentstack-javascript) using which you can create applications based on JavaScript, Angular, and React. This SDK lets you power your app’s content by Contentstack.
 
-However, if you wish to create apps based on Angular, you can download and use the [Angular SDK](https://github.com/contentstack/contentstack-angular-starter) (for Angular 2 and above) and start building your apps. With this SDK, you can build Angular apps and fetch content for the app from Contentstack.
+However, if you wish to create apps based on Angular, you can download and use the [Angular Kickstart](https://github.com/contentstack/kickstart-angular.git) (for Angular 2 and above) and start building your apps. With this SDK, you can build Angular apps and fetch content for the app from Contentstack.

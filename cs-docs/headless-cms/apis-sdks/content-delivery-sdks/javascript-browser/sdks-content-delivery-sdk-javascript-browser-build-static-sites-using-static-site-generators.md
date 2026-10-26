@@ -2,6 +2,7 @@
 title: "Build Static Sites Using Static Site Generators"
 description: "Build Static Site Generators"
 url: /developers/sdks/content-delivery-sdk/javascript-browser/build-static-sites-using-static-site-generators
+uid: blteaf32957f0892d0d
 ---
 
 # Build Static Sites Using Static Site Generators
@@ -10,9 +11,9 @@ url: /developers/sdks/content-delivery-sdk/javascript-browser/build-static-sites
 
 Contentstack provides plugins to build websites using static site generators. You can check out these static site generators to build simple and reliable websites, and power its content from Contentstack.
 
-#### **Gatsby**
+#### **Next.js**
 
--   [Get started with Gatsby and Contentstack](/docs/headless-cms/next#kickstart-nextjs-ssg)
+-   [Get started with the Next.js Kickstart (SSG mode)](/docs/headless-cms/next#kickstart-nextjs-ssg)
 
 ## More resources
 

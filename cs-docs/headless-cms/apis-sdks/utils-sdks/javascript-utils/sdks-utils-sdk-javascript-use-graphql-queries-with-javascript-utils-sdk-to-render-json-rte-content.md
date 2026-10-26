@@ -2,15 +2,16 @@
 title: "Use GraphQL Queries with JavaScript Utils SDK to Render JSON RTE Content"
 description: "Use GraphQL Queries with JavaScript Utils SDK to Render JSON RTE Content"
 url: /developers/sdks/utils-sdk/javascript/use-graphql-queries-with-javascript-utils-sdk-to-render-json-rte-content
+uid: bltf7902751282c559d
 ---
 
 # Use GraphQL Queries with JavaScript Utils SDK to Render JSON RTE Content
 
 ## Use GraphQL Queries with JavaScript Utils SDK to Render JSON RTE Content
 
-This step-by-step guide explains how to use a GraphQL-powered Delivery SDK to deliver content to your [JavaScript SDK](https://github.com/contentstack/contentstack-javascript) apps and the [JavaScript Utils SDK](https://github.com/contentstack/contentstack-utils-javascript) to render [JSON Rich Text Editor](/docs/headless-cms/about-json-rich-text-editor) content.
+This step-by-step guide explains how to use a GraphQL-powered Delivery SDK to deliver content to your [TypeScript SDK](https://github.com/contentstack/contentstack-typescript) apps and the [JavaScript Utils SDK](https://github.com/contentstack/contentstack-utils-javascript) to render [JSON Rich Text Editor](/docs/headless-cms/about-json-rich-text-editor) content.
 
-**Note:** We recommend that you either use GraphQL queries with “Apollo Client SDK” or “[JavaScript Delivery SDK](https://github.com/contentstack/contentstack-javascript)” to fetch and deliver content to your frontend website. To render JSON RTE content, we must use the Contentstack Utils SDK.
+**Note:** We recommend that you either use GraphQL queries with “Apollo Client SDK” or “[TypeScript Delivery SDK](https://github.com/contentstack/contentstack-typescript)” to fetch and deliver content to your frontend website. To render JSON RTE content, we must use the Contentstack Utils SDK.
 
 ## Prerequisites
 

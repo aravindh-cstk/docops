@@ -2,6 +2,7 @@
 title: "About JavaScript Delivery SDK"
 description: "The JavaScript guide covers a series of topics on our CMS that ranges from a quickstart guide, queries that you can send to Contentstack to fetch data for your JavaScript app using the Content Delivery APIs, download the SDK for JavaScript, and example apps"
 url: /developers/sdks/content-delivery-sdk/javascript-browser/about-javascript-delivery-sdk
+uid: bltca4df78fd2d9dbfe
 ---
 
 # About JavaScript Delivery SDK
@@ -16,7 +17,7 @@ Contentstack provides JavaScript Delivery SDK that Developers can use to develop
 
 In order to integrate your JavaScript app with Contentstack JavaScript Delivery SDK, follow the steps mentioned in the [Get Started](/docs/developers/sdks/content-delivery-sdk/javascript-browser/get-started-with-javascript-delivery-sdk) section.
 
-You can check out the [sample JavaScript apps](/docs/headless-cms/next) that Contentstack have developed to see JavaScript Delivery SDK in action.
+You can check out the [Next.js Kickstart](/docs/headless-cms/next) that Contentstack have developed to see JavaScript Delivery SDK in action.
 
 ## More Resources
 
