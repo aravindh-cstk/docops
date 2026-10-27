@@ -447,7 +447,7 @@ The schema of the Boolean field is given as follows:
 }
 ```
 
-The parameters in the JSON body above are explained in the “[Field Parameters](/docs/headless-cms/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
+The parameters in the JSON body above are explained in the ��[Field Parameters](/docs/headless-cms/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
 
 You need to enter the data\_type parameter as boolean.
 
@@ -613,7 +613,7 @@ The schema of the **Global** field is given as follows:
 }
 ```
 
-The parameters in the JSON body above are explained in the ���[Field Parameters](/docs/headless-cms/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
+The parameters in the JSON body above are explained in the “[Field Parameters](/docs/headless-cms/json-schema-for-creating-a-content-type#field-parameters-explained)” section.
 
 The details of the fields that have to be added in the Global field are mentioned in the schema parameters.
 
