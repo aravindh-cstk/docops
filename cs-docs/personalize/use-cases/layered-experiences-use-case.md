@@ -147,7 +147,7 @@ When multiple experiences are active on a single page, layering comes into play.
 2.  Publish these entries to the connected environment.
 3.  In **Personalize → Experiences → \[Your Experience\] → Configuration**, map each audience to its entry.
     1.  Audience 1 → Entry 1
-    2.  Audience 2 → Entry 2
+    2.  Audience 2 ��� Entry 2
 4.  Once published, Personalize delivers the correct entry in real time based on layered audience rules.
 
 **Additional Resource:** For more information, refer to [Create an Entry Variant](/docs/headless-cms/create-an-entry-variant).
