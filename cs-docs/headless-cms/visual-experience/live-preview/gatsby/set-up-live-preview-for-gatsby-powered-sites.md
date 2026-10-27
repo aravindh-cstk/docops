@@ -132,7 +132,7 @@ Follow these steps to configure Live Preview with GraphQL for your Gatsby-powere
         export default Home;
         ```
 
-        In the example above, the title is displayed directly from the props received by the component. To make Live Preview work, you need to store this data in the component’s state so it can update automatically when content changes. First, import ContentstackLivePreview and getCSData (from step two). Then, create a function that fetches the updated data using getCSData.get() and update the state with this new data. Finally, connect this function to ContentstackLivePreview.onLiveEdit(), which will call the function every time someone edits the entry, allowing you to see the changes instantly. Make sure your GraphQL query includes both \_\_typename and uid fields—these are needed by Live Preview to correctly track and refresh the content.
+        In the example above, the title is displayed directly from the props received by the component. To make Live Preview work, you need to store this data in the component��s state so it can update automatically when content changes. First, import ContentstackLivePreview and getCSData (from step two). Then, create a function that fetches the updated data using getCSData.get() and update the state with this new data. Finally, connect this function to ContentstackLivePreview.onLiveEdit(), which will call the function every time someone edits the entry, allowing you to see the changes instantly. Make sure your GraphQL query includes both \_\_typename and uid fields—these are needed by Live Preview to correctly track and refresh the content.
 
         ```
         import React, { useEffect, useState } from "react";
