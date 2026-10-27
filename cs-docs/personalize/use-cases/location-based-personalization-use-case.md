@@ -86,7 +86,7 @@ Contentstack Personalize makes location-based personalization straightforward, e
 
 ### Create location-based audiences
 
-1.  Go to **Personalize → Audiences ��� + New Audience**.
+1.  Go to **Personalize → Audiences → + New Audience**.
 2.  Give the audience a descriptive name (for example, Visitors in California).
 3.  In the **Rules** section:
     1.  Use **Match All** if you want visitors to meet every condition.
@@ -131,7 +131,7 @@ Contentstack Personalize makes location-based personalization straightforward, e
 1.  Go to **CMS → Entries →** \[Your Entry with content that needs to be personalized\].
 2.  Create an Entry Variant for all the Variants you defined.
 3.  Publish the entries to the connected environment.
-4.  In **Personalize → Experiences → \[Your Experience\] → Configuration**, map each variant to the correct entry.
+4.  In **Personalize �� Experiences → \[Your Experience\] → Configuration**, map each variant to the correct entry.
 
 Once published, the mapping between Personalize Experiences and Entry Variants determines which personalized content each visitor sees in real time based on their location.
 
