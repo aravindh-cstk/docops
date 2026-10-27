@@ -55,7 +55,7 @@ After you clone the repo and install dependencies, your Next project should rese
 ```
 #kickstart-next
 
-├── 📂 app
+├─��� �� app
 │   ├── 📄 favicon.ico
 │   ├── 📄 globals.css
 │   ├── 📄 layout.tsx
