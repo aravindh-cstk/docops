@@ -268,11 +268,11 @@ kickstart-angular/
 │   │   │       ├── home.component.html
 │   │   │       └── home.component.ts
 │   │   └── services/
-│   │       ��─�� contentstack.service.ts
+│   │       └── contentstack.service.ts
 │   ├── environments/
 │   │   ├── environment.production.ts
 │   │   └── environment.ts
-│   ├── global_styles.css
+│   ├─��� global_styles.css
 │   ├── index.html
 │   ├── main.ts
 │   └── vite-env.d.ts
