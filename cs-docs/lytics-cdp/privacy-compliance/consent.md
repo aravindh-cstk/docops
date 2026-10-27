@@ -3,6 +3,7 @@ title: "Consent & Privacy"
 description: "For more information on Lytics' security and privacy program, please visit Lytics' trust center at https://trust.lytics.com/"
 url: /lytics/consent
 uid: blt6b1e4472ccae57f5
+tags: ["lytics-sync"]
 ---
 
 # Consent & Privacy
@@ -46,7 +47,9 @@ Effective consent management requires a comprehensive set of properties that can
 
 ### Examples
 
-**Note:** Consent is not a one size fits all scenario. Each customers data and business goals are unique. Before deploying any of the following examples it is always recommended to consult with your Technical Account Manager or a Solutions Architect.
+**We are here to help!**
+
+Consent is not a one size fits all scenario. Each customers data and business goals are unique. Before deploying any of the following examples it is always recommended to consult with your Technical Account Manager or a Solutions Architect.
 
 Lytics deploys a flexible data model, and though the following is not representative of every method of collection, we've highlighted two working examples leveraging our available SDKs as a baseline:
 
@@ -87,7 +90,7 @@ Lytics.shared.consent(
 )
 ```
 
-**Note:** When using Lytics SDKs, you do not have to include date within the data passed in the consent event. The timestamp of the consent event can be used to create the field and mapping for the date of consent.
+When using Lytics SDKs, you do not have to include date within the data passed in the consent event. The timestamp of the consent event can be used to create the field and mapping for the date of consent.
 
 ## Profile Materialization
 
@@ -118,13 +121,15 @@ When defining profile fields, there are two primary considerations. What type of
 
 ##### Merge Operator
 
-**Type String**\\ Because consent is something that may change for a consumer over time, the values must represent the most recent data. As such, the latest merge operator is always recommended. This means that as additional data is stitched to a user profile, the most recent events that are mapped to a field will win.
+**Type String**  
+Because consent is something that may change for a consumer over time, the values must represent the most recent data. As such, the latest merge operator is always recommended. This means that as additional data is stitched to a user profile, the most recent events that are mapped to a field will win.
 
 ##### Example String
 
 ![426cb0a-small-Screenshot_2023-05-10_at_3.53.11_PM.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/amb64f0da03eb0ae6d/6a1a1625fd1f836ce3dab927/426cb0a-small-Screenshot_2023-05-10_at_3.53.11_PM.png)
 
-**Type Map**\\ For a more complex or granular consent strategy, the map field type can be very helpful in accurately managing consent. As such, the merge merge operator is always recommended when trying to keep the key-value pairs up to date to the most recent consent state. This means that as additional data is stitched to a user profile, the most recent events that are mapped to a key-value pair will win.
+**Type Map**  
+For a more complex or granular consent strategy, the map field type can be very helpful in accurately managing consent. As such, the merge merge operator is always recommended when trying to keep the key-value pairs up to date to the most recent consent state. This means that as additional data is stitched to a user profile, the most recent events that are mapped to a key-value pair will win.
 
 ##### Example Map
 
@@ -158,8 +163,25 @@ Once you have the necessary building blocks constructed, you can quickly integra
 
 ![15e19fa-image.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/ama35f5db2cf013532/cb6f87ed28495cdddf54f30d/15e19fa-image.png)
 
+### Recency Signals
+
+Many consent policies pair a consent flag with a recency requirement — for example, only activating people who have interacted within a defined window. Lytics does not enforce such a window for you, but several fields let you build one into your audiences:
+
+| Signal | Field | Notes |
+| --- | --- | --- |
+| Last activity on any channel | last\_active\_ts | See [Default Attributes](/docs/lytics/developer-attributes) |
+| Last web visit | lastvisit\_ts | See [Default Attributes](/docs/lytics/developer-attributes) |
+| Profile first seen / last changed | \_created, \_modified | See [Meta Fields](/docs/lytics/meta-fields) |
+| Days with recorded activity | \_num\_days | See [Meta Fields](/docs/lytics/meta-fields) |
+
+A recency rule is written as date math against one of these fields — for example FILTER last\_active\_ts > "now-2y". Lytics ships prebuilt reporting audiences using this pattern, such as _Last Visit Within 3 Months_ (FILTER lastvisit\_ts > "now-3M"); see [Default Segments](/docs/lytics/developer-segments) for the full list.
+
+**Audience age is not profile age**
+
+Because audiences are live filters, the date an audience was created says nothing about how recently its members interacted — an audience defined years ago returns whoever matches today. Enforce recency with a rule on the fields above, not by retiring old audiences. See [Audiences](/docs/lytics/audiences).
+
 ### Global Job Segment Filter (Consent)
 
 Configure a segment to prevent profiles from being sent to downstream destinations based on consent status or another relevant filter. This ensures that individuals who should be excluded will not be activated downstream.
 
-API documentation can be found [here](https://docs.lytics.com/reference/post_segment-exclude-operation).
+API documentation can be found [here](/docs/developers/apis/lytics-api/segments#addremove-segment-infrom-the-exclusion-list).
