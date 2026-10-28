@@ -2,6 +2,7 @@
 title: "Contentstack MCP Server"
 description: "Leverage the Contentstack MCP Server for smarter workflows using natural language commands across APIs and tools like Lytics and Claude."
 url: /developers/contentstack-mcp-server
+uid: bltc2205acbb762b7a2
 ---
 
 # Contentstack MCP Server
@@ -45,8 +46,8 @@ Before you start, make sure you have:
 -   An active [Contentstack account](https://www.contentstack.com/login/)
 -   Node.js 18 or later installed locally (required to run npx)
 -   A supported MCP client:
-    -   [Claude Desktop](https://claude.ai/download) (macOS / Windows)
-    -   [Cursor](https://cursor.sh/)
+    -   [Claude Desktop](https://claude.com/download) (macOS / Windows)
+    -   [Cursor](https://cursor.com/)
     -   [Claude Code](https://claude.ai/code) (CLI)
     -   Any other MCP client that supports stdio transport
 
@@ -582,18 +583,7 @@ Once configured, you interact with Contentstack entirely through natural languag
 
 ## Troubleshooting
 
-| Symptom | Likely cause | Fix |
-| --- | --- | --- |
-| "Unauthorized" errors on CMA / Analytics / Launch calls | OAuth not run, or tokens expired | Run npx @contentstack/mcp --auth and complete the flow |
-| CDA returns empty or 401 errors | Missing or incorrect delivery token | Check CONTENTSTACK\_DELIVERY\_TOKEN — it must be scoped to the correct environment |
-| Contentstack tools not appearing in your MCP client | GROUPS value is wrong or malformed | Check for typos and spaces — use comma-separated values with no spaces, e.g. cma,cda |
-| Launch tools fail with auth errors | Organisation UID not set | Add CONTENTSTACK\_ORGANIZATION\_UID to your environment — find it in the Launch dashboard URL |
-| Lytics tools return 403 | Expired or incorrect access token | Regenerate your Lytics access token and update LYTICS\_ACCESS\_TOKEN |
-| Analytics get\_job\_data returns "200 Job active" | Job still processing | Wait a few seconds and retry — analytics jobs are asynchronous |
-| npx prompts for confirmation in the client | -y flag missing | Ensure your args array includes "-y" as the first argument after "npx" |
-| Requests hit the wrong data center, or return 404 / 401 | Region not set (no OAuth to infer it) | Set CONTENTSTACK\_REGION / --region to match your stack's data center |
-| Unknown region "…" error on startup | Misspelled region value | Use a supported code or alias, see \[Regions\](#regions-and-data-centers) |
-| CMA calls fail with auth errors and no OAuth session | No management token provided | Run --auth, or set CONTENTSTACK\_MANAGEMENT\_TOKEN and CONTENTSTACK\_REGION |
+> **Additional Resource:** For more information on MCP Server setup and authentication errors and the fix for each one, refer to the [MCP Server Setup and Authentication](/docs/contentstack-mcp-troubleshooting/faqs#mcp-server-setup-and-authentication) section of the Contentstack MCP Troubleshooting Guides documentation.
 
 ## Tool Catalog
 
