@@ -110,7 +110,7 @@ Section (spacing: spacious, contentAlign: center, background: none)
 1.  **Create the feature Content Type** with fields icon, title, description.
 2.  **Add a features Reference-multi field** to landing\_page, targeting feature.
 3.  **Create 3+ feature entries** with real content: icons, titles, descriptions.
-4.  **Open the Sections palette**, click **Create Section**, name it Feature Grid — 3-column.
+4.  **Open the Sections palette**, click **Create Section**, name it Feature Grid �� 3-column.
 5.  **Set the linked schema** to landing\_page.
 6.  **Drag Section** onto the canvas. Configure spacing: spacious, contentAlign: center.
 7.  **Drag the outer Stack** into Section's children. Configure spacing: loose, alignment: center.
