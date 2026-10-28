@@ -9,7 +9,7 @@ uid: blt3d52f9ae416111ce
 
 ## About Voice Profiles
 
-Contentstack’s Brand Kit lets you define your brand’s unique voice with Voice Profiles. These go beyond just tone and style, capturing the personalities that give your brand its voice.
+Contentstack��s Brand Kit lets you define your brand’s unique voice with Voice Profiles. These go beyond just tone and style, capturing the personalities that give your brand its voice.
 
 Each Voice Profile details writing styles, preferred tones, and even quirks of the people who shape your brand’s communication. This lets you personify your brand and ensure all content feels authentic and human-like.
 
