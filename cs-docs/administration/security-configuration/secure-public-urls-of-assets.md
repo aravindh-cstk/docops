@@ -1,7 +1,7 @@
 ---
 title: "Secure Public URLs of Assets"
 description: "Secure your Contentstack assets with URL protection, ensuring safe, authenticated access to prevent unauthorized content retrieval. Enable today for added security."
-url: /administration/secure-public-urls-of-assets
+url: /headless-cms/secure-public-urls-of-assets
 uid: blt36478587a5c2ca7d
 ---
 
@@ -10,6 +10,8 @@ uid: blt36478587a5c2ca7d
 ## Secure Public URLs of Assets
 
 Contentstack provides asset URL security, allowing teams to protect content by restricting public access to asset URLs. When enabled for a stack, assets cannot be accessed directly by their URLs without valid authentication parameters, helping prevent unauthorized retrieval of sensitive or private content.
+
+**Note:** If your organization uses Contentstack Assets, asset access is set for each space and each asset instead of for the stack. For more information, refer to [Manage Asset Access](/docs/assets/manage-asset-access).
 
 ## What You Will Learn
 

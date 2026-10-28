@@ -1,7 +1,7 @@
 ---
 title: "Validations"
 description: "Content errors can be minimized considerably by setting validations. Let’s go through the types of content validations available in Contentstack!"
-url: /administration/validations
+url: /headless-cms/validations
 uid: bltaaa189808573a509
 ---
 
@@ -96,7 +96,7 @@ Validation rules can be defined by specifying custom validation regular expressi
     ```
 
 
-**Note:** The above code will check if the entered value is in one of the “dd/mm/yyyy”, “dd-mm-yyyy���, or “dd.mm.yyyy” formats. It will also validate leap years.  
+**Note:** The above code will check if the entered value is in one of the “dd/mm/yyyy”, “dd-mm-yyyy”, or “dd.mm.yyyy” formats. It will also validate leap years.  
 Learn more about [regular expressions](https://www.regular-expressions.info/).
 
 ## Custom Error Message
