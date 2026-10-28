@@ -75,7 +75,7 @@ When your content type includes fields with the **Show as Tab** option enabled, 
 
 This layout improves usability for complex content types with many fields, allowing editors to focus on specific sections (e.g., SEO fields or metadata) without needing to scroll through every section of the entry.
 
--   **Default Tab:** Contains all ungrouped fields that aren’t marked as tabs.
+-   **Default Tab:** Contains all ungrouped fields that aren��t marked as tabs.
 -   **Custom Tabs:** Display content from fields marked with _Show as Tab_ in the schema.
 -   **Navigation:** You can switch between tabs freely; all entry features (comments, publishing, outline navigation, etc.) continue to work as expected.
 -   **Order:** Tabs appear in the same order as their corresponding fields in the content type schema.
