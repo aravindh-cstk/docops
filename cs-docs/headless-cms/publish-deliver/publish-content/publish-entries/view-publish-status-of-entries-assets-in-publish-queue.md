@@ -11,7 +11,7 @@ uid: blte18497431b654680
 
 When a Content Manager publishes an [entry](/docs/headless-cms/about-entries) or [asset](/docs/headless-cms/about-assets), the system adds the action to the Publish Queue. Items in this queue are published or unpublished one at a time, almost instantaneously. This process removes the need to wait for one item to finish publishing before initiating the next. You can continue publishing items while Contentstack manages the queue automatically.
 
-**Note:** When working in a specific branch, you can view the published details of entries and assets relevant to that branch. For example, if you’re in the development branch, the queue displays publishing details only for the development branch. See [Branch-specific Modules](/docs/headless-cms/branch-specific-modules) documentation for more information.
+**Note:** When working in a specific branch, you can view the published details of entries and assets relevant to that branch. For example, if you���re in the development branch, the queue displays publishing details only for the development branch. See [Branch-specific Modules](/docs/headless-cms/branch-specific-modules) documentation for more information.
 
 To view publishing details of entries or assets, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 

@@ -165,7 +165,7 @@ In the next step, configure the **Create an Asset** action and fetch the image g
 
 Once the asset is created, configure the **Update an Entry** action. Fetch the _asset UID_ in the **Entry Data** field to update the entry with the image generated.
 
-Let’s look at the setup in detail.
+Let���s look at the setup in detail.
 
 ## Set up the Connectors
 
