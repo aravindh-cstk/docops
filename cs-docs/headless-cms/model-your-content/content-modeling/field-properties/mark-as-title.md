@@ -40,7 +40,7 @@ Fields that are also marked as **Multiple** cannot be set as the Group title, **
 
 **Example:**
 
-In a real estate application, a Multiple Group field might store a list of **Property Listings**. Each listing includes fields like **Property Name**, **Address**, and **Price**. By marking the **Property Name** field as the **Group title**, editors can quickly identify which listing they’re editing within the group, rather than seeing generic labels like “Instance 1, Instance 2.”
+In a real estate application, a Multiple Group field might store a list of **Property Listings**. Each listing includes fields like **Property Name**, **Address**, and **Price**. By marking the **Property Name** field as the **Group title**, editors can quickly identify which listing they���re editing within the group, rather than seeing generic labels like “Instance 1, Instance 2.”
 
 ![Mark as Group Title.gif](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt6b0af0b2d71fa9f3/69398e9cdceb7f621351a412/Mark_as_Group_Title.gif)
 

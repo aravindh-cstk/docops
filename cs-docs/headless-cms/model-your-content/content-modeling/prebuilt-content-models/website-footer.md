@@ -31,7 +31,7 @@ Let’s dive deep into how this model will help you create your company’s Webs
 
     **Footer** Content Type:
 
-    -   **Title**: This is where you'll provide your “Website Footer" a name. The [Title](/docs/headless-cms/title) field defines the title of the “Website Footer” content/entry.
+    -   **Title**: This is where you'll provide your ��Website Footer" a name. The [Title](/docs/headless-cms/title) field defines the title of the “Website Footer” content/entry.
     -   **Logo**: For logo, you will see a [File](/docs/headless-cms/file/) field that allows you to choose the website logo file and add it to the entry.
     -   **Navigation**: For the navigation, you will see a [Group](/docs/headless-cms/group/) field that showcases the navigation menu. It contains the following:
         -   **Link**: For the navigation item, you will see a [Link](/docs/headless-cms/link/) field that adds a navigation menu item as a title and links it for redirection.
@@ -40,7 +40,7 @@ Let’s dive deep into how this model will help you create your company’s Webs
         -   **Social Share**: Social Share is a [Group field](/docs/headless-cms/group) that covers the following set of fields:
             -   **Title:** You will find the [Title](/docs/headless-cms/title) field that defines the group title for the social media share.
             -   **Icon**: Here you will see the [File](/docs/headless-cms/file/) field where you get to upload or choose (from Assets) the social media icon.
-            -   **Url**: The [Link](/docs/headless-cms/link/) field here will add a social media app name as a title, say “Twitter,” “Facebook,�� “Instagram,” and so on and their respective links for redirection.
+            -   **Url**: The [Link](/docs/headless-cms/link/) field here will add a social media app name as a title, say “Twitter,” “Facebook,” “Instagram,” and so on and their respective links for redirection.
     -   **Copyright**: Copyright is a [JSON Rich Text Editor](/docs/headless-cms/about-json-rich-text-editor/) field that holds the legal copyright information of the website.
 
 
