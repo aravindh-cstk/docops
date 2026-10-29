@@ -55,7 +55,7 @@ After you clone the repo and install dependencies, your Next project should rese
 ```
 #kickstart-next
 
-├─��� �� app
+├── 📂 app
 │   ├── 📄 favicon.ico
 │   ├── 📄 globals.css
 │   ├── 📄 layout.tsx
@@ -65,7 +65,7 @@ After you clone the repo and install dependencies, your Next project should rese
 │   ├── 📄 types.ts
 │   └── 📄 utils.ts
 ├── 📄 .env.example
-├── 📄 next-env.d.ts
+├─��� 📄 next-env.d.ts
 ├── 📄 next.config.mjs
 ├── 📂 node_modules
 ├── 📄 package-lock.json

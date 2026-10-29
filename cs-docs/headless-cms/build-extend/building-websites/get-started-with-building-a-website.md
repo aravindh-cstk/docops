@@ -162,7 +162,7 @@ Within the Entry Editor page, enter/select the following content against the res
 
         **Note:** If an entry field is designated as “Multiple,” you will see the Add “+” icon located beside the existing instance.
 
-        ![15.  Click on Add “+” icon beside the existing instance of the Link field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0e98234a92557f68/66a346a9e91a176c00159e2f/15._Click_on_Add_“_”_icon_beside_the_existing_instance_of_the_Link_field.png)
+        ![15.  Click on Add “+�� icon beside the existing instance of the Link field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0e98234a92557f68/66a346a9e91a176c00159e2f/15._Click_on_Add_“_”_icon_beside_the_existing_instance_of_the_Link_field.png)
 
         Here are the instances you need to add:
 
@@ -179,7 +179,7 @@ Within the Entry Editor page, enter/select the following content against the res
     -   **Holiday**: Enter “Closed on Monday”
     -   **Copyright**: Enter “Copyright © PlateStack 2024. All rights reserved.”
 
-After entering the data, publish the entry to the **development** environment as we did in **step 3** of the [Create Entries for the “Header�� Content Type](#create-entries-for-the-header-content-type) section.
+After entering the data, publish the entry to the **development** environment as we did in **step 3** of the [Create Entries for the “Header” Content Type](#create-entries-for-the-header-content-type) section.
 
 #### Create Entries for the “Page” Content Type
 
