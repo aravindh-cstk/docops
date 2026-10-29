@@ -28,7 +28,7 @@ To create a branch, log in to your [Contentstack account](https://www.contentsta
 2.  Click on **\+ New Branch**.
 3.  The **Create New Branch** form appears for you to add the following details:
 
-    -   **Branch ID:** Enter a unique ID for the branch, such as “staging” or “development”.
+    -   **Branch ID:** Enter a unique ID for the branch, such as “staging” or “development��.
     -   **Source Branch:** Select a branch from the dropdown from which this new branch should inherit data.
     -   **Target Environment(s):** Choose which environments to clone into this branch:
         -   **Specific** (default): Under **Select Environment(s)**, select one or more environments to clone. You must select at least one environment.
