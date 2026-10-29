@@ -41,7 +41,7 @@ To recover deleted entries, provide the following details:
 
 -   **Stack API Key:** The API key of the stack containing the deleted entries.
 -   **Content Type UID:** The UID of the content type associated with the deleted entries (available in the stack’s [audit log](/docs/headless-cms/monitor-stack-activities-in-audit-log)).
--   **Deletion Time:** The date and time the entries were deleted (available in the stack’s [audit log](/docs/headless-cms/monitor-stack-activities-in-audit-log)).
+-   **Deletion Time:** The date and time the entries were deleted (available in the stack���s [audit log](/docs/headless-cms/monitor-stack-activities-in-audit-log)).
 -   **Branch Name:** The name of the branch containing the deleted entries.
 
 **Warning:** The deletion time is necessary to restore entries associated with the content type. The published status of the deleted entries cannot be retrieved when restoring them.
