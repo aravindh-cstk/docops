@@ -74,7 +74,7 @@ If <SimpleCard> is a React component that accepts text and buttonLabel as string
 
 ```
 function SimpleCard({ text, buttonLabel }) {
-  return <div>{text} — {buttonLabel}</div>;
+  return <div>{text} ��� {buttonLabel}</div>;
 }
 ```
 
@@ -292,7 +292,7 @@ blog_post
 ├── body_sections         (Modular Block — allowed block-types: text_block, image_block)
 │   ├── text_block  → { body: rich text, align: choice }
 │   └── image_block → { image: file, caption: single line }
-└���─ related               (Reference multi — target CTs: article_ref, podcast_ref)
+└── related               (Reference multi — target CTs: article_ref, podcast_ref)
 ```
 
 Now the path for common cases against blog\_post:
