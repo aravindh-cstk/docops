@@ -15,7 +15,7 @@ To update or create many entries at once from a single file, refer to [Bulk Impo
 
 To import an entry, log in to your [Contentstack account](https://www.contentstack.com/login), and perform the following steps:
 
-1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Entries” icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
+1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Entries��� icon in the left navigation panel or use the shortcut key “E” (for both Windows and Mac users).
 2.  Click the **\+ New Entry** button at the top-right corner of the page, select the required [content type](/docs/headless-cms/about-content-types) and click **Proceed**.
 3.  Click the **horizontal ellipses** at the bottom of the entry editor, and select **Import**.
 4.  In the **Import Entry** modal, click **Choose a file**, and select the JSON file from your system.
