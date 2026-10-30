@@ -56,6 +56,10 @@ Below are customized examples for common workflows you can perform using the Pol
 
 -   _Create a landing page layout for an upcoming product Launch._
 -   _Shorten and sharpen the content on this page to improve readability._
+-   _Which entries does each section of this page come from?_
+-   _Add a French version of this page with a suitable French page URL._
+-   _Adapt this page for new visitors: write a more welcoming headline, but only for that audience._
+-   _Give me a link to open the French version of this page._
 
 ### Release operations
 

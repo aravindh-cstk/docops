@@ -30,7 +30,7 @@ With Polaris, you can:
 -   Update entry fields such as headings and descriptions
 -   Perform multiple updates in a single request
 -   Modify asset metadata, including titles, descriptions, tags, and folders
--   Make contextual updates inside the Visual Editor
+-   Make contextual updates inside the Visual Editor, including language versions and audience-specific content
 -   Read, add, and resolve comments on entries
 -   Create, deploy, and roll back releases
 -   Invite people to a stack and manage their roles

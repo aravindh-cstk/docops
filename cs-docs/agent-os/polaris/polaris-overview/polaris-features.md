@@ -98,9 +98,13 @@ Polaris answers product questions from the Contentstack documentation.
 
 Polaris integrates directly with the [Visual Editor](/docs/headless-cms/about-visual-editor) for truly contextual editing.
 
+-   Knows the open page, its language, the audience you are viewing, and the entries each part of the page comes from
 -   Automatically understands the selected page element
 -   Maps visual elements to underlying entries and fields
--   Applies updates with real-time visual feedback
+-   Saves changes to the entry and language behind the page, and shows them in the preview without a reload
+-   Adds a missing language version of a page, including a page URL for that language
+-   Applies audience edits only to the audience variant you are viewing
+-   Replies with a link to open another page instead of switching the page you are on
 -   Maintains preview and confirmation safeguards
 
 ## Permission-Aware Operations

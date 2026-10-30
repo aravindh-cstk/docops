@@ -44,13 +44,19 @@ By the end of this guide, you will have the knowledge and skills to leverage Con
 
     1.  Navigate to App Switcher in the top-right corner and select **Brand Kit**.
     2.  Click the **\+ New Brand Kit** button to create a new Brand Kit.
-    3.  In the **Create Brand Kit** modal, enter the **Brand Kit Name** and **Description** (optional). Then, **Select Stack(s)** from the dropdown and click **Create Brand Kit**.
+    3.  In the **Create Brand Kit** dialog, enter the following details, and then click **Create Brand Kit**:
 
-        **Note:** When creating a Brand Kit, selecting one or multiple stacks will synchronize the associated stack content and its environment settings.
+        -   **Brand Kit Name** (required)
+        -   **Description** (optional)
+        -   **Set Brand Accent**: Select a color to identify the Brand Kit at a glance.
 
-        ![3-Get-Started-With-Brand Kit-Create-Brand-Kit](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt5861cf03d5a27dac/665632c036a794362360b2c6/3-Get-Started-With-Brand_Kit-Create-Brand-Kit.png)
+        ![The Create Brand Kit dialog with a name, description, and brand accent](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am6140e0024b2bb155/bd93e01bfcc1df07ea7dd489/create-brand-kit-dialog.png)
 
         This creates your Brand Kit.
+
+    4.  To use the Brand Kit in a stack, open the Brand Kit and click **Settings**. Under **Stack Details**, click **Add Stacks**, select a stack, and click **Save**.
+
+        **Note:** Adding one or more stacks synchronizes the associated stack content and its environment settings.
 
 2.  ## Create a Voice Profile
 

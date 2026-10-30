@@ -203,61 +203,59 @@ You can continue refining the asset or enter additional prompts to improve metad
 
 ## Using Polaris in the Visual Editor
 
-This section shows how Polaris works within Visual Editor.
+This section shows how Polaris works in the [Visual Editor](/docs/headless-cms/about-visual-editor), where it knows the open page, its language, the audience you are viewing, and the entries behind the page.
 
-### Step 1: Open Visual Editor context
+### Step 1: Open a page in the Visual Editor
 
 1.  Navigate to your stack.
-2.  Open Visual Editor.
-3.  Load a page or experience in preview mode.  
-    ![Visual_Editor.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd8c8d38b8205a3a5/69a16388c461db85626a238f/Visual_Editor.png)
+2.  Click **Visual Experience** in the top navigation to open the Visual Editor.
+3.  Select the page you want to work on, and the language you want to view.
+4.  Click the **Polaris** icon to open the Polaris panel.
 
-Once the page loads, Polaris operates within the Visual Editor context.
+The Polaris panel shows the open page as context above the message box (for example, **Page: Docs QA Campaign**). When you open another page in the Visual Editor, the context updates.
 
-### Step 2: Select a page element
+### Step 2: Ask about the page
 
-In the Visual Editor canvas, click a content element on the page (for example, a text block or section).
+Before you make changes, you can ask Polaris about the page you are viewing. This is a read-only request, so Polaris answers right away and changes nothing.
 
-Polaris identifies:
+**Prompt example:** _Which page am I on, which language and audience am I viewing, and which entry does each section of this page come from?_
 
--   The selected visual element
--   The underlying entry and mapped field(s)
+Polaris responds with:
 
-### Step 3: Enter a prompt
+-   The page and its language
+-   The audience you are viewing, or the base experience if no audience is selected
+-   The entries that make up the page, such as the page entry, header, footer, and linked content, each with a link to the entry
 
-In the Polaris panel, enter the following prompt:
+![Polaris lists the page, language, audience, and the entries behind the page](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/amca4c876ed15d9bac/648a99a2f934083e08bce4b9/polaris-ve-page-awareness.png)
 
-Prompt example: Shorten and sharpen the content on this page to improve readability.
+### Step 3: Select a page element (optional)
+
+To focus a request on one part of the page, click the element in the Visual Editor canvas (for example, a heading or a text block). The Polaris context shows the content type and field of the selected element (for example, **Campaign › Name**), and Polaris applies your request to that field.
+
+If you don't select an element, Polaris uses the whole page as context.
+
+### Step 4: Enter a prompt
+
+In the Polaris panel, describe the change you want.
+
+**Prompt example:** _Change only this text to 'Docs QA Winter Campaign'. Keep the page URL as it is._
 
 Polaris interprets this prompt using:
 
--   The selected Visual Editor element
--   The mapped entry fields
--   The existing content structure  
-    ![Visual_Editor_Prompt.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt568ecf93588e5bb4/69a1638348e3e8b6920ba667/Visual_Editor_Prompt.png)
+-   The open page and the selected element
+-   The entry and fields behind the page
+-   The language and audience you are viewing
 
-### Step 4: Polaris plans the action
+**Tip:** When you change a page's title, Polaris also updates the page URL to match the new title. Check the URL on the confirmation card before you click **Update**.
 
-After submitting the prompt, Polaris enters a planning state.
+### Step 5: Review the confirmation card
 
-In the panel, Polaris:
+Because this is a write operation, Polaris displays an **Update an entry** card before it changes anything. The card shows:
 
--   Determines which entry fields are associated with the selected element
--   Plans content updates scoped only to those fields
--   Prepares a write action for review
+-   The **Content Type**, **Entry**, and **Locale** that Polaris will update
+-   Each field that will change and its new value. If a value such as the URL changes, the card shows the old and new values.
 
-No updates are applied at this stage.  
-
-![Visual_Editor_Planning.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltf521d42e731fb584/69a163828dcc72421a0581db/Visual_Editor_Planning.png)
-
-### Step 5: Review the preview
-
-Because this is a write operation, Polaris displays a preview showing:
-
--   The current content
--   The proposed shortened and refined version
-
-This preview allows you to clearly compare changes before execution.
+![The Update an entry card with the content type, entry, locale, and new value](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/am73bbf8701c20d101/d32746d9d04b3e52b060742d/polaris-ve-update-card.png)
 
 **Note:** If a prompt is identified as a read-only operation (for example, asking for explanations, summaries, or insights without requesting updates), Polaris:
 
@@ -281,10 +279,36 @@ If you click **Cancel**, Polaris stops execution and no changes are applied.
 
 Once confirmed:
 
--   The underlying entry fields are updated.
--   The Visual Editor preview reflects the updated content.
--   Polaris displays a confirmation message in the panel.
+-   Polaris saves the change to the entry and language shown on the card.
+-   The Visual Editor preview shows the change without a page reload.
+-   Polaris shows **Entry updated** and a summary of what was saved on the page.
+
+Polaris saves the change as a new version of the entry. It doesn't publish the entry. To make the change live, publish the page from the Visual Editor or the entry.
+
+![Entry updated, with the saved changes listed and the new title in the preview](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/amdb0039a7927cc1de/3f178390b610cc9e71c9989d/polaris-ve-entry-updated.png)
 
 You can continue refining the page or select another element and enter additional prompts.
 
-![Visual_Editor_Updated.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltd69ce5cb132092fc/69a16383c10aad5a9fc829a9/Visual_Editor_Updated.png)
+### Add a Language Version of a Page
+
+Polaris can check whether a page exists in another language and add the missing version, including a page URL for that language.
+
+**Prompt example:** _Does this page have a French version? If not, add a French version with a suitable French page URL and translated title and description._
+
+Polaris shows a **Localize this entry?** card with the language, the translated fields, and the proposed URL. Click **Confirm** to save the new language version. If the Visual Editor is showing a different language, Polaris tells you the new version isn't visible on the current page yet and gives you a link to open it.
+
+### Open Another Page
+
+Polaris doesn't switch the page you are viewing. When you ask for another page or another language, Polaris replies with a link to open that page in the Visual Editor. Click the link to open it. The Polaris panel and your conversation stay open.
+
+**Prompt example:** _Give me a link to open the French version of this page._
+
+![Polaris replies with a link to open the French version of the page](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/ama5c6561f2c7033e2/4c869d974b019b659f03d2fb/polaris-ve-open-link.png)
+
+### Edit a Page for an Audience
+
+If your stack uses [Personalize](/docs/personalize/about-personalize), you can view the page as an audience in the Visual Editor and ask Polaris to change the content for that audience. Polaris applies the change to that audience's variant of the entry and leaves the base page unchanged.
+
+If the page has no variant for the audience you mention, Polaris tells you that the audience must be set up and linked to the page first. It doesn't change the base page instead.
+
+**Prompt example:** _Adapt this page for new visitors: write a more welcoming headline, but only for that audience._
