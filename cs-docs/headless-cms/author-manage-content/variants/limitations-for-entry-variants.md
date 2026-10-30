@@ -9,9 +9,9 @@ uid: blt6a08e8c4c02249c2
 
 ## Limitations for Entry Variants
 
--   The Entry Variants feature is currently available as part of an Early Access Program and may not be available to all users. For more information, you can reach out to our [support](mailto:support@contentstack.com) team.
+-   The Entry Variants feature is enabled per organization and may not be available on all plans. To have it enabled for your organization, contact the [support](mailto:support@contentstack.com) team.
 -   Deleted entry variants cannot be restored from the Trash.
--   Variant groups, variants, and entry variants are only supported on the main branch. When you create a new branch, the entry variants, variant groups, and variants will not be cloned.
+-   Variant groups and variants are shared across all branches, while linked content types and entry variants are branch-specific. For details, refer to [Branch Support for Variants](/docs/headless-cms/branch-support-for-variants).
 -   API requests do not support custom [queries](/docs/developers/apis/content-delivery-api/queries) for entry variants. Subqueries (?query) with query operators only match data from the base entry, not variant-specific data.
 -   A maximum of **3 entry variants** can be merged with the base entry when fetching personalized content from the CDN.
 

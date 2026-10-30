@@ -1,13 +1,13 @@
 ---
-title: "AI Configuration : Global AI Settings"
+title: "Global AI Settings"
 description: "Manage AI enablement across Contentstack. Use Global AI Settings to centrally enable or disable AI for specific products and control organization-wide usage."
 url: /administration/ai-settings
 uid: blt2c47810bcae9f438
 ---
 
-# AI Configuration : Global AI Settings
+# Global AI Settings
 
-## AI Configuration : Global AI Settings
+## Global AI Settings
 
 Use the Global AI Settings page to control which products have access to AI features. By default, all AI products use Contentstack's Managed LLM.
 

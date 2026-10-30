@@ -80,7 +80,7 @@ Contentstack benefits both Developers and Content Managers equally. Let’s look
 ### Developer Satisfaction
 
 -   Write applications using technologies, programming languages, and frameworks of their choice in the development process.
--   Contentstack’s rich set of RESTful APIs and SDKs for a lot of major languages makes it easier to implement websites and applications. Thus have complete control over how and where content appears.
+-   Contentstack��s rich set of RESTful APIs and SDKs for a lot of major languages makes it easier to implement websites and applications. Thus have complete control over how and where content appears.
 
 So, the happier they are, the more efficient they will be!
 

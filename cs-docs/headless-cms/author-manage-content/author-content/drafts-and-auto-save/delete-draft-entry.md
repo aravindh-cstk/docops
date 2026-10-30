@@ -9,7 +9,7 @@ uid: blt3d576cae5f438b54
 
 ## Delete Draft Entry
 
-**Note:** Drafts and Auto Save is currently part of an Early Access Program and may not be available to all users. Contact the Contentstack [support](mailto:support@contentstack.com) team for more information.
+**Note:** Drafts and Auto Save is being rolled out for General Availability (GA) in phases, with broader availability planned as support expands to the Visual Editor.
 
 Drafts and Auto Save automatically stores changes as drafts while you edit an entry. If you no longer need those changes, you can discard the draft and revert the entry to its last saved version.
 

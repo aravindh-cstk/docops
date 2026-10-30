@@ -211,7 +211,7 @@ Contentstack::Endpoint.get\_contentstack\_endpoint reads region metadata from li
 
 ```
 First call (file absent)
-  └─▶ fetch from registry ──▶ write to lib/data/regions.json ──▶ read file ──▶ return URL
+  └─▶ fetch from registry ─��▶ write to lib/data/regions.json ──▶ read file ──▶ return URL
 
 Every other call
   └─▶ read lib/data/regions.json ──▶ return URL

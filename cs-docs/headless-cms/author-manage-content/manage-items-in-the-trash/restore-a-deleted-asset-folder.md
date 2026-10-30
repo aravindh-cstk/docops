@@ -15,7 +15,7 @@ Deleted asset folders (along with the subfolders and assets) remain in the Trash
 
 To restore a deleted asset folder from the Trash, log in to your [Contentstack account](https://app.contentstack.com/), go to your stack, and perform the following steps:
 
-1.  Click the “Settings” icon (press “S”) on the left navigation panel and select **Trash** (or press “**alt + T**” for Windows OS, and “option + **T**” for Mac OS).
+1.  Click the ���Settings” icon (press “S”) on the left navigation panel and select **Trash** (or press “**alt + T**” for Windows OS, and “option + **T**” for Mac OS).
 2.  Click on the **Assets** tab, and hover over the asset folder you want to restore (e.g., **Marketing Images**).![Restore_a_Deleted_Asset_Folder_1_no_highlight.png](https://images.contentstack.io/v3/assets/blt23180bf2502c7444/blt529a873f30a2fe48/60c0cac185c4c2118e3172db/Restore_a_Deleted_Asset_Folder_1_no_highlight.png)  
 
 

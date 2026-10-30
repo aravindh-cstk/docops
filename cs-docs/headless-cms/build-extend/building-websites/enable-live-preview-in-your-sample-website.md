@@ -269,7 +269,7 @@ To start viewing your website in the Live Preview panel, perform the following s
 
 ## Live Edit Tags (optional)
 
-Live edit tags allow you to navigate to the field that contains the website content being previewed within the Live Preview pane. When you click on the “Edit” button beside a content block in the preview pane, you will be redirected to the corresponding field within the entry. If the field holds reference to another entry, you will be redirected to the referenced entry's editor page.
+Live edit tags allow you to navigate to the field that contains the website content being previewed within the Live Preview pane. When you click on the ���Edit” button beside a content block in the preview pane, you will be redirected to the corresponding field within the entry. If the field holds reference to another entry, you will be redirected to the referenced entry's editor page.
 
 For example of Live Edit Tags let us consider the header entry and the Respective code changes to Enable Live edit Tag
 

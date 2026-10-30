@@ -14,9 +14,9 @@ The bulk **Add to Release** feature allows you to select multiple entries and ad
 To bulk add entries to a release, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the steps given below:
 
 1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Entries” icon on the left navigation panel. You can also use the shortcut key “E” (for both Windows OS and Mac OS users) to access Entries.
-2.  Use the checkboxes to select the entries you want to add to a release.![Bulk Add to Release_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt23683ab4b39537b9/66cf1b1d0607452d8537cb4c/Bulk_Add_to_Release_1.png)
+2.  Use the checkboxes to select the entries you want to add to a release. To add every entry in the list instead of only the entries on the current page, use [select all records](/docs/headless-cms/select-all-records-for-bulk-operations).![Bulk Add to Release_1.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt23683ab4b39537b9/66cf1b1d0607452d8537cb4c/Bulk_Add_to_Release_1.png)
 
-    **Note:** You can select a maximum of **100 entries** at once.
+    **Note:** You can select a maximum of **100 entries** at once. With [select all records](/docs/headless-cms/select-all-records-for-bulk-operations), a single action adds up to **10,000 entries**.
 
 3.  Once you have selected the entries, a floating panel will appear on the page. Click the **Add to Release** option in this panel.![Bulk Add to Release_2.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltb12f981d7df3d9c6/66cf1b1d25bfec24995813a9/Bulk_Add_to_Release_2.png)
 4.  In the **Add to Release** modal, either select an existing release or create a new one.![Bulk Add to Release_3.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt73ef0048515a1cd1/66cf1adda4dc33803dd7ce20/Bulk_Add_to_Release_3.png)

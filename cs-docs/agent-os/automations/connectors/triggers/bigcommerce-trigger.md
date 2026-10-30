@@ -48,6 +48,6 @@ Perform the following steps to configure the BigCommerce trigger:
 11.  On successful configuration, you can see the below output. Click the **Save** **and** **Exit** button.  
      ![Save_Exit.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt75b22d48990df74e/65c1c5efb3cfc0e64ae5e37f/Save_Exit.png)
 
-Additionally, you can use the BigCommerce trigger with the [BigCommerce](/docs/agent-os/bigcommerce) connector to fetch the product details. For example, you can select the “Product Created” event in the BigCommerce trigger and configure the action to fetch the product details.
+Additionally, you can use the BigCommerce trigger with the [BigCommerce](/docs/agent-os/bigcommerce) connector to fetch the product details. For example, you can select the ���Product Created” event in the BigCommerce trigger and configure the action to fetch the product details.
 
 This sets the **BigCommerce** trigger connector.

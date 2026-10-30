@@ -23,7 +23,7 @@ Instead of adding these components separately to each content type, you can use 
 
 To add Modular Blocks within Global fields, log in to your [Contentstack account](https://www.contentstack.com/login) and perform the following steps:
 
-1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Content Models” icon in the left navigation panel or use the shortcut key “C”.
+1.  Go to your [stack](/docs/headless-cms/about-stack) and click the “Content Models��� icon in the left navigation panel or use the shortcut key “C”.
 2.  On the **Content Models** page, select **Global Fields** and click **\+ New Global Field**.
 3.  Enter a **Name** and **Description** (optional), then click **Proceed**.
 

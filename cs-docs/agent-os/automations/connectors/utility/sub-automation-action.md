@@ -81,7 +81,7 @@ In the next step, we will create a new entry for the translated text.
     You can fetch the UID for all the previously configured automation steps directly from the Lookup list as shown below:
 
     ![Create_Etry_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0b7cfff0ee49ae78/65c3110cab9c0f46dcb9298c/Create_Etry_Fields.png)
-4.  In the **Entry Data** field, you can add a predefined schema template for your entry data. This will add a structure to provide your entry data in a particular format for different fields. Enter the “title” value from the previous step, i.e. the title of the translated content.
+4.  In the **Entry Data** field, you can add a predefined schema template for your entry data. This will add a structure to provide your entry data in a particular format for different fields. Enter the ��title” value from the previous step, i.e. the title of the translated content.
 
     **Note:** You must manually configure the entry data for JSON Rich Text Editor, Custom, and Experience Container fields.
 

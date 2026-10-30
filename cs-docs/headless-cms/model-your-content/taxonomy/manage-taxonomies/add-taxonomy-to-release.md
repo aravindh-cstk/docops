@@ -49,6 +49,6 @@ The release can display the following deployment readiness states:
 
 In this case, localized taxonomy terms are added to the release even though the taxonomy is not fully localized.
 
-**Note:** When a taxonomy is not localized in the selected locale, the release shows a deployment readiness of **No** along with a warning message. Any taxonomy terms that are localized are still added to the release and deployed; remaining values resolve through the branch's fallback hierarchy. To reach the **Yes** state, localize the taxonomy in the target locale before deployment.
+**Note:** When a taxonomy is not localized in the selected locale, the release shows a deployment readiness of **No** along with a warning message. Any taxonomy terms that are localized are still added to the release and deployed. The remaining values are served through the locale fallback hierarchy when a delivery request sends include\_fallback=true. To reach the **Yes** state, localize the taxonomy in the target locale before deployment.
 
 Adding taxonomies to releases helps ensure taxonomy structures and localized taxonomy terms are deployed consistently alongside related content updates.

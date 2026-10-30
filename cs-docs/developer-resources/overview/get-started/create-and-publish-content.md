@@ -20,7 +20,7 @@ As content managers, you can do a lot with entries and assets – Create and col
 -   [Understand Entry Versions](/docs/headless-cms/understanding-entry-versions/)
 -   [Upload Assets](/docs/headless-cms/create-upload-assets/)
 -   [Create Asset Folder](/docs/headless-cms/create-a-folder/)
--   [Manage Asset Security](/docs/administration/secure-public-urls-of-assets)
+-   [Manage Asset Security](/docs/headless-cms/secure-public-urls-of-assets)
 
 Learn more about [Author Content](/docs/headless-cms/about-entries/).
 

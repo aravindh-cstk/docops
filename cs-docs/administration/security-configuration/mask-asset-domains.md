@@ -1,7 +1,7 @@
 ---
 title: "Mask Asset Domains"
 description: "Mask Asset Domains"
-url: /administration/mask-asset-domains
+url: /headless-cms/mask-asset-domains
 uid: blt37f95f410505790e
 ---
 

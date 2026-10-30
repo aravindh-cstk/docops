@@ -19,4 +19,4 @@ For example, if you do not want a user to enter an invalid email address in a [f
 
 ![validation-error-message.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt677feb0f8d062835/65cee257828499293683780d/validation-error-message.png)
 
-**Additional Resource:** You can check out our [Content Validations](/docs/administration/validations) guide to ensure accuracy while entering content.
+**Additional Resource:** You can check out our [Content Validations](/docs/headless-cms/validations) guide to ensure accuracy while entering content.

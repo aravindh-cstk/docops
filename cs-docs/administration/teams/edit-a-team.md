@@ -37,7 +37,7 @@ To edit a team, log in to your [Contentstack account](https://www.contentstack.c
 2.  In the **Actions** column for the team you want to edit, click the vertical ellipsis, then click the **Edit** option (pencil icon).
 3.  On the team page, you can:
     1.  Update the **Team Name** or **Description**.
-    2.  Update the assigned Administration and product roles, and add or remove project-level roles for stacks, spaces, or AgentOS projects.
+    2.  Update the assigned Administration and product roles, and add or remove project-level roles for stacks or spaces.
     3.  Add or remove users. For details, refer to the Invite Users section in the [Create a Team](/docs/administration/create-a-team) document.
 
 When you modify settings in the **Team** tab, click **Save** to apply the changes. In the **Users** tab, changes are immediate; there is no Save button, and you can add or remove users directly.

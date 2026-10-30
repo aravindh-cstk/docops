@@ -1990,7 +1990,7 @@ In the above example:
 
 **Note:** If the limit for the number of characters is more than that of the string, the output will contain the complete string without ellipses.
 
-Here’s a screenshot that shows the input:
+Here��s a screenshot that shows the input:
 
 ![truncate_input.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt217bca27836e2760/66c7230220995e6f8dd2dfe1/truncate_input.png)
 

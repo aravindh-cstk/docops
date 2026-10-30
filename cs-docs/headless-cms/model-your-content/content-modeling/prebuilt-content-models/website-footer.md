@@ -31,7 +31,7 @@ Let’s dive deep into how this model will help you create your company’s Webs
 
     **Footer** Content Type:
 
-    -   **Title**: This is where you'll provide your “Website Footer" a name. The [Title](/docs/headless-cms/title) field defines the title of the “Website Footer” content/entry.
+    -   **Title**: This is where you'll provide your ��Website Footer" a name. The [Title](/docs/headless-cms/title) field defines the title of the “Website Footer” content/entry.
     -   **Logo**: For logo, you will see a [File](/docs/headless-cms/file/) field that allows you to choose the website logo file and add it to the entry.
     -   **Navigation**: For the navigation, you will see a [Group](/docs/headless-cms/group/) field that showcases the navigation menu. It contains the following:
         -   **Link**: For the navigation item, you will see a [Link](/docs/headless-cms/link/) field that adds a navigation menu item as a title and links it for redirection.

@@ -130,7 +130,7 @@ By default, all fields are selected for migration; however, you can uncheck fiel
         -   If you have created a new stack in [Step 5](/docs/headless-cms/drupal-to-contentstack#step-5-configure-destination-stack), the ‘Fetch content type’ or the ‘Select Content Type from Destination Stack’ icons do not appear.
         -   If an existing stack was selected (even if it is empty), the icons are available. You can go back to the stack, create new content types, and later use the 'Fetch content type' icon to update the schema and include the newly added content types.
 
-    5.  **Advanced Properties**: Click the ‘Advanced properties’ icon next to each field to adjust field-specific properties.
+    5.  **Advanced Properties**: Click the ���Advanced properties’ icon next to each field to adjust field-specific properties.
 
     ![content-mapper-3.mp4](https://assets.contentstack.io/spaces/am51d76353d996c1fe/assets/am56b1bda809074fd2/2b5e55c83e1b4ce6106b8c5b/content-mapper-3.gif?locale=en-us)
 2.  Click **Save** after completing the mapping for each content type.

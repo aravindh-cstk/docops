@@ -82,7 +82,7 @@ Now, let's consider the following scenarios:
 
 -   English (United States) entry version present
 -   The “Product” entry version present in French (France) is a localized version
--   The “Product” entry version present in German (Germany) is an unlocalized version
+-   The ���Product” entry version present in German (Germany) is an unlocalized version
 -   The “Product” entry version present in Spanish (Spain) is a localized version
 
 When the custom user role tries to open the entry page of Spanish (Spain), the user will see the latest entry version present in Spanish (Spain). However, the user **CANNOT** update or delete its data.

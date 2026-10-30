@@ -27,7 +27,7 @@ Let’s dive deep into how the “Blog Listing Page” content model will help y
 
 2.  ## Identifying Content Model
 
-    Let's identify the fields that build up your “Blog Listing Page” content type that you see in the above step  
+    Let's identify the fields that build up your “Blog Listing Page�� content type that you see in the above step  
 
     ![Identifying_Content_Model_for_the_Blog_Listing_Page.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltaaba46e7baea8e1f/65360badd2c0ba761857e3f0/Identifying_Content_Model_for_the_Blog_Listing_Page.png)
 

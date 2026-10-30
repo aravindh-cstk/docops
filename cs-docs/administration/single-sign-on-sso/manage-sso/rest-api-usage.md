@@ -1,13 +1,13 @@
 ---
-title: "REST API Usage"
+title: "API Access in SSO-Enabled Organizations"
 description: "Discover how SSO affects Contentstack's Content Management API for seamless integration with management tokens and user authtokens."
 url: /administration/rest-api-usage
 uid: blt6609ab4f983d128f
 ---
 
-# REST API Usage
+# API Access in SSO-Enabled Organizations
 
-## REST API Usage
+## API Access in SSO-Enabled Organizations
 
 Enabling SSO for an organization may affect your REST API integrations, particularly the ones using [Content Management APIs](/docs/developers/apis/content-management-api). It is therefore recommended that you read this section carefully.
 
