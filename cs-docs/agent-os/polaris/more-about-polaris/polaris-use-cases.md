@@ -11,13 +11,14 @@ uid: blt798acea854186b2f
 
 **Note:** For access, please talk to our [Support](mailto:support@contentstack.com) team.
 
-This page walks through five common Polaris use cases, covering the problem each solves, example prompts, and a step-by-step walkthrough of how Polaris plans, previews, and executes the request.
+This page walks through six common Polaris use cases, covering the problem each solves, example prompts, and a step-by-step walkthrough of how Polaris plans, previews, and executes the request.
 
 -   [Creating Content Models](#creating-content-models)
 -   [Entry creation including Brand Kit](#entry-creation-including-brand-kit)
 -   [Translation at scale](#translation-at-scale)
 -   [Personalization at scale](#personalization-at-scale)
 -   [Scheduling a campaign](#scheduling-a-campaign)
+-   [Applying review comments](#applying-review-comments)
 
 ## Prerequisites
 
@@ -202,6 +203,42 @@ Polaris displays the proposed publish date, unpublish date, environment, and rel
 ### Review the result
 
 The entry is scheduled according to the confirmed dates, environment, and release. You can continue adjusting the schedule with follow-up prompts at any time before it goes live.
+
+## Applying Review Comments
+
+Polaris can read the open comments on an entry, apply the feedback, and resolve the comments it addressed in one request, so you don't have to work through each review comment by hand.
+
+**Example prompts:**
+
+-   _Read the open comments on this entry, apply the feedback, then resolve the comments you addressed._
+-   _Summarize the open comments on this entry._
+
+### Open an entry context
+
+-   Log in to your Contentstack [account](https://www.contentstack.com/login) and open the entry that has review comments.
+-   Open the **Polaris** panel.
+-   In the **Polaris** prompt, enter a prompt.
+
+**Example:** Read the open comments on this entry, apply the feedback, then resolve the comments you addressed.
+
+Polaris reads the comments and the current entry content, and prepares the edits. If the feedback asks for a link to a Contentstack guide, Polaris looks up the right page in the Contentstack documentation. No changes are made to the entry at this stage.
+
+### Review the preview
+
+Polaris displays the proposed field values before anything is saved.
+
+**Note:** Asking Polaris only to read or summarize comments is a read-only action and returns a result immediately.
+
+### Confirm the update
+
+-   Review the proposed changes.
+-   Click **Update** to apply them to the entry.
+-   Click **Resolve** on the next card to resolve the comment thread.
+-   Click **Cancel** on either card to stop.
+
+### Review the result
+
+The entry is saved as a new version with the feedback applied, and the resolved comment moves to the **Resolved** view in the entry's **Discussions** panel.
 
 ## Best Practices
 

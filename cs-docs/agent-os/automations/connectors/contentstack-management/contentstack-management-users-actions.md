@@ -17,7 +17,7 @@ Let’s look at the action in detail.
 
 ## Get User Information
 
-This action gets a user's first name, last name and email address based on the user ID.
+This action gets a user's first name, last name, and email address based on the user ID. Using optional fields, you can also include the roles assigned to the user and the permissions those roles carry.
 
 1.  Under **Choose an Action** tab, select the **Get User Information** action.
 2.  On the **Get User Information Configure Action** page, enter the details given below:
@@ -29,6 +29,13 @@ This action gets a user's first name, last name and email address based on the u
         ![Select_Fields.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltc896ef7ecb20da38/66f28a30ee6d37e2aea74767/Select_Fields.png)
     3.  You can easily select multiple user IDs from the **Suggested Data Elements** drop-down. This will automatically retrieve all the user IDs generated in the previous steps, streamlining the process.  
         ![Select_Fields_User_Profile.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/bltba274015f55e0c4c/682b22e5725241c7d18ceee4/Select_Fields_User_Profile.png)
+    4.  \[Optional\] Turn on the **Show Optional Fields** toggle to reveal additional options:
+        1.  Select the **Include roles** checkbox to return the roles assigned to the user. When you select **Include roles**, the **Select Stack** field becomes required. Select the stack whose roles you want to return. The action then returns each role assigned to the user in that stack (for example, Content Manager, Admin, or Developer) along with its description.
+        2.  Select the **Include permissions** checkbox to return each role's resolved permissions, across content types, environments, and locales. Because permissions are attached to roles rather than directly to the user, **Include permissions** requires **Include roles** to be selected (and therefore a stack).
+
+            **Note:** The **Include permissions** option returns a large amount of data. Use it only when you need this level of detail.
+
+            ![The Get User Information action showing the Include roles checkbox selected, the required Select Stack field, and the Include permissions checkbox.](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/amfcdbe96cf9ef49a2/1836d41e0e6f42b5f0b1a98d/include-roles-and-permissions.jpg)
 3.  Once done, click **Proceed**.
 4.  Click **Test Action** to test the configured action.
 5.  The output will be shown as follows. Click the **Save and Exit** button.  
