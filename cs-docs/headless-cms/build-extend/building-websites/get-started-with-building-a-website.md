@@ -67,7 +67,7 @@ The next step will be exploring Contentstack's content modeling features to defi
 
 ### Import Content Types
 
-In this section, we will import four content types - “Dishes,” “Header,” “Footer,” and “Page.”
+In this section, we will import four content types - “Dishes,” “Header,” ���Footer,” and “Page.”
 
 1.  Download and extract this [.zip file](<https://assets.contentstack.io/v3/assets/bltb07d61d76cca54b3/bltb306b4d973df13f0/Stack Data.zip>) that contains folders with the required **Assets** (images) and **Content Types** (JSON files) for this application.
 2.  Go to your stack where you want to create a content type, and click on the “Content Models” icon on the left navigation panel (or press “C”).
@@ -162,7 +162,7 @@ Within the Entry Editor page, enter/select the following content against the res
 
         **Note:** If an entry field is designated as “Multiple,” you will see the Add “+” icon located beside the existing instance.
 
-        ![15.  Click on Add “+�� icon beside the existing instance of the Link field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0e98234a92557f68/66a346a9e91a176c00159e2f/15._Click_on_Add_“_”_icon_beside_the_existing_instance_of_the_Link_field.png)
+        ![15.  Click on Add “+” icon beside the existing instance of the Link field.png](https://images.contentstack.io/v3/assets/blt2d43f51baca745a8/blt0e98234a92557f68/66a346a9e91a176c00159e2f/15._Click_on_Add_“_”_icon_beside_the_existing_instance_of_the_Link_field.png)
 
         Here are the instances you need to add:
 
